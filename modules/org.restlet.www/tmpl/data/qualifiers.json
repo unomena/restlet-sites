@@ -1,0 +1,5 @@
+[
+{"id":"stable", "version":"2.1.1", "name":"Stable"},
+{"id":"testing", "version":"2.2m1", "name":"Testing"},
+{"id":"unstable", "version":"2.2snapshot", "name":"Unstable"}
+]

@@ -1,0 +1,731 @@
+<#include "/header.ftl"/>
+
+<#global stylesheet_files=["/stylesheets/SyntaxHighlighter.css"] />
+<#global javascript_files=["/javascript/shCore.js", "/javascript/shBrushJava.js"] />
+<#global javascript>
+window.onload = function () {
+    dp.SyntaxHighlighter.ClipboardSwf = '/flash/clipboard.swf';
+    dp.SyntaxHighlighter.HighlightAll('code');
+}
+</#global>
+
+<#global title="Restlet 1.1 - First resource" />
+<#global content>
+   <h1>Restlet 1.1 - First resource</h1>
+
+   <h2><a name="toc">Table of contents</a></h2>
+
+   <p>
+      This page illustrates how a Resource can handle the GET, POST, PUT and
+      DELETE methods.
+   </p>
+
+   <ol>
+      <li><a href="#part01">Introduction</a></li>
+      <li><a href="#part02">The sample application</a></li>
+      <li><a href="#part03">Implementation of the Items Resource</a></li>
+      <li><a href="#part04">Implementation of the Item Resource</a></li>
+      <li><a href="#part05">Implementation of the base Resource</a></li>
+      <li><a href="#part06">Running the application</a></li>
+      <li><a href="#part07">The client application</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+   </ol>
+
+   <h2><a name="part01">Introduction</a></h2>
+
+   <p>
+      Before starting to develop, we need to briefly introduce the idea of
+      resource as implemented by the Restlet framework. REST tells us that a
+      resource is identified by a URI, can have one or more representations
+      (also called variants) that may vary over time (e.g. the "current weather
+      in Oaxaca"), and can handle method calls.
+   </p>
+
+   <p>
+      In the Restlet Framework, instances of the
+      <a href="api/org/restlet/resource/Resource.html" title="Resource's javadoc">Resource</a>
+      class are the final handlers of calls received by server connectors. A
+      resource is responsible for declaring the list of supported
+      representation types (instances of the
+      <a href="api/org/restlet/resource/Variant.html" title="Variant's javadoc">Variant</a>
+      class) and for implementing the REST methods you want to support:
+   </p>
+
+   <ul>
+      <li>
+         GET relies on the modifiable
+         <a href="api/org/restlet/resource/Resource.html#getVariants()" title="Resource's javadoc">"variants"</a>
+         list and the
+         <a href="api/org/restlet/resource/Resource.html#represent(org.restlet.resource.Variant)" title="Resource's javadoc">"represent(Variant)"</a>
+         method.
+      </li>
+      <li>
+         POST relies on the
+         <a href="api/org/restlet/resource/Resource.html#setModifiable(boolean)" title="Resource's javadoc">"modifiable"</a>
+         property and the
+         <a href="api/org/restlet/resource/Resource.html#acceptRepresentation(org.restlet.resource.Representation)" title="Resource's javadoc">"acceptRepresentation(Representation)"</a>
+         method.
+      </li>
+      <li>
+         PUT relies on the
+         <a href="api/org/restlet/resource/Resource.html#setModifiable(boolean)" title="Resource's javadoc">"modifiable"</a>
+         property and the
+         <a href="api/org/restlet/resource/Resource.html#storeRepresentation(org.restlet.resource.Representation)" title="Resource's javadoc">"storeRepresentation(Representation)"</a>
+         method.
+      </li>
+      <li>
+         DELETE relies on the
+         <a href="api/org/restlet/resource/Resource.html#setModifiable(boolean)" title="Resource's javadoc">"modifiable"</a>
+         property and the
+         <a href="api/org/restlet/resource/Resource.html#removeRepresentations()" title="Resource's javadoc">"removeRepresentations()"</a>
+         method.
+      </li>
+   </ul>
+
+   <p>
+      In addition, each incoming call is handled by a dedicated resource
+      instance, which means that you don't need to make your resource 
+      subclasses thread-safe.
+   </p>
+
+   <p>
+      We assume that you have read the
+      <a href="firstSteps" title="First steps">firstSteps</a> page, and have
+      some notions of what Component and Application are.
+   </p>
+
+   <h2><a name="part02">The sample application</a></h2>
+
+   <p>
+      Let's begin with the description of our sample application. It manages a
+      list of items with create, read, update, and delete actions like a
+      simple CRUD application. An item is simply characterized by a name and a
+      description. After a short analysis, we define two Resources:
+   </p>
+
+   <ul>
+      <li> Items : resource that identifies the collection of all available items.</li>
+      <li> Item : resource that identifies a single item.</li>
+   </ul>
+
+   <p>
+      Now, let's define the URIs that will identify the resources. Assuming
+      that our application is hosted on your own computer known as
+      "localhost" and is listening to port 8182:
+   </p>
+
+   <ul>
+      <li>
+         http://localhost:8182/firstResource/items : URI of the "items"
+         resource.
+      </li>
+      <li>
+        http://localhost:8182/firstResource/items/{itemName} : URI of the
+        "item" resource where {itemName} represents the name of an item.
+      </li>
+   </ul>
+
+   <p>
+      Next, it's time to define the list of methods allowed on each Resource.
+   </p>
+
+   <ul>
+      <li>
+         The "items" resource responds to GET requests with an XML document
+         that lists the currently registered items. In addition, this resource
+         supports the creation of new items via POST requests. The POSTed
+         entity contains both name and description of the new item and adopts
+         the format of a Web form. If the resource succeeds in creating the
+         new item, it answers with a "Success - resource created" status (HTTP
+         201 status code) and tells the client where the new resource can be
+         found (HTTP "Location" header). Otherwise, it answers with a "Client
+         error" status (HTTP 404 status code) and a simple error message.
+      </li>
+      <li>
+         The "item" resource answers to GET requests with an XML document that
+         shows the name and description of an item. It can also update and
+         delete the item with PUT and DELETE requests.
+      </li>
+   </ul>
+
+   <p>
+      Before describing the two Resources classes, here is the code of our
+      Application. For the sake of simplicity the list of registered items is
+      simply kept in memory as an attribute of the application and not in a
+      real database. However, we assume that you may invit your friends to
+      test the application, <i>all at the same time</i>. Since only one
+      instance of our "FirstResourceApplication" will be used at runtime, we
+      have to take care of thread-safety. That's why you will notice that the
+      map of items is made immutable and is an instance of the
+      ConcurrentHashMap class.
+   </p>
+
+   <pre class="java:nocontrols:nogutter">
+public class FirstResourceApplication extends Application {
+
+    /** The list of items is persisted in memory. */
+    private final ConcurrentMap&lt;String, Item&gt; items = 
+                       new ConcurrentHashMap&lt;String, Item&gt;();
+
+    /**
+     * Creates a root Restlet that will receive all incoming calls.
+     */
+    @Override
+    public Restlet createRoot() {
+        // Create a router Restlet that defines routes.
+        Router router = new Router(getContext());
+
+        // Defines a route for the resource "list of items"
+        router.attach("/items", ItemsResource.class);
+        // Defines a route for the resource "item"
+        router.attach("/items/{itemName}", ItemResource.class);
+
+        return router;
+    }
+
+    /**
+     * Returns the list of registered items.
+     * 
+     * @return the list of registered items.
+     */
+    public ConcurrentMap&lt;String, Item&gt; getItems() {
+        return items;
+    }
+}
+   </pre>
+
+   <h2><a name="part03">Implementation of the Items Resource</a></h2>
+
+   <p>
+      Let's begin with the Items resource. As seen above, it allows GET and
+      POST requests. The support of POST requests is denoted by the
+      implementation of the method "acceptRepresentation(Representation)" which
+      lets you process the posted entity. Moreover, the resource is made
+      modifiable by setting the corresponding attribute ("setModifiable(true)").
+      By default, resources are not modifiable, and reject the POST, PUT and
+      DELETE methods with the "Method not allowed" status (HTTP 405 status
+      code).
+   </p>
+
+   <p>
+      In the same way, the support of GET requests is denoted by the
+      implementation of the "represent(Variant)" method which lets you generate
+      the entity according to a given Variant. In our case, we only generate
+      one kind of representation ("text/xml").
+   </p>
+
+   <pre class="java:nocontrols:nogutter">
+package firstResource;
+
+import java.io.IOException;
+
+import org.restlet.Context;
+import org.restlet.data.Form;
+import org.restlet.data.MediaType;
+import org.restlet.data.Request;
+import org.restlet.data.Response;
+import org.restlet.data.Status;
+import org.restlet.resource.DomRepresentation;
+import org.restlet.resource.Representation;
+import org.restlet.resource.ResourceException;
+import org.restlet.resource.StringRepresentation;
+import org.restlet.resource.Variant;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+/**
+ * Resource that manages a list of items.
+ * 
+ */
+public class ItemsResource extends BaseResource {
+
+    public ItemsResource(Context context, Request request, Response response) {
+        super(context, request, response);
+
+        // Allow modifications of this resource via POST requests.
+        setModifiable(true);
+
+        // Declare the kind of representations supported by this resource.
+        getVariants().add(new Variant(MediaType.TEXT_XML));
+    }
+
+    /**
+     * Handle POST requests: create a new item.
+     */
+    @Override
+    public void acceptRepresentation(Representation entity)
+            throws ResourceException {
+        // Parse the given representation and retrieve pairs of
+        // "name=value" tokens.
+        Form form = new Form(entity);
+        String itemName = form.getFirstValue("name");
+        String itemDescription = form.getFirstValue("description");
+
+        // Check that the item is not already registered.
+        if (getItems().containsKey(itemName)) {
+            generateErrorRepresentation(
+                    "Item " + itemName + " already exists.", "1", getResponse());
+        } else {
+            // Register the new item
+            getItems().put(itemName, new Item(itemName, itemDescription));
+
+            // Set the response's status and entity
+            getResponse().setStatus(Status.SUCCESS_CREATED);
+            Representation rep = new StringRepresentation("Item created",
+                    MediaType.TEXT_PLAIN);
+            // Indicates where is located the new resource.
+            rep.setIdentifier(getRequest().getResourceRef().getIdentifier()
+                    + "/" + itemName);
+            getResponse().setEntity(rep);
+        }
+    }
+
+    /**
+     * Returns a listing of all registered items.
+     */
+    @Override
+    public Representation represent(Variant variant) throws ResourceException {
+        // Generate the right representation according to its media type.
+        if (MediaType.TEXT_XML.equals(variant.getMediaType())) {
+            try {
+                DomRepresentation representation = new DomRepresentation(
+                        MediaType.TEXT_XML);
+                // Generate a DOM document representing the list of
+                // items.
+                Document d = representation.getDocument();
+                Element r = d.createElement("items");
+                d.appendChild(r);
+                for (Item item : getItems().values()) {
+                    Element eltItem = d.createElement("item");
+
+                    Element eltName = d.createElement("name");
+                    eltName.appendChild(d.createTextNode(item.getName()));
+                    eltItem.appendChild(eltName);
+
+                    Element eltDescription = d.createElement("description");
+                    eltDescription.appendChild(d.createTextNode(item
+                            .getDescription()));
+                    eltItem.appendChild(eltDescription);
+
+                    r.appendChild(eltItem);
+                }
+                d.normalizeDocument();
+
+                // Returns the XML representation of this document.
+                return representation;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * Generate an XML representation of an error response.
+     * 
+     * @param errorMessage
+     *            the error message.
+     * @param errorCode
+     *            the error code.
+     */
+    private void generateErrorRepresentation(String errorMessage,
+            String errorCode, Response response) {
+        // This is an error
+        response.setStatus(Status.CLIENT_ERROR_NOT_FOUND);
+        // Generate the output representation
+        try {
+            DomRepresentation representation = new DomRepresentation(
+                    MediaType.TEXT_XML);
+            // Generate a DOM document representing the list of
+            // items.
+            Document d = representation.getDocument();
+
+            Element eltError = d.createElement("error");
+
+            Element eltCode = d.createElement("code");
+            eltCode.appendChild(d.createTextNode(errorCode));
+            eltError.appendChild(eltCode);
+
+            Element eltMessage = d.createElement("message");
+            eltMessage.appendChild(d.createTextNode(errorMessage));
+            eltError.appendChild(eltMessage);
+
+            response.setEntity(representation);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+}
+   </pre>
+
+   <h2><a name="part04">Implementation of the Item Resource</a></h2>
+
+   <p>
+      Let's continue with the Item resource. As seen above, it allows GET, PUT
+      and DELETE requests. The support of PUT requests is denoted by the
+      implementation of the "storeRepresentation(Representation)" method which
+      lets you process the received entity.
+   </p>
+
+   <p>
+      In the same way, the support of DELETE requests is denoted by the
+      implementation of the "removeRepresentation()" method.
+   </p>
+
+   <pre class="java:nocontrols:nogutter">
+package firstResource;
+
+import java.io.IOException;
+
+import org.restlet.Context;
+import org.restlet.data.Form;
+import org.restlet.data.MediaType;
+import org.restlet.data.Request;
+import org.restlet.data.Response;
+import org.restlet.data.Status;
+import org.restlet.resource.DomRepresentation;
+import org.restlet.resource.Representation;
+import org.restlet.resource.ResourceException;
+import org.restlet.resource.Variant;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+public class ItemResource extends BaseResource {
+
+    /** The sequence of characters that identifies the resource. */
+    String itemName;
+
+    /** The underlying Item object. */
+    Item item;
+
+    public ItemResource(Context context, Request request, Response response) {
+        super(context, request, response);
+
+        // Get the "itemName" attribute value taken from the URI template
+        // /items/{itemName}.
+        this.itemName = (String) getRequest().getAttributes().get("itemName");
+
+        // Get the item directly from the "persistence layer".
+        this.item = getItems().get(itemName);
+
+        if (this.item != null) {
+            // Define the supported variant.
+            getVariants().add(new Variant(MediaType.TEXT_XML));
+            // By default a resource cannot be updated.
+            setModifiable(true);
+        } else {
+            // This resource is not available.
+            setAvailable(false);
+        }
+    }
+
+    /**
+     * Handle DELETE requests.
+     */
+    @Override
+    public void removeRepresentations() throws ResourceException {
+        if (item != null) {
+            // Remove the item from the list.
+            getItems().remove(item.getName());
+        }
+
+        // Tells the client that the request has been successfully fulfilled.
+        getResponse().setStatus(Status.SUCCESS_NO_CONTENT);
+    }
+
+    @Override
+    public Representation represent(Variant variant) throws ResourceException {
+        // Generate the right representation according to its media type.
+        if (MediaType.TEXT_XML.equals(variant.getMediaType())) {
+            try {
+                DomRepresentation representation = new DomRepresentation(
+                        MediaType.TEXT_XML);
+                // Generate a DOM document representing the item.
+                Document d = representation.getDocument();
+
+                Element eltItem = d.createElement("item");
+                d.appendChild(eltItem);
+                Element eltName = d.createElement("name");
+                eltName.appendChild(d.createTextNode(item.getName()));
+                eltItem.appendChild(eltName);
+
+                Element eltDescription = d.createElement("description");
+                eltDescription.appendChild(d.createTextNode(item
+                        .getDescription()));
+                eltItem.appendChild(eltDescription);
+
+                d.normalizeDocument();
+
+                // Returns the XML representation of this document.
+                return representation;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return null;
+    }
+
+    /**
+     * Handle PUT requests.
+     */
+    @Override
+    public void storeRepresentation(Representation entity)
+            throws ResourceException {
+
+        // The PUT request updates or creates the resource.
+        if (item == null) {
+            item = new Item(itemName);
+        }
+
+        // Update the description.
+        Form form = new Form(entity);
+        item.setDescription(form.getFirstValue("description"));
+
+        if (getItems().putIfAbsent(item.getName(), item) == null) {
+            getResponse().setStatus(Status.SUCCESS_CREATED);
+        } else {
+            getResponse().setStatus(Status.SUCCESS_OK);
+        }
+    }
+}
+   </pre>
+
+   <h2><a name="part05">Implementation of the base Resource</a></h2>
+
+   <p>
+      Since our resources share the same need for access to the map of items
+      hosted by the "FirstResourceApplication" instance, this method has been
+      factored in a parent class called "BaseResource".
+   </p>
+
+   <pre class="java:nocontrols:nogutter">
+package firstResource;
+
+import java.util.concurrent.ConcurrentMap;
+
+import org.restlet.Context;
+import org.restlet.data.Request;
+import org.restlet.data.Response;
+import org.restlet.resource.Resource;
+
+/**
+ * Base resource class that supports common behaviours or attributes shared by
+ * all resources.
+ * 
+ */
+public abstract class BaseResource extends Resource {
+
+    public BaseResource(Context context, Request request, Response response) {
+        super(context, request, response);
+    }
+
+    /**
+     * Returns the map of items managed by this application.
+     * 
+     * @return the map of items managed by this application.
+     */
+    protected ConcurrentMap&lt;String, Item&gt; getItems() {
+        return ((FirstResourceApplication) getApplication()).getItems();
+    }
+}
+   </pre>
+
+   <h2><a name="part06">Running the application</a></h2>
+
+   <p>
+      Please refer to the corresponding sections of the
+      <a href="firstSteps" title="First steps">firstSteps</a> page to learn
+      how to launch the application either in a servlet container or as a
+      standalone application.
+   </p>
+
+   <h2><a name="part07">The client application</a></h2>
+
+   <p>
+      Once our Application is running, in a servlet container or a standalone
+      application, we propose you to experiment our Resources with a simple
+      client application. It simply creates, reads, updates then deletes an
+      Item resource and prints on the standard output the result of each
+      operation. You can run it from command line or inside your IDE. Here is
+      the code:
+   </p>
+
+   <pre class="java:nocontrols:nogutter">
+package firstResource;
+
+import java.io.IOException;
+
+import org.restlet.Client;
+import org.restlet.data.Form;
+import org.restlet.data.Protocol;
+import org.restlet.data.Reference;
+import org.restlet.data.Response;
+import org.restlet.resource.Representation;
+
+public class FirstResourceClientMain {
+
+    public static void main(String[] args) throws IOException {
+        // Define our Restlet HTTP client.
+        Client client = new Client(Protocol.HTTP);
+
+        // The URI of the resource "list of items".
+        Reference itemsUri = new Reference(
+                "http://localhost:8182/firstResource/items");
+
+        // Create a new item
+        Item item = new Item("item1", "this is an item.");
+        Reference itemUri = createItem(item, client, itemsUri);
+        if (itemUri != null) {
+            // Prints the representation of the newly created resource.
+            get(client, itemUri);
+        }
+
+        // Prints the list of registered items.
+        get(client, itemsUri);
+
+        // Update the item
+        item.setDescription("This is an other description");
+        updateItem(item, client, itemUri);
+
+        // Prints the list of registered items.
+        get(client, itemsUri);
+
+        // delete the item
+        deleteItem(client, itemUri);
+
+        // Print the list of registered items.
+        get(client, itemsUri);
+    }
+
+    /**
+     * Try to create a new item.
+     *
+     * @param item
+     *                the new item.
+     * @param client
+     *                the Restlet HTTP client.
+     * @param itemsUri
+     *                where to POST the data.
+     * @return the Reference of the new resource if the creation succeeds, null
+     *         otherwise.
+     */
+    public static Reference createItem(Item item, Client client,
+            Reference itemsUri) {
+        // Gathering informations into a Web form.
+        Form form = new Form();
+        form.add("name", item.getName());
+        form.add("description", item.getDescription());
+        Representation rep = form.getWebRepresentation();
+
+        // Launch the request
+        Response response = client.post(itemsUri, rep);
+        if (response.getStatus().isSuccess()) {
+            return response.getEntity().getIdentifier();
+        }
+
+        return null;
+    }
+
+    /**
+     * Prints the resource's representation.
+     *
+     * @param client
+     *                client Restlet.
+     * @param reference
+     *                the resource's URI.
+     * @throws IOException
+     */
+    public static void get(Client client, Reference reference)
+            throws IOException {
+        Response response = client.get(reference);
+        if (response.getStatus().isSuccess()) {
+            if (response.isEntityAvailable()) {
+                response.getEntity().write(System.out);
+            }
+        }
+    }
+
+    /**
+     * Try to update an item.
+     *
+     * @param item
+     *                the item.
+     * @param client
+     *                the Restlet HTTP client.
+     * @param itemUri
+     *                the resource's URI.
+     */
+    public static boolean updateItem(Item item, 
+                                     Client client, 
+                                     Reference itemUri) {
+        // Gathering informations into a Web form.
+        Form form = new Form();
+        form.add("name", item.getName());
+        form.add("description", item.getDescription());
+        Representation rep = form.getWebRepresentation();
+
+        // Launch the request
+        Response response = client.put(itemUri, rep);
+        return response.getStatus().isSuccess();
+    }
+
+    /**
+     * Try to delete an item.
+     *
+     * @param client
+     *                the Restlet HTTP client.
+     * @param itemUri
+     *                the resource's URI.
+     */
+    public static boolean deleteItem(Client client, Reference itemUri) {
+        // Launch the request
+        Response response = client.delete(itemUri);
+        return response.getStatus().isSuccess();
+    }
+
+}
+   </pre>
+
+   <p>
+      You can find the sources of this sample application in the
+      <a href="examples/firstResource/sources.zip" title='"First resource application" files'>"First resource application" files</a>.
+   </p>
+
+   <h2><a name="conclusion">Conclusion</a></h2>
+
+   <p>
+      This page illustrates the use of one of the central concepts of the
+      Restlet framework. When thinking about your Resources, keep in mind some
+      important questions:
+   </p>
+
+   <ul>
+      <li>How do I want to identify my resources?</li>
+      <li>What kind of representations are they able to generate?</li>
+      <li>What methods can they handle?</li>
+      <li>
+         Do I need to put my resources in a hierarchy helping to share some
+         common behaviour and attributes?
+     </li>
+   </ul>
+
+   <p>
+      We hope you that enjoyed these simple steps and we now encourage you to
+      dive deeper in the
+      <a href="tutorial" title="Restlet 1.1 tutorial">Restlet tutorial</a>.
+   </p>
+
+   <div class="notes">
+      <h3><a name="notes">Notes</a></h3>
+      <ul>
+         <li>
+            Thanks to Tim Peierls for the feed-back especially about
+            thread-safety considerations.
+         </li>
+      </ul>
+   </div>
+</#global>
+<#include "/footer.ftl"/>

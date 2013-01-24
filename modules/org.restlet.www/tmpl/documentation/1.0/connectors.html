@@ -1,0 +1,454 @@
+<#include "/header.ftl"/>
+
+<#global stylesheet_files=["/stylesheets/SyntaxHighlighter.css"] />
+<#global javascript_files=["/javascript/shCore.js", "/javascript/shBrushJava.js"] />
+<#global javascript>
+window.onload = function () {
+    dp.SyntaxHighlighter.ClipboardSwf = '/flash/clipboard.swf';
+    dp.SyntaxHighlighter.HighlightAll('code');
+}
+</#global>
+
+<#global title="Restlet 1.0 - Connectors" />
+<#global content>
+
+<h1>Restlet 1.0 - Connectors</h1>
+
+<h2>Introduction</h2>
+
+<p>
+   A connector in the REST architecture style is a software element that manages
+   network communication for a component, typically by implementing a network
+   protocol (e.g. HTTP). A client connector initiates communication with a server
+   (of any kind) by creating a request. A server connector listens for connections
+   (from clients of any kind), transmits the request to the component that performs
+   the request processing, creates the response and sends it to the client.
+</p>
+
+<p>
+   All connectors are provided as extensions of the Restlet Engine, the
+   reference implementation of the Restlet API.
+</p>
+
+<p>
+   This document will describe how to add a connector to your application, how
+   to configure it and will give you the list of available server and client
+   connectors.
+</p>
+
+<h2>Add a connector to your application</h2>
+
+<p>
+   All connectors and their dependencies are shipped with the Restlet
+   distribution by the way of jar files. Adding a connector to your application
+   is as simple as adding the archives of the chosen connector and its
+   dependencies to the classpath.
+   <br/>
+   You can also have a look to the <a href="faq#04">FAQ #4</a> and <a href="faq#05">FAQ #5</a>
+   which completes this subject.
+</p>
+
+<h2>Configuration</h2>
+
+<p>
+   Each connector looks for its configuration from its context. The latter
+   provides a list of modifiable parameters, which is the right place to set up
+   the connector's configuration.
+   Some parameters are defined by the NRE engine and thus are shared by all
+   clients (in the ClientHelper hierarchy) and server connectors (in the
+   ServerHelper hierarchy), and most of them by the connector's ClientHelper
+   or ServerHelper subclasses.
+</p>
+
+<p>
+   The list of all parameters are available in the javadocs. Pleaser refer
+   to the rest of this document for references to these documentation.
+</p>
+
+<h2>List of available connectors</h2>
+
+<div style="text-align:center">
+   <div style="width:45%;float:left; text-align:center;">
+      <h3><a href="#server_connectors">Server connectors</a></h3>
+      <div style="text-align:center;">
+         <table class="classic" style="display:inline">
+            <tr>
+               <th>Extension</th>
+               <th>Version</th>
+               <th>Protocols</th>
+            </tr>
+            <tr>
+               <td><a href="#asyncweb">AsyncWeb</a></td>
+               <td>0.8</td>
+               <td>HTTP</td>
+            </tr>
+            <tr>
+               <td><a href="#jetty">Jetty</a></td>
+               <td>6.1</td>
+               <td>HTTP, HTTPS, AJP</td>
+            </tr>
+            <tr>
+               <td><a href="#simple">Simple</a></td>
+               <td>3.1</td>
+               <td>HTTP, HTTPS</td>
+            </tr>
+         </table>
+      </div>
+   </div>
+   <div style="width:45%;float:right; text-align:center;">
+      <h3><a href="#client_connectors">Client connectors</a></h3>
+      <div style="text-align:center;">
+         <table class="classic" style="display:inline">
+            <tr>
+               <th>Extension</th>
+               <th>Version</th>
+               <th>Protocols</th>
+            </tr>
+            <tr>
+               <td><a href="#httpclient">Apache HTTP Client</a></td>
+               <td>3.1</td>
+               <td>HTTP, HTTPS</td>
+            </tr>
+            <tr>
+               <td><a href="#net">Net</a></td>
+               <td>1.0</td>
+               <td>HTTP, HTTPS</td>
+            </tr>
+            <tr>
+               <td><a href="#javamail">JavaMail</a></td>
+               <td>1.4</td>
+               <td>SMTP, SMTPS</td>
+            </tr>
+            <tr>
+               <td><a href="#jdbc">JDBC</a></td>
+               <td>1.0</td>
+               <td>JDBC</td>
+            </tr>
+            <tr>
+               <td><a href="#nre">NRE Local</a></td>
+               <td>1.0</td>
+               <td>CLAP, FILE, WAR</td>
+            </tr>
+         </table>
+      </div>
+   </div>
+
+   <div style="clear:both; text-align:justify; padding-top: 10px;">
+      Note also that Restlet applications can be served from Servlet containers
+      via the ServerServlet adapter. This extension can be viewed as a connector,
+      even if it is more an adapter than a connector. Please check the
+      <a href="integrations">Integrations section</a> for more details.
+   </div>
+</div>
+
+<h1><a name="server_connectors">Server Connectors</a></h1>
+
+<h2>Configuration</h2>
+
+<p>
+   Here are the <a href="nre/com/noelios/restlet/http/HttpServerHelper">commons parameters</a>
+   dedicated to HTTP server connectors.
+</p>
+
+<p>
+   Here is a sample code showing how to set such a parameter.
+</p>
+<pre class="java:nocontrols:nogutter">
+// Creating a minimal Restlet returning "Hello World"
+Restlet restlet = new Restlet() {
+    @Override
+    public void handle(Request request, Response response) {
+        response.setEntity("Hello World!", MediaType.TEXT_PLAIN);
+    }
+};
+
+// Create the HTTP server and listen on port 8182
+Server server = new Server(new Context(), Protocol.HTTP, 8182, restlet);
+server.getContext().getParameters().add("useForwardedForHeader", "true");
+server.start();
+</pre>
+
+<h2><a name="asyncweb">AsyncWeb</a></h2>
+
+<p>
+   This connector is based on the open source project <a href="http://docs.safehaus.org/display/ASYNCWEB/">AsyncWeb</a>.
+   This is an Java HTTP engine, based on the <a href="http://directory.apache.org/subprojects/network/">MINA framework</a>.
+   Thus, it employs non blocking IO and has been designed to allow highly scalability and support of very high throughput.
+</p>
+<p>
+   This connector supports the following protocol: HTTP.
+</p>
+<p>
+   The list of supported specific parameters is available in the javadocs:
+</p>
+<div>
+   <ul>
+      <li><a href="ext/com/noelios/restlet/ext/asyncweb/AsyncWebServerHelper.html">AsyncWeb parameters</a></li>
+   </ul>
+</div>
+<p>
+   Here is the list of dependencies of this connector:
+</p>
+<div>
+   <ul>
+      <li><a href="http://docs.safehaus.org/display/ASYNCWEB/">AsyncWeb 0.8</a></li>
+      <li><a href="http://www.slf4j.org">slf4j 1.0</a></li>
+      <li><a href="http://gee.cs.oswego.edu/dl/classes/EDU/oswego/cs/dl/util/concurrent/intro.html">Package util.concurrent 1.3</a></li>
+      <li><a href="http://jakarta.apache.org/commons/logging/">Apache Commons Logging 1.1</a></li>
+      <li><a href="http://mina.apache.org/">Apache Mina 0.8</a></li>
+   </ul>
+</div>
+
+<h2><a name="jetty">Jetty</a></h2>
+
+<p>
+   This connector is based on the <a href="http://www.mortbay.org/">Jetty</a>
+   open-source web server. Jetty is popular and has a nice separation between
+   its HTTP protocol implementation and its support for the Servlet API which
+   led it to be the first HTTP server connector developed for the Restlet.
+</p>
+<p>
+   This connector supports the following protocols: HTTP, HTTPS, AJP.
+</p>
+
+<p>
+   The list of supported specific parameters is available in the javadocs:
+</p>
+
+<div>
+   <ul>
+      <li><a href="ext/com/noelios/restlet/ext/jetty/JettyServerHelper">Jetty common parameters</a></li>
+      <li><a href="ext/com/noelios/restlet/ext/jetty/HttpServerHelper">HTTP specific parameters</a></li>
+      <li><a href="ext/com/noelios/restlet/ext/jetty/HttpsServerHelper">HTTPS specific parameters</a></li>
+   </ul>
+</div>
+
+<p>
+   Here is the list of dependencies of this connector:
+</p>
+
+<div>
+   <ul>
+      <li><a href="http://www.mortbay.org/">Jetty 6.1</a></li>
+      <li><a href="http://java.sun.com/products/servlet/">Java Servlet 2.5</a></li>
+   </ul>
+</div>
+
+<h2><a name="simple">Simple</a></h2>
+
+<p>
+   This connector is based on <a href="http://www.simpleframework.org/">Simple 3.1</a>
+   which is an open source embeddable Java based HTTP engine capable of handling
+   high loads.
+</p>
+<p>
+   This connector supports the following protocols: HTTP, HTTPS.
+</p>
+<p>
+   The list of supported specific parameters is available in the javadocs:
+</p>
+<div>
+
+   <ul>
+      <li><a href="ext/com/noelios/restlet/ext/simple/SimpleServerHelper">Simple common parameters</a></li>
+      <li><a href="ext/com/noelios/restlet/ext/simple/HttpServerHelper">HTTP specific parameters</a></li>
+      <li><a href="ext/com/noelios/restlet/ext/simple/HttpsServerHelper">HTTPS specific parameters</a></li>
+   </ul>
+</div>
+<p>
+   Here is the list of dependencies of this connector:
+</p>
+<div>
+   <ul>
+      <li><a href="http://www.simpleframework.org/">Simple 3.1</a></li>
+   </ul>
+</div>
+
+<h1><a name="client_connectors">Client Connectors</a></h1>
+
+<h2>Configuration</h2>
+
+<p>
+   Here are the <a href="nre/com/noelios/restlet/http/HttpClientHelper">commons parameters</a>
+   dedicated to HTTP client connectors.
+</p>
+
+<p>
+   Here is a sample code showing how to set such a parameter.
+</p>
+<pre class="java:nocontrols:nogutter">
+Client client = new Client(new Context(), Protocol.HTTP);
+client.getContext().getParameters().add("converter",
+                       "com.noelios.restlet.http.HttpClientConverter");
+</pre>
+
+<h2><a name="httpclient">Apache HTTP Client</a></h2>
+
+<p>
+   This connector is based on <a href="http://jakarta.apache.org/commons/httpclient/">Apache Commons HTTP client</a>.
+   It provides an HTTP and HTTPS client connector with advanced multi-threading and connection reuse support.
+</p>
+
+<p>
+   As pointed out by the Apache HTTPClient tutorial it is crucial to read entirely each response. It allows to release
+   the underlying connection. Not doing so may cause future requests to block.<br/>
+   See <a href="http://jakarta.apache.org/httpcomponents/httpclient-3.x/tutorial.html" title="Apache HTTPClient 3.x tutorial">Apache HTTPClient 3.x tutorial</a>.
+</p>
+
+<p>
+   This connector supports the following protocols: HTTP, HTTPS.
+</p>
+
+<p>
+   The list of supported specific parameters is available in the javadocs:
+</p>
+
+<div>
+   <ul>
+      <li><a href="ext/com/noelios/restlet/ext/httpclient/HttpClientHelper.html">HTTP client parameters</a></li>
+   </ul>
+</div>
+
+<p>
+   Here is the list of dependencies of this connector:
+</p>
+
+<div>
+   <ul>
+      <li><a href="http://jakarta.apache.org/commons/httpclient/">Apache Commons HTTP Client 3.1</a></li>
+      <li><a href="http://jakarta.apache.org/commons/codec/">Apache Commons Codec 1.3</a></li>
+      <li><a href="http://jakarta.apache.org/commons/logging/">Apache Commons Logging 1.1</a></li>
+   </ul>
+</div>
+
+<h2><a name="net">Net</a></h2>
+
+<p>
+   This connector is fully based on the JDK and more precisely on
+   <a href="http://java.sun.com/j2se/1.5.0/docs/api/index.html?java/net/HttpURLConnection.html">java.net.HttpURLConnection class</a>.
+</p>
+
+<p>
+   This connector supports the following protocols: HTTP, HTTPS.
+</p>
+
+<p>
+   The list of supported specific parameters is available in the javadocs:
+</p>
+
+<div>
+   <ul>
+      <li><a href="ext/com/noelios/restlet/ext/net/HttpClientHelper.html">HTTP client parameters</a></li>
+   </ul>
+</div>
+
+<h2><a name="javamail">JavaMail</a></h2>
+
+<p>
+   This connector is based on <a href="http://java.sun.com/products/javamail/">JavaMail</a>
+   that provides a platform-independent and protocol-independent framework to
+   build mail and messaging applications.
+</p>
+<p>
+   This connector supports the following protocols: SMTP, SMTPS.
+</p>
+<p>
+   The mail and its properties (sender, recipient, subject, content, etc) have
+   to be specified as an XML representation. Please refer to the
+   <a href="ext/com/noelios/restlet/ext/javamail/JavaMailClientHelper.html">JavaMail client javadocs</a>
+   for more details.
+</p>
+
+<p>
+   Here is the list of dependencies of this connector:
+</p>
+
+<div>
+   <ul>
+      <li><a href="http://java.sun.com/products/javamail/">JavaMail API 1.4</a></li>
+      <li><a href="http://java.sun.com/products/javabeans/jaf/">JavaBeans Activation Framework 1.1</a></li>
+   </ul>
+</div>
+
+<h2><a name="jdbc">JDBC</a></h2>
+
+<p>
+   This connector is a client to a JDBC database. It is based on the
+   <a href="http://java.sun.com/products/jdbc/">JDBC Api</a> developed by Sun
+   Microsystems and shipped with the JDK. Database connections are optionally
+   pooled using Apache Commons DBCP. In this case, a different connection pool
+   is created for each unique combination of JDBC URI and connection properties.
+</p>
+
+<p>
+   This connector supports the following protocol: JDBC.
+</p>
+
+<p>
+   The SQL request and other kinds of parameters (such as pooling) are passed to
+   the client connector via an XML representation. Please refer to the
+   <a href="ext/com/noelios/restlet/ext/jdbc/JdbcClientHelper.html">JDBC client javadocs</a>
+   for more details.
+   <br/>
+   The Response provides the result of the SQL request as a RowSetRepresentation
+   which is a kind of XML representation of the ResultSet instance wrapped either
+   in a JdbcResult or in a WebRowSet instance. See the
+   <a href="ext/com/noelios/restlet/ext/jdbc/RowSetRepresentation.html">RowSetRepresentation</a>
+   for more details.
+</p>
+
+<p>
+   Here is the list of dependencies of this connector:
+</p>
+<div>
+   <ul style="margin-top:-2px;margin-bottom:-3px;margin-right:3px;">
+      <li><a href="http://jakarta.apache.org/commons/dbcp/">Apache Commons DBCP 1.2</a></li>
+      <li><a href="http://jakarta.apache.org/commons/pool/">Apache Commons Pool 1.3</a></li>
+      <li><a href="http://jakarta.apache.org/commons/logging/">Apache Commons Logging 1.1</a></li>
+   </ul>
+</div>
+
+<h2><a name="nre">NRE Local client</a></h2>
+
+<p>
+   This internal connector is shipped with the Restlet Engine
+   distribution and gives access to non-remote resources located on a local file
+   system or managed by a classloader.
+</p>
+
+<p>
+   This connector supports the following protocols: FILE, CLAP.
+</p>
+
+<p>
+   FILE is a standard scheme to access to representations stored in the file
+   system (e.g.: "file:///d:/temp/fichier.txt", "file:///tmp/fichier.txt").
+   CLAP (ClassLoader Access Protocol) is a custom scheme to access to
+   representations via classloaders (e.g.: clap://thread/org/restlet/Restlet.class).
+   This protocol accepts three kinds of authority :
+</p>
+
+<div>
+   <ul>
+      <li>class: the resources will be resolved from the classloader associated with the local class.</li>
+      <li>system: the resources will be resolved from the system's classloader.</li>
+      <li>thread: the resources will be resolved from the current thread's classloader.</li>
+   </ul>
+</div>
+
+<p>
+   The "local" Reference instances can be easily created via the
+   <a href="api/org/restlet/data/LocalReference.html">LocalReference</a>
+   class.
+   <br/>
+   The list of supported parameters is available in the javadocs:
+</p>
+
+<div>
+   <ul>
+      <li><a href="nre/com/noelios/restlet/local/LocalClientHelper.html">Local client commons parameters</a></li>
+      <li><a href="nre/com/noelios/restlet/local/ClapClientHelper.html">CLAP client commons parameters</a></li>
+   </ul>
+</div>
+</#global>
+<#include "/footer.ftl"/>

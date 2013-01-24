@@ -1,0 +1,88 @@
+<#include "/header.ftl"/>
+<#global stylesheet_files=["/stylesheets/ext-custom.css", "/stylesheets/xtheme-gray.css"] />
+<#global javascript_files=["/javascript/ext-custom.js", "/javascript/locale/ext-lang.js", "/javascript/forms/services/consulting.fr.js"] />
+<#global content>
+
+<@h2 "Présentation" "presentation">
+<p>
+   	Restlet SAS est à votre service pour des missions de conseil dans ses
+   	domaines de compétence. Nous disposons d'une expertise reconnue sur REST et notre
+   	technologie Restlet, mais nous avons également une forte expérience dans les domaines 
+   	de l'architecture logicielle, de la modélisation, des technologies du Web et dans 
+   	la plate-forme Java en général.
+</p>
+</@h2>
+
+<@h2 "Types de missions" "mission-types">
+<p>
+   	Voici une liste des principaux types de mission que nous vous proposons. Cette liste
+   	n'est pas exhaustive et une mission peut combiner plusieurs aspects&nbsp;:
+</p>
+
+<ul>
+	<li>Conception d'API web RESTful
+		<ul>
+			<li>basé sur notre méthodologie ROA/D (Resource-Oriented Analysis &amp; Design)</li>	
+			<li>compatible avec les approches WOA (Web-Oriented Architecture) et ROA</li>
+			<li>indépendant de la technologie utilisée (Java, .Net, Restlet API, JAX-RS, etc.)</li>
+			<li>documentation aux formats WADL et HTML</li>
+		</ul>
+	</li>
+	<li>Revue d'architecture logicielle</li>
+	<li>Conception d'architecture logicielle</li>
+	<li>Conception détaillée et prototypage</li>
+	<li>Optimisation des performances</li>
+	<li>Recueil et analyse des besoins</li>
+   	<li>Veille technologique et transfert de connaissances</li>
+</ul>
+
+<p>
+	Nous proposons également des services de développement autour de notre produit 
+	<a href="/products/restlet">Restlet Framework</a>. Veuillez consulter 
+	la page <a href="/services/development">développement</a> pour de plus amples détails. 
+</p>
+
+<p>
+	Nous sommes flexibles concernant la forme des missions. Elles peuvent être soit
+    à plein temps soit à temps partiel. Leur exécution peut être soit continue, soit
+    morcelée sur une période prédéfinie. 
+</p>
+    
+<p>
+    Concernant les sites d'exécution, nous préférons les missions de longue durée à 
+    distance ou dans notre zone géographique proche (la région parisienne). Pour des 
+    missions de courte durée (moins de 3 mois), nous nous déplaçons en Europe et au-delà.
+</p>
+</@h2>
+    
+<@h2 "Compétences" "competencies">
+<p>
+	Restlet SAS dispose d'une large expérience dans l'ingénierie et l'architecture 
+	logicielle, acquise dans des secteurs d'activité variés comme l'édition logicielle, 
+	l'industrie RFID ou les télécoms. Voici une liste plus détaillée de nos compétences&nbsp;:
+</p>
+
+<ul>
+	<li>Modélisation</li>
+    <li>Architecture</li>
+    <li>Performance</li>
+    <li>Sécurité</li>
+    <li>Serveurs d'application</li>
+    <li>Validation</li>
+    <li>Persistance</li>
+    <li>Langages</li>
+    <li>Qualité</li>
+</ul>
+</@h2>
+
+<@h2 "Prise de contact" "contact">
+<p>
+	Afin de discuter ensemble de votre projet, nous vous proposons de remplir le 
+	formulaire ci-dessous. Nous reviendrons vers vous très rapidement. 
+</p>
+
+<div id="consulting-form"></div>
+
+</@h2>
+</#global>
+<#include "/footer.ftl"/>

@@ -1,0 +1,65 @@
+<Project xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns="http://usefulinc.com/ns/doap#">
+
+	<name>Restlet</name>
+	<homepage rdf:resource="http://www.restlet.org" />
+	<created>2005-11-01</created>
+	<shortdesc xml:lang="en">
+	  The leading RESTful web framework for Java.
+	</shortdesc>
+	<shortdesc xml:lang="fr">
+	  Le framework REST leader en Java. 
+	</shortdesc>
+	<description xml:lang="en">
+	  Do you want to blend your web services, web sites and web clients into
+      unified web applications exposing and consuming RESTful web APIs?
+      Leverage the open source Restlet Framework and its unique Java API available 
+      in six consistent editions: Java SE, Java EE, OSGi, Google App Engine, 
+      Android and Google Web Toolkit! 
+	</description>
+	<programming-language>Java</programming-language>
+	<bug-database rdf:resource="https://github.com/restlet/restlet-framework-java/issues" />
+	<download-page rdf:resource="http://www.restlet.org" />
+
+	<mailing-list rdf:resource="http://www.restlet.org/discuss" />
+	<maintainer>
+		<foaf:Person>
+			<foaf:name>Jerome Louvel</foaf:name>
+			<foaf:mbox rdf:resource="mailto:contact@restlet.com" />
+			<foaf:homepage rdf:resource="http://www.restlet.com" />
+		</foaf:Person>
+	</maintainer>
+
+	<!-- Currently supported versions -->
+	<release>
+		<Version>
+			<name>Restlet ${ant["stable.restlet-version-minor"]}</name>
+			<created>${ant["stable.restlet-release-date"]}</created>
+			<revision>${ant["stable.restlet-version-compact"]}</revision>
+			<file-release rdf:resource="http://www.restlet.org/downloads/${ant["stable.restlet-version-minor"]}/restlet-${ant["stable.restlet-version-compact"]}.zip" /> 
+		</Version>
+	</release>
+
+	<license rdf:resource="http://usefulinc.com/doap/licenses/LGPL" />
+
+	<repository>
+		<GitRepository>
+			<location rdf:resource="https://github.com/restlet/restlet-framework-java.git" />
+			<browse rdf:resource="https://github.com/restlet/restlet-framework-java" />
+		</GitRepository>
+	</repository>
+
+	<!-- Freashmeat categories -->
+	<category rdf:resource="http://freshmeat.net/browse/10/"/>
+	<category rdf:resource="http://freshmeat.net/browse/226/"/>
+	<category rdf:resource="http://freshmeat.net/browse/3/"/>
+	<category rdf:resource="http://freshmeat.net/browse/1103/"/>
+	<category rdf:resource="http://freshmeat.net/browse/198/"/>
+	<category rdf:resource="http://freshmeat.net/browse/87/"/>
+	<category rdf:resource="http://freshmeat.net/browse/250/"/>
+	<category rdf:resource="http://freshmeat.net/browse/810/"/>
+	<category rdf:resource="http://freshmeat.net/browse/913/"/>
+
+</Project>

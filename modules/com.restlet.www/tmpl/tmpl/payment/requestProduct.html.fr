@@ -1,0 +1,164 @@
+<#include "/header.ftl"/>
+<#assign currentSection="payment">
+<#assign currentSubSection="request">
+<#global content>
+
+<@h2 "Présentation" "presentation">
+<p>
+	Restlet S.A.S. vous remercie de votre commande!
+</p>
+
+<#noparse>
+<@h3>Récapitulatif de votre commande</@h3>
+
+<h4>Votre licence</h4>
+<ul>
+<li>Nom du produit couvert : ${coveredProductName!""}</li>
+<li>Description du produit : ${coveredProductDescription!""}</li>
+<#if licenseAmountVAT??>
+<li>Montant forfaitaire HT : ${licenseAmountWithoutTaxes?string("0.00")} €</li>
+<li>Montant de la TVA (19,6%) : ${licenseAmountVAT?string("0.00")} €</li>
+<li>Montant TTC : ${licenseAmountAllIn?string("0.00")} €</li>
+<#else>
+<li>Montant forfaitaire    : ${licenseAmountWithoutTaxes?string("0.00")} €</li>
+</#if>
+</ul>
+
+<h4>Votre signataire</h4>
+<ul>
+<li>Prénom : ${signerFirstName!""}</li>
+<li>Nom    : ${signerLastName!""}</li>
+<li>Rôle   : ${signerPosition!""}</li>
+<li>E-Mail : ${signerEmail!""}</li>
+</ul>
+
+<h4>Votre organisation</h4>
+<ul>
+<li>Nom                : ${organizationName!""}</li>
+<li>Site Web           : ${organizationWebSite!""}</li>
+<li>Adresse            : ${organizationAddressLine1!""}</li>
+<li>Adresse (suite)    : ${organizationAddressLine2!""}</li>
+<li>Code postal        : ${organizationAddressZipCode!""}</li>
+<li>Ville              : ${organizationAddressCity!""}</li>
+<#if organizationAddressState??>
+<li>Etat               : ${organizationAddressState!""}</li>
+</#if>
+<li>Pays               : ${organizationAddressCountry!""}</li>
+<li>Numéro de commande : ${invoiceNumber!""}</li>
+</ul>
+</#noparse>
+
+<p>
+	Vous pouvez désormais procéder à son réglement. Pour cela, plusieurs moyens vous 
+	sont proposés ci-dessous.
+</p>
+</@h2>
+
+<@h2 "PayPal" "paypal">
+<p>
+	Restlet S.A.S. dispose d'un compte PayPal Business nous permettant d'accepter 
+	vos paiements en ligne, soit directement avec votre compte PayPal, soit 
+	avec votre carte bancaire (sans avoir à vous inscrire à PayPal).
+</p>
+<#noparse>
+<#if paypalLimit??>
+<p class="error">
+    Ce montant dépasse la limite de 8 000 € autorisée par PayPal. En conséquence, 
+    nous vous proposons d'utiliser l'un des moyens de paiement alternatifs ci-dessous.
+    Sinon, vous pouvez aussi nous contacter pour diviser le paiement PayPal en plusieurs
+    parties pour contourner cette limite par transaction.
+</p>
+<#else>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<div>
+   <input type="hidden" name="cmd" value="_xclick" />
+   <input type="hidden" name="business" value="ventes@restlet.com" />
+   <input type="hidden" name="item_name" value="Licence commerciale Restlet" />
+   <#setting locale="en">
+   <input type="hidden" name="amount" value="${licenseAmount?string("###0.##")}" />
+   <#setting locale="${language}">
+   <input type="hidden" name="no_shipping" value="0" />
+   <input type="hidden" name="return" value="http://www.restlet.com/payment/confirmation" />
+   <input type="hidden" name="cancel_return" value="http://www.restlet.com/payment/cancellation" />
+   <input type="hidden" name="no_note" value="1" />
+   <input type="hidden" name="currency_code" value="EUR" />
+   <input type="hidden" name="lc" value="FR" />
+   <input type="hidden" name="bn" value="PP-BuyNowBF" />
+   <input type="image" src="https://www.paypal.com/fr_FR/FR/i/btn/btn_paynowCC_LG.gif" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !" />
+   <img alt="" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1" />
+</div>
+</form>
+</#if>
+</#noparse>
+</@h2>
+
+<@h2 "Virement" "wire">
+<p>
+	Restlet S.A.S. peut recevoir, sans frais supplémentaire, les virements en euro 
+	depuis les pays membres de l'Union Européenne, l'Islande, le Liechtenstein, la Norvège 
+	et la Suisse.
+</p>
+
+<p>
+	Pour les autres pays et les autres devises comme le dollar, veuillez rajouter 20 € de
+	frais bancaires à votre paiement, ou l'équivalent en devises.
+</p>
+
+<p>
+	Dans tous les cas, voici les coordonnées bancaires à utiliser. Merci d'ajouter
+	la référence de la commande en commentaire de votre virement:
+</p>
+
+<@h3>Relevé d'identité bancaire (RIB)</@h3>
+<p>
+	Titulaire: Restlet S.A.S.<br/>
+	Code établissement: 17515<br/>
+	Code guichet: 90000<br/>
+	Numéro compte: 08095697596<br/>
+	Clé: 13<br/>
+	Domiciliation: CE ILE DE FRANCE
+</p>
+
+<@h3>International Bank Account Number (IBAN)</@h3>
+<p>
+	FR76 1751 5900 0008 0956 9759 613
+</p>
+
+<@h3>Bank Identifier Code (BIC)</@h3>
+<p>
+	C E P A F R P P 7 5 1<br/>
+	LEVALLOIS PERRET<br/>
+	52 rue du President Wilson<br/>
+	92300 Levallois Perret<br/>
+	FRANCE
+</p>
+</@h2>
+
+<@h2 "Chèque" "check">
+<p>
+	Restlet S.A.S. peut recevoir, sans frais supplémentaire, vos paiements en euro 
+	par chèque depuis une banque française.
+</p>
+
+<p>
+	Pour les autres pays et les autres devises comme le dollar, veuillez rajouter 20 € de
+	frais bancaires à votre paiement, ou l'équivalent en devises.
+</p>
+
+<p>
+	Dans tous les cas, merci d'envoyer votre chèque, avec la référence de la commande au 
+	dos, à l'adresse suivante:
+</p>
+
+<@h3>Adresse postale</@h3>
+<p>
+	Restlet S.A.S.<br/>
+    P&eacute;pini&egrave;re d'ESSEC Ventures - CNIT - BP 230<br/>
+    2 place de la D&eacute;fense<br/>
+    92053 Paris La D&eacute;fense<br/>
+   	FRANCE
+</p>
+</@h2>
+
+</#global>
+<#include "/footer.ftl"/>

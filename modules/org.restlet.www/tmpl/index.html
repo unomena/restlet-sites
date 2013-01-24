@@ -1,0 +1,171 @@
+<#include "/header.ftl"/>
+<#global title="Restlet - RESTful web framework for Java" />
+<#global headerClass="header"/>
+<#global javascript_files=["/javascript/jquery-1.9.0.min.js", "/javascript/jquery-cookie.js", "/javascript/jsclass-core.js", "/javascript/json-minified.js", "/javascript/restlet-client.js", "/javascript/restlet-feedSummary.js", "/javascript/bootstrap.min.js", "/javascript/distributions.js", "/javascript/combo-widget.js"] />
+<#global javascript>
+	$(document).ready(function() {
+		initDownload();
+	});
+</#global>
+<#global header>
+<h2>The leading web API framework for Java</h2>
+<p>
+	<strong>Do you want to blend your web services, web sites and
+		web clients into unified web applications exposing and consuming
+		RESTful web APIs?</strong>
+</p>
+<p>
+	Leverage the open source Restlet Framework and its unique Java API
+	available in six consistent editions: <a href="">Java SE</a>, <a
+		href="">Java EE</a>, <a href="">OSGi</a>, <a href="">GAE</a>, <a
+		href="">Android</a> and <a href="">GWT</a>!
+</p>
+</#global>
+<#global content>
+<div class='span3 left section'>
+	<div>
+		<img src="/images/discover.png" />
+		<h2>Discover</h2>
+		<p>Suspendisse vestibulum dignissim quam. Integer vel augue.
+			Phasellus nulla purus, interdum ac, venenatis non, varius rutrum,
+			leo. Pellentesque habitant morbi tristique senectus et netus et
+			malesuada fames ac turpis egestas. Duis a eros.</p>
+		<p>
+			<a href="/about/">Learn more</a>
+			<span style="float: right"><i class="follow-icon"></i><a href="#">Follow us on twitter</a></span>
+		</p>
+	</div>
+</div>
+<div class='span3 center section'>
+	<div>
+		<img src="/images/learn.png" />
+		<h2>Learn</h2>
+		<p>Suspendisse vestibulum dignissim quam. Integer vel augue.
+			Phasellus nulla purus, interdum ac, venenatis non, varius rutrum,
+			leo. Pellentesque habitant morbi tristique senectus et netus et
+			malesuada fames ac turpis egestas. Duis a eros.</p>
+		<p>
+			<a href="/documentation/">Learn more</a>
+		</p>
+	</div>
+</div>
+<div class='span3 right section'>
+	<div>
+		<img src="/images/participate.png" />
+		<h2>Participate</h2>
+		<p>Suspendisse vestibulum dignissim quam. Integer vel augue.
+			Phasellus nulla purus, interdum ac, venenatis non, varius rutrum,
+			leo. Pellentesque habitant morbi tristique senectus et netus et
+			malesuada fames ac turpis egestas. Duis a eros.</p>
+		<p>
+			<a href="/community/">Learn more</a>
+		</p>
+	</div>
+</div>
+<div class="clearBoth"></div>
+<hr />
+<!-- Download section -->
+<div class="emptySeparator"></div>
+<div class='span3 left section'>
+	<div>
+		<img src="/images/download.png" />
+		<h2>Download</h2>
+	</div>
+</div>
+<div class='span3 center section'>
+	<form class="form-horizontal">
+		<div class="control-group">
+			<label class="control-label">Release:</label>
+			<div class="controls">
+				<div class="btn-group">
+					<button id="branch-bt" class="btn no-radius" data-toggle="dropdown"><strong>Stable</strong></button>
+					<button class="btn dropdown-toggle no-radius" data-toggle="dropdown"><strong><span class="caret"></span></strong></button>
+					<ul id="branch" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+						<!-- dropdown menu links -->
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Edition:</label>
+			<div class="controls">
+				<div class="btn-group">
+					<button id="edition-bt" class="btn no-radius" data-toggle="dropdown"><strong>OSGi</strong></button>
+					<button class="btn dropdown-toggle no-radius"
+						data-toggle="dropdown">
+						<strong><span class="caret"></span></strong>
+					</button>
+					<ul id="edition" class="dropdown-menu">
+						<!-- dropdown menu links -->
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Distribution:</label>
+			<div class="controls">
+				<div class="btn-group">
+					<button id="distribution-bt" class="btn no-radius" data-toggle="dropdown"><strong>ZIP file</strong></button>
+					<button class="btn dropdown-toggle no-radius" data-toggle="dropdown"><strong><span class="caret"></span></strong></button>
+					<ul id="distribution" class="dropdown-menu">
+						<!-- dropdown menu links -->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+<div id="download" class='span3 right section download'>
+						<!-- download link -->
+</div>
+<!-- End Download section -->
+<div class="clearBoth"></div>
+<hr />
+<div id="restletFeedSummary" class="span5 left section"></div>
+<div class="span5 right section">
+	<h4>Our book</h4>
+	<div class="inaction">
+		<div class="span3"></div>
+		<div class="span3">
+			<h4>
+				<a href="">Restlet in action</a>
+			</h4>
+			<p>
+				<strong>Developing RESTful web APIs in Java</strong>
+			</p>
+			<p>Jérôme Louvel, Thierry Templier, and Thierry Boileau</p>
+			<p>Foreword by Brian Sletten</p>
+			<p>September, 2012 | 464 pages</p>
+			<p>ISBN: 9781935182344</p>
+		</div>
+	</div>
+</div>
+<div class="clearBoth"></div>
+<hr />
+<div class="span5 left section">
+	<div class="apispark-logo"></div>
+</div>
+<div class="span5 right section">
+	<h4>The all-in-one platform for web APIs</h4>
+	<p>
+		Suspendisse vestibulum dignissim quam. Integer vel augue. Phasellus
+		nulla purus, interdum ac, venenatis non, varius rutrum, leo. <a
+			href="">Learn more</a>
+	</p>
+</div>
+<div class="clearBoth"></div>
+<hr />
+<p class="users">
+	<a href="">Restlet Framework is used by:</a>
+</p>
+<ul class="users">
+	<li><img src="/images/user-arc90.png" /></li>
+	<li><img src="/images/user-coradiant.png" /></li>
+	<li><img src="/images/user-google.png" /></li>
+	<li><img src="/images/user-nasa.png" /></li>
+	<li><img src="/images/user-rapt.png" /></li>
+	<li><a href="/references">More...</a></li>
+</ul>
+
+</#global>
+<#include "/footer.ftl"/>

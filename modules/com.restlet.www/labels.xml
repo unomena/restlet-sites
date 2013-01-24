@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE labels []>
+
+<!-- Data file that declares localizable labels -->
+<labels>
+   <summaryNoeliosBlog>
+      <en>Summary of the Restlet blog</en>
+      <fr>Résumé du blog Restlet</fr>
+   </summaryNoeliosBlog>
+   <noeliosBlog>
+      <en>Restlet blog</en>
+      <fr>Blog Restlet</fr>
+   </noeliosBlog>
+   <vatAmount>
+      <en>VAT amount</en>
+      <fr>Montant de la TVA</fr>
+   </vatAmount>
+   <allInAmount>
+      <en>All in amount</en>
+      <fr>Montant TTC</fr>
+   </allInAmount>
+   <status>
+      <en>Status</en>
+      <fr>Statut</fr>
+   </status>
+   <yes>
+      <en>Yes</en>
+      <fr>Oui</fr>
+   </yes>
+   <no>
+      <en>No</en>
+      <fr>Non</fr>
+   </no>
+   <firstName>
+      <en>First name</en>
+      <fr>Prénom</fr>
+   </firstName>
+   <lastName>
+      <en>Last name</en>
+      <fr>Nom</fr>
+   </lastName>
+   <organization>
+      <en>Organization</en>
+      <fr>Organisation</fr>
+   </organization>
+   <function>
+      <en>Function</en>
+      <fr>Rôle</fr>
+   </function>
+   <description>
+      <en>Description</en>
+      <fr>Description</fr>
+   </description>
+   <licence>
+      <en>Licence</en>
+      <fr>Licence</fr>
+   </licence>
+   <email>
+      <en>E-mail</en>
+      <fr>E-mail</fr>
+   </email>
+   <webSite>
+      <en>Web site</en>
+      <fr>Site Web</fr>
+   </webSite>
+   <address>
+      <en>Address</en>
+      <fr>Adresse</fr>
+   </address>
+   <address1>
+      <en>Address</en>
+      <fr>Adresse</fr>
+   </address1>
+   <address2>
+      <en>Address (cont.)</en>
+      <fr>Adresse (suite)</fr>
+   </address2>
+   <zipCode>
+      <en>Zip code</en>
+      <fr>Code postal</fr>
+   </zipCode>
+   <city>
+      <en>City</en>
+      <fr>Ville</fr>
+   </city>
+   <country>
+      <en>Country</en>
+      <fr>Pays</fr>
+   </country>
+   <state>
+      <en>State</en>
+      <fr>Etat</fr>
+   </state>
+   <supportPlanType>
+      <en>Type of support plan</en>
+      <fr>Type de plan de support</fr>
+   </supportPlanType>
+   <supportPlanDuration>
+      <en>Duration of support plan</en>
+      <fr>Durée du plan de support</fr>
+   </supportPlanDuration>
+   <fixedPrice>
+      <en>Fixed price</en>
+      <fr>Montant forfaitaire</fr>
+   </fixedPrice>
+   <consultingType>
+      <en>Description</en>
+      <fr>Description</fr>
+   </consultingType>
+   <comments>
+      <en>Comments</en>
+      <fr>Commentaires</fr>
+   </comments>
+   <development>
+      <missionTitle>
+         <en>Your mission</en>
+         <fr>Votre mission</fr>
+      </missionTitle>
+      <organizationTitle>
+         <en>Your organization</en>
+         <fr>Votre organisation</fr>
+      </organizationTitle>
+      <dataTitle>
+         <en>Your organization</en>
+         <fr>Vos coordonnées</fr>
+      </dataTitle>
+      <type>
+         <en>Description</en>
+         <fr>Description</fr>
+      </type>
+      <skillsType>
+         <en>Skills type</en>
+         <fr>Type de compétences</fr>
+      </skillsType>
+      <coDevelopment>
+         <en>Co-development</en>
+         <fr>Co-développement</fr>
+      </coDevelopment>
+      <estimatedDuration>
+         <en>Estimated duration</en>
+         <fr>Durée souhaitée</fr>
+      </estimatedDuration>
+      <durationType>
+         <en>Duration type</en>
+         <fr>Type de durée</fr>
+      </durationType>
+      <estimatedDate>
+         <en>Estimated starting date</en>
+         <fr>Date de démarrage souhaitée</fr>
+      </estimatedDate>
+      <localization>
+         <en>Execution</en>
+         <fr>Exécution</fr>
+      </localization>
+      <comboBox>
+         <skills>
+            <option>
+               <en>Senior developer</en>
+               <fr>Développeur sénior</fr>
+            </option>
+            <option>
+               <en>Senior architect</en>
+               <fr>Architecte sénior</fr>
+            </option>
+            <option>
+               <en>Other</en>
+               <fr>Autre</fr>
+            </option>
+         </skills>
+         <estimatedDuration>
+            <option>
+               <en>Less than 1 month</en>
+               <fr>Moins de 1 mois</fr>
+            </option>
+            <option>
+               <en>More than 1 month</en>
+               <fr>Plus de 1 mois</fr>
+            </option>
+            <option>
+               <en>More than 3 months</en>
+               <fr>Plus de 3 mois</fr>
+            </option>
+            <option>
+               <en>More than 6 months</en>
+               <fr>Plus de 6 mois</fr>
+            </option>
+            <option>
+               <en>More than 1 year</en>
+               <fr>Plus de 1 an</fr>
+            </option>
+         </estimatedDuration>
+         <durationType>
+            <option>
+               <en>Full time</en>
+               <fr>Plein temps</fr>
+            </option>
+            <option>
+               <en>Partial time</en>
+               <fr>Temps partiel</fr>
+            </option>
+         </durationType>
+         <localization>
+            <option>
+               <en>On site</en>
+               <fr>Sur site</fr>
+            </option>
+            <option>
+               <en>Remotely</en>
+               <fr>A distance</fr>
+            </option>
+            <option>
+               <en>Other</en>
+               <fr>Autre</fr>
+            </option>
+         </localization>
+      </comboBox>
+   </development>
+   <consulting>
+      <missionTitle>
+         <en>Your mission</en>
+         <fr>Votre mission</fr>
+      </missionTitle>
+      <organizationTitle>
+         <en>Your organization</en>
+         <fr>Votre organisation</fr>
+      </organizationTitle>
+      <dataTitle>
+         <en>Your organization</en>
+         <fr>Vos coordonnées</fr>
+      </dataTitle>
+      <type>
+         <en>Consulting type</en>
+         <fr>Type de conseil</fr>
+      </type>
+      <skillsType>
+         <en>Skills type</en>
+         <fr>Type de compétences</fr>
+      </skillsType>
+      <estimatedDuration>
+         <en>Estimated duration</en>
+         <fr>Durée souhaitée</fr>
+      </estimatedDuration>
+      <durationType>
+         <en>Duration Type</en>
+         <fr>Type de durée</fr>
+      </durationType>
+      <estimatedDate>
+         <en>Estimated starting date</en>
+         <fr>Date de démarrage souhaitée</fr>
+      </estimatedDate>
+      <localization>
+         <en>Localization</en>
+         <fr>Lieu d\'exécution</fr>
+      </localization>
+      <comboBox>
+         <skills>
+            <option>
+               <en>Junior consultant</en>
+               <fr>Consultant junior</fr>
+            </option>
+            <option>
+               <en>Senior consultant</en>
+               <fr>Consultant sénior</fr>
+            </option>
+            <option>
+               <en>Other</en>
+               <fr>Autre</fr>
+            </option>
+         </skills>
+         <estimatedDuration>
+            <option>
+               <en>Less than 1 month</en>
+               <fr>Moins de 1 mois</fr>
+            </option>
+            <option>
+               <en>More than 1 month</en>
+               <fr>plus de 1 mois</fr>
+            </option>
+            <option>
+               <en>More than 3 months</en>
+               <fr>Plus de 3 mois</fr>
+            </option>
+            <option>
+               <en>More than 6 months</en>
+               <fr>Plus de 6 mois</fr>
+            </option>
+            <option>
+               <en>More than 1 year</en>
+               <fr>Plus de 1 an</fr>
+            </option>
+         </estimatedDuration>
+         <durationType>
+            <option>
+               <en>Full time</en>
+               <fr>Plein temps</fr>
+            </option>
+            <option>
+               <en>Partial time</en>
+               <fr>Temps partiel</fr>
+            </option>
+         </durationType>
+         <localization>
+            <option>
+               <en>On site</en>
+               <fr>Sur site</fr>
+            </option>
+            <option>
+               <en>Remotely</en>
+               <fr>A distance</fr>
+            </option>
+            <option>
+               <en>Other</en>
+               <fr>Autre</fr>
+            </option>
+         </localization>
+      </comboBox>
+   </consulting>
+   <training>
+      <trainingTitle>
+         <en>Your training</en>
+         <fr>Votre formation</fr>
+      </trainingTitle>
+      <organizationTitle>
+         <en>Your organization</en>
+         <fr>Votre organisation</fr>
+      </organizationTitle>
+      <dataTitle>
+         <en>Your organization</en>
+         <fr>Vos coordonnées</fr>
+      </dataTitle>
+      <type>
+         <en>Training type</en>
+         <fr>Type de formation</fr>
+      </type>
+      <nbTrainees>
+         <en>Number of trainees</en>
+         <fr>Nombre de participants</fr>
+      </nbTrainees>
+      <estimatedStartDate>
+         <en>Estimated start date</en>
+         <fr>Date de début souhaitée</fr>
+      </estimatedStartDate>
+      <comboBox>
+         <training>
+            <option>
+               <en>Training 1</en>
+               <fr>Formation 1</fr>
+            </option>
+            <option>
+               <en>Training 2</en>
+               <fr>Formation 2</fr>
+            </option>
+            <option>
+               <en>Training Pack</en>
+               <fr>Pack Formation</fr>
+            </option>
+         </training>
+      </comboBox>
+   </training>
+   <products>
+      <licenceTitle>
+         <en>Your licence</en>
+         <fr>Votre licence</fr>
+      </licenceTitle>
+      <suscriberTitle>
+         <en>Your suscriber</en>
+         <fr>Votre signataire</fr>
+      </suscriberTitle>
+      <organizationTitle>
+         <en>Your organization</en>
+         <fr>Votre organisation</fr>
+      </organizationTitle>
+      <productName>
+         <en>Name of your product</en>
+         <fr>Nom de votre produit</fr>
+      </productName>
+      <productDescription>
+         <en>Description of your product</en>
+         <fr>Description de votre produit</fr>
+      </productDescription>
+      <transferableLicence>
+         <en>Transferable licence?</en>
+         <fr>Licence transférable?</fr>
+      </transferableLicence>
+   </products>
+   <support>
+      <licenceTitle>
+         <en>Your support contract</en>
+         <fr>Votre contrat de support</fr>
+      </licenceTitle>
+      <supportPlanType>
+         <en>Type of plan</en>
+         <fr>Type de plan</fr>
+      </supportPlanType>
+      <supportPlanDuration>
+         <en>Duration of plan</en>
+         <fr>Durée du plan</fr>
+      </supportPlanDuration>
+      <comboBox>
+         <supportPlanType>
+            <option>
+               <en>Bronze</en>
+               <fr>Bronze</fr>
+               <value>1</value>
+            </option>
+            <option>
+               <en>Silver</en>
+               <fr>Argent</fr>
+               <value>2</value>
+            </option>
+            <option>
+               <en>Gold</en>
+               <fr>Or</fr>
+               <value>3</value>
+            </option>
+            <option>
+               <en>Platinum</en>
+               <fr>Platine</fr>
+               <value>4</value>
+            </option>
+         </supportPlanType>
+         <supportPlanDuration>
+            <option>
+               <en>1 month</en>
+               <fr>1 mois</fr>
+               <value>1</value>
+            </option>
+            <option>
+               <en>3 month</en>
+               <fr>3 mois</fr>
+               <value>2</value>
+            </option>
+            <option>
+               <en>6 month</en>
+               <fr>6 mois</fr>
+               <value>3</value>
+            </option>
+            <option>
+               <en>1 year</en>
+               <fr>1 an</fr>
+               <value>4</value>
+            </option>
+         </supportPlanDuration>
+      </comboBox>
+   </support>
+   <newsletter>
+      <locationTitle>
+         <en>Your details</en>
+         <fr>Vos coordonnées</fr>
+      </locationTitle>
+   </newsletter>
+   <form>
+      <submitting>
+         <en>Saving data...</en>
+         <fr>Données en cours de traitement...</fr>
+      </submitting>
+      <saved>
+         <en>Form correctly received.</en>
+         <fr>Formulaire bien reçu.</fr>
+      </saved>
+      <ajaxError>
+         <en>An error occurred during the treatment.</en>
+         <fr>Une erreur est survenue durant le traitement.</fr>
+      </ajaxError>
+   </form>
+   <button>
+      <submit>
+         <en>Submit</en>
+         <fr>Envoyer</fr>
+      </submit>
+      <next>
+         <en>Next step...</en>
+         <fr>Etape suivante...</fr>
+      </next>
+      <print>
+         <en>Print</en>
+         <fr>Imprimer</fr>
+      </print>
+      <valid>
+         <en>  Accept  </en>
+         <fr>  Accepter  </fr>
+      </valid>
+   </button>
+   <select>
+      <country>
+         <en>Select a country ...</en>
+         <fr>Choisissez un pays ...</fr>
+      </country>
+      <supportPlanType>
+         <en>Select ...</en>
+         <fr>Choisissez ...</fr>
+      </supportPlanType>
+      <supportPlanDuration>
+         <en>Select ...</en>
+         <fr>Choisissez ...</fr>
+      </supportPlanDuration>
+      <training>
+         <en>Select a training...</en>
+         <fr>Choisissez une formation...</fr>
+      </training>
+      <skillsType>
+         <en>Select a skill...</en>
+         <fr>Choisissez une compétence...</fr>
+      </skillsType>
+      <estimatedDuration>
+         <en>Select a duration...</en>
+         <fr>Choisissez une durée...</fr>
+      </estimatedDuration>
+      <durationType>
+         <en>Select ...</en>
+         <fr>Choisissez ...</fr>
+      </durationType>
+      <localization>
+         <en>Select ...</en>
+         <fr>Choisissez ...</fr>
+      </localization>
+   </select>
+</labels>

@@ -1,0 +1,79 @@
+<#include "/header.ftl"/>
+<#global javascript_files=["/javascript/jquery-1.9.0.min.js", "/javascript/jquery-cookie.js", "/javascript/jsclass-core.js", "/javascript/json-minified.js", "/javascript/restlet-client.js", "/javascript/restlet-feedSummary.js", "/javascript/bootstrap.min.js", "/javascript/distributions.js", "/javascript/combo-widget.js"] />
+<#global javascript>
+	$(document).ready(function() {
+		initDownload();
+	});
+</#global>
+<#global content>
+<div class='span3 left section'>
+	<div>
+		<img src="/images/download.png" />
+		<h2>Download</h2>
+	</div>
+</div>
+<div class='span3 center section'>
+	<form class="form-horizontal">
+		<div class="control-group">
+			<label class="control-label">Release:</label>
+			<div class="controls">
+				<div class="btn-group">
+					<button id="branch-bt" class="btn no-radius" data-toggle="dropdown"><strong>Stable</strong></button>
+					<button class="btn dropdown-toggle no-radius" data-toggle="dropdown"><strong><span class="caret"></span></strong></button>
+					<ul id="branch" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+						<!-- dropdown menu links -->
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Edition:</label>
+			<div class="controls">
+				<div class="btn-group">
+					<button id="edition-bt" class="btn no-radius" data-toggle="dropdown"><strong>OSGi</strong></button>
+					<button class="btn dropdown-toggle no-radius"
+						data-toggle="dropdown">
+						<strong><span class="caret"></span></strong>
+					</button>
+					<ul id="edition" class="dropdown-menu">
+						<!-- dropdown menu links -->
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Distribution:</label>
+			<div class="controls">
+				<div class="btn-group">
+					<button id="distribution-bt" class="btn no-radius" data-toggle="dropdown"><strong>ZIP file</strong></button>
+					<button class="btn dropdown-toggle no-radius" data-toggle="dropdown"><strong><span class="caret"></span></strong></button>
+					<ul id="distribution" class="dropdown-menu">
+						<!-- dropdown menu links -->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+<div id="download" class='span3 right section download'>
+						<!-- download link -->
+</div>
+<!-- End Download section -->
+<div class="clearBoth"></div>
+<hr />
+   <h2>Misc</h2>
+
+   <p class="index">
+      <a href="../documentation/${ant["stable.restlet-version-minor"]}/jse/changes">Changes log</a><br/>
+      <a href="maven">Maven repository</a><br/>
+      <a href="archives">All releases</a>
+   </p>
+
+   <h2>Misc</h2>
+
+   <p class="index">
+      <a href="maven">Maven repository</a><br />
+      <a href="eclipse">Eclipse update site</a><br />
+      <a href="archives">All releases</a></p>
+</#global>
+<#include "/footer.ftl"/>

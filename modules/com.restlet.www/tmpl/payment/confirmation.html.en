@@ -1,0 +1,19 @@
+<#include "/header.ftl"/>
+<#global content>
+
+<@h2 "Transaction finished" "transaction">
+<p>
+	Restlet S.A.S. thanks you for your payment! Your transaction is finished and
+	you will receive a confirmation email related to your purchase. 
+</p>
+
+<p>	
+	You can connect to your account on <a href="http://www.paypal.com">www.paypal.com</a> 
+	to consult the details of this transaction. You can continue your navigation on our 
+	Web site if you wish. Restlet S.A.S. will contact you shortly to follow up 
+	on your order.
+</p>
+</@h2>
+
+</#global>
+<#include "/footer.ftl"/>

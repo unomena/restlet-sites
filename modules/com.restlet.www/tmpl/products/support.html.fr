@@ -1,0 +1,291 @@
+<#include "/header.ftl"/>
+<#global stylesheet_files=["/stylesheets/ext-custom.css", "/stylesheets/xtheme-gray.css"] />
+<#global javascript_files=["/javascript/ext-custom.js", "/javascript/locale/ext-lang.js", "/javascript/forms/products/support.fr.js"] />
+<#global content>
+
+<@h2 "Présentation" "presentation">
+<p>
+	En tant que fondateur et développeur principal du projet
+    <a href="http://www.restlet.org">Restlet</a>, le framework REST leader pour Java, 
+    Restlet SAS vous propose une offre complète de support professionnel.
+</p>
+
+<p> 
+    Ce service est basé sur un système de tickets. Chaque ticket correspond à un 
+    incident ou à une question seulement mais peut faire l'objet de plusieurs échanges 
+    entre le client et l'équipe de support. Une fois l'incident ou la question considéré(e)
+    comme résolu(e), le ticket est clos définitivement.
+</p>
+</@h2>
+
+<@h2 "Caractéristiques générales" "general-features">
+<p>
+	Quatre types de plan de support professionnel sont proposés&nbsp;: les plans Bronze,
+	Argent, Or et Platine. Tous les plans ont un ensemble de caractéristiques communes
+	que nous vous présentons ci-dessous, en comparaison avec le support communautaire 
+	offert par le projet libre Restlet. 
+</p>
+
+<table class="classic">
+   <thead>
+      <tr>
+         <th>Description</th>
+         <th>Forum public</th>
+         <th>Plans de support</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>Logiciel supporté</td>
+         <td><a href="/products/restlet">Restlet Framework</a></td>
+         <td><a href="/products/restlet">Restlet Framework</a></td>
+      </tr>
+      <tr>
+         <td>Mise à jour de l'entrepôt Maven</td>
+         <td>Bimensuelle</td>
+         <td>Immédiate</td>
+      </tr>
+      <tr>
+         <td>Support par forum public</td>
+         <td>Oui</td>
+         <td>Non</td>
+      </tr>
+      <tr>
+         <td>Support par courriel privé</td>
+         <td>Non</td>
+         <td>Oui</td>
+      </tr>
+      <tr>
+         <td>Garantie de confidentialité</td>
+         <td>Non</td>
+         <td>Oui</td>
+      </tr>
+      <tr>
+         <td>Langues acceptées</td>
+         <td>Anglais</td>
+         <td>Anglais ou français</td>
+      </tr>
+      <tr>
+         <td>Jours d'accès au support</td>
+         <td>Non garanti</td>
+         <td>Du lundi au vendredi</td>
+      </tr>
+      <tr>
+         <td>Assistance à l'utilisation</td>
+         <td>Limité</td>
+         <td>Oui</td>
+      </tr>
+      <tr>
+         <td>Assistance à l'installation</td>
+         <td>Limité</td>
+         <td>Oui</td>
+      </tr>
+      <tr>
+         <td>Correction de bogues prioritaires</td>
+         <td>Non</td>
+         <td>Oui</td>
+      </tr>
+      <tr>
+         <td>Codage des besoins fonctionnels</td>
+         <td>Non</td>
+         <td>Non</td>
+      </tr>
+   </tbody>
+</table>
+</@h2>
+   
+<@h2 "Caractéristiques spécifiques" "specific-features">
+<p>
+   En plus des caractéristiques communes présentées ci-dessus, vous trouverez dans 
+   le tableau ci-dessous une synthèse des différences entre les quatre plans proposés.
+</p>
+
+<table class="classic">
+   <thead>
+      <tr>
+         <th width="44%">Description</th>
+         <th width="14%">Plan Bronze</th>
+         <th width="14%">Plan Argent</th>
+         <th width="14%">Plan Or</th>
+         <th width="14%">Plan Platine</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>Nombre maximum d'incidents par mois</td>
+         <td>4</td>
+         <td>8</td>
+         <td>16</td>
+         <td>32</td>
+      </tr>
+      <tr>
+         <td>Temps de réponse maximum (en jours)</td>
+         <td>2</td>
+         <td>2</td>
+         <td>1</td>
+         <td>1</td>
+      </tr>
+      <tr>
+         <td>Durée de support des versions (en années)</td>
+         <td>2</td>
+         <td>2</td>
+         <td>4</td>
+         <td>4</td>
+      </tr>
+      <tr>
+         <td>Nombre de contacts autorisés</td>
+         <td>1</td>
+         <td>2</td>
+         <td>4</td>
+         <td>8</td>
+      </tr>
+      <tr>
+         <td>Améliorations prioritaires</td>
+         <td></td>
+         <td></td>
+         <td>Oui</td>
+         <td>Oui</td>
+      </tr>
+      <tr>
+         <td>Débogage à distance</td>
+         <td></td>
+         <td></td>
+         <td>Oui</td>
+         <td>Oui</td>
+      </tr>
+      <tr>
+         <td>Implémentations personnalisées</td>
+         <td></td>
+         <td></td>
+         <td>Oui</td>
+         <td>Oui</td>
+      </tr>
+      <tr>
+         <td>Fourniture de correctifs spécifiques</td>
+         <td></td>
+         <td></td>
+         <td>Oui</td>
+         <td>Oui</td>
+      </tr>
+      <tr>
+         <td>Support par téléphone</td>
+         <td></td>
+         <td></td>
+         <td>Oui</td>
+         <td>Oui</td>
+      </tr>
+      <tr>
+         <td>Prix HT pour 1 mois</td>
+         <td>281 €</td>
+         <td>422 €</td>
+         <td>1 763 €</td>
+         <td>2 644 €</td>
+      </tr>
+      <tr>
+         <td>Prix HT pour 3 mois</td>
+         <td>422 €</td>
+         <td>633 €</td>
+         <td>2 644 €</td>
+         <td>3 967 €</td>
+      </tr>
+      <tr>
+         <td>Prix HT pour 6 mois</td>
+         <td>633 €</td>
+         <td>950 €</td>
+         <td>3 967 €</td>
+         <td>5 950 €</td>
+      </tr>
+      <tr>
+         <td>Prix HT pour 1 an</td>
+         <td>950 €</td>
+         <td>1 425 €</td>
+         <td>5 950 €</td>
+         <td>8 925 €</td>
+      </tr>
+   </tbody>
+</table>
+
+<p>
+   N'hésitez pas à <a href="mailto:contact@restlet.com?Subject=Support technique Restlet">contacter</a>
+   Restlet SAS pour de plus amples informations.
+</p>
+</@h2>
+
+<@h2 "Procédure classique" "classic">
+<p>
+   Si vous le préférez, nous pouvons également traiter votre demande personnellement.
+   Pour cela, veuillez <a href="/contact/location">nous contacter</a> afin que nous
+   puissions vous soumettre une proposition de contrat et une offre commerciale au
+   format PDF.
+</p>
+</@h2>
+
+<@h2 "Procédure en ligne" "process">
+<p>
+	Afin d'accélérer le traitement de votre souscription, nous vous
+	proposons une procédure en ligne. Une fois le formulaire ci-dessous
+	rempli, un contrat légal détaillé vous sera présenté. 
+</p>
+
+<p>
+	Si vous acceptez ce contrat en cliquant sur le bouton en bas de page, une page de
+	confirmation s'affichera et vous permettra de choisir le mode de paiement. Vous 
+	pourrez alors opter pour un paiement en ligne par PayPal (par compte PayPal ou par 
+	carte bancaire), par virement bancaire ou par chèque.
+</p>
+
+<p>
+	Une fois le règlement reçu, nous vous enverrons une facture et un courriel d'instructions 
+	de la part de l'équipe de support et vous pourrez immédiatement ouvrir vos premiers
+	tickets.
+</p>
+
+<div id="support1-form"></div>
+</@h2>
+
+<@h2 "Paiement en ligne" "payment">
+<p>
+   Plusieurs moyens de paiement vous sont proposés ci-dessous.
+</p>
+
+<ul>
+<li>PayPal :
+   <ul>
+      <li>directement par compte PayPal</li>
+      <li>par carte bancaire</li>
+   </ul>
+</li>
+<li>
+   Virement bancaire :
+   <ul>
+      <li>
+         sans frais supplémentaire pour les virements en euro depuis les pays 
+         membres de l'Union Européenne, l'Islande, le Liechtenstein, la Norvège 
+         et la Suisse.
+      </li>
+      <li>
+         pour les autres pays et les autres devises comme le dollar, veuillez 
+         ajouter 20 € de frais bancaires à votre paiement, ou l'équivalent en 
+         devises.
+      </li>
+   </ul>
+</li>
+
+<li>Chèque :
+   <ul>
+      <li>
+         sans frais supplémentaire pour les paiements en euro par chèque depuis 
+         une banque française.
+      </li>
+      <li>
+         pour les autres pays et les autres devises comme le dollar, veuillez 
+         ajouter 20 € de frais bancaires à votre paiement, ou l'équivalent en 
+         devises.
+      </li>
+   </ul>
+</li>
+</ul>
+</@h2>
+
+</#global>
+<#include "/footer.ftl"/>

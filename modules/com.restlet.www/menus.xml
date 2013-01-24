@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE menus []>
+   <!--
+      Data file that declares the hierarchy of sections and sub sections
+   -->
+<sections>
+   <section id="-" hidden="true">
+      <label>
+         <en>Home</en>
+         <fr>Accueil</fr>
+      </label>
+      <title>
+         <en>Realize your Web APIs !</en>
+         <fr>Réalisez vos APIs Web !</fr>
+      </title>
+      <icon>arrow-right</icon>
+      <sections>
+         <section id="legal">
+            <label>
+               <en>Legal</en>
+               <fr>Mentions légales</fr>
+            </label>
+            <title>
+               <en>Legal notice</en>
+               <fr>Mentions légales</fr>
+            </title>
+            <icon>legal-hammer</icon>
+         </section>
+      </sections>
+   </section>
+   <section id="administration" hidden="true">
+      <label>
+         <en>Administration</en>
+         <fr>Administration</fr>
+      </label>
+      <title>
+         <en>Administration zone</en>
+         <fr>Zone d'administration</fr>
+      </title>
+      <icon>arrow-right</icon>
+      <sections>
+         <section id="formPosts">
+            <label>
+               <en>Posted forms</en>
+               <fr>Formulaires envoyés</fr>
+            </label>
+            <title>
+               <en>Posted forms</en>
+               <fr>Formulaires envoyés</fr>
+            </title>
+            <icon>legal-hammer</icon>
+         </section>
+         <section id="formPost">
+            <label>
+               <en>Posted form</en>
+               <fr>Formulaire envoyé</fr>
+            </label>
+            <title>
+               <en>Posted form</en>
+               <fr>Formulaire envoyé</fr>
+            </title>
+            <icon>legal-hammer</icon>
+         </section>
+      </sections>
+   </section>
+   <section id="error" hidden="true">
+      <label>
+         <en>Error page</en>
+         <fr>Page d'erreur</fr>
+      </label>
+      <title>
+         <en>Administration zone</en>
+         <fr>Administration zone</fr>
+      </title>
+      <icon>hand-stop</icon>
+      <sections>
+         <section id="status-100">
+            <label>
+               <en>Informational status</en>
+               <fr>Status Informatif</fr>
+            </label>
+            <title>
+               <en>Informational status</en>
+               <fr>Status Informatif</fr>
+            </title>
+            <icon>hand-stop</icon>
+         </section>
+         <section id="status-400">
+            <label>
+               <en>Client error</en>
+               <fr>Erreur client</fr>
+            </label>
+            <title>
+               <en>Client error</en>
+               <fr>Erreur client</fr>
+            </title>
+            <icon>hand-stop</icon>
+         </section>
+         <section id="status-500">
+            <label>
+               <en>Server error</en>
+               <fr>Erreur serveur</fr>
+            </label>
+            <title>
+               <en>Server error</en>
+               <fr>Erreur serveur</fr>
+            </title>
+            <icon>hand-stop</icon>
+         </section>
+      </sections>
+   </section>
+   <section id="payment" hidden="true">
+      <label>
+         <en>Payment</en>
+         <fr>Paiement</fr>
+      </label>
+      <title>
+         <en>Payment section</en>
+         <fr>Section paiement</fr>
+      </title>
+      <icon>register</icon>
+      <link>/payment/</link>
+      <sections>
+         <section id="request">
+            <label>
+               <en>Payment request</en>
+               <fr>Demande de paiement</fr>
+            </label>
+            <title>
+               <en>Payment request</en>
+               <fr>Demande de paiement</fr>
+            </title>
+            <icon>register</icon>
+            <link>request</link>
+         </section>
+         <section id="confirmation">
+            <label>
+               <en>Payment confirmation</en>
+               <fr>Confirmation de paiement</fr>
+            </label>
+            <title>
+               <en>Payment confirmation</en>
+               <fr>Confirmation de paiement</fr>
+            </title>
+            <icon>info</icon>
+            <link>confirmation</link>
+         </section>
+         <section id="cancellation">
+            <label>
+               <en>Payment cancellation</en>
+               <fr>Annulation de paiement</fr>
+            </label>
+            <title>
+               <en>Payment cancellation</en>
+               <fr>Annulation de paiement</fr>
+            </title>
+            <icon>cancel</icon>
+            <link>cancellation</link>
+         </section>
+      </sections>
+   </section>
+   <section id="products">
+      <label>
+         <en>Products</en>
+         <fr>Produits</fr>
+      </label>
+      <title>
+         <en>Our products</en>
+         <fr>Nos produits</fr>
+      </title>
+      <icon>chip</icon>
+      <link>/products/</link>
+      <sections>
+         <section id="restlet-framework">
+            <label>
+               <en>Restlet Framework</en>
+               <fr>Restlet Framework</fr>
+            </label>
+            <title>
+               <en>Restlet Framework</en>
+               <fr>Restlet Framework</fr>
+            </title>
+            <icon>engine</icon>
+            <link>restlet-framework</link>
+         </section>
+         <section id="support">
+            <label>
+               <en>Technical support</en>
+               <fr>Support technique</fr>
+            </label>
+            <title>
+               <en>Restlet Framework Technical support</en>
+               <fr>Support technique Restlet Framework</fr>
+            </title>
+            <icon>shield</icon>
+            <link>support</link>
+         </section>
+         <section id="references">
+            <label>
+               <en>References</en>
+               <fr>Références</fr>
+            </label>
+            <title>
+               <en>Customer and user references</en>
+               <fr>Références clients et utilisateurs</fr>
+            </title>
+            <icon>thumb-up</icon>
+            <link>references</link>
+         </section>
+         <section id="licence" hidden="true">
+            <label>
+               <en>Licence</en>
+               <fr>Licence</fr>
+            </label>
+            <title>
+               <en>Licence</en>
+               <fr>Licence</fr>
+            </title>
+            <icon>*</icon>
+         </section>
+      </sections>
+   </section>
+   <section id="services">
+      <label>
+         <en>Services</en>
+         <fr>Services</fr>
+      </label>
+      <title>
+         <en>Our services</en>
+         <fr>Nos services</fr>
+      </title>
+      <icon>walker</icon>
+      <link>/services/</link>
+      <sections>
+         <section id="consulting">
+            <label>
+               <en>Consulting</en>
+               <fr>Conseil</fr>
+            </label>
+            <title>
+               <en>Consulting offer</en>
+               <fr>Offre de conseil</fr>
+            </title>
+            <icon>business-man</icon>
+            <link>consulting</link>
+         </section>
+         <section id="development">
+            <label>
+               <en>Development</en>
+               <fr>Développement</fr>
+            </label>
+            <title>
+               <en>Development</en>
+               <fr>Développement</fr>
+            </title>
+            <icon>hand-shake</icon>
+            <link>development</link>
+         </section>
+         <section id="training">
+            <label>
+               <en>Training</en>
+               <fr>Formation</fr>
+            </label>
+            <title>
+               <en>Our trainings</en>
+               <fr>Nos formations</fr>
+            </title>
+            <icon>medal</icon>
+            <link>training</link>
+         </section>
+         <section id="references">
+            <label>
+               <en>References</en>
+               <fr>Références</fr>
+            </label>
+            <title>
+               <en>Customer references</en>
+               <fr>Références clients</fr>
+            </title>
+            <icon>thumb-up</icon>
+            <link>references</link>
+         </section>
+      </sections>
+   </section>
+   <section id="company">
+      <label>
+         <en>About us</en>
+         <fr>A propos de nous</fr>
+      </label>
+      <title>
+         <en>About Restlet</en>
+         <fr>A propos de Restlet</fr>
+      </title>
+      <icon>info</icon>
+      <link>/company/</link>
+      <sections>
+         <section id="history">
+            <label>
+               <en>History</en>
+               <fr>Historique</fr>
+            </label>
+            <title>
+               <en>Our history</en>
+               <fr>Notre parcours</fr>
+            </title>
+            <icon>clock</icon>
+            <link>history</link>
+         </section>
+         <section id="mission">
+            <label>
+               <en>Mission</en>
+               <fr>Mission</fr>
+            </label>
+            <title>
+               <en>Our mission</en>
+               <fr>Notre mission</fr>
+            </title>
+            <icon>flag</icon>
+            <link>mission</link>
+         </section>
+         <section id="team">
+            <label>
+               <en>Team</en>
+               <fr>Equipe</fr>
+            </label>
+            <title>
+               <en>Our team</en>
+               <fr>Notre équipe</fr>
+            </title>
+            <icon>team</icon>
+            <link>team</link>
+         </section>
+         <section id="partners">
+            <label>
+               <en>Partners</en>
+               <fr>Partenaires</fr>
+            </label>
+            <title>
+               <en>Our partners</en>
+               <fr>Nos partenaires</fr>
+            </title>
+            <icon>partners</icon>
+            <link>partners</link>
+         </section>
+      </sections>
+   </section>
+   <section id="contact" hidden="true">
+      <label>
+         <en>Contact</en>
+         <fr>Contact</fr>
+      </label>
+      <title>
+         <en>Keeping in touch</en>
+         <fr>Garder le contact</fr>
+      </title>
+      <icon>contact</icon>
+      <link>/contact/</link>
+      <sections>
+         <section id="blog">
+            <label>
+               <en>Blog</en>
+               <fr>Blog</fr>
+            </label>
+            <title>
+               <en>Our blog</en>
+               <fr>Notre blog</fr>
+            </title>
+            <icon>feed</icon>
+            <link>blog</link>
+         </section>
+         <section id="newsletter">
+            <label>
+               <en>Newsletter</en>
+               <fr>Lettre d'information</fr>
+            </label>
+            <title>
+               <en>Our newsletter</en>
+               <fr>Notre lettre d'information</fr>
+            </title>
+            <icon>newsletter</icon>
+            <link>newsletter</link>
+         </section>
+         <section id="location">
+            <label>
+               <en>Location</en>
+               <fr>Coordonnées</fr>
+            </label>
+            <title>
+               <en>Our location</en>
+               <fr>Nos coordonnées</fr>
+            </title>
+            <icon>globe</icon>
+            <link>location</link>
+         </section>
+      </sections>
+   </section>
+</sections>

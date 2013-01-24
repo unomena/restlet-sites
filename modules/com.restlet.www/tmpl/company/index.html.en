@@ -1,0 +1,31 @@
+<#include "/header.ftl"/>
+<#global content>
+
+<@h2 "Presentation" "presentation">
+<img src="/images/photos/company" alt="Company picture" class="float-right" />
+<p>
+	To efficiently collaborate with you, it is essential to introduce ourselves
+	in full transparency and to establish a trust relationship. In order to better
+	know our company, we propose you several documents:
+</p>
+
+<ul>
+	<li><a href="/company/history">An history</a> of our company with an introduction
+	on our vision and the chronology of events since its creation in 2008.</li>
+	<li>A description of <a href="/company/mission">our mission</a> with the details
+	of our goals and the list of our core values.</li>
+	<li>The presentation of <a href="/company/team">Restlet employees</a> with some
+	information on hiring.</li>
+	<li>A list of our <a href="/company/partners">affiliations and partners</a>.
+	</li>
+</ul>
+
+<p>
+	If you have any question, you can <a href="/contact/location">contact us directly</a> 
+	or obtain legal or commercial information from our administrative identifiers
+	available on the same page.  
+</p>
+</@h2>
+
+</#global>
+<#include "/footer.ftl"/>

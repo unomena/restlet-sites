@@ -1,0 +1,1 @@
+run "C:\Program Files\TextPad 4\textpad.exe" C:\WINDOWS\system32\drivers\etc\hosts

@@ -1,0 +1,27 @@
+<#include "/header.ftl"/>
+<#global content>
+
+<@h2 "Pr&eacute;sentation" "presentation">
+<p>
+	Restlet SAS tient son <a href="http://blog.restlet.com">blog</a>, 
+	en anglais, dans lequel sont publi&eacute;es des notes techniques et commerciales
+	sur des sujets qui nous int&eacute;ressent et nous paraissent pertinents pour nos 
+	lecteurs.
+</p>
+
+<p>
+	Ce blog est aliment&eacute; par nos collaborateurs mais n'a pas pour objet de leur 
+	servir de blog personnel. Nous souhaitons vous proposer une source 
+	d'information dynamique sur nos activit&eacute;s et la possibilit&eacute; d'&eacute;changer via 
+	le syst&egrave;me de commentaires ou des r&eacute;tro-liens vers votre blog.
+</p>
+</@h2>
+
+<@h2 "Derniers billets" "latest-posts">
+
+	<a href="http://blog.restlet.com/feed"><img src="/images/icons/feed-30" alt="Syndication feed" style="margin:5px"/></a><br/>
+	${feed_noelios}
+
+</@h2>
+</#global>
+<#include "/footer.ftl"/>

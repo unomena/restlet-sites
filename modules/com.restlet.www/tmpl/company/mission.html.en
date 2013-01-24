@@ -1,0 +1,129 @@
+<#include "/header.ftl"/>
+<#global content>
+
+<@h2 "Goals" "goals">
+
+<@h3>Realize your Web ideas</@h3>
+<p>
+	Our objective is to provide you the software tools and the related services 
+	that facilitate the transformation of your ideas, projects and requirements 
+	into unified and scalable web applications. 
+</p>
+
+<p>
+	In addition, our ambition is to make this path from ideas to their realization
+	as enjoyable and efficient as possible for you, project managers, architects
+	and developers.
+</p>
+
+<p>
+	Our responsibility is also to facilitate and make more natural the usage of the
+	architecture principles of the Web, of its protocols and standards. In order
+	to allow you to take advantage of all its power and all its simplicity, we 
+	maintain the Web and its founding principles at the core of the design process
+	of our tools and methodologies.
+</p>
+
+<@h3>Open source software</@h3>
+<p>
+	Since our creation, we are at the same time big users of open source software
+	and providers through the <a href="http://www.restlet.org">Restlet Framework</a> project. 
+    We are trying to find the best balance between the free usage of our software
+    and the need to finance our research and development and our structure.
+</p>
+
+<p>
+	We think that the most generic pieces of infrastructure should be freely usable with
+	few constraints. For example we distribute the Restlet Framework under LGPL, EPL and 
+    CDDL licenses, compatible with most usages.
+</p>
+
+<p>
+	In parallel, we want to keep the intellectual property on the totality of our
+	source code in order to propose alternative commercial licenses for those who 
+	wish to bypass some constraints of open source licenses, or to allow us to freely
+	adopt the latest versions of open source licenses. 
+</p>
+</@h2>
+
+<@h2 "Values" "values">
+<p>
+	Beyond technologies, products and news, we felt the need to identify our
+	most important values. We try to stand by them every day, especially when difficult
+	choices need to be made, within the company as well as in our relationships with
+	customers, users and partners.
+</p> 
+
+<@h3>Respect</@h3>
+<p>
+	We respect and appreciate the diversity of opinions, of technological choices and
+	of methodologies. We are convinced that there is no unique truth and no silver
+	bullet for any given problem. Each point of view has its reasons and its value
+	and must be respected even if it might cause debate.
+</p>
+
+<@h3>Objectivity</@h3>
+<p>
+	Of course, we have our convictions, our preferences but we force ourselves to 
+	keep an objective and balanced point of view with our customers and users. Knowing
+	to understand the strengths and weaknesses of each approach, each solution in order
+	to adopt the most suitable to a given context is a duty.
+</p>
+
+<@h3>Passion</@h3>
+<p>
+	With a technology world in constant change, our passion for our profession
+	is an inexhaustible engine. We are always looking for ideas, technologies and 
+	innovative practices to adapt our choices and recommendations, in order to make 
+	our customers benefit from that information through our consulting services and 
+	our products.
+</p> 
+
+<@h3>Innovation</@h3>
+<p>
+	Knowing how to detect new trends and how to apply ideas and technologies to
+	the existing knowledge is already a great challenge. We also try hard to 
+	produce our own ideas and technologies. But knowing to listen, to appreciate
+	and to adopt the ideas of our customers, users or contributors is another form
+	of openness to innovation, as rich as the others. 
+</p>
+
+<@h3>Transparency</@h3>
+<p>
+	Our desire for transparency doesn't limit itself to the publication of our source 
+	code. We also maintain an open dialog with our customers and our users' community.
+	Our commercial approach is also transparent, with the publication of our product prices
+	on our web site. This desire for transparency must however be balanced and the
+	respect of the confidentiality of our customers information is essential.
+</p>
+
+<@h3>Quality</@h3>
+<p>
+	From ideas to their realization there is sometimes a long path during which
+	you must know how to get organized and equipped to ensure the success of the
+	projects. This goes beyond the concretization and encompasses, from our point
+	of view, the guarantee of an optimal quality level at all stages of our
+	interventions, from the requirements gathering to the source code, without
+	forgetting the future maintenance. 
+</p>
+
+<@h3>Simplicity</@h3>
+<p>
+	We are persuaded that the simplicity, far from being limitative, is in fact a
+	force. It allows you to concentrate on the essential, on the true added value
+	of a feature, of a product or of a work. The simplest the tools are, the more
+	complexity we can handle in the problems we need to solve. 
+</p>
+
+<@h3>Humanity</@h3>
+<p>
+	Our latest principle is not the less important. As a technology provider, we
+	are at the service of the economy and indirectly of humans and their ecosystem.
+	This must guide us in a responsible and sustainable approach of our development.
+	Computer science is nothing more that a tool at the service of humans, but a 
+	powerful tool that must be used with caution. Like Rabelais said: "Science without 
+	conscience is but the ruin of the soul".
+</p>
+</@h2>
+</#global>
+<#include "/footer.ftl"/>

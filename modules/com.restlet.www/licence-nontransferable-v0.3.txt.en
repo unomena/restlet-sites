@@ -1,0 +1,218 @@
+﻿------------------------
+COMMERCIAL LICENSE (v03)
+------------------------
+
+
+Between:
+
+Restlet S.A.S., S.A.S. with a share capital of 26 470 euros, registered under the SIRET number 504 051 764 00042 (APE Code: 5829C), whose headquarters are located ESSEC Ventures - CNIT - BP 230, 2 place de la Défense, 92053 Paris La Défense, France,
+
+Hereafter named Restlet S.A.S.,
+On one hand,
+
+And:
+
+The Licensee,
+One the other hand,
+
+
+	Taken together, the Parties
+
+
+
+Beforehand the following facts have been exposed:
+
+
+Restlet S.A.S. is specialized in Java technologies and business process integration. It helps companies and individuals with their integration projects and their software developments. Also, expert in Web services with REST style and in XML technologies in general, it is at the origin of the Restlet project allowing an easy and efficient usage of REST in Java. 
+
+In the context of the Restlet Project, Restlet S.A.S. created the open source software RESTLET FRAMEWORK (hereafter named NRF) which is available for free download on the Web site of Restlet: http://www.restlet.org. Restlet S.A.S. consent on his NRF software either open source licenses (EPL 1.0, CDDL 1.0, LGPL 2.1 or LGPL 3.0), or commercial licenses.
+
+The Licensee, specialized in the development of certain types of products designated in Appendix 1, wanted to obtain the rights to use the NRF software distributed by Restlet S.A.S., with the goal to integrate the NRF software and in particular the JARs (Zip archives containing the executable Java files) in its Commercial Product designated in Appendix 1. 
+
+In order to evaluate the suitability of the NRF Software for his requirements and to make his choice with full knowledge of the facts, the Licensee recognizes first to have downloaded the NRF Software to test it and then that Restlet S.A.S. has given him all the information necessary, has replied to his questions and has made any demonstration that was required.
+
+
+IT HAS BEEN AGREED WHAT FOLLOWS:
+
+
+ARTICLE 1: SCOPE
+
+The contract hereby fixes the conditions for granting non exclusive and non transferable rights of usage of the NRF software which The Licensee declares to accept the terms.
+
+
+ARTICLE 2: SOFTWARE DELIVERY AND INSTALLATION
+
+The installation of the NRF Software (in its version V1.0 and/or in its latest available version at the day of signature of the contract hereby) is accomplished directly and exclusively by the Licensee by downloading the executable version on the www.restlet.org Web site.
+
+The totality of the documentation and updates relative to the NRF Software are also downloadable directly by The Licensee from the www.restlet.org Web site. The Licensee, who has already made himself knowledgeable of this documentation (introduction, tutorial, FAQs and Javadocs), recognizes that this documentation is appropriate and sufficient to allow him to use efficiently the NRF Software.
+
+
+ARTICLE 3: FEES AND FINANCIAL CONDITIONS
+
+The price of the license hereby is established to an all-in amount in euros (or equivalent in US dollar at the date of signing of this contract) specified in Appendix 1 of the contract hereby.
+
+This price is understood without taxes or other legal fees applicable. The taxes applied are those required by that the current regulations. In the case where those regulations would be modified, the new regulations would be applied at the official date where they would enter into effect.
+
+The payment is due eight (8) days after the signing of the contract hereby and the sending of the invoice.
+
+The failure of payment involves, without warning notice, the payment of interest fees determined based on the number of days since the expected date of payment, on the basis of the legal interest rate. Fifteen (15) days after the warning notice to the Licensee who hasn’t paid his invoices, Restlet S.A.S. could invoke the right of termination of the license contract under the conditions fixed hereafter and any usage of the NRF Software without license would be considered an act of counterfeiting.
+
+
+ARTICLE 4: INTELLECTUAL PROPERTY AND RIGHTS OF USE
+
+Restlet S.A.S. declares to the Licensee that he is the author of the NRF Software and that he has all the copyright on the Source codes of this Software which is also distributed under Open Source licenses. As a consequence, Restlet S.A.S. declares to the Licensee that all the contributors have signed a document ("Joint Copyright Assignment") assigning their copyright to Restlet S.A.S.. A copy of this document is available at the http://www.restlet.org/community/contribute address along with an explanation of the goals of this document.
+
+Therefore, Restlet S.A.S. holds, as an owner of copyright, the intellectual property of the NRF Software, as well as all the prerogatives attached to it. In particular, Restlet S.A.S. keeps the entire ownership of the source code of the NRF Software which is also distributed under Open Source licenses.
+
+Restlet S.A.S. concedes to the Licensee a right of personal usage, non exclusive, non transferable of the NRF Software under the conditions fixed hereafter. 
+	
+Restlet S.A.S. reserves the right to concede other commercial licenses of usage of the NRF Software to other licensees.
+
+None of the rights of the present Contract could be the object of a cession (total or partial) or of a license grant or of any type of transfer by one or the other of the Parties, without prior written consent of the other party.
+
+The Licensee will not obtain any other intellectual property right, nor any other right than those conferred by the present Contract. This right of usage covers the versions available on the day of signing of this contract as well as all updates and new versions that would be downloadable on the www.restlet.org Web site during one (1) year starting from the date of signature of the present contract. After this period, the Licensee will have to acquire a new commercial license if he wants to use a new version of the NRF Software.
+
+The right conceded by Restlet S.A.S. allows the Licensee to reproduce the NRF Software in an unlimited number of copies for its own needs. The Licensee is expressly authorized by Restlet S.A.S. to integrate the executable files (JAR files) of the NRF Software in his Commercial Product designated in Appendix 1, product that can be developed and distributed in unlimited quantities. 
+
+The right of usage conceded by the present contract is exclusively limited to the sole and unique Commercial Product designated in Appendix 1. If the Licensee wants to develop another commercial product incorporating the executable files (JAR files) of NRF Software, he will need to previously acquire the necessary usage rights from Restlet S.A.S..
+
+The Licensee takes all the necessary actions to protect the intellectual property rights of Restlet S.A.S.. In particular, he forces himself to strictly respect the limits to usage rights that are given to him in the present contract.
+
+In the case where the Licensee would not respect the limits fixed by his usage rights for the NRF Software, the Licensee would pay to Restlet S.A.S., for each breach found, an amount equal to twice the amount of the fees that would have been normally paid to Restlet S.A.S. for this usage of the NRF Software, and this, without the prejudice of potential damages and clauses of article 12.
+
+
+ARTICLE 5: TECHNICAL SUPPORT
+
+In the context of the present contract, Restlet S.A.S. isn’t obliged to the Licensee for any maintenance or technical support service. The Licensee expressly recognizes that Restlet S.A.S. has no maintenance or technical support obligation from the present Contract.
+
+However, the Licensee can subscribe to a technical support contract in addition to the present licensing contract to benefit from the experience and expertise of Restlet S.A.S. in the conditions exposed in his support contract, which terms are available on the Internet at the following address: http://www.restlet.com/services. Due to the licensing contract hereby, the Licensee could then benefit from a sales discount of 10% on the public prices in effect at the date of subscription to one of the support service plans.
+
+
+ARTICLE 6: NON COMPETITION
+
+The product of the Licensee incorporating the NRF Software or a part of its executable files must not be a product directly competing with the NRF Software. The Licensee forbids himself to develop a product or software like a RESTful Java Web Framework incorporating the NRF Software or parts of it.
+
+
+ARTICLE 7: CONFIDENTIALITY
+
+The Parties hereby declare that the present Agreement is confidential and agree not to disclose any information related to the present Agreement unless said disclosure is directly required for the performance of said transaction or to justify an operation conducted pursuant to the present Agreement, for statutory, regulatory or judicial requests or requests from groups to which they belong, and particularly requests from regulatory authorities, supervisory bodies, statutory auditors and public accountants in charge of the financial statements of the Parties, and may also disclose said information to their underwriters and brokers.
+
+
+ARTICLE 8: LIABILITY
+The NRF Software is distributed on an "AS IS" basis and Restlet S.A.S. do not consent any warranty relative to its Usage or its performance. No clause in the Contract hereby limits the responsibility of Restlet S.A.S. in case of death or corporal prejudices resulting from the negligence of Restlet S.A.S. or from a fraud. 
+Restlet S.A.S. DOES NOT WARRANTY AND CAN’T WARRANTY THE PERFORMANCES OR THE RESULTS OBTAINED WHEN USING THE NRF SOFTWARE, WITH RESERVE OF THE WARRANTIES, CONDITION, CERTIFICATIONS OR OTHER CLAUSES, THAT CAN’T BE EXCLUDED OR LIMITED BY THE LOCAL LAW APPLICABLE.
+IN NO CASE, Restlet S.A.S. WILL BE RESPONSIBLE FOR THE DAMAGES, COMPLAINTS OR COSTS OF ANY NATURE POSSIBLE, FOR THE DIRECT DAMAGES, INDIRECT DAMAGES OR INCIDENTS, FOR ANY LOSS OF EARNINGS. THE LIMITATIONS AND RESTRICTIONS ABOVE APPLY WITHIN THE LIMITS OF THE LOCAL APPLICABLE LAW. 
+IN ANY CASE, THE GLOBAL LIABILITY OF Restlet S.A.S. IN THE CONTEXT OF THIS CONTRACT OR RELATED TO THIS CONTRACT, IS LIMITED TO THE AMOUNT PAID BY THE LICENSEE FOR THE ACQUISITION OF THE USAGE RIGHTS OF THE NRF SOFTWARE, IF APPLICABLE. 
+
+
+ARTICLE 9: FORCE MAJEURE
+
+Neither Party will incur any liability to the other party on account of any loss or damages resulting from any delay or failure to perform or any part of this contract if such delay or failure is caused by an event of force majeure, by events, occurrences or causes beyond the control and without negligence of the parties. Such events, occurrences or causes will include, without acts of God, strikes, lockouts, riots, acts of war, earthquakes, fire and explosions, acts of any government authority, water damage or interruption in telecommunication network or electricity network.
+
+
+ARTICLE 10: TERRITORY OF APPLICATION
+
+This Agreement is applicable worldwide.
+
+
+ARTICLE 11: DURATION OF THE CONTRACT
+
+The contract is valid on the date of its signature by the Parties and is concluded for an unlimited duration.
+
+
+ARTICLE 12: TERMINATION OF THE CONTRACT
+
+In case of non execution by one or the other of the Parties of one or several obligations that falls to him in the context of the contract hereby, the Party creditor of the obligation not executed by the other will address to the other one a certified mail with proof of receipt giving him notice to execute the obligation that falls to him.
+
+If, after a delay of 15 (FIFTEEN) days following the receipt of the notice letter, the obligation for which the offender Party was debtor has not been executed, the contract hereby will be cancelled automatically, without prejudice for the damages and interests that could be due, both from the cause of the breach and from the consequences of the non execution of the considered obligation.
+
+Right after the cancellation of the Contract hereby for any cause possible, the Licensee will immediately stop using the NRF Software.
+
+
+ARTICLE 13: PUBLICITY 
+
+The Licensee can mention the names "Restlet S.A.S.", "Restlet Framework" and "Restlet ®" in all non confidential documents where the Product appears. 
+
+The Licensee authorizes Restlet S.A.S. to mention his name on a list of references that can be communicated for example on the www.restlet.com Web site.
+
+
+ARTICLE 14: AUTHORIZATIONS
+
+The Parties each individually guarantee that they have the right and authority to sign this Agreement and to perform all the obligations and commitments set forth by this Agreement.
+
+The Undersigned each individually declare and assert that they are permitted to represent the Parties and are duly authorized to sign this Agreement on their behalf.
+
+
+ARTICLE 15: HEADINGS
+
+The headings to the articles in this Contract are for ease of reference only and shall not affect the interpretation or construction of this Contract.
+
+
+ARTICLE 16: WAIVER
+
+Except as expressly stated in this Contract, no exercise or enforcement by either Party of any right or remedy under this Contract will preclude the enforcement by such Party of any other right or remedy under this Contract.
+
+
+ARTICLE 17: ENTIRE AGREEMENT
+
+It is understood that this Agreement constitutes the entire agreement between the Parties and that there are no other agreements or understandings between the Parties, either written or oral.
+
+
+ARTICLE 18: MODIFICATIONS TO THE CONTRACT
+
+This Contract may not be modified except by an amendment in writing signed by a duly authorized representative of both Parties.
+
+
+ARTICLE 19: SEVERABILITY
+
+If any provision of this Contract is determined to be invalid, unlawful or unenforceable, it shall be declared void or invalid but such decision will not affect the validity or enforceability of the remaining provisions
+
+
+ARTICLE 20: SUCCESSORS, ASSIGNS
+
+This Agreement shall be binding on all successors and beneficiaries of the Parties and the Parties undertake to inform all said successors and beneficiaries of the obligations set forth in this Agreement.
+
+This Agreement shall also be binding on all related companies, a "related company" being any company in which a Party owns or controls at least a 50% ownership interest.
+
+
+ARTICLE 21: GOVERNING LAW
+
+The Contract hereby, its execution, its interpretation, as well as all acts that follow are governed by the French law and the French regulations, to the exclusion of any other.
+
+	
+ARTICLE 22: LITIGATION / DISPUTE
+
+IN THE EVENT OF A DISPUTE INSUING FROM THE PERFORMANCE OR THE INTERPRETATION OF THIS CONTRACT, THE PARTIES UNDERTAKE TO INITIALLY SEEK A FRIENDLY SOLUTION.
+
+IF SUCH A SOLUTION CANNOT BE REACHED, DISPUTES INSUING FROM THE EXISTENCE, THE VALIDITY, THE INTERPRETATION, THE PERFORMANCE AND/OR THE TERMINATION OF THIS CONTRACT WILL BE FOR THE EXCLUSIVE COMPETENCE OF THE COURT OF NANTERRE (FRANCE), NOTWITHSTANDING PLURALITY OF DEFENDANTS OR INTRODUCTION OF THIRD PARTY, INCLUDING SUMMARY ACTIONS AND PROTECTIVE PROCEEDINGS.
+
+
+
+---------------------------------
+APPENDIX 1 - SPECIFIC INFORMATION
+---------------------------------
+
+
+Specific information about the Licensee or the License granted, based on the hereby contract that references this information:
+
+YOUR LICENSE:
+ - Name of covered product     : ${coveredProductName!""}
+ - Description of product      : ${coveredProductDescription!""}
+ - All in amount without taxes : ${licenseAmount?string("0.00")} euros
+ - Contract number             : ${invoiceNumber!""}
+
+YOUR SIGNER:
+ - Fist name : ${signerFirstName!""}
+ - Last name : ${signerLastName!""}
+ - Position  : ${signerPosition!""}
+ - E-Mail    : ${signerEmail!""}
+
+YOUR ORGANIZATION:
+ - Name            : ${organizationName!""}
+ - Web site        : ${organizationWebSite!""}
+ - Address         : ${organizationAddressLine1!""}
+ - Address (cont.) : ${organizationAddressLine2!""}
+ - Zip code        : ${organizationAddressZipCode!""}
+ - City            : ${organizationAddressCity!""}
+ - State           : ${organizationAddressState!""}
+ - Country         : ${organizationAddressCountry!""}

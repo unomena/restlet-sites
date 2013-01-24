@@ -1,0 +1,34 @@
+<#include "/header.ftl"/>
+
+<#global javascript></#global>
+<#global content>
+<@h2 "Description" "error">
+<div>
+<#noparse>
+<#if status.description??>
+	${status.description}
+<#else>
+    Aucune description n'est disponible pour cette status d'erreur.
+</#if>
+</#noparse>
+</div>
+</@h2>
+<@h2 "Détails techniques" "details">
+<div>
+<#noparse>
+<p>Vous pouvez obtenir des détails techniques <a href="${status.uri!""}">ici</a>.<br>
+<#if contactEmail??>
+	Pour obtenir de l'aide suppl&eacute;mentaire, vous pouvez contacter <a href="mailto:${contactEmail}">l'administrateur</a>.<br>
+</#if>
+</p>
+<#if homeUri??>
+<p>
+	Votre visite de ce site peut se poursuivre depuis <a href="${homeUri}">la page principale</a>.<br>
+</p>
+</#if>
+
+</#noparse>
+</div>
+</@h2>
+</#global>
+<#include "/footer.ftl"/>

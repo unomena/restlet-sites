@@ -1,0 +1,21 @@
+<#assign currentSection="contact">
+<#assign currentSubSection="blog">
+<#assign feed_noelios>
+   ${"<#assign language>"}${language}${"</#assign>"}
+<#noparse>
+      <div>
+         <#list noelios.entries as item>
+            <#setting locale="en">
+            <#setting locale="${language}">
+            <#assign dateItem=item.published?string("dd MMM yyyy")?replace("é","&eacute;")>
+            <#list item.links as link>
+               <#if link.type=='text/html'>
+         <div class="news"><div class="news-date">${dateItem}</div><div class="news-text"><a href="${link.href}">${item.title}</a></div></div>
+               <#break>
+               </#if>
+            </#list>
+         </#list>
+      </div>
+</#noparse>
+</#assign>
+<#include "/contact/blog.html.en"/>

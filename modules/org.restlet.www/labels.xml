@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE labels []>
+
+<!-- Data file that declares localizable labels -->
+<labels>
+   <summaryRestletBlog>Summary of the Restlet latest news</summaryRestletBlog>
+   <restletBlog>Restlet latest news</restletBlog>
+   <sectionTitleError>Error</sectionTitleError>
+</labels>

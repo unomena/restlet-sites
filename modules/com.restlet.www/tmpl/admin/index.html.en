@@ -1,0 +1,36 @@
+<#include "/header.ftl"/>
+<#global content>
+<@h3>Pages refresh</@h3>
+
+<h4>Restlet S.A.S.</h4>
+
+<form method="post" action="refresh"><p><input type="submit" name="submit" /></p></form>
+
+<h4>Restlet</h4>
+<form method="post" action="http://www.restlet.org/admin/refresh"><p><input type="submit" name="submit" /></p></form>
+
+<h4>On Rest</h4>
+
+<form method="post" action="http://www.onrest.org/admin/refresh"><p><input type="submit" name="submit" /></p></form>
+
+<@h3>Posted forms list</@h3>
+
+<p><a href="formPosts" title="Posted forms list">Posted forms list</a></p>
+
+<@h3>Web Server Statistics</@h3>
+
+<p><a href="reports/recent" title="Monthly statistics">Monthly statistics</a></p>
+
+<p><a href="reports/all" title="Complete statistics">Complete statistics</a></p>
+
+<p><a href="reports/suspects" title="suspect IPs activity">Activity report of the suspect IPs recently detected.</a></p>
+
+<p><a href="reports/current" title="Web server activity">Activity report of the web server.</a></p>
+
+<@h3>Backup db4o database</@h3>
+
+<form method="post" action="dbBackup"><p><input type="submit" name="submit" /></p></form>
+
+</#global>
+<#include "/footer.ftl"/>
+

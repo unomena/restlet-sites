@@ -1,0 +1,83 @@
+<#include "/header.ftl"/>
+<#global content>
+
+<@h2 "Introduction" "introduction">
+<p>
+   Nous sommes une jeune entreprise innovante composée d'une équipe
+   dynamique et ambitieuse. Sa direction est assurée par Jérôme Louvel et 
+   Thierry Boileau, les deux fondateurs de Restlet S.A.S..
+</p>
+</@h2>
+
+<@h2 "Jérôme Louvel" "jerome-louvel">
+<img src="/images/photos/jerome-louvel-100" alt="Photo Jérôme Louvel" class="float-right" />
+<p>
+   Jérôme est ingénieur en informatique et gestion, diplômé de
+   <a href="http://www.polytech.univ-montp2.fr">Polytech'Montpellier</a>.
+   Après six ans d'expérience, dont trois dans le conseil en systèmes
+   d'information et trois dans l'édition logicielle, il lance le projet
+   open source <a href="http://www.restlet.org">Restlet Framework</a> en 2005.
+</p>
+
+<p>
+   En 2008, il co-fonde <a href="http://www.restlet.com">Noelios Technologies</a>
+   et assure depuis la responsabilité technique et commerciale de la société. 
+   Jérôme est également membre du groupe d'experts ayant défini l'API JAX-RS,
+   contributeur au livre <a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&location=http%3A%2F%2Fwww.amazon.com%2FRestful-Web-Services-Leonard-Richardson%2Fdp%2F0596529260%3Fie%3DUTF8%26s%3Dbooks%26qid%3D1173381194%26sr%3D8-1&tag=restlet-20&linkCode=ur2&camp=1789&creative=9325">RESTful Web Services</a> 
+   publié par O'Reilly et co-auteur du livre <a href="http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217">Restlet in Action</a>
+   publié par Manning.
+</p>
+</@h2>
+
+<@h2 "Thierry Boileau" "thierry-boileau">
+<img src="/images/photos/thierry-boileau-100" alt="Photo Thierry Boileau" class="float-right" />
+<p>
+   Thierry est également ingénieur en informatique et gestion, diplômé de
+   <a href="http://www.polytech.univ-montp2.fr">Polytech'Montpellier</a>
+   où il a découvert avec Jérôme les joies de l'orienté objet en Smalltalk
+   puis en Java. Thierry est développeur principal sur le projet open source
+   Restlet auquel il contribue depuis 2006.
+</p>
+
+<p>
+   Après dix ans d'expérience dans le conseil en systèmes d'information il
+   co-fonde en 2008 <a href="http://www.restlet.com">Noelios Technologies</a> 
+   et prend la responsabilité de l'activité open source et de l'infrastructure.
+   Il est également co-auteur du livre 
+   <a href="http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217">Restlet in Action</a>
+   publié par Manning
+</p>
+</@h2>
+
+<@h2 "Thierry Templier" "thierry-templier">
+<img src="/images/photos/thierry-templier-100" alt="Photo Thierry Templier" class="float-right" />
+<p>
+   Thierry est ingénieur en informatique, télécom et réseaux, diplômé de
+   <a href="http://www.esigetel.fr/">Esigetel</a>, expert des technologies Java, 
+   JavaScript, Modélisation et Web en général, ainsi que passionné de l'open source
+   ce qui l'a amené à s'intéresser à Restlet Framework.
+</p>
+
+<p>
+   Après plus de dix ans d'expérience dans le conseil en systèmes d'information il 
+   rejoint la société en 2011 en tant qu'architecte R&D, contribuant au Restlet 
+   Framework et au développement d'une nouvelle offre commerciale. Thierry est également 
+   co-auteur de plusieurs livres sur JavaScript, Spring ainsi que le livre 
+   <a href="http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217">Restlet in Action</a>
+   publié par Manning. 
+</p>
+</@h2>
+
+<@h2 "Candidature" "hiring">
+<p>
+    Notre développement va nous amener à élargir notre équipe en 2012. Si vous 
+    adhérez à <a href="/company/mission">notre mission</a> et si souhaitez 
+    apporter vos compétences et votre enthousiasme, n'hésitez pas à nous 
+    proposer
+    <a href="mailto:ressources-humaines@restlet.com?subject=Candidature">
+    votre candidature</a>.
+</p>
+</@h2>
+
+</#global>
+<#include "/footer.ftl"/>

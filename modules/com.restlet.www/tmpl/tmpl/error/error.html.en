@@ -1,0 +1,32 @@
+<#include "/header.ftl"/>
+
+<#global content>
+<@h2 "Description" "error">
+<div>
+<#noparse>
+<#if status.description??>
+	${status.description}
+<#else>
+    No description available for this result status.
+</#if>
+</#noparse>
+</div>
+</@h2>
+<@h2 "Technical details" "details">
+<div>
+<#noparse>
+<p>You can get technical details <a href="${status.uri!""}">here</a>.<br>
+<#if contactEmail??>
+	For further assistance, you can contact the <a href="mailto:${contactEmail}">administrator</a>.<br>
+</#if>
+</p>
+<#if homeUri??>
+<p>
+	Please continue your visit at our <a href="${homeUri}">home page</a>.<br>
+</p>
+</#if>
+</#noparse>
+</div>
+</@h2>
+</#global>
+<#include "/footer.ftl"/>

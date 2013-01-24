@@ -1,0 +1,34 @@
+   //<![CDATA[
+   //Load the map and center it to Restlet S.A.S. Location
+   function load() {
+      var myLatlng = new google.maps.LatLng(48.892769,2.239526);
+      var myOptions = {zoom: 15,
+         center: myLatlng,
+         mapTypeId: google.maps.MapTypeId.ROADMAP,
+         mapTypeControl: true,
+         mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+         zoomControl: true,
+         zoomControlOptions: {style: google.maps.ZoomControlStyle.DEFAULT},
+      }
+      var map = new google.maps.Map(document.getElementById("map"), myOptions);      
+      var title = '<strong>Restlet S.A.S.</strong>';
+      var parking = '<a href="http://www.les4temps.com/W/do/centre/parkings" alt="CNIT La D&eacute;fense - parkings">Parkings</a><br/>';
+      var tramway = 'Tramway : T2 La D&eacute;fense (Grande Arche), sortie "place Carpeaux"<br/>';
+      var railway = 'Train : La D&eacute;fense<br/>';
+      var subway = 'M&eacute;tro, RER : RER A, Line 1 - La D&eacute;fense (grande arche)<br/>';
+      var bus = 'Bus: lines 73, 141, 144, 159, 161, 174, 178, 258, 262, 272, 275,<br/>276, 278, 360, 378 La D&eacute;fense<br/>';
+      var contentString = title + '<p>' + parking + 'Transports :<br />' + tramway + railway + subway + bus + '</p>';
+      var infowindow = new google.maps.InfoWindow({
+         content: contentString
+      });
+      var marker = new google.maps.Marker({
+         position: myLatlng,
+         map: map,
+         title:"Restlet S.A.S."
+      });
+
+      google.maps.event.addListener(marker, 'click', function() {
+         infowindow.open(map,marker);
+      });
+   }
+    //]]>

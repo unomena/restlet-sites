@@ -1,0 +1,103 @@
+<#include "/header.ftl"/>
+<#global content>
+
+<@h2 "Informations légales" "legal-info">
+<@h3>Sites couverts</@h3>
+<p>
+	www.restlet.com<br/>
+	blog.restlet.com<br/>
+	maven.restlet.com<br/>
+</p>
+
+<p>
+	www.restlet.org<br/>
+	wiki.restlet.org<br/>
+	maven.restlet.org<br/>
+	book.restlet.org<br/>
+</p>
+
+<p>
+	apispark.com<br/>
+</p>
+
+<@h3>Editeur</@h3>
+<p>
+	<b>Restlet</b><br/>
+	S.A.S. au capital de 26 470 €<br/>
+	SIRET&nbsp;: 504 051 764 00042<br/>
+	SIREN&nbsp;: 504 051 764<br/>
+	APE&nbsp;: 5829C<br/>
+	RCS&nbsp;: Nanterre B, France<br/>
+	TVA&nbsp;: FR 91 504 051 764<br/>
+	Siège social&nbsp;: ESSEC Ventures - CNIT - BP 230 | 2 place de la Défense | 92053 Paris La Défense | France
+</p>
+
+<@h3>Hébergeur</@h3>
+<p>
+	<b>OVH</b><br/>
+	SAS au capital de 500 000 €<br/>
+	SIRET&nbsp;: 424 761 419 00011<br/>
+	SIREN&nbsp;: 424 761 419<br/>
+	APE&nbsp;: 721Z<br/>
+	RCS&nbsp;: Roubaix – Tourcoing, France<br/> 
+	TVA&nbsp;: FR 22 424 761 419 00011<br/>
+	Siège social&nbsp;: 140 quai du Sartel | 59100 Roubaix | France
+</p>
+</@h2>
+
+<@h2 "Propriété intellectuelle" "intellectual-property">
+<p>
+	L'ensemble de ces sites relèvent des législations française et internationale
+	sur le droit d'auteur et la propriété intellectuelle. Tous les droits de 
+	reproduction sont réservés, y compris pour les documents iconographiques 
+	et photographiques.
+</p>
+<p>
+	Restlet S.A.S. est propriétaire exclusif de ces droits d'auteur ou
+	bien possède un droit d'usage obtenu auprès du propriétaire effectif. Les
+	photographies sont la propriété de James Thew.
+</p>	
+
+<p>
+	Les marques "RESTLET" et "APISPARK" sont enregistrées et sont la propriété exclusive de Restlet S.A.S..
+    Tout usage doit faire l'objet d'une autorisation expresse et écrite de la part de Restlet S.A.S..
+    "Java" est une marque déposée par Oracle. Toutes les autres marques ou marques déposées sont la 
+	propriété de leur propriétaire respectif.   
+</p>
+
+<p>
+	Sauf mention expresse, telle que pour les logiciels téléchargeables diffusés
+	sous une licence particulière, Restlet S.A.S. se réserve l'ensemble 
+	des droits associés à sa propriété intellectuelle.
+</p>
+</@h2>
+
+<@h2 "Informatique et libertés" "information-freedom">
+<p>
+	Restlet S.A.S. s'engage à respecter strictement les dispositions de la loi n° 78-17 
+	du 6 janvier 1978 dite "Informatique et Libertés". Conformément à ladite loi, 
+	Restlet S.A.S. a déclaré à la Commission Nationale Informatique et Libertés (CNIL) les 
+	traitements effectués sur la base des informations recueillies via les 
+	sites ci-dessus ; cette déclaration portant le numéro 1295005.
+</p>
+
+<p>
+	Les données identifiant directement (par exemple, nom et prénom) ou indirectement 
+	(par exemple, adresse de courrier électronique) qui sont recueillies ne sont pas 
+	communiquées à des tiers. L'utilisateur est informé que les données 
+	saisies dans les formulaires pourront être utilisées par Restlet S.A.S. afin 
+	de mieux cibler ses offres publicitaires. 
+</p>
+
+<p>
+	Conformément aux articles 38 et suivants de la <a href="http://www.cnil.fr/index.php?id=301">
+	loi n° 78-17 du 6 janvier 1978 modifiée</a> relative à l'informatique, aux 
+	fichiers et aux libertés, toute personne peut obtenir communication et, 
+	le cas échéant, rectification ou suppression des informations la concernant, 
+	en s'adressant au service clientèle au 01.46.97.25.61. Toute personne peut, 
+	pour des motifs légitimes, s'opposer au traitement des données la concernant. 
+</p>	
+</@h2>
+
+</#global>
+<#include "/footer.ftl"/>

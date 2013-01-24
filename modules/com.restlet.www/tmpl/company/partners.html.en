@@ -1,0 +1,102 @@
+<#include "/header.ftl"/>
+<#global content>
+
+<@h2 "Introduction" "introduction">
+<p>
+   Restlet S.A.S. is an active actor of the software edition and the open source 
+   software revolution. We participe and support various initiatives promoting this industry.
+</p>
+   
+<p>
+	We are also interested in technological and commercial partnerships with the
+	organizations sharing <a href="/company/mission">our mission</a>. 
+	Don't hesitate to <a href="/contact/location">contact us</a>.
+</p>
+</@h2>
+
+<@h2 "AFDEL" "afdel">
+<p>
+	As an open source software editor, Restlet is member of the French Association
+	of Software Editors (AFDEL).
+</p>
+
+<p>
+   	<a href="http://www.afdel.fr/"><img src="/images/logos/afdel" alt="Logo AFDEL"/></a>
+</p>
+
+<p>
+	This association, counting more than 160 members (classic editors, ASP or SaaS editors, 
+    Internet or Web 2.0 companies) is the reference voice and contact of software edition 
+    in France.
+</p>
+</@h2>
+
+<@h2 "Agoranov" "agoranov">
+<p>
+	Agoranov is a public incubator based in Paris, with a recognized expertise in  
+    coaching innovative start-ups including those specialized in enterprise software,
+    networks and Internet.
+</p>
+
+<p>
+	<a href="http://www.agoranov.com/"><img src="/images/logos/agoranov" alt="Logo Agoranov"/></a>
+</p>
+
+<p>    
+	Restlet is backed by Agoranov since 2010, which helps us in our business development 
+    project with active coaching, trainings, access to a solid network of experts,
+    meetings with other entrepreneurs and funds raising.
+</p>
+</@h2>
+
+<@h2 "Cap Digital" "capdigital">
+<p>
+	We are member of the Cap Digital Competitiveness Cluster, specialized in digital contents
+    in the Ile de France region (Paris area). 
+</p>
+
+<p>
+   	<a href="http://www.capdigital.com/"><img src="/images/logos/capdigital" alt="Logo Cap Digital"/></a>
+</p>
+
+<p>   
+	Restlet actively works with other actors of this cluster, like <a href="http://www.mikrosimage.eu/english/">Mikros Image</a>, 
+    in the context of the R&D projects <a href="http://www.capdigital.com/sebastian/">Sebastian</a> and
+    <a href="http://www.hd3d.fr/">HD3D</a>.
+</p>
+</@h2>
+
+<@h2 "OSSGTP" "ossgtp">
+<p>
+	The founders of Restlet S.A.S. are members of OSSGTP (Open Source 
+	Get Together Paris), a gathering of passionate professionals and actors in the 
+    open source software world.
+</p>
+
+<p>
+	<a href="http://www.ossgtp.org/"><img src="/images/logos/ossgtp" alt="Logo ossgtp"/></a>
+</p>
+
+<p>
+	The discussions and presentations are open to all the open source technologies with
+	a special interest in the Java world.
+</p>
+</@h2>
+
+<@h2 "Scientipole Initiative" "scientipole">
+<p>
+	Scientipole Initiative is a support structure for innovating companies in Paris Region, 
+    proposing a significant disposant d'un programme d'accompagnement et de financement significatif.
+</p>
+
+<p>
+	<a href="http://www.scientipole-initiative.org/"><img src="/images/logos/scientipole-initiative" alt="Logo Scientipole"/></a>
+</p>
+
+<p>    
+	Restlet is backed by Scientipole since 2011, helping us to develop our company with group trainings,
+    consulting days and seed financing.
+</p>
+</@h2>
+</#global>
+<#include "/footer.ftl"/>

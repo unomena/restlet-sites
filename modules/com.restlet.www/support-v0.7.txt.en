@@ -1,0 +1,385 @@
+--------------------------------
+TECHNICAL SUPPORT CONTRACT (v07)
+--------------------------------
+
+
+Warning: this Support Contract is solely addressed to the Subscriber, as described below and can’t be finalized by consumers and non professionals, in the sense of the French law. 
+
+
+Between:
+
+Restlet S.A.S., S.A.S. with a share capital of 26 470 euros, registered under the SIRET number 504 051 764 00042 (APE Code: 5829C), whose headquarters are located ESSEC Ventures - CNIT - BP 230, 2 place de la Défense, 92053 Paris La Défense, France,
+
+Hereafter named Restlet S.A.S.,
+On one hand,
+
+And:
+
+The Subscriber,
+One the other hand,
+
+
+	Taken together, the Parties
+
+
+
+Beforehand the following facts have been exposed:
+
+
+Restlet S.A.S. is specialized in Java technologies and business process integration. It helps companies and individuals with their integration projects and their software developments. Also, expert in Web services with REST style and in XML technologies in general, it is at the origin of the Restlet project allowing an easy and efficient usage of REST in Java. 
+
+In the scope of the Restlet Project, Restlet S.A.S. created the open source software RESTLET FRAMEWORK (hereafter named NRF) which is available for free download on the Web site of Restlet: http://www.restlet.org. 
+
+The Subscriber freely downloaded or wants to freely download the NRF software of Restlet S.A.S. and uses it or wants to use it in compliance with the dispositions of either the EPL 1.0 or CDDL 1.0 or LGPL 2.1 or LGPL 3.0 license.
+
+This is under those conditions that the Subscriber wants Restlet S.A.S. to give him the benefits of its experience and skills to assist him, via a technical support, in the installation and usage of the NRF software.
+
+The Subscriber has the choice between four (4) methods of Restlet technical support:
+
+-	Bronze Plan
+-	Silver Plan
+-	Gold Plan
+-	Platinum Plan
+
+Restlet S.A.S. brings the attention of the Subscriber on the fact that it doesn’t guarantee the effective commercial availability at a given time of all the methods.
+
+The four (4) methods of Restlet technical supports offered by Restlet S.A.S. apply uniquely and exclusively to the Open Source NRF Software.
+
+The Subscriber, natural person or legal entity, guarantee that it has competent persons or competent services at his disposal in the computer science domain and acknowledge and declare that in no case can be considered as not knowing anything on the subject.
+
+The Subscriber declares having the legal capacity at his disposal to conclude this contract and accepts the totality of the conditions hereafter and promises to respect the totality of the terms and conditions mentioned as well as those of the contracts specific to the various technical support methods presented above.
+
+
+
+Article 1 – OBJECT
+
+This contract has for object the definition of rights and obligations of the Parties during the delivery by Restlet S.A.S. of a personalized technical support to the Subscriber in order to assist him in the installation and usage of the NRF software.
+
+
+
+Article 2 – TECHNICAL ASSISTANCE AND SUPPORT 
+
+Restlet S.A.S. knows perfectly the NRF software, but doesn’t know the computer environment of the Subscriber which must expose in an exact and detailed manner this technical environment when subscribing to the technical support.
+
+In order to benefit from the technical assistance of Restlet S.A.S., it is imperative that the Subscriber respects the technical requirements defined in the Appendix 1 of this Contract.
+
+As soon as a dysfunction is jugged to enter into the scope of application of the technical support, the extent of the assistance given by Restlet S.A.S. vary depending on the method of technical support selected by the Subscriber that was specified in a distinct subscription document that is attached to the present contract.
+
+This assistance is provided for a limited number of incidents, depending on the technical support method subscribed (see details in Appendix 2). 
+An incident is defined as an assistance request applicable to an aspect of the NRF software: installation, usage of one of its features or assistance on a problem or a particular error message, for example. It can also be a defect in the NRF software, like a technical aspect or a feature that, not working properly, doesn’t offer the results normally expected. In any case, misbehavior can only be qualified as an Incident in the sense of the present contract after having been reproduced after some precise steps on the Subscriber side and after being confirmed as is by Restlet S.A.S..
+
+An unexpected behavior, dissociable from the environment or from the configuration of the Subscriber, doesn’t constitute an incident. In this case, Restlet S.A.S. proposes solutions, but can’t be taken accountable for the resolution of such behaviors. 
+
+If the problem in question concerns various aspects of the NRF software, the management of those other aspects will be treated as distinct incidents in the sense of the present contract. Otherwise, a single and same incident can require several phone calls, e-mails and off-line researches. 
+
+
+2.1.	Services common to all the technical support methods
+
+For any subscription methods selected, Restlet S.A.S. offers to the Subscriber its knowledge and its technical expertise via a remote technical support. The Subscriber contacts Restlet S.A.S. by electronic mail to submit any assistance request relative to the installation and normal usage of the NRF software in the environment of the Subscriber.
+
+Restlet S.A.S. provides its technical assistance service directly and solely to the contacts, physical persons, duly referenced and nominated by the Subscriber who are the sole persons to have the capacity to submit assistance requests, in accordance with the clauses of articles 4.3 and 5 of the present Contract.
+
+Restlet S.A.S. offers a remote technical assistance by electronic mail for all the explanations needed by the Subscriber for all the installation problems and for all the general questions concerning the NRF software.
+
+In addition, the bug fixing requests affecting the normal behavior of the NRF software will be processed and resolved in priority compared to the other bugs reported via the public forum. Only the reproducible bugs duly reported and documented by the Subscriber in his assistance request and qualified as incidents by Restlet S.A.S. will be fixed.
+
+In the context of this intervention, Restlet S.A.S. provided to the Subscriber the information necessary to attempt to resolve the behavior anomaly by all means at his disposal, by providing a fix to the instructions in the software at the origin of the problem. 
+
+
+2.2.	Services specific to the methods " Gold Plan" and "Platinum Plan"
+
+In addition, in the case of the "Gold Plan" and "Platinum Plan" methods, the Subscriber can contact the technical support of Restlet S.A.S. by electronic mail and also by phone. 
+
+Restlet S.A.S. provides to the Subscriber the following complementary services:
+
+-	Priority enhancement requests: Restlet S.A.S. promises to develop with a higher priority than usual the generic enhancement requests of the Subscriber related to the NRF software. The acceptation and the development planning of those requests will however remain completely at Restlet S.A.S.’s appreciation.
+
+-	A remote debugging service: Restlet S.A.S. promises to use all the means at his disposal to put in place a remote debugging of the Subscriber’s application. When the bugs prove to be impossible or hard to reproduce outside the target environment, Restlet S.A.S. will only be able to provide this technical assistance service under the condition that the Subscriber offers the tools allowing a secure access to his environment, following a procedure defined in consultation with him.
+
+-	A service providing specific patches: Restlet S.A.S. promises to use all means at his disposal to provide to the Subscriber a customized patch, before the release of an official version fixing the possible bug.
+
+-	A service for customized implementations: Restlet S.A.S. extends its support services to the versions customized by the Subscriber in order to optimize the NRF software for his specific environment. The support of modified versions requires that the Subscriber provides the modified source code to Restlet S.A.S. prior to any other action.
+
+
+
+Article 3 – EXCLUSIONS
+
+Restlet S.A.S. is not obliged to provide to the Subscriber technical assistance services, other than those mentioned previously for the installation and usage by the Subscriber of the NRF software in application of the present contract. Restlet S.A.S. doesn’t provide any intervention on site in the context of his technical support methods.
+
+The assistance requests related to the design, the development or co-development of a specific application based on the NRF software, by and/or for the Subscriber, are not taken into account by the technical support contracts proposed by Restlet S.A.S. and must be the object of a distinct consulting contract for design and/or development. 
+
+Are excluded from the services proposed in the context of the technical support Methods the development versions of the NRF software and especially all the versions containing the labels like "alpha", "beta" or "RC" for "Release Candidate" or "M1", "M2", etc. for "Milestone 1", etc.
+
+No assistance aimed at transforming or coding the business requirements of the Subscriber into an application based on the NRF software will be delivered by Restlet S.A.S. in the context of the present contract.
+
+The Subscriber can order supplementary assistance services provided by Restlet S.A.S. during the life of the present contract.
+
+Are also excluded the services of Restlet S.A.S. in the context of  contracts of technical support and shouldn’t in any case engage its responsibility, the difficulties or incidents or accidents in relation to the following cases:
+
+-	The delivery, the repairing or the replacement of hardware furniture, accessories or technical parts ;
+-	The maintenance of electrical installations or networks outside the computer equipments ;
+-	The interventions having their origin in the usage of hardware furniture, accessories or technical parts non conform to the specifications of the manufacturer ;
+-	The interventions having their origin in modifications done by the Subscriber without the prior agreement of Restlet S.A.S. ;
+-	The interventions linked to the misbehavior of a hardware or software uncovered by the contract.
+
+In no case will it be possible to ask to Restlet S.A.S. to proceed at its own expenses to the reconstitution by any mean (recovery, backup, etc.) of files lost or made unusable following an error of manipulation or a failure of the computer system of the Subscriber.
+
+The contracts of technical support don’t cover the damages occurring during or after the usage of the NRF software in conditions non conform to the EPL 1.0 or CDDL 1.0 or LGPL 2.1 or LGPL 3.0 licenses, or following attempts to decompile, or modify the source code of the NRF software, or adjunction of additional functions by any mean possible.
+
+
+
+Article 4 – INTERVENTION PROCEDURE
+
+
+4.1. – Time of intervention
+
+The interventions of Restlet S.A.S. described in article 2 are done during a weekly time frame going from Monday to Friday and during hours of 9 AM to 6 PM, French time, to the exclusion of French holidays. 
+
+Outside those limits, it can be arranged that Restlet S.A.S. intervenes, but on basis of a case by case invoicing.
+
+
+4.2. – Guaranteed response time
+
+The processing of an intervention request occurs within a maximum delay that varies in function of the support method subscribed and that is specified in Appendix 2.
+
+The guaranteed response time is the time, starting from the hour of reception of the electronic mail (or of the phone call) of the Subscriber, in which a first response is provided by Restlet S.A.S.. This time of guaranteed response is expressed in number of days or open business hours. The business days and hours correspond to the intervention times specified in article 4.1.
+
+The response time and the actions taken by Restlet S.A.S. to resolve the anomaly are prioritized based on the impact of the problem on the activity of the Subscriber. Therefore, the more the activity of the Subscriber is disrupted, the higher the level of priority is. 
+
+
+4.3. –Versions lifetime for the NRF software
+
+The lifetime of the support of NRF software versions vary based on the Method of technical support subscribed and starts from the first release of a major version or a minor version.
+
+For the methods "Bronze Plan" and "Silver Plan", the lifetime of support for the NRF software versions is 2 years.
+
+For the methods "Gold Plan" and "Platinum Plan", the lifetime of support for the NRF software versions is 4 years.
+
+The versions of the NRF software are numbered in the following way: "1.2.3", where "1" corresponds to the major version number, "2" to the minor version number and "3" to the bug fixing release. The features of the NRF software don’t change between two bug fixing versions. Therefore, as an example, the support lifetime of the version "1.0.0" and "1.0.7" is the same.
+
+
+4.4. Conditions of intervention
+
+The technical support of Restlet S.A.S. can only be contacted via the contact designated by the Subscriber, in the conditions set in article 5.
+
+The technical support of Restlet S.A.S. is provided, at the choice of the Subscriber, in French or English language, with the exclusion of any other language.
+
+This contact expresses his assistance request by specifying clearly the nature of the need and by describing it in a formal manner. The precise description of the request allows Restlet S.A.S. to understand the request.
+
+For each technical support method, a maximum number of incidents that can be reported for each month by the totality of the reference contacts is contractually specified. 
+
+A month is understood as a period of 30 days starting from the subscription to the technical support contract.
+
+
+
+Article 5 – OBLIGATIONS OF THE SUBSCRIBER
+
+The Subscriber must ensure to Restlet S.A.S. all the facilities to execute his mission. In a general way, the Subscriber will bring all his aid to Restlet S.A.S. in the execution of his mission and promises to collaborate in order to allow the best execution possible for the mission of Restlet S.A.S..
+
+The Subscriber must, at the signature of the present contract and of the Subscription Document, designate one or several physical persons, based on the support Method subscribed that will be the sole technical relay of Restlet S.A.S.. The Subscriber will need to provide to Restlet S.A.S. the contact info (e-mail address and phone number) of the Contacts designated and referenced, that will only be authorized to submit assistance requests to Restlet S.A.S..
+
+The technical contact of the Subscriber must in particular describe the incident and communicate all the technical information asked by Restlet S.A.S., especially the lines of code directly concerned by the incident.
+
+The Subscriber guarantees that the data that he communicates in the Subscription Document are exact and faithful. He promises to inform Restlet S.A.S. without delay in case of a modification of the data that he communicated at the time of his subscription.
+
+The Subscriber will get attributed a personalized support Contract number that he will mention in any electronic mail sent to Restlet S.A.S. and/or indicate to Restlet S.A.S. in the case of a demand formulated by phone. The support Contract number is strictly personal and confidential and must not be communicated or shared with third parties.
+
+In the case where the Subscriber communicates or uses those elements in a way contrary to their goal, Restlet S.A.S. will have the right to cancel the account of the Subscriber. If the Subscriber has reasons to believe that a person uses those elements of identification or his support Contract number, he will immediately inform Restlet S.A.S..
+
+In all cases, the Subscriber will be the sole responsible of the usage of those elements of identification (email address, personal support Contract number) by third-parties, if they are fraudulent or not. 
+
+For security reasons and for the quality of the services proposed, Restlet S.A.S. automatically deactivates the support Contract number of the Subscriber at the expiration of the subscription contract.
+
+
+
+Article 6 - RESPONSABILITY - WARRANTY
+
+Restlet S.A.S. promises to use all the means necessary to ensure the best delivery possible of the technical assistance services that it proposes to the Subscriber. The Technical support provided by Restlet S.A.S. will use reasonable efforts to solve incidents that are submitted by the Subscriber, but Restlet S.A.S. can’t guarantee the systematic resolution of each one of them. 
+
+Restlet S.A.S. can’t be held responsible for the damages suffered by the Subscriber, when those damages result notably from a misusage, an abusive usage of the software or a negligence of the Subscriber, a defective electrical installation, thunders, a lack of respect of the installation or operating instructions, an intervention on the software realized by the Subscriber or by a third-party as well as any damage resulting from the usage of uncertified furniture and hardware, from acts of God or from the fact of a third-party.
+
+The responsibility of Restlet S.A.S. will not be engaged in the following cases:
+
+-	incidents resulting from the exploitation of security breaches on the computer system of the Subscriber,
+-	« bugs » or attacks or software viruses whether or not they trigger a partial or total misbehavior of the NRF software,
+-	negligence or error of manipulation from the users of the Subscriber triggering a partial or total misbehavior,
+-	interruptions or accidents caused by strikes, acts of spite, intentional degradations, riots, fires, flooding, a fortiori for all the acts of God or the acts independent of his will (notably in case of electrical failure, network or access system interruption, of reception hardware or Subscriber line failure, of lack of reliability of the data transmission on the network, of loss of data or of any other prejudice suffered of this fact by the Subscriber).
+
+The acts of God trigger, during their lifetime, the suspension of the obligations born from the technical support contract. 
+
+In all cases, the responsibility of Restlet S.A.S., as well as any guarantee that comes out of it, is strictly limited to the repairing of the hardware damages that could be proven as being caused directly by Restlet S.A.S., and this to the exclusion of any coverage of immaterial damages like notably the lack of income, the loss of operation, the sales prejudice, the complimentary charges, etc. 
+
+It pertains to the Subscriber to take all the useful measures notably in term of insurances to protect itself against such damages, to ensure the backup of his files before the intervention of Restlet S.A.S. and to proceed frequently to integrity tests of the backup supports and of the backup restoration simulations after sinister.
+
+The parties agree expressively that any financial or sales prejudice (like the loss of benefits, loss of orders, any sales trouble), or any other action directed against the Subscriber by a third-party constitutes an indirect damage and doesn’t give a right of reparation by Restlet S.A.S..
+
+In case of evident fault of Restlet S.A.S. in the context of the execution of this contract, the compensation indemnity possibly due to the Subscriber won’t be able to exceed the amount paid by the Subscriber for the technical support contract subscribed, whatever the nature, basis and modalities of the action engaged.
+
+The above mentioned limit won’t apply for corporal damages, or for damages caused to the material goods, mobile or immobile, when Restlet S.A.S. would be responsible in the Common Law conditions.
+
+Restlet S.A.S. DOESN’T GUARANTEE THE SECURITY OF REMOTE DATA TRANSMISSIONS AND DOESN’T TAKE RESPONSIBILITY FOR THEM. THE SUBSCRIBER RECOGNIZES KNOWING THAT ANY INFORMATION SENT CAN BE INTERCEPTED. Restlet S.A.S. DOESN’T GUARANTEE THAT ELECTRONIC COMMUNICATIONS THAT IT SENDS ARE NOT INFECTED BY VIRUSES OR ANY OTHER DANGEROUS ELEMENTS.
+
+Restlet S.A.S. NOT HAVING FOR OBLIGATION AND NOT HAVING THE TECHNICAL MEANS TO ENSURE THE INDENTITY OF PERSONS USING HIS SERVICES, Restlet S.A.S. IS NOT RESPONSIBLE IN CASE OF IDENTITY THEFT AND THEFT OF THE SUPPORT CONTRACT NUMBER OF THE SUBSCRIBER. 
+
+
+
+
+Article 7 - PAYMENT AND CONDITIONS OF PAYMENT
+
+
+7.1. 	Price
+
+The price of the methods of technical support of Restlet S.A.S. are indicated in Euro, without taxes.
+
+All the subscriptions, orders of any service proposed by Restlet S.A.S., whatever their origin, are payable in Euro or US Dollar.
+
+Restlet S.A.S. will invoice the Subscriber for all the services that do not result of the engagements taken in the services specified in the present Contract and/or contained technical support contract subscribed and that would be executed on the express demand of the Subscriber.
+
+Restlet S.A.S. keeps the right to modify its prices at any time. The services and products are always invoiced on the basis of the prices in effect at the time of the reception of the subscription or the order.
+
+
+7.2.	Payment
+
+The payment of the products and services provided to the Subscriber by Restlet S.A.S. can be done by:
+
+-	Checks in Euro issued from a bank based in France ;
+-	Fund transfers in Euro ;
+-	Services of Paypal (Restlet S.A.S. has a PREMIUM account) : by Paypal account, or by VISA or MASTERCARD credit card
+
+The Subscriber promises to pay the totality of the price and the associated charges for the subscribed service, including the taxes. The Subscriber is sole responsible for the effective payment of his purchase.
+
+The execution of the contract will only start when the bank account of Restlet S.A.S. will have been credited for the amount corresponding to the service subscribed. In case of lack of full payment, Restlet S.A.S. will not provide any service.
+
+It is expressly agreed between the Parties that any technical support Method subscribed and paid is due and won’t able to be reimbursed, even partially.
+
+
+7.3. 	Payment security
+
+For all its transactions, Restlet S.A.S. relies on the PAYPAL operator that is among the leaders of payment services in France. Its solution is a reference solution for online payment by credit cards in France and in the rest of the world. This is a guarantee of its experience and of the high reliability of its solutions. 
+
+
+
+Article 8 – DURATION
+
+The technical support contracts proposed by Restlet S.A.S. are fixed length contracts. This duration is specified in number of months in the Appendix 2.
+
+One month is understood as a period of 30 days starting from the subscription to the technical support contract.
+
+For the Methods "Bronze Plan", "Silver Plan", "Gold Plan" and "Platinum Plan", the duration of the contract is of twelve (12) months starting from the signature of the present contract. 
+
+
+
+Article 9 – TERMINATION
+
+Without prejudice of the other articles of the present contract, in case of serious breach by Subscriber, Restlet S.A.S. reserves the right to cancel the account of the Subscriber without warning or notice. 
+
+This termination will occur without prejudice of all the damages and interests that could be claimed by Restlet S.A.S. to the Subscriber or its beneficiaries and legal representatives in reparation of the prejudice suffered as a consequence of such breaches.
+
+In case of anticipated termination or at the expiration of the technical support contract, the Subscriber will be informed by electronic mail of the termination or of the confirmation of the termination of his account. The data relatives to the Subscriber will be destroyed on his demand or after the expiration of the legal delays starting from the date of termination of his account.
+
+
+
+Article 10 - PROPRERTY 
+
+The Subscriber can’t claim, in any case, the ownership and/or any right or intellectual property on the developments that Restlet S.A.S. would be led to do in the context of the present contract.
+
+
+
+Article 11 – PROTECTION OF PERSONAL DATA
+
+Restlet S.A.S. promises to strictly observe the disposition of the Law n° 78-17 of the 06/01/1978 named " Informatique and Libertés " (“Computer and Liberty”).
+
+In accordance to the above mentioned law, Restlet S.A.S. has declared to the Commission Nationale Informatique and Libertés (CNIL) the processing done on the basis of the information collected via the subscription forms of the technical support contracts; this declaration has the number 1223523.
+
+The data capable of direct identification (first and last name) or indirect identification (electronic mail address) provided by the Subscriber are not communicated to third parties. 
+
+The Subscriber is informed that the data entered in the subscription form could be used by Restlet S.A.S. in order to better target advertisements. 
+
+
+In accordance to articles 38 and following of the modified Law n° 78-17 of the 06/01/1978 relative to computer science, files and liberties, any person can obtain and obtain correction or obtain suppression his personal, by contacting the customer service at (+ 00 33) 1 47 57 30 53. Any person can, for legitimate reasons, refuse the processing of his personal data.
+
+
+
+Article 12 – NON SOLLICITATION OF EMPLOYEES
+
+Each of the Parties promises, during the life of the contract with an additional period of twelve months after its expiration, to not employ, contract or make employment offers to a collaborator of the other Party concerned by the execution of the present contract, without prior written agreement of the other Party.
+
+Each Party promises in case of non-respect of such a clause to compensate the other Party by paying an indemnity equivalent to the gross salary paid to this collaborator during the year prior to his leave.
+
+
+
+Article 13 – CONFIDENTIALITY
+
+Each Party promises to keep confidential the information and documents concerning the other Party, of any nature, to which it could have access during the execution of the contract.
+
+The Parties will take, with the employees, contractors and consultants, all the necessary means to ensure, under their responsibility, the confidentiality mentioned in the previous paragraph and the Parties promises to make this clause respected.
+
+As well, the present contract, its appendices and the special conditions that are included are confidential and for this reason, can’t be the object of a publication or a communication to third-parties, except with an express authorization of the two parties.
+
+
+
+Article 14 - INDEPENDANCE
+
+If one or several stipulations of the contract are held invalid or declared as such in application of a Law, a rule or following the final decision of a competent jurisdiction, the other stipulations of the contract will keep all their force and scope.
+
+
+
+Article 15 - APPLICABLE LAW AND COMPETENT JURISDICTION
+
+THE CONTRACT AS WELL AS THE RESULTING ACTS IS GOVERNED BY THE FRENCH LAW TO THE EXCLUSION OF ANY OTHER.
+
+FOR ANY CONTESTATION RELATED TO THE FORM, OR INTERPRETATION OR EXECUTION OF THE CONTRACT, THE PARTIES PROMISE TO SEARCH AN OUT OF COURT AGREEMENT FIRST.
+
+IF SUCH A SOLUTION CAN’T BE REACHED, THE DISPUTE WILL BE OF THE EXCLUSIVE COMPETENCE OF THE NANTERRE COURT (FRANCE, 92), EVEN IN CASE OF PLURALITY OF DEFENDERS OR APPEAL AND THIS EVEN IN CASE OF SUMMARY JUDGMENT.
+
+
+
+-----------------------------------
+APPENDIX 1 - TECHNICAL REQUIREMENTS
+-----------------------------------
+
+
+Minimal configuration
+ - Java SE 5.0 or higher
+ - 256 MB of available memory (RAM)
+ - 30 MO of available hard disk space
+ - 400 MHz processor
+
+Operating System
+ - NRF is 100% pure Java. As a consequence it is available on most modern operating systems capable of running a Java Virtual Machine (JVM) such as Windows, Linux, Solaris and Mac OS.
+
+Databases
+ - NRF doesn’t impose any particular persistence technology. It is interoperable with any RDBMS having a JDBC driver including MySQL, Oracle and SQL Server. 
+ - It is also interoperable with object databases such as db4o and with XML databases such as eXist.	
+
+
+
+-------------------------------
+APPENDIX 2 - SPECIAL CONDITIONS
+-------------------------------
+
+YOUR SUPPORT PLAN
+ - Type of plan subscribed               : ${planType!""}
+ - Update of the Maven repository        : Immediate
+ - Maximum number of incidents per month : ${planMaximumIncidentsPerMonth!""}
+ - Maximum response time (in days)       : ${planMaximumResponseTime!""}
+ - Number of authorized contacts         : ${planMaximumContacts!""}
+ - Plan validity duration                : ${planDuration!""}
+ - All in amount without taxes           : ${planAmount?string("0.00")} euros
+ - Contract number                       : ${invoiceNumber!""}
+
+YOUR SIGNER:
+ - Fist name : ${signerFirstName!""}
+ - Last name : ${signerLastName!""}
+ - Position  : ${signerPosition!""}
+ - E-Mail    : ${signerEmail!""}
+
+YOUR ORGANIZATION:
+ - Name            : ${organizationName!""}
+ - Web site        : ${organizationWebSite!""}
+ - Address         : ${organizationAddressLine1!""}
+ - Address (cont.) : ${organizationAddressLine2!""}
+ - Zip code        : ${organizationAddressZipCode!""}
+ - City            : ${organizationAddressCity!""}
+ - State           : ${organizationAddressState!""}
+ - Country         : ${organizationAddressCountry!""}

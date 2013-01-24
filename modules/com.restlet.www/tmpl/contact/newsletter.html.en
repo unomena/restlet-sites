@@ -1,0 +1,42 @@
+<#include "/header.ftl"/>
+<#global stylesheet_files=["/stylesheets/ext-custom.css", "/stylesheets/xtheme-gray.css"] />
+<#global javascript_files=["/javascript/ext-custom.js", "/javascript/locale/ext-lang.js", "/javascript/forms/contact/newsletter.en.js"] />
+<#global content>
+
+<@h2 "Presentation" "presentation">
+<p>
+	If you want to stay in touch with Restlet SAS without having
+	to follow our blog or if you are looking for all-encompassing complementary
+	information sent at low frequency, we propose you our newsletter. 
+</p>
+
+<p>
+	This letter is sent by email in HTML format. It clearly presents the most
+	important information since the previous letter like the release of a major
+	version or the evolution of our commercial offer.
+</p>
+
+<p>
+	The delivery frequency of this letter will by quarterly on average and monthly
+	at most. You can of course unsubscribe at any time. You also have a 
+	<a href="/legal">right of access and modification</a> to your personal data.
+</p>
+</@h2>
+
+<@h2 "Subscribe" "subscribe">
+<div id="suscribe-form"></div>
+
+<p>
+	You can also send us an email to this address <a href="mailto:newsletter@restlet.com?Subject=Subscribe">newsletter@restlet.com</a>
+	with "Subscribe" as the subject.
+</p>
+</@h2>
+
+<@h2 "Unsubscribe" "unsubscribe">
+<p>
+	You just need to send us an email to this address <a href="mailto:newsletter@restlet.com?Subject=Unsubscribe">newsletter@restlet.com</a>
+	with "Unsubscribe" as the subject. 
+</p>
+</@h2>
+</#global>
+<#include "/footer.ftl"/>

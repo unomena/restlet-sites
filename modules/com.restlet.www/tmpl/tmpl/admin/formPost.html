@@ -1,0 +1,29 @@
+<#include "/header.ftl"/>
+<#assign currentSection="administration">
+<#assign currentSubSection="formPost">
+<#assign language="fr">
+<#global content>
+<@h2 "Formulaire posté" "formPost">
+<#noparse>
+<form action="${resourceRef}?method=put" method="post">
+<input type="hidden" name="notEmptyForm" />
+<ul>
+   <li>Nom&nbsp;: ${formPost.name!""}</li>
+   <li>Description&nbsp;: ${formPost.description!""}</li>
+   <li>Date&nbsp;: ${formPost.submissionDate?string("dd MMM yyyy hh:mm:ss")}</li>
+   <li>IP&nbsp;: ${formPost.submissionIp!""}</li>
+   <li>Paramètres&nbsp;:</li>
+      <ul>
+<#list formPost.parameters as parameter>
+         <li>${parameter.name} : ${parameter.value!""} </li>
+</#list>
+      </ul>
+   <li>Traité&nbsp;:&nbsp;<input name="processed" type="checkbox" value="true" <#if formPost.processed>checked="checked"</#if>></li>
+</ul>
+<input type="submit">
+</form>
+<a  href="/admin/formPosts">Retour à la liste</a>
+</#noparse>
+</@h2>
+</#global>
+<#include "/footer.ftl"/>

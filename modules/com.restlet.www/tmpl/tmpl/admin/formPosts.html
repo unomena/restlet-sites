@@ -1,0 +1,29 @@
+<#include "/header.ftl"/>
+<#assign currentSection="administration">
+<#assign currentSubSection="formPosts">
+<#assign language="fr">
+<#assign atomRepresentation="" />
+<#global content>
+<@h2 "Formulaires postés" "formPosts">
+<#noparse>
+<table class="classic">
+  <tr>
+    <th>Nom</th>
+    <th>Description</th>
+    <th>Date</th>
+    <th>Traité</th>
+  </tr>
+<#list formPosts as formPost>
+  <tr>
+    <td><a href="${resourceRef}/${formPost.id}" title="form ${formPost.id}">${formPost.name!"-"}</a></td>
+    <td>${formPost.description!""}</td>
+    <td>${formPost.submissionDate?string("dd MMM yyyy")}</td>
+    <td><#if formPost.processed>Oui<#else>Non</#if></td>
+  </tr>
+</#list>
+</table>
+
+</#noparse>
+</@h2>
+</#global>
+<#include "/footer.ftl"/>

@@ -1,0 +1,654 @@
+<#include "/header.ftl"/>
+
+<#global stylesheet_files=["/stylesheets/SyntaxHighlighter.css"] />
+<#global javascript_files=["/javascript/shCore.js", "/javascript/shBrushJava.js" , "/javascript/shBrushXml.js"] />
+<#global javascript>
+window.onload = function () {
+    dp.SyntaxHighlighter.ClipboardSwf = '/flash/clipboard.swf';
+    dp.SyntaxHighlighter.HighlightAll('code');
+}
+</#global>
+
+<#global title="Restlet 1.0 - Developer FAQ" />
+<#global content>
+   <h1>Restlet 1.0 - Developer FAQ</h1>
+
+   <p>
+      Note that there is <a href="/about/faq">another FAQ</a> covering more general
+      questions about the framework and REST.
+   </p>
+
+   <h2><a name="toc">Table of contents</a></h2>
+
+   <ol>
+      <li><a href="#01">How can I get the raw HTTP headers if I
+      really need to?</a></li>
+      <li><a href="#02">Can I run Restlets inside Tomcat or any
+      Servlet container?</a></li>
+      <li><a href="#03">Can the Restlets composing a site be defined
+      in an XML file?</a></li>
+      <li><a href="#04">What JAR files must I have in my classpath
+      for a minimal application?</a></li>
+      <li><a href="#05">What are the other JAR files for?</a></li>
+      <li><a href="#06">How do I provide password protection on a
+      server?</a></li>
+      <li><a href="#07">How do I check the mime type of a document
+      PUT on my server?</a></li>
+      <li><a href="#08">How do I attach a status report to a client
+      GET when the call fails on my server?</a></li>
+      <li><a href="#09">What about performance, are new Restlets
+      created for each call received on my server?</a></li>
+      <li><a href="#10">How do I implement the traditional MVC
+      pattern?</a></li>
+      <li><a href="#11">Any recommendations/guidelines in terms of
+      how to deal with caching?</a></li>
+      <li><a href="#12">What is the performance of the HTTP
+      connectors?</a></li>
+      <li><a href="#13">Why is my HTTP client sending unwanted
+      "application/x-www-form-urlencoded" content type headers?</a></li>
+      <li><a href="#14">Can a Filter modify the call like a Servlet
+      Filter?</a></li>
+      <li><a href="#15">My server is running behind a proxy, can I
+      get the actual client IP address?</a></li>
+      <li><a href="#16">Is there a mechanism to pass data sets to
+      downstream Restlets?</a></li>
+      <li><a href="#17">What is the difference between a Filter and
+      a Router?</a></li>
+      <li><a href="#18">How can I send and receive files with
+      Restlet?</a></li>
+      <li><a href="#19">How can I make PUT or DELETE calls from
+      browsers?</a></li>
+      <li><a href="#20">What's the best practice for error handling
+      in an intermediate Restlet?</a></li>
+      <li><a href="#21">What is the best way to use Restlet in
+      Eclipse?</a></li>
+      <li><a href="#22">How can I change the parameters of my connector?</a></li>
+      <li><a href="#23">How can I integrate with Spring?</a></li>
+      <li><a href="#24">Can I prevent child URIs from being matched by Routers?</a></li>
+   </ol>
+
+   <h2><a name="01">1. How can I get the raw HTTP headers if I really need to?</a></h2>
+
+   <p>
+      All standard HTTP headers have an equivalent class/property in the Restlet API.
+      It was a deliberate choice to not expose those headers as first-class citizens,
+      because we consider them as lower-level artifacts and because we want to support
+      multiple protocols via the same API.
+   </p>
+
+   <p>
+      However, it is sometimes necessary to access to the raw HTTP headers or to
+      add non-standard headers. For this purpose, we use special Request and Response
+      attributes, see details in Javadocs of the <a
+      href="api/org/restlet/data/Message.html#getAttributes()">Message.getAttributes()
+      method</a>. There is also a sample code in the distribution that illustrates
+      how to get raw headers and how to add non-standard ones, see the
+      org.restlet.example.misc.HeadersTest class in the "src"
+      directory.
+   </p>
+
+   <h2><a name="02">2. Can I run Restlets inside Tomcat or any Servlet container?</a></h2>
+
+   <p>
+      Yes you can, even if this is not required. If you can't use the
+      standalone HTTP connectors provided in the Restlet Engine, you
+      can still use the ServerServlet connector which is an adapter between
+      the Servlet API and the Restlet API. See the <a
+      href="ext/com/noelios/restlet/ext/servlet/ServerServlet.html">
+      ServerServlet Javadocs</a> for details on how to configure your Servlet
+      container.
+   </p>
+
+   <div style="text-align: justify">
+      Here is the description of a concrete simple Web application. All
+      sources are available
+      <a
+         href="http://www.restlet.net/source/browse/restlet/trunk/modules/org.restlet.example/src/org/restlet/example/dist/testServlet.zip">here</a>.
+      <br/>
+      Imagine your simple application is only composed of one package and one
+      class :
+      <br/>
+      <ul>
+         <li>Package "com.testServlet"</li>
+         <li>Class "com.testServlet.TestServletApplication"</li>
+      </ul>
+      Your application's root restlet is very simple and is in charge of
+      displaying some data taken from the client in an HTML format. Your
+      application contains also a "main" method in order to provide the
+      standalone mode.
+      <br/>
+      In standalone mode, the following jars are required in the classpath :
+      <ul>
+         <li><strong>The standard Restlet API</strong> : "org.restlet.jar"</li>
+         <li><strong>The core Restlet Engine</strong> :
+         "com.noelios.restlet.jar"</li>
+         <li>One server connector that supports the HTTP Protocols. For
+         example, use the Simple HTTP Connector :
+         "com.noelios.restlet.ext.simple_3.1.jar" and "org.simpleframework.jar".</li>
+      </ul>
+      <br/>
+      If you want to deploy your application in a servlet container such as
+      Tomcat, the following jar files are required in your deployment package
+      :
+      <ul>
+         <li><strong>The standard Restlet API</strong> : "org.restlet.jar"</li>
+         <li><strong>The core Restlet Engine</strong> :
+         "com.noelios.restlet.jar"</li>
+         <li><strong>The servlet connector</strong> :
+         "com.noelios.restlet.ext.servlet_2.4.jar"</li>
+      </ul>
+      Then organize your application as follows before generating the Web
+      Application aRchive (e.g. in a
+      <a
+         href="http://www.restlet.net/source/browse/restlet/trunk/modules/org.restlet.example/src/org/restlet/example/dist/testServlet.war">WAR
+      file</a>
+      ) :
+      <ul>
+         <li><strong>/WEB-INF/classes/</strong> - your package and the
+         compiled classes.</li>
+         <li><strong>/WEB-INF/lib/</strong> - the required jar files.</li>
+         <li><strong>/WEB-INF/web.xml</strong> - The <em>Web
+         Application Deployment Descriptor</em> for your application.</li>
+      </ul>
+
+      Here is a sample configuration of such web.xml file for our simple
+      Restlet webapp :
+      <pre class="xml:nocontrols:nogutter">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+&lt;!DOCTYPE web-app PUBLIC
+   &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN&quot;
+   &quot;http://java.sun.com/dtd/web-app_2_3.dtd&quot;&gt;
+&lt;web-app&gt;
+    &lt;display-name&gt;Test servlet&lt;/display-name&gt;
+    &lt;context-param&gt;
+            &lt;param-name&gt;org.restlet.application&lt;/param-name&gt;
+            &lt;param-value&gt;
+               com.testServlet.TestServletApplication
+            &lt;/param-value&gt;
+    &lt;/context-param&gt;
+
+    &lt;!-- Restlet adapter --&gt;
+    &lt;servlet&gt;
+            &lt;servlet-name&gt;ServerServlet&lt;/servlet-name&gt;
+            &lt;servlet-class&gt;
+               com.noelios.restlet.ext.servlet.ServerServlet
+            &lt;/servlet-class&gt;
+    &lt;/servlet&gt;
+
+    &lt;!-- Catch all requests --&gt;
+    &lt;servlet-mapping&gt;
+            &lt;servlet-name&gt;ServerServlet&lt;/servlet-name&gt;
+            &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;
+&lt;/web-app&gt;
+      </pre>
+   </div>
+
+   <h2><a name="03">3. Can the Restlets composing a site be defined in an XML file?</a></h2>
+
+   <p>
+      As XML has been frequently overused as an alternative programming
+      language, in the Restlet framework we are very careful about this. We
+      think that any configuration that must be done by an application
+      developer should be done in Java. In the future, we plan to support XML
+      configuration for the Component as this task will often by delegated to
+      an administrator without Java knowledge. As you can see in our <a
+         href="http://wiki.restlet.org">Community Wiki</a>, several users have
+      integrated Restlet with other frameworks like Spring, which support XML
+      configuration itself.
+   </p>
+
+   <h2><a name="04">4. What JAR files must I have in my classpath for a minimal application?</a></h2>
+
+   <p>
+      In a Restlet distribution, all JAR files are located under the
+      "lib" directory. The <b>org.restlet.jar</b> file is containing the
+      standard Restlet API. Even though you can compile your code with only
+      this JAR file, it is likely that you'll need the additional features
+      provided by the various Restlet extensions in the <b>org.restlet.ext.*.jar</b>
+      files. In any case, to run a minimal application, you'll also need an
+      implementation of the API, the core Restlet Engine contained in
+      <b>com.noelios.restlet.jar</b>.
+   </p>
+
+   <h2><a name="05">5. What are the other JAR files for?</a></h2>
+
+   <p>
+      The core NRE doesn't contain any connector to receive or send
+      requests. You need to add to your classpath the JAR file of each
+      additional connector needed by your application. Check the
+      "/lib/README.txt" file in the distribution for a detailled list of all
+      the required dependencies for each extension JAR. If you want to act as
+      an HTTP server, you can choose between several connectors: standalone
+      ones based on Jetty, Simple Framework and AsyncWeb, and one embedded if
+      you want to use an existing Servlet container like Tomcat.
+   </p>
+   <p>
+      There are other extensions to the NRE, like HTTP, SMTP and JDBC
+      clients. Each one corresponds to a seperate Java package under
+      com.noelios.restlet.ext.* and is packaged as a separate JAR file
+      available under the "lib" directory. For example, if you need to send
+      emails, you must include the following JAR files:
+      /lib/com.noelios.restlet.ext.javamail_1.4.jar (NRE extension) and
+      /lib/javax.mail_1.4/mail.jar (JavaMail).
+   </p>
+   <p>
+      No further configuration is needed as the NRE runtime will
+      automatically detect the extensions present if the application
+      classpath. This is the reason why you can rely on the standard Restlet
+      API to create connectors, for example: new Server(Protocol.HTTP, 8182,
+      target).
+   </p>
+
+
+   <h2><a name="06">6. How do I provide password protection on a server?</a></h2>
+
+   <p>
+      Currently, the Noelios Restlet Engine supports Basic HTTP and
+      Amazon Web Services authentication schemes. You order to leverage them,
+      use the <a href="api/org/restlet/Guard.html">Guard</a>
+      Filter. For details on how to use this Filter, please check the <a
+         href="tutorial#part09">part 9 of the
+      tutorial</a>.
+   </p>
+
+   <h2><a name="07">7. How do I check the mime type of a document
+   PUT on my server?</a></h2>
+
+   <p>
+      This is simple: request.getEntity().getMediaType() which returns
+      an instance of the MediaType class. From this instance you can get the
+      main and sub types as well as the optional type parameters.
+   </p>
+
+   <h2><a name="08">8. How do I attach a status report to a
+   client GET when the call fails on my server?</a></h2>
+
+   <p>
+      This is also simple:
+      response.setStatus(Status.CLIENT_ERROR_NOT_FOUND). Of course you have a
+      complete list of options available in the Status class, closely
+      following the HTTP and WebDAV conventions.
+   </p>
+   <p>
+      Finally, a description can be added to the status report to help
+      the client understand the situation and correct its request if needed.
+      For this purpose, you can create new instances of the <a
+         href="api/org/restlet/data/Status.html">Status</a>
+      class instead of using the constants or, more simply, you can use
+      response.setStatus(Status.CLIENT_ERROR_NOT_FOUND, "Your comment goes
+      here").
+   </p>
+
+   <h2><a name="09">9. What about performance, are new Restlets
+   created for each call received on my server?</a></h2>
+
+   <p>
+      For a server connector such as Jetty HTTP, the main cost of
+      Restlets resides in the creation of the Request and Response objects
+      from the low-level HTTP request headers and body. This cost is low and
+      is optimized to parse the required headers only when the application
+      actually needs the information.
+   </p>
+
+   <p>
+      For the rest, the Restlet cost happens upon initialization or
+      first call. By default, Restlet objects (including Filters,
+      Finders and Routers) are shared by all calls. As calls are living in
+      separate threads, they can be concurrently processed by the Restlets.
+      You only need to be careful when using member variables to store
+      temporary state. If at some point in your application, you need to have
+      state that is specific to your call, you should use the
+      Request.getAttributes() or Response.getAttributes() as a modifiable map
+      of attributes. In the final Finder, a new instance of the target Resource
+      class is automatically by default, which let you deal call's specific
+      information.
+   </p>
+
+   <p>
+      For those concerned by performance, we have published a <a href="benchmark">
+      benchmark</a> illustrating that Restlets are scalable and efficient.
+   </p>
+
+   <h2><a name="10">10. How do I implement the traditional MVC
+   pattern?</a></h2>
+
+   <p>
+      There is only a rough correspondence between the <a href="http://en.wikipedia.org/wiki/Model-view-controller">MVC
+      pattern</a> and the Restlet framework; some <a href="http://n2.nabble.com/Restlet-MVC-tp1560691p1561792.html">debate</a>
+      exists as to whether it should be employed at all. For those who wish to follow 
+      the MVC pattern with Restlet, here is the basic proposition:
+   </p>
+
+   <ol>
+      <li>Controller == Restlets (mainly Filters, Routers, Finders). You
+      can visualize the controller as a sort of processing chain, where the
+      last node should be a Hander with all the information necessary to
+      locate the target Resource for the call. This location information can
+      be stored either in the request's attributes map, either in the member
+      variables of a request wrapper (see <a
+         href="api/org/restlet/util/WrapperRequest.html">org.restlet.WrapperRequest</a>).
+      This last Finder should override the findTarget(Request, Response)
+      method and return an instance of Resource.</li>
+      <li>Model == Resource + data objects. Just start from the <a
+         href="api/org/restlet/resource/Resource.html">org.restlet.resource.Resource
+      class</a> and implement its methods like getVariants(), post(), delete()
+      and put(). The Finder class automatically invokes those methods by
+      implementing the handleGet(), handleHead(), handlePost(), handlePut(),
+      handleDelete() methods for you. For example, you just need to override
+      the getVariants() to benefit from automatic content negotiation.
+      Internally, we rely on the Response.setEntity(Resource, Language)
+      method to trigger this content negotiation, which compares the
+      representations that you make available (named the variants), with the
+      client capabilities and preferences.</li>
+      <li>View == Representation. To create new representations for your
+      resources, you can rely on one of the numerous Representation
+      implementation classes (InputRepresentation for example) available in
+      the org.restlet.resource package or in extension packages like for JSON
+      documents, FreeMarker and Velocity templates.</li>
+   </ol>
+
+   <h2><a name="11">11. Any recommendations/guidelines in terms of
+   how to deal with caching?</a></h2>
+
+   <p>
+      Currently, client-side caching is supported via the "conditions"
+      property of Call. See the <a
+         href="api/org/restlet/data/Conditions.html">
+      Conditions</a> class for details. So, the first recommendation is to ensure
+      that you correctly set all the representation metadata for your own
+      representations (modification date, expiration date, tag). That will
+      ensure that the server-side negotiation logic (used via the
+      Response.setEntity(Resource, Language) method) works optimally.
+   </p>
+
+   <p>
+      Then, writing a generic server-side cache is a different story.
+      The recommendation would be to follow the REST style and HTTP
+      specification spirit as closely as possible. For full-featured caching,
+      you should look at popular projects like Squid:
+      http://www.squid-cache.org/ or Apache caching modules. These caches can
+      be installed transparently for the clients, as reverse proxies.
+   </p>
+
+   <h2><a name="12">12. What is the performance of the HTTP
+   connectors?</a></h2>
+
+   <p>
+      For server connectors, the performance will depend on the actual
+      provider used and whether you deploy your application with a standalone
+      connector or embedded in a Servlet container. We have published a
+      <a href="benchmark">benchmark</a> illustrating that Restlets are scalable
+      and efficient, but encourage you to do your own tests within your target
+      deployment environment.
+   </p>
+
+   <h2><a name="13">13. Why is my HTTP client sending unwanted
+   "application/x-www-form-urlencoded" content type headers?</a></h2>
+
+   <p>
+      When you do a simple GET with the Restlet HTTP client connector based
+      on JDK's HttpURLConnection, an extra "content-type" header can be sent
+      to the server, even though your call doesn't provide any input content (because you
+      just GET a representation). This is due to a bug in JDK 5.0 that was fixed in
+      update 10 and in JDK 6.0 as indicated in the <a
+         href="http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6369510">bug
+      report</a>.
+   </p>
+
+   <h2><a name="14">14. Can a Filter modify the call like a
+   Servlet Filter?</a></h2>
+
+   <p>
+      Absolutely! What the tutorial only says is that request's base
+      reference should rarely be modified. Beside that, anything else in the
+      request or response objects can be modified, before or after the
+      handling of the call by the attached Restlet.
+   </p>
+
+   <h2><a name="15">15. My server is running behind a proxy, can I
+   get the actual client IP address?</a></h2>
+
+   <p>
+      The immediate client IP address available is the only that is
+      always available because its based on the underlying protocol
+      connection. In HTTP, certain proxies do transfer the original client IP
+      address (or addresses) by using some extra HTTP headers like
+      "X-Forwarded-for". In the recent Restlet versions you can get all this
+      information in a straightforward way. On the ClientInfo class,
+      accessible via the <a
+         href="api/org/restlet/data/Request.html#getClientInfo()">getClientInfo()</a>
+      method, you have two related methods <a
+         href="api/org/restlet/data/ClientInfo.html#getAddress()">getAddress()</a>
+      and <a
+         href="api/org/restlet/data/ClientInfo.html#getAddresses()">getAddresses()</a>.
+      Please check the Javadocs of the HTTP server connectors for details
+      (i.e. context parameter to set) on how to enable the support for the
+      "X-Forwarded-For" header as there are some security risks when using it,
+      especially if you are not controlling the intermediary proxies.
+   </p>
+
+   <h2><a name="16">16. Is there a mechanism to pass data sets to
+   downstream Restlets?</a></h2>
+
+   <p>
+      Yes, there are multiple mechanisms available. If you need to
+      store state, without any validation logic or behavior, you can use the
+      Request.getAttributes() method which returns a modifiable map object.
+      Otherwise, you can wrap the Request object into a larger one containing
+      the extra properties and methods that you need. For this purpose, you
+      just have to create a subclass of org.restlet.util.WrapperRequest. Then,
+      in one of your handle methods, you can simply wrap the current call
+      instance. Unless you use a common base Restlet you will need to properly
+      cast the call instance in subsequent Restlets in order to access to your
+      wrapper methods.
+   </p>
+
+   <h2><a name="17">17. What is the difference between a Filter
+   and a Router?</a></h2>
+
+   <p>
+      Filters support some processing before or after the handling of a
+      call by a target Restlet. They are useful for actions like logging,
+      caching, compressing or security checks. The purpose of Routers is to
+      route calls based on some any useful criteria, typically base on the
+      relative target URI. Routers can distribute calls to one or more
+      attached Restlets using intermediary Routes. A Route is a simple Filter
+      where the target Restlet is attached and that can score incoming calls.
+      Depending on the Routes and the routing algorithm used, the Router will
+      select the most appropriate target Restlet to continue the processing of
+      the call. Default Routes based on URI patterns will also update the
+      "Request.resourceRef.baseRef" property before actually invoking the
+      selected target Restlet. See also, <a href="/about/faq#02">this FAQ entry</a>
+      for a comparison of Routers with the Servlet API.
+   </p>
+
+   <h2><a name="18">18. How can I send and receive files with
+   Restlet?</a></h2>
+
+   <p>
+      To receive large files, from browsers for example, you can rely
+      on the Apache FileUpload project which was integrated as a <a
+         href="ext/org/restlet/ext/fileupload/package-summary.html">Restlet
+      Extension</a>. To send a file using the HTTP client connector, just create a
+      new <a
+         href="api/org/restlet/resource/FileRepresentation.html">FileRepresentation</a>
+      and set is as the input of your call.
+   </p>
+
+   <h2><a name="19">19. How can I make PUT or DELETE calls from
+   browsers?</a></h2>
+
+   <p>
+      There are two solutions to this problem. The first one is to
+      tunnel the PUT or DELETE calls through regular POST calls. There is a <a
+         href="api/org/restlet/service/TunnelService.html">TunnelService</a>
+      associated with each Application that automatically takes care of it.
+      Also, in the <a href="http://www.onlamp.com/lpt/a/6480">Using REST
+      with Ajax</a> article, the author explains how to directly build the PUT and
+      DELETE methods from a browser using some JavaScript code.
+   </p>
+
+   <h2><a name="20">20. What's the best practice for error
+   handling in an intermediate Restlet?</a></h2>
+
+   <p>
+      Typically, unexpected exceptions are handled at the Application
+      level, by setting the status to 500 (internal server error). If you want
+      a different status when an exception is thrown, you have to catch it
+      manually at a lower level (inside the handle(Call) or
+      handleGet|Post|etc. method of your intermediary Restlet) and set the
+      desired status on your response.
+   </p>
+
+   <h2><a name="21">21. What is the best way to use Restlet in
+   Eclipse?</a></h2>
+
+   <p>
+      Of course, you could manually use the JAR files in your Eclipse
+      projects, but the most flexible way is to rely on Eclipse's plug-in
+      infrastructure. Here are some detailed steps to get you started:
+   </p>
+
+   <ol>
+      <li>Drop the content of the Restlet's "lib/" directory into
+      Eclipse's plug-in directory</li>
+      <li>Restart Eclipse and go into "Help/About Eclipse SDK" menu</li>
+      <li>In the new dialog, click on the "Plug-in Details" button</li>
+      <li>In the new dialog, you should see the registered plugins, for
+      example under the "Restlet S.A.S." provider name</li>
+   </ol>
+
+   <p>
+      Now in order to use those plugins:
+   </p>
+
+   <ol>
+      <li>Select "New Project" and choose "Plug-in Project"</li>
+      <li>Click "Next &gt;", eeter a project name and click "Next &gt;"
+      again</li>
+      <li>Disable the plug-in options checkboxes (unless you do need
+      them)</li>
+      <li>Click "Finish" and you should see you new project with the
+      plug-in "Overview" panel displayed</li>
+      <li>Select the "Dependencies" tab and click "Add..." in the
+      "Required Plug-ins..." section</li>
+      <li>Select the plugins you need, start by either "org.restlet",
+      "com.noelios.restlet" or the package name for third-party libraries
+      (Jetty, Servlet API, etc.).</li>
+   </ol>
+
+   <p>
+      Now you're done! You can create new classes and import the
+      org.restlet.* packages to work with Restlets. Note, that if you add
+      several server HTTP dependencies, only the first one in the list will be
+      use to create connectors.
+   </p>
+
+   <p>
+      Also note that you can't add a dependency to Jetty 5 and Jetty 6
+      at the same time as it will result in a security exception as you
+      experienced, because they use overlapping package names.
+   </p>
+
+   <h2><a name="22">22. How can I change the configuration of my connector?</a></h2>
+
+   <p>
+      Each connector has a set of specific parameters that can be changed
+      to tune their default configuration. Changing those parameters doesn't
+      require a direct access to the connector internal classes. Here is
+      an example illustrating how to change the request buffer size for the
+      Jetty connector:
+   </p>
+
+   <pre class="java:nocontrols:nogutter">
+Server myServer = new Server(Protocol.HTTP, 8182, restlet);
+myServer.getContext().getParameters().add("requestBufferSize", "30000");
+myServer.start();
+   </pre>
+
+   <h2><a name="23">23. How can I integrate with Spring?</a></h2>
+
+   <p>
+      During the development of the 1.0 version of the API, several users attempted
+      to integrate Restlet with Spring. They were especially trying to use the
+      XML-based bean wiring feature of Spring. This resulted in several examples
+      available on the <a href="http://wiki.restlet.org">community Wiki</a>.
+   </p>
+
+   <p>
+      In order to facilitate this integration, a dedicated Spring extension was added
+      to the Restlet distribution and the Servlet extension was modified. It allows
+      us to provide two main integration modes.
+   </p>
+
+   <p>
+      In the first mode, the goal is to leverage the concept of Restlet Application
+      and all the associated services, as well as the transparent deployment to either
+      a Servlet container (using the adapter ServerServlet extension class) or using
+      a standalone HTTP server connector. For this, you can leverage the SpringContext
+      class which is a Spring's GenericApplicationContext subclass. You can associate
+      a list of property-based on XML-based configuration URIs (file:/// or war:/// URIs)
+      in order to have Spring auto-instantiate and wire your Restlet beans.
+   </p>
+
+   <p>
+      In the second mode, the goal is to leverage the concept of Spring Web Application
+      as an alternative to the Restlet Application. This is sometimes required when
+      the Restlet code is only part of a much larger Spring-based Web application, with
+      dependencies on the Servlet API. Initially, it was hard to achieve this integration
+      because the Servlet extension, and especially the ServerServlet adapter class
+      was assuming the usage of a Restlet Application. This was redundant in this mode
+      so we later added a lighter adapter based on the ServletConverter class. With this
+      converter, you can directly instantiate Restlet Routers, Finders and Resources
+      from your existing Servlet-based Spring code. Check the Javadocs for details.
+   </p>
+
+   <p>
+      Finally, there is also a SpringFinder class available in the Spring extension.
+      It hasn't any specific dependency to Spring, but the addition of a parameter-less
+      createResource() method allows the usage of the Spring's "lookup-method"
+      mechanism.
+   </p>
+
+   <h2><a name="24">24. Can I prevent child URIs from being matched by Routers?</a></h2>
+
+   <p>
+      The default behavior of a Router is to match the beginning of the request URI
+      (actually the remaining part, left by previous Routers) with the attached URI
+      patterns. If the request URI indeed starts with one of the URI patterns, the
+      target Resource or Restlet is invoked.
+   </p>
+
+   <p>
+      This default behavior is desirable to allow optional query strings in URI routing.
+      However, it is sometimes preferred to be stricter about the match and to require
+      that the request URI exactly matches the URI pattern, with no remaining part. In
+      order to obtain this behavior, you just need to change the matching mode for the
+      attached template. Here is a sample code:
+   </p>
+
+   <pre class="java:nocontrols:nogutter">
+Route route = router.attach("/users/{user}", UserResource.class);
+route.getTemplate().setMatchingMode(Template.MODE_EQUALS);
+   </pre>
+
+   <p>
+      Note that after doing this, your Router won't accept URI with query strings going
+      to this Resource. To solve this, you can explicitely allow the query part in your
+      URI template:
+   </p>
+
+   <pre class="java:nocontrols:nogutter">
+Route route = router.attach("/users/{user}?{query}", UserResource.class);
+route.getTemplate().setMatchingMode(Template.MODE_EQUALS);
+   </pre>
+
+   <div class="notes">
+      <h3><a name="notes">Notes</a></h3>
+      <ul>
+         <li>Thanks to Dave Pawson for drafting the first version of this FAQ.</li>
+      </ul>
+   </div>
+</#global>
+<#include "/footer.ftl"/>

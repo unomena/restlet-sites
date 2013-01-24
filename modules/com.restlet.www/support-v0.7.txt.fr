@@ -1,0 +1,385 @@
+----------------------------------
+CONTRAT DE SUPPORT TECHNIQUE (v07)
+----------------------------------
+
+
+Avertissement : le présent Contrat de support s'adresse uniquement au Souscripteur, tel que décrit ci-dessous et ne peut pas être conclu par les consommateurs et les non professionnels, au sens du droit français. 
+
+
+Entre :
+
+Restlet S.A.S., S.A.S. au capital de 26 470 euros, enregistrée sous le numéro SIRET 504 051 764 00042 (Code APE: 5829C), dont le siège est ESSEC Ventures - CNIT - BP 230, 2 place de la Défense, 92053 Paris La Défense, France,
+
+Ci-après dénommée Restlet S.A.S.,
+D'une part,
+
+Et :
+
+Le Souscripteur,
+D'autre part,
+
+
+	Pris ensemble, les Parties
+
+
+
+Il a été préalablement exposé ce qui suit :
+
+
+Restlet S.A.S. est spécialisée dans les technologies Java et l'intégration par les processus métier. Elle assiste les entreprises et les particuliers dans leurs projets d'intégration et de développement informatiques. Par ailleurs, experte dans les services Web de style REST et dans les technologies XML en général, elle est à l'origine du projet Restlet permettant une utilisation simple et efficace de REST en Java. 
+
+Dans le cadre de ce Projet Restlet, Restlet S.A.S. a créé le logiciel open source RESTLET FRAMEWORK (ci-après désigné NRF) qui est disponible et téléchargeable gratuitement sur le site Web de Restlet : http://www.restlet.org. 
+
+Le Souscripteur a téléchargé ou souhaite télécharger gratuitement le logiciel NRF de Restlet S.A.S. et l'utilise ou souhaite l'utiliser conformément aux dispositions d'une licence EPL 1.0 ou CDDL 1.0 ou LGPL 2.1 ou LGPL 3.0.
+
+C'est dans ces conditions que le Souscripteur souhaite que Restlet S.A.S. lui fasse bénéficier de son expérience et de ses compétences pour l'assister, via un support technique, dans l'installation et l'utilisation du logiciel NRF.
+
+Le Souscripteur a le choix entre quatre (4) formules de support technique Restlet :
+
+-	Plan Bronze
+-	Plan Argent
+-	Plan Or
+-	Plan Platine
+
+Restlet S.A.S. attire l’attention du Souscripteur sur le fait qu’elle ne garantit pas la commercialisation effective à un instant « t » de toutes les formules.
+
+Les quatre (4) formules de support technique Restlet proposées par Restlet S.A.S. s'appliquent uniquement et exclusivement au Logiciel Open Source NRF.
+
+Le Souscripteur, personne physique ou morale, garantit qu'il dispose de compétences ou de services compétents dans le domaine informatique et reconnaît et déclare qu'il ne peut être en aucun cas considéré comme étant profane en la matière.
+
+Le souscripteur déclare disposer de la capacité juridique à conclure le présent contrat et il accepte l'ensemble des conditions ci-après et s’engage à respecter l’ensemble des présents termes et conditions ainsi que ceux prévus par les différents contrats de souscription aux formules de support technique visés ci-dessus.
+
+
+
+Article 1 – OBJET
+
+Le présent contrat a pour objet de définir les droits et obligations des Parties dans le cadre de la fourniture par Restlet S.A.S. d'un support technique personnalisé au Souscripteur pour l'assister dans l'installation et l'utilisation du logiciel NRF.
+
+
+
+Article 2 – ASSISTANCE ET SUPPORT TECHNIQUE 
+
+Restlet S.A.S. connaît parfaitement le logiciel NRF, mais ne connaît pas l'environnement informatique du Souscripteur qui doit exposer de manière précise et détaillée cet environnement technique lors de la souscription au support technique.
+
+Pour pouvoir bénéficier de l’assistance technique de Restlet S.A.S., l'environnement du Souscripteur doit impérativement respecter certains pré-requis techniques définis en Annexe 1 du présent Contrat.
+
+Dès lors qu'un dysfonctionnement est jugé relever du champ d'application du support technique, l'étendue de l'assistance technique apportée par Restlet S.A.S. varie en fonction de la formule de support technique qui est retenue par le Souscripteur et qui fait l'objet d'un bon de souscription distinct auquel est attaché le présent contrat.
+
+Cette assistance est dispensée pour un nombre limité d'incidents, variable suivant la formule de support technique souscrite (voir détail en Annexe 2). 
+Un incident est défini comme une demande d’assistance applicable à un aspect du logiciel NRF : installation, utilisation d'une de ses fonctions ou assistance sur un problème ou un message d'erreur particulier, par exemple. Il peut également s’agir d’un défaut du logiciel NRF, comme un aspect technique ou une fonctionnalité qui, ne s'exécutant pas, n'offre pas les résultats normalement attendus. En tout état de cause, un dysfonctionnement ne peut être qualifié d’Incident au sens du présent contrat qu’après avoir été reproduit à des stades bien précis côté Souscripteur et avoir été confirmé comme tel par Restlet S.A.S..
+
+Un comportement inattendu, dissociable de l'environnement ou de la configuration du Souscripteur, ne constitue pas un incident. Dans ce cas, Restlet S.A.S. propose des solutions, mais ne peut alors être tenu pour responsable de la résolution de tels comportements. 
+
+Si le problème en question concerne différents aspects du logiciel NRF, la gestion de ces autres aspects sera traitée comme un incident distinct au sens du présent contrat. Un seul et même incident peut toutefois nécessiter plusieurs appels téléphoniques, e-mails et recherches hors ligne. 
+
+
+2.1.	Services communs à toutes les formules de support technique
+
+Quelque soit la formule retenue, Restlet S.A.S. offre au Souscripteur son savoir faire et ses compétences techniques via un support d'assistance technique à distance. Le Souscripteur contacte Restlet S.A.S. par courrier électronique pour lui soumettre toute demande d'assistance relative à l'installation et à l'utilisation normale du logiciel NRF dans l'environnement du Souscripteur.
+
+Restlet S.A.S. fournit sa prestation d'assistance technique directement et uniquement aux contacts, personnes physiques, dûment référencés et désignés par le Souscripteur qui ont seuls la capacité à soumettre des demandes d'assistance, conformément aux dispositions des articles 4.3 et 5 du présent Contrat.
+
+Restlet S.A.S. offre une assistance technique à distance par courrier électronique et toutes les explications dont le Souscripteur a besoin pour tous les problèmes d'installation et pour toutes les questions d'ordre général concernant l'utilisation du logiciel NRF.
+
+En outre, les demandes de correction de bogues affectant le fonctionnement normal du logiciel NRF seront traitées et résolues de façon prioritaire par rapport aux bogues rapportés via le forum public. Seule sera prise en compte l’anomalie de fonctionnement reproductible dûment reportée et documentée par le Souscripteur dans sa demande d'assistance et qualifiée par Restlet S.A.S. d’incident.
+
+Dans le cadre de cette intervention, Restlet S.A.S. fournit au Souscripteur les informations nécessaires pour tenter de résoudre l’anomalie de fonctionnement par tous les moyens qui sont à sa disposition, en apportant une correction des instructions propres au logiciel qui sont à l’origine de l’anomalie de fonctionnement. 
+
+
+2.2.	Services propres aux formules " Plan Or" et "Plan Platine"
+
+En outre, dans le cadre des formules " Plan Or" et "Plan Platine", le Souscripteur peut contacter le support technique de Restlet S.A.S. par courrier électronique mais également par téléphone. 
+
+Restlet S.A.S. fournit au Souscripteur les services complémentaires suivants:
+-	Une prise en compte prioritaire des demandes d’amélioration: Restlet S.A.S. s’engage à développer de façon prioritaire les demandes d’amélioration génériques du Souscripteur relatives au le logiciel NRF. L’acceptation ainsi que le planning de développement de ces demandes restent cependant entièrement à l’appréciation de Restlet S.A.S..
+
+-	Un service de débogage à distance: Restlet S.A.S. s'engage à mettre tous les moyens en œuvre pour procéder à un débogage à distance de l'application du Souscripteur. Lorsque les bogues se révèlent impossibles ou difficiles à reproduire hors d'un environnement cible, Restlet S.A.S. ne pourra fournir cette prestation d'assistance technique qu'à la condition que le Souscripteur lui offre les outils lui permettant un accès sécurisé à son environnement, en suivant une procédure définie en concertation avec lui.
+
+-	Un service de fourniture de correctifs spécifiques: Restlet S.A.S. s'engage à mettre tous les moyens en œuvre pour mettre à la disposition du Souscripteur un correctif (patch) personnalisé, avant toute sortie d'une version officielle corrigeant l'éventuel bogue.
+
+-	Un service d'implémentations personnalisées: Restlet S.A.S. étend ses services de support aux versions personnalisées du Souscripteur pour l'optimiser à son environnement spécifique. Le support de versions modifiées nécessite la mise à disposition préalable par le Souscripteur du code source modifié.
+
+
+
+Article 3 – EXCLUSIONS
+
+Restlet S.A.S. n’est pas tenu de fournir au Souscripteur des services d’assistance technique, autres que ceux stipulés précédemment pour l’installation et l’utilisation par le Souscripteur du logiciel NRF en application du présent contrat. Restlet S.A.S. n’assure aucune intervention sur site dans le cadre de ses Plans de support technique.
+
+Les demandes d'assistance liées à la conception, au développement et au co-développement d'une application spécifique basée sur le logiciel NRF, par et/ou pour le Souscripteur, ne sont pas prises en charge par les contrats de support technique proposés par Restlet S.A.S. et doivent faire l'objet d'un contrat de conseil en conception et/ou de développement distinct. 
+
+Sont exclus des services proposés dans le cadre des Formules de support technique les versions de développement du logiciel NRF et notamment toutes les versions contenant une étiquette du type "alpha", "beta" ou "RC" pour "Release Candidate" ou "M1", "M2", etc. pour "Milestone 1", etc.
+
+Aucune assistance destinée à transformer et à coder les besoins métiers du Souscripteur en une application basée sur le logiciel NRF ne sera délivrée par Restlet S.A.S. dans le cadre du présent contrat.
+
+Le Souscripteur peut commander des services d’assistance supplémentaires rendus par Restlet S.A.S. pendant la durée du présent contrat.
+
+Sont également exclus des prestations de Restlet S.A.S. dans le cadre des contrats de support technique et ne sauraient en aucun cas engager sa responsabilité, les difficultés, incidents ou accidents en rapport avec les cas suivants:
+
+-	la mise à disposition, la réparation ou le remplacement de fournitures, d'accessoires ou de pièces détachées ;
+-	l'entretien d'installations électriques ou réseaux extérieures aux équipements informatiques ;
+-	les interventions ayant pour origine l'utilisation de fournitures, d'accessoires ou de pièces détachées non conformes aux spécifications du constructeur ;
+-	les interventions ayant pour origine des modifications effectuées par le Souscripteur sans l'accord préalable de Restlet S.A.S. ;
+-	les interventions liées au dysfonctionnement d'un matériel ou logiciel non couvert par le contrat.
+
+Il ne pourra en aucun cas être demandé à Restlet S.A.S. de procéder à ses frais à la reconstitution par quelque moyen que ce soit (récupération, restauration, etc.) de fichiers perdus ou rendus inutilisables par suite d'une erreur de manipulation ou d'une défaillance du système informatique du Souscripteur.
+
+Les contrats de support technique ne couvrent pas non plus les dommages survenus du fait d'une utilisation du logiciel NRF dans des conditions non conformes aux licences EPL 1.0 ou CDDL 1.0 ou LGPL 2.1 ou LGPL 3.0, ou du fait de tentatives de décompilation, de modification du code source du logiciel NRF, ou d'adjonction de fonctions supplémentaires par quelque procédé que ce soit.
+
+
+
+Article 4 – PROCEDURE D’INTERVENTION
+
+
+4.1. – Heures d’intervention
+
+Les interventions de Restlet S.A.S. décrites à l'article 2 s’effectuent dans une plage hebdomadaire allant du lundi au vendredi et des horaires allant de 9h00 à 18h00, heure française, à l’exclusion des jours fériés français. 
+
+En dehors de ces limites, il peut être convenu que Restlet S.A.S. puisse également intervenir, mais sur des bases de facturation au cas par cas.
+
+
+4.2. – Temps de réponse garanti
+
+La prise en compte d’une demande d’intervention intervient dans un délai maximum qui varie en fonction de la formule de support souscrite et qui est précisé dans le tableau récapitulatif des Formules de support annexé aux présentes.
+
+Le temps de réponse garanti est le temps, à compter de l'heure de réception du courrier électronique mail (ou de l'appel téléphonique) du Souscripteur, dans lequel une première réponse est fournie par Restlet S.A.S.. Ce temps de réponse garanti est exprimé en nombre de jours ou d'heures ouvrés. Les jours et heures ouvrés correspondent aux horaires d’intervention prévus à l’article 4.1.
+
+Le temps de réponse et les mesures prises par Restlet S.A.S. pour remédier à une anomalie sont fonction de l'impact du problème sur l’activité du Souscripteur. Ainsi, plus l'activité du Souscripteur est perturbée, plus le niveau de priorité est élevé. 
+
+
+4.3. – Durée de support des Versions du logiciel NRF
+
+La durée de support des versions du logiciel NRF varie en fonction du Plan de support technique souscrit et court à compter de la première sortie d'une version majeure ou d'une version mineure.
+
+Pour les formules "Plan Bronze" et "Plan Argent", la durée de support des versions du logiciel NRF est de 2 ans.
+
+Pour les formules "Plan Or" et "Plan Platine", la durée de support des versions du logiciel NRF est de 4 ans.
+
+Les versions du logiciel NRF sont numérotées de la façon suivante : "1.2.3", où "1" correspond au numéro de version majeure, "2" au numéro de version mineure et "3" au numéro de version corrective. Les fonctionnalités du logiciel NRF ne changent pas entre deux versions correctives. Ainsi, à titre d’exemple, la durée de support de la version "1.0.0" et "1.0.7" est la même.
+
+
+4.4. Modalités de l’intervention
+
+Le support technique de Restlet S.A.S. peut être contacté uniquement par l’intermédiaire du contact désigné par le Souscripteur, dans les conditions prévues à l’article 5.
+
+Le support technique de Restlet S.A.S. est réalisé, au choix du Souscripteur, en langue française ou anglaise, à l’exclusion de toute autre langue.
+
+Celui ci formule sa demande d’intervention en précisant clairement la nature du besoin et en décrivant celui ci de façon formelle. La description précise de la demande permet à Restlet S.A.S. de caractériser l’incident.
+
+Pour chaque formule de support technique, un nombre maximum d’incidents pouvant être rapportés par mois par l'ensemble des contacts référencés est contractuellement prévu. 
+
+Un mois s'entend d’une période de 30 jours à partir de la souscription du contrat de support technique.
+
+
+
+
+Article 5 – OBLIGATIONS DU SOUSCRIPTEUR
+
+Le Souscripteur doit assurer à Restlet S.A.S. toute facilité pour l’exécution de sa prestation. De manière générale, le Souscripteur devra apporter tout son concours à Restlet S.A.S. dans l’exécution de sa prestation et s’engage à collaborer afin de permettre au mieux la réalisation des prestations de Restlet S.A.S..
+
+Le Souscripteur doit, dès la signature du présent contrat et du Bon de souscription, désigner une ou plusieurs personnes physiques, en fonction du Plan souscrit, qui sera l'interlocuteur technique unique de Restlet S.A.S.. Le Souscripteur devra fournir à Restlet S.A.S. les coordonnées (adresse e-mail et numéro de téléphone) du ou des Contacts ainsi désignés et référencés, qui seront seuls habilités à soumettre des demandes d'assistance à Restlet S.A.S..
+
+L'interlocuteur technique du Souscripteur doit notamment décrire l'incident et communiquer toutes informations techniques demandées par Restlet S.A.S., notamment les lignes de codes directement concernées par l'incident.
+
+Le Souscripteur garantit que les données qu'il communique dans le cadre du bon de souscription sont exactes et conformes à la réalité. Il s'engage à informer Restlet S.A.S. sans délai en cas de modification des données qu'il a communiquées lors de sa souscription.
+
+Le Souscripteur se verra attribuer un numéro de Contrat de support personnalisé qu'il devra faire figurer dans l'objet de tout courrier électronique adressé à Restlet S.A.S. et/ou indiquer à Restlet S.A.S. dans le cas d'une demande formulée par téléphone. Le numéro de Contrat de support personnalisé est strictement personnel et confidentiel et ne devra pas être communiqué ni partagé avec des tiers.
+
+Dans le cas où le Souscripteur diffuserait ou utiliserait ces éléments de façon contraire à leur destination, Restlet S.A.S. résiliera de plein droit le compte du Souscripteur. Si le Souscripteur a des raisons de penser qu'une personne utilise ses éléments d'identification ou son numéro de Contrat de support, il devra en informer immédiatement Restlet S.A.S..
+
+Dans tous les cas, le Souscripteur sera seul responsable de l'utilisation de ces éléments d'identification (adresse électronique, numéro de numéro de Contrat de support personnalisé) par des tiers, qu'elles soient frauduleuses ou non. 
+
+Par mesure de sécurité et de qualité des services proposés, Restlet S.A.S. désactive automatiquement le numéro de Contrat de support du Souscripteur à l'expiration du contrat de souscription.
+
+
+
+Article 6 - RESPONSABILITE - GARANTIE
+
+Restlet S.A.S. s'engage à mettre en œuvre tous les moyens nécessaires afin d'assurer au mieux la fourniture des services d'assistance technique qu'elle propose au Souscripteur. Le Support technique fourni par Restlet S.A.S. déploiera des efforts raisonnables pour résoudre les incidents qui sont soumis à son assistance par le Souscripteur, mais Restlet S.A.S. ne peut garantir la résolution systématique de chacun d'eux. 
+
+Restlet S.A.S. ne peut en aucun cas être tenu pour responsable des dommages subis par le Souscripteur, lorsque ces dommages résultent notamment d’une mauvaise utilisation, d’une utilisation abusive du logiciel ou d’une négligence du Souscripteur, d’une installation électrique défectueuse, de la foudre, du non respect des instructions d’installation ou d’exploitation, d’une intervention sur le logiciel effectuée par le Souscripteur ou par un tiers ainsi que tout dommage résultant de l’emploi de fourniture et matériel non agréé, de la force majeure ou du fait du tiers.
+
+La responsabilité de Restlet S.A.S. ne saurait également être engagée dans les cas suivants :
+
+-	incidents résultant de l'exploitation de failles de sécurité sur le système informatique du Souscripteur,
+-	« bugs » ou attaques ou virus logiciels qu'ils entraînent ou non un dysfonctionnement partiel ou total du logiciel NRF,
+-	négligences ou erreurs de manipulation du personnel utilisateur du Souscripteur entraînant un dysfonctionnement partiel ou total,
+-	interruptions ou accidents causés par des grèves, actes de malveillance, dégradations volontaires, émeutes, incendies, inondations, a fortiori pour tous les cas de force majeure ou les faits indépendants de sa volonté (notamment en cas de défaillance électrique, d'interruption du réseau ou du système d'accès, de défaillance du matériel de réception ou de la ligne du Souscripteur, de manque de fiabilité de la transmission des données sur réseau, de pertes de données ou de tout autre préjudice subi de ce fait par le Souscripteur).
+
+Les cas de force majeure entraînent, pendant la durée de leur existence, la suspension des obligations nées du contrat de support technique. 
+
+Dans tous les cas, la responsabilité de Restlet S.A.S., comme toute obligation de garantie qui pourrait en découler, est strictement limitée à la réparation des dommages matériels dont il serait prouvé qu'ils ont été causés directement par Restlet S.A.S., et ce à l'exclusion de toute prise en charge de dommages immatériels tels que notamment manque à gagner, perte d'exploitation, préjudice commercial, charges complémentaires, etc. 
+
+Il appartient au Souscripteur de prendre toutes les mesures utiles notamment au niveau d'éventuelles assurances pour se protéger contre de tels dommages, d'assurer la sauvegarde de ses fichiers avant l'intervention de Restlet S.A.S. et de procéder régulièrement à des tests d'intégrité des supports de sauvegarde et des simulations de restauration après sinistre.
+
+Les parties conviennent expressément que tout préjudice financier ou commercial (tel que pertes de bénéfices, pertes de commandes, troubles commerciaux quelconques), ou toute action dirigée contre le Souscripteur par un tiers constitue un dommage indirect et n'ouvre pas droit à réparation par Restlet S.A.S..
+
+En cas de faute avérée de Restlet S.A.S. dans le cadre de l'exécution de ce contrat, l'indemnité réparatrice éventuellement due au Souscripteur ne pourra excéder le montant réglé par le Souscripteur au titre du contrat de support technique souscrit, quels que soient la nature, le fondement et les modalités de l'action engagée.
+
+La limite ci-dessus ne s'applique pas aux dommages corporels, ou aux dommages causés aux biens matériels, mobiliers ou immobiliers, dont Restlet S.A.S. serait responsable dans les conditions du droit commun.
+Restlet S.A.S. NE GARANTIT PAS LA SECURITE DES TRANSMISSIONS DE DONNEES EFFECTUEES A DISTANCE ET N'EN PREND PAS LA RESPONSABILITE. LE SOUSCRIPTEUR RECONNAIT SAVOIR QUE TOUTE INFORMATION ENVOYEE PEUT ETRE INTERCEPTEE. Restlet S.A.S. NE GARANTIT PAS QUE LES COMMUNICATIONS ELECTRONIQUES QU'ELLE ENVOIE NE SONT PAS INFECTEES PAR DES VIRUS OU TOUS AUTRES ELEMENTS DANGEREUX.
+
+Restlet S.A.S. N'AYANT PAS POUR OBLIGATION ET NE DISPOSANT PAS DES MOYENS TECHNIQUES DE S'ASSURER DE L'IDENTITE DES PERSONNES UTILSANT SES SERVICES, Restlet S.A.S. N'EST PAS RESPONSABLE EN CAS D'USURPATION DE L'IDENTITE ET DU NUMERO DE PLAN PERSONNALISE DU SOUSCRIPTEUR. 
+
+
+
+Article 7. PAIEMENT ET CONDITIONS DE PAIEMENT
+
+
+7.1. 	Prix
+
+Les prix des formules de support technique de Restlet S.A.S. sont indiqués en Euro, hors taxes.
+
+Tous les abonnements, commandes, souscriptions à un quelconque service proposé par Restlet S.A.S., quelle que soit leur origine, sont payables en Euro ou Dollar US.
+
+Restlet S.A.S. facturera au Souscripteur toutes prestations qui ne résultent pas des engagements pris dans les prestations prévues au présent Contrat et/ou contenues dans le contrat de support technique souscrit et qui seraient effectuées à la demande expresse du Souscripteur.
+
+Restlet S.A.S. se réserve le droit de modifier ses prix à tout moment. Les services et produits sont toujours facturés sur la base des tarifs en vigueur au moment de l'enregistrement de la souscription ou de la commande.
+
+
+7.2.	Paiement
+
+Le règlement des produits, services et prestation fournis au Souscripteur par Restlet S.A.S. peut se faire par :
+
+-	Chèques en Euro issus de la France ;
+-	Virements bancaires en Euro ;
+-	Services de Paypal (Restlet S.A.S. dispose d’un compte PREMIUM) : par compte Paypal, ou par carte bancaire VISA ou MASTERCARD
+
+Le Souscripteur s’engage à régler l'intégralité du prix et des charges afférentes au service souscrit, y compris les taxes. Le Souscripteur est seul responsable du paiement effectif de son achat.
+L'exécution du contrat s'effectuera uniquement lorsque le compte bancaire de Restlet S.A.S. sera crédité du paiement correspondant à la prestation souscrite. A défaut de paiement, Restlet S.A.S. n’assurera aucune prestation de service.
+
+Il est expressément convenu entre les Parties que tout Plan de support technique souscrit et payé est dû et ne pourra en aucun cas faire l'objet d'une demande, fut-elle partielle, de remboursement.
+
+
+7.3. 	Sécurisation des paiements
+
+Pour toutes ses transactions, Restlet S.A.S. fait appel à l'opérateur PAYPAL qui figure parmi les leaders des services de paiement en France. Sa solution est une solution de paiement en ligne de référence dans le traitement des ventes par cartes bancaires réalisés sur les sites marchands en France et dans le monde entier. Ceci est un gage de son expérience et de la haute fiabilité de ses solutions. 
+
+
+
+Article 8 – DUREE
+
+Les contrats de support technique proposés par Restlet S.A.S. sont des contrats à durée déterminée. Cette durée est spécifiée en nombre de mois dans l’Annexe 2.
+
+Un mois s'entend d’une période de 30 jours à partir de la souscription du contrat de support technique. 
+
+
+
+Article 9 – RESILIATION
+
+Sans préjudice des autres dispositions des présentes, en cas de manquement grave du Souscripteur, Restlet S.A.S. se réserve le droit de résilier de plein droit le compte du Souscripteur sans préavis ni mise en demeure. 
+
+Cette résiliation interviendra sans préjudice de tous les dommages et intérêts qui pourraient être réclamés par Restlet S.A.S. au Souscripteur ou ses ayants droit et représentants légaux en réparation du préjudice subi du fait de tels manquements.
+
+En cas résiliation anticipée ou à l’expiration du contrat de support technique, le Souscripteur sera informé par courrier électronique de la résiliation ou de la confirmation de la résiliation de son compte. Les données relatives au Souscripteur seront détruites à sa demande ou à l'expiration des délais légaux courant à compter de la résiliation de son compte.
+
+
+
+
+Article 10 - PROPRIETE 
+
+Le Souscripteur ne peut en aucun cas revendiquer la propriété et/ou un quelconque droit de propriété intellectuelle sur les développements que Restlet S.A.S. serait amené à effectuer dans le cadre du présent contrat.
+
+
+
+Article 11 – PROTECTION DES DONNEES PERSONNELLES
+
+Restlet S.A.S. s'engage à respecter strictement les dispositions de la loi n° 78-17 du 6 janvier 1978 dite " Informatique et Libertés ".
+
+Conformément à ladite loi, Restlet S.A.S. a déclaré à la Commission Nationale Informatique et Libertés (CNIL) les traitements effectués sur la base des informations recueillies via les formulaires de souscription aux contrats de support technique ; cette déclaration portant le numéro 1295005.
+
+Les données directement identifiantes (nom et prénom) ou indirectement identifiantes (adresse de courrier électronique) fournies par le Souscripteur ne sont pas communiquées à des tiers. 
+
+Le Souscripteur est informé que les données saisies dans le formulaire d'inscription pourront être utilisées par Restlet S.A.S. afin de mieux cibler les offres publicitaires. 
+
+
+Conformément aux articles 38 et suivants de la loi n° 78-17 du 6 janvier 1978 modifiée relative à l'informatique, aux fichiers et aux libertés, toute personne peut obtenir communication et, le cas échéant, rectification ou suppression des informations la concernant, en s'adressant au service clientèle au (+ 00 33) 1 47 57 30 53. Toute personne peut, pour des motifs légitimes, s'opposer au traitement des données la concernant 
+
+
+
+Article 12 – NON SOLLICITATION DE PERSONNEL
+
+Chacune des Parties s'engage, pendant la durée du contrat augmentée d'une période de douze mois à compter de son expiration, à ne pas prendre à son service, engager ou à faire des offres d'engagement à un collaborateur de l'autre Partie affecté à l'exécution des présentes, sans accord écrit et préalable de l'autre Partie.
+
+Chacune des Parties s'engage en cas de non-respect d'une telle clause à dédommager l'autre Partie en lui versant une indemnité égale à la rémunération brute totale versée à ce collaborateur pendant l'année précédant son départ.
+
+
+
+
+
+
+
+Article 13 – CONFIDENTIALITE
+
+Chacune des Parties s’engage à conserver confidentiels les informations et documents concernant l’autre Partie, de quelque nature qu’ils soient, auxquels elle peut avoir accès au cours de l’exécution du contrat.
+
+Les Parties prendront, vis-à-vis de leur personnel, préposés et prestataires de services toutes les mesures nécessaires pour assurer sous leur responsabilité, la confidentialité visée à l’alinéa précédent et les Parties se portent fort du respect de cette clause par eux.
+
+De même, le présent contrat, ses annexes et les conditions particulières qui y figurent sont réputées confidentiels et à ce titre, ne peuvent faire l’objet, ni d’une publication, ni d’une communication à des tiers, sauf autorisation expresse des deux parties.
+
+
+
+Article 14 - INDEPENDANCE
+
+Si une ou plusieurs stipulations du contrat sont tenues pour non valides ou déclarées telles en application d’une Loi, d’un règlement ou à la suite d’une décision définitive d’une juridiction compétence, les autres stipulations du contrat garderont toute leur force et leur portée.
+
+
+
+Article 15 - DROIT APPLICABLE ET JURIDICTION COMPETENTE
+
+LE CONTRAT AINSI QUE LES ACTES QUI EN SERONT LA CONSEQUENCE SONT REGIS PAR LA LOI FRANÇAISE A L’EXCLUSION DE TOUTE AUTRE.
+
+POUR TOUTE CONTESTATION POUVANT S’ELEVER AU SUJET DE LA FORMATION, DE L’INTERPRETATION OU DE L’EXECUTION DU CONTRAT, LES PARTIES S’ENGAGENT EN TOUT PREMIER LIEU A RECHERCHER UNE SOLUTION AMIABLE.
+
+SI UNE TELLE SOLUTION NE PEUT ABOUTIR, LE DIFFEREND SERA DE LA COMPETENCE EXCLUSIVE DES TRIBUNAUX DE NANTERRE, NONOBSTANT LES CAS DE PLURALITE DE DEFENDEURS OU D’APPEL EN GARANTIE ET CE MEME EN CAS DE REFERE.
+
+
+
+-------------------------------
+ANNEXE 1 - PRE-REQUIS TECHNIQUE
+-------------------------------
+
+
+Configuration minimale
+ - Java SE 5.0 ou supérieur
+ - 256 MO de mémoire vive disponible
+ - 30 MO d’espace disque disponible
+ - Processeur de 400 MHz
+
+Systèmes d‘Exploitation
+ - NRF est 100% Java. Par conséquent, il est disponible sur la plupart des systèmes d'exploitation capables de faire fonctionner une machine virtuelle Java (JVM) tels que Windows, Linux, Solaris et Mac OS.
+
+Bases de Données
+ - NRF n'impose pas de technologie de persistance particulière. Il est interopérable avec les SGBDR disposant d’un pilote JDBC, incluant MySQL, Oracle et SQL Server. 
+ - Il est aussi interopérable avec les bases objet telles que db4o et avec les bases XML telles qu’eXist.
+
+
+
+-----------------------------------
+ANNEXE 2 - CONDITIONS PARTICULIERES
+-----------------------------------
+
+VOTRE PLAN DE SUPPORT:
+ - Type de plan                        : ${planType!""}
+ - Mise à jour de l'entrepôt Maven     : Immédiate
+ - Nombre maximum d'incidents par mois : ${planMaximumIncidentsPerMonth!""}
+ - Temps de réponse maximum (en jours) : ${planMaximumResponseTime!""}
+ - Nombre de contacts autorisés        : ${planMaximumContacts!""}
+ - Durée de validité du plan           : ${planDuration!""}
+ - Montant forfaitaire HT              : ${planAmount?string("0.00")} euros
+ - Numéro de contrat                   : ${invoiceNumber!""}
+
+VOTRE SIGNATAIRE:
+ - Prénom : ${signerFirstName!""}
+ - Nom    : ${signerLastName!""}
+ - Rôle   : ${signerPosition!""}
+ - E-Mail : ${signerEmail!""}
+ 
+VOTRE ORGANISATION:
+ - Nom             : ${organizationName!""}
+ - Site Web        : ${organizationWebSite!""}
+ - Adresse         : ${organizationAddressLine1!""}
+ - Adresse (suite) : ${organizationAddressLine2!""}
+ - Code postal     : ${organizationAddressZipCode!""}
+ - Ville           : ${organizationAddressCity!""}
+ - Etat            : ${organizationAddressState!""}
+ - Pays            : ${organizationAddressCountry!""}

@@ -1,0 +1,41 @@
+<#include "/header.ftl"/>
+<#global content>
+
+<@h2 "Presentation" "presentation">
+<img src="/images/photos/contact" alt="Contact photo" class="float-right" />
+<@h3>Our news</@h3>
+<p>
+	To follow the latest news from Restlet, we propose you three
+	channels of communication:
+</p>
+
+<p>
+	<ul>
+		<li><a href="blog">A blog</a> open to your comments (average traffic).</li>
+	  	<li><a href="newsletter">A newsletter</a> sent by email (low traffic).</li>
+	  	<li><a href="http://www.restlet.org/community/lists">Discussion lists</a>
+	  	to exchange with other users and contributors on the open source Restlet
+	  	Framework project (high traffic).</li>
+	</ul>
+</p>
+
+<p>
+	We are also open to any suggestion on our Web site, our products and services.
+	All the constructive remarks will be taken into account.
+</p>	
+	
+<p>
+	You can also send us post ideas for our blog, for example by mentioning your 
+	projects or products using our technology.
+</p>
+
+<@h3>Our address</@h3>
+<p>
+	If you want to contact us directly, localize our offices or obtain administrative 
+	information, you can consult the <a href="/contact/location">location</a> page on
+	this site.
+</p>
+</@h2>
+
+</#global>
+<#include "/footer.ftl"/>

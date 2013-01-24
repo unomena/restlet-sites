@@ -1,0 +1,33 @@
+<#include "/header.ftl"/>
+<#global content>
+
+<@h2 "Présentation" "presentation">
+<img src="/images/photos/company" alt="Photo société" class="float-right" />
+<p>
+	Pour collaborer efficacement avec vous, il est essentiel de se présenter en
+	toute transparence et d'établir une relation de confiance. Afin de mieux 
+	connaître notre société, nous vous proposons plusieurs documents&nbsp;:
+</p>
+
+<ul>
+	<li><a href="/company/history">Un historique</a> de notre entreprise avec une 
+	introduction sur notre vision et un parcours détaillé depuis sa création en 
+	2008.</li>
+	<li>Un descriptif de <a href="/company/mission">notre mission</a> avec le détail 
+	de nos objectifs et la liste des valeurs auxquelles nous sommes attachés.</li>
+	<li>La présentation des <a href="/company/team">collaborateurs de Restlet</a> accompagnée
+	d'informations sur le recrutement.</li>
+	<li>Une liste de nos <a href="/company/partners">affiliations et partenariats</a>.
+	</li>
+</ul>
+
+<p>
+	Si vous avez des questions, vous pouvez nous 
+	<a href="/contact/location">contacter directement</a> ou encore obtenir des 
+	informations légales et commerciales à partir de nos identifiants 
+	administratifs disponibles sur la même page.  
+</p>
+</@h2>
+
+</#global>
+<#include "/footer.ftl"/>

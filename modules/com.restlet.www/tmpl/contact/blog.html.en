@@ -1,0 +1,26 @@
+<#include "/header.ftl"/>
+<#global content>
+
+<@h2 "Presentation" "presentation">
+<p>
+	Restlet SAS has its <a href="http://blog.restlet.com">blog</a>, 
+	in English, in which are published technical and commercial notes on subjects
+	that interest us and that seem relevant to our readers.
+</p>
+
+<p>
+	This blog is fed by our collaborators but doesn't have for goal to be their 
+	personal blogs. We wish to offer you a dynamic source of information
+	on our activities and the possibility to exchange via the comment system or
+	backlinks to your own blog.
+</p>
+</@h2>
+
+<@h2 "Latest posts" "latest-posts">
+
+	<a href="http://blog.restlet.com/feed"><img src="/images/icons/feed-30" alt="Syndication feed" style="margin:5px"/></a><br/>
+	${feed_noelios}
+
+</@h2>
+</#global>
+<#include "/footer.ftl"/>
