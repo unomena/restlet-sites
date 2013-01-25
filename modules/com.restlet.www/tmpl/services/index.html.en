@@ -1,7 +1,6 @@
 <#include "/header.ftl"/>
 <#global content>
 <@h2 "Presentation" "presentation">
-<img src="/images/photos/services" alt="Services photo" class="float-right" />
 <p>
 	To help you realize your Web ideas and succeed with your web APIs projects, Restlet SAS
 	proposes you a complete set of professional services:

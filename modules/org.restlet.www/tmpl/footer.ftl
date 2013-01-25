@@ -1,15 +1,15 @@
-<#assign pageTitle=title  />
+<#if !(title?has_content)>
 <#list hierarchy.sections.section as section>
       <#if section.@id == currentSection>
-         <#assign pageTitle="Restlet - ${section.label?trim}"  />
+         <#assign title="Restlet - ${section.label?trim}"  />
       </#if>
 </#list>
-
+</#if>
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
-      <title>${pageTitle}</title>
+      <title>${title}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="keywords"  content="REST, Java, framework, toolkit, HTTP, GWT, GAE, Android, JSE, JEE, Servlet, NIO" />
       <meta charset="utf-8">
@@ -21,7 +21,6 @@
       <link rel="alternate"  type="application/atom+xml" href="/feeds/summary" title="${labels.labels.summaryRestletBlog?trim}" />
       <link rel="alternate"  type="application/rss+xml"  href="http://blog.restlet.com/feed/?cat=15314" title="${labels.labels.restletBlog?trim}" />
       <link rel="meta"       type="application/rdf+xml"  href="http://www.restlet.org/about/doap"  title="DOAP" />
-      <link rel="search"     type="application/opensearchdescription+xml" href="http://search.restlet.org/opensearch.xml" title="REST Search Engine" />
 <#list stylesheet_files as stylesheet_file>
       <link rel="stylesheet" type="text/css"            href="${stylesheet_file}" />
 </#list>
@@ -60,10 +59,9 @@
             <img alt='Restlet Framework Logo' height='136' width='129' src='/images/logo-restlet.png' />
           </a>
           <ul class='nav'>
-            <li><a <#if "about"=currentSection> class='active'</#if> href="/about/">Discover</a></li>
-            <li><a <#if "downloads"=currentSection> class='active'</#if> href="/downloads/">Download</a></li>
-            <li><a <#if "documentation"=currentSection> class='active'</#if> href="/documentation/">Learn</a></li>
-            <li><a <#if "community"=currentSection> class='active'</#if> href="/community/">Participate</a></li>
+    <#list hierarchy.sections.section as section>
+      <#if !(section.@hidden?has_content)><li><a<#if section.@id == currentSection> class='active'</#if> href="/${section.@id}/">${section.title}</a></li></#if>
+	</#list>
           </ul>
         </div>
       </div>
@@ -71,7 +69,7 @@
     <div class='hero ac <#if headerClass?has_content>${headerClass}<#else>smallHeader</#if>'>
       <div class='container'>
 <#compress>
-  <#if "-"=currentSection>${header}
+  <#if header?has_content>${header}
   <#elseif "error"=currentSection><h3>${errorPageTitle!"Error page"} <#noparse>(${status.code})</#noparse></h3>
   <#else>
     <#list hierarchy.sections.section as section>
@@ -86,18 +84,20 @@
 
 <#compress>
 <#list hierarchy.sections.section as section>
-      <#if section.@id == currentSection && section.sections.section?has_content>
+   <#if (section.@hidden[0]!'false') != 'true' && (section.@id == currentSection)>
     <div class="container subsections">
       <ul class="pages">
-         <#list section.sections.section as subsection>
-        <li<#if subsection.@id == currentSubSection> class="active"</#if>><a href="${subsection.@id}.html">${subsection.label?trim}</a></li>
-         </#list>
+      <#list section.sections.section as subsection>
+         <#if (subsection.@hidden[0]!'false') != 'true'>
+        <li<#if subsection.@id == currentSubSection> class="active"</#if>><a href="<a href="/${section.@id}/${subsection.@id}">${subsection.label?trim}</a></li>
+         </#if>
+      </#list>
       </ul>
       <hr/>
       <div class="emptySeparator"></div>
     </div>
     <div class="clearBoth"></div>
-      </#if>
+   </#if>
 </#list>
 </#compress>
     
@@ -129,10 +129,10 @@
         <div class="span2b site">
           <h4><img src="/images/logo-restlet-framework-small.png" class="pull-left"/><a href="http://restlet.org">Restlet Framework</a></h4>
           <ul class="sub-list">
-            <li><a href="http://www.restlet.org/about/">Discover</a></li>
-            <li><a href="http://www.restlet.org/downloads/">Download</a></li>
-            <li><a href="http://www.restlet.org/documentation/">Learn</a></li>
-            <li><a href="http://www.restlet.org/community/">Contribute</a></li>
+            <li><a href="http://www.restlet.org/discover/">Discover</a></li>
+            <li><a href="http://www.restlet.org/download/">Download</a></li>
+            <li><a href="http://www.restlet.org/learn/">Learn</a></li>
+            <li><a href="http://www.restlet.org/participate/">Participate</a></li>
           </ul>
         </div>
         <div class="span2c site">

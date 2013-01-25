@@ -171,52 +171,24 @@
 				restletVersions: text(data/versions.json)
 				restletQualifiers: text(data/qualifiers.json)
 				restletEditions: text(data/editions.json)
-				restletContributors: xml(data/contributors.xml)
+				restletContributors: text(data/contributors.xml)
 				ant: antProperties()
-         		currentSection: -
-            	language: en
-				header: ""
          	</data>
-			<localData>
-            case(about/**, {currentSection: about})
-            case(community/**, {currentSection: community})
-            case(documentation/**, {currentSection: documentation})
-            case(downloads/**, {currentSection: downloads})
-            case(tmpl/error/**, {currentSection: error})
-         	layer()
-            case(**/*.fr*, {language: fr})
-         </localData>
 			<include name="**/*" />
 			<exclude name="**/*.ftl" />
 		</fmpp>
 		<!-- generate static files for the site : www.restlet.com -->
 		<fmpp sourceencoding="UTF-8" outputencoding="UTF-8" sourceRoot="../modules/com.restlet.www/tmpl" outputRoot="${temp}/${www-restlet-com}" modes="ignore(**/.svn,**/Thumbs.db), copy(javascript/*.js, **/*.css)" quiet="reallyQuiet">
 			<data expandProperties="yes">
-            menus:xml(../menus.xml)
+			hierarchy:xml(../hierarchy.xml)
             messages:xml(../messages.xml)
             labels:xml(../labels.xml)
-      	 	productTransferableLicenceVersion: v0.3
-      	 	productNonTransferableLicenceVersion: v0.3
-      	 	supportLicenceVersion: v0.7
-      	 	licence_transferable:slicedText(../licence-transferable-v0.3.txt.en)
-            licence_nontransferable:slicedText(../licence-nontransferable-v0.3.txt.en)
-            support:slicedText(../support-v0.7.txt.en)
-            country:xml(../countries.xml.en)
-            currentSection: -
             language: en
 			header: ""
 			</data>
 			<localData>
-            case(payment/**, {currentSection: payment})
-            case(company/**, {currentSection: company})
-            case(products/**, {currentSection: products})
-            case(services/**, {currentSection: services})
-            case(contact/**, {currentSection: contact})
-            case(tmpl/error/**, {currentSection: error})
-            case(admin/**, {currentSection: administration})
          	layer()
-            case(**/*.fr*, {language: fr, country:xml(../countries.xml.fr), licence_transferable:slicedText(../licence-transferable-v0.3.txt.fr), licence_nontransferable:slicedText(../licence-nontransferable-v0.3.txt.fr), support:slicedText(../support-v0.7.txt.fr)
-})
+            case(**/*.fr*, {language: fr})
          </localData>
 			<include name="**/*" />
 			<exclude name="**/*.ftl" />

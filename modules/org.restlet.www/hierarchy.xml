@@ -2,10 +2,11 @@
 <!-- Data file that declares the hierarchy of sections and sub sections -->
 <sections>
 	<section id="-" hidden="true">
-		<label>Restlet - RESTful web framework for Java</label>
+		<label>RESTful web framework for Java</label>
 	</section>
-	<section id="about">
+	<section id="discover">
 		<label>Discover Restlet Framework</label>
+		<title>Discover</title>
 		<sections>
 			<section id="index">
 				<label>Features</label>
@@ -21,8 +22,9 @@
 			</section>
 		</sections>
 	</section>
-	<section id="downloads">
+	<section id="download">
 		<label>Download Restlet Framework</label>
+		<title>Download</title>
 		<sections>
 			<section id="index">
 				<label>Current releases</label>
@@ -38,8 +40,9 @@
 			</section>
 		</sections>
 	</section>
-	<section id="documentation">
+	<section id="learn">
 		<label>Learn Restlet Framework</label>
+		<title>Learn</title>
 		<sections>
 			<section id="index">
 				<label>Tutorial</label>
@@ -58,8 +61,9 @@
 			</section>
 		</sections>
 	</section>
-	<section id="community">
+	<section id="participate">
 		<label>Participate</label>
+		<title>Participate</title>
 		<sections>
 			<section id="index">
 				<label>Get support</label>
@@ -79,9 +83,8 @@
 		</sections>
 	</section>
 	<section id="error" hidden="true">
-		<label>
-			Error page
-		</label>
+		<label>Error page</label>
+		<title>Error page</title>
 		<sections>
 			<section id="status-100">
 				<label>Informational status</label>

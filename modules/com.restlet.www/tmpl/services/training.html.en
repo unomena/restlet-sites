@@ -1,6 +1,4 @@
 <#include "/header.ftl"/>
-<#global stylesheet_files=["/stylesheets/ext-custom.css", "/stylesheets/xtheme-gray.css"] />
-<#global javascript_files=["/javascript/ext-custom.js", "/javascript/locale/ext-lang.js", "/javascript/forms/services/training.en.js"] />
 <#global content>
 
 <@h2 "Presentation" "presentation">
@@ -81,13 +79,5 @@
 </p>
 </@h2>
 
-<@h2 "Contact" "contact">
-<p>
-	In order to discuss together about your training project, we propose you to 
-	fill up the form below. We will come back to you quickly.
-</p>
-
-<div id="contact-form"></div>
-</@h2>
 </#global>
 <#include "/footer.ftl"/>

@@ -1,6 +1,4 @@
 <#include "/header.ftl"/>
-<#global stylesheet_files=["/stylesheets/ext-custom.css", "/stylesheets/xtheme-gray.css"] />
-<#global javascript_files=["/javascript/ext-custom.js", "/javascript/locale/ext-lang.js", "/javascript/forms/services/training.fr.js"] />
 <#global content>
 
 <@h2 "Présentation" "presentation">
@@ -79,16 +77,6 @@
 	Pour les clients qui souhaitent enchaîner les deux formations au cours de la même semaine, 
 	nous offrons une remise de 10%, soit un prix final de 2250 € par personne au lieu de 2500 €.
 </p>
-</@h2>
-
-<@h2 "Prise de contact" "contact">
-<p>
-	Afin de discuter ensemble de votre projet de formation, nous vous
-	proposons de remplir le formulaire ci-dessous. Nous reviendrons
-	vers vous très rapidement. 
-</p>
-
-<div id="contact-form"></div>
 </@h2>
 </#global>
 <#include "/footer.ftl"/>

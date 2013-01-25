@@ -2,7 +2,6 @@
 <#global content>
 
 <@h2 "Présentation" "presentation">
-<img src="/images/photos/services" alt="Photo services" class="float-right" />
 <p>
 	Afin de vous aider à réaliser vos idées Web et à réussir vos projets d'APIs web, 
 	Restlet SAS vous propose une gamme complète de services 

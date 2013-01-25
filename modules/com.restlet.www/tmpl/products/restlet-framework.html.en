@@ -1,6 +1,4 @@
 <#include "/header.ftl"/>
-<#global stylesheet_files=["/stylesheets/ext-custom.css", "/stylesheets/xtheme-gray.css"] />
-<#global javascript_files=["/javascript/ext-custom.js", "/javascript/locale/ext-lang.js", "/javascript/forms/products/restlet.en.js"] />
 <#global content>
 
 <@h2 "Presentation" "presentation">
@@ -179,73 +177,6 @@
    please <a href="/contact/location">contact us</a> and we will propose you a
    contract and a commercial offer in PDF format.
 </p>
-</@h2>
-
-<@h2 "Online process" "process">
-<p>
-	In order to speed up the processing of your purchase, we also propose you an
-	online process. Once the form below is filled up, a detailed legal agreement
-	will be presented. 
-</p>
-
-<p>
-	If you accept this agreement by clicking on the button at the bottom of the page,
-	a confirmation page will be displayed allowing you to choose the payment method. 
-	You can then decide between an online payment by PayPal (by PayPal account or by 
-	credit card), by bank wire or by check.
-</p>
-
-<p>
-	Once the payment is received, we will send you an invoice with a confirmation email
-	and you will be able to immediately distribute the JARs of the Restlet Framework
-	software with your product.
-</p>
-
-<div id="product1-form"></div>
-
-</@h2>
-
-<@h2 "Payment methods" "payment">
-<p>
-   Several payment methods are proposed below.
-</p>
-
-<ul>
-<li>PayPal:
-   <ul>
-      <li>directly from your PayPal account</li>
-      <li>with your credit card</li>
-   </ul>
-</li>
-<li>
-   Wire:
-   <ul>
-      <li>
-         without additional charge, wires in Euro from the European Union 
-         countries, Island, Liechtenstein, Norway and Switzerland.
-      </li>
-      <li>
-         for other countries and currencies like the US dollar, please add a 
-         charge of 20 Euros to your payment, or the equivalent in the selected 
-         currency.
-      </li>
-   </ul>
-</li>
-
-<li>Check:
-   <ul>
-      <li>
-         without additional charges, your payments in Euro by check from French
-         banks.
-      </li>
-      <li>
-         for all other countries and other currencies like the US dollar, 
-         please add a charge of 20 Euros to your payment, or the equivalent in 
-         the selected currency.
-      </li>
-   </ul>
-</li>
-</ul>
 </@h2>
 
 </#global>

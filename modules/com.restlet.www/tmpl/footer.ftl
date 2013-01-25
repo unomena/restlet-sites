@@ -1,40 +1,26 @@
-<#assign h1Icon="*"  />
-<#assign h1Title="*"  />
-<#assign pageTitle=title  />
-<#list menus.sections.section as section>
+<#if !(title?has_content)>
+<#list hierarchy.sections.section as section>
       <#if section.@id == currentSection>
-         <#if (section.title[0])??>
-            <#assign h1Title="${section.title['${language}']?trim}"  />
-         <#else>
-            <#assign h1Title="${section.label['${language}']?trim}"  />
-         </#if>
-         <#assign h1Icon="${section.icon}"  />
-         <#assign pageTitle="Restlet - ${section.label['${language}']?trim}"  />
+         <#assign title="Restlet - ${section.label['${language}']?trim}"  />
          <#list section.sections.section as subsection>
             <#if subsection.@id == currentSubSection>
-               <#if (subsection.title[0])??>
-                  <#assign h1Title="${subsection.title['${language}']?trim}"  />
-               <#else>
-                  <#assign h1Title="${subsection.label['${language}']?trim}"  />
-               </#if>
-               <#assign h1Icon="${subsection.icon}"  />
-               <#assign pageTitle="Restlet - ${section.label['${language}']?trim} - ${subsection.label['${language}']?trim}"  />
+               <#assign title="Restlet - ${section.label['${language}']?trim} - ${subsection.label['${language}']?trim}"  />
             </#if>
          </#list>
       </#if>
 </#list>
+</#if>
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
-      <title>${pageTitle}</title>
+      <title>${title}</title>
       <link sizes="32x32" href="/images/favicon-restlet-com.gif" rel="icon">
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       <meta name="keywords"  content="Web API, Restlet, APISpark, REST, Java, framework, toolkit, HTTP, GWT, Android, GAE, OSGi, SPDY" />
       <link rel="alternate"  type="application/atom+xml" href="/feeds/summary" title="${labels.labels.summaryNoeliosBlog['${language}']?trim}" />
       <link rel="alternate"  type="application/rss+xml" href="http://blog.restlet.com/feed" title="${labels.labels.noeliosBlog['${language}']?trim}" />
       <link rel="meta"       type="application/rdf+xml" href="http://www.restlet.org/about/doap"  title="DOAP" />
-      <link rel="search"     type="application/opensearchdescription+xml" href="http://search.restlet.org/opensearch.xml" title="REST Search Engine" />
       <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/bootstrap.css" />
       <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/styles.css" />
       <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/bootstrap-responsive.css" />
@@ -85,13 +71,9 @@
           <div class='container'>
             <a class='brand' href="/" title='Restlet Framework'><img alt='Restlet Framework Logo' height='136' src='/images/logo-restlet-sas.png' width='129' /></a>
             <ul class='nav'>
-<#list menus?children.section as section>
+<#list hierarchy?children.section as section>
    <#if (section.@hidden[0]!'false') != 'true'>
-      <#if section.@id == currentSection>
-              <li><a class="active" href="${section.link}" title="${section.label['${language}']?trim}" id="${section.@id}" onmouseover="showSubmenus('${currentSection}', this.id);" onmouseout="hideSubmenus('${currentSection}', this.id);" onclick="showSubmenus('${currentSection}',this.id);">${section.label['${language}']?trim}</a></li>
-      <#else>
-              <li><a href="${section.link}" title="${section.label['${language}']?trim}" id="${section.@id}" onmouseover="showSubmenus('${currentSection}', this.id);" onmouseout="hideSubmenus('${currentSection}', this.id);" onclick="showSubmenus('${currentSection}',this.id);">${section.label['${language}']?trim}</a></li>
-      </#if>
+              <li><a<#if section.@id == currentSection> class="active"</#if> href="/${section.@id}" title="${section.label['${language}']?trim}" id="${section.@id}">${section.label['${language}']?trim}</a></li>
    </#if>
 </#list>
             </ul>
@@ -102,10 +84,10 @@
 	  <div class="clearBoth"></div>
       <div class='hero ac header <#if !("-"=currentSection)>${currentSection} section</#if>'>
         <div class='container'>
-  <#if "-"=currentSection>${header}
+  <#if header?has_content>${header}
   <#elseif "error"=currentSection><h3>${errorPageTitle!"Error page"} <#noparse>(${status.code})</#noparse></h3>
   <#else>
-    <#list menus?children.section as section>
+    <#list hierarchy?children.section as section>
       <#if (section.@hidden[0]!'false') != 'true'>
         <#if section.@id == currentSection><h3>${section.label['${language}']?trim}</h3></#if> 
       </#if>
@@ -114,17 +96,13 @@
         </div>
       </div>
 
-<#list menus?children.section as section>
+<#list hierarchy.sections.section as section>
    <#if (section.@hidden[0]!'false') != 'true' && (section.@id == currentSection)>
       <div class="content container">
         <ul class="pages">
       <#list section.sections.section as subsection>
          <#if (subsection.@hidden[0]!'false') != 'true'>
-            <#if subsection.@id == currentSubSection>
-          <li class="active"><a href="${section.link}${subsection.link}" title="${subsection.label['${language}']?trim}">${subsection.label['${language}']?trim}</a></li>
-            <#else>
-          <li><a href="${section.link}${subsection.link}" title="${subsection.label['${language}']?trim}">${subsection.label['${language}']?trim}</a></li>
-            </#if>
+          <li<#if subsection.@id == currentSubSection> class="active"</#if>><a href="/${section.@id}/${subsection.@id}" title="${subsection.label['${language}']?trim}">${subsection.label['${language}']?trim}</a></li>
          </#if>
       </#list>
         </ul>
@@ -159,10 +137,10 @@
         <div class="span2b site">
           <h4><img src="/images/logo-restlet-framework-small.png" class="pull-left"/><a href="http://restlet.org">Restlet Framework</a></h4>
           <ul class="sub-list">
-            <li><a href="http://www.restlet.org/about/">Discover</a></li>
-            <li><a href="http://www.restlet.org/downloads/">Download</a></li>
-            <li><a href="http://www.restlet.org/documentation/">Learn</a></li>
-            <li><a href="http://www.restlet.org/community/">Contribute</a></li>
+            <li><a href="http://www.restlet.org/discover/">Discover</a></li>
+            <li><a href="http://www.restlet.org/download/">Download</a></li>
+            <li><a href="http://www.restlet.org/learn/">Learn</a></li>
+            <li><a href="http://www.restlet.org/participate/">Participate</a></li>
           </ul>
         </div>
         <div class="span2c site">

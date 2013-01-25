@@ -1,6 +1,4 @@
 <#include "/header.ftl"/>
-<#global stylesheet_files=["/stylesheets/ext-custom.css", "/stylesheets/xtheme-gray.css"] />
-<#global javascript_files=["/javascript/ext-custom.js", "/javascript/locale/ext-lang.js", "/javascript/forms/products/restlet.fr.js"] />
 <#global content>
 
 <@h2 "Présentation" "presentation">
@@ -186,74 +184,6 @@
    puissions vous soumettre une proposition de contrat et une offre commerciale au
    format PDF.
 </p>
-</@h2>
-
-<@h2 "Procédure en ligne" "process">
-<p>
-	Afin d'accélérer le traitement de votre souscription, nous vous
-	proposons également une procédure en ligne. Une fois le formulaire ci-dessous
-	rempli, un contrat légal détaillé vous sera présenté. 
-</p>
-
-<p>
-	Si vous acceptez ce contrat en cliquant sur le bouton en bas de page, une page de
-	confirmation s'affichera et vous permettra de choisir le mode de paiement. Vous 
-	pourrez alors opter pour un paiement en ligne par PayPal (par compte PayPal ou par 
-	carte bancaire), par virement bancaire ou par chèque.
-</p>
-
-<p>
-	Une fois le règlement reçu, nous vous enverrons une facture avec un courriel de 
-	confirmation et vous pourrez immédiatement redistribuer votre produit incorporant
-	les JARs du logiciel Restlet Framework.
-</p>
-
-<div id="product1-form"></div>
-
-</@h2>
-
-<@h2 "Moyens de paiement" "payment">
-<p>
-   Plusieurs moyens de paiement vous sont proposés ci-dessous.
-</p>
-
-<ul>
-<li>PayPal :
-   <ul>
-      <li>directement par compte PayPal</li>
-      <li>par carte bancaire</li>
-   </ul>
-</li>
-<li>
-   Virement bancaire :
-   <ul>
-      <li>
-         sans frais supplémentaire pour les virements en euro depuis les pays 
-         membres de l'Union Européenne, l'Islande, le Liechtenstein, la Norvège 
-         et la Suisse.
-      </li>
-      <li>
-         pour les autres pays et les autres devises comme le dollar, veuillez 
-         ajouter 20 € de frais bancaires à votre paiement, ou l'équivalent en 
-         devises.
-      </li>
-   </ul>
-</li>
-
-<li>Chèque :
-   <ul>
-      <li>
-         sans frais supplémentaire pour les paiements en euro par chèque depuis 
-         une banque française.
-      </li>
-      <li>
-         pour les autres pays et les autres devises comme le dollar, veuillez 
-         ajouter 20 € de frais bancaires à votre paiement, ou l'équivalent en 
-         devises.
-      </li>
-   </ul>
-</li>
-</ul>
 </@h2>
 
 </#global>
