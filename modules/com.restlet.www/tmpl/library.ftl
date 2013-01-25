@@ -1,7 +1,5 @@
-<#global feed_noelios          = " " />
 <#global javascript_files      = [] />
 <#global stylesheet_files      = [] />
-<#global body_event_managers   = " " />
 <#if (pp.sourceFileName?index_of(".") > -1) >
 	<#global currentSubSection = pp.sourceFileName?substring(0, pp.sourceFileName?index_of(".")) />
 <#else>

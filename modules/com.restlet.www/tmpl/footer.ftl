@@ -38,17 +38,13 @@
       ${atomRepresentation}
    </#noparse>
 </#if>
-      <script                type="text/javascript"     src="/javascript/jquery-min.js"></script>
-      <script                type="text/javascript"     src="/javascript/javascript.js"></script>
 <#list javascript_files as javascript_file>
       <script                type="text/javascript"     src="${javascript_file}"></script>
 </#list>
+      <script type="text/javascript">
 <#if javascript??>
-      <script type="text/javascript">
       ${javascript}
-      </script>
 </#if>
-      <script type="text/javascript">
 /*
          var _gaq = _gaq || [];
          _gaq.push(['_setAccount', 'UA-32616835-1']);
