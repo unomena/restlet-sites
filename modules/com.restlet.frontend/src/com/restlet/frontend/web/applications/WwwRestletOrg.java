@@ -12,6 +12,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+import org.restlet.Context;
 import org.restlet.Request;
 import org.restlet.Response;
 import org.restlet.Restlet;
@@ -50,13 +51,7 @@ import com.restlet.frontend.web.resources.framework.FeedReleasesResource;
 import com.restlet.frontend.web.resources.framework.FeedSummaryResource;
 import com.restlet.frontend.web.resources.framework.QualifiersResource;
 import com.restlet.frontend.web.resources.framework.VersionsResource;
-import com.restlet.frontend.web.resources.framework.impl.DistributionServerResource;
-import com.restlet.frontend.web.resources.framework.impl.DistributionsServerResource;
-import com.restlet.frontend.web.resources.framework.impl.EditionServerResource;
-import com.restlet.frontend.web.resources.framework.impl.EditionsServerResource;
 import com.restlet.frontend.web.resources.framework.impl.RestletOrgRefreshResource;
-import com.restlet.frontend.web.resources.framework.impl.VersionServerResource;
-import com.restlet.frontend.web.resources.framework.impl.VersionsServerResource;
 import com.restlet.frontend.web.services.RefreshStatusService;
 
 import freemarker.template.Configuration;
@@ -68,6 +63,41 @@ import freemarker.template.Configuration;
  */
 public class WwwRestletOrg extends BaseApplication implements
         RefreshApplication {
+    /**
+     * Filter that simply add cache information based on expiration date, or
+     * explicitely add nocache directive.
+     * 
+     * @author Thierry Boileau
+     */
+    private static class CacheFilter extends Filter {
+        public CacheFilter(Context context, Restlet next) {
+            super(context, next);
+        }
+
+        @Override
+        protected void afterHandle(Request request, Response response) {
+            super.afterHandle(request, response);
+            if (Status.SUCCESS_OK.equals(response.getStatus())
+                    && response.getEntity() != null) {
+                if (request.getResourceRef().toString(false, false)
+                        .contains("nocache")) {
+                    response.getEntity().setModificationDate(null);
+                    response.getEntity().setExpirationDate(null);
+                    response.getEntity().setTag(null);
+                    response.getCacheDirectives().add(CacheDirective.noCache());
+                } else {
+                    // One day.
+                    Calendar c = new GregorianCalendar();
+                    c.setTime(new Date());
+                    c.add(Calendar.DAY_OF_MONTH, 1);
+                    response.getEntity().setExpirationDate(c.getTime());
+                    response.getEntity().setModificationDate(null);
+                }
+            }
+        }
+
+    }
+
     /** The data file URI. */
     private String dataUri;
 
@@ -104,14 +134,14 @@ public class WwwRestletOrg extends BaseApplication implements
     /** List of current editions. */
     private QualifiersList qualifiers;
 
-    /** List of current versions. */
-    private VersionsList versions;
-
     /** Version stable. */
     private TemplateRoute stableDocumentationRoute;
 
     /** Version stable. */
     private TemplateRoute testingDocumentationRoute;
+
+    /** List of current versions. */
+    private VersionsList versions;
 
     /** The Web file URI. */
     private String wwwUri;
@@ -170,28 +200,7 @@ public class WwwRestletOrg extends BaseApplication implements
         directory.setNegotiatingContent(false);
         directory.setDeeplyAccessible(true);
         // Add a filter to handle cache.
-        result.attachDefault(new Filter(getContext(), directory) {
-            protected void afterHandle(Request request, Response response) {
-                super.afterHandle(request, response);
-                if (Status.SUCCESS_OK.equals(response.getStatus())
-                        && response.getEntity() != null) {
-                    if (request.getResourceRef().toString(false, false)
-                            .contains("nocache")) {
-                        response.getEntity().setModificationDate(null);
-                        response.getEntity().setExpirationDate(null);
-                        response.getEntity().setTag(null);
-                        response.getCacheDirectives().add(
-                                CacheDirective.noCache());
-                    } else {
-                        Calendar c = new GregorianCalendar();
-                        c.setTime(new Date());
-                        c.add(Calendar.DAY_OF_MONTH, 1);
-                        response.getEntity().setExpirationDate(c.getTime());
-                        response.getEntity().setModificationDate(null);
-                    }
-                }
-            }
-        });
+        result.attachDefault(new CacheFilter(getContext(), directory));
 
         // Redirections.
         stableDocumentationRoute = result.redirectTemporary(
@@ -329,33 +338,21 @@ public class WwwRestletOrg extends BaseApplication implements
         result.redirectPermanent("/documentation/snapshot/ext",
                 "/documentation/snapshot/jse/ext{rr}");
 
+        result.attach("/feeds/summary", FeedSummaryResource.class);
+        result.attach("/feeds/general", FeedGeneralResource.class);
+        result.attach("/feeds/releases", FeedReleasesResource.class);
+
         // Guarding access to sensitive services
         ChallengeAuthenticator guard = new ChallengeAuthenticator(getContext(),
                 ChallengeScheme.HTTP_BASIC, "Admin section");
         MapVerifier verifier = new MapVerifier();
         verifier.getLocalSecrets().put(this.login, this.password.toCharArray());
         guard.setVerifier(verifier);
-
-        Router router = new Router(getContext());
-        router.attach("/refresh", RestletOrgRefreshResource.class);
-        guard.setNext(router);
+        Router adminRouter = new Router(getContext());
+        adminRouter.attach("/refresh", RestletOrgRefreshResource.class);
+        guard.setNext(adminRouter);
         result.attach("/admin", guard);
 
-        result.attach("/feeds/summary", FeedSummaryResource.class);
-        result.attach("/feeds/general", FeedGeneralResource.class);
-        result.attach("/feeds/releases", FeedReleasesResource.class);
-
-        result.attach("/versions", VersionsServerResource.class);
-        result.attach("/versions/{version}", VersionServerResource.class);
-        result.attach("/versions/{version}/editions",
-                EditionsServerResource.class);
-        result.attach("/versions/{version}/editions/{edition}",
-                EditionServerResource.class);
-        result.attach("/versions/{version}/editions/{edition}/distributions",
-                DistributionsServerResource.class);
-        result.attach(
-                "/versions/{version}/editions/{edition}/distributions/{distribution}",
-                DistributionServerResource.class);
         return result;
     }
 

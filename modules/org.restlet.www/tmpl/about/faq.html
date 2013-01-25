@@ -1,26 +1,24 @@
 <#include "/header.ftl"/>
 <#global content>
+      <div class="span3 left section">
+        <ul id="featuresList" class="features">
+		  <li><a href="#01">1. Why do I need a framework for REST?</a></li>
+		  <li><a href="#02">2. What are the underlying concepts?</a></li>
+		  <li><a href="#03">3. What are the advantages of using Restlets instead of Servlets?</a></li>
+		  <li><a href="#04">4. I have general questions about REST, where can I get help?</a></li>
+		  <li><a href="#05">5. How do you compare to Ruby on Rails?</a></li>
+		  <li><a href="#06">6. How do you compare to Django?</a></li>
+		  <li><a href="#07">7. What is the link between Restlet and JAX-RS (JSR-311)?</a></li>
+		  <li><a href="#08">8. Is there an ECCN(Export Control Classification Number) for Restlet ?</a></li>
+        </ul>
+      </div>
+
    <p>
       Note that there is <a href="/documentation/1.0/faq">another FAQ</a> covering
       more specific questions about the current version of the framework.
    </p>
 
-   <h2><a name="toc">Table of contents</a></h2>
-
-   <ol>
-      <li><a href="#01">Why do I need a framework for REST?</a></li>
-      <li><a href="#02">What are the underlying concepts?</a></li>
-      <li><a href="#03">What are the advantages of using Restlets
-      instead of Servlets?</a></li>
-      <li><a href="#04">I have general questions about REST, where
-      can I get help?</a></li>
-      <li><a href="#05">How do you compare to Ruby on Rails?</a></li>
-      <li><a href="#06">How do you compare to Django?</a></li>
-      <li><a href="#07">What is the link between Restlet and JAX-RS (JSR-311)?</a></li>
-      <li><a href="#08">Is there an ECCN(Export Control Classification Number) for Restlet ?</a></li>
-   </ol>
-
-   <h2><a name="01">1. Why do I need a framework for REST?</a></h2>
+   <h4><a name="01"></a>1. Why do I need a framework for REST?</h4>
 
    <p>
       The goal of a framework is to provide a reusable and extendable
@@ -44,13 +42,13 @@
       abstraction provided by Restlet: the same API is usable for multiple 
       protocols (HTTP server, HTTP client, SMTP client, JDBC
       client, file system...). For example, you don't need to know the HTTP
-      headers to do content negotiation (see <a href="http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/330-restlet/130-restlet.html">
+      headers to do content negotiation (see <a href="http://wiki.restlet.org/docs_2.0/13-restlet/130-restlet.html">
       mapping table</a>). Also, you don't need to use and learn
       multiple APIs (Servlet, HttpUrlConnection and JavaMail for example) to
       implement standard Web applications.
    </p>
 
-   <h2><a name="02">2. What are the underlying concepts?</a></h2>
+   <h4><a name="02"></a>2. What are the underlying concepts?</h4>
 
    <p>
       As the name of the project implies, the Restlet class is an essential concept
@@ -88,7 +86,7 @@
       negotiation algorithm is used.
    </p>
 
-   <h2><a name="03">3. What are the advantages of using Restlets instead of Servlets?</a></h2>
+   <h4><a name="03"></a>3. What are the advantages of using Restlets instead of Servlets?</h4>
 
    <p>
       There are many advantages, but the main one is that Restlet
@@ -152,7 +150,7 @@
       let you use the Restlet API as a third-party Servlet library.
    </p>
 
-   <h2><a name="04">4. I have general questions about REST, where can I get help?</a></h2>
+   <h4><a name="04"></a>4. I have general questions about REST, where can I get help?</h4>
 
    <p>
       There are many resources related to REST that are available on the Web.
@@ -188,7 +186,7 @@
       specification, an extension of HTTP</a></li>
    </ul>
 
-   <h2><a name="05">5. How do you compare to Ruby on Rails?</a></h2>
+   <h4><a name="05"></a>5. How do you compare to Ruby on Rails?</h4>
 
    <p>
       It is always hard to make fair comparisons, especially when you are from one
@@ -206,7 +204,7 @@
       your resources.
    </p>
 
-   <h2><a name="06">6. How do you compare to Django?</a></h2>
+   <h4><a name="06"></a>6. How do you compare to Django?</h4>
 
    <p>
       Again, it is always hard to make fair comparisons, especially when you are from one
@@ -233,7 +231,7 @@
       your resources.
    </p>
 
-   <h2><a name="07">7. What is the link between Restlet and JAX-RS (JSR-311)?</a></h2>
+   <h4><a name="07"></a>7. What is the link between Restlet and JAX-RS (JSR-311)?</h4>
 
    <p>
       Restlet is an open source project that provides a complete RESTful framework. When it
@@ -266,7 +264,7 @@
       this page</a>. 
    </p>
    
-   <h2><a name="08">Is there an ECCN(Export Control Classification Number) for Restlet ?</a></h2>
+   <h4><a name="08"></a>8. Is there an ECCN(Export Control Classification Number) for Restlet ?</h4>
 
    <p>
       No official ECCN number is available for the Restlet Framework though it does include 
@@ -276,7 +274,7 @@
       to encrypt communications in HTTPS, SMTPS and so on. For further details, please 
       <a href="mailto:legal@restlet.com">contact us</a>.
    </p>
-      
+
    <div class="notes">
       <h3>Notes</h3>
 
@@ -284,5 +282,6 @@
          <li>Thanks to Dave Pawson for drafting the first version of this FAQ.</li>
       </ul>
    </div>
+   
 </#global>
 <#include "/footer.ftl"/>

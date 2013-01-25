@@ -171,6 +171,7 @@
 				restletVersions: text(data/versions.json)
 				restletQualifiers: text(data/qualifiers.json)
 				restletEditions: text(data/editions.json)
+				restletContributors: xml(data/contributors.xml)
 				ant: antProperties()
          		currentSection: -
             	language: en

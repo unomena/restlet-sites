@@ -17,56 +17,7 @@
 				<label>First steps</label>
 			</section>
 			<section id="faq">
-				<label>General FAQ</label>
-			</section>
-			<section id="history">
-				<label>History</label>
-			</section>
-			<section id="legal">
-				<label>Legal terms</label>
-			</section>
-		</sections>
-	</section>
-	<section id="community">
-		<label>Contribute</label>
-		<sections>
-			<section id="index">
-				<label>Discussion forums</label>
-			</section>
-			<section id="team">
-				<label>Team</label>
-			</section>
-			<section id="professional">
-				<label>Professional services</label>
-			</section>
-			<section id="issues">
-				<label>Report issues</label>
-			</section>
-			<section id="fund">
-				<label>Fund the project</label>
-			</section>
-			<section id="contribute">
-				<label>Contribute code</label>
-			</section>
-		</sections>
-	</section>
-	<section id="documentation">
-		<label>Learn Restlet Framework</label>
-		<sections>
-			<section id="index">
-				<label>Stable</label>
-			</section>
-			<section id="testing">
-				<label>Testing</label>
-			</section>
-			<section id="unstable">
-				<label>Snapshot</label>
-			</section>
-			<section id="roadmap">
-				<label>Roadmap</label>
-			</section>
-			<section id="books">
-				<label>Recommended books</label>
+				<label>FAQ</label>
 			</section>
 		</sections>
 	</section>
@@ -77,7 +28,50 @@
 				<label>Current releases</label>
 			</section>
 			<section id="archives">
-				<label>All releases</label>
+				<label>Past releases</label>
+			</section>
+			<section id="legal">
+				<label>Legal terms</label>
+			</section>
+			<section id="faq">
+				<label>FAQ</label>
+			</section>
+		</sections>
+	</section>
+	<section id="documentation">
+		<label>Learn Restlet Framework</label>
+		<sections>
+			<section id="index">
+				<label>Tutorial</label>
+			</section>
+			<section id="javadocs">
+				<label>Javadocs</label>
+			</section>
+			<section id="books">
+				<label>Books</label>
+			</section>
+			<section id="roadmap">
+				<label>Roadmap</label>
+			</section>
+			<section id="faq">
+				<label>FAQ</label>
+			</section>
+		</sections>
+	</section>
+	<section id="community">
+		<label>Participate</label>
+		<sections>
+			<section id="index">
+				<label>Get support</label>
+			</section>
+			<section id="team">
+				<label>Team</label>
+			</section>
+			<section id="contribute">
+				<label>Contribute</label>
+			</section>
+			<section id="governance">
+				<label>Governance</label>
 			</section>
 			<section id="faq">
 				<label>FAQ</label>
