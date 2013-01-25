@@ -1,7 +1,7 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Présentation" "presentation">
+<@h3 "Présentation" "presentation">
 <p>
    	Restlet SAS est à votre service pour des missions de conseil dans ses
    	domaines de compétence. Nous disposons d'une expertise reconnue sur REST et notre
@@ -9,9 +9,9 @@
    	de l'architecture logicielle, de la modélisation, des technologies du Web et dans 
    	la plate-forme Java en général.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Types de missions" "mission-types">
+<@h3 "Types de missions" "mission-types">
 <p>
    	Voici une liste des principaux types de mission que nous vous proposons. Cette liste
    	n'est pas exhaustive et une mission peut combiner plusieurs aspects&nbsp;:
@@ -51,9 +51,9 @@
     distance ou dans notre zone géographique proche (la région parisienne). Pour des 
     missions de courte durée (moins de 3 mois), nous nous déplaçons en Europe et au-delà.
 </p>
-</@h2>
+</@h3>
     
-<@h2 "Compétences" "competencies">
+<@h3 "Compétences" "competencies">
 <p>
 	Restlet SAS dispose d'une large expérience dans l'ingénierie et l'architecture 
 	logicielle, acquise dans des secteurs d'activité variés comme l'édition logicielle, 
@@ -71,18 +71,18 @@
     <li>Langages</li>
     <li>Qualité</li>
 </ul>
-</@h2>
+</@h3>
 
-<@h2 "Prise de contact" "contact">
+<@h3 "Prise de contact" "contact">
 <p>
 	Afin de discuter ensemble de votre projet, nous vous proposons de remplir le 
 	formulaire ci-dessous. Nous reviendrons vers vous très rapidement. 
 </p>
 
-</@h2>
+</@h3>
 
 
-<@h2 "Développement" "developpement">
+<@h3 "Développement" "developpement">
 <p>
 	Forts de notre maîtrise complète des technologies Restlet et JAX-RS développées
 	dans le cadre de notre produit <a href="/products/restlet">Restlet Framework</a>, 
@@ -101,9 +101,9 @@
 	<li>Expertise pour la résolution de problèmes complexes</li>
 	<li>Revue et optimisation de code</li>
 </ul>
-</@h2>
+</@h3>
 
-<@h2 "Co-développement" "co-development">
+<@h3 "Co-développement" "co-development">
 <p>
 	Dans le cadre de certains projets, il peut être intéressant de contribuer en retour
 	des fonctionnalités au projet libre Restlet. Voici une liste des principaux avantages&nbsp;:
@@ -117,13 +117,13 @@
 </ul>
 
 <p>
-	Vous trouverez sur <@a href="http://restlet.tigris.org/issues/buglist.cgi?Submit+query=Submit+query&issue_type=ENHANCEMENT&issue_type=FEATURE&issue_type=TASK&issue_status=NEW&issue_status=STARTED&issue_status=REOPENED&email1=&emailtype1=exact&emailassigned_to1=1&email2=&emailtype2=exact&emailreporter2=1&issueidtype=include&issue_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&short_desc=&short_desc_type=substring&long_desc=&long_desc_type=substring&issue_file_loc=&issue_file_loc_type=substring&status_whiteboard=&status_whiteboard_type=substring&field0-0-0=noop&type0-0-0=noop&value0-0-0=&cmdtype=doit&newqueryname=&order=Reuse+same+sort+as+last+time">
-	cette page</@a>, une liste de toutes les demandes d'amélioration recensées dans
+	Vous trouverez sur <a href="http://restlet.tigris.org/issues/buglist.cgi?Submit+query=Submit+query&issue_type=ENHANCEMENT&issue_type=FEATURE&issue_type=TASK&issue_status=NEW&issue_status=STARTED&issue_status=REOPENED&email1=&emailtype1=exact&emailassigned_to1=1&email2=&emailtype2=exact&emailreporter2=1&issueidtype=include&issue_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&short_desc=&short_desc_type=substring&long_desc=&long_desc_type=substring&issue_file_loc=&issue_file_loc_type=substring&status_whiteboard=&status_whiteboard_type=substring&field0-0-0=noop&type0-0-0=noop&value0-0-0=&cmdtype=doit&newqueryname=&order=Reuse+same+sort+as+last+time">
+	cette page</a>, une liste de toutes les demandes d'amélioration recensées dans
 	le cadre du projet Restlet. Si vous souhaitez faire avancer l'une d'entre elles
 	en priorité ou en suggérer de nouvelles, n'hésitez pas à prendre contact
 	avec nous pour discuter d'une possibilité de co-développement.
 </p>
 	
-</@h2>
+</@h3>
 </#global>
 <#include "/footer.ftl"/>

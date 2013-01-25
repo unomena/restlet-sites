@@ -1,7 +1,7 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Présentation" "presentation">
+<@h3 "Présentation" "presentation">
 <p>
 	Restlet Framework est le framework REST leader en Java. Premier logiciel, 
 	tous langages confondus, à avoir proposé un cadre de développement conçu à partir 
@@ -19,9 +19,9 @@
 	la documentation technique et télécharger la dernière version du logiciel sur le
 	<a href="http://www.restlet.org">site communautaire</a>.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Détails techniques" "technical-details">
+<@h3 "Détails techniques" "technical-details">
 <p>
 	Le framework est composé d'une API Restlet orientée-classe capable de gérer à la fois
 	les aspects client et serveur de vos applications, pour plusieurs protocoles dont HTTP, 
@@ -50,9 +50,9 @@
     IBM WebSphere ou Sun GlassFish, les micro-noyaux OSGi Eclipse Equinox ou 
     Apache Felix et enfin de façon entièrement autonome à l'aide des seuls JARs Restlet.
 </p> 
-</@h2>
+</@h3>
 
-<@h2 "Avantages" "benefits">
+<@h3 "Avantages" "benefits">
 <p>
 	Si vous vous demandez pourquoi utiliser Restlet plutôt qu'une autre solution telle que
 	les Servlets pour vos applications Web, voici en résumé les principaux avantages 
@@ -95,9 +95,9 @@
 	Une <a href="factsheet">fiche produit</a> synthétique de la version 2.0 est également
 	disponible.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Licences" "licences">
+<@h3 "Licences" "licences">
 <p>
 	Pour les utilisateurs qui ne peuvent pas bénéficier de l'une des licences libres que
 	nous utilisons pour distribuer Restlet Framework (LGPL 3.0, LGPL 2.1, CDDL 1.0
@@ -175,16 +175,16 @@
 	contraintes d'utilisation mais également soutenir la recherche et le développement 
 	du projet libre Restlet&nbsp;!
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Procédure classique" "classic">
+<@h3 "Procédure classique" "classic">
 <p>
    Si vous le souhaitez, nous pouvons traiter votre demande personnellement.
    Pour cela, veuillez <a href="/contact/location">nous contacter</a> afin que nous
    puissions vous soumettre une proposition de contrat et une offre commerciale au
    format PDF.
 </p>
-</@h2>
+</@h3>
 
 </#global>
 <#include "/footer.ftl"/>

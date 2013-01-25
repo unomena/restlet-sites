@@ -3,7 +3,7 @@
 <#global javascript_files=["/javascript/ext-custom.js", "/javascript/locale/ext-lang.js", "/javascript/forms/contact/newsletter.fr.js"] />
 <#global content>
 
-<@h2 "Présentation" "presentation">
+<@h3 "Présentation" "presentation">
 <p>
 	Si vous souhaitez rester en contact avec Restlet SAS
 	sans avoir à suivre notre blog ou si vous cherchez une information
@@ -24,22 +24,22 @@
 	Vous disposez également d'un <a href="/legal">droit d'accès et de modification</a>
 	de vos données personnelles.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Abonnement" "subscribe">
+<@h3 "Abonnement" "subscribe">
 <div id="suscribe-form"></div>
 <p>
 	Vous pouvez également nous envoyer un courriel à l'adresse <a href="mailto:newsletter@restlet.com?Subject=Abonnement">newsletter@restlet.com</a>
 	avec comme sujet "Abonnement".
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Désabonnement" "unsubscribe">
+<@h3 "Désabonnement" "unsubscribe">
 
 <p>
 	Il vous suffit de nous envoyer un courriel à l'adresse <a href="mailto:newsletter@restlet.com?Subject=Desabonnement">newsletter@restlet.com</a>
 	avec comme sujet "Désabonnement".
 </p>
-</@h2>
+</@h3>
 </#global>
 <#include "/footer.ftl"/>

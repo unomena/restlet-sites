@@ -1,15 +1,15 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Introduction" "introduction">
+<@h3 "Introduction" "introduction">
 <p>
    Nous sommes une jeune entreprise innovante composée d'une équipe
    dynamique et ambitieuse. Sa direction est assurée par Jérôme Louvel et 
    Thierry Boileau, les deux fondateurs de Restlet S.A.S..
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Jérôme Louvel" "jerome-louvel">
+<@h3 "Jérôme Louvel" "jerome-louvel">
 <img src="/images/photos/jerome-louvel-100" alt="Photo Jérôme Louvel" class="float-right" />
 <p>
    Jérôme est ingénieur en informatique et gestion, diplômé de
@@ -27,9 +27,9 @@
    publié par O'Reilly et co-auteur du livre <a href="http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217">Restlet in Action</a>
    publié par Manning.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Thierry Boileau" "thierry-boileau">
+<@h3 "Thierry Boileau" "thierry-boileau">
 <img src="/images/photos/thierry-boileau-100" alt="Photo Thierry Boileau" class="float-right" />
 <p>
    Thierry est également ingénieur en informatique et gestion, diplômé de
@@ -47,9 +47,9 @@
    <a href="http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217">Restlet in Action</a>
    publié par Manning
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Thierry Templier" "thierry-templier">
+<@h3 "Thierry Templier" "thierry-templier">
 <img src="/images/photos/thierry-templier-100" alt="Photo Thierry Templier" class="float-right" />
 <p>
    Thierry est ingénieur en informatique, télécom et réseaux, diplômé de
@@ -66,9 +66,9 @@
    <a href="http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217">Restlet in Action</a>
    publié par Manning. 
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Candidature" "hiring">
+<@h3 "Candidature" "hiring">
 <p>
     Notre développement va nous amener à élargir notre équipe en 2012. Si vous 
     adhérez à <a href="/company/mission">notre mission</a> et si souhaitez 
@@ -77,7 +77,7 @@
     <a href="mailto:ressources-humaines@restlet.com?subject=Candidature">
     votre candidature</a>.
 </p>
-</@h2>
+</@h3>
 
 </#global>
 <#include "/footer.ftl"/>

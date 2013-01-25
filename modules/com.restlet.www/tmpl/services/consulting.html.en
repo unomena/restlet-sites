@@ -1,16 +1,16 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Presentation" "presentation">
+<@h3 "Presentation" "presentation">
 <p>
    	Restlet SAS is at your service for consulting missions in its domains of
    	competence. We have a recognized experience on REST and our Restlet technology, but
    	we also have a strong experience in the following domains: software architecture, 
    	modeling, Web technologies and in the Java platform in general.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Mission types" "mission-types">
+<@h3 "Mission types" "mission-types">
 <p>
 	Here is a list of the main types of mission that we can offer. This list isn't
 	exhaustive and a mission can combine several aspects:
@@ -49,9 +49,9 @@
 	area (Paris area) for long missions. For short missions (less than 3 months), we can
 	travel in Europe and beyond.
 </p>
-</@h2>
+</@h3>
     
-<@h2 "Competencies" "competencies">
+<@h3 "Competencies" "competencies">
 <p>
 	Restlet SAS has a large experience in software engineering and architecture,
 	obtained in various industries like software edition, RFID or telecoms. Here is a more
@@ -69,17 +69,17 @@
     <li>Languages</li>
     <li>Quality</li>
 </ul>
-</@h2>
+</@h3>
 
-<@h2 "Contact" "contact">
+<@h3 "Contact" "contact">
 <p>
 	In order to discuss together about your project, we propose you to fill up the
 	form below. We will come back to you quickly.
 </p>
 
-</@h2>
+</@h3>
 
-<@h2 "Development" "development">
+<@h3 "Development" "development">
 <p>
 	With our strong experience with Restlet and JAX-RS technologies developed in the
 	context of our <a href="/products/restlet">Restlet Framework</a> product,
@@ -98,9 +98,9 @@
   <li>Expertise for the resolution of complex problems</li>
   <li>Review and optimization of code</li>
 </ul>
-</@h2>
+</@h3>
 
-<@h2 "Co-development" "co-development">
+<@h3 "Co-development" "co-development">
 <p>
 	For certain projects, it can be interesting to contribute some features back to the 
 	Restlet open source project. Here is a list of the main benefits:
@@ -114,12 +114,12 @@
 </ul>
 
 <p>
-	You will find on <@a href="http://restlet.tigris.org/issues/buglist.cgi?Submit+query=Submit+query&issue_type=ENHANCEMENT&issue_type=FEATURE&issue_type=TASK&issue_status=NEW&issue_status=STARTED&issue_status=REOPENED&email1=&emailtype1=exact&emailassigned_to1=1&email2=&emailtype2=exact&emailreporter2=1&issueidtype=include&issue_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&short_desc=&short_desc_type=substring&long_desc=&long_desc_type=substring&issue_file_loc=&issue_file_loc_type=substring&status_whiteboard=&status_whiteboard_type=substring&field0-0-0=noop&type0-0-0=noop&value0-0-0=&cmdtype=doit&newqueryname=&order=Reuse+same+sort+as+last+time">
-	this page</@a>, a list of all the enhancement requests collected in the context of the
+	You will find on <a href="http://restlet.tigris.org/issues/buglist.cgi?Submit+query=Submit+query&issue_type=ENHANCEMENT&issue_type=FEATURE&issue_type=TASK&issue_status=NEW&issue_status=STARTED&issue_status=REOPENED&email1=&emailtype1=exact&emailassigned_to1=1&email2=&emailtype2=exact&emailreporter2=1&issueidtype=include&issue_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&short_desc=&short_desc_type=substring&long_desc=&long_desc_type=substring&issue_file_loc=&issue_file_loc_type=substring&status_whiteboard=&status_whiteboard_type=substring&field0-0-0=noop&type0-0-0=noop&value0-0-0=&cmdtype=doit&newqueryname=&order=Reuse+same+sort+as+last+time">
+	this page</a>, a list of all the enhancement requests collected in the context of the
 	Restlet project. If you want to see one of them progress in priority or to suggest new
 	ones, do not hesitate to contact us to discuss a potential co-development project. 
 </p>
 	
-</@h2>
+</@h3>
 </#global>
 <#include "/footer.ftl"/>

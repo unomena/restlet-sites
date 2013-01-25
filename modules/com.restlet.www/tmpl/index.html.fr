@@ -40,14 +40,14 @@
 <#global content>
     <div class='content container first'>
       <div class='span5'>
-        <@h3>Who are we?</@h3>
+        <h3>Who are we?</h3>
         <p>Restlet SAS is a middleware vendor specialist of web APIs, both on design aspects thanks to our ROA/D
         methodology and on development aspects thanks to our software. Our main products are the open source <a href="">Restlet
         Framework</a> project, leader for RESTful web APIs development in Java as well as the online <a href="">APISpark</a> platform
         simplifying the creation and hosting of web APIs.</p>
       </div>
       <div class='span5'>
-        <@h3>What do we do?</@h3>
+        <h3>What do we do?</h3>
         <p>Our main activities are professional services for web APIs and our software, sale of commercial licenses
         and technical support plans for Restlet Framework. We also offer monthly subscription plans to our APISpark
         platform based on the effective usage.</p> 
@@ -55,7 +55,7 @@
     </div>
     <div class='content container'>
       <div class='span5'>
-        <@h3>What is a Web API?</@h3>
+        <h3>What is a Web API?</h3>
         <p>A web Application Programming Interface (API) allows you to expose your business data and services to
         several clients in parallel in an interoperable and secure way. An API can be public or private, read-only
         or writable.</p>

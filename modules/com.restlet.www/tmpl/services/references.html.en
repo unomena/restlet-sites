@@ -1,7 +1,7 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Presentation" "presentation">
+<@h3 "Presentation" "presentation">
 <p>
    Here is the list of our latest customer references for our services.
 </p>
@@ -85,6 +85,6 @@
   </tbody>
 </table>
 
-</@h2>
+</@h3>
 </#global>
 <#include "/footer.ftl"/>

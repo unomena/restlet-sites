@@ -1,8 +1,8 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Informations légales" "legal-info">
-<@h3>Sites couverts</@h3>
+<@h3 "Informations légales" "legal-info">
+<h3>Sites couverts</h3>
 <p>
 	www.restlet.com<br/>
 	blog.restlet.com<br/>
@@ -20,7 +20,7 @@
 	apispark.com<br/>
 </p>
 
-<@h3>Editeur</@h3>
+<h3>Editeur</h3>
 <p>
 	<b>Restlet</b><br/>
 	S.A.S. au capital de 26 470 €<br/>
@@ -32,7 +32,7 @@
 	Siège social&nbsp;: ESSEC Ventures - CNIT - BP 230 | 2 place de la Défense | 92053 Paris La Défense | France
 </p>
 
-<@h3>Hébergeur</@h3>
+<h3>Hébergeur</h3>
 <p>
 	<b>OVH</b><br/>
 	SAS au capital de 500 000 €<br/>
@@ -43,9 +43,9 @@
 	TVA&nbsp;: FR 22 424 761 419 00011<br/>
 	Siège social&nbsp;: 140 quai du Sartel | 59100 Roubaix | France
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Propriété intellectuelle" "intellectual-property">
+<@h3 "Propriété intellectuelle" "intellectual-property">
 <p>
 	L'ensemble de ces sites relèvent des législations française et internationale
 	sur le droit d'auteur et la propriété intellectuelle. Tous les droits de 
@@ -70,9 +70,9 @@
 	sous une licence particulière, Restlet S.A.S. se réserve l'ensemble 
 	des droits associés à sa propriété intellectuelle.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Informatique et libertés" "information-freedom">
+<@h3 "Informatique et libertés" "information-freedom">
 <p>
 	Restlet S.A.S. s'engage à respecter strictement les dispositions de la loi n° 78-17 
 	du 6 janvier 1978 dite "Informatique et Libertés". Conformément à ladite loi, 
@@ -97,7 +97,7 @@
 	en s'adressant au service clientèle au 01.46.97.25.61. Toute personne peut, 
 	pour des motifs légitimes, s'opposer au traitement des données la concernant. 
 </p>	
-</@h2>
+</@h3>
 
 </#global>
 <#include "/footer.ftl"/>

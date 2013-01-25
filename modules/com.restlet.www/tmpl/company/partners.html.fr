@@ -1,7 +1,7 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Introduction" "introduction">
+<@h3 "Introduction" "introduction">
 <p>
 	Restlet S.A.S. est un acteur actif de l'édition logicielle et de la 
     révolution du logiciel libre. Nous participons et soutenons différentes 
@@ -13,9 +13,9 @@
 	commerciaux avec des organisations adhérant à <a href="/company/mission">notre 
 	mission</a>. N'hésitez pas à <a href="/contact/location">prendre contact</a>.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "AFDEL" "afdel">
+<@h3 "AFDEL" "afdel">
 <p>
 	En tant qu'éditeur de logiciel open source, Restlet est membre de
 	l'Association Française Des Editeurs de Logiciels (AFDEL).
@@ -30,9 +30,9 @@
     sociétés Internet ou Web 2.0) est le porte-parole et l'interlocuteur de référence de l'édition 
     logicielle en France.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Agoranov" "agoranov">
+<@h3 "Agoranov" "agoranov">
 <p>
 	Agoranov est un incubateur public situé à Paris, disposant d'un savoir-faire 
     reconnu dans l'accompagnement de jeunes entreprises innovantes notamment spécialisées
@@ -48,9 +48,9 @@
     grâce à un coaching actif, des formations, l'accès à un solide réseau d'experts, des rencontres
     avec d'autres entrepreneurs et une aide à la recherche de financements.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Cap Digital" "capdigital">
+<@h3 "Cap Digital" "capdigital">
 <p>
 	Nous sommes membre du Pôle de Compétitivité Cap Digital, spécialisé dans les contenus
     numériques sur la région Ile de France. 
@@ -65,9 +65,9 @@
     dans le cadre des projets de R&D <a href="http://www.capdigital.com/sebastian/">Sebastian</a> et 
     <a href="http://www.hd3d.fr/">HD3D</a>.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "OSSGTP" "ossgtp">
+<@h3 "OSSGTP" "ossgtp">
 <p>
 	Les fondateurs de Restlet S.A.S. sont membres de l'OSSGTP (Open 
 	Source Get Together Paris), un rassemblement de professionnels tous passionnés et 
@@ -82,9 +82,9 @@
 	Les discussions et présentations sont ouvertes à l'ensemble des technologies libres avec
     un intérêt marqué pour le monde Java.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Scientipôle Initiative" "scientipole">
+<@h3 "Scientipôle Initiative" "scientipole">
 <p>
 	Scientipôle Initiative est une structure de soutien aux entreprises innovantes en 
     Ile-de-France, disposant d'un programme d'accompagnement et de financement significatif.
@@ -98,6 +98,6 @@
 	Restlet est accompagné par Scientipôle depuis 2011, nous aidant à développer notre projet
     grâce à des formations en groupe, des journées de conseil et un financement d'amorçage.
 </p>
-</@h2>
+</@h3>
 </#global>
 <#include "/footer.ftl"/>

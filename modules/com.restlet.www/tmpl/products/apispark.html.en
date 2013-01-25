@@ -1,18 +1,18 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Presentation" "presentation">
+<@h3 "Presentation" "presentation">
 <p>
 </p>
 
 <p>
         <a href="http://beta.apispark.com"><img src="http://beta.apispark.com/static/images/site/0928_apispark_logo.png" alt="Logo Apispark" /></a>
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Technical details" "technical-details">
+<@h3 "Technical details" "technical-details">
 <p>
 </p>
-</@h2>
+</@h3>
 </#global>
 <#include "/footer.ftl"/>

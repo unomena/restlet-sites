@@ -1,15 +1,15 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Presentation" "presentation">
+<@h3 "Presentation" "presentation">
 <p>
 	In order to help you succeed with your Web projects, we propose you to share our
 	expertise via trainings on REST and the Restlet technology. Our trainers are experienced 
     and have hands-on experience with the subject that they teach.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Training 1: \"Understand and apply REST to web APIs\"" "rest">
+<@h3 "Training 1: \"Understand and apply REST to web APIs\"" "rest">
 <p>
 	This training of two days will allow you to understand the fundamentals of REST, the
 	architecture style of the Web, and to progressively and concretely apply them on a
@@ -40,9 +40,9 @@
    For additional information on this training, do not hesitate to 
    <a href="mailto:formation@restlet.com?subject=Training 'Understand and apply REST'">contact us</a>.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Training 2: \"Discover and learn Restlet\"" "restlet">
+<@h3 "Training 2: \"Discover and learn Restlet\"" "restlet">
 <p>
 	This three days training is the perfect complement to the "Understand and apply REST"
 	training also proposed by Restlet SAS, but can be followed independently by persons 
@@ -70,14 +70,14 @@
    For additional information on this training, do not hesitate to 
    <a href="mailto:formation@restlet.com?subject=Training 'Discover and learn Restlet'">contact us</a>.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Training pack: REST + Restlet" "pack">
+<@h3 "Training pack: REST + Restlet" "pack">
 <p>
 	For customers who wish to chain both trainings during the same week, we offer a 10%
 	discount, for a final price of 2250 € per person instead of 2500 €.
 </p>
-</@h2>
+</@h3>
 
 </#global>
 <#include "/footer.ftl"/>

@@ -1,8 +1,8 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Legal information" "legal-info">
-<@h3>Covered sites</@h3>
+<@h3 "Legal information" "legal-info">
+<h3>Covered sites</h3>
 <p>
 	www.restlet.com<br/>
 	blog.restlet.com<br/>
@@ -20,7 +20,7 @@
 	apispark.com<br/>
 </p>
 
-<@h3>Publisher</@h3>
+<h3>Publisher</h3>
 <p>
 	<b>Restlet</b><br/>
 	SAS with a share capital of 26 470 €<br/>
@@ -32,7 +32,7 @@
 	Headquarters: ESSEC Ventures - CNIT - BP 230 | 2 place de la Défense | 92053 Paris La Défense | France
 </p>
 
-<@h3>Hosting company</@h3>
+<h3>Hosting company</h3>
 <p>
 	<b>OVH</b><br/>
 	SAS with a share capital of 500 000 €<br/>
@@ -43,9 +43,9 @@
 	VAT: FR 22 424 761 419 00011<br/>
 	Headquarters&nbsp;: 140 quai du Sartel | 59100 Roubaix | France
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Intellectual property" "intellectual-property">
+<@h3 "Intellectual property" "intellectual-property">
 <p>
 	All of the sites are governed by the French and international laws on 
 	copyright and intellectual property. All the reproduction and adaptation
@@ -69,9 +69,9 @@
 	under a special license, Restlet SAS reserves all the rights associated
 	with its intellectual property.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Information and freedom" "information-freedom">
+<@h3 "Information and freedom" "information-freedom">
 <p>
 	Restlet SAS will strictly respect the articles of French law n° 78-17 
 	of the 6th of January 1978 named "Informatique et Libertés". In accordance with
@@ -94,7 +94,7 @@
 	get them corrected or deleted, by contacting the customers service at +33.146.972.561. 
 	Anyone can, for legitimate motivations, oppose to the processing of his personal data. 
 </p>	
-</@h2>
+</@h3>
 
 </#global>
 <#include "/footer.ftl"/>

@@ -1,6 +1,6 @@
 <#include "/header.ftl"/>
 <#global content>
-<@h2 "Presentation" "presentation">
+<@h3 "Presentation" "presentation">
 <p>
 	To help you realize your Web ideas and succeed with your web APIs projects, Restlet SAS
 	proposes you a complete set of professional services:
@@ -26,7 +26,7 @@
 	You can finally consult the list of our latest <a href="/services/references">customer
 	references</a> for those services.
 </p>
-</@h2>
+</@h3>
 
 </#global>
 <#include "/footer.ftl"/>

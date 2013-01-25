@@ -1,7 +1,7 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Présentation" "presentation">
+<@h3 "Présentation" "presentation">
 <p>
 	Afin de vous aider à réaliser vos idées Web et à réussir vos projets d'APIs web, 
 	Restlet SAS vous propose une gamme complète de services 
@@ -28,7 +28,7 @@
 	Vous pouvez enfin consulter la liste de nos dernières <a href="/services/references">références 
 	clients</a> pour ces services.
 </p>
-</@h2>
+</@h3>
 
 </#global>
 <#include "/footer.ftl"/>

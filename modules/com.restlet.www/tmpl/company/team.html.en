@@ -1,15 +1,15 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Introduction" "introduction">
+<@h3 "Introduction" "introduction">
 <p>
    We are a young innovative company composed of a dynamic and ambitious team.
    Its management is assumed by Jérôme Louvel and Thierry Boileau the two 
    founders of Restlet S.A.S..
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Jérôme Louvel" "jerome-louvel">
+<@h3 "Jérôme Louvel" "jerome-louvel">
 <img src="/images/photos/jerome-louvel-100" alt="Photo Jérôme Louvel" class="float-right" />
 <p>
    Jérôme is an engineer in computer science and management, graduate of
@@ -28,9 +28,9 @@
    <a href="http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217">Restlet in Action</a> book
    published by Manning.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Thierry Boileau" "thierry-boileau">
+<@h3 "Thierry Boileau" "thierry-boileau">
 <img src="/images/photos/thierry-boileau-100" alt="Photo Thierry Boileau" class="float-right" />
 <p>
    Thierry is also an engineer in computer science and management, graduate
@@ -48,9 +48,9 @@
    <a href="http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217">Restlet in Action</a> book
    published by Manning.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Thierry Templier" "thierry-templier">
+<@h3 "Thierry Templier" "thierry-templier">
 <img src="/images/photos/thierry-templier-100" alt="Photo Thierry Templier" class="float-right" />
 <p>
    Thierry is an engineer in computer science, telecom and networks, graduate of 
@@ -67,9 +67,9 @@
    <a href="http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217">Restlet in Action</a>
    book published by Manning. 
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Hiring" "hiring">
+<@h3 "Hiring" "hiring">
 <p>
    Our commercial development leads us to expand our team in 2012. If you
    share <a href="/company/mission">our mission</a> and want to contribute
@@ -77,7 +77,7 @@
     <a href="mailto:human-resources@restlet.com?subject=Application">
     your application</a>.
 </p>
-</@h2>
+</@h3>
 
 </#global>
 <#include "/footer.ftl"/>

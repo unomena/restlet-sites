@@ -1,15 +1,15 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Présentation" "presentation">
+<@h3 "Présentation" "presentation">
 <p>
 	Afin de vous aider à réussir vos projets Web, nous vous proposons de partager notre
     expertise au travers de formations sur REST et la technologie Restlet. Nos formateurs
     sont expérimentés et disposent d'une expérience pratique des thèmes qu'ils enseignent.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Formation 1&nbsp;: \"Comprendre et appliquer REST aux APIs web\"" "rest">
+<@h3 "Formation 1&nbsp;: \"Comprendre et appliquer REST aux APIs web\"" "rest">
 <p>
 	Cette formation de deux jours vous permettra de comprendre les fondamentaux de REST, 
 	le style d'architecture du Web, et de les appliquer progressivement et concrètement
@@ -40,9 +40,9 @@
 	Pour de plus amples informations sur cette formation, n'hésitez pas
 	à <a href="mailto:formation@restlet.com?subject=Formation 'Comprendre et appliquer REST'">nous contacter</a>.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Formation 2&nbsp;: \"Découvrir et apprendre Restlet\"" "restlet">
+<@h3 "Formation 2&nbsp;: \"Découvrir et apprendre Restlet\"" "restlet">
 <p>
 	Cette formation de trois jours est le parfait complément de la formation
 	"Comprendre et appliquer REST" également proposée par Restlet SAS, mais peut être
@@ -70,13 +70,13 @@
    Pour de plus amples informations sur cette formation, n'hésitez pas
    à <a href="mailto:formation@restlet.com?subject=Formation 'Decouvrir et maitriser Restlet'">nous contacter</a>.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Pack formation&nbsp;: REST + Restlet" "pack">
+<@h3 "Pack formation&nbsp;: REST + Restlet" "pack">
 <p>
 	Pour les clients qui souhaitent enchaîner les deux formations au cours de la même semaine, 
 	nous offrons une remise de 10%, soit un prix final de 2250 € par personne au lieu de 2500 €.
 </p>
-</@h2>
+</@h3>
 </#global>
 <#include "/footer.ftl"/>

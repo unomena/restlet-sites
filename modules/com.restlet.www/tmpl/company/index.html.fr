@@ -1,7 +1,7 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Présentation" "presentation">
+<@h3 "Présentation" "presentation">
 <p>
 	Pour collaborer efficacement avec vous, il est essentiel de se présenter en
 	toute transparence et d'établir une relation de confiance. Afin de mieux 
@@ -26,9 +26,9 @@
 	informations légales et commerciales à partir de nos identifiants 
 	administratifs disponibles sur la même page.  
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Histoire" "histoire">
+<@h3 "Histoire" "histoire">
 <p>
 	Notre société est la réunion d'expériences riches, de passions variées et 
 	d'une vision originale dans laquelle nos systèmes d'informations sont 
@@ -36,11 +36,11 @@
 	avec l'émergence du style d'architecture REST et se renforce avec le succès 
 	des APIs web.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Chronologie" "chronology">
+<@h3 "Chronologie" "chronology">
 
-<@h3>2012</@h3>
+<h3>2012</h3>
 
 <p>
     La société change son nom de Noelios Technologies (SARL) à Restlet (SAS), 
@@ -48,7 +48,7 @@
 	sa plateforme en ligne innovante de création et d'hébergement d'APIs Web .
 </p>
 
-<@h3>2011</@h3>
+<h3>2011</h3>
 
 <p>
     La société devient lauréat Scientipôle Initiative et bénéficie d'un renfort de
@@ -69,7 +69,7 @@
     pour la connexion cloud vers intranet, OAuth 2.0 et OpenID 2.0.
 </p>
 
-<@h3>2010</@h3>
+<h3>2010</h3>
 
 <p>
     La société est incubée par Agoranov qui aide au développement grâce à un 
@@ -88,7 +88,7 @@
 	chapitres sur 12 de publiés. 
 </p>
 
-<@h3>2009</@h3>
+<h3>2009</h3>
 <p>
 	La société prépare sa croissance en tissant des relations avec des structures
 	d'aide au développement économique dont le Pôle de Compétitivité Cap Digital, 
@@ -101,7 +101,7 @@
     livre "Restlet in Action" publié par l'éditeur Manning est commencée.
 </p>
 
-<@h3>2008</@h3>
+<h3>2008</h3>
 <p>
 	Création de la société par Jérôme Louvel et Thierry Boileau autour du
     project open source Restlet Framework créé en 2005. L'entreprise prend 
@@ -114,6 +114,6 @@
 	standard JAX-RS. Jérôme Louvel participe au groupe d'experts élaborant 
 	cette API (JSR-311).
 </p>
-</@h2>
+</@h3>
 </#global>
 <#include "/footer.ftl"/>

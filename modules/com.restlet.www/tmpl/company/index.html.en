@@ -1,7 +1,7 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Presentation" "presentation">
+<@h3 "Presentation" "presentation">
 <p>
 	To efficiently collaborate with you, it is essential to introduce ourselves
 	in full transparency and to establish a trust relationship. In order to better
@@ -24,22 +24,22 @@
 	or obtain legal or commercial information from our administrative identifiers
 	available on the same page.  
 </p>
-</@h2>
+</@h3>
 
 
-<@h2 "History" "history">
+<@h3 "History" "history">
 <p>
 	Our company is the gathering of rich experiences, diverse passions and 
 	an original vision in which our information systems are deeply integrated 
 	with the Web. This vision has been partially realized with the emergence 
 	of the REST architecture style and is now strengthened with the success of web APIs.
 </p>
-</@h2>
+</@h3>
 </div>
 
-<@h2 "Chronology" "chronology">
+<@h3 "Chronology" "chronology">
 
-<@h3>2012</@h3>
+<h3>2012</h3>
 
 <p>
     The company changes its name from Noelios Technologies (SARL) to Restlet (SAS), reflecting
@@ -47,7 +47,7 @@
     innovative online platform for creation and hosting of Web APIs.
 </p>
 
-<@h3>2011</@h3>
+<h3>2011</h3>
 
 <p>
     The company becomes laureate of Scientipôle Initiative benefiting from a stronger 
@@ -67,7 +67,7 @@
     OAuth 2.0 and OpenID 2.0.
 </p>
 
-<@h3>2010</@h3>
+<h3>2010</h3>
 
 <p>
     The company is incubated by Agoranov, helping to its business development 
@@ -85,7 +85,7 @@
 	of the "Restlet in Action" book on a total of 11.
 </p>
 
-<@h3>2009</@h3>
+<h3>2009</h3>
 <p>
     The company prepares its growth by building relationships with economic development 
 	structures like the competitiveness cluster Cap Digital, the French Association Of 
@@ -98,7 +98,7 @@
     published by Manning begins.
 </p>
 
-<@h3>2008</@h3>
+<h3>2008</h3>
 <p>
 	Creation of the company by Jérôme Louvel and Thierry Boileau on the basis
     of the open source Restlet Framework created in 2005. The company is named 
@@ -110,6 +110,6 @@
 	standard. Jérôme Louvel participates in the expert group elaborating 
 	this API (JSR-311).
 </p>
-</@h2>
+</@h3>
 </#global>
 <#include "/footer.ftl"/>

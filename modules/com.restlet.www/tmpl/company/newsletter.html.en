@@ -3,7 +3,7 @@
 <#global javascript_files=["/javascript/ext-custom.js", "/javascript/locale/ext-lang.js", "/javascript/forms/contact/newsletter.en.js"] />
 <#global content>
 
-<@h2 "Presentation" "presentation">
+<@h3 "Presentation" "presentation">
 <p>
 	If you want to stay in touch with Restlet SAS without having
 	to follow our blog or if you are looking for all-encompassing complementary
@@ -21,22 +21,22 @@
 	at most. You can of course unsubscribe at any time. You also have a 
 	<a href="/legal">right of access and modification</a> to your personal data.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Subscribe" "subscribe">
+<@h3 "Subscribe" "subscribe">
 <div id="suscribe-form"></div>
 
 <p>
 	You can also send us an email to this address <a href="mailto:newsletter@restlet.com?Subject=Subscribe">newsletter@restlet.com</a>
 	with "Subscribe" as the subject.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Unsubscribe" "unsubscribe">
+<@h3 "Unsubscribe" "unsubscribe">
 <p>
 	You just need to send us an email to this address <a href="mailto:newsletter@restlet.com?Subject=Unsubscribe">newsletter@restlet.com</a>
 	with "Unsubscribe" as the subject. 
 </p>
-</@h2>
+</@h3>
 </#global>
 <#include "/footer.ftl"/>

@@ -1,7 +1,7 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Présentation" "presentation">
+<@h3 "Présentation" "presentation">
 <p>
    Voici la liste de nos dernières références pour nos produits.
 </p>
@@ -143,6 +143,6 @@
     </tr>
   </tbody>
 </table>
-</@h2>
+</@h3>
 </#global>
 <#include "/footer.ftl"/>

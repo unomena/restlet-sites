@@ -2,7 +2,7 @@
 
 <#global javascript></#global>
 <#global content>
-<@h2 "Description" "error">
+<@h3 "Description" "error">
 <div>
 <#noparse>
 <#if status.description??>
@@ -12,8 +12,8 @@
 </#if>
 </#noparse>
 </div>
-</@h2>
-<@h2 "Détails techniques" "details">
+</@h3>
+<@h3 "Détails techniques" "details">
 <div>
 <#noparse>
 <p>Vous pouvez obtenir des détails techniques <a href="${status.uri!""}">ici</a>.<br>
@@ -29,6 +29,6 @@
 
 </#noparse>
 </div>
-</@h2>
+</@h3>
 </#global>
 <#include "/footer.ftl"/>

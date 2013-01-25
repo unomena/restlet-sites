@@ -1,7 +1,7 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Presentation" "presentation">
+<@h3 "Presentation" "presentation">
 <p>
 	Restlet Framework is the leading REST framework in Java. First software, 
 	across all languages, to have proposed a development framework designed from the REST 
@@ -18,9 +18,9 @@
 	all the technical documentation and download the latest version of the software
 	on the <a href="http://www.restlet.org">community site</a>.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Technical details" "technical-details">
+<@h3 "Technical details" "technical-details">
 <p>
 	The framework is composed of a class-oriented Restlet API capable of dealing with both
 	the client and server aspects of your applications, for several protocols including HTTP,
@@ -47,9 +47,9 @@
 	Equinox or Apache Felix micro-kernels and finally in a fully standalone way using
 	only the Restlet JARs.
 </p> 
-</@h2>
+</@h3>
 
-<@h2 "Benefits" "benefits">
+<@h3 "Benefits" "benefits">
 <p>
 	If you ask yourself why use Restlet instead of another solution like Servlets for your
 	Web applications, here is a summary of the main benefits of the Restlet Framework:
@@ -89,9 +89,9 @@
 <p>
 	A summary <a href="factsheet">product sheet</a> for version 2.0 is also available.
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Licenses" "licences">
+<@h3 "Licenses" "licences">
 <p>
 	For the users that can't benefit from one of the open source licenses that we use to
 	distribute Restlet Framework (LGPL 3.0, LGPL 2.1, CDDL 1.0 or EPL 1.0), we also
@@ -169,15 +169,15 @@
 	Choosing a commercial license reduces your usage constraints but also finance the
 	research and development of the open source Restlet project!
 </p>
-</@h2>
+</@h3>
 
-<@h2 "Classic process" "classic">
+<@h3 "Classic process" "classic">
 <p>
    If you want, we can process your request personally. For this purpose,
    please <a href="/contact/location">contact us</a> and we will propose you a
    contract and a commercial offer in PDF format.
 </p>
-</@h2>
+</@h3>
 
 </#global>
 <#include "/footer.ftl"/>

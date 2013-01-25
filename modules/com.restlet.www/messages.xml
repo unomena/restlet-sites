@@ -10,30 +10,4 @@
          <![CDATA[Copyright &copy; 2005-2013 Restlet - <a href="/legal">Mentions légales</a>]]>
       </fr>
    </copyright>
-   <subscribeSuccess>
-      <en>You will be notified by mail as soon as your subscription
-         will be effective.</en>
-      <fr>Vous serez averti par mail dès que votre inscription sera
-         effective.</fr>
-   </subscribeSuccess>
-   <subscribeError>
-      <en>Your subscription is not effective due to an error. Please
-         try again or send a mail to newsletter@restlet.com.</en>
-      <fr>Une erreur a empêché votre inscription. Veuillez essayer
-         ultérieurement ou envoyez un mail à newsletter@restlet.com.
-      </fr>
-   </subscribeError>
-   <unsubscribeSuccess>
-      <en>You will be notified by mail as soon as your unsubscription
-         will be effective.</en>
-      <fr>Vous serez averti par mail dès que votre désinscription
-         sera effective.</fr>
-   </unsubscribeSuccess>
-   <unsubscribeError>
-      <en>Your unsubscription is not effective due to an error.
-         Please try again or send a mail to newsletter@restlet.com.</en>
-      <fr>Une erreur a empêché votre désinscription. Veuillez essayer
-         ultérieurement ou envoyez un mail à newsletter@restlet.com.
-      </fr>
-   </unsubscribeError>
 </messages>

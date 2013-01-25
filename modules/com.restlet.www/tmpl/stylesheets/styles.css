@@ -507,3 +507,7 @@ footer .container .span4.newsletter {
 	display: inline-block;
 	/*width: 300px;*/
 }
+
+.span900 {
+	margin-right: 30px; 
+}

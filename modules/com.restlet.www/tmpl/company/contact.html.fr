@@ -1,8 +1,8 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Présentation" "presentation">
-<@h3>Nos actualités</@h3>
+<@h3 "Présentation" "presentation">
+<h3>Nos actualités</h3>
 <p>
 	Pour suivre les dernières actualités de Restlet, nous vous
 	proposons trois canaux de communication&nbsp;:
@@ -28,13 +28,13 @@
 	en nous mentionnant vos projets ou produits utilisant notre technologie.
 </p>
 
-<@h3>Nos coordonnées</@h3>
+<h3>Nos coordonnées</h3>
 <p>
 	Si vous souhaitez nous contacter directement, localiser nos locaux ou bien 
 	obtenir nos informations administratives, vous pouvez consulter la page des
 	<a href="/contact/location">coordonnées</a> sur ce site.
 </p>
-</@h2>
+</@h3>
 
 </#global>
 <#include "/footer.ftl"/>

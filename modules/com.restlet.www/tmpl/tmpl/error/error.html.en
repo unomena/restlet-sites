@@ -1,7 +1,7 @@
 <#include "/header.ftl"/>
 
 <#global content>
-<@h2 "Description" "error">
+<@h3 "Description" "error">
 <div>
 <#noparse>
 <#if status.description??>
@@ -11,8 +11,8 @@
 </#if>
 </#noparse>
 </div>
-</@h2>
-<@h2 "Technical details" "details">
+</@h3>
+<@h3 "Technical details" "details">
 <div>
 <#noparse>
 <p>You can get technical details <a href="${status.uri!""}">here</a>.<br>
@@ -27,6 +27,6 @@
 </#if>
 </#noparse>
 </div>
-</@h2>
+</@h3>
 </#global>
 <#include "/footer.ftl"/>

@@ -1,8 +1,8 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h2 "Presentation" "presentation">
-<@h3>Our news</@h3>
+<@h3 "Presentation" "presentation">
+<h3>Our news</h3>
 <p>
 	To follow the latest news from Restlet, we propose you three
 	channels of communication:
@@ -28,13 +28,13 @@
 	projects or products using our technology.
 </p>
 
-<@h3>Our address</@h3>
+<h3>Our address</h3>
 <p>
 	If you want to contact us directly, localize our offices or obtain administrative 
 	information, you can consult the <a href="/contact/location">location</a> page on
 	this site.
 </p>
-</@h2>
+</@h3>
 
 </#global>
 <#include "/footer.ftl"/>
