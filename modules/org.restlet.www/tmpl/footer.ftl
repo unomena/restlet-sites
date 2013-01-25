@@ -89,7 +89,7 @@
       <ul class="pages">
       <#list section.sections.section as subsection>
          <#if (subsection.@hidden[0]!'false') != 'true'>
-        <li<#if subsection.@id == currentSubSection> class="active"</#if>><a href="<a href="/${section.@id}/${subsection.@id}">${subsection.label?trim}</a></li>
+        <li<#if subsection.@id == currentSubSection> class="active"</#if>><a href="/${section.@id}/${subsection.@id}">${subsection.label?trim}</a></li>
          </#if>
       </#list>
       </ul>

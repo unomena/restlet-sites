@@ -15,6 +15,7 @@ import org.restlet.data.CharacterSet;
 import org.restlet.data.Language;
 import org.restlet.data.LocalReference;
 import org.restlet.data.MediaType;
+import org.restlet.engine.application.Encoder;
 import org.restlet.ext.atom.Entry;
 import org.restlet.ext.atom.Feed;
 import org.restlet.representation.Representation;
@@ -161,7 +162,11 @@ public class WwwRestletCom extends BaseApplication implements
         directory.setDeeplyAccessible(true);
         router.attachDefault(new CacheFilter(getContext(), directory));
 
-        return router;
+        
+        Encoder encoder = new Encoder(getContext(), false, true,
+                getEncoderService());
+        encoder.setNext(router);
+        return encoder;
     }
 
     public List<Entry> getFeedGeneral() {

@@ -2,10 +2,33 @@
 	var editions = ${restletEditions};
 	var qualifiers = ${restletQualifiers};
 	var versions = ${restletVersions};
+	var branches = new Array();
+	var qualifier = null;
+	var version = null;
+	var branch = null;
+	var edition = null;
+	var distribution = null;
+	var archive = false;
 
 	function getQualifier(id) {
 		for (var i = 0; item = qualifiers[i]; i++) {
 			if(item.id == id){
+				return item;
+			}
+		};
+		return null;
+	};
+	function getQualifierByVersion(id) {
+		for (var i = 0; item = qualifiers[i]; i++) {
+			if(item.version == id){
+				return item;
+			}
+		};
+		return null;
+	};
+	function getBranch(id) {
+		for (var i = 0; item = branches[i]; i++) {
+			if(item == id){
 				return item;
 			}
 		};
@@ -44,6 +67,15 @@
 			setQualifier(this.id);
 		});
 	};
+	function loadBranches(list) {
+		list.empty();
+		for (var i = 0; b = branches[i]; i++) {
+			list.append('<li id="' + b + '">' + b + '</li>');
+		};
+		list.children().click(function() {
+			setBranch(this.id);
+		});
+	};
 	function loadEditions(list) {
 		list.empty();
 		for (var i = 0; edition = editions[i]; i++) {
@@ -62,47 +94,69 @@
 			setDistribution(this.id);
 		});
 	};
-	function listDistributions(minorVersion, tab) {
+	
+	function listDistributions(tab) {
 		tab.empty();
-		for (var i = 0; distribution = distributions[i]; i++) {
-			var str = "";
-			if(("file" == distribution.type) && (minorVersion == distribution.version.substring(0, 3))){
-				var v = getVersion(distribution.version);
-				if(v){
-					str += '<tr><td><a href="/downloads/' + v.minorVersion + '/' + distribution.fileName + '" class="file">';
-					str += '<img alt="File:"';
-					if("exe" == distribution.fileType){
-						str += ' src="/images/executable.png">';
-					} else {
-						str += ' src="/images/zipfile.png">';
-					}
-					str += distribution.fileName;
-					str += '</a></td>';
-					str += '<td>' + distribution.fileSize + '</td>';
-					if(v){
-						str += '<td>' + v.published + '</td>';
-					} else {
-						str += '<td>-</td>';
-					}
-					str += '</tr>';
+		for (var i = 0; d = distributions[i]; i++) {
+			if(("file" == d.type) && (branch == d.version.substring(0, 3))){
+				if((!edition || (d.edition== edition.id)) && (!distribution || (d.id == distribution.id))){
+					displayDistribution(tab, d);					
 				}
-				tab.append(str);
 			}
 		};
-
-		var v = getVersion(version);
-		if(v){
-		}
 	};
+	function displayDistribution(tab, distribution) {
+		var v = getVersion(distribution.version);
+		if(v){
+			var str = '<tr><td><a href="/downloads/' + v.minorVersion + '/' + distribution.fileName + '" class="file">';
+//			str += '<img alt="File:"';
+//			if("exe" == distribution.fileType){
+//				str += ' src="/images/executable.png">';
+//			} else {
+//				str += ' src="/images/zipfile.png">';
+//			}
+			str += distribution.fileName;
+			str += '</a></td>';
+			str += '<td>' + distribution.fileSize + '</td>';
+			if(v){
+				str += '<td>' + v.published + '</td>';
+			} else {
+				str += '<td>-</td>';
+			}
+			str += '</tr>';
+		}
+		tab.append(str);
 
+	}
 	function setQualifier(id) {
 		$.cookie('qualifier', id, {path: '/' });
 		qualifier = getQualifier(id);
 		version  = getVersion(qualifier.version);
 		$.cookie('version', version.id, {path: '/' });
+		$.cookie('branch', version.minorVersion, {path: '/' });
 
 		$('#branch-bt').empty();
 		$('#branch-bt').append("<strong>" + qualifier.name + "</strong>");
+		setDistribution();
+	}
+	function setVersion(id) {
+		version  = getVersion(id);
+		$.cookie('version', version.id, {path: '/' });
+		$.cookie('branch', version.minorVersion, {path: '/' });
+		qualifier = getQualifierByVersion(id);		
+		if(qualifier){
+			$.cookie('qualifier', id, {path: '/' });			
+		} else {
+			$.removeCookie('qualifier', {path: '/' });
+		}
+		$('#branch-bt').empty();
+		$('#branch-bt').append("<strong>" + version.fullVersionCompact + "</strong>");
+		setDistribution();
+	}
+	function setBranch(id) {
+		branch = getBranch(id);
+		$('#branch-bt').empty();
+		$('#branch-bt').append("<strong>" + branch + "</strong>");
 		setDistribution();
 	}
 	function setEdition(id) {
@@ -118,7 +172,7 @@
 		} else if(distribution){
 			distribution = getDistribution(distribution.fileType);
 		}
-		if(qualifier && edition && distribution){
+		if((qualifier || branch) && edition && distribution){
 			$.cookie('distribution', distribution.fileType, {path: '/' });
 			$('#distribution-bt').empty();
 			$('#download').empty();
@@ -131,7 +185,7 @@
 					$('#distribution-bt').append("<strong>" + distribution.fileType + "</strong>");
 				}
 				
-				var urlChangesLog = "/documentation/";
+				var urlChangesLog = "/learn/";
 				if("unstable" == qualifier.id){
 					urlChangesLog += "snapshot";
 				} else {
@@ -175,7 +229,20 @@
 	}
 
 	function initArchive(){
-		loadQualifiers($("#branch"));
+		archive = true;
+		for (var i = 0; v = versions[i]; i++) {
+			var b = null;
+			for (var j = 0; (!b) && (branches[j]); j++) {
+				if (v.minorVersion == branches[j]) {
+					b = branches[j];
+				}
+			};
+			if (!b) {
+				branches.push(v.minorVersion);
+			}
+		};	
+
+		loadBranches($("#branch"));
 		loadEditions($("#edition"));
 		loadDistributions($("#distribution"));
 		var str = $.cookie('qualifier');
@@ -188,13 +255,14 @@
 			$.cookie('version', qualifier.version, {path: '/' });
 		}
 		version  = getVersion($.cookie('version'));
+		str = $.cookie('branch');
+		if(!str){
+			$.cookie('branch', version.minorVersion, {path: '/' })
+		}
+		branch = getBranch($.cookie('branch'));
 	}
 
 //	var myCombo = (new Dropdown("idCombo")).initialize();
 //myCombo.addSelectionListener(function(value) {
 //    (...)
 //});
-	var qualifier = null;
-	var version = null;
-	var edition = null;
-	var distribution = null;

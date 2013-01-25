@@ -16,6 +16,7 @@ import org.restlet.data.ChallengeScheme;
 import org.restlet.data.CookieSetting;
 import org.restlet.data.LocalReference;
 import org.restlet.data.MediaType;
+import org.restlet.engine.application.Encoder;
 import org.restlet.ext.atom.Entry;
 import org.restlet.ext.atom.Feed;
 import org.restlet.representation.Representation;
@@ -162,21 +163,15 @@ public class WwwRestletOrg extends BaseApplication implements
         result.attachDefault(new CacheFilter(getContext(), directory));
 
         // Redirections.
-        stableDocumentationRoute = result.redirectTemporary(
-                "/documentation/stable", "/documentation");
-        testingDocumentationRoute = result.redirectTemporary(
-                "/documentation/testing", "/documentation");
-        result.redirectTemporary("/documentation/unstable",
-                "/documentation/snapshot");
+        stableDocumentationRoute = result.redirectTemporary("/learn/stable",
+                "/learn");
+        testingDocumentationRoute = result.redirectTemporary("/learn/testing",
+                "/learn");
+        result.redirectTemporary("/learn/unstable", "/learn/snapshot");
 
-        TemplateRoute route = result.redirectPermanent(
-                "/downloads/snapshot{rr}",
-                "/downloads/archives/2.0/restlet-jse-2.0snapshot{rr}");
-        route.getTemplate().getVariables()
-                .put("rr", new Variable(Variable.TYPE_ALL));
-
-        result.attach("/downloads/stable", new Redirector(getContext(),
-                "/downloads") {
+        redirect(result, "/downloads/snapshot", "/download");
+        result.attach("/download/stable", new Redirector(getContext(),
+                "/download") {
             @Override
             public void handle(Request request, Response response) {
                 super.handle(request, response);
@@ -185,8 +180,8 @@ public class WwwRestletOrg extends BaseApplication implements
                                 request.getResourceRef().getHostDomain()));
             }
         });
-        result.attach("/downloads/testing", new Redirector(getContext(),
-                "/downloads") {
+        result.attach("/download/testing", new Redirector(getContext(),
+                "/download") {
             @Override
             public void handle(Request request, Response response) {
                 super.handle(request, response);
@@ -195,8 +190,8 @@ public class WwwRestletOrg extends BaseApplication implements
                                 request.getResourceRef().getHostDomain()));
             }
         });
-        result.attach("/downloads/unstable", new Redirector(getContext(),
-                "/downloads") {
+        result.attach("/download/unstable", new Redirector(getContext(),
+                "/download") {
             @Override
             public void handle(Request request, Response response) {
                 super.handle(request, response);
@@ -205,9 +200,8 @@ public class WwwRestletOrg extends BaseApplication implements
                                 request.getResourceRef().getHostDomain()));
             }
         });
-
         // Serve files in the the "downloads" directory ("index" and "archives")
-        directory = new Directory(getContext(), this.wwwUri + "/downloads") {
+        directory = new Directory(getContext(), this.wwwUri + "/download") {
             @Override
             public void handle(Request request, Response response) {
                 String variable = (String) request.getAttributes().get(
@@ -224,13 +218,9 @@ public class WwwRestletOrg extends BaseApplication implements
                 super.handle(request, response);
             }
         };
-        route = result.attach("/downloads/{variable}", directory);
+        TemplateRoute route = result.attach("/download/{variable}", directory);
         route.getTemplate().getVariables()
                 .put("variable", new Variable(Variable.TYPE_ALPHA));
-
-        result.redirectPermanent("/downloads/archives/", "/downloads/archives");
-        result.redirectPermanent("/downloads/archives/{variable}",
-                "/downloads/{variable}{rr}");
 
         // Serve download files from a specific directory
         directory = new Directory(getContext(), this.dataUri
@@ -252,50 +242,46 @@ public class WwwRestletOrg extends BaseApplication implements
             }
         };
         directory.setListingAllowed(true);
-        result.attach("/downloads/{variable}", directory);
-
-        // Serve other files from the root path
-        // directory = new Directory(getContext(), this.wwwUri);
-        // router.attach("", directory);
+        result.attach("/download/{variable}", directory);
 
         // Maintain some old links
-        route = result.redirectPermanent("/a", "/");
-        route.getTemplate().setMatchingMode(Template.MODE_EQUALS);
-        result.redirectPermanent("/docs", "/documentation/1.0{rr}");
-        result.redirectPermanent("/docs/core", "/documentation/1.0/nre{rr}");
-        result.redirectPermanent("/downloads/restlet-0.18b.zip",
-                "/downloads/1.0/");
-        result.redirectPermanent("/downloads/restlet{version}",
-                "/downloads/1.0/");
-        result.redirectPermanent("/discuss", "/community/discuss");
-        result.redirectPermanent("/community/lists", "/community/discuss");
-        result.redirectPermanent("/faq", "/documentation/1.0/faq");
-
-        result.redirectPermanent("/glossary",
+        redirect(result, "/a", "/");
+        redirect(result, "/docs", "/learn");
+        redirect(result, "/docs/core", "/learn");
+        redirect(result, "/downloads/restlet-0.18b.zip", "/download/");
+        redirect(result, "/downloads/restlet{version}", "/download/");
+        redirect(result, "/discuss", "/participate");
+        redirect(result, "/community/lists", "/participate");
+        redirect(result, "/faq", "/learn/faq");
+        redirect(result, "/glossary",
                 "http://wiki.restlet.org/docs_2.0/180-restlet.html");
-        result.redirectPermanent("/introduction", "/about/introduction");
-        result.redirectPermanent("/roadmap", "/about/roadmap");
-        result.redirectPermanent("/tutorial", "/documentation/2.0/tutorial");
-        result.redirectPermanent("/examples", "/documentation/2.0/examples");
-        result.redirectPermanent("/documentation/1.1/connectors",
+        redirect(result, "/introduction", "/discover");
+        redirect(result, "/roadmap", "/learn/roadmap");
+        redirect(result, "/tutorial", "/learn");
+        redirect(result, "/examples", "/learn/examples");
+        redirect(result, "/documentation/1.1/connectors",
                 "http://wiki.restlet.org/docs_1.1/37-restlet.html");
-        result.redirectPermanent("/documentation/2.0/connectors",
+        redirect(result, "/documentation/2.0/connectors",
                 "http://wiki.restlet.org/docs_2.0/37-restlet.html");
-        result.redirectPermanent("/documentation/1.2", "/documentation/2.0{rr}");
+        redirect(result, "/documentation/1.2", "/learn/2.0{rr}");
+        redirect(result, "/documentation/2.0/api", "/learn/2.0/jse/api{rr}");
+        redirect(result, "/documentation/2.0/engine",
+                "/learn/2.0/jse/engine{rr}");
+        redirect(result, "/documentation/2.0/ext", "/learn/2.0/jse/ext{rr}");
+        redirect(result, "/documentation/snapshot/api",
+                "/learn/snapshot/jse/api{rr}");
+        redirect(result, "/documentation/snapshot/engine",
+                "/learn/snapshot/jse/engine{rr}");
+        redirect(result, "/documentation/snapshot/ext",
+                "/learn/snapshot/jse/ext{rr}");
+        redirect(result, "/downloads/archives/", "/download");
+        redirect(result, "/downloads/archives/{variable}",
+                "/download/{variable}{rr}");
 
-        result.redirectPermanent("/documentation/2.0/api",
-                "/documentation/2.0/jse/api{rr}");
-        result.redirectPermanent("/documentation/2.0/engine",
-                "/documentation/2.0/jse/engine{rr}");
-        result.redirectPermanent("/documentation/2.0/ext",
-                "/documentation/2.0/jse/ext{rr}");
-
-        result.redirectPermanent("/documentation/snapshot/api",
-                "/documentation/snapshot/jse/api{rr}");
-        result.redirectPermanent("/documentation/snapshot/engine",
-                "/documentation/snapshot/jse/engine{rr}");
-        result.redirectPermanent("/documentation/snapshot/ext",
-                "/documentation/snapshot/jse/ext{rr}");
+        redirect(result, "/about", "/discover{rr}");
+        redirect(result, "/documentation", "/learn{rr}");
+        redirect(result, "/downloads", "/download{rr}");
+        redirect(result, "/contribute", "/participate{rr}");
 
         result.attach("/feeds/summary", FeedSummaryResource.class);
         result.attach("/feeds/general", FeedGeneralResource.class);
@@ -312,7 +298,10 @@ public class WwwRestletOrg extends BaseApplication implements
         guard.setNext(adminRouter);
         result.attach("/admin", guard);
 
-        return result;
+        Encoder encoder = new Encoder(getContext(), false, true,
+                getEncoderService());
+        encoder.setNext(result);
+        return encoder;
     }
 
     public String getDataUri() {
@@ -358,6 +347,26 @@ public class WwwRestletOrg extends BaseApplication implements
 
     public String getWwwUri() {
         return this.wwwUri;
+    }
+
+    /**
+     * Helps to define redirections assuming that the router defines route by
+     * using the {@link Template.MODE_STARTS_WITH} mode.
+     * 
+     * @param router
+     *            The router where to define the redirection.
+     * @param from
+     *            The source template.
+     * @param to
+     *            The target template.
+     */
+    private void redirect(Router router, String from, String to) {
+        if (to.contains("{rr}")) {
+            TemplateRoute route = router.redirectPermanent(from, to);
+            route.setMatchingMode(Template.MODE_STARTS_WITH);
+        } else {
+            router.redirectPermanent(from, to);
+        }
     }
 
     public void refresh() {
