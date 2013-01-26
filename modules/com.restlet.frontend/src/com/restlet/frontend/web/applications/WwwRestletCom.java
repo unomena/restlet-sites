@@ -160,10 +160,13 @@ public class WwwRestletCom extends BaseApplication implements
         Directory directory = new Directory(getContext(), this.wwwUri);
         directory.setNegotiatingContent(true);
         directory.setDeeplyAccessible(true);
-        router.attachDefault(new CacheFilter(getContext(), directory));
+		if (Boolean.parseBoolean(getProperties().getProperty("nocache"))) {
+			router.attachDefault(directory);
+		} else {
+	        router.attachDefault(new CacheFilter(getContext(), directory));
+		}
 
-        
-        Encoder encoder = new Encoder(getContext(), false, true,
+		Encoder encoder = new Encoder(getContext(), false, true,
                 getEncoderService());
         encoder.setNext(router);
         return encoder;
