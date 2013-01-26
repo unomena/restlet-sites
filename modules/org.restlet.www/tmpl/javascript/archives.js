@@ -40,7 +40,7 @@ function loadDistributions() {
 function listDistributions() {
 	tabDir.empty();
 	for (var i = 0; d = distributions[i]; i++) {
-		if((distributionId == d.fileType) && (branch == d.version.substring(0, 3)) && (!edition || (d.edition== edition.id))){
+		if((distributionId == d.fileType) && (branch == d.version.substring(0, 3)) && (!edition || ("all" == edition.id) || (d.edition== edition.id))){
 			displayDistribution(tabDir, d);					
 		}
 	};

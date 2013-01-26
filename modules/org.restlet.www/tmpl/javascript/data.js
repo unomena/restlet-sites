@@ -122,7 +122,7 @@ function getDefaultQualifier() {
 function getDefaultEdition(version) {
 	var str = 'all';
 	for (var i = 0; i < version.editions.length; i++) {
-		if('jse' == version.editions[i]){
+		if('jse' == version.editions[i].id){
 			return 'jse';
 		}
 	}
