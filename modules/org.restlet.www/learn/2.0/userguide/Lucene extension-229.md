@@ -1,0 +1,111 @@
+Lucene extension
+================
+
+Introduction
+============
+
+The goal of this extension is to provide an integration between Restlet
+and [Apache Lucene
+project](http://web.archive.org/web/20100306065451/http://lucene.apache.org/)
+and subprojects such as
+[Solr](http://web.archive.org/web/20100306065451/http://lucene.apache.org/solr/)
+and
+[Tika](http://web.archive.org/web/20100306065451/http://lucene.apache.org/tika/).
+
+Its main feature is to allow an application to have access to Lucene
+indexing capabilities in a RESTful way thanks to Solr. The other feature
+is to provide a TikaRepresentation leveraging Lucene Tika subproject to
+extract metadata from any Representation.
+
+Solr integration
+================
+
+The connector contributed allows you to interact with Solr with
+"solr://" references the same way you would do it through HTTP : \
+
+[http://wiki.apache.org/solr/SolrRequestHandler](http://web.archive.org/web/20100306065451/http://wiki.apache.org/solr/SolrRequestHandler)
+
+Initialization
+--------------
+
+The CoreContainer that will be helped by the SolrClientHelper can be
+initialized in two different ways.
+
+First one is to specify directory and configFile parameters.
+
+    Client solrClient = component.getClients().add(SolrClientHelper.SOLR_PROTOCOL);
+    solrClient.getContext().getParameters().getFirstValue("directory");
+    solrClient.getContext().getParameters().getFirstValue("configFile");
+
+Second one is to create the CoreContainer.
+
+    Client solrClient = component.getClients().add(SolrClientHelper.SOLR_PROTOCOL);
+    CoreContainer coreContainer = initSolrContainer(component);
+    solrClient.getContext().getAttributes().put("CoreContainer",coreContainer);
+
+To configure your core container see solr documentation :
+[http://wiki.apache.org/solr/](http://web.archive.org/web/20100306065451/http://wiki.apache.org/solr/)
+
+Usage
+-----
+
+It is possible to interact with the core container using "solr://"
+Restlet requests with the client dispatcher the same way it is described
+on Solr's wiki using http requests.
+
+SolrClientHelper returns instances of SolrRepresentation from which you
+can get results encoded as JSON or XML.
+
+To update a document like described
+[here](http://web.archive.org/web/20100306065451/http://wiki.apache.org/solr/UpdateXmlMessages)
+you can do :
+
+    StringRepresentation repr = new StringRepresentation(xml, MediaType.TEXT_XML);
+    getContext().getClientDispatcher().post("solr://main/update", repr);
+
+Solr Core Container
+-------------------
+
+If you would like to interact with Solr through http without a Servlet
+container you can use this restlet. It can also be very useful for
+debug.
+
+    import org.restlet.Context;
+    import org.restlet.Restlet;
+    import org.restlet.data.Reference;
+    import org.restlet.data.Request;
+    import org.restlet.data.Response;
+
+    public class SolrForward extends Restlet {
+
+        public SolrForward() {
+        }
+        
+        public SolrForward(Context context) {
+            super(context);
+        }
+        
+        @Override
+        public void handle(Request request, Response response) {
+            super.handle(request, response);
+            String path = request.getResourceRef().getRemainingPart();
+            Reference solrRef = new Reference("solr://"+path);
+            Request solrRequest = new Request(request.getMethod(),solrRef,request.getEntity());
+            Response solrResp = getContext().getClientDispatcher().handle(solrRequest);
+            response.setStatus(solrResp.getStatus());
+            response.setEntity(solrResp.getEntity());
+        }
+        
+    }
+
+[Comments
+(0)](http://web.archive.org/web/20100306065451/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/229-restlet.html#)
+
+Comments
+[Hide](http://web.archive.org/web/20100306065451/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/229-restlet.html#)
+\
+There are no comments.
+
+Add a comment
+
+Please log in to be able to add comments.

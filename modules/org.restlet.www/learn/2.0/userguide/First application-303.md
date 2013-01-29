@@ -1,0 +1,453 @@
+First application
+=================
+
+Introduction
+============
+
+This first application illustrates how to develop a Restlet application
+that combines several editions of the Restlet Framework : GAE, GWT,
+Android and Java SE. It explains the benefits of annotated Restlet
+interfaces and of the ConverterService that offers transparent
+serialization between Restlet representations and Java objects, usable
+between a server application and several kind of clients.
+
+Table of contents
+=================
+
+1.  [Requirements](http://web.archive.org/web/20120120065541/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_requirements)
+2.  [Scenario](http://web.archive.org/web/20120120065541/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_scenario)
+3.  [Archive
+    content](http://web.archive.org/web/20120120065541/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_archive-content)
+4.  [Common
+    classes](http://web.archive.org/web/20120120065541/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_common-classes)
+5.  [GAE server
+    part](http://web.archive.org/web/20120120065541/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_gae)
+6.  [GWT
+    client](http://web.archive.org/web/20120120065541/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_gwt)
+7.  [Android
+    client](http://web.archive.org/web/20120120065541/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_android)
+8.  [Java SE
+    client](http://web.archive.org/web/20120120065541/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_jse)
+
+Requirements
+============
+
+It is based on the following editions of the Restlet Framework : Java SE
+(JSE), Google App Engine (GAE), Google Web Toolkit (GWT) and Android
+which must be downloaded separately from [this
+page](http://web.archive.org/web/20120120065541/http://www.restlet.org/downloads/).
+It has been tested with the following environments:
+
+-   Restlet Framework 2.0
+-   Google App Engine (GAE) 1.2.1 to 1.4.2
+-   Google Web Toolkit (GWT) 1.7 to 2.1 (probably previous versions as
+    well)
+-   Android 1.6 to 2.1 (probably previous versions as well)
+
+GAE doesn't support HTTP chunked encoding, therefore serialized object
+can't be sent (via POST or PUT) to a GAE server. In Restlet Framework
+version 2.1 M4 we have a workaround available that buffers the HTTP
+entity to prevent chunk encoding. This issue is tracked
+[here](http://web.archive.org/web/20120120065541/http://restlet.tigris.org/issues/show_bug.cgi?id=1219),
+including a workaround for 2.0 if you can upgrade to 2.1 just yet. Note
+that this workaround isn't required for the GWT edition.
+
+Scenario
+========
+
+The server application is hosted on the Google App Engine (GAE)
+platform. For the sake of simplicity it serves only one resource named
+"contact", with the following characteristics:
+
+-   its relative URI is "/contacts/123"
+-   it supports the GET, PUT and DELETE methods.
+-   it represents a simple "contact" object.
+
+The "contact" object has the following attributes:
+
+-   firstname
+-   lastname
+-   age
+-   home address (actually an instance of a "Address" class): line1,
+    line2, zipcode, city and country
+
+ This resource will be requested fro several kind of clients:
+
+-   GWT client page
+-   Android application
+-   Java SE client
+
+Archive content
+===============
+
+The full source code (without the required archives) is available here:
+[serializationFullSource.](http://web.archive.org/web/20120120065541/http://wiki.restlet.org/docs_2.0/304-restlet/version/default/part/AttachmentData/data/serializationFullSource.zip "serializationFullSource")
+(application/zip, 1.4 MB,
+[info](http://web.archive.org/web/20120120065541/http://wiki.restlet.org/docs_2.0/304-restlet.html))
+
+It contains the full source code of three Eclipse projects with:
+
+1.  Project that contains both the GAE server and the GWT client code
+2.  Project that contains the source code of the Android client
+3.  Project that contains the source code of the Java SE client
+
+Common classes
+==============
+
+The following classes are available on the three project. They are used
+by the server and the clients in order to produce the serialized
+representation of the Contact object and to deserialize incoming
+representations.
+
+-   Contact
+-   Address
+-   ContactResource.
+
+ContactResource is an interface annotated with Restlet annotations:
+
+~~~~ {.brush: .java}
+public interface ContactResource {
+    @Get
+    public Contact retrieve();
+
+    @Put
+    public void store(Contact contact);
+
+    @Delete
+    public void remove();
+}
+~~~~
+
+It represents the contract passed between the client and the server.
+
+When using collections of objects as method parameters, you need to use
+concrete classes if you intend to have GWT clients. For example use
+ArrayList\<Contact\> instead of List\<Contact\>.
+
+GAE server part
+===============
+
+We propose to host the server application on the GAE platform. The
+server project relies on the following JAR files:
+
+-   org.restlet.jar: core archive (*GAE edition*)
+-   org.restlet.ext.gwt.jar: GWT server-side extension to convert Java
+    objects to a GWT-specific serialization format (*GAE edition*)
+-   org.restlet.ext.servlet.jar: Servlet extension to deploy the Restlet
+    application in GAE (*GAE edition*)
+-   org.restlet.ext.jackson.jar: Jackson extension used to generate JSON
+    representations of the contact resource (*GAE edition*)
+-   org.codehaus.jackson.core.jar, org.codehaus.jackson.mapper.jar:
+    archives of the Jackson libraries required by the Jackson extension,
+    and available in the GAE edition.
+
+The server-side resource implements the annotated interface.
+
+~~~~ {.brush: .java}
+/**
+ * The server side implementation of the Restlet resource.
+ */
+public class ContactServerResource extends ServerResource implements ContactResource {
+
+   private static volatile Contact contact = 
+        new Contact("Scott", "Tiger", new Address("10 bd Google", null, "20010", "Mountain View", 
+                    "USA"), 40);
+
+    public void remove() {
+        contact = null;
+    }
+
+    public Contact retrieve() {
+        return contact;
+    }
+
+    public void store(Contact contact) {
+        ContactServerResource.contact = contact;
+    }
+}
+~~~~
+
+This resource is then exposed by the server application:
+
+~~~~ {.brush: .java}
+    @Override
+    public Restlet createInboundRoot() {
+        Router router = new Router(getContext());
+
+        router.attachDefault(new Directory(getContext(), "war:///"));
+        router.attach("/contacts/123", ContactServerResource.class);
+
+        return router;
+    }
+~~~~
+
+GWT client part
+===============
+
+The GWT client relies only on the core Restlet JAR (org.restlet.jar)
+provided in the GWT edition.
+
+In order to get the Contact object, a proxy class is required. This is
+an interface that inherits on a specific interface (delivered by the GWT
+edition of the Restlet Framework):
+
+~~~~ {.brush: .java}
+public interface ContactResourceProxy extends ClientProxy {
+    @Get
+    public void retrieve(Result<Contact> callback);
+
+   @Put
+    public void store(Contact contact, Result<Void> callback);
+
+    @Delete
+    public void remove(Result<Void> callback);
+}
+~~~~
+
+This interface looks like the ContactResource interface, expect that it
+adds a callback to each declared methods, due to the asynchronous nature
+of the GWT platform and the underlying AJAX mechanism offered by web
+browsers.
+
+The type of the callback is not limited to the Result interface of the
+Restlet Framework, it can also be the usual AsyncCallback interface
+provided by GWT. Thus it allows you to easily migrate an existing
+GWT-RPC code base to GWT-REST with Restlet.
+
+Then, the following code allows you to request and handle the Contact
+resource:
+
+~~~~ {.brush: .java}
+ContactResourceProxy contactResource = GWT.create(ContactResourceProxy.class);
+
+// Set up the contact resource
+contactResource.getClientResource().setReference("/contacts/123");
+
+// Retrieve the contact
+contactResource.retrieve(new Result<Contact>() {
+    public void onFailure(Throwable caught) {
+        // Handle the error
+    }
+
+    public void onSuccess(Contact contact) {
+        // Handle the contact, for example by updating the GWT interface
+        // Contact fields
+        cTbFirstName.setText(contact.getFirstName());
+        cTbLastName.setText(contact.getLastName());
+        cTbAge.setText(Integer.toString(contact.getAge()));
+    }
+});
+~~~~
+
+Here is a screenshot of the GWT client page once the user has clicked on
+the GET button.
+
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  [![serialization-gwt-screenshot](First%20application-303_files/data.html "serialization-gwt-screenshot")](http://web.archive.org/web/20120120065541/http://wiki.restlet.org/docs_2.0/305-restlet/version/default/part/ImageData/data/serialization-gwt-screenshot.png)
+  [Click to enlarge](http://web.archive.org/web/20120120065541/http://wiki.restlet.org/docs_2.0/305-restlet/version/default/part/ImageData/data/serialization-gwt-screenshot.png)
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+In order to update the contact, simply complete your contact object and
+invoke the "store" method as specified by the proxy interface:
+
+~~~~ {.brush: .java}
+contactResource.store(contact, new Result<Void>() {
+    public void onFailure(Throwable caught) {
+        // Handle the error
+    }
+
+    public void onSuccess(Void v) {
+        // Display a dialog box
+        dialogBox.setText("Update contact");
+        textToServerLabel.setText("Contact successfully updated");
+        dialogBox.center();
+        closeButton.setFocus(true);
+    }
+});
+~~~~
+
+Android client part
+===================
+
+The Android client project relies only on the core Restlet JAR
+(org.restlet.jar) provided by the Android edition of the Restlet
+Framework.
+
+The contact object will be serialized between the GAE server and the
+Android client (in both directions) using the standard Java
+serialization process. No additional interface is required except the
+ContactResource interface furnished by the server.
+
+~~~~ {.brush: .java}
+// Initialize the resource proxy.
+ClientResource cr = new ClientResource("http://restlet-example-serialization.appspot.com/contacts/123");
+ContactResource resource = cr.wrap(ContactResource.class);
+
+// Get the remote contact
+Contact contact = resource.retrieve();
+~~~~
+
+In order to update the client, simply use this instruction:
+
+~~~~ {.brush: .java}
+resource.store(contact);
+~~~~
+
+Here is a screenshot of the Android user interface.
+
+### ![serialization-android-screenshot](First%20application-303_files/serialization-android-screenshot.html "serialization-android-screenshot")
+
+Java SE client
+==============
+
+Get the full Contact object
+---------------------------
+
+The same code used on the Android application allows you to get the full
+Contact object:
+
+~~~~ {.brush: .java}
+ClientResource cr = new ClientResource("http://restlet-example-serialization.appspot.com/contacts/123");
+// Get the Contact object
+ContactResource resource = cr.wrap(ContactResource.class);
+Contact contact = resource.retrieve();
+
+if (contact != null) {
+    System.out.println("firstname: " + contact.getFirstName());
+    System.out.println(" lastname: " + contact.getLastName());
+    System.out.println("     nage: " + contact.getAge());
+}
+~~~~
+
+  This code produces the following ouput on the console:
+
+    firstname: Scott
+     lastname: Tiger
+          age: 40
+
+Get a JSON representation
+-------------------------
+
+In case the Contact class is not available, you can still retrieve a
+JSON representation by setting the client preferences when retrieving
+the resource's representation:
+
+~~~~ {.brush: .java}
+cr.get(MediaType.APPLICATION_JSON).write(System.out);
+~~~~
+
+which produces the following output:
+
+    {"age":40,"firstName":"Scott","homeAddress":{"country":"USA","city":"Mountain View","line1":"10 bd Google","line2":null,"zipCode":"20010"},
+    "lastName":"Tiger"}
+
+[Comments
+(10)](http://web.archive.org/web/20120120065541/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet/303-restlet.html#)
+
+Comments
+[Hide](http://web.archive.org/web/20120120065541/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet/303-restlet.html#)
+\
+
+Created by Christopher Gokey on 2/16/10 4:48:10 PM
+
+This is pretty cool... Is there a easy way to get the XML and JSON
+representations in the GWT client similar to how it is done in the JSE
+client?
+
+Created by Christopher Gokey on 2/16/10 7:30:39 PM
+
+Wow it is automatic... Everyone needs to be careful to look at all the
+jars in the sample app, if you miss any of them, it won't work properly
+and failed for me silently. But, in my test case, I've got automatic
+serialization/deserialization of Java objects for my GWT client! That
+with the ability to quickly get JSON and XML, is fantastic!
+
+Created by Jerome Louvel on 2/17/10 9:47:53 AM
+
+Thanks Christopher for the feed-back! All this is magically working by
+leveraging HTTP content negotiation, preventing tight coupling between
+client and server if not necessary.
+
+Created by a b on 6/9/10 8:58:32 PM
+
+Jerome,\
+I saw the code of the example provided, but I wanted to call the Post
+operation. My interface has the following method defined :@Post\
+ public void makeCallSessionRequest(String inputCall, Result\<String\>
+callback);\
+ \
+In my client, I am calling as :\
+contactResource.makeCallSessionRequest\
+
+("\<makeCallSessionRequest\>\<callingId\>tel:4049869141\</callingId\>\<calledId\>tel:6785913788\</calledId\>\</makeCallSessionRequest\>",new
+Result\<String\>() { ....}\
+ \
+I get the error : The constructor ObjectRepresentation\<String\>(String,
+SerializationStreamFactory) is ambiguous\
+Your help is really appreciated .. Thanks AB
+
+Created by Jerome Louvel on 6/12/10 9:17:33 AM
+
+Hi AB, We need to look at this as it might be a bug. Could you enter a
+report please?\
+http://www.restlet.org/community/issues
+
+Created by Jayant Jain on 12/13/10 6:00:35 AM
+
+I tried this. When I do a GET/ retrieve() from the Android app , I get
+the object properly. However when I do a PUT from the Android APP, the
+development server gets the object Contact properly, however the
+production server on appspot gets a NULL Contact object in the store()
+method.. Any suggestions\
+ \
+
+Created by Shalabh Vyas on 2/1/11 7:16:09 AM
+
+I created the REST service,deployed it on GAE with URL
+http://rest4androidshalabh.appspot.com/. I tried the JavaSE client but
+got the Contact object as NULL.My Application class code is:\
+ \
+@Override\
+ public Restlet createInboundRoot() { \
+ Router router = new Router(getContext()); \
+ router.attach("/contacts/123",ContactServerResource.class);\
+ return router;\
+ }\
+ \
+
+Created by Anthony Demanuele on 3/3/11 12:42:36 AM
+
+I implemented the example above but I still have problems with @Get. On
+both Android or Java application I get a 'null' object when I do
+resource.retrieve();\
+ \
+If I do ClientResource.get().getText(), then I see part of returned
+object. (Therefore I am assuming server side is OK).\
+ \
+Can someone please guide me on how I can test/solve this please?\
+ \
+Thanks guys!
+
+Created by Jerome Louvel on 3/3/11 10:13:12 AM
+
+Do you mind posting again in the mailing list?\
+http://www.restlet.org/community/lists\
+ \
+It appears that GAE changed their implementation and don't support HTTP
+chunked encoding which explains why "null" is now returned. There has
+been discussions in the list to solve this:\
+http://restlet.tigris.org/ds/viewMessage.do?dsForumId=4447&dsMessageId=2679469
+
+Created by Luis Pallares on 9/13/11 12:23:27 AM
+
+Hi, I just want to know if Reslet can be used if I dont provide the
+service with Java, I mean, I have this service
+(http://x.oule.co/api/v1/comment/?format=json : served by
+python/django/tastypie) and I want to consume it via Restlet, I did the
+test but I get "null" when resource.retrieve(); see my code:
+https://gist.github.com/1212634 -- I suspect about the serialization
+number in the descriptor clases (serialVersionUID). thanks in advance.
+
+Add a comment
+
+Please log in to be able to add comments.

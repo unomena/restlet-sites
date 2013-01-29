@@ -163,33 +163,33 @@
 
 	<target name="generate-templates" description="Generate template-based files.">
 		<!-- generate static files for the site : org.restlet.www -->
-		<fmpp sourceRoot="../modules/org.restlet.www/tmpl" outputRoot="${temp}/${www-restlet-org}" modes="ignore(**/.svn,**/Thumbs.db)" quiet="reallyQuiet">
+		<fmpp sourceRoot="../modules/org.restlet.www/" outputRoot="${temp}/${www-restlet-org}" modes="ignore(**/.svn,**/Thumbs.db)" quiet="reallyQuiet">
 			<data expandProperties="yes">
-            	labels:xml(../labels.xml)
-				hierarchy:xml(../hierarchy.xml)
+	            		labels:xml(labels.xml)
+				hierarchy:xml(hierarchy.xml)
 				restletDistributions: text(data/distributions.json)
 				restletVersions: text(data/versions.json)
 				restletQualifiers: text(data/qualifiers.json)
 				restletEditions: text(data/editions.json)
 				restletContributors: text(data/contributors.xml)
 				ant: antProperties()
-         	</data>
+			</data>
 			<include name="**/*" />
 			<exclude name="**/*.ftl" />
 		</fmpp>
 		<!-- generate static files for the site : www.restlet.com -->
-		<fmpp sourceencoding="UTF-8" outputencoding="UTF-8" sourceRoot="../modules/com.restlet.www/tmpl" outputRoot="${temp}/${www-restlet-com}" modes="ignore(**/.svn,**/Thumbs.db), copy(javascript/*.js, **/*.css)" quiet="reallyQuiet">
+		<fmpp sourceencoding="UTF-8" outputencoding="UTF-8" sourceRoot="../modules/com.restlet.www/" outputRoot="${temp}/${www-restlet-com}" modes="ignore(**/.svn,**/Thumbs.db), copy(javascript/*.js, **/*.css)" quiet="reallyQuiet">
 			<data expandProperties="yes">
-			hierarchy:xml(../hierarchy.xml)
-            messages:xml(../messages.xml)
-            labels:xml(../labels.xml)
-            language: en
-			header: ""
+				hierarchy:xml(hierarchy.xml)
+				messages:xml(messages.xml)
+				labels:xml(labels.xml)
+				language: en
+				header: ""
 			</data>
 			<localData>
-         	layer()
-            case(**/*.fr*, {language: fr})
-         </localData>
+         			layer()
+				case(**/*.fr*, {language: fr})
+         		</localData>
 			<include name="**/*" />
 			<exclude name="**/*.ftl" />
 		</fmpp>
@@ -198,7 +198,7 @@
 	<target name="generate-javadocs" if="do-javadoc" description="Generate the Javadocs.">
 		<delete dir="${javadocs}" verbose="false" quiet="true" includeEmptyDirs="true" />
 
-		<javadoc packagenames="com.noelios.*" sourcepath="${src}" destdir="${javadocs}" classpathref="main.path" author="true" version="true" use="true" windowtitle="Restlet Web server ${version-full}" doctitle="Restlet Web server ${version-full}" overview="${tmpl}/javadocs/overview.html" stylesheetfile="${tmpl}/javadocs/stylesheet.css" verbose="false">
+		<javadoc packagenames="com.restlet.*" sourcepath="${src}" destdir="${javadocs}" classpathref="main.path" author="true" version="true" use="true" windowtitle="Restlet Web server ${version-full}" doctitle="Restlet Web server ${version-full}" overview="${tmpl}/javadocs/overview.html" stylesheetfile="${tmpl}/javadocs/stylesheet.css" verbose="false">
 			<bottom>
 				<![CDATA[<i>Copyright &#169; 2005-2013 Restlet. All Rights Reserved.</i>]]>
          </bottom>
