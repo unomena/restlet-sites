@@ -1,4 +1,5 @@
 var cBranches;
+var cReleases;
 var cEditions;
 var cTypesDistribution;
 var tabDir;
@@ -14,6 +15,18 @@ function loadBranches() {
      };
      cBranches.children().click(function() {
           setBranch(this.id);
+          refresh();
+     });
+};
+function loadReleases() {
+	cReleases.empty();
+     for (var i = 0; v = versions[i]; i++) {
+    	 if(v.minorVersion == branch) {
+        	 cReleases.append('<li id="' + v.id + '">' + v.fullVersionCompact + '</li>');    		 
+    	 }
+     };
+     cReleases.children().click(function() {
+          setVersion(this.id);
           refresh();
      });
 };
@@ -111,8 +124,9 @@ function setDownloadButton(){
 	}
 }
 
-function init(idBranches, idEditions, idTypesDistribution, idDir) {
+function init(idBranches, idReleases, idEditions, idTypesDistribution, idDir) {
 	cBranches = $("#" + idBranches);
+	cReleases = $("#" + idReleases);
 	cEditions = $("#" + idEditions);
 	cTypesDistribution = $("#" + idTypesDistribution);
 	tabDir = $("#" + idDir);
