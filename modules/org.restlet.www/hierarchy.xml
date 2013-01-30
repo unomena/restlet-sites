@@ -47,6 +47,9 @@
 			<section id="index">
 				<label>Tutorial</label>
 			</section>
+            <section id="guide">
+                <label>User guide</label>
+            </section>
 			<section id="javadocs">
 				<label>Javadocs</label>
 			</section>

@@ -74,28 +74,11 @@
 		<attribute name="edition" />
 		<sequential>
 			<!-- get the javadocs -->
-			<wc-copy-directory src-project="restlet"
-				src-project-type="@{restlet-project-type}"
-				src-project-minor-version="@{restlet-version-minor}"
-				src-project-compact-version="@{restlet-version-compact}"
-				src-project-directory="build/dist/classic/restlet-@{restlet-version-compact}/@{edition}/docs"
-				dest-directory="${temp}/${www-restlet-org}/documentation/@{dest-directory-name}"
-				overwrite="true" />
+			<wc-copy-directory src-project="restlet" src-project-type="@{restlet-project-type}" src-project-minor-version="@{restlet-version-minor}" src-project-compact-version="@{restlet-version-compact}" src-project-directory="build/dist/classic/restlet-@{restlet-version-compact}/@{edition}/docs" dest-directory="${temp}/${www-restlet-org}/documentation/@{dest-directory-name}" overwrite="true" />
 			<!-- get the changes.txt file -->
-			<wc-copy src-project="restlet"
-				src-project-type="@{restlet-project-type}"
-				src-project-minor-version="@{restlet-version-minor}"
-				src-project-compact-version="@{restlet-version-compact}"
-				src-project-file="build/dist/classic/restlet-@{restlet-version-compact}/@{edition}/changes.txt"
-				dest-file="${temp}/${www-restlet-org}/documentation/@{dest-directory-name}/changes.txt" overwrite="true" />
+			<wc-copy src-project="restlet" src-project-type="@{restlet-project-type}" src-project-minor-version="@{restlet-version-minor}" src-project-compact-version="@{restlet-version-compact}" src-project-file="build/dist/classic/restlet-@{restlet-version-compact}/@{edition}/changes.txt" dest-file="${temp}/${www-restlet-org}/documentation/@{dest-directory-name}/changes.txt" overwrite="true" />
 			<!-- get the license file -->
-			<wc-copy src-project="restlet"
-				src-project-type="@{restlet-project-type}"
-				src-project-minor-version="@{restlet-version-minor}"
-				src-project-compact-version="@{restlet-version-compact}"
-				src-project-file="build/tmpl/text/license.txt"
-				dest-file="${temp}/${www-restlet-org}/documentation/@{dest-directory-name}/license.txt"
-				overwrite="true" />
+			<wc-copy src-project="restlet" src-project-type="@{restlet-project-type}" src-project-minor-version="@{restlet-version-minor}" src-project-compact-version="@{restlet-version-compact}" src-project-file="build/tmpl/text/license.txt" dest-file="${temp}/${www-restlet-org}/documentation/@{dest-directory-name}/license.txt" overwrite="true" />
 		</sequential>
 	</macrodef>
 
@@ -163,36 +146,52 @@
 
 	<target name="generate-templates" description="Generate template-based files.">
 		<!-- generate static files for the site : org.restlet.www -->
-		<fmpp sourceRoot="../modules/org.restlet.www/" outputRoot="${temp}/${www-restlet-org}" modes="ignore(**/.svn,**/Thumbs.db)" quiet="reallyQuiet">
+		<mkdir dir="${temp}/owr" />
+		<mkdir dir="${temp}/cwr" />
+		<copy todir="${temp}/owr">
+			<fileset dir="../modules/org.restlet.www/" includes="**/*" />
+		</copy>
+		<!-- treat with pandoc -->
+		<exec executable="sh" osfamily="unix">
+            <arg value="${tmpl}/md/unixtohtml.sh" />
+			<arg value="${temp}/owr" />
+            <arg value="${tmpl}/md/userguide.tmpl" />
+		</exec>
+		<fmpp sourceRoot="${temp}/owr" outputRoot="${temp}/${www-restlet-org}" modes="ignore(**/.svn,**/Thumbs.db)"  quiet="reallyQuiet">
 			<data expandProperties="yes">
-	            		labels:xml(labels.xml)
-				hierarchy:xml(hierarchy.xml)
-				restletDistributions: text(data/distributions.json)
-				restletVersions: text(data/versions.json)
-				restletQualifiers: text(data/qualifiers.json)
-				restletEditions: text(data/editions.json)
-				restletContributors: text(data/contributors.xml)
-				ant: antProperties()
-			</data>
+                labels:xml(labels.xml)
+                hierarchy:xml(hierarchy.xml)
+                restletDistributions: text(data/distributions.json)
+                restletVersions: text(data/versions.json)
+                restletQualifiers: text(data/qualifiers.json)
+                restletEditions: text(data/editions.json)
+                restletContributors: text(data/contributors.xml)
+                ant: antProperties()
+            </data>
 			<include name="**/*" />
 			<exclude name="**/*.ftl" />
 		</fmpp>
+		<delete dir="${temp}/owr" />
 		<!-- generate static files for the site : www.restlet.com -->
-		<fmpp sourceencoding="UTF-8" outputencoding="UTF-8" sourceRoot="../modules/com.restlet.www/" outputRoot="${temp}/${www-restlet-com}" modes="ignore(**/.svn,**/Thumbs.db), copy(javascript/*.js, **/*.css)" quiet="reallyQuiet">
+		<copy todir="${temp}/cwr">
+			<fileset dir="../modules/com.restlet.www/" includes="**/*" />
+		</copy>
+		<fmpp sourceencoding="UTF-8" outputencoding="UTF-8" sourceRoot="${temp}/cwr" outputRoot="${temp}/${www-restlet-com}" modes="ignore(**/.svn,**/Thumbs.db), copy(javascript/*.js, **/*.css)" quiet="reallyQuiet">
 			<data expandProperties="yes">
-				hierarchy:xml(hierarchy.xml)
-				messages:xml(messages.xml)
-				labels:xml(labels.xml)
-				language: en
-				header: ""
-			</data>
+                hierarchy:xml(hierarchy.xml)
+                messages:xml(messages.xml)
+                labels:xml(labels.xml)
+                language: en
+                header: ""
+            </data>
 			<localData>
-         			layer()
-				case(**/*.fr*, {language: fr})
-         		</localData>
+			    layer()
+                case(**/*.fr*, {language: fr})
+			</localData>
 			<include name="**/*" />
 			<exclude name="**/*.ftl" />
 		</fmpp>
+		<delete dir="${temp}/cwr" />
 	</target>
 
 	<target name="generate-javadocs" if="do-javadoc" description="Generate the Javadocs.">
@@ -221,19 +220,19 @@
 
 <target name="integrate-restlet" depends="integrate-restlet-stable, integrate-restlet-testing, integrate-restlet-unstable" if="do-integrate" description="Retrieve from the Restlet project.">
 	<!-- get the favicon.ico file -->
-<!--
-	<wc-copy src-project="restlet" src-project-type="${stable.restlet-project-type}" src-project-minor-version="${stable.restlet-version-minor}" src-project-compact-version="${stable.restlet-version-compact}" src-project-file="build/images/ico/favicon.ico" dest-file="${temp}/${www-restlet-org}/favicon.ico" overwrite="true" />
+	<!--
+    <wc-copy src-project="restlet" src-project-type="${stable.restlet-project-type}" src-project-minor-version="${stable.restlet-version-minor}" src-project-compact-version="${stable.restlet-version-compact}" src-project-file="build/images/ico/favicon.ico" dest-file="${temp}/${www-restlet-org}/favicon.ico" overwrite="true" />
 -->
 </target>
 
 <!-- Integrate stable release. -->
 <target name="integrate-restlet-stable" if="do-integrate" description="Retrieve from the Restlet's stable release.">
-    <integrate-restlet-edition dest-directory-name="${stable.restlet-version-minor}/android" restlet-project-type="${stable.restlet-project-type}" restlet-version-compact="${stable.restlet-version-compact}" restlet-version-minor="${stable.restlet-version-minor}" edition="android" />
-    <integrate-restlet-edition dest-directory-name="${stable.restlet-version-minor}/gae" restlet-project-type="${stable.restlet-project-type}" restlet-version-compact="${stable.restlet-version-compact}" restlet-version-minor="${stable.restlet-version-minor}" edition="gae" />
-    <integrate-restlet-edition dest-directory-name="${stable.restlet-version-minor}/gwt" restlet-project-type="${stable.restlet-project-type}" restlet-version-compact="${stable.restlet-version-compact}" restlet-version-minor="${stable.restlet-version-minor}" edition="gwt" />
-    <integrate-restlet-edition dest-directory-name="${stable.restlet-version-minor}/jee" restlet-project-type="${stable.restlet-project-type}" restlet-version-compact="${stable.restlet-version-compact}" restlet-version-minor="${stable.restlet-version-minor}" edition="jee" />
-    <integrate-restlet-edition dest-directory-name="${stable.restlet-version-minor}/jse" restlet-project-type="${stable.restlet-project-type}" restlet-version-compact="${stable.restlet-version-compact}" restlet-version-minor="${stable.restlet-version-minor}" edition="jse" />
-    <integrate-restlet-edition dest-directory-name="${stable.restlet-version-minor}/osgi" restlet-project-type="${stable.restlet-project-type}" restlet-version-compact="${stable.restlet-version-compact}" restlet-version-minor="${stable.restlet-version-minor}" edition="osgi" />
+	<integrate-restlet-edition dest-directory-name="${stable.restlet-version-minor}/android" restlet-project-type="${stable.restlet-project-type}" restlet-version-compact="${stable.restlet-version-compact}" restlet-version-minor="${stable.restlet-version-minor}" edition="android" />
+	<integrate-restlet-edition dest-directory-name="${stable.restlet-version-minor}/gae" restlet-project-type="${stable.restlet-project-type}" restlet-version-compact="${stable.restlet-version-compact}" restlet-version-minor="${stable.restlet-version-minor}" edition="gae" />
+	<integrate-restlet-edition dest-directory-name="${stable.restlet-version-minor}/gwt" restlet-project-type="${stable.restlet-project-type}" restlet-version-compact="${stable.restlet-version-compact}" restlet-version-minor="${stable.restlet-version-minor}" edition="gwt" />
+	<integrate-restlet-edition dest-directory-name="${stable.restlet-version-minor}/jee" restlet-project-type="${stable.restlet-project-type}" restlet-version-compact="${stable.restlet-version-compact}" restlet-version-minor="${stable.restlet-version-minor}" edition="jee" />
+	<integrate-restlet-edition dest-directory-name="${stable.restlet-version-minor}/jse" restlet-project-type="${stable.restlet-project-type}" restlet-version-compact="${stable.restlet-version-compact}" restlet-version-minor="${stable.restlet-version-minor}" edition="jse" />
+	<integrate-restlet-edition dest-directory-name="${stable.restlet-version-minor}/osgi" restlet-project-type="${stable.restlet-project-type}" restlet-version-compact="${stable.restlet-version-compact}" restlet-version-minor="${stable.restlet-version-minor}" edition="osgi" />
 </target>
 
 <!-- Integrate testing release. -->
