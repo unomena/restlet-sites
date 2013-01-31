@@ -8,7 +8,7 @@
 		<label>Discover Restlet Framework</label>
 		<title>Discover</title>
 		<sections>
-			<section id="index">
+			<section id="features">
 				<label>Features</label>
 			</section>
 			<section id="quotes">
@@ -26,10 +26,10 @@
 		<label>Download Restlet Framework</label>
 		<title>Download</title>
 		<sections>
-			<section id="index">
+			<section id="current">
 				<label>Current releases</label>
 			</section>
-			<section id="archives">
+			<section id="past">
 				<label>Past releases</label>
 			</section>
 			<section id="legal">
@@ -44,7 +44,7 @@
 		<label>Learn Restlet Framework</label>
 		<title>Learn</title>
 		<sections>
-			<section id="index">
+			<section id="tutorial">
 				<label>Tutorial</label>
 			</section>
             <section id="guide">
