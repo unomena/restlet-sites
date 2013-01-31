@@ -17,7 +17,6 @@ import org.restlet.routing.VirtualHost;
 
 import com.restlet.frontend.web.applications.MavenRestletOrg;
 import com.restlet.frontend.web.applications.P2RestletOrg;
-import com.restlet.frontend.web.applications.RedirectApplication;
 import com.restlet.frontend.web.applications.WwwRestletCom;
 import com.restlet.frontend.web.applications.WwwRestletOrg;
 
@@ -155,7 +154,7 @@ public class WebComponent extends Component {
                 "http://restlet.tigris.org{rr}",
                 Redirector.MODE_CLIENT_TEMPORARY, properties);
         getHosts().add(host);
-        host.attach("/fisheye/", new RedirectApplication(
+        host.attach("/fisheye/", new Redirector(getContext(),
                 "http://restlet.net/source/browse/restlet/",
                 Redirector.MODE_CLIENT_PERMANENT));
         getLogger()
@@ -230,7 +229,7 @@ public class WebComponent extends Component {
         setHostDomain(result, host, properties);
         result.setName(host);
         result.setHostPort("80|" + Integer.toString(port));
-        result.attach(new RedirectApplication(redirection, mode));
+        result.attach(new Redirector(getContext(), redirection, mode));
         getLogger().info(
                 result.getHostDomain() + " redirected to \"" + redirection
                         + "\" on port " + result.getHostPort());

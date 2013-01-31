@@ -132,3 +132,22 @@
                         <!-- download link -->
 </div>
 </#global>
+
+<#global userGuideBranchSwitch>
+<div class='section' style="float:right">
+    <form class="form-horizontal">
+        <div class="control-group">
+            <label class="control-label">Branch:</label>
+            <div class="controls">
+                <div class="btn-group">
+                    <button id="cBranch-bt" class="btn no-radius" data-toggle="dropdown"><strong>Stable</strong></button>
+                    <button class="btn dropdown-toggle no-radius" data-toggle="dropdown"><strong><span class="caret"></span></strong></button>
+                    <ul id="cBranch" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+                        <!-- dropdown menu links -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</#global>
