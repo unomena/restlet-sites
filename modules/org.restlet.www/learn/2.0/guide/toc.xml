@@ -1,179 +1,174 @@
 <navigationTree>
-	<doc id="21-restlet" label="Introduction" dirname="introduction">
-		<doc id="22-restlet" label="Features" name="features" />
-		<doc id="171-restlet" label="What's new" name="whats-new">
-			<doc id="62-restlet" label="API" name="api" />
-			<doc id="61-restlet" label="Engine" name="engine" />
-			<doc id="63-restlet" label="Extensions" name="extensions" />
-			<doc id="344-restlet" label="Editions" name="editions" />
-			<doc id="60-restlet" label="Misc" name="misc" />
-			<doc id="155-restlet" label="Migration" name="migration" />
+	<doc id="21" label="Introduction" dirname="introduction">
+		<doc id="22" label="Features" name="features" />
+		<doc id="171" label="What's new" dirname="whats-new">
+			<doc id="62" label="API" name="api" />
+			<doc id="61" label="Engine" name="engine" />
+			<doc id="63" label="Extensions" name="extensions" />
+			<doc id="344" label="Editions" name="editions" />
+			<doc id="60" label="Misc" name="misc" />
+			<doc id="155" label="Migration" name="migration" />
 		</doc>
-		<doc id="318-restlet" label="First steps" name="firsts-steps">
-			<doc id="319-restlet" label="First server" name="first-server" />
-			<doc id="320-restlet" label="First client" name="first-client" />
-			<doc id="303-restlet" label="First application"
-				name="first-application/>
-    </doc>
-    <doc id=" 3 restlet "
-				label="Architecture" name="architecture">
-				<doc id="116-restlet" label="Presentation layer" name="presentation-layer" />
-				<doc id="118-restlet" label="Persistence layer" name="persistence-layer" />
-			</doc>
-			<doc id="192-restlet" label="Getting started" name="getting-started">
-				<doc id="93-restlet" label="With Eclipse IDE" name="eclipse-ide" />
-				<doc id="92-restlet" label="With Maven" name="maven" />
-				<doc id="381-restlet" label="With Maven and Spring" name="maven-spring" />
-				<doc id="102-restlet" label="Debugging tools" name="debugging-tools" />
-			</doc>
+		<doc id="318" label="First steps" dirname="first-steps">
+			<doc id="319" label="First server" name="first-server" />
+			<doc id="320" label="First client" name="first-client" />
+			<doc id="303" label="First application" name="first-application" />
 		</doc>
-		<doc id="27-restlet" label="Core" name="core">
-			<doc id="324-restlet" label="Introduction" name="introduction">
-				<doc id="130-restlet" label="Mapping HTTP headers" name="http-headers-mapping" />
-			</doc>
-			<doc id="325-restlet" label="Base package" name="base">
-				<doc id="37-restlet" label="Connectors" name="connectors">
-					<doc id="38-restlet" label="Server connectors" name="server" />
-					<doc id="39-restlet" label="Client connectors" name="client" />
-				</doc>
-			</doc>
-			<doc id="330-restlet" label="Data package" name="data">
-				<doc id="58-restlet" label="Getting parameter values" name="parameters" />
-			</doc>
-			<doc id="327-restlet" label="Representation package" name="representation" />
-			<doc id="328-restlet" label="Resource package" name="resource">
-				<doc id="285-restlet" label="Client resources" name="client" />
-				<doc id="286-restlet" label="Server resources" name="server" />
-			</doc>
-			<doc id="326-restlet" label="Routing package" name="routing">
-				<doc id="374-restlet" label="Serving static files" name="static-files" />
-				<doc id="375-restlet" label="URI rewriting and redirection"
-					name="redirection" />
-				<doc id="376-restlet" label="Routers and hierarchical URIs"
-					name="hierarchical-uris" />
-				<doc id="377-restlet" label="Reaching target resources" name="target-resources" />
-				<doc id="380-restlet" label="Extracting attributes" name="attributes" />
-			</doc>
-			<doc id="46-restlet" label="Security package" name="security">
-				<doc id="112-restlet" label="Authentication" name="authentication">
-					<doc id="364-restlet" label="NTML authentication" name="ntml" />
-				</doc>
-				<doc id="113-restlet" label="Authorization" name="authorization" />
-				<doc id="213-restlet" label="Confidentiality (HTTPS)" name="https" />
-			</doc>
-			<doc id="331-restlet" label="Service package" name="service">
-				<doc id="203-restlet" label="Connector service" name="connector" />
-				<doc id="360-restlet" label="ConverterService" name="converter" />
-				<doc id="204-restlet" label="Decoder service" name="decoder" />
-				<doc id="201-restlet" label="Log service" name="log" />
-				<doc id="205-restlet" label="Metadata service" name="metadata" />
-				<doc id="208-restlet" label="Range service" name="range" />
-				<doc id="202-restlet" label="Status service" name="status" />
-				<doc id="206-restlet" label="Task service" name="task" />
-				<doc id="207-restlet" label="Tunnel service" name="tunnel" />
-			</doc>
-			<doc id="329-restlet" label="Util package" name="util" />
-			<doc id="48-restlet" label="Engine" name="engine">
-				<doc id="86-restlet" label="Internal connectors" name="internal-connectors">
-					<doc id="90-restlet" label="Local connectors" name="local" />
-					<doc id="87-restlet" label="FILE connector" name="file" />
-					<doc id="88-restlet" label="CLAP connector" name="clap" />
-					<doc id="184-restlet" label="HTTP connector" name="http" />
-					<doc id="45-restlet" label="RIAP connector" name="riap" />
-				</doc>
-				<doc id="366-restlet" label="Pluggable authenticators" name="pluggable-authenticators" />
+		<doc id="3" label="Architecture" dirname="architecture">
+			<doc id="116" label="Presentation layer" name="presentation-layer" />
+			<doc id="118" label="Persistence layer" name="persistence-layer" />
+		</doc>
+		<doc id="192" label="Getting started" dirname="getting-started">
+			<doc id="93" label="With Eclipse IDE" name="eclipse-ide" />
+			<doc id="92" label="With Maven" name="maven" />
+			<doc id="381" label="With Maven and Spring" name="maven-spring" />
+			<doc id="102" label="Debugging tools" name="debugging-tools" />
+		</doc>
+	</doc>
+	<doc id="27" label="Core" dirname="core">
+		<doc id="324" label="Introduction" dirname="introduction">
+			<doc id="130" label="Mapping HTTP headers" name="http-headers-mapping" />
+		</doc>
+		<doc id="325" label="Base package" dirname="base">
+			<doc id="37" label="Connectors" dirname="connectors">
+				<doc id="38" label="Server connectors" name="server" />
+				<doc id="39" label="Client connectors" name="client" />
 			</doc>
 		</doc>
-		<doc id="275-restlet" label="Editions" name="editions">
-			<doc id="311-restlet" label="Java SE" name="jse">
-				<doc id="101-restlet" label="Logging configuration" name="logging" />
+		<doc id="330" label="Data package" dirname="data">
+			<doc id="58" label="Getting parameter values" name="parameters" />
+		</doc>
+		<doc id="327" label="Representation package" name="representation" />
+		<doc id="328" label="Resource package" dirname="resource">
+			<doc id="285" label="Client resources" name="client" />
+			<doc id="286" label="Server resources" name="server" />
+		</doc>
+		<doc id="326" label="Routing package" dirname="routing">
+			<doc id="374" label="Serving static files" name="static-files" />
+			<doc id="375" label="URI rewriting and redirection" name="redirection" />
+			<doc id="376" label="Routers and hierarchical URIs" name="hierarchical-uris" />
+			<doc id="377" label="Reaching target resources" name="target-resources" />
+			<doc id="380" label="Extracting attributes" name="attributes" />
+		</doc>
+		<doc id="46" label="Security package" dirname="security">
+			<doc id="112" label="Authentication" dirname="authentication">
+				<doc id="364" label="NTML authentication" name="ntml" />
 			</doc>
-			<doc id="312-restlet" label="Java EE" name="jee">
-				<doc id="379-restlet" label="Client connectors" name="client-connectors" />
+			<doc id="113" label="Authorization" name="authorization" />
+			<doc id="213" label="Confidentiality (HTTPS)" name="https" />
+		</doc>
+		<doc id="331" label="Service package" dirname="service">
+			<doc id="203" label="Connector service" name="connector" />
+			<doc id="360" label="ConverterService" name="converter" />
+			<doc id="204" label="Decoder service" name="decoder" />
+			<doc id="201" label="Log service" name="log" />
+			<doc id="205" label="Metadata service" name="metadata" />
+			<doc id="208" label="Range service" name="range" />
+			<doc id="202" label="Status service" name="status" />
+			<doc id="206" label="Task service" name="task" />
+			<doc id="207" label="Tunnel service" name="tunnel" />
+		</doc>
+		<doc id="329" label="Util package" name="util" />
+		<doc id="48" label="Engine" dirname="engine">
+			<doc id="86" label="Internal connectors" dirname="internal-connectors">
+				<doc id="90" label="Local connectors" name="local" />
+				<doc id="87" label="FILE connector" name="file" />
+				<doc id="88" label="CLAP connector" name="clap" />
+				<doc id="184" label="HTTP connector" name="http" />
+				<doc id="45" label="RIAP connector" name="riap" />
 			</doc>
-			<doc id="252-restlet" label="Google App Engine" name="gae" />
-			<doc id="144-restlet" label="Google Web Tookit" name="gwt">
-				<doc id="185-restlet" label="Architecture flexibility" name="architecture" />
-				<doc id="186-restlet" label="Setting up a project" name="setup" />
-				<doc id="187-restlet" label="Invoking server side code" name="server-code-invocation" />
-				<doc id="188-restlet" label="Examples" name="examples" />
-				<doc id="189-restlet" label="Authenticating requests" name="authentication" />
-				<doc id="190-restlet" label="Working with JSON" name="json" />
-				<doc id="191-restlet" label="Working with XML" name="xml" />
-				<doc id="209-restlet" label="Tips and tricks" name="tips" />
-				<doc id="234-restlet" label="Deploy GWT sample application in Servlet container"
-					name="deployment" />
-			</doc>
-			<doc id="266-restlet" label="Android" name="android">
-				<doc id="269-restlet" label="Sample application" name="example" />
+			<doc id="366" label="Pluggable authenticators" dirname="pluggable-authenticators" />
+		</doc>
+	</doc>
+	<doc id="275" label="Editions" dirname="editions">
+		<doc id="311" label="Java SE" dirname="jse">
+			<doc id="101" label="Logging configuration" name="logging" />
+		</doc>
+		<doc id="312" label="Java EE" dirname="jee">
+			<doc id="379" label="Client connectors" name="client-connectors" />
+		</doc>
+		<doc id="252" label="Google App Engine" dirname="gae" />
+		<doc id="144" label="Google Web Tookit" dirname="gwt">
+			<doc id="185" label="Architecture flexibility" name="architecture" />
+			<doc id="186" label="Setting up a project" name="setup" />
+			<doc id="187" label="Invoking server side code" name="server-code-invocation" />
+			<doc id="188" label="Examples" name="examples" />
+			<doc id="189" label="Authenticating requests" name="authentication" />
+			<doc id="190" label="Working with JSON" name="json" />
+			<doc id="191" label="Working with XML" name="xml" />
+			<doc id="209" label="Tips and tricks" name="tips" />
+			<doc id="234" label="Deploy GWT sample application in Servlet container"
+				name="deployment" />
+		</doc>
+		<doc id="266" label="Android" dirname="android">
+			<doc id="269" label="Sample application" name="example" />
+		</doc>
+	</doc>
+	<doc id="28" label="Extensions" dirname="extensions">
+		<doc id="313" label="Editions matrix" name="editions-matrix" />
+		<doc id="65" label="Atom" name="atom" />
+		<doc id="314" label="Crypto" name="crypto" />
+		<doc id="64" label="FileUpload" name="fileupload" />
+		<doc id="66" label="FreeMarker" name="freemarker" />
+		<doc id="73" label="Grizzly" name="grizzly" />
+		<doc id="315" label="GWT" name="gwt" />
+		<doc id="75" label="HTTP Client" name="httpclient" />
+		<doc id="293" label="JAAS" name="jaas" />
+		<doc id="299" label="Jackson" name="jackson" />
+		<doc id="76" label="JavaMail" name="javamail" />
+		<doc id="67" label="JAXB" name="jaxb" />
+		<doc id="57" label="JAX-RS" name="jax-rs" />
+		<doc id="77" label="JDBC" name="jdbc" />
+		<doc id="78" label="Jetty" dirname="jetty">
+			<doc id="55" label="Embedding Jetty &amp; AJP" name="ajp" />
+		</doc>
+		<doc id="68" label="JiBX" name="jibx" />
+		<doc id="69" label="JSON" name="json" />
+		<doc id="229" label="Lucene" name="lucene" />
+		<doc id="79" label="Net" name="net" />
+		<doc id="296" label="Netty" name="netty" />
+		<doc id="287" label="OData" dirname="odata">
+			<doc id="288" label="Tutorial" name="tutorial" />
+		</doc>
+		<doc id="270" label="RDF" dirname="rdf">
+			<doc id="245" label="Sample application" name="example" />
+		</doc>
+		<doc id="242" label="ROME" name="rome" />
+		<doc id="241" label="Scripturian" name="scripturian" />
+		<doc id="81" label="Servlet" name="servlet" />
+		<doc id="82" label="Simple" name="simple" />
+		<doc id="316" label="SLF4J" name="slf4j" />
+		<doc id="70" label="Spring" dirname="spring">
+			<doc id="194" label="Integration modes" name="integration" />
+			<doc id="195" label="Configuring Restlet beans" name="configuring" />
+			<doc id="196" label="A complete example" name="example" />
+			<doc id="197" label="Configuration of Restlet Resources" name="resources-configuration" />
+		</doc>
+		<doc id="153" label="SSL" name="ssl" />
+		<doc id="71" label="Velocity" name="velocity" />
+		<doc id="72" label="WADL" name="wadl" />
+		<doc id="84" label="XDB" dirname="xdb">
+			<doc id="131" label="Architecture - Introduction" name="architecture" />
+			<doc id="132" label="Installing" name="installation" />
+			<doc id="133" label="Testing" name="test" />
+			<doc id="134" label="FAQ" name="faw" />
+			<doc id="135" label="Others" name="others" />
+			<doc id="138" label="Lucene/Maven" dirname="lucen-maven">
+				<doc id="140" label="Lucene/Maven - Running/Testing" name="run-test" />
+				<doc id="141" label="Lucene/Maven - Todo List" name="todo" />
+				<doc id="139" label="Lucene/Maven - Services implemented" name="services" />
 			</doc>
 		</doc>
-		<doc id="28-restlet" label="Extensions" name="extensions">
-			<doc id="313-restlet" label="Editions matrix" name="editions-matrix" />
-			<doc id="65-restlet" label="Atom" name="atom" />
-			<doc id="314-restlet" label="Crypto" name="crypto" />
-			<doc id="64-restlet" label="FileUpload" name="fileupload" />
-			<doc id="66-restlet" label="FreeMarker" name="freemarker" />
-			<doc id="73-restlet" label="Grizzly" name="grizzly" />
-			<doc id="315-restlet" label="GWT" name="gwt" />
-			<doc id="75-restlet" label="HTTP Client" name="httpclient" />
-			<doc id="293-restlet" label="JAAS" name="jaas" />
-			<doc id="299-restlet" label="Jackson" name="jackson" />
-			<doc id="76-restlet" label="JavaMail" name="javamail" />
-			<doc id="67-restlet" label="JAXB" name="jaxb" />
-			<doc id="57-restlet" label="JAX-RS" name="jax-rs" />
-			<doc id="77-restlet" label="JDBC" name="jdbc" />
-			<doc id="78-restlet" label="Jetty" name="jetty">
-				<doc id="55-restlet" label="Embedding Jetty &amp; AJP" name="ajp" />
-			</doc>
-			<doc id="68-restlet" label="JiBX" name="jibx" />
-			<doc id="69-restlet" label="JSON" name="json" />
-			<doc id="229-restlet" label="Lucene" name="lucene" />
-			<doc id="79-restlet" label="Net" name="net" />
-			<doc id="296-restlet" label="Netty" name="netty" />
-			<doc id="287-restlet" label="OData" name="odata">
-				<doc id="288-restlet" label="Tutorial" name="tutorial" />
-			</doc>
-			<doc id="270-restlet" label="RDF" name="rdf">
-				<doc id="245-restlet" label="Sample application" name="example" />
-			</doc>
-			<doc id="242-restlet" label="ROME" name="rome" />
-			<doc id="241-restlet" label="Scripturian" name="scripturian" />
-			<doc id="81-restlet" label="Servlet" name="servlet" />
-			<doc id="82-restlet" label="Simple" name="simple" />
-			<doc id="316-restlet" label="SLF4J" name="slf4j" />
-			<doc id="70-restlet" label="Spring" name="spring">
-				<doc id="194-restlet" label="Integration modes" name="integration" />
-				<doc id="195-restlet" label="Configuring Restlet beans" name="configuring" />
-				<doc id="196-restlet" label="A complete example" name="example" />
-				<doc id="197-restlet" label="Configuration of Restlet Resources"
-					name="resources-configuration" />
-			</doc>
-			<doc id="153-restlet" label="SSL" name="ssl" />
-			<doc id="71-restlet" label="Velocity" name="velocity" />
-			<doc id="72-restlet" label="WADL" name="wadl" />
-			<doc id="84-restlet" label="XDB" name="xdb">
-				<doc id="131-restlet" label="Architecture - Introduction" name="architecture" />
-				<doc id="132-restlet" label="Installing" name="installation" />
-				<doc id="133-restlet" label="Testing" name="test" />
-				<doc id="134-restlet" label="FAQ" name="faw" />
-				<doc id="135-restlet" label="Others" name="others" />
-				<doc id="138-restlet" label="Lucene/Maven" name="lucen-maven">
-					<doc id="140-restlet" label="Lucene/Maven - Running/Testing"  name="run-test"/>
-					<doc id="141-restlet" label="Lucene/Maven - Todo List"  name="todo"/>
-					<doc id="139-restlet" label="Lucene/Maven - Services implemented"  name="services"/>
-				</doc>
-			</doc>
-			<doc id="317-restlet" label="XML"  name="xml"/>
-			<doc id="264-restlet" label="XStream"  name="xstream"/>
-		</doc>
-		<doc id="24-restlet" label="Misc" name="misc">
-			<doc id="180-restlet" label="Glossary"  name="glossary"/>
-			<doc id="333-restlet" label="FAQ"  name="faq"/>
-			<doc id="238-restlet" label="OSGi deployment"  name="osgi-deployment"/>
-			<doc id="182-restlet" label="Restlet.org example"  name="restlet.org-example"/>
-			<doc id="127-restlet" label="Groovy integration"  name="groovy-integration"/>
-			<doc id="52-restlet" label="Prototype.js integration"  name="prototype.js-integration"/>
-			<doc id="183-restlet" label="RESTful Web Services book"  name="rest-ful-web-services-book"/>
-		</doc>
+		<doc id="317" label="XML" name="xml" />
+		<doc id="264" label="XStream" name="xstream" />
+	</doc>
+	<doc id="24" label="Misc" dirname="misc">
+		<doc id="180" label="Glossary" name="glossary" />
+		<doc id="333" label="FAQ" name="faq" />
+		<doc id="238" label="OSGi deployment" name="osgi-deployment" />
+		<doc id="182" label="Restlet.org example" name="restlet.org-example" />
+		<doc id="127" label="Groovy integration" name="groovy-integration" />
+		<doc id="52" label="Prototype.js integration" name="prototype.js-integration" />
+		<doc id="183" label="RESTful Web Services book" name="rest-ful-web-services-book" />
+	</doc>
 </navigationTree>
