@@ -42,14 +42,3 @@ which extends the Parameter class and contains additional attributes:
         System.out.println("version = " + cookie.getVersion());
     }
 
-[Comments
-(0)](http://web.archive.org/web/20110821003119/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/330-restlet/58-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20110821003119/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/330-restlet/58-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

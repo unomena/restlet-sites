@@ -31,14 +31,3 @@ in several formats:
 -   Single HTML page
 -   PDF document
 
-[Comments
-(0)](http://web.archive.org/web/20120104074329/http://wiki.restlet.org/docs_1.1/2-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120104074329/http://wiki.restlet.org/docs_1.1/2-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

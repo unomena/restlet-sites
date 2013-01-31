@@ -28,14 +28,3 @@ subclass of StatusService that overrides some or all of the methods
 mentioned above. Then, just create a instance of your class and set it
 on your Component or Application via the setStatusService() methods.
 
-[Comments
-(0)](http://web.archive.org/web/20100920234747/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/331-restlet/202-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20100920234747/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/331-restlet/202-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

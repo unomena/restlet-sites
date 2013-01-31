@@ -54,14 +54,3 @@ Android edition
 Port of the Crypto, Apache HTTP Client, JAAS, JSON, Net extension
 (without FTP client).
 
-[Comments
-(0)](http://web.archive.org/web/20120118071412/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/171-restlet/344-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120118071412/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/171-restlet/344-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

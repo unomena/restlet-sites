@@ -28,14 +28,3 @@ parameters or attributes of the request, you will be able to contact
 your persistence backend in order to support your processing logic or
 the representations of your resources returned.
 
-[Comments
-(0)](http://web.archive.org/web/20101122083017/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/118-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20101122083017/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/118-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

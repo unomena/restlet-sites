@@ -150,14 +150,3 @@ can't refer to the parent application via RIAP at this point.
 Give these cases some special attention during your design, specially
 when porting stuff from other environments (e.g. Servlet app)
 
-[Comments
-(0)](http://web.archive.org/web/20120120203400/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/48-restlet/86-restlet/45-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120120203400/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/48-restlet/86-restlet/45-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

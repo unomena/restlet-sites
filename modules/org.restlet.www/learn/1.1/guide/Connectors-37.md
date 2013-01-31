@@ -164,14 +164,3 @@ SMTP, SMTPS, POP, POPS
 
 JDBC
 
-[Comments
-(0)](http://web.archive.org/web/20111231121013/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/37-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111231121013/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/37-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

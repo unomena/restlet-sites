@@ -800,14 +800,3 @@ read. It is a good demonstration of how adopting of REST and related
 standards such as HTTP and Atom facilitates the interoperability across
 programming languages and executions environments.
 
-[Comments
-(0)](http://web.archive.org/web/20110222202356/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet/288-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20110222202356/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet/288-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

@@ -269,14 +269,3 @@ Virtual Host
 Router of calls from Server connectors to Restlets. The attached
 Restlets are typically Applications.
 
-[Comments
-(0)](http://web.archive.org/web/20101124061557/http://wiki.restlet.org/docs_1.1/13-restlet/180-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20101124061557/http://wiki.restlet.org/docs_1.1/13-restlet/180-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

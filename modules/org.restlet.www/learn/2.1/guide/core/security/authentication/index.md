@@ -245,14 +245,3 @@ instance:
     // Should be 200.
     System.out.println(resource.getStatus());
 
-[Comments
-(0)](http://web.archive.org/web/20120213085736/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/46-restlet/112-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120213085736/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/46-restlet/112-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

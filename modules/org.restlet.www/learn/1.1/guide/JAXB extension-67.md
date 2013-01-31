@@ -16,14 +16,3 @@ The extension is composed of just one class, the JaxbRepresentation that
 extends the XmlRepresentation and is able to both serialize and
 deserialize a Java objects graph to/from an XML document.
 
-[Comments
-(0)](http://web.archive.org/web/20090204182149/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/67-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20090204182149/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/67-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

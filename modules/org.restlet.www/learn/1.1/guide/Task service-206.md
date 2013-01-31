@@ -22,14 +22,3 @@ own service instance, you can use the
 [wrap(ExecutorService)](http://web.archive.org/web/20110213065117/http://www.restlet.org/documentation/1.1/api/org/restlet/service/TaskService.html#wrap%28java.util.concurrent.ExecutorService%29)
 method to ensure that thread local variables are correctly set.
 
-[Comments
-(0)](http://web.archive.org/web/20110213065117/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/387-restlet/206-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20110213065117/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/387-restlet/206-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

@@ -149,14 +149,3 @@ will be part of the 1.1 release.
 
 TODO: check that last statement.
 
-[Comments
-(0)](http://web.archive.org/web/20090126045425/http://wiki.restlet.org/docs_1.1/13-restlet/48-restlet/86-restlet/45-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20090126045425/http://wiki.restlet.org/docs_1.1/13-restlet/48-restlet/86-restlet/45-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

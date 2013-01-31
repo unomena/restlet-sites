@@ -41,14 +41,3 @@ closeButton.addClickHandler(new ClickHandler() {
 });
 ~~~~
 
-[Comments
-(0)](http://web.archive.org/web/20111106194156/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/144-restlet/187-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111106194156/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/144-restlet/187-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

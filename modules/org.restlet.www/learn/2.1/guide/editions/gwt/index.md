@@ -56,14 +56,3 @@ negotiation on the Restlet server-side, your web API stays unchanged,
 able to support JSON, XML and other formats in parallel with no code
 change!
 
-[Comments
-(0)](http://web.archive.org/web/20111107115502/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/144-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111107115502/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/144-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

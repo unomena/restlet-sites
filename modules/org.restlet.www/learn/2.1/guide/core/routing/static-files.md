@@ -39,14 +39,3 @@ different index name, you can use the Application's
 ["metadataService"](http://web.archive.org/web/20110305012704/http://www.restlet.org/documentation/2.0/api/org/restlet/service/MetadataService.html)
 property.
 
-[Comments
-(0)](http://web.archive.org/web/20110305012704/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/326-restlet/374-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20110305012704/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/326-restlet/374-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

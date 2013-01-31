@@ -18,14 +18,3 @@ and at the [Javadocs of the
 API](http://web.archive.org/web/20120104202333/http://www.restlet.org/documentation/1.1/api/),
 both available on the Restlet Web site.
 
-[Comments
-(0)](http://web.archive.org/web/20120104202333/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120104202333/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

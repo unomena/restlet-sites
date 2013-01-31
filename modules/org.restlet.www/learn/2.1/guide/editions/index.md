@@ -19,14 +19,3 @@ them.
     Toolkit](http://web.archive.org/web/20120106073725/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/144-restlet.html "Restlet edition for Google Web Toolkit")
 -   [Android](http://web.archive.org/web/20120106073725/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/266-restlet.html "Restlet edition for Android")
 
-[Comments
-(0)](http://web.archive.org/web/20120106073725/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120106073725/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

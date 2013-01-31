@@ -88,14 +88,3 @@ connector of a resource:
     ClientResource resource = new ClientResource("http://localhost:8182/<resource>");
     resource.setNext(client);
 
-[Comments
-(0)](http://web.archive.org/web/20120120140825/http://wiki.restlet.org/docs_2.1/13-restlet/24-restlet/333-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120120140825/http://wiki.restlet.org/docs_2.1/13-restlet/24-restlet/333-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

@@ -25,14 +25,3 @@ Here is the list of dependencies for this extension:
 -   [Java Servlet
     2.4](http://web.archive.org/web/20090417023818/http://java.sun.com/products/servlet/)
 
-[Comments
-(0)](http://web.archive.org/web/20090417023818/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/81-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20090417023818/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/81-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

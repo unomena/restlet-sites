@@ -63,14 +63,3 @@ Here is a sample code that manually adds this client helper:
 
     Engine.getInstance().getRegisteredClients().add(0, new MyNtlmHttpClientHelper(new Client(Protocol.HTTP)));
 
-[Comments
-(0)](http://web.archive.org/web/20100920234809/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/46-restlet/364-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20100920234809/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/46-restlet/364-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

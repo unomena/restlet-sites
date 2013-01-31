@@ -323,14 +323,3 @@ add the following lines of text into the \<dependencies\> section.
       <version>2.1-M3</version>
     </dependency>
 
-[Comments
-(0)](http://web.archive.org/web/20111103123501/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/192-restlet/92-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111103123501/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/192-restlet/92-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

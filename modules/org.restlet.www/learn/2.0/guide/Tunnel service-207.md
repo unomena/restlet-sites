@@ -92,14 +92,3 @@ It allows to specify a complete "accept" header string for a set of
 the set of (key:value) pairs is the simple list of key:value just above
 the "accept" line.
 
-[Comments
-(0)](http://web.archive.org/web/20100921000041/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/331-restlet/207-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20100921000041/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/331-restlet/207-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

@@ -180,27 +180,3 @@ The following code fragment summarizes these changes.
         // other methods
     }
 
-[Comments
-(1)](http://web.archive.org/web/20091123210651/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/70-restlet/196-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20091123210651/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/70-restlet/196-restlet.html#)
-\
-
-Created by Evgeny Shepelyuk on 2/24/09 11:05:21 AM
-
-There's actually no need to retrieve SpringComponent bean in the main()
-method and call start() on it.\
- \
-it can be declared in Spring as following\
- \
-\<bean id="top" class="org.restlet.ext.spring.SpringComponent"
-init-method="start"\>\
-.....\
-\</bean\>\
- \
-So inside main() one just needs to create spring container.
-
-Add a comment
-
-Please log in to be able to add comments.

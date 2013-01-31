@@ -24,14 +24,3 @@ The web.xml file declares the client connectors in a dedicated
         [...] 
     </servlet>
 
-[Comments
-(0)](http://web.archive.org/web/20111118102610/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/312-restlet/379-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111118102610/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/312-restlet/379-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

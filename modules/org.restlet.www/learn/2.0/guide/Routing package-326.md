@@ -258,22 +258,3 @@ Here is the way to change the type of a variable:
     Map<String, Variable> routeVariables = route.getTemplate().getVariables();
     routeVariables.put("itemName", new Variable(Variable.TYPE_URI_WORD)); 
 
-[Comments
-(2)](http://web.archive.org/web/20110805003817/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/326-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20110805003817/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/326-restlet.html#)
-\
-
-Created by beeftime on 11/27/10 8:09:47 AM
-
-The "Matching Mode" paragraph and example uses: MODE\_STARTING\_WITH
-MODE\_START\_WITH, when the actual value is MODE\_STARTS\_WITH
-
-Created by Jerome Louvel on 11/27/10 2:18:19 PM
-
-Thansk, just fixed!
-
-Add a comment
-
-Please log in to be able to add comments.

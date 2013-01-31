@@ -253,14 +253,3 @@ dependencies jars):
 (application/zip, 623.6 kB,
 [info](http://web.archive.org/web/20111106212002/http://wiki.restlet.org/docs_2.1/277-restlet.html))
 
-[Comments
-(0)](http://web.archive.org/web/20111106212002/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/266-restlet/269-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111106212002/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/266-restlet/269-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

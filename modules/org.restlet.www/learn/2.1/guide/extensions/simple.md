@@ -26,14 +26,3 @@ The list of supported specific parameters is available in the javadocs:
 For additional details, please consult the
 [Javadocs](http://web.archive.org/web/20110309225844/http://www.restlet.org/documentation/2.0/jee/ext/org/restlet/ext/simple/package-summary.html).
 
-[Comments
-(0)](http://web.archive.org/web/20110309225844/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/82-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20110309225844/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/82-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

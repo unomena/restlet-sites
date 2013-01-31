@@ -18,14 +18,3 @@ specifications](http://web.archive.org/web/20111014100457/http://wiki.restlet.or
 and the
 [Javadocs](http://web.archive.org/web/20111014100457/http://www.restlet.org/documentation/2.1/jse/ext/org/restlet/ext/gwt/package-summary.html).
 
-[Comments
-(0)](http://web.archive.org/web/20111014100457/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/315-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111014100457/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/315-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

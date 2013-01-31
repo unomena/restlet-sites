@@ -18,14 +18,3 @@ engine](http://web.archive.org/web/20120110105401/http://velocity.apache.org/eng
 For additional details, please consult the
 [Javadocs](http://web.archive.org/web/20120110105401/http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/velocity/package-summary.html).
 
-[Comments
-(0)](http://web.archive.org/web/20120110105401/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/71-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120110105401/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/71-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

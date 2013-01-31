@@ -151,14 +151,3 @@ we will provide an update site. Restlet modules are already OSGi bundles
 so this should be straightforward. See the [specifications
 page](http://web.archive.org/web/20120107072210/http://wiki.restlet.org/developers/172-restlet/g1/417-restlet.html).
 
-[Comments
-(0)](http://web.archive.org/web/20120107072210/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/171-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120107072210/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/171-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

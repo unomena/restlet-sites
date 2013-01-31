@@ -70,14 +70,3 @@ From the Restlet.org web site
 -   [Acknowledgments](http://web.archive.org/web/20120104202328/http://www.restlet.org/about/acknowledgments),
     to give credits to important software or organizations we rely on
 
-[Comments
-(0)](http://web.archive.org/web/20120104202328/http://wiki.restlet.org/docs_1.1/13-restlet/21-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120104202328/http://wiki.restlet.org/docs_1.1/13-restlet/21-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

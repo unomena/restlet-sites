@@ -35,14 +35,3 @@ You can also set this information programmatically
     System.setProperty("http.proxyHost", "myproxyhost");
     System.setProperty("http.proxyPort", "3128");
 
-[Comments
-(0)](http://web.archive.org/web/20101211204602/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/79-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20101211204602/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/79-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

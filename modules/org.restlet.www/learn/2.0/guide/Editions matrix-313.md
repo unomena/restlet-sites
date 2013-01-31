@@ -337,14 +337,3 @@ X
 
 Integration with XStream 1.3.
 
-[Comments
-(0)](http://web.archive.org/web/20100922122542/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/313-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20100922122542/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/313-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

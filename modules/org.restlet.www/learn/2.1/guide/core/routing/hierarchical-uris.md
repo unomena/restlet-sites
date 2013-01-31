@@ -101,14 +101,3 @@ a task, have a look to the
 [Reference\#decode(String)](http://web.archive.org/web/20110306074752/http://www.restlet.org/documentation/2.0/api/org/restlet/data/Reference.html#decode%28java.lang.String%29)
 method.
 
-[Comments
-(0)](http://web.archive.org/web/20110306074752/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/326-restlet/376-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20110306074752/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/326-restlet/376-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

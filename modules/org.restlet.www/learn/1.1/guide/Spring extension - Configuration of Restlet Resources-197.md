@@ -96,14 +96,3 @@ from :pserver:anonymous@cvs.cs.luc.edu:/root/laufer/433, module
 ConfigurableRestletResource. Support for the missing configuration of
 representations tied to responses to non-GET requests is in the works.
 
-[Comments
-(0)](http://web.archive.org/web/20091123210656/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/70-restlet/197-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20091123210656/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/70-restlet/197-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

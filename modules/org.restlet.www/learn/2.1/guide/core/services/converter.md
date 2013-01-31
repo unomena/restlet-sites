@@ -316,14 +316,3 @@ an object
 
 APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML, APPLICATION\_JSON
 
-[Comments
-(0)](http://web.archive.org/web/20120122020802/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/360-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120122020802/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/360-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

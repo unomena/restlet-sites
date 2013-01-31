@@ -46,14 +46,3 @@ In order to change the title of the HTML document or the name of a
 property, you need to use the same namespace with the "label" name and
 the text you want to display as a value.
 
-[Comments
-(0)](http://web.archive.org/web/20111014100523/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/413-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111014100523/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/413-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

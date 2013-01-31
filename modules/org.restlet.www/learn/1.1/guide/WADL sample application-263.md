@@ -223,14 +223,3 @@ NB: in order to work properly, you will certainly have to updated your
 classpath with the archove of a convenient transformation engine. Xalan
 2.7.1 has been successfully tested.
 
-[Comments
-(0)](http://web.archive.org/web/20091124115935/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/72-restlet/263-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20091124115935/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/72-restlet/263-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

@@ -44,14 +44,3 @@ Servlet, Spring, OSGi, Guice, SLEE, etc.), your investment in Restlet is
 secured. With very little care, your Restlet applications can even be
 fully portable from one environment to the other.
 
-[Comments
-(0)](http://web.archive.org/web/20111013141100/http://wiki.restlet.org/docs_1.1/13-restlet/21-restlet/22-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111013141100/http://wiki.restlet.org/docs_1.1/13-restlet/21-restlet/22-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

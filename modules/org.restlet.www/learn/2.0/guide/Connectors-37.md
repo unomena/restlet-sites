@@ -274,14 +274,3 @@ No
 
 Stable
 
-[Comments
-(0)](http://web.archive.org/web/20111207085223/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/325-restlet/37-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111207085223/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/325-restlet/37-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

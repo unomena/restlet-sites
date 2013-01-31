@@ -274,17 +274,3 @@ Java Service Wrapper tool to execute our component as a Linux daemon.
 Thanks to Michael Mayer for the idea of providing the source code of
 this web site as a sample application.
 
-[Comments
-(1)](http://web.archive.org/web/20120120142220/http://wiki.restlet.org/docs_2.1/13-restlet/24-restlet/182-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120120142220/http://wiki.restlet.org/docs_2.1/13-restlet/24-restlet/182-restlet.html#)
-\
-
-Created by Dozie Agbai on 1/12/12 2:57:37 AM
-
-Great! Thanks for the code
-
-Add a comment
-
-Please log in to be able to add comments.

@@ -18,14 +18,3 @@ deserialize a Java objects graph to/from an XML document.
 For additional details, please consult the
 [Javadocs](http://web.archive.org/web/20100818112102/http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/jibx/package-summary.html).
 
-[Comments
-(0)](http://web.archive.org/web/20100818112102/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/68-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20100818112102/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/68-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

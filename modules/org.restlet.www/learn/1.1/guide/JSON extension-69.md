@@ -33,14 +33,3 @@ Here is the list of dependencies for this extension:
 -   [JSON
     2.0](http://web.archive.org/web/20090406195158/http://www.json.org/java/)
 
-[Comments
-(0)](http://web.archive.org/web/20090406195158/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/69-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20090406195158/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/69-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

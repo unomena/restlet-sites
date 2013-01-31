@@ -31,14 +31,3 @@ based on Restlet, is also using its [own Groovy
 DSL](http://web.archive.org/web/20120118084941/http://kauriproject.org/wiki/g1/149-kauri/g1/155-kauri.html)
 to configure the routing.
 
-[Comments
-(0)](http://web.archive.org/web/20120118084941/http://wiki.restlet.org/docs_2.1/13-restlet/24-restlet/127-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120118084941/http://wiki.restlet.org/docs_2.1/13-restlet/24-restlet/127-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

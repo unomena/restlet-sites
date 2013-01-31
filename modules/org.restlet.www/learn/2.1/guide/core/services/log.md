@@ -63,14 +63,3 @@ For custom access log format, see the syntax to use and the list of
 available variable names in
 [Template](http://web.archive.org/web/20120122020737/http://www.restlet.org/documentation/1.1/api/org/restlet/util/Resolver.html#createResolver%28org.restlet.data.Request,%20org.restlet.data.Response%29).
 
-[Comments
-(0)](http://web.archive.org/web/20120122020737/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/201-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120122020737/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/201-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

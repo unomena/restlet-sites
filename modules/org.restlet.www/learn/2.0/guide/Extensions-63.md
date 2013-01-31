@@ -176,14 +176,3 @@ XStream extension
 Added an "org.restlet.ext.xstream" extension providing transparent
 serialization between Java objects and XML or JSON.
 
-[Comments
-(0)](http://web.archive.org/web/20120119072245/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/171-restlet/63-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120119072245/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/171-restlet/63-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

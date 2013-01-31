@@ -16,14 +16,3 @@ kinds of authority :
 [CLAP client commons
 parameters](http://web.archive.org/web/20120120203405/http://www.restlet.org/documentation/2.0/jse/engine/index.html?org/restlet/engine/local/ClapClientHelper.html)
 
-[Comments
-(0)](http://web.archive.org/web/20120120203405/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/48-restlet/86-restlet/88-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120120203405/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/48-restlet/86-restlet/88-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

@@ -202,14 +202,3 @@ or directly to Stephan.Koops\<AT\>web.de !
 This extension is the result of a (german) [master
 thesis](http://web.archive.org/web/20101121120142/http://users.informatik.haw-hamburg.de/%7Eubicomp/arbeiten/master/koops.pdf).
 
-[Comments
-(0)](http://web.archive.org/web/20101121120142/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/57-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20101121120142/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/57-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

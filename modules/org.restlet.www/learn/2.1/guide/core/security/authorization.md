@@ -46,14 +46,3 @@ should be created and attached to the proper place in the routing graph.
 Therefore you wouldn't need to duplicate URI matching code or have to
 maintain URI templates in several places.
 
-[Comments
-(0)](http://web.archive.org/web/20120413152038/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/46-restlet/113-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120413152038/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/46-restlet/113-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

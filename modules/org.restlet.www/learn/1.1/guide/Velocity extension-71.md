@@ -29,14 +29,3 @@ Here is the list of dependencies for this extension:
 -   [Apache Commons Lang
     2.3](http://web.archive.org/web/20091123194531/http://jakarta.apache.org/commons/lang)
 
-[Comments
-(0)](http://web.archive.org/web/20091123194531/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/71-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20091123194531/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/71-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

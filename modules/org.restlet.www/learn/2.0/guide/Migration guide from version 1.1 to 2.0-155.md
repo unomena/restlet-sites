@@ -60,14 +60,3 @@ the ClientResource class to remotely call your server resource. See an
 example in this [first application
 page](http://web.archive.org/web/20120119082103/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet/303-restlet.html "First application").
 
-[Comments
-(0)](http://web.archive.org/web/20120119082103/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/171-restlet/155-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120119082103/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/171-restlet/155-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

@@ -95,14 +95,3 @@ the result that you will get:
     Routed part   : http://localhost:8182/trace
     Remaining part: /abc/def?param=123
 
-[Comments
-(0)](http://web.archive.org/web/20111013171019/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/378-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111013171019/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/378-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

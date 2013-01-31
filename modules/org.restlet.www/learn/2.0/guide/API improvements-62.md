@@ -176,14 +176,3 @@ extension now also relies on this improved conversion service!
 Converters were added for all relevant Restlet extensions, allowing
 usage of high-level classes in annotated Restlet interfaces for example.
 
-[Comments
-(0)](http://web.archive.org/web/20111219221217/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/171-restlet/62-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111219221217/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/171-restlet/62-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

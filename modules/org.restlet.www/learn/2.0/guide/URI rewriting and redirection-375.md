@@ -45,14 +45,3 @@ application. If the parameter is found, it is copied into the request
 attribute named "keywords", ready to be used by the Redirector when
 formatting its target URIs.
 
-[Comments
-(0)](http://web.archive.org/web/20110314165527/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/326-restlet/375-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20110314165527/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/326-restlet/375-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

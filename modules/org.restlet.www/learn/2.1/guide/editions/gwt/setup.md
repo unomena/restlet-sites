@@ -68,14 +68,3 @@ For *application*, supply the name of your Restlet Application, e.g.
 *component* via an `org.restlet.component` parameter, or any other
 permitted ServerServlet configuration parameter.
 
-[Comments
-(0)](http://web.archive.org/web/20111106194151/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/144-restlet/186-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111106194151/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/144-restlet/186-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

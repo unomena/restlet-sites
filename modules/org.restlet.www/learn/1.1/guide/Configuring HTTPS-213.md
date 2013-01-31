@@ -374,14 +374,3 @@ rudimentary starting point for using HTTPS with Restlet and not as a
 comprehensive guide to secure web applications. Comments and feedback
 welcome!
 
-[Comments
-(0)](http://web.archive.org/web/20120411173137/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/46-restlet/213-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120411173137/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/46-restlet/213-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

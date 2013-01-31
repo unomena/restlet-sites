@@ -64,14 +64,3 @@ RepresentationInfo\#element attribute:
     RepresentationInfo formRepresentation = new RepresentationInfo();
     formRepresentation.setXmlElement("yn:ResultSet");
 
-[Comments
-(0)](http://web.archive.org/web/20091124075912/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/72-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20091124075912/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/72-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

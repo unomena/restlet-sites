@@ -12,14 +12,3 @@ artifacts are published in a dedicated Maven repository. For
 configuration details, you can [read this
 page](http://web.archive.org/web/20111208063431/http://www.restlet.org/downloads/maven).
 
-[Comments
-(0)](http://web.archive.org/web/20111208063431/http://wiki.restlet.org/docs_1.1/13-restlet/21-restlet/192-restlet/92-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111208063431/http://wiki.restlet.org/docs_1.1/13-restlet/21-restlet/192-restlet/92-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

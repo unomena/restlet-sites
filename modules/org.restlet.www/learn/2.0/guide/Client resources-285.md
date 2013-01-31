@@ -178,14 +178,3 @@ underlying stream but might also close the underlying socket connection.
 In case you are not interested in the request at all, it is however
 better to explicitly call the ClientResource\#abort() method.
 
-[Comments
-(0)](http://web.archive.org/web/20110820215314/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/328-restlet/285-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20110820215314/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/328-restlet/285-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

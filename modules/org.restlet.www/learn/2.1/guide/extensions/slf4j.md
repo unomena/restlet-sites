@@ -11,14 +11,3 @@ mechanisms such as Log4J or LogBack.
 For additional details, please consult the
 [Javadocs](http://web.archive.org/web/20110309020614/http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/slf4j/package-summary.html).
 
-[Comments
-(0)](http://web.archive.org/web/20110309020614/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/316-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20110309020614/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/316-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

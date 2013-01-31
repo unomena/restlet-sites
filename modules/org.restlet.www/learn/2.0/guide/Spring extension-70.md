@@ -28,14 +28,3 @@ systematize the use of simple POJOs. 
 For additional details, please consult the
 [Javadocs](http://web.archive.org/web/20111106143549/http://www.restlet.org/documentation/2.0/jee/ext/org/restlet/ext/spring/package-summary.html).
 
-[Comments
-(0)](http://web.archive.org/web/20111106143549/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/70-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111106143549/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/70-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

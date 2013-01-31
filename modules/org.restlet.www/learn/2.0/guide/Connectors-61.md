@@ -46,14 +46,3 @@ RIAP connectors
 Added client and server RIAP connectors that use a protected singleton
 unique in the JVM.
 
-[Comments
-(0)](http://web.archive.org/web/20120114235255/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/171-restlet/61-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120114235255/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/171-restlet/61-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

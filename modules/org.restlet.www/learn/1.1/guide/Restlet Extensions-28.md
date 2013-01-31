@@ -42,14 +42,3 @@ and [FAQ
 \#5](http://web.archive.org/web/20090204182117/http://www.restlet.org/documentation/1.1/faq#05)
 which completes this subject.
 
-[Comments
-(0)](http://web.archive.org/web/20090204182117/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20090204182117/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

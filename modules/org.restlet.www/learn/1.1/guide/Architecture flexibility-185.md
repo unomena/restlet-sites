@@ -60,14 +60,3 @@ no dependencies other than Java; with this, it is possible to create and
 release an extremely small, but very full featured, standalone
 application.
 
-[Comments
-(0)](http://web.archive.org/web/20100429021725/http://wiki.restlet.org/docs_1.1/13-restlet/144-restlet/185-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20100429021725/http://wiki.restlet.org/docs_1.1/13-restlet/144-restlet/185-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

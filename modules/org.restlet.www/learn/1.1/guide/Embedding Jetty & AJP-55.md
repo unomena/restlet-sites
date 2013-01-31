@@ -253,14 +253,3 @@ API](http://web.archive.org/web/20090330083856/http://www.restlet.org/documentat
  [AjpServerHelper Class
 API](http://web.archive.org/web/20090330083856/http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/jetty/AjpServerHelper.html)
 
-[Comments
-(0)](http://web.archive.org/web/20090330083856/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/78-restlet/55-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20090330083856/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/78-restlet/55-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

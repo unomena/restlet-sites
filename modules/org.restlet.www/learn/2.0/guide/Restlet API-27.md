@@ -28,22 +28,3 @@ composed of resources.
 
 ![tutorial05](Restlet%20API-27_files/tutorial05.html "tutorial05")
 
-[Comments
-(2)](http://web.archive.org/web/20111201160659/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111201160659/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet.html#)
-\
-
-Created by Jaap Droogers on 8/11/10 2:26:37 PM
-
-The link to the Api doc is to version 1.1, just like the link to the
-tuturial.
-
-Created by Jerome Louvel on 8/11/10 6:18:26 PM
-
-Thanks Jaap, I just fixed this.
-
-Add a comment
-
-Please log in to be able to add comments.

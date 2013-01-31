@@ -101,14 +101,3 @@ debug.
         
     }
 
-[Comments
-(0)](http://web.archive.org/web/20101211203237/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/229-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20101211203237/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/229-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

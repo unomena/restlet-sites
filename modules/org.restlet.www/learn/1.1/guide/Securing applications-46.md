@@ -220,14 +220,3 @@ In addition to the internal authentication helpers, additional schemes
 can be supported using pluggable extensions. Currently, there is an
 extension available for the HTTP OAuth scheme.
 
-[Comments
-(0)](http://web.archive.org/web/20120104093612/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/46-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120104093612/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/46-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

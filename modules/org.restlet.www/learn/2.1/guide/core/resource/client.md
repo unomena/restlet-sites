@@ -177,19 +177,3 @@ underlying stream but might also close the underlying socket connection.
 In case you are not interested in the request at all, it is however
 better to explicitly call the ClientResource\#abort() method.
 
-[Comments
-(1)](http://web.archive.org/web/20120323051211/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/328-restlet/285-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120323051211/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/328-restlet/285-restlet.html#)
-\
-
-Created by Jan Bal on 1/12/12 1:22:10 PM
-
-Is it working for GWT edition as well? I can't find the referenced
-"org.restlet.resource.ClientResource" class in this edition. The closest
-"org.restlet.client.resource.ClientResource" has no .wrap() method.. :-(
-
-Add a comment
-
-Please log in to be able to add comments.

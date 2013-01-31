@@ -21,14 +21,3 @@ should be very easy to support any other reusable template technology.
 The design idea of those extensions is to use a TemplateRepresentation
 that combines at generation time a data model with a template document.
 
-[Comments
-(0)](http://web.archive.org/web/20111015080202/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/378-restlet/116-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111015080202/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/378-restlet/116-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

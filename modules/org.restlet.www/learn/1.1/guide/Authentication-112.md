@@ -250,32 +250,3 @@ instance
     // Should be 200.
     System.out.println(response.getStatus());
 
-[Comments
-(3)](http://web.archive.org/web/20120213085725/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/46-restlet/112-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120213085725/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/46-restlet/112-restlet.html#)
-\
-
-Created by José Norberto Bandeira Junior on 2/23/11 4:02:22 PM
-
-Hello, \
-I would like to know how can I authenticate on google app engine from a
-simple Java SE client. Should I use OAuth ? Can I do it in a simple way
-? Do you have any example code ?
-
-Created by Jerome Louvel on 2/23/11 5:17:03 PM
-
-Hi José,\
- \
-You can use HTTP Basic authentication with GAE if that is enough for
-you.
-
-Created by José Norberto Bandeira Junior on 2/23/11 7:04:01 PM
-
-I dont know, I want to use a google account, do you have any sample ?
-I´m confused about it.
-
-Add a comment
-
-Please log in to be able to add comments.

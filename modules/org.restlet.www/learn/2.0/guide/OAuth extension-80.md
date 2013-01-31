@@ -42,14 +42,3 @@ Beginner’s Guide to OAuth
 -   [Part IV : Signing
     Requests](http://web.archive.org/web/20091007163257/http://www.hueniverse.com/hueniverse/2008/10/beginners-gui-1.html)
 
-[Comments
-(0)](http://web.archive.org/web/20091007163257/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/80-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20091007163257/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/80-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

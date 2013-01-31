@@ -49,14 +49,3 @@ Application :
     service](http://web.archive.org/web/20111106111937/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/207-restlet.html "Tunnel service"):
     tunnel method names or client preferences via query parameters.
 
-[Comments
-(0)](http://web.archive.org/web/20111106111937/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111106111937/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

@@ -75,14 +75,3 @@ from Noelios Technologies, the creator of the Restlet Framework.
 
 [![](Part%20I%20-%20Introduction-21_files/logo135.png)](http://web.archive.org/web/20120122021215/http://www.noelios.com/products/support)
 
-[Comments
-(0)](http://web.archive.org/web/20120122021215/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120122021215/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

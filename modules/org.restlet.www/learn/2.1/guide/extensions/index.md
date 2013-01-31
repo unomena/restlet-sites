@@ -33,14 +33,3 @@ distribution by the way of JAR files. Adding an extension to your
 application is as simple as adding the archives of the chosen extension
 and its dependencies to the classpath. 
 
-[Comments
-(0)](http://web.archive.org/web/20111106211947/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111106211947/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

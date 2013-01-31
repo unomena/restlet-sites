@@ -54,14 +54,3 @@ and SpringBeanRouter. Please check the Javadocs of the
 **org.restlet.ext.spring** and **com.noelios.restlet.ext.spring**
 modules for more details.
 
-[Comments
-(0)](http://web.archive.org/web/20091123211418/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/70-restlet/194-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20091123211418/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/70-restlet/194-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

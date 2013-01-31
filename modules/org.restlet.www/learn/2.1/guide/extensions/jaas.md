@@ -57,14 +57,3 @@ Thus, the resulting principals in ClientInfo are:
 A new user is created based on the first UserPrincipal name: 'bruno' in
 this example.
 
-[Comments
-(0)](http://web.archive.org/web/20111014100442/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/293-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111014100442/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/293-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

@@ -42,14 +42,3 @@ Extensions
     to the Google Web Toolkit 1.5 AJAX platform. This module also
     supports HTTP authentication.
 
-[Comments
-(0)](http://web.archive.org/web/20120122021113/http://wiki.restlet.org/docs_1.1/13-restlet/21-restlet/171-restlet/63-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120122021113/http://wiki.restlet.org/docs_1.1/13-restlet/21-restlet/171-restlet/63-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

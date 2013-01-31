@@ -143,14 +143,3 @@ Links
 -   [Sample code of FileUpload extension (zip
     file)](http://web.archive.org/web/20111014100528/http://wiki.restlet.org/docs_2.1/42-restlet.html "Usage example of FileUpload extension")
 
-[Comments
-(0)](http://web.archive.org/web/20111014100528/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/64-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111014100528/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/64-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

@@ -97,14 +97,3 @@ annotations on the serialized beans. More details on annotations are
 [available in XStream
 documentation](http://web.archive.org/web/20111021080354/http://xstream.codehaus.org/annotations-tutorial.html).
 
-[Comments
-(0)](http://web.archive.org/web/20111021080354/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/264-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111021080354/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/264-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

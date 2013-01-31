@@ -63,14 +63,3 @@ This utilities mechanism is quite powerful and flexible, for more
 information [check this
 page](http://web.archive.org/web/20091123211430/http://static.springframework.org/spring/docs/2.5.x/reference/xsd-config.html#xsd-config-body-schemas-util-property-path).
 
-[Comments
-(0)](http://web.archive.org/web/20091123211430/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/70-restlet/195-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20091123211430/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/70-restlet/195-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

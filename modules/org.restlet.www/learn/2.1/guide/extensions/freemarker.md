@@ -25,14 +25,3 @@ For additional details, please consult the
 You can also have a look at this sample
 [application](http://web.archive.org/web/20111014100541/http://wiki.restlet.org/docs_2.1/410-restlet/version/2/part/8/data?branch=docs-2_1&language=default).
 
-[Comments
-(0)](http://web.archive.org/web/20111014100541/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/66-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111014100541/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/66-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

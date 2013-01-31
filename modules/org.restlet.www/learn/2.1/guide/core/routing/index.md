@@ -254,26 +254,3 @@ Here is the way to change the type of a variable:
     Map<String, Variable> routeVariables = route.getTemplate().getVariables();
     routeVariables.put("itemName", new Variable(Variable.TYPE_URI_WORD)); 
 
-[Comments
-(2)](http://web.archive.org/web/20120403232138/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/326-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120403232138/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/326-restlet.html#)
-\
-
-Created by Dejan Lozanovic on 11/9/11 3:20:35 PM
-
-Is there any special reason why we attach class file instead of a
-instance to a router ? Because i saw in api it is supported to use
-instances too.
-
-Created by Jerome Louvel on 11/9/11 4:20:58 PM
-
-We attach a class because a new instance must be created for each
-incoming call. The ServiceResource is a wrapper around a context, a
-request and a response, hence its convenient API compared to a bare
-Restlet instance.
-
-Add a comment
-
-Please log in to be able to add comments.

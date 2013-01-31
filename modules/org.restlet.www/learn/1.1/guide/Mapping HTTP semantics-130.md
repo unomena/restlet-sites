@@ -401,14 +401,3 @@ maintained by IANA.
 codes](http://web.archive.org/web/20120104223220/http://www.iana.org/assignments/http-status-codes)
 maintained by IANA.
 
-[Comments
-(0)](http://web.archive.org/web/20120104223220/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/130-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120104223220/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/130-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

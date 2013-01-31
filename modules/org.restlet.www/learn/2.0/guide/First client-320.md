@@ -49,14 +49,3 @@ After those first two steps, [let's now develop a more complete Restlet
 application](http://web.archive.org/web/20120121080836/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet/303-restlet.html "First application"),
 taking advantage of the various editions of the Restlet Framework.
 
-[Comments
-(0)](http://web.archive.org/web/20120121080836/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet/320-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120121080836/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet/320-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

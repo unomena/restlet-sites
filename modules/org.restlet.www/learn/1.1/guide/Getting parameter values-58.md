@@ -67,14 +67,3 @@ option), and a Form object which is a collection of key/value pairs
 
 `// Retrieve the "textAttribute" collection of parameters Object object = map.get("textAttribute"); if(object != null){     if(object instanceof Form){         Form form = (Form) object;         for (Parameter parameter : form) {             System.out.print("parameter " + parameter.getName());             System.out.println("/ " + parameter.getValue());         }     } }`
 
-[Comments
-(0)](http://web.archive.org/web/20101016100743/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/58-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20101016100743/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/58-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

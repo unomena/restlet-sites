@@ -255,30 +255,3 @@ API](http://web.archive.org/web/20110424171615/http://www.restlet.org/documentat
  [AjpServerHelper Class
 API](http://web.archive.org/web/20110424171615/http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/jetty/AjpServerHelper.html)
 
-[Comments
-(2)](http://web.archive.org/web/20110424171615/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/78-restlet/55-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20110424171615/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/78-restlet/55-restlet.html#)
-\
-
-Created by Francois Fernando on 3/2/11 5:31:58 AM
-
-The above code is not required when you just need to embed Jetty HTTP
-Connector with Spring Restlet extension. You need to only add the
-following dependency to your maven pom.\
- \
-\<dependency\>\
- \<groupId\>org.restlet.jse\</groupId\>\
- \<artifactId\>org.restlet.ext.jetty\</artifactId\>\
- \<version\>2.0.5\</version\>\
-\</dependency\> \
-
-Created by Jerome Louvel on 3/2/11 11:30:09 AM
-
-You are right, I've renamed the title as this document only discuss
-using Jetty to support the AJP protocol to connect with Apache HTTPd.
-
-Add a comment
-
-Please log in to be able to add comments.

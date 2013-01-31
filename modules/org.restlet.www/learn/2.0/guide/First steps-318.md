@@ -13,14 +13,3 @@ This section will give you a first taste of the Restlet Framework:
 -   [First
     application](http://web.archive.org/web/20120120153839/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet/303-restlet.html "First application")
 
-[Comments
-(0)](http://web.archive.org/web/20120120153839/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120120153839/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

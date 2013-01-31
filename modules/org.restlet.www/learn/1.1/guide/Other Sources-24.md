@@ -14,14 +14,3 @@ sources of information that we recommend:
 4.  [More REST related
     resources](http://web.archive.org/web/20111106144037/http://www.restlet.org/about/faq#04)
 
-[Comments
-(0)](http://web.archive.org/web/20111106144037/http://wiki.restlet.org/docs_1.1/13-restlet/21-restlet/24-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111106144037/http://wiki.restlet.org/docs_1.1/13-restlet/21-restlet/24-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

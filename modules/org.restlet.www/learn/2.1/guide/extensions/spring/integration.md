@@ -52,14 +52,3 @@ increasing the number of ways to integrate Restlet with Spring. There is
 now a RestletFrameworkServlet, a SpringServerServlet, SpringBeanFinder
 and SpringBeanRouter.
 
-[Comments
-(0)](http://web.archive.org/web/20120304012026/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/70-restlet/194-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120304012026/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/70-restlet/194-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

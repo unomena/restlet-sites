@@ -49,14 +49,3 @@ annotations.
 [Let's now illustrate how to use this API on the
 client-side](http://web.archive.org/web/20110925050331/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/320-restlet.html "First client").
 
-[Comments
-(0)](http://web.archive.org/web/20110925050331/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/319-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20110925050331/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/319-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

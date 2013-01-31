@@ -14,14 +14,3 @@ For additional details, please consult the
 also the [sample
 application](http://web.archive.org/web/20110309020557/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/270-restlet/245-restlet.html "Sample application").
 
-[Comments
-(0)](http://web.archive.org/web/20110309020557/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/270-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20110309020557/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/270-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

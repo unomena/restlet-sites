@@ -40,14 +40,3 @@ Usage example
     ClientResource cr = new ClientResource("http://mydomain.com/upload");
     cr.post(form);
 
-[Comments
-(0)](http://web.archive.org/web/20111014100518/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/412-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111014100518/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/412-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

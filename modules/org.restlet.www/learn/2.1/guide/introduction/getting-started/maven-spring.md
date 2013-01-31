@@ -363,14 +363,3 @@ This archive contains all the source code described in this document.
 (application/zip, 8.4 kB,
 [info](http://web.archive.org/web/20111103123456/http://wiki.restlet.org/docs_2.1/384-restlet.html))
 
-[Comments
-(0)](http://web.archive.org/web/20111103123456/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/192-restlet/381-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111103123456/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/192-restlet/381-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

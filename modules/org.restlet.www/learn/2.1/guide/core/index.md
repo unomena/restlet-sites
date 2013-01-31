@@ -28,18 +28,3 @@ composed of resources.
 
 ![tutorial05](Part%20II%20-%20Core%20Restlet-27_files/data.html "tutorial05")
 
-[Comments
-(1)](http://web.archive.org/web/20111026041654/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111026041654/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet.html#)
-\
-
-Created by Ellen Spertus on 3/31/11 2:16:44 AM
-
-The link to the API [http://www.restlet.org/documentation/2.1/api/] is
-bad.
-
-Add a comment
-
-Please log in to be able to add comments.

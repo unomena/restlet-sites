@@ -46,22 +46,3 @@ getRepresentation(Status, Request, Response) method. Then just set an
 instance of your custom service to the appropriate "statusService"
 property.
 
-[Comments
-(2)](http://web.archive.org/web/20120122020742/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/202-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120122020742/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/202-restlet.html#)
-\
-
-Created by Namho Kim on 11/11/11 5:56:04 AM
-
-org.restlet.util.StatusService class changed to
-org.restlet.service.StatusService
-
-Created by Jerome Louvel on 11/11/11 12:18:52 PM
-
-Thanks, I just fixed all links
-
-Add a comment
-
-Please log in to be able to add comments.

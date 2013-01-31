@@ -150,14 +150,3 @@ existing Java EE application server available in your organization.
     Girard](http://web.archive.org/web/20120108021546/http://www.ongwt.com/)
     for suggesting this page.
 
-[Comments
-(0)](http://web.archive.org/web/20120108021546/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/311-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120108021546/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/311-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

@@ -25,14 +25,3 @@ Here is the list of dependencies of this connector:
 -   [Grizzly
     1.8](http://web.archive.org/web/20090204182344/https://grizzly.dev.java.net/)
 
-[Comments
-(0)](http://web.archive.org/web/20090204182344/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/73-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20090204182344/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/73-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

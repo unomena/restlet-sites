@@ -149,14 +149,3 @@ with a line of text.
                             + getRequest().getMethod(), MediaType.TEXT_PLAIN);
         }
 
-[Comments
-(0)](http://web.archive.org/web/20100605101720/http://wiki.restlet.org/docs_1.1/13-restlet/144-restlet/188-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20100605101720/http://wiki.restlet.org/docs_1.1/13-restlet/144-restlet/188-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

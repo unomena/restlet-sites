@@ -403,14 +403,3 @@ Additional resources
 -   [Java Logging API and How To Use
     It](http://web.archive.org/web/20090126045410/http://www.crazysquirrel.com/computing/java/logging.jspx)
 
-[Comments
-(0)](http://web.archive.org/web/20090126045410/http://wiki.restlet.org/docs_1.1/13-restlet/48-restlet/101-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20090126045410/http://wiki.restlet.org/docs_1.1/13-restlet/48-restlet/101-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

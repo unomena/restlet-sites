@@ -42,14 +42,3 @@ available in GWT (such as NIO channels or BIO streams). We tried to
 provide an easy integration with JSON and XML as they are the two most
 common media types to exchange representations in REST for rich clients.
 
-[Comments
-(0)](http://web.archive.org/web/20100428000308/http://wiki.restlet.org/docs_1.1/13-restlet/144-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20100428000308/http://wiki.restlet.org/docs_1.1/13-restlet/144-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

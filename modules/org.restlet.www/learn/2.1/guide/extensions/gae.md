@@ -79,18 +79,3 @@ sent by an administrator:
         }
       }
 
-[Comments
-(1)](http://web.archive.org/web/20111013154959/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/405-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111013154959/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/405-restlet.html#)
-\
-
-Created by Dejan Lozanovic on 8/19/11 1:03:27 AM
-
-Can someone post a code sample for client code, how to connect on Gae
-when GaeAuthenticator is used.
-
-Add a comment
-
-Please log in to be able to add comments.

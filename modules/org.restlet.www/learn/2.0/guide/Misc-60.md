@@ -42,14 +42,3 @@ as it would require too much work to get aligned with the new Restlet
 security and resource APIs in version 2.0. Note that this is temporary
 and we definitely want to reintroduce this feature in Restlet 2.1.
 
-[Comments
-(0)](http://web.archive.org/web/20120119082108/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/171-restlet/60-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120119082108/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/171-restlet/60-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

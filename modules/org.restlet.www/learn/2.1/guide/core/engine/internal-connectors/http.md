@@ -19,14 +19,3 @@ parameters](http://web.archive.org/web/20120120203355/http://www.restlet.org/doc
  [Server
 parameters](http://web.archive.org/web/20120120203355/http://www.restlet.org/documentation/2.1/jse/engine/index.html?org/restlet/engine/connector/ServerConnectionHelper.html)
 
-[Comments
-(0)](http://web.archive.org/web/20120120203355/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/48-restlet/86-restlet/184-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120120203355/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/48-restlet/86-restlet/184-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

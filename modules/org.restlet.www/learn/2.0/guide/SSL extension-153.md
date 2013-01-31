@@ -97,14 +97,3 @@ SslContextFactory, but is often used in conjunction with it.
 This example uses two certificates depending on which server connector
 (and thus which listening socket) is used.
 
-[Comments
-(0)](http://web.archive.org/web/20120218143419/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/153-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20120218143419/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/153-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

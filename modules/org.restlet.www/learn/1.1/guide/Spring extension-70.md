@@ -45,14 +45,3 @@ Here is the list of dependencies for this extension:
 -   [Spring framework
     2.0](http://web.archive.org/web/20090406195204/http://www.springframework.org/)
 
-[Comments
-(0)](http://web.archive.org/web/20090406195204/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/70-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20090406195204/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/70-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

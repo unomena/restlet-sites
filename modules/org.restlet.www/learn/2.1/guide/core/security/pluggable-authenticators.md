@@ -91,14 +91,3 @@ implementation of the following methods:
     parses the response sent by the server. It especially parses the
     ChallengeRequest\#getRawValue.
 
-[Comments
-(0)](http://web.archive.org/web/20111108084532/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/46-restlet/366-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111108084532/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/46-restlet/366-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

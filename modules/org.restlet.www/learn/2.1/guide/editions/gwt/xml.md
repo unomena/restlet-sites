@@ -38,14 +38,3 @@ DomRepresentation gives access to the underlying DOM document via the
     // the best representation with content negotiation.
     r.get(MediaType.TEXT_XML);
 
-[Comments
-(0)](http://web.archive.org/web/20111105205439/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/144-restlet/191-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111105205439/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/144-restlet/191-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

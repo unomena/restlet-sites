@@ -32,14 +32,3 @@ Here is the list of dependencies of this connector:
 -   [JavaBeans Activation Framework
     1.1](http://web.archive.org/web/20090205114843/http://java.sun.com/products/javabeans/jaf/)
 
-[Comments
-(0)](http://web.archive.org/web/20090205114843/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/76-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20090205114843/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/76-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

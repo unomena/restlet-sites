@@ -629,14 +629,3 @@ Links
 -   [Resource](http://web.archive.org/web/20111020181733/http://www.restlet.org/documentation/1.1/api/org/restlet/resource/Resource.html)
 -   [db4o](http://web.archive.org/web/20111020181733/http://www.db4o.com/)
 
-[Comments
-(0)](http://web.archive.org/web/20111020181733/http://wiki.restlet.org/docs_2.0/13-restlet/24-restlet/52-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111020181733/http://wiki.restlet.org/docs_2.0/13-restlet/24-restlet/52-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

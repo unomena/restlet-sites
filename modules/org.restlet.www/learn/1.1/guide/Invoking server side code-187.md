@@ -33,18 +33,3 @@ briefly how to instantiate a Client and make an asynchronous GET call:
                 }
             });
 
-[Comments
-(1)](http://web.archive.org/web/20100605092056/http://wiki.restlet.org/docs_1.1/13-restlet/144-restlet/187-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20100605092056/http://wiki.restlet.org/docs_1.1/13-restlet/144-restlet/187-restlet.html#)
-\
-
-Created by Keith Coughtrey on 4/16/09 12:00:09 AM
-
-This is great but it would be better if Callback were an interface
-rather than an abstract class.
-
-Add a comment
-
-Please log in to be able to add comments.

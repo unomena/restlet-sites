@@ -22,14 +22,3 @@ blog](http://web.archive.org/web/20111227072959/http://blog.noelios.com/2010/07/
 as well as [the full list of
 changes](http://web.archive.org/web/20111227072959/http://www.restlet.org/documentation/snapshot/jse/changes).
 
-[Comments
-(0)](http://web.archive.org/web/20111227072959/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/171-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111227072959/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/171-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

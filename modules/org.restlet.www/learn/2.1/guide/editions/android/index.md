@@ -69,14 +69,3 @@ Engine.getInstance().getRegisteredClients().clear();
 Engine.getInstance().getRegisteredClients().add(new HttpClientHelper(null)); 
 ~~~~
 
-[Comments
-(0)](http://web.archive.org/web/20111105220910/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/266-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20111105220910/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/266-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.

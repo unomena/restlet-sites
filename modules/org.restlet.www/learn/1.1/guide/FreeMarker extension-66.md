@@ -36,14 +36,3 @@ Links
 -   [FreeMarker
     library](http://web.archive.org/web/20090205114816/http://www.freemarker.org/)
 
-[Comments
-(0)](http://web.archive.org/web/20090205114816/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/66-restlet.html#)
-
-Comments
-[Hide](http://web.archive.org/web/20090205114816/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/66-restlet.html#)
-\
-There are no comments.
-
-Add a comment
-
-Please log in to be able to add comments.
