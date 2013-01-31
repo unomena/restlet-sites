@@ -157,7 +157,7 @@
 			<doc id="134" label="FAQ" name="faq" />
 			<doc id="135" label="Others" name="others" />
 			<doc id="138" label="Lucene/Maven" dirname="lucen-maven">
-				<doc id="140" label="Lucene/Maven - Running/Testing" name="test" />
+				<doc id="140" label="Lucene/Maven - Running/Testing" name="run-test" />
 				<doc id="141" label="Lucene/Maven - Todo List"  name="todo"/>
 				<doc id="139" label="Lucene/Maven - Services implemented"  name="services"/>
 			</doc>
