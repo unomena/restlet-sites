@@ -33,6 +33,11 @@
       <script                type="text/javascript"     src="${javascript_file}"></script>
 </#list>
       <script type="text/javascript">
+<#if pp.sourceFile?matches("learn\\/[0-9]\\.[0-9]$") >
+        $.cookie('branch', '${pp.sourceFile?substring(6)}', {path: '/' });
+<#elseif pp.sourceFile?matches("learn\\/[0-9]\\.[0-9]/.*$") >
+        $.cookie('branch', '${pp.sourceFile?substring(6, 9)}', {path: '/' });
+</#if>
 <#if javascript??>
       ${javascript}
 </#if>

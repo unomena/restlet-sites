@@ -15,15 +15,16 @@ function loadBranches() {
      };
      cBranches.children().click(function() {
           setBranch(this.id);
+          loadReleases();
           refresh();
      });
 };
 function loadReleases() {
 	cReleases.empty();
-     for (var i = 0; v = versions[i]; i++) {
-    	 if(v.minorVersion == branch) {
-        	 cReleases.append('<li id="' + v.id + '">' + v.fullVersionCompact + '</li>');    		 
-    	 }
+	for (var i = 0; v = versions[i]; i++) {
+    	if(v.minorVersion == branch) {
+        	cReleases.append('<li id="' + v.id + '">' + v.fullVersionCompact + '</li>');    		 
+    	}
      };
      cReleases.children().click(function() {
           setVersion(this.id);
@@ -53,7 +54,10 @@ function loadDistributions() {
 function listDistributions() {
 	tabDir.empty();
 	for (var i = 0; d = distributions[i]; i++) {
-		if((distributionId == d.fileType) && (branch == d.version.substring(0, 3)) && (!edition || ("all" == edition.id) || (d.edition== edition.id))){
+		if((distributionId == d.fileType)
+				&& (branch == d.version.substring(0, 3)) 
+				&& (version.id == d.version)
+				&& (!edition || ("all" == edition.id) || (d.edition== edition.id))){
 			displayDistribution(tabDir, d);					
 		}
 	};
@@ -80,12 +84,35 @@ function displayDistribution(tab, distribution) {
 	}
 	tab.append(str);
 }
+function setDownloadButton() {
+	$('#download').empty();
+	if(distribution && "file" == distribution.type){
+		// Update download button
+		var urlChangesLog = "/learn/";
+		if("unstable" == qualifier.id){
+			urlChangesLog += "snapshot";
+		} else {
+			urlChangesLog += version.minorVersion;
+		}
+		urlChangesLog += "/jse/changes";
+		
+		$('#download').append('<p><button class="btn btn-large btn-success" type="button">Download ' + version.fullVersionCompact + '</button></p>');
+		$('#download').append('<p>File size: ' + distribution.fileSize  + '</p>');
+		$('#download').append('<p>Date: ' + version.published  + '</p>');
+		$('#download').append('<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
+		$('#download button').click(function () {
+			document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
+		});
+	}
+}
 
 function refresh() {
 	// récupération de la distribution courante.
 	distribution = getDistribution(distributionId);
 	$("#" + cBranches.attr('id') + '-bt').empty();
 	$("#" + cBranches.attr('id') + '-bt').append("<strong>" + branch + "</strong>");
+	$("#" + cReleases.attr('id') + '-bt').empty();
+	$("#" + cReleases.attr('id') + '-bt').append("<strong>" + version.fullVersionCompact + "</strong>");
 	$("#" + cEditions.attr('id') + '-bt').empty();
 	$("#" + cEditions.attr('id') + '-bt').append("<strong>" + edition.shortname + "</strong>");
 	$("#" + cTypesDistribution.attr('id') + '-bt').empty();
@@ -98,8 +125,8 @@ function refresh() {
 	} else if("p2" == distributionId){
 		$("#" + cTypesDistribution.attr('id') + '-bt').append("<strong>OSGi</strong>");
 	}
-	//setDownloadButton();
-	listDistributions();
+	setDownloadButton();
+	//listDistributions();
 }
 
 function setDownloadButton(){
