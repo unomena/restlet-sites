@@ -223,7 +223,7 @@ public class WwwRestletOrg extends BaseApplication implements
 
         // serve documentation without content negotiation
         Directory directory = new Directory(getContext(), this.wwwUri);
-        directory.setNegotiatingContent(false);
+        directory.setNegotiatingContent(true);
         directory.setDeeplyAccessible(true);
         if (Boolean.parseBoolean(getProperties().getProperty("nocache"))) {
             result.attachDefault(directory);

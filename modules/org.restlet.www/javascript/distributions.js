@@ -88,6 +88,7 @@ function init(idQualifiers, idEditions, idTypesDistribution) {
 	loadEditions();
 	loadDistributions();
 
+	
 	qualifier = getQualifier($.cookie('qualifier'));
 	if(!qualifier){
 		$.cookie('qualifier', getDefaultQualifier(), {path: '/' });

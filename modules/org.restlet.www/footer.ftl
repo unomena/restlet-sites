@@ -99,7 +99,6 @@
       </#list>
       </ul>
       <hr/>
-      <div class="emptySeparator"></div>
     </div>
     <div class="clearBoth"></div>
    </#if>

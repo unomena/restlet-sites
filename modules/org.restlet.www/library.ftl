@@ -134,7 +134,7 @@
 </#global>
 
 <#global userGuideBranchSwitch>
-<div class='section' style="float:right">
+<div class='span3 center section userguideswitch'>
     <form class="form-horizontal">
         <div class="control-group">
             <label class="control-label">Branch:</label>
