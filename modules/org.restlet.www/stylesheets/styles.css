@@ -690,9 +690,10 @@ div.content.footerWrapper {
 
 .userguideswitch {
     float:right;
-    width: 180px;
+    width: 200px;
 }
 
 .userguideswitch .btn-group .btn:not(.dropdown-toggle) {
 	width: 50px;
+	margin-left: 20px;
 }

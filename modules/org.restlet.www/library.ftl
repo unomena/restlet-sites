@@ -134,7 +134,7 @@
 </#global>
 
 <#global userGuideBranchSwitch>
-<div class='span3 center section userguideswitch'>
+<div class='center userguideswitch'>
     <form class="form-horizontal">
         <div class="control-group">
             <label class="control-label">Branch:</label>
