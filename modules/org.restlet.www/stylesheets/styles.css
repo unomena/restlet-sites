@@ -702,3 +702,16 @@ div.content.footerWrapper {
 	min-width: 50px;
 	margin-left: 20px;
 }
+
+.book {
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
+.book .span2 {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.book .span7 {
+    margin-left: 20px;
+}
