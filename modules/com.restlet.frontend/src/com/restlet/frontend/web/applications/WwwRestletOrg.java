@@ -159,7 +159,7 @@ public class WwwRestletOrg extends BaseApplication implements
     /** List of current versions. */
     private VersionsList versions;
 
-    /** The Web file URI. */
+    /** The Web files root directory URI. */
     private String wwwUri;
 
     /**
@@ -218,10 +218,10 @@ public class WwwRestletOrg extends BaseApplication implements
         // Create a root router
         Router result = new Router(getContext());
 
-        // set up redirections.
+        // Set up redirections.
         setRedirections(result);
 
-        // serve documentation without content negotiation
+        // Serve documentation
         Directory directory = new Directory(getContext(), this.wwwUri);
         directory.setNegotiatingContent(true);
         directory.setDeeplyAccessible(true);
