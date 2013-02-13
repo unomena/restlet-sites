@@ -221,7 +221,7 @@ public class WwwRestletOrg extends BaseApplication implements
         // set up redirections.
         setRedirections(result);
 
-        // serve documentation without content negotiation
+        // serve documentation
         Directory directory = new Directory(getContext(), this.wwwUri);
         directory.setNegotiatingContent(true);
         directory.setDeeplyAccessible(true);
@@ -230,6 +230,30 @@ public class WwwRestletOrg extends BaseApplication implements
         } else {
             result.attachDefault(new CacheFilter(getContext(), directory));
         }
+
+        // serve javadocs using a specific route
+        Directory javadocsDir = new Directory(getContext(), this.dataUri
+                + "/javadocs") {
+            @Override
+            public void handle(Request request, Response response) {
+                String version = (String) request.getAttributes()
+                        .get("version");
+                String edition = (String) request.getAttributes()
+                        .get("edition");
+                String group = (String) request.getAttributes().get("group");
+                String offset = "/" + version + "/" + edition + "/" + group
+                        + "/";
+                Reference baseRef = request.getResourceRef().getBaseRef();
+                String identifier = baseRef.getIdentifier();
+                // translate the base ref
+                baseRef.setIdentifier(identifier.substring(0,
+                        identifier.length() - offset.length()));
+                super.handle(request, response);
+            }
+        };
+        javadocsDir.setNegotiatingContent(true);
+        javadocsDir.setDeeplyAccessible(true);
+        result.attach("/learn/{version}/{edition}/{group}/", javadocsDir);
 
         // "download" routing
         downloadRouter = new Router(getContext());
@@ -468,14 +492,13 @@ public class WwwRestletOrg extends BaseApplication implements
         downloadRouter.getRoutes().add(
                 new StartsWithRoute(downloadRouter, new Directory(getContext(),
                         this.wwwUri + "/download"), "\\/[a-zA-Z]+"));
-        // redirect "branches" uris (such as "/download/2.x", to the "past"
-        // url).
+        // Redirect "branches" uris (ie "/download/2.x"), to the "past" url.
         for (String branch : branches) {
             wrapCookie(
                     redirect(downloadRouter, "/" + branch, "/download/past"),
                     "branch", branch);
         }
-        // Server archives
+        // Serve archives
         downloadRouter.attachDefault(new Directory(getContext(), this.dataUri
                 + "/archive/restlet"));
     }
@@ -561,19 +584,6 @@ public class WwwRestletOrg extends BaseApplication implements
     public synchronized void start() throws Exception {
         super.start();
         refresh();
-    }
-
-    private TemplateRoute wrapCookie(TemplateRoute route, final String cookie) {
-        Filter filter = new Filter(getContext(), route.getNext()) {
-            @Override
-            protected void afterHandle(Request request, Response response) {
-                response.getCookieSettings().add(
-                        new CookieSetting(0, cookie, (String) request
-                                .getAttributes().get(cookie), "/", null));
-            }
-        };
-        route.setNext(filter);
-        return route;
     }
 
     /**

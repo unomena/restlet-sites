@@ -1,5 +1,5 @@
 <#include "/header.ftl"/>
-<#assign javascript_files=["http://maps.googleapis.com/maps/api/js?key=AIzaSyDaOrpjTjY3zMrOrXhJ8g1rxE_zNeaC6ho&sensor=true", "/javascript/gmap.en.js"] />
+<#assign javascript_files=["http://maps.googleapis.com/maps/api/js?key=AIzaSyDaOrpjTjY3zMrOrXhJ8g1rxE_zNeaC6ho&sensor=true", "/javascript/gmap.js.en"] />
 <#assign body_event_managers>onload="load()" onunload="GUnload()"</#assign>
 <#global content>
 

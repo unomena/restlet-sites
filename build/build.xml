@@ -146,18 +146,18 @@
 
 	<target name="generate-templates" description="Generate template-based files.">
 		<!-- generate static files for the site : org.restlet.www -->
+		<delete dir="${temp}/owr" />
 		<mkdir dir="${temp}/owr" />
-		<mkdir dir="${temp}/cwr" />
 		<copy todir="${temp}/owr">
 			<fileset dir="../modules/org.restlet.www/" includes="**/*" />
 		</copy>
-		<!-- treat with pandoc -->
+		<!-- treat user guide with pandoc -->
 		<exec executable="sh" osfamily="unix">
-            <arg value="${tmpl}/md/unixtohtml.sh" />
+			<arg value="${tmpl}/md/unixtohtml.sh" />
 			<arg value="${temp}/owr" />
-            <arg value="${tmpl}/md/userguide.tmpl" />
+			<arg value="${tmpl}/md/userguide.tmpl" />
 		</exec>
-		<fmpp sourceRoot="${temp}/owr" outputRoot="${temp}/${www-restlet-org}" modes="ignore(**/.svn,**/Thumbs.db)"  quiet="reallyQuiet">
+		<fmpp sourceRoot="${temp}/owr" outputRoot="${temp}/${www-restlet-org}" modes="ignore(**/.svn,**/Thumbs.db)" quiet="reallyQuiet">
 			<data expandProperties="yes">
                 labels:xml(labels.xml)
                 hierarchy:xml(hierarchy.xml)
@@ -172,26 +172,37 @@
 			<exclude name="**/*.ftl" />
 		</fmpp>
 		<delete dir="${temp}/owr" />
-		<!-- generate static files for the site : www.restlet.com -->
-		<copy todir="${temp}/cwr">
-			<fileset dir="../modules/com.restlet.www/" includes="**/*" />
-		</copy>
-		<fmpp sourceencoding="UTF-8" outputencoding="UTF-8" sourceRoot="${temp}/cwr" outputRoot="${temp}/${www-restlet-com}" modes="ignore(**/.svn,**/Thumbs.db), copy(javascript/*.js, **/*.css)" quiet="reallyQuiet">
-			<data expandProperties="yes">
+        <!-- generate static files for the site : www.restlet.com -->
+        <delete dir="${temp}/cwr" />
+        <mkdir dir="${temp}/cwr" />
+        <!-- no translation to French language for the moment. -->
+        <copy todir="${temp}/cwr">
+            <fileset dir="../modules/com.restlet.www/" includes="**/*" excludes="**/*.fr" />
+        </copy>
+        <fmpp sourceencoding="UTF-8" outputencoding="UTF-8" sourceRoot="${temp}/cwr" outputRoot="${temp}/${www-restlet-com}" modes="ignore(**/.svn,**/Thumbs.db), copy(javascript/*.js, **/*.css)" quiet="reallyQuiet">
+            <data expandProperties="yes">
                 hierarchy:xml(hierarchy.xml)
                 messages:xml(messages.xml)
                 labels:xml(labels.xml)
                 language: en
                 header: ""
             </data>
-			<localData>
-			    layer()
+            <localData>
+                layer()
                 case(**/*.fr*, {language: fr})
-			</localData>
-			<include name="**/*" />
-			<exclude name="**/*.ftl" />
-		</fmpp>
-		<delete dir="${temp}/cwr" />
+            </localData>
+            <include name="**/*" />
+            <exclude name="**/*.ftl" />
+        </fmpp>
+        <!-- no translation to French language for the moment. -->
+        <move todir="${temp}/${www-restlet-com}">
+            <fileset dir="${temp}/${www-restlet-com}" includes="**/*.en" />
+            <filterchain>
+                <replacestring from=".js.en" to=".js"/>
+            </filterchain>
+            <globmapper from="*.en" to="*" />
+        </move>
+        <delete dir="${temp}/cwr" />
 	</target>
 
 	<target name="generate-javadocs" if="do-javadoc" description="Generate the Javadocs.">
