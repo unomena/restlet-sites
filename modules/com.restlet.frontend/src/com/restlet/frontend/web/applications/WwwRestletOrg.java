@@ -159,7 +159,7 @@ public class WwwRestletOrg extends BaseApplication implements
     /** List of current versions. */
     private VersionsList versions;
 
-    /** The Web file URI. */
+    /** The Web files root directory URI. */
     private String wwwUri;
 
     /**
