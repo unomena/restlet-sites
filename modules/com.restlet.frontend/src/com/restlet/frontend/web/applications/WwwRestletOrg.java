@@ -218,42 +218,39 @@ public class WwwRestletOrg extends BaseApplication implements
         // Create a root router
         Router result = new Router(getContext());
 
-        // set up redirections.
+        // Set up redirections.
         setRedirections(result);
 
-        // serve documentation
+        // Serve documentation
         Directory directory = new Directory(getContext(), this.wwwUri);
         directory.setNegotiatingContent(true);
         directory.setDeeplyAccessible(true);
-        if (Boolean.parseBoolean(getProperties().getProperty("nocache"))) {
-            result.attachDefault(directory);
-        } else {
-            result.attachDefault(new CacheFilter(getContext(), directory));
-        }
+        result.attachDefault(new CacheFilter(getContext(), directory));
 
-        // serve javadocs using a specific route
+        // Serve javadocs using a specific route
         Directory javadocsDir = new Directory(getContext(), this.dataUri
                 + "/javadocs") {
             @Override
             public void handle(Request request, Response response) {
+                // Translate the base reference.
                 String version = (String) request.getAttributes()
                         .get("version");
                 String edition = (String) request.getAttributes()
                         .get("edition");
                 String group = (String) request.getAttributes().get("group");
-                String offset = "/" + version + "/" + edition + "/" + group
+                String relPart = "/" + version + "/" + edition + "/" + group
                         + "/";
                 Reference baseRef = request.getResourceRef().getBaseRef();
-                String identifier = baseRef.getIdentifier();
-                // translate the base ref
-                baseRef.setIdentifier(identifier.substring(0,
-                        identifier.length() - offset.length()));
+                String strBaseRef = baseRef.getIdentifier();
+                baseRef.setIdentifier(strBaseRef.substring(0,
+                        strBaseRef.length() - relPart.length()));
                 super.handle(request, response);
             }
         };
         javadocsDir.setNegotiatingContent(true);
         javadocsDir.setDeeplyAccessible(true);
-        result.attach("/learn/{version}/{edition}/{group}/", javadocsDir);
+        result.attach("/learn/javadocs/{version}/{edition}/{group}/",
+                javadocsDir);
 
         // "download" routing
         downloadRouter = new Router(getContext());
@@ -572,12 +569,11 @@ public class WwwRestletOrg extends BaseApplication implements
         redirect(router, "/learn/", "/learn/tutorial");
         redirect(router, "/participate", "/participate/");
 
-        redirect(router, "/learn/guide", "/learn/stable/guide{rr}");
-        redirect(router, "/learn/javadocs", "/learn/stable/javadocs{rr}");
-        redirect(router, "/learn/roadmap", "/learn/stable/roadmap{rr}");
-        redirectBranch(router, "/learn/stable", "/learn/{branch}{rr}", "stable");
-        redirectBranch(router, "/learn/testing", "/learn/{branch}{rr}",
+        redirectBranch(router, "/learn/guide/stable", "/learn/{branch}",
+                "stable");
+        redirectBranch(router, "/learn/guide/testing", "/learn/{branch}",
                 "testing");
+        redirectBranch(router, "/learn/guide", "/learn/{branch}", "stable");
     }
 
     @Override
