@@ -569,11 +569,14 @@ public class WwwRestletOrg extends BaseApplication implements
         redirect(router, "/learn/", "/learn/tutorial");
         redirect(router, "/participate", "/participate/");
 
-        redirectBranch(router, "/learn/guide/stable", "/learn/{branch}",
+        redirectBranch(router, "/learn/guide/stable", "/learn/guide/{branch}",
                 "stable");
-        redirectBranch(router, "/learn/guide/testing", "/learn/{branch}",
+        redirectBranch(router, "/learn/guide/testing", "/learn/guide/{branch}",
                 "testing");
-        redirectBranch(router, "/learn/guide", "/learn/{branch}", "stable");
+        redirectBranch(router, "/learn/guide", "/learn/guide/{branch}",
+                "stable");
+        redirectBranch(router, "/learn/javadocs", "/learn/javadocs/{branch}",
+                "stable");
     }
 
     @Override

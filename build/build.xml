@@ -165,7 +165,7 @@
                 restletVersions: text(data/versions.json)
                 restletQualifiers: text(data/qualifiers.json)
                 restletEditions: text(data/editions.json)
-                restletContributors: text(data/contributors.xml)
+                restletContributors: slicedText(data/contributors.txt)
                 ant: antProperties()
             </data>
 			<include name="**/*" />
