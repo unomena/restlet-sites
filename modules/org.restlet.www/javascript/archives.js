@@ -178,7 +178,7 @@ function setDownloadButton(){
  * @param dir
  * 		The div wher to display the listing.
  */
-function init(sb, idReleases, idEditions, idTypesDistribution, dir) {
+function init(sb, sr, se, std, dir) {
 	cBranches = sb;
 	cReleases = sr;
 	cEditions = se;
