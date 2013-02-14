@@ -70,7 +70,7 @@
 */
 <#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!""))>
     $(document).ready(function() {
-        init("cBranch");
+        init($("#cBranch"));
     });
 </#if>
       </script>

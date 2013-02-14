@@ -1,6 +1,7 @@
 var cQualifiers;
 var cEditions;
 var cTypesDistribution;
+var handleFragment = false;
 // var myCombo = (new Dropdown("idCombo")).initialize();
 // myCombo.addSelectionListener(function(value) {
 // (...)
@@ -95,7 +96,7 @@ function refresh() {
 	$("#" + cEditions.attr('id') + '-bt').append(
 			"<strong>" + edition.shortname + "</strong>");
 	$("#" + cTypesDistribution.attr('id') + '-bt').empty();
-	window.location.hash = "#qualifier=" + qualifier.id +"&edition=" + edition.id + "&distribution=" + distributionId;
+	
 	if ("zip" == distributionId) {
 		$("#" + cTypesDistribution.attr('id') + '-bt').append(
 				"<strong>ZIP file</strong>");
@@ -109,16 +110,35 @@ function refresh() {
 		$("#" + cTypesDistribution.attr('id') + '-bt').append(
 				"<strong>OSGi</strong>");
 	}
+
+	if (handleFragment) {
+		window.location.hash = "#qualifier=" + qualifier.id +"&edition=" + edition.id + "&distribution=" + distributionId;
+	}
+
 	setDownloadButton();
 }
 
 /**
  * Initializes the data model, cookies, and selectors.
+ * @param sq
+ * 		The selector of qualifiers.
+ * @param se
+ * 		The selector of editions.
+ * @param std
+ * 		The selector of type of distributions.
+ * @param hf
+ * 		True indicates that the uri will reflect the selectors's value in the uri fragment.
  */
-function init(idQualifiers, idEditions, idTypesDistribution) {
-	cQualifiers = $("#" + idQualifiers);
-	cEditions = $("#" + idEditions);
-	cTypesDistribution = $("#" + idTypesDistribution);
+function init(sq, se, std, hf) {
+	cQualifiers = sq;
+	cEditions = se;
+	cTypesDistribution = std;
+	if (hf) {
+		handleFragment = true;
+	} else {
+		handleFragment = false;
+	}
+
 	loadQualifiers();
 	loadEditions();
 	loadDistributions();

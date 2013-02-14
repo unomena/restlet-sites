@@ -165,12 +165,25 @@ function setDownloadButton(){
 	}
 }
 
-function init(idBranches, idReleases, idEditions, idTypesDistribution, idDir) {
-	cBranches = $("#" + idBranches);
-	cReleases = $("#" + idReleases);
-	cEditions = $("#" + idEditions);
-	cTypesDistribution = $("#" + idTypesDistribution);
-	tabDir = $("#" + idDir);
+/**
+ * Initializes the data model, cookies, and selectors.
+ * @param sb
+ * 		The selector of branches.
+ * @param sr
+ * 		The selector of releases.
+ * @param se
+ * 		The selector of editions.
+ * @param std
+ * 		The selector of type of distributions.
+ * @param dir
+ * 		The div wher to display the listing.
+ */
+function init(sb, idReleases, idEditions, idTypesDistribution, dir) {
+	cBranches = sb;
+	cReleases = sr;
+	cEditions = se;
+	cTypesDistribution = std;
+	tabDir = dir;
 	loadBranches();
 	loadEditions();
 	loadDistributions();

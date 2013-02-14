@@ -20,8 +20,14 @@ function refresh() {
 	$("#" + cBranches.attr('id') + '-bt').empty();
 	$("#" + cBranches.attr('id') + '-bt').append("<strong>" + branch + "</strong>");
 }
-function init(idBranches) {
-	cBranches = $("#" + idBranches);
+
+/**
+ * Initializes the branch selector/cookies.
+ * @param sb
+ * 		The selector of branches.
+ */
+function init(cb) {
+	cBranches = cb;
 	loadBranches();
 	branch = $.cookie('branch');
 	if (!branch) {
