@@ -20,7 +20,6 @@
       <link rel="stylesheet" type="text/css"             href='/stylesheets/bootstrap-responsive.css' />
       <link rel="alternate"  type="application/atom+xml" href="/feeds/summary" title="${labels.labels.summaryRestletBlog?trim}" />
       <link rel="alternate"  type="application/rss+xml"  href="http://blog.restlet.com/feed/?cat=15314" title="${labels.labels.restletBlog?trim}" />
-      <link rel="meta"       type="application/rdf+xml"  href="http://www.restlet.org/about/doap"  title="DOAP" />
 <#list stylesheet_files as stylesheet_file>
       <link rel="stylesheet" type="text/css"            href="${stylesheet_file}" />
 </#list>

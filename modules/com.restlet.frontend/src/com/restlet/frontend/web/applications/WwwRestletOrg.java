@@ -345,7 +345,15 @@ public class WwwRestletOrg extends BaseApplication implements
                 to, Redirector.MODE_CLIENT_TEMPORARY) {
             @Override
             protected Reference getTargetRef(Request request, Response response) {
-                request.getAttributes().put("branch", toBranch.get(qualifier));
+                String b = (qualifier != null) ? toBranch.get(qualifier) : null;
+                if (b == null) {
+                    // induce it from the request's cookies
+                    b = request.getCookies().getFirstValue("branch", "");
+                }
+                if (b == null || "".equals(b) || !branches.contains(b)) {
+                    b = toBranch.get("stable");
+                }
+                request.getAttributes().put("branch", b);
                 return super.getTargetRef(request, response);
             }
         });
@@ -588,10 +596,9 @@ public class WwwRestletOrg extends BaseApplication implements
                 "stable");
         redirectBranch(router, "/learn/guide/testing", "/learn/guide/{branch}",
                 "testing");
-        redirectBranch(router, "/learn/guide", "/learn/guide/{branch}",
-                "stable");
+        redirectBranch(router, "/learn/guide", "/learn/guide/{branch}", null);
         redirectBranch(router, "/learn/javadocs", "/learn/javadocs/{branch}",
-                "stable");
+                null);
     }
 
     @Override
@@ -630,7 +637,15 @@ public class WwwRestletOrg extends BaseApplication implements
             Filter filter = new Filter(getContext(), route.getNext()) {
                 @Override
                 protected void afterHandle(Request request, Response response) {
-                    setCookie(response, cookie, toBranch.get(value));
+                    String b = (value != null) ? toBranch.get(value) : null;
+                    if (b == null) {
+                        // induce it from the request's cookies
+                        b = request.getCookies().getFirstValue("branch", "");
+                    }
+                    if (b == null || "".equals(b) || !branches.contains(b)) {
+                        b = toBranch.get("stable");
+                    }
+                    setCookie(response, cookie, b);
                 }
             };
             route.setNext(filter);
