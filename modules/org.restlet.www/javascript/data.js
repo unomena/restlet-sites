@@ -116,8 +116,19 @@ function getDefaultBranch(qualifier) {
 	}
 	return q.version.substring(0, 3);
 }
-function getDefaultQualifier() {
-	return 'stable';
+function getDefaultQualifier(branch) {
+	var result = 'stable'; // default value
+	if(branch) {
+		// guess the corresponding qualifier
+		var q = null;
+		for (var i = 0; q = qualifiers[i]; i++) {
+			if(q.version.substring(0, 3) == branch){
+				result = q.id;
+				break;
+			}
+		};
+	}
+	return result;
 }
 function getDefaultEdition(version) {
 	var str = 'all';

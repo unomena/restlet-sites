@@ -233,23 +233,23 @@ public class WwwRestletOrg extends BaseApplication implements
             @Override
             public void handle(Request request, Response response) {
                 // Translate the base reference.
-                String version = (String) request.getAttributes()
-                        .get("version");
+                String branch = (String) request.getAttributes().get("branch");
                 String edition = (String) request.getAttributes()
                         .get("edition");
                 String group = (String) request.getAttributes().get("group");
-                String relPart = "/" + version + "/" + edition + "/" + group
+                String relPart = "/" + branch + "/" + edition + "/" + group
                         + "/";
                 Reference baseRef = request.getResourceRef().getBaseRef();
                 String strBaseRef = baseRef.getIdentifier();
                 baseRef.setIdentifier(strBaseRef.substring(0,
                         strBaseRef.length() - relPart.length()));
+                setCookie(response, "branch", branch);
                 super.handle(request, response);
             }
         };
         javadocsDir.setNegotiatingContent(true);
         javadocsDir.setDeeplyAccessible(true);
-        result.attach("/learn/javadocs/{version}/{edition}/{group}/",
+        result.attach("/learn/javadocs/{branch}/{edition}/{group}/",
                 javadocsDir);
 
         // "download" routing
@@ -473,6 +473,21 @@ public class WwwRestletOrg extends BaseApplication implements
     }
 
     /**
+     * Shortcut method that adds a {@link CookieSetting} to the response.
+     * 
+     * @param response
+     *            The response to complete.
+     * @param name
+     *            The name of the coookie.
+     * @param value
+     *            The value of the cookie.
+     */
+    private void setCookie(Response response, String name, String value) {
+        response.getCookieSettings().add(
+                new CookieSetting(0, name, value, "/", null));
+    }
+
+    /**
      * Refreshes the download router according to the list of current versions,
      * branches, etc.
      */
@@ -603,13 +618,10 @@ public class WwwRestletOrg extends BaseApplication implements
                 @Override
                 protected void afterHandle(Request request, Response response) {
                     if (value != null) {
-                        response.getCookieSettings().add(
-                                new CookieSetting(0, cookie, value, "/", null));
+                        setCookie(response, cookie, value);
                     } else {
-                        response.getCookieSettings().add(
-                                new CookieSetting(0, cookie, (String) request
-                                        .getAttributes().get("branch"), "/",
-                                        null));
+                        setCookie(response, cookie, (String) request
+                                .getAttributes().get("branch"));
                     }
                 }
             };
@@ -618,9 +630,7 @@ public class WwwRestletOrg extends BaseApplication implements
             Filter filter = new Filter(getContext(), route.getNext()) {
                 @Override
                 protected void afterHandle(Request request, Response response) {
-                    response.getCookieSettings().add(
-                            new CookieSetting(0, cookie, toBranch.get(value),
-                                    "/", null));
+                    setCookie(response, cookie, toBranch.get(value));
                 }
             };
             route.setNext(filter);
@@ -629,8 +639,7 @@ public class WwwRestletOrg extends BaseApplication implements
                 @Override
                 protected void afterHandle(Request request, Response response) {
                     super.afterHandle(request, response);
-                    response.getCookieSettings().add(
-                            new CookieSetting(0, cookie, value, "/", null));
+                    setCookie(response, cookie, value);
                 }
             };
             route.setNext(filter);
