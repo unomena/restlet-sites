@@ -244,45 +244,11 @@ ul.sub-list {
 	font-weight: bold;
 }
 
-.btn-group
- 
-.btn
-:not
- 
-(
-.dropdown-toggle
- 
-)
-{
-width
-:
- 
-140
-px
-;
-
-	
-text-align
-:
- 
-left
-;
-
-	
-background-color
-:
- 
-#fff
-;
-
-	
-background-image
-:
- 
-none
-;
-
-
+.btn-group .btn:not(.dropdown-toggle){
+    width: 140px;
+    text-align: left;
+    background-color: #fff;
+    background-image:none;
 }
 .btn-group .btn.dropdown-toggle {
 	border-left: none;
@@ -290,8 +256,7 @@ none
 	background-image: none;
 }
 
-.btn-group .btn.no-radius:not  (.dropdown-toggle  ),.btn-group .btn.dropdown-toggle.no-radius
-	{
+.btn-group .btn.no-radius:not  (.dropdown-toggle),.btn-group .btn.dropdown-toggle.no-radius {
 	border-radius: 0px;
 	-moz-border-radius: 0px;
 	-webkit-border-radius: 0px;
@@ -733,35 +698,11 @@ div.content.footerWrapper {
 	width: 200px;
 }
 
-.userguideswitch
- 
-.btn-group
- 
-.btn
-:not
- 
-(
-.dropdown-toggle
- 
-)
-{
-width
-:
- 
-50
-px
-;
-
-	
-margin-left
-:
- 
-20
-px
-;
-
-
+.userguideswitch .btn-group .btn:not(.dropdown-toggle){
+    width:50px;
+    margin-left:20px;
 }
+
 .userguideswitch .dropdown-menu {
 	min-width: 50px;
 	margin-left: 20px;
