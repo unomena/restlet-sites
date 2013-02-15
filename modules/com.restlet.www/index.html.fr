@@ -25,10 +25,10 @@
           <div id="sliderBackgroundWrapper">
             <div id="sliderWrapper">
               <div id="sliderContent">
-                <a href="http://beta.apispark.com/home" target="_blank">
+                <a href="http://apispark.com" target="_blank">
                   <img src="/images/slider-apispark.png" />
                 </a>
-                <a href="http://www.restlet.org" target="_blank">
+                <a href="http://restlet.org" target="_blank">
                   <img src="/images/slider-restlet.png" />
                 </a>
               </div>
