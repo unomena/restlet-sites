@@ -179,6 +179,7 @@
         </div>
       </div>
       <!-- Copyright &copy; 2005-2013 <a href="http://www.restlet.com">Restlet</a> -->
+      <!-- generated ${pp.now} -->
     </footer>
    </body>
 </html>

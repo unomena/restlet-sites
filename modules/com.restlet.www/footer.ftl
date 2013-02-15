@@ -127,7 +127,6 @@
             <li><a href="http://www.restlet.com/products/">Products</a></li>
             <li><a href="http://www.restlet.com/services/">Services</a></li>
             <li><a href="http://www.restlet.com/company/">About us</a></li>
-            <li><a href="http://www.restlet.com/products/">Legal ??</a></li>
           </ul>
         </div>
         <div class="span2b site">
@@ -142,10 +141,9 @@
         <div class="span2c site">
           <h4><img src="/images/logo-apispark-small.png" class="pull-left"/><a href="http://apispark.com">APISpark</a></h4>
           <ul class="sub-list">
-            <li><a href="http://beta.apispark.com/features/all">Features</a></li>
-            <!--<li><a href="">Pricing ??</a></li>-->
-            <li><a href="">Catalog ??</a></li>
-            <li><a href="">Legal ??</a></li>
+            <li><a href="http://beta.apispark.com/features/user">Features</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">About us</a></li>
           </ul>
         </div>
         <div class="span2d site">
@@ -159,6 +157,7 @@
         </div>
       </div>
       <!-- ${messages.messages.copyright['${language}']} -->
+      <!-- generated ${pp.now} -->
     </footer>
    </body>
 </html>
