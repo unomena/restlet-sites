@@ -115,8 +115,8 @@
     <footer>
       <div class="container">
         <div class="span2 intro">${labels.footer.intouch['${language}']}</div>
-        <div class="span2a"><strong><i class="blog-icon"></i>${labels.footer.blog['${language}']}</strong></div>
-        <div class="span2b"><strong><i class="follow-icon"></i>${labels.footer.twitter['${language}']}</strong></div>
+        <div class="span2a"><a href="http://blog.restlet.com/"><strong><i class="blog-icon"></i>${labels.footer.blog['${language}']}</strong></a></div>
+        <div class="span2b"><a href="https://twitter.com/restlet_org"><strong><i class="follow-icon"></i>${labels.footer.twitter['${language}']}</strong></a></div>
         <div class="span4 newsletter"><span id="footerNewsLetterWrapper"><input id="footerNewsLetter" value="${labels.footer.newsletter['${language}']}"/><span id="footerNewsLetterOkButton">OK</span></span></div>
         <div class="clearBoth"></div>
         <div class="emptySeparator"></div>
