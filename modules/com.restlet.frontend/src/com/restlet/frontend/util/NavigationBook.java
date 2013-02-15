@@ -146,7 +146,7 @@ public class NavigationBook {
                         e.printStackTrace();
                     }
                 } else {
-                    System.out.println("pas trouvé : "
+                    System.out.println("not found : "
                             + attributes.getValue("id"));
                 }
             }

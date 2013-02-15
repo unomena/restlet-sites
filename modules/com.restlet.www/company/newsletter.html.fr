@@ -1,6 +1,5 @@
 <#include "/header.ftl"/>
-<#global stylesheet_files=["/stylesheets/ext-custom.css", "/stylesheets/xtheme-gray.css"] />
-<#global javascript_files=["/javascript/ext-custom.js", "/javascript/locale/ext-lang.js", "/javascript/forms/contact/newsletter.fr.js"] />
+<#global javascript_files=["/javascript/forms/contact/newsletter.js.fr"] />
 <#global content>
 
 <@h3 "Présentation" "presentation">

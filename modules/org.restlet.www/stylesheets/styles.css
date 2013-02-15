@@ -3,8 +3,10 @@ body {
 	background-image: -moz-linear-gradient(top, #f9fdff, #fff);
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f9fdff),
 		color-stop(1, #fff) );
-	filter: progid:    DXImageTransform.Microsoft.gradient(    GradientType=
-		   0, startColorstr=    '#f9fdff', endColorstr=    '#fff' );
+	filter: progid:      DXImageTransform.Microsoft.gradient(      GradientType=
+		
+		
+		   0, startColorstr=      '#f9fdff', endColorstr=      '#fff' );
 	-ms-filter:
 		"progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f9fdff', endColorstr='#fff')";
 }
@@ -242,20 +244,19 @@ ul.sub-list {
 	font-weight: bold;
 }
 
-.btn-group .btn:not(.dropdown-toggle) {
-	width: 140px;
-	text-align: left;
-	background-color: #fff;
-	background-image: none;
+.btn-group .btn:not(.dropdown-toggle){
+    width: 140px;
+    text-align: left;
+    background-color: #fff;
+    background-image:none;
 }
-
 .btn-group .btn.dropdown-toggle {
 	border-left: none;
 	background-color: #fff;
 	background-image: none;
 }
 
-.btn-group .btn.no-radius:not(.dropdown-toggle),.btn-group .btn.dropdown-toggle.no-radius {
+.btn-group .btn.no-radius:not  (.dropdown-toggle),.btn-group .btn.dropdown-toggle.no-radius {
 	border-radius: 0px;
 	-moz-border-radius: 0px;
 	-webkit-border-radius: 0px;
@@ -525,7 +526,9 @@ footer .container .span2 {
 
 footer .container .span2 strong {
 	font-weight: bold;
-	color: #757575; style=""
+	color: #757575;
+	style
+	=""
 }
 
 footer .container .span2a {
@@ -673,9 +676,11 @@ div.content.footerWrapper {
 	cursor: pointer;
 }
 
-.contributors li.span3 {
-	text-align: left;
-	margin: 0px 0px 0px 0px;
+.contributors li {
+    margin-right: 10px;
+	float: left;
+	width: 170px;
+	min-height: 1px;
 }
 
 .features .span7,.features .span3 {
@@ -689,13 +694,13 @@ div.content.footerWrapper {
 }
 
 .userguideswitch {
-    float:right;
-    width: 200px;
+	float: right;
+	width: 200px;
 }
 
-.userguideswitch .btn-group .btn:not(.dropdown-toggle) {
-	width: 50px;
-	margin-left: 20px;
+.userguideswitch .btn-group .btn:not(.dropdown-toggle){
+    width:50px;
+    margin-left:20px;
 }
 
 .userguideswitch .dropdown-menu {
@@ -709,9 +714,10 @@ div.content.footerWrapper {
 }
 
 .book .span2 {
-    margin-top: 10px;
-    margin-left: 20px;
+	margin-top: 10px;
+	margin-left: 20px;
 }
+
 .book .span7 {
-    margin-left: 20px;
+	margin-left: 20px;
 }

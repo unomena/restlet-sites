@@ -3,7 +3,7 @@
 <#global javascript_files=["/javascript/jquery-1.9.0.min.js", "/javascript/jquery-cookie.js", "/javascript/jsclass-core.js", "/javascript/json-minified.js","/javascript/bootstrap.min.js", "/javascript/data.js", "/javascript/archives.js", "/javascript/combo-widget.js"] />
 <#global javascript>
 	$(document).ready(function() {
-        init("cBranch", "cRelease", "cEdition", "cDistribution", "archives");
+        init($("#cBranch"), $("#cRelease"), $("#cEdition"), $("#cDistribution"), $("#archives"));
 	});
 </#global>
 <#global content>

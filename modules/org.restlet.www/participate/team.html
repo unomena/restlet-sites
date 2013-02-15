@@ -9,7 +9,7 @@
          <li><a href="#donators">Donators</a></li>
       </ul>
    </div>
-   
+<div class="span6">
    <h4><a name="core-committers"></a>Core committers</h4>
 
    <p>
@@ -57,7 +57,7 @@
 
    <p>
 <ul class="contributors">
-	${restletContributors}
+	<#list restletContributors as contributor><li>${contributor}</li></#list>
 </ul>
    <div class="clearBoth"></div>
    </p>
@@ -125,6 +125,6 @@
          </td>
       </tr>
    </table>
-   
+</div>
 </#global>
 <#include "/footer.ftl"/>

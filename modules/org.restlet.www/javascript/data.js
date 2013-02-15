@@ -63,9 +63,13 @@ function getVersion(id) {
 	return null;
 };
 function getEdition(id) {
-	for (var i = 0; item = editions[i]; i++) {
+	for (var i = 0; item = version.editions[i]; i++) {
 		if(item.id == id){
-			return item;
+			for (var j = 0; item = editions[j]; j++) {
+				if (item.id == id) {
+					return item;							
+				}
+			}
 		}
 	};
 	return null;
@@ -116,8 +120,19 @@ function getDefaultBranch(qualifier) {
 	}
 	return q.version.substring(0, 3);
 }
-function getDefaultQualifier() {
-	return 'stable';
+function getDefaultQualifier(branch) {
+	var result = 'stable'; // default value
+	if(branch) {
+		// guess the corresponding qualifier
+		var q = null;
+		for (var i = 0; q = qualifiers[i]; i++) {
+			if(q.version.substring(0, 3) == branch){
+				result = q.id;
+				break;
+			}
+		};
+	}
+	return result;
 }
 function getDefaultEdition(version) {
 	var str = 'all';

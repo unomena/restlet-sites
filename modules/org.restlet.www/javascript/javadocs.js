@@ -13,7 +13,7 @@ function loadBranches() {
      };
      cBranches.children().click(function() {
           setBranch(this.id);
-          $(location).attr('href',"/learn/guide/" + branch + "/");
+          $(location).attr('href',"/learn/javadocs/" + branch + "/");
      });
 };
 function refresh() {

@@ -7,6 +7,19 @@ var tabDir;
 //myCombo.addSelectionListener(function(value) {
 //    (...)
 //});
+function getParameterByName(query, name, defaultValue) {
+	var result = defaultValue;
+	if (query) {
+		name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+		var regexS = "[#\\?&]?" + name + "=([^&#]*)";
+		var regex = new RegExp(regexS);
+		var results = regex.exec(query);
+		if (results != null) {
+			result = decodeURIComponent(results[1].replace(/\+/g, " "));
+		}
+	}
+	return result;
+}
 
 function loadBranches() {
 	cBranches.empty();
@@ -116,6 +129,7 @@ function refresh() {
 	$("#" + cEditions.attr('id') + '-bt').empty();
 	$("#" + cEditions.attr('id') + '-bt').append("<strong>" + edition.shortname + "</strong>");
 	$("#" + cTypesDistribution.attr('id') + '-bt').empty();
+	window.location.hash = "#branch=" + branch + "&release=" + version.id + "&edition=" + edition.id + "&distribution=" + distributionId;
 	if("zip" == distributionId){
 		$("#" + cTypesDistribution.attr('id') + '-bt').append("<strong>ZIP file</strong>");
 	} else if("exe" == distributionId){
@@ -151,39 +165,64 @@ function setDownloadButton(){
 	}
 }
 
-function init(idBranches, idReleases, idEditions, idTypesDistribution, idDir) {
-	cBranches = $("#" + idBranches);
-	cReleases = $("#" + idReleases);
-	cEditions = $("#" + idEditions);
-	cTypesDistribution = $("#" + idTypesDistribution);
-	tabDir = $("#" + idDir);
+/**
+ * Initializes the data model, cookies, and selectors.
+ * @param sb
+ * 		The selector of branches.
+ * @param sr
+ * 		The selector of releases.
+ * @param se
+ * 		The selector of editions.
+ * @param std
+ * 		The selector of type of distributions.
+ * @param dir
+ * 		The div wher to display the listing.
+ */
+function init(sb, sr, se, std, dir) {
+	cBranches = sb;
+	cReleases = sr;
+	cEditions = se;
+	cTypesDistribution = std;
+	tabDir = dir;
 	loadBranches();
 	loadEditions();
 	loadDistributions();
 
-	branch = $.cookie('branch');
-	if (!branch) {
-		$.cookie('branch', getDefaultBranch($.cookie('qualifier')), {path: '/' });
-		branch = $.cookie('branch');
-	}
-	qualifier = getQualifier($.cookie('qualifier'));
-	if(!qualifier){
-		$.cookie('qualifier', getDefaultQualifier(), {path: '/' });
-		qualifier = getQualifier($.cookie('qualifier'));
-	}
-	version = getVersion(qualifier.version);
+	var hash = window.location.hash;
+	var itemId = getParameterByName(hash, "branch", $.cookie('branch'));
 	
-	edition = getEdition($.cookie('edition'));
-	if(!edition) {
-		$.cookie('edition', getDefaultEdition(version), {path: '/' });
-		edition = getEdition($.cookie('edition'));
+	branch = itemId;
+	if (!branch) {
+		branch = getDefaultBranch($.cookie('qualifier'));
 	}
+	$.cookie('branch', branch, {path: '/' });
+	
+	itemId = getParameterByName(hash, "qualifier", $.cookie('qualifier'));
+	qualifier = getQualifier(itemId);
+	if(!qualifier){
+		qualifier = getQualifier(getDefaultQualifier());
+	}
+	$.cookie('qualifier', qualifier.id, {path: '/' });
+	version = getVersion(qualifier.version);
 
-	distribution = getDistribution($.cookie('distribution'));
-	if(!distribution){
-		$.cookie('distribution', getDefaultDistribution(version, edition), {path: '/' });
+	itemId = getParameterByName(hash, "edition", $.cookie('edition'));
+	edition = getEdition(itemId);
+	if(!edition) {
+		edition = getEdition(getDefaultEdition(version));
 	}
-	distributionId = $.cookie('distribution');
+	$.cookie('edition', edition.id, {path: '/' });
+	
+	itemId = getParameterByName(hash, "distribution", $.cookie('distribution'));
+	distribution = getDistribution(itemId);
+	if(!distribution){
+		distribution = getDistribution(getDefaultDistribution(version, edition));
+	}
+	if ("file" == distribution.type) {
+		distributionId = distribution.fileType;
+	} else {
+		distributionId = distribution.type;
+	}
+	$.cookie('distribution', distributionId, {path : '/'});
 
 	refresh();
 }

@@ -225,11 +225,32 @@ public class WwwRestletOrg extends BaseApplication implements
         Directory directory = new Directory(getContext(), this.wwwUri);
         directory.setNegotiatingContent(true);
         directory.setDeeplyAccessible(true);
-        if (Boolean.parseBoolean(getProperties().getProperty("nocache"))) {
-            result.attachDefault(directory);
-        } else {
-            result.attachDefault(new CacheFilter(getContext(), directory));
-        }
+        result.attachDefault(new CacheFilter(getContext(), directory));
+
+        // Serve javadocs using a specific route
+        Directory javadocsDir = new Directory(getContext(), this.dataUri
+                + "/javadocs") {
+            @Override
+            public void handle(Request request, Response response) {
+                // Translate the base reference.
+                String branch = (String) request.getAttributes().get("branch");
+                String edition = (String) request.getAttributes()
+                        .get("edition");
+                String group = (String) request.getAttributes().get("group");
+                String relPart = "/" + branch + "/" + edition + "/" + group
+                        + "/";
+                Reference baseRef = request.getResourceRef().getBaseRef();
+                String strBaseRef = baseRef.getIdentifier();
+                baseRef.setIdentifier(strBaseRef.substring(0,
+                        strBaseRef.length() - relPart.length()));
+                setCookie(response, "branch", branch);
+                super.handle(request, response);
+            }
+        };
+        javadocsDir.setNegotiatingContent(true);
+        javadocsDir.setDeeplyAccessible(true);
+        result.attach("/learn/javadocs/{branch}/{edition}/{group}/",
+                javadocsDir);
 
         // "download" routing
         downloadRouter = new Router(getContext());
@@ -324,7 +345,15 @@ public class WwwRestletOrg extends BaseApplication implements
                 to, Redirector.MODE_CLIENT_TEMPORARY) {
             @Override
             protected Reference getTargetRef(Request request, Response response) {
-                request.getAttributes().put("branch", toBranch.get(qualifier));
+                String b = (qualifier != null) ? toBranch.get(qualifier) : null;
+                if (b == null) {
+                    // induce it from the request's cookies
+                    b = request.getCookies().getFirstValue("branch", "");
+                }
+                if (b == null || "".equals(b) || !branches.contains(b)) {
+                    b = toBranch.get("stable");
+                }
+                request.getAttributes().put("branch", b);
                 return super.getTargetRef(request, response);
             }
         });
@@ -452,6 +481,21 @@ public class WwwRestletOrg extends BaseApplication implements
     }
 
     /**
+     * Shortcut method that adds a {@link CookieSetting} to the response.
+     * 
+     * @param response
+     *            The response to complete.
+     * @param name
+     *            The name of the coookie.
+     * @param value
+     *            The value of the cookie.
+     */
+    private void setCookie(Response response, String name, String value) {
+        response.getCookieSettings().add(
+                new CookieSetting(0, name, value, "/", null));
+    }
+
+    /**
      * Refreshes the download router according to the list of current versions,
      * branches, etc.
      */
@@ -468,14 +512,13 @@ public class WwwRestletOrg extends BaseApplication implements
         downloadRouter.getRoutes().add(
                 new StartsWithRoute(downloadRouter, new Directory(getContext(),
                         this.wwwUri + "/download"), "\\/[a-zA-Z]+"));
-        // redirect "branches" uris (such as "/download/2.x", to the "past"
-        // url).
+        // Redirect "branches" uris (ie "/download/2.x"), to the "past" url.
         for (String branch : branches) {
             wrapCookie(
                     redirect(downloadRouter, "/" + branch, "/download/past"),
                     "branch", branch);
         }
-        // Server archives
+        // Serve archives
         downloadRouter.attachDefault(new Directory(getContext(), this.dataUri
                 + "/archive/restlet"));
     }
@@ -549,31 +592,19 @@ public class WwwRestletOrg extends BaseApplication implements
         redirect(router, "/learn/", "/learn/tutorial");
         redirect(router, "/participate", "/participate/");
 
-        redirect(router, "/learn/guide", "/learn/stable/guide{rr}");
-        redirect(router, "/learn/javadocs", "/learn/stable/javadocs{rr}");
-        redirect(router, "/learn/roadmap", "/learn/stable/roadmap{rr}");
-        redirectBranch(router, "/learn/stable", "/learn/{branch}{rr}", "stable");
-        redirectBranch(router, "/learn/testing", "/learn/{branch}{rr}",
+        redirectBranch(router, "/learn/guide/stable", "/learn/guide/{branch}",
+                "stable");
+        redirectBranch(router, "/learn/guide/testing", "/learn/guide/{branch}",
                 "testing");
+        redirectBranch(router, "/learn/guide", "/learn/guide/{branch}", null);
+        redirectBranch(router, "/learn/javadocs", "/learn/javadocs/{branch}",
+                null);
     }
 
     @Override
     public synchronized void start() throws Exception {
         super.start();
         refresh();
-    }
-
-    private TemplateRoute wrapCookie(TemplateRoute route, final String cookie) {
-        Filter filter = new Filter(getContext(), route.getNext()) {
-            @Override
-            protected void afterHandle(Request request, Response response) {
-                response.getCookieSettings().add(
-                        new CookieSetting(0, cookie, (String) request
-                                .getAttributes().get(cookie), "/", null));
-            }
-        };
-        route.setNext(filter);
-        return route;
     }
 
     /**
@@ -594,13 +625,10 @@ public class WwwRestletOrg extends BaseApplication implements
                 @Override
                 protected void afterHandle(Request request, Response response) {
                     if (value != null) {
-                        response.getCookieSettings().add(
-                                new CookieSetting(0, cookie, value, "/", null));
+                        setCookie(response, cookie, value);
                     } else {
-                        response.getCookieSettings().add(
-                                new CookieSetting(0, cookie, (String) request
-                                        .getAttributes().get("branch"), "/",
-                                        null));
+                        setCookie(response, cookie, (String) request
+                                .getAttributes().get("branch"));
                     }
                 }
             };
@@ -609,9 +637,15 @@ public class WwwRestletOrg extends BaseApplication implements
             Filter filter = new Filter(getContext(), route.getNext()) {
                 @Override
                 protected void afterHandle(Request request, Response response) {
-                    response.getCookieSettings().add(
-                            new CookieSetting(0, cookie, toBranch.get(value),
-                                    "/", null));
+                    String b = (value != null) ? toBranch.get(value) : null;
+                    if (b == null) {
+                        // induce it from the request's cookies
+                        b = request.getCookies().getFirstValue("branch", "");
+                    }
+                    if (b == null || "".equals(b) || !branches.contains(b)) {
+                        b = toBranch.get("stable");
+                    }
+                    setCookie(response, cookie, b);
                 }
             };
             route.setNext(filter);
@@ -620,8 +654,7 @@ public class WwwRestletOrg extends BaseApplication implements
                 @Override
                 protected void afterHandle(Request request, Response response) {
                     super.afterHandle(request, response);
-                    response.getCookieSettings().add(
-                            new CookieSetting(0, cookie, value, "/", null));
+                    setCookie(response, cookie, value);
                 }
             };
             route.setNext(filter);

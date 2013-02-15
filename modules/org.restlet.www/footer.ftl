@@ -20,7 +20,6 @@
       <link rel="stylesheet" type="text/css"             href='/stylesheets/bootstrap-responsive.css' />
       <link rel="alternate"  type="application/atom+xml" href="/feeds/summary" title="${labels.labels.summaryRestletBlog?trim}" />
       <link rel="alternate"  type="application/rss+xml"  href="http://blog.restlet.com/feed/?cat=15314" title="${labels.labels.restletBlog?trim}" />
-      <link rel="meta"       type="application/rdf+xml"  href="http://www.restlet.org/about/doap"  title="DOAP" />
 <#list stylesheet_files as stylesheet_file>
       <link rel="stylesheet" type="text/css"            href="${stylesheet_file}" />
 </#list>
@@ -32,6 +31,22 @@
 <#list javascript_files as javascript_file>
       <script                type="text/javascript"     src="${javascript_file}"></script>
 </#list>
+<#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!""))>
+      <script                type="text/javascript"     src="/javascript/jquery-1.9.0.min.js"></script>
+      <script                type="text/javascript"     src="/javascript/jquery-cookie.js"></script>
+      <script                type="text/javascript"     src="/javascript/jsclass-core.js"></script>
+      <script                type="text/javascript"     src="/javascript/json-minified.js"></script>
+      <script                type="text/javascript"     src="/javascript/restlet-client.js"></script>
+      <script                type="text/javascript"     src="/javascript/restlet-client.js"></script>
+      <script                type="text/javascript"     src="/javascript/bootstrap.min.js"></script>
+      <script                type="text/javascript"     src="/javascript/data.js"></script>
+      <script                type="text/javascript"     src="/javascript/combo-widget.js"></script>
+    <#if ("javadocs" == currentSubSection!"")>
+      <script                type="text/javascript"     src="/javascript/javadocs.js"></script>
+    <#elseif ("guide" == currentSubSection!"")>
+      <script                type="text/javascript"     src="/javascript/userguide.js"></script>
+    </#if>
+</#if>
       <script type="text/javascript">
 <#if pp.sourceFile?matches("learn\\/[0-9]\\.[0-9]$") >
         $.cookie('branch', '${pp.sourceFile?substring(6)}', {path: '/' });
@@ -53,6 +68,11 @@
              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
 */
+<#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!""))>
+    $(document).ready(function() {
+        init($("#cBranch"));
+    });
+</#if>
       </script>
    </head>
 
@@ -104,8 +124,8 @@
    </#if>
 </#list>
 </#compress>
-    
     <div class='container<#if "-"=currentSection> topics</#if> content'>
+    <#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!""))>${userGuideBranchSwitch!""}</#if>    
       ${content}
     </div>
     <div class="content footerWrapper">
