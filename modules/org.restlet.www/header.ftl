@@ -1,5 +1,7 @@
 <#global javascript_files      = [] />
 <#global stylesheet_files      = [] />
+<#global sections              = hierarchy.sections />
+<#global labels                = labels.labels />
 <#if pp.sourceDirectory?contains("error")>
     <#global currentSection = "error" />
 <#elseif (pp.sourceDirectory?index_of("/") > -1)>

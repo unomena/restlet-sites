@@ -1,5 +1,5 @@
 <#if !(title?has_content)>
-<#list hierarchy.sections.section as section>
+<#list sections.section as section>
       <#if section.@id == currentSection>
          <#assign title="Restlet - ${section.label?trim}"  />
       </#if>
@@ -18,8 +18,8 @@
       <link rel="stylesheet" type="text/css"             href='/stylesheets/bootstrap.css' />
       <link rel="stylesheet" type="text/css"             href='/stylesheets/styles.css' />
       <link rel="stylesheet" type="text/css"             href='/stylesheets/bootstrap-responsive.css' />
-      <link rel="alternate"  type="application/atom+xml" href="/feeds/summary" title="${labels.labels.summaryRestletBlog?trim}" />
-      <link rel="alternate"  type="application/rss+xml"  href="http://blog.restlet.com/feed/?cat=15314" title="${labels.labels.restletBlog?trim}" />
+      <link rel="alternate"  type="application/atom+xml" href="/feeds/summary" title="${labels.summaryRestletBlog?trim}" />
+      <link rel="alternate"  type="application/rss+xml"  href="http://blog.restlet.com/feed/?cat=15314" title="${labels.restletBlog?trim}" />
 <#list stylesheet_files as stylesheet_file>
       <link rel="stylesheet" type="text/css"            href="${stylesheet_file}" />
 </#list>
@@ -84,7 +84,7 @@
             <img alt='Restlet Framework Logo' height='136' width='129' src='/images/logo-restlet.png' />
           </a>
           <ul class='nav'>
-    <#list hierarchy.sections.section as section>
+    <#list sections.section as section>
       <#if !(section.@hidden?has_content)><li><a<#if section.@id == currentSection> class='active'</#if> href="/${section.@id}/">${section.title}</a></li></#if>
 	</#list>
           </ul>
@@ -97,7 +97,7 @@
   <#if header?has_content>${header}
   <#elseif "error"=currentSection><h3>${errorPageTitle!"Error page"} <#noparse>(${status.code})</#noparse></h3>
   <#else>
-    <#list hierarchy.sections.section as section>
+    <#list sections.section as section>
       <#if section.@id == currentSection>
        <h3>${section.label?trim}</h3>
       </#if>
@@ -108,7 +108,7 @@
     </div>
 
 <#compress>
-<#list hierarchy.sections.section as section>
+<#list sections.section as section>
    <#if (section.@hidden[0]!'false') != 'true' && (section.@id == currentSection)>
     <div class="container subsections">
       <ul class="pages">
@@ -134,52 +134,49 @@
 
     <footer>
       <div class="container">
-        <div class="span2 intro">Stay in touch:</div>
-        <div class="span2a"><strong><i class="blog-icon"></i>Our blog</strong></div>
-        <div class="span2b"><strong><i class="follow-icon"></i>Follow us</strong></div>
-        <div class="span4 newsletter"><span id="footerNewsLetterWrapper"><input id="footerNewsLetter" value="Newsletter (no spam)"/><span id="footerNewsLetterOkButton">OK</span></span></div>
+        <div class="span2 intro">${labels.footer.intouch['${language}']}</div>
+        <div class="span2a"><strong><i class="blog-icon"></i>${labels.footer.blog['${language}']}</strong></div>
+        <div class="span2b"><strong><i class="follow-icon"></i>${labels.footer.twitter['${language}']}</strong></div>
+        <div class="span4 newsletter"><span id="footerNewsLetterWrapper"><input id="footerNewsLetter" value="${labels.footer.newsletter['${language}']}"/><span id="footerNewsLetterOkButton">OK</span></span></div>
         <div class="clearBoth"></div>
         <div class="emptySeparator"></div>
-        <div class="span2 intro below">Our sites:</div>
+        <div class="span2 intro below">${labels.footer.sites['${language}']}</div>
         <div class="span2a site">
           <h4><img src="/images/logo-restlet-small.png" class="pull-left"/><a href="http://restlet.com">Restlet</a></h4>
           <ul class="sub-list">
-            <li><a href="http://www.restlet.com/products/">Products</a></li>
-            <li><a href="http://www.restlet.com/services/">Services</a></li>
-            <li><a href="http://www.restlet.com/company/">About us</a></li>
-            <li><a href="http://www.restlet.com/products/">Legal ??</a></li>
+            <li><a href="http://www.restlet.com/products">${labels.footer.restlet.product['${language}']}</a></li>
+            <li><a href="http://www.restlet.com/services">${labels.footer.restlet.services['${language}']}</a></li>
+            <li><a href="http://www.restlet.com/company">${labels.footer.restlet.about['${language}']}</a></li>
           </ul>
         </div>
         <div class="span2b site">
           <h4><img src="/images/logo-restlet-framework-small.png" class="pull-left"/><a href="http://restlet.org">Restlet Framework</a></h4>
           <ul class="sub-list">
-            <li><a href="http://www.restlet.org/discover/">Discover</a></li>
-            <li><a href="http://www.restlet.org/download/">Download</a></li>
-            <li><a href="http://www.restlet.org/learn/">Learn</a></li>
-            <li><a href="http://www.restlet.org/participate/">Participate</a></li>
+            <li><a href="http://www.restlet.org/discover">${labels.footer.restletframework.discover['${language}']}</a></li>
+            <li><a href="http://www.restlet.org/download">${labels.footer.restletframework.download['${language}']}</a></li>
+            <li><a href="http://www.restlet.org/learn">${labels.footer.restletframework.learn['${language}']}</a></li>
+            <li><a href="http://www.restlet.org/participate">${labels.footer.restletframework.participate['${language}']}</a></li>
           </ul>
         </div>
         <div class="span2c site">
           <h4><img src="/images/logo-apispark-small.png" class="pull-left"/><a href="http://apispark.com">APISpark</a></h4>
           <ul class="sub-list">
-            <li><a href="http://beta.apispark.com/features/all">Features</a></li>
-            <!--<li><a href="">Pricing ??</a></li> -->
-            <li><a href="">Catalog ??</a></li>
-            <li><a href="">Legal ??</a></li>
+            <li><a href="http://apispark.com/features/user">${labels.footer.apispark.features['${language}']}</a></li>
+            <li><a href="http://apispark.com/faq">${labels.footer.apispark.faq['${language}']}</a></li>
+            <li><a href="http://apispark.com/about">${labels.footer.apispark.about['${language}']}</a></li>
           </ul>
         </div>
         <div class="span2d site">
           <h4><img src="/images/logo-apispark-support-small.png" class="pull-left"/><a href="http://support.apispark.org">APISpark Support</a></h4>
           <ul class="sub-list">
-            <li><a href="http://support.apispark.org/tutorials">Tutorials</a></li>
-            <li><a href="http://support.apispark.org/userGuide">User Guide</a></li>
-            <li><a href="http://support.apispark.org/roadmap">Roadmap</a></li>
-            <li><a href="http://support.apispark.org/helpdesk">Help Desk</a></li>
+            <li><a href="http://support.apispark.org/tutorials">${labels.footer.apisparksupport.tutorial['${language}']}</a></li>
+            <li><a href="http://support.apispark.org/roadmap">${labels.footer.apisparksupport.roadmap['${language}']}</a></li>
+            <li><a href="http://support.apispark.org/helpdesk">${labels.footer.apisparksupport.helpdesk['${language}']}</a></li>
           </ul>
         </div>
       </div>
-      <!-- Copyright &copy; 2005-2013 <a href="http://www.restlet.com">Restlet</a> -->
-      <!-- generated ${pp.now} -->
     </footer>
+    <!-- Copyright &copy; 2005-2013 <a href="http://www.restlet.com">Restlet</a> -->
+    <!-- generated ${pp.now} -->
    </body>
 </html>

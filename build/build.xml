@@ -51,37 +51,6 @@
 	<!-- ==================== -->
 	<!-- ===  Ant Macros  === -->
 	<!-- ==================== -->
-	<macrodef name="integrate-restlet">
-		<attribute name="restlet-project-type" />
-		<attribute name="restlet-version-minor" />
-		<attribute name="restlet-version-compact" />
-		<attribute name="dest-directory-name" />
-		<sequential>
-			<!-- get the javadocs -->
-			<wc-copy-directory src-project="restlet" src-project-type="@{restlet-project-type}" src-project-minor-version="@{restlet-version-minor}" src-project-compact-version="@{restlet-version-compact}" src-project-directory="build/dist/classic/restlet-@{restlet-version-compact}/docs" dest-directory="${temp}/${www-restlet-org}/documentation/@{dest-directory-name}" overwrite="true" />
-			<!-- get the changes.txt file -->
-			<wc-copy src-project="restlet" src-project-type="@{restlet-project-type}" src-project-minor-version="@{restlet-version-minor}" src-project-compact-version="@{restlet-version-compact}" src-project-file="build/dist/classic/restlet-@{restlet-version-compact}/changes.txt" dest-file="${temp}/${www-restlet-org}/documentation/@{dest-directory-name}/changes.txt" overwrite="true" />
-			<!-- get the license file -->
-			<wc-copy src-project="restlet" src-project-type="@{restlet-project-type}" src-project-minor-version="@{restlet-version-minor}" src-project-compact-version="@{restlet-version-compact}" src-project-file="build/tmpl/text/license.txt" dest-file="${temp}/${www-restlet-org}/documentation/@{dest-directory-name}/license.txt" overwrite="true" />
-		</sequential>
-	</macrodef>
-
-	<macrodef name="integrate-restlet-edition">
-		<attribute name="restlet-project-type" />
-		<attribute name="restlet-version-minor" />
-		<attribute name="restlet-version-compact" />
-		<attribute name="dest-directory-name" />
-		<attribute name="edition" />
-		<sequential>
-			<!-- get the javadocs -->
-			<wc-copy-directory src-project="restlet" src-project-type="@{restlet-project-type}" src-project-minor-version="@{restlet-version-minor}" src-project-compact-version="@{restlet-version-compact}" src-project-directory="build/dist/classic/restlet-@{restlet-version-compact}/@{edition}/docs" dest-directory="${temp}/${www-restlet-org}/documentation/@{dest-directory-name}" overwrite="true" />
-			<!-- get the changes.txt file -->
-			<wc-copy src-project="restlet" src-project-type="@{restlet-project-type}" src-project-minor-version="@{restlet-version-minor}" src-project-compact-version="@{restlet-version-compact}" src-project-file="build/dist/classic/restlet-@{restlet-version-compact}/@{edition}/changes.txt" dest-file="${temp}/${www-restlet-org}/documentation/@{dest-directory-name}/changes.txt" overwrite="true" />
-			<!-- get the license file -->
-			<wc-copy src-project="restlet" src-project-type="@{restlet-project-type}" src-project-minor-version="@{restlet-version-minor}" src-project-compact-version="@{restlet-version-compact}" src-project-file="build/tmpl/text/license.txt" dest-file="${temp}/${www-restlet-org}/documentation/@{dest-directory-name}/license.txt" overwrite="true" />
-		</sequential>
-	</macrodef>
-
 
 	<!-- ===================== -->
 	<!-- ===  Ant Targets  === -->
@@ -166,7 +135,8 @@
                 restletQualifiers: text(data/qualifiers.json)
                 restletEditions: text(data/editions.json)
                 restletContributors: slicedText(data/contributors.txt)
-                ant: antProperties()
+                language: en
+				ant: antProperties()
             </data>
 			<include name="**/*" />
 			<exclude name="**/*.ftl" />
@@ -227,44 +197,7 @@
 <target name="verify" description="Verify build." />
 
 <!-- INTEGRATE target -->
-<target name="integrate" if="do-integrate" depends="integrate-restlet" description="Dependencies with other projects." />
-
-<target name="integrate-restlet" depends="integrate-restlet-stable, integrate-restlet-testing, integrate-restlet-unstable" if="do-integrate" description="Retrieve from the Restlet project.">
-	<!-- get the favicon.ico file -->
-	<!--
-    <wc-copy src-project="restlet" src-project-type="${stable.restlet-project-type}" src-project-minor-version="${stable.restlet-version-minor}" src-project-compact-version="${stable.restlet-version-compact}" src-project-file="build/images/ico/favicon.ico" dest-file="${temp}/${www-restlet-org}/favicon.ico" overwrite="true" />
--->
-</target>
-
-<!-- Integrate stable release. -->
-<target name="integrate-restlet-stable" if="do-integrate" description="Retrieve from the Restlet's stable release.">
-	<integrate-restlet-edition dest-directory-name="${stable.restlet-version-minor}/android" restlet-project-type="${stable.restlet-project-type}" restlet-version-compact="${stable.restlet-version-compact}" restlet-version-minor="${stable.restlet-version-minor}" edition="android" />
-	<integrate-restlet-edition dest-directory-name="${stable.restlet-version-minor}/gae" restlet-project-type="${stable.restlet-project-type}" restlet-version-compact="${stable.restlet-version-compact}" restlet-version-minor="${stable.restlet-version-minor}" edition="gae" />
-	<integrate-restlet-edition dest-directory-name="${stable.restlet-version-minor}/gwt" restlet-project-type="${stable.restlet-project-type}" restlet-version-compact="${stable.restlet-version-compact}" restlet-version-minor="${stable.restlet-version-minor}" edition="gwt" />
-	<integrate-restlet-edition dest-directory-name="${stable.restlet-version-minor}/jee" restlet-project-type="${stable.restlet-project-type}" restlet-version-compact="${stable.restlet-version-compact}" restlet-version-minor="${stable.restlet-version-minor}" edition="jee" />
-	<integrate-restlet-edition dest-directory-name="${stable.restlet-version-minor}/jse" restlet-project-type="${stable.restlet-project-type}" restlet-version-compact="${stable.restlet-version-compact}" restlet-version-minor="${stable.restlet-version-minor}" edition="jse" />
-	<integrate-restlet-edition dest-directory-name="${stable.restlet-version-minor}/osgi" restlet-project-type="${stable.restlet-project-type}" restlet-version-compact="${stable.restlet-version-compact}" restlet-version-minor="${stable.restlet-version-minor}" edition="osgi" />
-</target>
-
-<!-- Integrate testing release. -->
-<target name="integrate-restlet-testing" if="do-integrate" description="Retrieve from the Restlet's testing release.">
-	<integrate-restlet-edition dest-directory-name="${testing.restlet-version-minor}/android" restlet-project-type="${testing.restlet-project-type}" restlet-version-compact="${testing.restlet-version-compact}" restlet-version-minor="${testing.restlet-version-minor}" edition="android" />
-	<integrate-restlet-edition dest-directory-name="${testing.restlet-version-minor}/gae" restlet-project-type="${testing.restlet-project-type}" restlet-version-compact="${testing.restlet-version-compact}" restlet-version-minor="${testing.restlet-version-minor}" edition="gae" />
-	<integrate-restlet-edition dest-directory-name="${testing.restlet-version-minor}/gwt" restlet-project-type="${testing.restlet-project-type}" restlet-version-compact="${testing.restlet-version-compact}" restlet-version-minor="${testing.restlet-version-minor}" edition="gwt" />
-	<integrate-restlet-edition dest-directory-name="${testing.restlet-version-minor}/jee" restlet-project-type="${testing.restlet-project-type}" restlet-version-compact="${testing.restlet-version-compact}" restlet-version-minor="${testing.restlet-version-minor}" edition="jee" />
-	<integrate-restlet-edition dest-directory-name="${testing.restlet-version-minor}/jse" restlet-project-type="${testing.restlet-project-type}" restlet-version-compact="${testing.restlet-version-compact}" restlet-version-minor="${testing.restlet-version-minor}" edition="jse" />
-	<integrate-restlet-edition dest-directory-name="${testing.restlet-version-minor}/osgi" restlet-project-type="${testing.restlet-project-type}" restlet-version-compact="${testing.restlet-version-compact}" restlet-version-minor="${testing.restlet-version-minor}" edition="osgi" />
-</target>
-
-<!-- Integrate unstable release. -->
-<target name="integrate-restlet-unstable" if="do-integrate" description="Retrieve from the Restlet's unstable release.">
-	<integrate-restlet-edition dest-directory-name="snapshot/android" restlet-project-type="${unstable.restlet-project-type}" restlet-version-compact="${unstable.restlet-version-compact}" restlet-version-minor="${unstable.restlet-version-minor}" edition="android" />
-	<integrate-restlet-edition dest-directory-name="snapshot/gae" restlet-project-type="${unstable.restlet-project-type}" restlet-version-compact="${unstable.restlet-version-compact}" restlet-version-minor="${unstable.restlet-version-minor}" edition="gae" />
-	<integrate-restlet-edition dest-directory-name="snapshot/gwt" restlet-project-type="${unstable.restlet-project-type}" restlet-version-compact="${unstable.restlet-version-compact}" restlet-version-minor="${unstable.restlet-version-minor}" edition="gwt" />
-	<integrate-restlet-edition dest-directory-name="snapshot/jee" restlet-project-type="${unstable.restlet-project-type}" restlet-version-compact="${unstable.restlet-version-compact}" restlet-version-minor="${unstable.restlet-version-minor}" edition="jee" />
-	<integrate-restlet-edition dest-directory-name="snapshot/jse" restlet-project-type="${unstable.restlet-project-type}" restlet-version-compact="${unstable.restlet-version-compact}" restlet-version-minor="${unstable.restlet-version-minor}" edition="jse" />
-	<integrate-restlet-edition dest-directory-name="snapshot/osgi" restlet-project-type="${unstable.restlet-project-type}" restlet-version-compact="${unstable.restlet-version-compact}" restlet-version-minor="${unstable.restlet-version-minor}" edition="osgi" />
-</target>
+<target name="integrate" if="do-integrate" description="Dependencies with other projects." />
 
 <!-- STAGE target -->
 <target name="stage" description="Stage the packaging step.">

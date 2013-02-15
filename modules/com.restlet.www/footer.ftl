@@ -1,5 +1,5 @@
 <#if !(title?has_content)>
-<#list hierarchy.sections.section as section>
+<#list sections.section as section>
       <#if section.@id == currentSection>
          <#assign title="Restlet - ${section.label['${language}']?trim}"  />
          <#list section.sections.section as subsection>
@@ -18,8 +18,8 @@
       <link sizes="32x32" href="/images/favicon-restlet-com.gif" rel="icon">
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
       <meta name="keywords"  content="Web API, Restlet, APISpark, REST, Java, framework, toolkit, HTTP, GWT, Android, GAE, OSGi, SPDY" />
-      <link rel="alternate"  type="application/atom+xml" href="/feeds/summary" title="${labels.labels.summaryNoeliosBlog['${language}']?trim}" />
-      <link rel="alternate"  type="application/rss+xml" href="http://blog.restlet.com/feed" title="${labels.labels.noeliosBlog['${language}']?trim}" />
+      <link rel="alternate"  type="application/atom+xml" href="/feeds/summary" title="${labels.summaryNoeliosBlog['${language}']?trim}" />
+      <link rel="alternate"  type="application/rss+xml" href="http://blog.restlet.com/feed" title="${labels.noeliosBlog['${language}']?trim}" />
       <link rel="meta"       type="application/rdf+xml" href="http://www.restlet.org/about/doap"  title="DOAP" />
       <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/bootstrap.css" />
       <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/styles.css" />
@@ -92,7 +92,7 @@
         </div>
       </div>
 
-<#list hierarchy.sections.section as section>
+<#list sections.section as section>
    <#if (section.@hidden[0]!'false') != 'true' && (section.@id == currentSection)>
       <div class="content container">
         <ul class="pages">
@@ -114,50 +114,49 @@
 
     <footer>
       <div class="container">
-        <div class="span2 intro">Stay in touch:</div>
-        <div class="span2a"><strong><i class="blog-icon"></i>Our blog</strong></div>
-        <div class="span2b"><strong><i class="follow-icon"></i>Follow us</strong></div>
-        <div class="span4 newsletter"><span id="footerNewsLetterWrapper"><input id="footerNewsLetter" value="Newsletter (no spam)"/><span id="footerNewsLetterOkButton">OK</span></span></div>
+        <div class="span2 intro">${labels.footer.intouch['${language}']}</div>
+        <div class="span2a"><strong><i class="blog-icon"></i>${labels.footer.blog['${language}']}</strong></div>
+        <div class="span2b"><strong><i class="follow-icon"></i>${labels.footer.twitter['${language}']}</strong></div>
+        <div class="span4 newsletter"><span id="footerNewsLetterWrapper"><input id="footerNewsLetter" value="${labels.footer.newsletter['${language}']}"/><span id="footerNewsLetterOkButton">OK</span></span></div>
         <div class="clearBoth"></div>
         <div class="emptySeparator"></div>
-        <div class="span2 intro below">Our sites:</div>
+        <div class="span2 intro below">${labels.footer.sites['${language}']}</div>
         <div class="span2a site">
           <h4><img src="/images/logo-restlet-small.png" class="pull-left"/><a href="http://restlet.com">Restlet</a></h4>
           <ul class="sub-list">
-            <li><a href="http://www.restlet.com/products/">Products</a></li>
-            <li><a href="http://www.restlet.com/services/">Services</a></li>
-            <li><a href="http://www.restlet.com/company/">About us</a></li>
+            <li><a href="http://www.restlet.com/products">${labels.footer.restlet.product['${language}']}</a></li>
+            <li><a href="http://www.restlet.com/services">${labels.footer.restlet.services['${language}']}</a></li>
+            <li><a href="http://www.restlet.com/company">${labels.footer.restlet.about['${language}']}</a></li>
           </ul>
         </div>
         <div class="span2b site">
           <h4><img src="/images/logo-restlet-framework-small.png" class="pull-left"/><a href="http://restlet.org">Restlet Framework</a></h4>
           <ul class="sub-list">
-            <li><a href="http://www.restlet.org/discover/">Discover</a></li>
-            <li><a href="http://www.restlet.org/download/">Download</a></li>
-            <li><a href="http://www.restlet.org/learn/">Learn</a></li>
-            <li><a href="http://www.restlet.org/participate/">Participate</a></li>
+            <li><a href="http://www.restlet.org/discover">${labels.footer.restletframework.discover['${language}']}</a></li>
+            <li><a href="http://www.restlet.org/download">${labels.footer.restletframework.download['${language}']}</a></li>
+            <li><a href="http://www.restlet.org/learn">${labels.footer.restletframework.learn['${language}']}</a></li>
+            <li><a href="http://www.restlet.org/participate">${labels.footer.restletframework.participate['${language}']}</a></li>
           </ul>
         </div>
         <div class="span2c site">
           <h4><img src="/images/logo-apispark-small.png" class="pull-left"/><a href="http://apispark.com">APISpark</a></h4>
           <ul class="sub-list">
-            <li><a href="http://beta.apispark.com/features/user">Features</a></li>
-            <li><a href="">FAQ</a></li>
-            <li><a href="">About us</a></li>
+            <li><a href="http://apispark.com/features/user">${labels.footer.apispark.features['${language}']}</a></li>
+            <li><a href="http://apispark.com/faq">${labels.footer.apispark.faq['${language}']}</a></li>
+            <li><a href="http://apispark.com/about">${labels.footer.apispark.about['${language}']}</a></li>
           </ul>
         </div>
         <div class="span2d site">
           <h4><img src="/images/logo-apispark-support-small.png" class="pull-left"/><a href="http://support.apispark.org">APISpark Support</a></h4>
           <ul class="sub-list">
-            <li><a href="http://support.apispark.org/tutorials">Tutorials</a></li>
-            <li><a href="http://support.apispark.org/userGuide">User Guide</a></li>
-            <li><a href="http://support.apispark.org/roadmap">Roadmap</a></li>
-            <li><a href="http://support.apispark.org/helpdesk">Help Desk</a></li>
+            <li><a href="http://support.apispark.org/tutorials">${labels.footer.apisparksupport.tutorial['${language}']}</a></li>
+            <li><a href="http://support.apispark.org/roadmap">${labels.footer.apisparksupport.roadmap['${language}']}</a></li>
+            <li><a href="http://support.apispark.org/helpdesk">${labels.footer.apisparksupport.helpdesk['${language}']}</a></li>
           </ul>
         </div>
       </div>
-      <!-- ${messages.messages.copyright['${language}']} -->
-      <!-- generated ${pp.now} -->
     </footer>
+    <!-- ${messages.copyright['${language}']} -->
+    <!-- generated ${pp.now} -->
    </body>
 </html>

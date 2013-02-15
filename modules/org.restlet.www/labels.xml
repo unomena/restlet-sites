@@ -2,6 +2,88 @@
 
 <!-- Data file that declares localizable labels -->
 <labels>
+    <footer>
+        <blog>
+            <en>Our blog</en>
+            <fr>Notre blog</fr>
+        </blog>
+        <newsletter>
+            <en>Newsletter (no spam)</en>
+            <fr>Newsletter (pas de spam)</fr>
+        </newsletter>
+        <sites>
+            <en>Our sites</en>
+            <fr>Nos sites</fr>
+        </sites>
+        <twitter>
+            <en>Follow us</en>
+            <fr>Suivez nous</fr>
+        </twitter>
+        <intouch>
+            <en>Stay in touch:</en>
+            <fr>Restez en contact :</fr>
+        </intouch>
+        <restlet>
+            <product>
+                <en>Product</en>
+                <fr>Produits</fr>
+            </product>
+            <services>
+                <en>Services</en>
+                <fr>Services</fr>
+            </services>
+            <about>
+                <en>About us</en>
+                <fr>A propos de nous</fr>
+            </about>
+        </restlet>
+        <restletframework>
+            <discover>
+                <en>Discover</en>
+                <fr>Découvrir</fr>
+            </discover>
+            <download>
+                <en>Download</en>
+                <fr>Télécharger</fr>
+            </download>
+            <learn>
+                <en>Learn</en>
+                <fr>apprendre</fr>
+            </learn>
+            <participate>
+                <en>Participate</en>
+                <fr>Participer</fr>
+            </participate>
+        </restletframework>
+        <apispark>
+            <features>
+                <en>Features</en>
+                <fr>Fonctionnalités</fr>
+            </features>
+            <faq>
+                <en>FAQ</en>
+                <fr>FAQ</fr>
+            </faq>
+            <about>
+                <en>About us</en>
+                <fr>A propos de nous</fr>
+            </about>
+        </apispark>
+        <apisparksupport>
+            <tutorial>
+                <en>Tutorial</en>
+                <fr>Tutoriel</fr>
+            </tutorial>
+            <helpdesk>
+                <en>Help desk</en>
+                <fr>Support</fr>
+            </helpdesk>
+            <roadmap>
+                <en>Roadmap</en>
+                <fr>Roadmap</fr>
+            </roadmap>
+        </apisparksupport>
+    </footer>
    <summaryRestletBlog>Summary of the Restlet latest news</summaryRestletBlog>
    <restletBlog>Restlet latest news</restletBlog>
    <sectionTitleError>Error</sectionTitleError>

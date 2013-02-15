@@ -1,5 +1,9 @@
 <#global javascript_files      = [] />
 <#global stylesheet_files      = [] />
+<#global sections              = hierarchy.sections />
+<#global labels                = labels.labels />
+<#global messages              = messages.messages />
+                
 <#if (pp.sourceFileName?index_of(".") > -1) >
     <#global currentSubSection = pp.sourceFileName?substring(0, pp.sourceFileName?index_of(".")) />
 <#else>
