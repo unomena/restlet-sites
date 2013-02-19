@@ -16,7 +16,7 @@
             <fr>Nos sites</fr>
         </sites>
         <twitter>
-            <en>Follow us</en>
+            <en>Follow Us</en>
             <fr>Suivez nous</fr>
         </twitter>
         <intouch>
@@ -33,7 +33,7 @@
                 <fr>Services</fr>
             </services>
             <about>
-                <en>About us</en>
+                <en>About Us</en>
                 <fr>A propos de nous</fr>
             </about>
         </restlet>
@@ -65,7 +65,7 @@
                 <fr>FAQ</fr>
             </faq>
             <about>
-                <en>About us</en>
+                <en>About Us</en>
                 <fr>A propos de nous</fr>
             </about>
         </apispark>

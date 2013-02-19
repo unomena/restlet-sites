@@ -170,8 +170,8 @@
           <h4><img src="/images/logo-apispark-support-small.png" class="pull-left"/><a href="http://support.apispark.org">APISpark Support</a></h4>
           <ul class="sub-list">
             <li><a href="http://support.apispark.org/tutorials">${labels.footer.apisparksupport.tutorial['${language}']}</a></li>
+            <li><a href="http://desk.apispark.org/">${labels.footer.apisparksupport.helpdesk['${language}']}</a></li>
             <li><a href="http://support.apispark.org/roadmap">${labels.footer.apisparksupport.roadmap['${language}']}</a></li>
-            <li><a href="http://support.apispark.org/helpdesk">${labels.footer.apisparksupport.helpdesk['${language}']}</a></li>
           </ul>
         </div>
       </div>
