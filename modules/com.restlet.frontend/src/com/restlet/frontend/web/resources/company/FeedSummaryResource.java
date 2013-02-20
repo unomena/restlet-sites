@@ -31,10 +31,9 @@ import com.restlet.frontend.web.applications.WwwRestletCom;
  */
 public class FeedSummaryResource extends ServerResource {
 
-    private static DateFormat format = new SimpleDateFormat("dd MMM yyyy",
-            Locale.US);
+    private DateFormat format = new SimpleDateFormat("dd MMM yyyy", Locale.US);
 
-    List<Entry> entries;
+    private List<Entry> entries;
 
     @Override
     protected void doInit() throws ResourceException {
@@ -72,7 +71,8 @@ public class FeedSummaryResource extends ServerResource {
     }
 
     @Override
-    public Representation toRepresentation(Object source, Variant target) throws IOException {
+    public Representation toRepresentation(Object source, Variant target)
+            throws IOException {
         // Set representation's expiration date.
         Representation rep = super.toRepresentation(source, target);
         if (getStatus().isSuccess() && rep != null && rep.isAvailable()) {

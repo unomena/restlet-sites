@@ -604,45 +604,51 @@ footer .container .span4.newsletter {
 }
 
 #footerNewsLetterWrapper {
-	background-color: #ffffff;
-	padding-left: 5px;
-	padding-right: 1px;
-	padding-top: 6px;
-	padding-bottom: 4px;
-	border: solid 1px #b2c4d4;
-	border-radius: 8px 8px 8px 8px;
-	-moz-border-radius: 8px 8px 8px 8px;
-	-webkit-border-radius: 8px 8px 8px 8px;
-	float: right;
-	width: 300px;
+    background-color: #ffffff;
+    padding-left: 5px;
+    padding-right: 1px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    border: solid 1px #b2c4d4;
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    float:right;
+    width: 300px;
 }
 
-#footerNewsLetter {
-	border: solid 0px black;
-	width: 250px;
-	font-size: 12px;
-	color: #a7a7a7;
-	font-style: italic;
+#footerNewsLetterWrapper input[type="text"], #footerNewsLetterWrapper input[type="email"] {
+    border: solid 0px black;
+    width: 240px;
+    height: 16px;
+    font-size: 12px;
+    color: #a7a7a7;
+    font-style: italic;
+    margin: 0px;
 }
 
-#footerNewsLetterOkButton { /*margin-left: 5px;*/
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 3px;
-	padding-bottom: 3px;
-	color: #ffffff;
-	font-weight: bold;
-	border-color: #c4831c;
-	background-color: #575757;
-	border-radius: 8px 8px 8px 8px;
-	-moz-border-radius: 8px 8px 8px 8px;
-	-webkit-border-radius: 8px 8px 8px 8px;
-	/*position: absolute;
-	right: 10px;*/
-	font-family: Verdana;
-	font-size: 14px;
-	display: inline-block;
-	/*width: 300px;*/
+#footerNewsLetterWrapper input[type="submit"] {
+    margin-left: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: #ffffff;
+    font-weight: bold;
+    border-width: 0px;
+    border-color: #575757;
+    background-color: #575757;
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    font-family: Verdana;
+    font-size: 14px;
+    display: inline-block;
+}
+
+form, form > input {
+    margin:0px;
+    padding:0px;
 }
 
 div.content.footerWrapper .footer {

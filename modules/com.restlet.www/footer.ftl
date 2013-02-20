@@ -117,7 +117,7 @@
         <div class="span2 intro">${labels.footer.intouch['${language}']}</div>
         <div class="span2a"><a href="http://blog.restlet.com/"><strong><i class="blog-icon"></i>${labels.footer.blog['${language}']}</strong></a></div>
         <div class="span2b"><a href="https://twitter.com/restlet_com"><strong><i class="follow-icon"></i>${labels.footer.twitter['${language}']}</strong></a></div>
-        <div class="span4 newsletter"><span id="footerNewsLetterWrapper"><input id="footerNewsLetter" value="${labels.footer.newsletter['${language}']}"/><span id="footerNewsLetterOkButton">OK</span></span></div>
+        <div class="span4 newsletter"><form action="http://restlet.us4.list-manage1.com/subscribe/post?u=6e9d916ca1faf05c7dc49d21e&id=a8aa911b32" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank"><input type="hidden" value="4" name="group[9053][4]" /><input type="hidden" id="EMAIL" name="EMAIL" value=""/><span id="footerNewsLetterWrapper"><input type="email" name="EMAIL" required="required" placeholder="${labels.footer.newsletter['${language}']}"/><input type="submit" id="footerNewsLetterOkButton" value="OK"></span></form></div>
         <div class="clearBoth"></div>
         <div class="emptySeparator"></div>
         <div class="span2 intro below">${labels.footer.sites['${language}']}</div>
