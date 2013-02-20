@@ -354,11 +354,7 @@ hr {
     margin: 20px 0 19px;
 }*/
 .apispark-logo {
-	background-image: url("/images/apispark-logo.png");
-	background-repeat: no-repeat;
-	background-position: right center;
-	width: 420px;
-	height: 108px;
+	text-align: right;
 	margin-left: 0px;
 }
 
