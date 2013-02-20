@@ -59,7 +59,7 @@ From the Restlet.org web site
     FAQ](http://web.archive.org/web/20120104202328/http://www.restlet.org/about/faq),
     including some comparisons with alternatives
 
--   [Roadmap](http://web.archive.org/web/20120104202328/http://www.restlet.org/about/roadmap),
+-   [Road Map](http://web.archive.org/web/20120104202328/http://www.restlet.org/about/roadmap),
     with related links to our issue tracker
 -   [Team](http://web.archive.org/web/20120104202328/http://www.restlet.org/about/team),
     listing core committers, extension committers and all contributors
