@@ -1,0 +1,59 @@
+<#include "/header.ftl"/>
+<#global content>
+
+<@h3 "North America office" "north-america-office">
+<table cellpadding="0" cellspacing="0" style="width:100%">
+	<tr>
+    	<td style="width:50%; text-align:left">
+        	<p>
+            	<b>Restlet, Inc.</b><br/>
+                2415 Third Street, Suite 231<br/>
+                San Francisco, CA 94107<br/>
+               	USA
+            </p>
+		</td>
+        <td rowspan="2" style="width:50%; text-align:left">
+            <img src="/images/photos/us-office.png" />
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%; text-align:left">
+        	<p>
+            	<img src="/images/icons/enveloppe-20" alt="Contact Restlet Inc."/>&nbsp;<a href="mailto:contact@restlet.com">contact@restlet.com</a><br/>
+               	<img src="/images/icons/phone-20" alt="Call Restlet Inc."/>&nbsp;+1 (650) 488 8090<br/>
+               	<img src="/images/icons/fax-20" alt="Send a fax to Restlet Inc."/>&nbsp;+1 (248) 671 0603<br/>
+            </p>
+    	</td>
+	</tr>
+</table>
+</@h3>
+
+<@h3 "Europe office" "europe-office">
+<table cellpadding="0" cellspacing="0" style="width:100%">
+    <tr>
+        <td style="width:50%; text-align:left">
+            <p>
+                <b>Restlet, SAS</b><br/>
+                ESSEC Ventures - CNIT - BP 230<br/>
+                2 place de la D&eacute;fense<br/>
+                92053 Paris La D&eacute;fense<br/>
+                FRANCE
+            </p>
+        </td>
+        <td rowspan="2" style="width:50%; text-align:left">
+            <img src="/images/photos/fr-office.png" />
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%; text-align:left">
+            <p>
+                <img src="/images/icons/enveloppe-20" alt="Contact Restlet"/>&nbsp;<a href="mailto:contact@restlet.com">contact@restlet.com</a><br/>
+                <img src="/images/icons/phone-20" alt="Call Restlet"/>&nbsp;+33 184 166 921<br/>
+                <img src="/images/icons/fax-20" alt="Send a fax to Restlet Inc."/>&nbsp;+33 184 166 926<br/>
+            </p>
+        </td>
+    </tr>
+</table>
+</@h3>
+</#global>
+<#include "/footer.ftl"/>

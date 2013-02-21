@@ -65,7 +65,7 @@
       <div class='topbar'>
         <div class='header'>
           <div class='container'>
-            <a class='brand' href="/" title='Restlet Framework'><img alt='Restlet Framework Logo' height='136' src='/images/logo-restlet-sas.png' width='129' /></a>
+            <a class='brand' href="/" title='Restlet'><img alt='Restlet Logo' height='136' src='/images/logo-restlet-sas.png' width='129' /></a>
             <ul class='nav'>
 <#list hierarchy?children.section as section>
    <#if (section.@hidden[0]!'false') != 'true'>
@@ -98,7 +98,11 @@
         <ul class="pages">
       <#list section.sections.section as subsection>
          <#if (subsection.@hidden[0]!'false') != 'true'>
+            <#if !subsection.a?has_content>
           <li<#if subsection.@id == currentSubSection> class="active"</#if>><a href="/${section.@id}/${subsection.@id}" title="${subsection.label['${language}']?trim}">${subsection.label['${language}']?trim}</a></li>
+            <#else>
+          <li><a title="${subsection.label['${language}']?trim}"<#list subsection.a.@@ as attr> ${attr?node_name}="${attr}"</#list>>${subsection.label['${language}']?trim}</a></li>
+            </#if>
          </#if>
       </#list>
         </ul>
@@ -153,9 +157,9 @@
             <li><a href="http://apispark.org/road-map">${labels.footer.apisparksupport.roadmap['${language}']}</a></li>
           </ul>
         </div>
+        <div id="copyright">Copyright &copy; 2005-${pp.now?string("yyyy")} Restlet</div>
       </div>
     </div>
-    <!-- ${messages.copyright['${language}']} -->
     <!-- generated ${pp.now} -->
    </body>
 </html>

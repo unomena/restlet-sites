@@ -1,114 +1,46 @@
 <#include "/header.ftl"/>
 <#global content>
 
-<@h3 "Presentation" "presentation">
+<@h3 "Introduction" "introduction">
 <p>
-	To efficiently collaborate with you, it is essential to introduce ourselves
-	in full transparency and to establish a trust relationship. In order to better
-	know our company, we propose you several documents:
-</p>
-
-<ul>
-	<li><a href="/company/history">An history</a> of our company with an introduction
-	on our vision and the chronology of events since its creation in 2008.</li>
-	<li>A description of <a href="/company/mission">our mission</a> with the details
-	of our goals and the list of our core values.</li>
-	<li>The presentation of <a href="/company/team">Restlet employees</a> with some
-	information on hiring.</li>
-	<li>A list of our <a href="/company/partners">affiliations and partners</a>.
-	</li>
-</ul>
+    Restlet is a web API platform vendor, pioneer of RESTful web APIs. We serve our customers all over 
+    the world, providing cutting edge software to build web APIs including APISpark, our disruptive 
+    all-in-one PaaS. APISpark lets you build your web APIs in a flash, including the creation, hosting, 
+    management and usage of those web APIs.</p>
 
 <p>
-	If you have any question, you can <a href="/contact/location">contact us directly</a> 
-	or obtain legal or commercial information from our administrative identifiers
-	available on the same page.  
+    With offices in both Silicon Valley (San Francisco) and Europe (Paris), Restlet is a company led 
+    by a team of passionate engineers. Please feel free to <a href="mailto:contact@restlet.com">contact us</a>
+    if you have any question.
 </p>
 </@h3>
 
+<@h3 "Realize your web APIs" "realize-your-web-apis">
 
-<@h3 "History" "history">
 <p>
-	Our company is the gathering of rich experiences, diverse passions and 
-	an original vision in which our information systems are deeply integrated 
-	with the Web. This vision has been partially realized with the emergence 
-	of the REST architecture style and is now strengthened with the success of web APIs.
+    Our goal is to provide software and services that facilitate the realization of your web API projects. 
+    In addition, we want to make the path from ideas to their realization as enjoyable and efficient as 
+    possible for all stakeholders, project managers, architects and developers.
+</p>
+
+<p>
+    We bring in your hands the power and simplicity of the Web and its founding principles such as its 
+    REST architecture style, its core standards including HTTP, URIs and HTML.
 </p>
 </@h3>
-</div>
 
-<@h3 "Chronology" "chronology">
-
-<h3>2012</h3>
+<@h3 "Open source roots" "open-source-roots">
 
 <p>
-    The company changes its name from Noelios Technologies (SARL) to Restlet (SAS), reflecting
-	its strong focus on its open source Restlet Framework core, foundation of APISpark, its
-    innovative online platform for creation and hosting of Web APIs.
-</p>
-
-<h3>2011</h3>
-
-<p>
-    The company becomes laureate of Scientipôle Initiative benefiting from a stronger 
-    support and financing. The company also obtains the Young Innovative Company
-    label from the French Government, supporting its research and development
-    capacities.
+    Since our creation, we are at the same time big users of open source software and providers through 
+    our Restlet Framework project at the core of our APISpark cloud platform. We are trying to find the 
+    best balance between the free usage of our software and the need to fund our research and development 
+    and our structure.
 </p>
 <p>
-    Thierry Templier, an expert in Java, JavaScript and Web technologies joins the
-    company as an R&D architect, participating to the writing of the "Restlet in Action"
-    book published by Manning and to the development of a new product: APISpark.
-</p>
-<p>
-    The Restlet Framework continues its development with the release of a 2.1 version
-    keeping a stable Restlet API and adding numerous features like the support of new
-    protocols such as SIP for VoIP, Google SDC for cloud to intranet connection, 
-    OAuth 2.0 and OpenID 2.0.
-</p>
-
-<h3>2010</h3>
-
-<p>
-    The company is incubated by Agoranov, helping to its business development 
-    with active coaching, trainings, access to a solid network of experts, 
-    meetings with other entrepreneurs and financing help, especially with the 
-    Francilien Center of Innovation and Scientipôle Initiative.
-</p>
-<p>	
-    The company continues its growth, participating to the collaborative R&D HD3D2 
-    project as a lead of the Indexing and Reuse subproject. 
-</p>
-<p>
-    The Restlet Framework reaches a major milestone in its development with the 
-	final release of its 2.0 version and the release by Manning of 8 chapters 
-	of the "Restlet in Action" book on a total of 11.
-</p>
-
-<h3>2009</h3>
-<p>
-    The company prepares its growth by building relationships with economic development 
-	structures like the competitiveness cluster Cap Digital, the French Association Of 
-	Software Editors.
-</p>
-<p>
-    The Restlet project continues its development with the preparation of a 2.0 version 
-    offerring five editions for Java SE, Java EE, Google Web Toolkit, 
-    Google App Engine and Android. The writing of the "Restlet in Action" book
-    published by Manning begins.
-</p>
-
-<h3>2008</h3>
-<p>
-	Creation of the company by Jérôme Louvel and Thierry Boileau on the basis
-    of the open source Restlet Framework created in 2005. The company is named 
-    Noelios Technologies and positions itself as an open source software vendor. 
-</p>
-<p>
-	The Restlet project continues its development with the distribution of a 1.1 
-	version, increasing the number of extensions including one supporting the JAX-RS 
-	standard. Jérôme Louvel participates in the expert group elaborating 
-	this API (JSR-311).
+    We think that the most generic pieces of infrastructure should be freely usable with as few constraints 
+    as possible. For example we distribute the Restlet Framework under Apache, LGPL, EPL and CDDL licenses, 
+    compatible with most usages.
 </p>
 </@h3>
 </#global>
