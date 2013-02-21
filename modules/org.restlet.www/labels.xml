@@ -25,7 +25,7 @@
         </intouch>
         <restlet>
             <product>
-                <en>Product</en>
+                <en>Products</en>
                 <fr>Produits</fr>
             </product>
             <services>
@@ -71,11 +71,11 @@
         </apispark>
         <apisparksupport>
             <tutorial>
-                <en>Tutorial</en>
+                <en>Tutorials</en>
                 <fr>Tutoriel</fr>
             </tutorial>
             <helpdesk>
-                <en>Help desk</en>
+                <en>Help Desk</en>
                 <fr>Support</fr>
             </helpdesk>
             <roadmap>

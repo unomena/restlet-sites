@@ -132,21 +132,20 @@
         <div class="footer"></div>
     </div>
 
-    <footer>
+    <div id="footer">
       <div class="container">
-        <div class="span2 intro">${labels.footer.intouch['${language}']}</div>
-        <div class="span2a"><a href="http://blog.restlet.com/"><strong><i class="blog-icon"></i>${labels.footer.blog['${language}']}</strong></a></div>
-        <div class="span2b"><a href="https://twitter.com/restlet_org"><strong><i class="follow-icon"></i>${labels.footer.twitter['${language}']}</strong></a></div>
+        <div class="span2 intro below">${labels.footer.intouch['${language}']}</div>
+        <div class="span2a site"><h4><i class="blog-icon"></i><a href="http://blog.restlet.com/">${labels.footer.blog['${language}']}</a></h4></div>
+        <div class="span2b site"><h4><i class="follow-icon"></i><a href="https://twitter.com/restlet_org">${labels.footer.twitter['${language}']}</a></h4></div>
         <div class="span4 newsletter"><form action="http://restlet.us4.list-manage1.com/subscribe/post?u=6e9d916ca1faf05c7dc49d21e&id=a8aa911b32" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank"><input type="hidden" value="2" name="group[9053][2]" /><input type="hidden" id="EMAIL" name="EMAIL" value=""/><span id="footerNewsLetterWrapper"><input type="email" name="EMAIL" required="required" placeholder="${labels.footer.newsletter['${language}']}"/><input type="submit" id="footerNewsLetterOkButton" value="OK"></span></form></div>
         <div class="clearBoth"></div>
-        <div class="emptySeparator"></div>
         <div class="span2 intro below">${labels.footer.sites['${language}']}</div>
         <div class="span2a site">
           <h4><img src="/images/logo-restlet-small.png" class="pull-left"/><a href="http://restlet.com">Restlet</a></h4>
           <ul class="sub-list">
             <li><a href="http://www.restlet.com/products">${labels.footer.restlet.product['${language}']}</a></li>
             <li><a href="http://www.restlet.com/services">${labels.footer.restlet.services['${language}']}</a></li>
-            <li><a href="http://www.restlet.com/company">${labels.footer.restlet.about['${language}']}</a></li>
+            <li><a href="http://www.restlet.com/about-us">${labels.footer.restlet.about['${language}']}</a></li>
           </ul>
         </div>
         <div class="span2b site">
@@ -163,20 +162,20 @@
           <ul class="sub-list">
             <li><a href="http://apispark.com/features/user">${labels.footer.apispark.features['${language}']}</a></li>
             <li><a href="http://apispark.com/faq">${labels.footer.apispark.faq['${language}']}</a></li>
-            <li><a href="http://apispark.com/about">${labels.footer.apispark.about['${language}']}</a></li>
+            <li><a href="http://apispark.com/about-us">${labels.footer.apispark.about['${language}']}</a></li>
           </ul>
         </div>
         <div class="span2d site">
-          <h4><img src="/images/logo-apispark-support-small.png" class="pull-left"/><a href="http://support.apispark.org">APISpark Support</a></h4>
+          <h4><img src="/images/logo-apispark-support-small.png" class="pull-left"/><a href="http://apispark.org">APISpark Support</a></h4>
           <ul class="sub-list">
-            <li><a href="http://support.apispark.org/tutorials">${labels.footer.apisparksupport.tutorial['${language}']}</a></li>
+            <li><a href="http://apispark.org/tutorials">${labels.footer.apisparksupport.tutorial['${language}']}</a></li>
             <li><a href="http://desk.apispark.org/">${labels.footer.apisparksupport.helpdesk['${language}']}</a></li>
-            <li><a href="http://support.apispark.org/roadmap">${labels.footer.apisparksupport.roadmap['${language}']}</a></li>
+            <li><a href="http://apispark.org/road-map">${labels.footer.apisparksupport.roadmap['${language}']}</a></li>
           </ul>
         </div>
       </div>
-    </footer>
-    <!-- Copyright &copy; 2005-2013 <a href="http://www.restlet.com">Restlet</a> -->
+    </div>
+    <!-- Copyright &copy; 2005-2013 Restlet -->
     <!-- generated ${pp.now} -->
    </body>
 </html>

@@ -345,7 +345,7 @@ div.content.footerWrapper .footer {
 	background-color: #fff;
 }
 
-footer {
+#footer {
   background: none repeat scroll 0 0 #f2f2f2;
   border-top: 0 none;
   /*margin-top: 19px;*/
@@ -353,20 +353,20 @@ footer {
   padding-bottom: 19px;
 }
 
-footer .container {
+#footer .container {
   color: #747474;
 }
 
-footer .container .span2.intro {
+#footer .container .span2.intro {
   font-style:italic;
   color: #747474;
 }
 
-footer .container .span2.intro.below {
+#footer .container .span2.intro.below {
 	padding-top: 8px;
 }
 
-footer .container .span2 {
+#footer .container .span2 {
   margin-top: 0px;
   padding-top: 0px;
   margin-left: 10px;
@@ -374,91 +374,93 @@ footer .container .span2 {
   width: 160px;
 }
 
-footer .container .span2 strong {
+#footer .container .span2 strong {
 	font-weight: bold;
 	color: #757575;
 }
 
-footer .container .span2a {
+#footer .container .span2a {
   margin-top: 0px;
   padding-top: 0px;
   margin-left: 10px;
   width: 130px;
 }
 
-footer .container .span2b {
+#footer .container .span2b {
   margin-top: 0px;
   padding-top: 0px;
   margin-left: 10px;
   width: 200px;
 }
 
-footer .container .span2c {
+#footer .container .span2c {
   margin-top: 0px;
   padding-top: 0px;
   margin-left: 10px;
   width: 150px;
 }
 
-footer .container .span2d {
+#footer .container .span2d {
   margin-top: 0px;
   padding-top: 0px;
   margin-left: 10px;
   width: 200px;
 }
 
-footer .container .span2a.site h4,
-footer .container .span2b.site h4,
-footer .container .span2c.site h4,
-footer .container .span2d.site h4 {
+#footer .container .span2a.site h4,
+#footer .container .span2b.site h4,
+#footer .container .span2c.site h4,
+#footer .container .span2d.site h4 {
 	height: 36px;
 	vertical-align: middle;
 	display: inline-block;
 }
 
-footer .container .span2a.site h4 a,
-footer .container .span2b.site h4 a,
-footer .container .span2c.site h4 a,
-footer .container .span2d.site h4 a {
+#footer .container .span2a.site h4 a,
+#footer .container .span2b.site h4 a,
+#footer .container .span2c.site h4 a,
+#footer .container .span2d.site h4 a {
 	height: 36px;
 	vertical-align: middle;
 	display: inline-block;
 	padding-top: 8px;
+	text-decoration: none;
+	color: #4D4D4D;
 }
 
-footer .container .span2 h4,
-footer .container .span2a h4,
-footer .container .span2b h4,
-footer .container .span2c h4,
-footer .container .span2d h4 {
+#footer .container .span2 h4,
+#footer .container .span2a h4,
+#footer .container .span2b h4,
+#footer .container .span2c h4,
+#footer .container .span2d h4 {
 	font-size: 14px;
 	margin-top: 0px;
 }
 
-footer .container .span2a .pull-left,
-footer .container .span2b .pull-left,
-footer .container .span2c .pull-left,
-footer .container .span2d .pull-left {
+#footer .container .span2a .pull-left,
+#footer .container .span2b .pull-left,
+#footer .container .span2c .pull-left,
+#footer .container .span2d .pull-left {
 	margin-right: 4px;
 }
 
-footer .container .span2a ul,
-footer .container .span2b ul {
+#footer .container .span2a ul,
+#footer .container .span2b ul {
 	list-style-type: none;
 	margin-left: 9px;
 }
 
-footer .container .span2c ul {
+#footer .container .span2c ul {
 	list-style-type: none;
 	margin-left: 40px;
 }
 
-footer .container .span2d ul {
+#footer .container .span2d ul {
 	list-style-type: none;
 	margin-left: 20px;
 }
 
-footer .container .span4.newsletter {
+#footer .container .span4.newsletter {
 	height: 30px;
 	margin-top: -3px;
 	margin-left: 0px;

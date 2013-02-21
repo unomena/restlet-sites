@@ -129,9 +129,9 @@
          </section>
       </sections>
    </section>
-   <section id="company">
+   <section id="about-us">
       <label>
-         <en>About us</en>
+         <en>About Us</en>
          <fr>A propos de nous</fr>
       </label>
       <title>
@@ -171,11 +171,11 @@
          </section>
          <section id="contact">
             <label>
-               <en>Contact us</en>
+               <en>Contact Us</en>
                <fr>Contactez nous</fr>
             </label>
             <title>
-               <en>Contact us</en>
+               <en>Contact Us</en>
                <fr>Contactez nous</fr>
             </title>
          </section>
