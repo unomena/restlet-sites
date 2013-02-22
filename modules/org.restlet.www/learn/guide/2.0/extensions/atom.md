@@ -11,12 +11,12 @@ of the REST principles.
 
 Its main purpose it to define a format to represent Web feeds such as
 news feed. This is called the [Atom Syndication
-Format](http://web.archive.org/web/20100818233847/http://www.atomenabled.org/developers/syndication/atom-format-spec.php).
+Format](http://www.atomenabled.org/developers/syndication/atom-format-spec.php).
 
 The second purpose is to support the publication and modification of
 those Web feeds, remotely on the Web and in an interoperable manner.
 This is called the [Atom Publishing
-Protocol](http://web.archive.org/web/20100818233847/http://www.atomenabled.org/developers/protocol/atom-protocol-spec.php)
+Protocol](http://www.atomenabled.org/developers/protocol/atom-protocol-spec.php)
 (APP).
 
 Description
@@ -37,12 +37,12 @@ For an usage example, check the source code of the
 org.restlet.example.book.restlet.ch8.resources.FeedResource class.
 
 For additional details, please consult  [the
-Javadocs](http://web.archive.org/web/20100818233847/http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/atom/package-summary.html).
+Javadocs](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/atom/package-summary.html).
 
 Links
 -----
 
--   [AtomEnabled.org](http://web.archive.org/web/20100818233847/http://www.atomenabled.org/)
+-   [AtomEnabled.org](http://www.atomenabled.org/)
 -   [Wikipedia
-    entry](http://web.archive.org/web/20100818233847/http://en.wikipedia.org/wiki/Atom_%28standard%29)
+    entry](http://en.wikipedia.org/wiki/Atom_%28standard%29)
 

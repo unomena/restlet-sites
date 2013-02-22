@@ -15,10 +15,10 @@ Here is the list of services hosted by default by an instance of
 Component:
 
 -   [Log
-    service](http://web.archive.org/web/20111106111937/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/201-restlet.html "Log service"):
+    service](http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/201-restlet.html "Log service"):
     provide access to logging service.
 -   [Status
-    service](http://web.archive.org/web/20111106111937/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/202-restlet.html "Status service"):
+    service](http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/202-restlet.html "Status service"):
     provide common representations for exception status.
 
 Application services
@@ -28,24 +28,24 @@ Here is the list of services hosted by default by an instance of
 Application :
 
 -   [Connector
-    service](http://web.archive.org/web/20111106111937/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/203-restlet.html "Connector service"):
+    service](http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/203-restlet.html "Connector service"):
     declare necessary client and server connectors.
 -   [Decoder
-    service](http://web.archive.org/web/20111106111937/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/204-restlet.html "Decoder service"):
+    service](http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/204-restlet.html "Decoder service"):
     automatically decode or decompress request entities.
 -   [Metadata
-    service](http://web.archive.org/web/20111106111937/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/205-restlet.html "Metadata service"):
+    service](http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/205-restlet.html "Metadata service"):
     provide access to metadata and their associated extension names.
 -   [Range
-    service](http://web.archive.org/web/20111106111937/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/208-restlet.html "Range service"):
+    service](http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/208-restlet.html "Range service"):
     automatically exposes ranges of response entities.
 -   [Status
-    service](http://web.archive.org/web/20111106111937/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/202-restlet.html "Status service"):
+    service](http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/202-restlet.html "Status service"):
     provide common representations for exception status.
 -   [Task
-    service](http://web.archive.org/web/20111106111937/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/206-restlet.html "Task service"):
+    service](http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/206-restlet.html "Task service"):
     run tasks asynchronously.
 -   [Tunnel
-    service](http://web.archive.org/web/20111106111937/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/207-restlet.html "Tunnel service"):
+    service](http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/331-restlet/207-restlet.html "Tunnel service"):
     tunnel method names or client preferences via query parameters.
 

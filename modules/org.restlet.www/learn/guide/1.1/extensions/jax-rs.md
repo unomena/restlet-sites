@@ -6,7 +6,7 @@ Introduction
 
 This Restlet Extension implements the Java Specification [JAX-RS: Java
 API for RESTful Web
-Services](http://web.archive.org/web/20090204182339/https://jsr311.dev.java.net/).
+Services](https://jsr311.dev.java.net/).
 Note that this specification is not final yet, and its implementation
 also, of course.
 
@@ -15,9 +15,9 @@ Description
 
 To run this example, you need the Restlet libraries. Download a 1.1
 milestone from
-[www.restlet.org/downloads/](http://web.archive.org/web/20090204182339/http://www.restlet.org/downloads/).
+[www.restlet.org/downloads/](http://www.restlet.org/downloads/).
 (For a general Restlet example take a look at
-[http://www.restlet.org/documentation/1.1/firstSteps](http://web.archive.org/web/20090204182339/http://www.restlet.org/documentation/1.1/firstSteps).)
+[http://www.restlet.org/documentation/1.1/firstSteps](http://www.restlet.org/documentation/1.1/firstSteps).)
 
 Now create a new Java Project, and add the following jars (resp.
 projects) to the classpath (right click on project, Properties, Java
@@ -148,7 +148,7 @@ Restlet server. Create a third class in the same package, named
     }
 
 Start this class, open a browser and request
-[http://localhost:8182/easy](http://web.archive.org/web/20090204182339/http://localhost:8182/easy).
+[http://localhost:8182/easy](http://localhost:8182/easy).
 Now you see the HTML representation. If you request the same URI with
 accepted media type "text/plain", you get a plain text representation.
 
@@ -186,7 +186,7 @@ needed).
 
 For details to run this Application in a Servet Container take a look at
 [Restlet
-FAQ](http://web.archive.org/web/20090204182339/http://www.restlet.org/documentation/1.1/firstSteps#part03).
+FAQ](http://www.restlet.org/documentation/1.1/firstSteps#part03).
 
 You could use this subclass also in the example above:
 
@@ -196,9 +196,9 @@ You could use this subclass also in the example above:
             // if you use this kind, you don't need to attach the ApplicationConfig again.
 
 Comments are welcome to the [Restlet mailing
-list](http://web.archive.org/web/20090204182339/http://www.restlet.org/community/lists)
+list](http://www.restlet.org/community/lists)
 or directly to Stephan.Koops\<AT\>web.de !
 
 This extension is the result of a (german) [master
-thesis](http://web.archive.org/web/20090204182339/http://users.informatik.haw-hamburg.de/%7Eubicomp/arbeiten/master/koops.pdf).
+thesis](http://users.informatik.haw-hamburg.de/%7Eubicomp/arbeiten/master/koops.pdf).
 

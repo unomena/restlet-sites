@@ -7,7 +7,7 @@ Introduction
 This chapter presents the Restlet edition for GWT, which is a
 client-side port of the Restlet Framework to GWT 2.2 and above releases.
 See [this blog
-post](http://web.archive.org/web/20111107115502/http://blog.noelios.com/2008/07/25/restlet-ported-to-gwt/)
+post](http://blog.noelios.com/2008/07/25/restlet-ported-to-gwt/)
 for the official announce.
 
 Description
@@ -46,7 +46,7 @@ Automatic bean serialization
 Finally, Restlet 2.0 added support for annotated Restlet interfaces and
 automatic bean serialization into its GWT edition, in a way that is
 consistent with other editions. See this [first application
-example](http://web.archive.org/web/20111107115502/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html "First application").
+example](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html "First application").
 With this feature, you don't need to care about formatting or parsing
 your beans in JSON or XML as the Restlet edition for GWT with
 automatically generate serializer classes for you using GWT Deferred

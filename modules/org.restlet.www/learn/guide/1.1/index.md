@@ -6,15 +6,15 @@ Introduction
 
 This is the official Restlet User Guide covering version 1.1 of the
 framework
-([http://www.restlet.org](http://web.archive.org/web/20120104074329/http://www.restlet.org/)).
+([http://www.restlet.org](http://www.restlet.org/)).
 You can start reading this guide by going to the [introduction on the
 first
-page](http://web.archive.org/web/20120104074329/http://wiki.restlet.org/docs_1.1/13-restlet/21-restlet.html "Introduction").
+page](http://wiki.restlet.org/docs_1.1/13-restlet/21-restlet.html "Introduction").
 
 This effort was started during the 1.1 development cycle and is still a
 work in progress. If you want to help us improve this guide, you can
 check the [Restlet Wiki
-Site](http://web.archive.org/web/20120104074329/http://wiki.restlet.org/about/2-restlet.html)
+Site](http://wiki.restlet.org/about/2-restlet.html)
 which contains all the necessary information for authors.
 
 -   [Introduction](introduction/ "Introduction")

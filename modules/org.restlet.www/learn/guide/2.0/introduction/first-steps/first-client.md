@@ -5,7 +5,7 @@ Introduction
 ============
 
 As we mentioned in the
-[introduction](http://web.archive.org/web/20120121080836/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet.html "Welcome to the Restlet Framework !"),
+[introduction](http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet.html "Welcome to the Restlet Framework !"),
 the Restlet Framework is at the same time a client and a server
 framework. For example, you can easily work with remote resources using
 its HTTP client connector.
@@ -14,7 +14,7 @@ A connector in REST is a software element that enables the communication
 between components, typically by implementing one side of a network
 protocol. Restlet provides several implementations of client connectors
 based on existing open-source projects. The
-[connectors](http://web.archive.org/web/20120121080836/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/325-restlet/37-restlet.html "Connectors") 
+[connectors](http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/325-restlet/37-restlet.html "Connectors") 
 section lists all available client and server connectors and explain how
 to use and configure them.
 
@@ -27,7 +27,7 @@ new ClientResource("http://www.restlet.org").get().write(System.out);
 ~~~~
 
 If you are running your client behind a proxy, please [check this
-page](http://web.archive.org/web/20120121080836/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/325-restlet/37-restlet.html)to
+page](http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/325-restlet/37-restlet.html)to
 pick an HTTP client that can be configured. The internal HTTP client
 doesn't support proxies at the moment.
 
@@ -46,6 +46,6 @@ resource.get().write(System.out);
 ~~~~
 
 After those first two steps, [let's now develop a more complete Restlet
-application](http://web.archive.org/web/20120121080836/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet/303-restlet.html "First application"),
+application](http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet/303-restlet.html "First application"),
 taking advantage of the various editions of the Restlet Framework.
 

@@ -10,12 +10,12 @@ The internal HTTP connectors can be configured with several sets of
 parameters:
 
 [Base
-parameters](http://web.archive.org/web/20120120203355/http://www.restlet.org/documentation/2.1/jse/engine/index.html?org/restlet/engine/connector/BaseHelper.html)
+parameters](http://www.restlet.org/documentation/2.1/jse/engine/index.html?org/restlet/engine/connector/BaseHelper.html)
 \
  [Connection parameters\
-](http://web.archive.org/web/20120120203355/http://www.restlet.org/documentation/2.1/jse/engine/index.html?org/restlet/engine/connector/ConnectionHelper.html)[Client
-parameters](http://web.archive.org/web/20120120203355/http://www.restlet.org/documentation/2.1/jse/engine/index.html?org/restlet/engine/connector/ClientConnectionHelper.html)
+](http://www.restlet.org/documentation/2.1/jse/engine/index.html?org/restlet/engine/connector/ConnectionHelper.html)[Client
+parameters](http://www.restlet.org/documentation/2.1/jse/engine/index.html?org/restlet/engine/connector/ClientConnectionHelper.html)
 \
  [Server
-parameters](http://web.archive.org/web/20120120203355/http://www.restlet.org/documentation/2.1/jse/engine/index.html?org/restlet/engine/connector/ServerConnectionHelper.html)
+parameters](http://www.restlet.org/documentation/2.1/jse/engine/index.html?org/restlet/engine/connector/ServerConnectionHelper.html)
 

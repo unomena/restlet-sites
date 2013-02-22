@@ -2,7 +2,7 @@ Restlet-GWT module
 ==================
 
 This covers version 1.1 of the Restlet Framework. [See this
-page](http://web.archive.org/web/20100428000308/http://wiki.restlet.org/docs_2.0/13-restlet/275-restlet/144-restlet.html)for
+page](http://wiki.restlet.org/docs_2.0/13-restlet/275-restlet/144-restlet.html)for
 version 2.0.
 
 Introduction

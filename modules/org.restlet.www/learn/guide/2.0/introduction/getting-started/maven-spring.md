@@ -11,8 +11,8 @@ Prerequisites
 =============
 
 The reader should be familiar with
-[Maven](http://web.archive.org/web/20111204170307/http://maven.apache.org/),
-[Spring](http://web.archive.org/web/20111204170307/http://www.springsource.org/)
+[Maven](http://maven.apache.org/),
+[Spring](http://www.springsource.org/)
 and the Restlet Framework since it deals exclusively with integration
 issues. To play along you will need to have a version of Maven installed
 on your environment. The code in this document has been tested against
@@ -314,8 +314,8 @@ If you now go to your web browser and enter the following URL the
 service, which you have just created, should respond with 'Hello World!'
 
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [![Basecamp Browser](Getting%20Started%20with%20Maven%20and%20Spring-381_files/data.html "Basecamp Browser")](http://web.archive.org/web/20111204170307/http://wiki.restlet.org/docs_2.0/382-restlet/version/default/part/ImageData/data/basecamp-hello.png)
-  [Click to enlarge](http://web.archive.org/web/20111204170307/http://wiki.restlet.org/docs_2.0/382-restlet/version/default/part/ImageData/data/basecamp-hello.png)
+  [![Basecamp Browser](Getting%20Started%20with%20Maven%20and%20Spring-381_files/data.html "Basecamp Browser")](http://wiki.restlet.org/docs_2.0/382-restlet/version/default/part/ImageData/data/basecamp-hello.png)
+  [Click to enlarge](http://wiki.restlet.org/docs_2.0/382-restlet/version/default/part/ImageData/data/basecamp-hello.png)
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Accessing the resource via a browser
@@ -331,9 +331,9 @@ Step 9: Deploy It
 
 You can also deploy the web service to a standalone web server such as
 [Apache
-Tomcat](http://web.archive.org/web/20111204170307/http://tomcat.apache.org/)
+Tomcat](http://tomcat.apache.org/)
 using the [Tomcat Maven
-Plugin](http://web.archive.org/web/20111204170307/http://mojo.codehaus.org/tomcat-maven-plugin/).
+Plugin](http://mojo.codehaus.org/tomcat-maven-plugin/).
 Basically, you need to define the plugin in your pom.xml and call '**mvn
 tomcat:deploy**' and '**mvn tomcat:undeploy**' to deploy and undeploy
 the web service respectively.
@@ -357,7 +357,7 @@ Resources
 
 This archive contains all the source code described in this document.
 
-[restlet-basecamp](http://web.archive.org/web/20111204170307/http://wiki.restlet.org/docs_2.0/384-restlet/version/default/part/AttachmentData/data/restlet-basecamp.zip "restlet-basecamp")
+[restlet-basecamp](http://wiki.restlet.org/docs_2.0/384-restlet/version/default/part/AttachmentData/data/restlet-basecamp.zip "restlet-basecamp")
 (application/zip, 8.4 kB,
-[info](http://web.archive.org/web/20111204170307/http://wiki.restlet.org/docs_2.0/384-restlet.html))
+[info](http://wiki.restlet.org/docs_2.0/384-restlet.html))
 

@@ -5,7 +5,7 @@ Introduction
 ============
 
 This extension leverages the [Apache FileUpload
-library](http://web.archive.org/web/20100825101048/http://commons.apache.org/fileupload/)
+library](http://commons.apache.org/fileupload/)
 to provide a robust, high-performance, Web-based file upload in Restlet
 server-side applications.
 
@@ -19,14 +19,14 @@ item corresponding to one file uploaded in the posted request, typically
 from a Web form.
 
 For additional details, please consult the
-[Javadocs](http://web.archive.org/web/20100825101048/http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/fileupload/package-summary.html).
+[Javadocs](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/fileupload/package-summary.html).
 
 Here is the list of dependencies for this extension:
 
 -   [Java
-    Servlet](http://web.archive.org/web/20100825101048/http://java.sun.com/products/servlet/)
+    Servlet](http://java.sun.com/products/servlet/)
 -   [Apache Commons
-    FileUpload](http://web.archive.org/web/20100825101048/http://jakarta.apache.org/commons/fileupload/)
+    FileUpload](http://jakarta.apache.org/commons/fileupload/)
 
 Usage example
 =============
@@ -258,9 +258,9 @@ Links
 -----
 
 -   [Apache FileUpload
-    library](http://web.archive.org/web/20100825101048/http://commons.apache.org/fileupload/)
+    library](http://commons.apache.org/fileupload/)
 -   [Server
-    connectors](http://web.archive.org/web/20100825101048/http://wiki.restlet.org/docs_2.0/38-restlet.html)
+    connectors](http://wiki.restlet.org/docs_2.0/38-restlet.html)
 -   [Sample code of FileUpload extension (zip
-    file)](http://web.archive.org/web/20100825101048/http://wiki.restlet.org/docs_2.0/42-restlet.html "Usage example of FileUpload extension")
+    file)](http://wiki.restlet.org/docs_2.0/42-restlet.html "Usage example of FileUpload extension")
 

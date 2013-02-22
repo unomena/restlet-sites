@@ -8,7 +8,7 @@ In addition to the Redirector, we have another tool to manage cool URIs:
 Routers. They are specialized Restlets that can have other Restlets
 (Finders and Filters for example) attached to them and that can
 automatically delegate calls based on a [URI
-template](http://web.archive.org/web/20110306074752/http://bitworking.org/projects/URI-Templates/).
+template](http://bitworking.org/projects/URI-Templates/).
 In general, you will set a Router as the root of your Application.
 
 Here we want to explain how to handle the following URI patterns:
@@ -98,6 +98,6 @@ Template.MODE\_STARTS\_WITH constants.
 Please note that the values of the variables are directly extracted from
 the URI and are therefore not percent-decoded. In order to achieve such
 a task, have a look to the
-[Reference\#decode(String)](http://web.archive.org/web/20110306074752/http://www.restlet.org/documentation/2.0/api/org/restlet/data/Reference.html#decode%28java.lang.String%29)
+[Reference\#decode(String)](http://www.restlet.org/documentation/2.0/api/org/restlet/data/Reference.html#decode%28java.lang.String%29)
 method.
 

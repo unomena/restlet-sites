@@ -7,10 +7,10 @@ Introduction
 Restlet relies on JDK's logging API to log records about its activity.
 For a complete documentation on this standard API, you can check the
 [related JDK
-documentation](http://web.archive.org/web/20090126045410/http://java.sun.com/j2se/1.5.0/docs/guide/logging/index.html).
+documentation](http://java.sun.com/j2se/1.5.0/docs/guide/logging/index.html).
 For additional configuration details, you should also read the [Javadocs
 of the LogManager
-class](http://web.archive.org/web/20090126045410/http://java.sun.com/j2se/1.5.0/docs/api/java/util/logging/LogManager.html).
+class](http://java.sun.com/j2se/1.5.0/docs/api/java/util/logging/LogManager.html).
 For example, to indicate the location of your logging properties file,
 you should add the following parameter to your JVM:
 
@@ -54,9 +54,9 @@ relatively easy.
 However, as the Restlet extensions rely on many third-party library, you
 need to understand how each one handles logging in order to consistently
 configure you logging. Many of them rely on [Apache Commons Logging
-API](http://web.archive.org/web/20090126045410/http://commons.apache.org/logging/)
+API](http://commons.apache.org/logging/)
 as a neutral API that can plug implementations such as
-[Log4J](http://web.archive.org/web/20090126045410/http://logging.apache.org/log4j/)
+[Log4J](http://logging.apache.org/log4j/)
 or JDK Logging. Other use the neutral SLF4J, but in most of the cases,
 it is possible to redirect those alternative logging mechanisms to the
 JDK logging one.
@@ -148,7 +148,7 @@ org.apache.commons.httpclient.\*\
  httpclient.wire.\*
 
 For more details, see the [logging documentation
-page](http://web.archive.org/web/20090126045410/http://hc.apache.org/httpclient-3.x/logging.html).
+page](http://hc.apache.org/httpclient-3.x/logging.html).
 
 Commons IO
 
@@ -390,7 +390,7 @@ Restlet has just to integrate into an existing loggin strategy.
 
 In these cases, we recommand the usage of the JUL to log4j bridge. One
 possibility is to use the [bridge provided by the SLF4J
-project](http://web.archive.org/web/20090126045410/http://www.slf4j.org/legacy.html).
+project](http://www.slf4j.org/legacy.html).
 Once it is installed, you will just need to add these lines of code and
 configure log4j properly:
 
@@ -401,5 +401,5 @@ Additional resources
 ====================
 
 -   [Java Logging API and How To Use
-    It](http://web.archive.org/web/20090126045410/http://www.crazysquirrel.com/computing/java/logging.jspx)
+    It](http://www.crazysquirrel.com/computing/java/logging.jspx)
 

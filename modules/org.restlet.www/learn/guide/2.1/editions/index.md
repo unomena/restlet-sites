@@ -10,12 +10,12 @@ present the various editions supported and cover the differences between
 them.
 
 -   [Java
-    SE](http://web.archive.org/web/20120106073725/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/311-restlet.html "Restlet edition for Java SE")
+    SE](http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/311-restlet.html "Restlet edition for Java SE")
 -   [Java
-    EE](http://web.archive.org/web/20120106073725/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/312-restlet.html "Restlet edition for Java EE")
+    EE](http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/312-restlet.html "Restlet edition for Java EE")
 -   [Google App
-    Engine](http://web.archive.org/web/20120106073725/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/252-restlet.html "Restlet edition for Google App Engine")
+    Engine](http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/252-restlet.html "Restlet edition for Google App Engine")
 -   [Google Web
-    Toolkit](http://web.archive.org/web/20120106073725/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/144-restlet.html "Restlet edition for Google Web Toolkit")
--   [Android](http://web.archive.org/web/20120106073725/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/266-restlet.html "Restlet edition for Android")
+    Toolkit](http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/144-restlet.html "Restlet edition for Google Web Toolkit")
+-   [Android](http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/266-restlet.html "Restlet edition for Android")
 

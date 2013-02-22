@@ -5,11 +5,11 @@ Introduction
 ============
 
 The SSL extension provides concrete implementations of the
-[SslContextFactory](http://web.archive.org/web/20091124143019/http://www.restlet.org/documentation/1.1/nre/com/noelios/restlet/util/SslContextFactory.html)
+[SslContextFactory](http://www.restlet.org/documentation/1.1/nre/com/noelios/restlet/util/SslContextFactory.html)
 that rely on
-[jSSLutils](http://web.archive.org/web/20091124143019/http://code.google.com/p/jsslutils/).
+[jSSLutils](http://code.google.com/p/jsslutils/).
 This extension is located in the [com.noelios.restlet.ext.ssl
-package](http://web.archive.org/web/20091124143019/http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/ssl/package-summary.html).
+package](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/ssl/package-summary.html).
 
 Description
 ===========

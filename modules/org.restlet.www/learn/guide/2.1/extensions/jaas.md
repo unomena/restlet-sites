@@ -17,7 +17,7 @@ based on a JAAS pluggable authentication mechanism and more precisely
 based on JAAS login modules.
 
 For additional details, please consult the
-[Javadocs](http://web.archive.org/web/20111014100442/http://www.restlet.org/documentation/2.1/jse/ext/org/restlet/ext/jaas/package-summary.html).
+[Javadocs](http://www.restlet.org/documentation/2.1/jse/ext/org/restlet/ext/jaas/package-summary.html).
 
 Authenticating with LDAP
 ========================

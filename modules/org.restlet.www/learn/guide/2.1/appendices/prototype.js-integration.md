@@ -9,15 +9,15 @@ based blog demonstrating the usage of AJAX in Restlet. Before we step
 in,we should review some knowledge if you never know or forget it:
 
 -   [What's
-    RESTful](http://web.archive.org/web/20111215022747/http://www.xfront.com/REST-Web-Services.html)[?](http://web.archive.org/web/20111215022747/http://www.xfront.com/REST-Web-Services.html)
+    RESTful](http://www.xfront.com/REST-Web-Services.html)[?](http://www.xfront.com/REST-Web-Services.html)
 -   [What's
-    Restlet?](http://web.archive.org/web/20111215022747/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/22-restlet.html "Features")
+    Restlet?](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/22-restlet.html "Features")
 -   [How to use
-    Restlet?](http://web.archive.org/web/20111215022747/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet.html "First steps")
+    Restlet?](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet.html "First steps")
 -   [How to use db4o to simplify
-    persistence?](http://web.archive.org/web/20111215022747/http://db4o.com/about/productinformation/resources/db4o-6.3-tutorial-java.pdf)
+    persistence?](http://db4o.com/about/productinformation/resources/db4o-6.3-tutorial-java.pdf)
 -   [How to use JSON in
-    Prototype.js?](http://web.archive.org/web/20111215022747/http://www.prototypejs.org/learn/json)
+    Prototype.js?](http://www.prototypejs.org/learn/json)
 
 This example needs to be updated for Restlet Framework 2.1. Help welcome
 
@@ -29,11 +29,11 @@ Demo construction
 -   Server side: uses db4o to work as store service provider, and expose
     data in RESTful way.
 -   Server handle process:
-    [Application](http://web.archive.org/web/20111215022747/http://www.restlet.org/documentation/1.1/api/org/restlet/Application.html)
+    [Application](http://www.restlet.org/documentation/1.1/api/org/restlet/Application.html)
     dispatches request to
-    [Router](http://web.archive.org/web/20111215022747/http://www.restlet.org/documentation/1.1/api/org/restlet/Router.html),
+    [Router](http://www.restlet.org/documentation/1.1/api/org/restlet/Router.html),
     Router finds corresponding reource,
-    [Resource](http://web.archive.org/web/20111215022747/http://www.restlet.org/documentation/1.1/api/org/restlet/resource/Resource.html)
+    [Resource](http://www.restlet.org/documentation/1.1/api/org/restlet/resource/Resource.html)
     handles request and returns representation.
 
 DB4OSimpler.Class
@@ -44,10 +44,10 @@ generalOperate method handles general operation with db4o:
 
 Note:This class works as only non-concurrent model,because it doesn't
 work as [client/server
-model](http://web.archive.org/web/20111215022747/http://developer.db4o.com/resources/api/db4o-java/com/db4o/Db4o.html).If
+model](http://developer.db4o.com/resources/api/db4o-java/com/db4o/Db4o.html).If
 you have requirement,you should modify it in concurrent(client/server)
 model by using [Db4o.openServer
-method](http://web.archive.org/web/20111215022747/http://developer.db4o.com/resources/api/db4o-java/com/db4o/Db4o.html#openServer%28java.lang.String,%20int%29).
+method](http://developer.db4o.com/resources/api/db4o-java/com/db4o/Db4o.html#openServer%28java.lang.String,%20int%29).
 
 >         package com.bjinfotech.util;
 >
@@ -538,23 +538,23 @@ http://localhost:8182/www/microblog.html.
 ### 
 
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [![running\_applicaion](Prototype.js%20integration-52_files/data.html "running_applicaion")](http://web.archive.org/web/20111215022747/http://wiki.restlet.org/docs_2.1/53-restlet/version/default/part/ImageData/data)
-  [Click to enlarge](http://web.archive.org/web/20111215022747/http://wiki.restlet.org/docs_2.1/53-restlet/version/default/part/ImageData/data)
+  [![running\_applicaion](Prototype.js%20integration-52_files/data.html "running_applicaion")](http://wiki.restlet.org/docs_2.1/53-restlet/version/default/part/ImageData/data)
+  [Click to enlarge](http://wiki.restlet.org/docs_2.1/53-restlet/version/default/part/ImageData/data)
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Checkout Full Code
 ==================
 
-[microblog\_sourcecode](http://web.archive.org/web/20111215022747/http://wiki.restlet.org/docs_2.1/54-restlet/version/default/part/AttachmentData/data "microblog_sourcecode")
+[microblog\_sourcecode](http://wiki.restlet.org/docs_2.1/54-restlet/version/default/part/AttachmentData/data "microblog_sourcecode")
 (application/x-zip, 2.3 MB,
-[info](http://web.archive.org/web/20111215022747/http://wiki.restlet.org/docs_2.1/54-restlet.html))
+[info](http://wiki.restlet.org/docs_2.1/54-restlet.html))
 
 How to custom Finder to replace TunnelService
 =============================================
 
 Sure, you can custom a finder to do what tunnelService do.\
  You can visit
-[http://dobrzanski.net/2007/04/22/using-put-and-delete-methods-in-ajax-requesta-with-prototypejs/](http://web.archive.org/web/20111215022747/http://dobrzanski.net/2007/04/22/using-put-and-delete-methods-in-ajax-requesta-with-prototypejs/)
+[http://dobrzanski.net/2007/04/22/using-put-and-delete-methods-in-ajax-requesta-with-prototypejs/](http://dobrzanski.net/2007/04/22/using-put-and-delete-methods-in-ajax-requesta-with-prototypejs/)
 to get detail about how to using restful way in prototype.
 
 A simpler way to do this is to customize the TunnelService.
@@ -624,8 +624,8 @@ Thanks
 Links
 -----
 
--   [Router](http://web.archive.org/web/20111215022747/http://www.restlet.org/documentation/1.1/api/org/restlet/Router.html)
--   [Application](http://web.archive.org/web/20111215022747/http://www.restlet.org/documentation/1.1/api/org/restlet/Application.html)
--   [Resource](http://web.archive.org/web/20111215022747/http://www.restlet.org/documentation/1.1/api/org/restlet/resource/Resource.html)
--   [db4o](http://web.archive.org/web/20111215022747/http://www.db4o.com/)
+-   [Router](http://www.restlet.org/documentation/1.1/api/org/restlet/Router.html)
+-   [Application](http://www.restlet.org/documentation/1.1/api/org/restlet/Application.html)
+-   [Resource](http://www.restlet.org/documentation/1.1/api/org/restlet/resource/Resource.html)
+-   [db4o](http://www.db4o.com/)
 

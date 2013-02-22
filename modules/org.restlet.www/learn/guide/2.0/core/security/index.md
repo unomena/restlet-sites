@@ -22,13 +22,13 @@ available. A common way is to rely on cookies to identify clients (or
 client sessions) and to check a given user ID or session ID against your
 application state to determine if access should be granted. Restlets
 natively support cookies via the
-[Cookie](http://web.archive.org/web/20101124065640/http://www.restlet.org/documentation/2.0/api/org/restlet/data/Cookie.html)
+[Cookie](http://www.restlet.org/documentation/2.0/api/org/restlet/data/Cookie.html)
 and
-[CookieSetting](http://web.archive.org/web/20101124065640/http://www.restlet.org/documentation/2.0/api/org/restlet/data/CookieSetting.html)
+[CookieSetting](http://www.restlet.org/documentation/2.0/api/org/restlet/data/CookieSetting.html)
 objects accessible from a
-[Request](http://web.archive.org/web/20101124065640/http://www.restlet.org/documentation/2.0/api/org/restlet/data/Request.html)
+[Request](http://www.restlet.org/documentation/2.0/api/org/restlet/data/Request.html)
 or a
-[Response](http://web.archive.org/web/20101124065640/http://www.restlet.org/documentation/2.0/api/org/restlet/data/Response.html).
+[Response](http://www.restlet.org/documentation/2.0/api/org/restlet/data/Response.html).
 
 There is another way based on the standard HTTP authentication
 mechanism. By default, the Restlet Engine accepts credentials sent and
@@ -40,7 +40,7 @@ ChallengeAuthenticator filter. Filters are specialized Restlets that can
 pre-process a call before invoking and attached Restlet or post-process
 a call after the attached Restlet returns it. If you are familiar with
 the Servlet API, the concept is similar to the
-[Filter](http://web.archive.org/web/20101124065640/http://java.sun.com/j2ee/1.4/docs/api/javax/servlet/Filter.html)
+[Filter](http://java.sun.com/j2ee/1.4/docs/api/javax/servlet/Filter.html)
 interface. See below how we would modify the previous example to secure
 the access to the Directory:
 
@@ -108,7 +108,7 @@ Restlet API
 
 The Restlet API in version 2.0 has fully refactored its security model
 ([see specifications
-here](http://web.archive.org/web/20101124065640/http://wiki.restlet.org/developers/172-restlet/212-restlet.html)).
+here](http://wiki.restlet.org/developers/172-restlet/212-restlet.html)).
 It is based on some properties of the ClientInfo class: user and roles.
 This model relies on Java security principals in a way similar to JAAS.
 But Restlet security API and JAAS are distinct, and some bridges are
@@ -255,9 +255,9 @@ alias names and custom SSL context factories.
 
 In addition to the parameters that are similar but specific to [each
 type of HTTPS server
-connector](http://web.archive.org/web/20101124065640/http://wiki.restlet.org/docs_2.0/38-restlet.html),
+connector](http://wiki.restlet.org/docs_2.0/38-restlet.html),
 it is possible to configure the SSL connectors using an
-[SslContextFactory](http://web.archive.org/web/20101124065640/http://www.restlet.org/documentation/2.0/engine/org/restlet/engine/util/SslContextFactory.html),
+[SslContextFactory](http://www.restlet.org/documentation/2.0/engine/org/restlet/engine/util/SslContextFactory.html),
 in a way that is common to all three types of HTTPS server connectors
 (Simple, Jetty and Grizzly). Configuring SSL is done in this order:
 
@@ -271,11 +271,11 @@ in a way that is common to all three types of HTTPS server connectors
     passed to its `init` method, so as to initialize the
     SslContextFactory instance via text parameters.\
      The
-    [org.restlet.engine.security.DefaultSslContextFactory](http://web.archive.org/web/20101124065640/http://www.restlet.org/documentation/2.0/jse/engine/org/restlet/engine/security/DefaultSslContextFactory.html#init%28org.restlet.util.Series%29)
+    [org.restlet.engine.security.DefaultSslContextFactory](http://www.restlet.org/documentation/2.0/jse/engine/org/restlet/engine/security/DefaultSslContextFactory.html#init%28org.restlet.util.Series%29)
     is an SslContextFactory that supports a basic set of parameters, and
     will default to the values specified in the `javax.net.ssl.*` system
     properties (see [JSSE Reference
-    guide](http://web.archive.org/web/20101124065640/http://java.sun.com/j2se/1.5.0/docs/guide/security/jsse/JSSERefGuide.html#SystemProps)).\
+    guide](http://java.sun.com/j2se/1.5.0/docs/guide/security/jsse/JSSERefGuide.html#SystemProps)).\
      There can in fact be several values of sslContextFactory (since
     there can be several values for parameters), in which case the first
     one constructed and initialized successfully will be used.
@@ -349,7 +349,7 @@ time it asks the server to perform an operation.
 
 However, this convenience comes at a price: a class of vulnerabilities
 known as
-"[XSRF](http://web.archive.org/web/20101124065640/http://en.wikipedia.org/wiki/XSRF)"
+"[XSRF](http://en.wikipedia.org/wiki/XSRF)"
 -- cross site request forgery.  If a malicious site (http://badsite)
 embeds a GET reference to a URI on a target site, for example, by simply
 adding an \<img src='http://targetsite/delete/targetaccount"/\>, when
@@ -399,7 +399,7 @@ denial of service attacks against well-known URI targets.
 
 If cookies are being used as a primary or supplemental credential,
 protect them against
-[XSS](http://web.archive.org/web/20101124065640/http://en.wikipedia.org/wiki/Cross-site_scripting)
+[XSS](http://en.wikipedia.org/wiki/Cross-site_scripting)
 by setting the accessRestricted property in CookieSetting; this stops
 the cookies from being used by script in all modern browsers.
 
@@ -407,7 +407,7 @@ Sample code
 ===========
 
 [Security
-sample](http://web.archive.org/web/20101124065640/http://wiki.restlet.org/docs_2.0/307-restlet/version/default/part/AttachmentData/data/Security%20sample.zip "Security sample")
+sample](http://wiki.restlet.org/docs_2.0/307-restlet/version/default/part/AttachmentData/data/Security%20sample.zip "Security sample")
 (application/x-zip, 2.7 kB,
-[info](http://web.archive.org/web/20101124065640/http://wiki.restlet.org/docs_2.0/307-restlet.html))
+[info](http://wiki.restlet.org/docs_2.0/307-restlet.html))
 

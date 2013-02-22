@@ -32,7 +32,7 @@ Having set up your server resource with annotated methods, you're ready
 to send it requests and eager to get JSON, XML representations of its
 state. But unfortunately, it fails. In some cases, you're returned an
 error response with a [HTTP 405 status
-code.](http://web.archive.org/web/20120120140825/http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.6)By
+code.](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.6)By
 definition, it means that the sent method is not supported which keep
 you quite disappointed as the resource does declare a "@Get" method!
 
@@ -59,7 +59,7 @@ In this case, the client requires a JSON representation but the server
 resource is not able to generate it.
 
 This may also happen when you rely on the [converter
-service](http://web.archive.org/web/20120120140825/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/331-restlet/360-restlet.html),
+service](http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/331-restlet/360-restlet.html),
 and that you don't have properly configured the classpath of your
 project. Did you reference the archive of the right Restlet extension
 (such as the Jackson extension) and the archives of its library
@@ -70,7 +70,7 @@ How to trace the internal client and server connectors?
 
 These connectors are configured via the parameter called "tracing" of
 their context (see the
-[javadocs](http://web.archive.org/web/20120120140825/http://www.restlet.org/documentation/2.1/jse/engine/org/restlet/engine/connector/BaseHelper.html)).
+[javadocs](http://www.restlet.org/documentation/2.1/jse/engine/org/restlet/engine/connector/BaseHelper.html)).
 
 Here is a sample code that illustrates how to configure the HTTP  server
 connector of a Component:

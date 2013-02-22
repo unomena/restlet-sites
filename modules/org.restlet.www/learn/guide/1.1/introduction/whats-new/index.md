@@ -106,7 +106,7 @@ of all users of the technology:
 -   LGPL 3.0
 -   CDDL 1.0
 -   [Commercial
-    license](http://web.archive.org/web/20111024015453/http://www.noelios.com/products/restlet-engine)
+    license](http://www.noelios.com/products/restlet-engine)
     (optionally transferable)
 
 More Extensions

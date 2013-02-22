@@ -37,9 +37,9 @@ alias names and custom SSL context factories.
 
 In addition to the parameters that are similar but specific to [each
 type of HTTPS server
-connector](http://web.archive.org/web/20120104093612/http://wiki.restlet.org/docs_1.1/38-restlet.html),
+connector](http://wiki.restlet.org/docs_1.1/38-restlet.html),
 it is possible to configure the SSL connectors using an
-[SslContextFactory](http://web.archive.org/web/20120104093612/http://www.restlet.org/documentation/1.1/nre/com/noelios/restlet/util/SslContextFactory.html),
+[SslContextFactory](http://www.restlet.org/documentation/1.1/nre/com/noelios/restlet/util/SslContextFactory.html),
 in a way that is common to all three types of HTTPS server connectors
 (Simple, Jetty and Grizzly). Configuring SSL is done in this order:
 
@@ -53,11 +53,11 @@ in a way that is common to all three types of HTTPS server connectors
     passed to its `init` method, so as to initialize the
     SslContextFactory instance via text parameters.\
      The
-    [com.noelios.restlet.util.DefaultSslContextFactory](http://web.archive.org/web/20120104093612/http://www.restlet.org/documentation/1.1/nre/com/noelios/restlet/util/DefaultSslContextFactory.html#init%28org.restlet.util.Series%29)
+    [com.noelios.restlet.util.DefaultSslContextFactory](http://www.restlet.org/documentation/1.1/nre/com/noelios/restlet/util/DefaultSslContextFactory.html#init%28org.restlet.util.Series%29)
     is an SslContextFactory that supports a basic set of parameters, and
     will default to the values specified in the `javax.net.ssl.*` system
     properties (see [JSSE Reference
-    guide](http://web.archive.org/web/20120104093612/http://java.sun.com/j2se/1.5.0/docs/guide/security/jsse/JSSERefGuide.html#SystemProps)).\
+    guide](http://java.sun.com/j2se/1.5.0/docs/guide/security/jsse/JSSERefGuide.html#SystemProps)).\
      There can in fact be several values of sslContextFactory (since
     there can be several values for parameters), in which case the first
     one constructed and initialized successfully will be used.

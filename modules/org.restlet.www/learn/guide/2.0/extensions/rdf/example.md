@@ -137,29 +137,29 @@ Snapshots
 ---------
 
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [![foaf-sample-app-users](Sample%20application-245_files/data_005.html "foaf-sample-app-users")](http://web.archive.org/web/20111130020450/http://wiki.restlet.org/docs_2.0/249-restlet/version/default/part/ImageData/data)
-  [Click to enlarge](http://web.archive.org/web/20111130020450/http://wiki.restlet.org/docs_2.0/249-restlet/version/default/part/ImageData/data)
+  [![foaf-sample-app-users](Sample%20application-245_files/data_005.html "foaf-sample-app-users")](http://wiki.restlet.org/docs_2.0/249-restlet/version/default/part/ImageData/data)
+  [Click to enlarge](http://wiki.restlet.org/docs_2.0/249-restlet/version/default/part/ImageData/data)
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Snapshot of the users Resource
 
   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [![foaf-sample-app-user](Sample%20application-245_files/data_002.html "foaf-sample-app-user")](http://web.archive.org/web/20111130020450/http://wiki.restlet.org/docs_2.0/246-restlet/version/default/part/ImageData/data)
-  [Click to enlarge](http://web.archive.org/web/20111130020450/http://wiki.restlet.org/docs_2.0/246-restlet/version/default/part/ImageData/data)
+  [![foaf-sample-app-user](Sample%20application-245_files/data_002.html "foaf-sample-app-user")](http://wiki.restlet.org/docs_2.0/246-restlet/version/default/part/ImageData/data)
+  [Click to enlarge](http://wiki.restlet.org/docs_2.0/246-restlet/version/default/part/ImageData/data)
   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Snapshot of the user Resource
 
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [![foaf-sample-app-contacts](Sample%20application-245_files/data.html "foaf-sample-app-contacts")](http://web.archive.org/web/20111130020450/http://wiki.restlet.org/docs_2.0/247-restlet/version/default/part/ImageData/data)
-  [Click to enlarge](http://web.archive.org/web/20111130020450/http://wiki.restlet.org/docs_2.0/247-restlet/version/default/part/ImageData/data)
+  [![foaf-sample-app-contacts](Sample%20application-245_files/data.html "foaf-sample-app-contacts")](http://wiki.restlet.org/docs_2.0/247-restlet/version/default/part/ImageData/data)
+  [Click to enlarge](http://wiki.restlet.org/docs_2.0/247-restlet/version/default/part/ImageData/data)
   --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Snapshot of the contacts Resource
 
   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [![foaf-sample-app-contact](Sample%20application-245_files/data_003.html "foaf-sample-app-contact")](http://web.archive.org/web/20111130020450/http://wiki.restlet.org/docs_2.0/248-restlet/version/default/part/ImageData/data)
-  [Click to enlarge](http://web.archive.org/web/20111130020450/http://wiki.restlet.org/docs_2.0/248-restlet/version/default/part/ImageData/data)
+  [![foaf-sample-app-contact](Sample%20application-245_files/data_003.html "foaf-sample-app-contact")](http://wiki.restlet.org/docs_2.0/248-restlet/version/default/part/ImageData/data)
+  [Click to enlarge](http://wiki.restlet.org/docs_2.0/248-restlet/version/default/part/ImageData/data)
   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Snapshot of the contact Resource
@@ -169,9 +169,9 @@ Source code
 
 This example is available in the Restlet distributions under the
 "src/org.restlet.example/rdf/foaf" directory. You can download it
-[here](http://web.archive.org/web/20111130020450/http://wiki.restlet.org/docs_2.0/256-restlet/version/default/part/AttachmentData/data "foaf-sample")
+[here](http://wiki.restlet.org/docs_2.0/256-restlet/version/default/part/AttachmentData/data "foaf-sample")
 (application/x-zip-compressed, 41.6 kB,
-[info](http://web.archive.org/web/20111130020450/http://wiki.restlet.org/docs_2.0/256-restlet.html)).
+[info](http://wiki.restlet.org/docs_2.0/256-restlet.html)).
 
 The "User" Resource.
 --------------------
@@ -276,12 +276,12 @@ the URI of the user of contact suffixed by ".rdf".
 
 If your navigator is able to handle alternates views of an HTML page,
 such as Firefox with the
-[Tabulator](http://web.archive.org/web/20111130020450/http://www.w3.org/2005/ajar/tab)
+[Tabulator](http://www.w3.org/2005/ajar/tab)
 extension, the URI of the user and contact is sufficient.
 
   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [![foaf-sample-app-foaf](Sample%20application-245_files/data_004.html "foaf-sample-app-foaf")](http://web.archive.org/web/20111130020450/http://wiki.restlet.org/docs_2.0/250-restlet/version/default/part/ImageData/data)
-  [Click to enlarge](http://web.archive.org/web/20111130020450/http://wiki.restlet.org/docs_2.0/250-restlet/version/default/part/ImageData/data)
+  [![foaf-sample-app-foaf](Sample%20application-245_files/data_004.html "foaf-sample-app-foaf")](http://wiki.restlet.org/docs_2.0/250-restlet/version/default/part/ImageData/data)
+  [Click to enlarge](http://wiki.restlet.org/docs_2.0/250-restlet/version/default/part/ImageData/data)
   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Snapshot of the tabulator extension for Firefox in action.

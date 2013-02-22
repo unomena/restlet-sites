@@ -9,13 +9,13 @@ PaaS (Platform as a Service) solution that offers massive and flexible
 scalability for your Web applications by hosting them on the Google
 cloud (based on Google computing infrastructure). For more details, you
 can read [our blog
-post](http://web.archive.org/web/20111118102621/http://blog.noelios.com/2009/04/11/restlet-in-the-cloud-with-google-app-engine/)
+post](http://blog.noelios.com/2009/04/11/restlet-in-the-cloud-with-google-app-engine/)
 with the official announce.
 
 Due to the restrictions of the GAE, we need to provide an adaptation of
 Restlet for this environment. GAE is based on Java 6, with a restricted
 list of APIs. See [GAE developers
-documentation](http://web.archive.org/web/20111118102621/http://code.google.com/intl/fr/appengine/docs/java/overview.html)
+documentation](http://code.google.com/intl/fr/appengine/docs/java/overview.html)
 for details.
 
 Modules availables:
@@ -32,7 +32,7 @@ Usage example
 Create a new GAE project with the Eclipse plugin provided, add the
 "org.restlet.jar" and the "org.restlet.ext.servlet.jar" files from the
 [latest Restlet 2.0
-snapshots](http://web.archive.org/web/20111118102621/http://www.restlet.org/downloads/unstable)(make
+snapshots](http://www.restlet.org/downloads/unstable)(make
 sure you download the edition for GAE) to your "/war/WEB-INF/lib/"
 directory and to your project build path.
 
@@ -115,7 +115,7 @@ Finally, here is the Servlet configuration file:
 ~~~~
 
 For more information on Restlet, please check our [documentation
-pages](http://web.archive.org/web/20111118102621/http://www.restlet.org/documentation/2.0/).
+pages](http://www.restlet.org/documentation/2.0/).
 
 Javadocs
 ========
@@ -124,9 +124,9 @@ The Javadocs of the Restlet edition for GAE are available online as
 well:
 
 -   [Restlet
-    API](http://web.archive.org/web/20111118102621/http://www.restlet.org/documentation/snapshot/gae/api/)
+    API](http://www.restlet.org/documentation/snapshot/gae/api/)
 -   [Restlet
-    Extensions](http://web.archive.org/web/20111118102621/http://www.restlet.org/documentation/snapshot/gae/ext/)
+    Extensions](http://www.restlet.org/documentation/snapshot/gae/ext/)
 -   [Restlet
-    Engine](http://web.archive.org/web/20111118102621/http://www.restlet.org/documentation/snapshot/gae/engine/)
+    Engine](http://www.restlet.org/documentation/snapshot/gae/engine/)
 

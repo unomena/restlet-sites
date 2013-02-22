@@ -7,10 +7,10 @@ Introduction
 By default, Restlet relies on JDK's logging API (JULI) to log records
 about its activity. For a complete documentation on this standard API,
 you can check the [related JDK
-documentation](http://web.archive.org/web/20111208063408/http://java.sun.com/j2se/1.5.0/docs/guide/logging/index.html).
+documentation](http://java.sun.com/j2se/1.5.0/docs/guide/logging/index.html).
 For additional configuration details, you should also read the [Javadocs
 of the LogManager
-class](http://web.archive.org/web/20111208063408/http://java.sun.com/j2se/1.5.0/docs/api/java/util/logging/LogManager.html).
+class](http://java.sun.com/j2se/1.5.0/docs/api/java/util/logging/LogManager.html).
 For example, to indicate the location of your logging properties file,
 you should add the following parameter to your JVM:
 
@@ -46,7 +46,7 @@ single compact line, reducing confusion while debugging.
 
 It is also possible to define the calls to log based on a URI template
 by calling the
-LogService\#[setLoggableTemplate](http://web.archive.org/web/20111208063408/http://www.restlet.org/documentation/snapshot/jee/api/org/restlet/service/LogService.html#setLoggableTemplate%28java.lang.String%29)(...)
+LogService\#[setLoggableTemplate](http://www.restlet.org/documentation/snapshot/jee/api/org/restlet/service/LogService.html#setLoggableTemplate%28java.lang.String%29)(...)
 method.
 
 Logger names
@@ -74,11 +74,11 @@ relatively easy.
 However, as the Restlet extensions rely on many third-party library, you
 need to understand how each one handles logging in order to consistently
 configure you logging. Many of them rely on [Apache Commons Logging
-API](http://web.archive.org/web/20111208063408/http://commons.apache.org/logging/)
+API](http://commons.apache.org/logging/)
 as a neutral API that can plug implementations such as
-[Log4J](http://web.archive.org/web/20111208063408/http://logging.apache.org/log4j/)
+[Log4J](http://logging.apache.org/log4j/)
 or JDK Logging. Other use the neutral
-[SLF4J](http://web.archive.org/web/20111208063408/http://www.slf4j.org/),
+[SLF4J](http://www.slf4j.org/),
 but in most of the cases, it is possible to redirect those alternative
 logging mechanisms to the JDK logging one or the other way around.
 
@@ -169,7 +169,7 @@ org.apache.commons.httpclient.\*\
  httpclient.wire.\*
 
 For more details, see the [logging documentation
-page](http://web.archive.org/web/20111208063408/http://hc.apache.org/httpclient-3.x/logging.html).
+page](http://hc.apache.org/httpclient-3.x/logging.html).
 
 Commons IO
 
@@ -414,7 +414,7 @@ SLF4J bridge from JULI
 ----------------------
 
 This bridge is [provided by the SLF4J
-project](http://web.archive.org/web/20111208063408/http://www.slf4j.org/legacy.html).
+project](http://www.slf4j.org/legacy.html).
 Once it is installed, you will just need to add these lines of code:
 
      import org.slf4j.bridge.SLF4JBridgeHandler;
@@ -422,7 +422,7 @@ Once it is installed, you will just need to add these lines of code:
 
 Then, you can drop the JAR from SLF4J corresponding to the target
 logging mechanism. For details, you can check [this
-page](http://web.archive.org/web/20111208063408/http://www.slf4j.org/manual.html#binding).
+page](http://www.slf4j.org/manual.html#binding).
 This is an excellent solution, especially if you are using Restlet
 extensions that rely on their own logging system, such as Jetty using
 Apache Commons Logging. In those case, you can use the bridge from
@@ -459,5 +459,5 @@ Additional resources
 ====================
 
 -   [Java Logging API and How To Use
-    It](http://web.archive.org/web/20111208063408/http://www.crazysquirrel.com/computing/java/logging.jspx)
+    It](http://www.crazysquirrel.com/computing/java/logging.jspx)
 

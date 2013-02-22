@@ -99,7 +99,7 @@ public class HelloWorldResource extends ConfigurableRestletResource {
 
 A working proof-of-concept for this approach is available through
 Subversion at
-[http://luc-pervasive.googlecode.com/svn/trunk/webservices/ConfigurableRestletResource](http://web.archive.org/web/20120305034152/http://luc-pervasive.googlecode.com/svn/trunk/webservices/ConfigurableRestletResource).
+[http://luc-pervasive.googlecode.com/svn/trunk/webservices/ConfigurableRestletResource](http://luc-pervasive.googlecode.com/svn/trunk/webservices/ConfigurableRestletResource).
 Support for the missing configuration of representations tied to
 responses to non-GET requests is in the works.
 

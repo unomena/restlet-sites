@@ -13,7 +13,7 @@ Apache-like logs or even custom ones. By taking advantage of the logging
 facility built in the JDK, the logger can be configured like any
 standard JDK log to filter messages, reformat them or specify where to
 send them. Rotation of logs is also supported; see the
-[java.util.logging](http://web.archive.org/web/20120122020737/http://java.sun.com/j2se/1.5.0/docs/api/java/util/logging/package-summary.html)
+[java.util.logging](http://java.sun.com/j2se/1.5.0/docs/api/java/util/logging/package-summary.html)
 package for details.
 
 Note that you can customize the logger name given to the
@@ -24,15 +24,15 @@ configuration file by setting a system property like:
     System.setProperty("java.util.logging.config.file", "/your/path/logging.config");  
 
 For details on the configuration file format, please check the [JDK's
-LogManager](http://web.archive.org/web/20120122020737/http://java.sun.com/j2se/1.5.0/docs/api/index.html?java/util/logging/LogManager.html)
+LogManager](http://java.sun.com/j2se/1.5.0/docs/api/index.html?java/util/logging/LogManager.html)
 class. You can also have a look at the [Restlet 2.0 logging
-documentation](http://web.archive.org/web/20120122020737/http://wiki.restlet.org/docs_2.0/101-restlet.html).
+documentation](http://wiki.restlet.org/docs_2.0/101-restlet.html).
 
 Default access log format
 =========================
 
 The default format follows the [W3C Extended Log File
-Format](http://web.archive.org/web/20120122020737/http://www.w3.org/TR/WD-logfile.html)
+Format](http://www.w3.org/TR/WD-logfile.html)
 with the following fields used:
 
 1.  Date (YYYY-MM-DD)
@@ -53,7 +53,7 @@ with the following fields used:
 16. Referrer reference
 
 If you use
-[Analog](http://web.archive.org/web/20120122020737/http://www.analog.cx/)
+[Analog](http://www.analog.cx/)
 to generate your log reports, and if you use the default log format,
 then you can simply specify this string as a value of the LOGFORMAT
 command:
@@ -61,5 +61,5 @@ command:
 
 For custom access log format, see the syntax to use and the list of
 available variable names in
-[Template](http://web.archive.org/web/20120122020737/http://www.restlet.org/documentation/1.1/api/org/restlet/util/Resolver.html#createResolver%28org.restlet.data.Request,%20org.restlet.data.Response%29).
+[Template](http://www.restlet.org/documentation/1.1/api/org/restlet/util/Resolver.html#createResolver%28org.restlet.data.Request,%20org.restlet.data.Response%29).
 

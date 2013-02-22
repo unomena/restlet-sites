@@ -20,7 +20,6 @@
       <meta name="keywords"  content="Web API, Restlet, APISpark, REST, Java, framework, toolkit, HTTP, GWT, Android, GAE, OSGi, SPDY" />
       <link rel="alternate"  type="application/atom+xml" href="/feeds/summary" title="${labels.summaryNoeliosBlog['${language}']?trim}" />
       <link rel="alternate"  type="application/rss+xml" href="http://blog.restlet.com/feed" title="${labels.noeliosBlog['${language}']?trim}" />
-      <link rel="meta"       type="application/rdf+xml" href="http://www.restlet.org/about/doap"  title="DOAP" />
       <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/bootstrap.css" />
       <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/styles.css" />
       <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/bootstrap-responsive.css" />
@@ -127,18 +126,18 @@
         <div class="span2a site">
           <h4><img src="/images/logo-restlet-small.png" class="pull-left"/><a href="http://restlet.com">Restlet</a></h4>
           <ul class="sub-list">
-            <li><a href="http://www.restlet.com/products">${labels.footer.restlet.product['${language}']}</a></li>
-            <li><a href="http://www.restlet.com/services">${labels.footer.restlet.services['${language}']}</a></li>
-            <li><a href="http://www.restlet.com/about-us">${labels.footer.restlet.about['${language}']}</a></li>
+            <li><a href="http://restlet.com/products">${labels.footer.restlet.product['${language}']}</a></li>
+            <li><a href="http://restlet.com/services">${labels.footer.restlet.services['${language}']}</a></li>
+            <li><a href="http://restlet.com/about">${labels.footer.restlet.about['${language}']}</a></li>
           </ul>
         </div>
         <div class="span2b site">
           <h4><img src="/images/logo-restlet-framework-small.png" class="pull-left"/><a href="http://restlet.org">Restlet Framework</a></h4>
           <ul class="sub-list">
-            <li><a href="http://www.restlet.org/discover">${labels.footer.restletframework.discover['${language}']}</a></li>
-            <li><a href="http://www.restlet.org/download">${labels.footer.restletframework.download['${language}']}</a></li>
-            <li><a href="http://www.restlet.org/learn">${labels.footer.restletframework.learn['${language}']}</a></li>
-            <li><a href="http://www.restlet.org/participate">${labels.footer.restletframework.participate['${language}']}</a></li>
+            <li><a href="http://restlet.org/discover">${labels.footer.restletframework.discover['${language}']}</a></li>
+            <li><a href="http://restlet.org/download">${labels.footer.restletframework.download['${language}']}</a></li>
+            <li><a href="http://restlet.org/learn">${labels.footer.restletframework.learn['${language}']}</a></li>
+            <li><a href="http://restlet.org/participate">${labels.footer.restletframework.participate['${language}']}</a></li>
           </ul>
         </div>
         <div class="span2c site">
@@ -146,7 +145,7 @@
           <ul class="sub-list">
             <li><a href="http://apispark.com/features/user">${labels.footer.apispark.features['${language}']}</a></li>
             <li><a href="http://apispark.com/faq">${labels.footer.apispark.faq['${language}']}</a></li>
-            <li><a href="http://apispark.com/about-us">${labels.footer.apispark.about['${language}']}</a></li>
+            <li><a href="http://apispark.com/about">${labels.footer.apispark.about['${language}']}</a></li>
           </ul>
         </div>
         <div class="span2d site">
@@ -154,7 +153,7 @@
           <ul class="sub-list">
             <li><a href="http://apispark.org/tutorials">${labels.footer.apisparksupport.tutorial['${language}']}</a></li>
             <li><a href="http://desk.apispark.org/">${labels.footer.apisparksupport.helpdesk['${language}']}</a></li>
-            <li><a href="http://apispark.org/road-map">${labels.footer.apisparksupport.roadmap['${language}']}</a></li>
+            <li><a href="http://apispark.org/roadmap">${labels.footer.apisparksupport.roadmap['${language}']}</a></li>
           </ul>
         </div>
         <div id="copyright">Copyright &copy; 2005-${pp.now?string("yyyy")} Restlet</div>

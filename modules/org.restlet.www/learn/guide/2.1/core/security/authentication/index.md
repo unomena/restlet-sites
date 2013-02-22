@@ -21,9 +21,9 @@ Here is a very simple code illustrating a component that guards its
 applications with the BASIC authentication scheme.
 
 The whole code can be downloaded
-[here](http://web.archive.org/web/20120213085736/http://wiki.restlet.org/docs_2.1/177-restlet/version/default/part/AttachmentData/data "testHttpBasic")
+[here](http://wiki.restlet.org/docs_2.1/177-restlet/version/default/part/AttachmentData/data "testHttpBasic")
 (application/force-download, 1.2 kB,
-[info](http://web.archive.org/web/20120213085736/http://wiki.restlet.org/docs_2.1/177-restlet.html)).
+[info](http://wiki.restlet.org/docs_2.1/177-restlet.html)).
 
 Description of the server side
 ------------------------------
@@ -119,9 +119,9 @@ Here is a very simple code illustrating a component that guards its
 applications with the DIGEST authentication scheme.
 
 The whole code can be downloaded
-[here](http://web.archive.org/web/20120213085736/http://wiki.restlet.org/docs_2.1/176-restlet/version/default/part/AttachmentData/data "Sample code illustrating Digest authentication")
+[here](http://wiki.restlet.org/docs_2.1/176-restlet/version/default/part/AttachmentData/data "Sample code illustrating Digest authentication")
 (application/force-download, 1.6 kB,
-[info](http://web.archive.org/web/20120213085736/http://wiki.restlet.org/docs_2.1/176-restlet.html)).
+[info](http://wiki.restlet.org/docs_2.1/176-restlet.html)).
 
 Description of the server side
 ------------------------------

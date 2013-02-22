@@ -5,7 +5,7 @@ Introduction
 ============
 
 This extension provides an integration with JiBX 1.1.
-[JiBX ](http://web.archive.org/web/20090415002610/http://jibx.sourceforge.net/)
+[JiBX ](http://jibx.sourceforge.net/)
 is a very flexible framework for binding XML data to Java objects.
 
 Description

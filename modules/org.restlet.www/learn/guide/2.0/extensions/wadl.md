@@ -5,7 +5,7 @@ Introduction
 ============
 
 This extension support
-[WADL](http://web.archive.org/web/20120118084245/http://en.wikipedia.org/wiki/Web_Application_Description_Language),
+[WADL](http://en.wikipedia.org/wiki/Web_Application_Description_Language),
 the Web Application Description Language. It allows you to configure a
 Restlet component or application based on a WADL/XML document or to
 dynamically generate the WADL/XML document of an existing Restlet
@@ -13,13 +13,13 @@ application. It also knows how to convert this WADL/XML document into a
 user friendly HTML document.
 
 For additional details, please consult the
-[Javadocs](http://web.archive.org/web/20120118084245/http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/wadl/package-summary.html).
+[Javadocs](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/wadl/package-summary.html).
 
 Usage example
 =============
 
 This sample code is an extension of the ["firstResource" sample
-application](http://web.archive.org/web/20120118084245/http://www.restlet.org/documentation/2.0/firstResource).
+application](http://www.restlet.org/documentation/2.0/firstResource).
 The source code is available in the "org.restlet.example" extension,
 more precisely in the "org.restlet.ext.wadl" package.
 
@@ -219,7 +219,7 @@ HTML documentation
 
 This format is an XML transformation of the WADL representation with an
 XSL sheet, developped and maintained by  Mark Nottingham:
-[here](http://web.archive.org/web/20120118084245/http://www.mnot.net/blog/2007/11/02/wadl_stylesheet)
+[here](http://www.mnot.net/blog/2007/11/02/wadl_stylesheet)
 
 Here is a way to programmatically obtain the HTML documentation of the
 application:

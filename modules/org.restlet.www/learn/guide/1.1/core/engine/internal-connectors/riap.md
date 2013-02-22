@@ -6,10 +6,10 @@ Background.
 
 The riap protocol came to life as a solution for the [issue 374 "Add
 support for pseudo
-protocols"](http://web.archive.org/web/20090126045425/http://restlet.tigris.org/issues/show_bug.cgi?id=374).
+protocols"](http://restlet.tigris.org/issues/show_bug.cgi?id=374).
 Which in turn started of based from discussion on [issue 371 "Optimize
 Internal
-Calls"](http://web.archive.org/web/20090126045425/http://restlet.tigris.org/issues/show_bug.cgi?id=157).
+Calls"](http://restlet.tigris.org/issues/show_bug.cgi?id=157).
 
 About riap.
 -----------

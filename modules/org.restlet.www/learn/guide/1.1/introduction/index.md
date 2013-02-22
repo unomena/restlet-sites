@@ -17,7 +17,7 @@ documentation or code improvements or by helping other users or
 developers in the mailing lists. Every contribution is valuable to the
 community and we give credit back to our team by listing all the
 contributors on [our team
-page](http://web.archive.org/web/20120104202328/http://www.restlet.org/about/team).
+page](http://www.restlet.org/about/team).
 
 Overview
 ========
@@ -45,28 +45,28 @@ Additional information
 
 From the Restlet.org web site
 
--   [Introduction](http://web.archive.org/web/20120104202328/http://www.restlet.org/about/introduction),
+-   [Introduction](http://www.restlet.org/about/introduction),
     with an history of the project inception
 -   [Features
-    list](http://web.archive.org/web/20120104202328/http://www.restlet.org/about/features),
+    list](http://www.restlet.org/about/features),
     including native REST support, complete Web server, available
     connectors, available representations, flexible configuration,
     security, scalability
 -   [User
-    quotes](http://web.archive.org/web/20120104202328/http://www.restlet.org/about/quotes),
+    quotes](http://www.restlet.org/about/quotes),
     to see how others were excited and pleased by the framework
 -   [General
-    FAQ](http://web.archive.org/web/20120104202328/http://www.restlet.org/about/faq),
+    FAQ](http://www.restlet.org/about/faq),
     including some comparisons with alternatives
 
--   [Road Map](http://web.archive.org/web/20120104202328/http://www.restlet.org/about/roadmap),
+-   [Road Map](http://www.restlet.org/about/roadmap),
     with related links to our issue tracker
--   [Team](http://web.archive.org/web/20120104202328/http://www.restlet.org/about/team),
+-   [Team](http://www.restlet.org/about/team),
     listing core committers, extension committers and all contributors
 -   [Legal
-    terms](http://web.archive.org/web/20120104202328/http://www.restlet.org/about/legal),
+    terms](http://www.restlet.org/about/legal),
     important information about our licensing scheme and the registered
     Restlet trademark
--   [Acknowledgments](http://web.archive.org/web/20120104202328/http://www.restlet.org/about/acknowledgments),
+-   [Acknowledgments](http://www.restlet.org/about/acknowledgments),
     to give credits to important software or organizations we rely on
 

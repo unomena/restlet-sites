@@ -8,7 +8,7 @@ JSON (JavaScript Object Notation) is a compact format for representing
 structured data. It became a popular alternative to XML in AJAX
 applications due to its native support by Web browser. JSON is indeed
 based on the JavaScript syntax. See [JSON
-project](http://web.archive.org/web/20110111202831/http://www.json.org/)
+project](http://www.json.org/)
 for more details.
 
 Description
@@ -21,5 +21,5 @@ JsonRepresentations can also be generated from String and any kind of
 Representation.
 
 For additional details, please consult the
-[Javadocs](http://web.archive.org/web/20110111202831/http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/json/package-summary.html).
+[Javadocs](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/json/package-summary.html).
 

@@ -37,8 +37,8 @@ application is as simple as adding the archives of the chosen extension
 and its dependencies to the classpath. 
 
 You can also have a look to the [FAQ
-\#4](http://web.archive.org/web/20090204182117/http://www.restlet.org/documentation/1.1/faq#04)
+\#4](http://www.restlet.org/documentation/1.1/faq#04)
 and [FAQ
-\#5](http://web.archive.org/web/20090204182117/http://www.restlet.org/documentation/1.1/faq#05)
+\#5](http://www.restlet.org/documentation/1.1/faq#05)
 which completes this subject.
 

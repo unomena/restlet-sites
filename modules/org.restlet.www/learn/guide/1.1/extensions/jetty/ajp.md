@@ -7,13 +7,13 @@ Introduction
 Here are a few links that will get you started:
 
 -   [What's AJP(Apache JServ
-    Protocol)?](http://web.archive.org/web/20090330083856/http://en.wikipedia.org/wiki/Apache_JServ_Protocol)
+    Protocol)?](http://en.wikipedia.org/wiki/Apache_JServ_Protocol)
 -   [What's Apache module
-    mod\_jk?](http://web.archive.org/web/20090330083856/http://tomcat.apache.org/connectors-doc/webserver_howto/apache.html)
+    mod\_jk?](http://tomcat.apache.org/connectors-doc/webserver_howto/apache.html)
 -   [What's jetty,and how to get
-    it?!](http://web.archive.org/web/20090330083856/http://www.mortbay.org/)
+    it?!](http://www.mortbay.org/)
 -   [How to embedding Jetty in pragram
-    way?](http://web.archive.org/web/20090330083856/http://docs.codehaus.org/display/JETTY/Embedding+Jetty)
+    way?](http://docs.codehaus.org/display/JETTY/Embedding+Jetty)
 
 Description
 ===========
@@ -100,7 +100,7 @@ Configuring Apache HTTPD server with mod\_jk
 
 -   put mod\_jk.so into your \<apache-root\>/modules/ directory
 -   you can download mod\_jk.so here
-    [http://archive.apache.org/dist/tomcat/tomcat-connectors/jk/binaries/](http://web.archive.org/web/20090330083856/http://archive.apache.org/dist/tomcat/tomcat-connectors/jk/binaries/)
+    [http://archive.apache.org/dist/tomcat/tomcat-connectors/jk/binaries/](http://archive.apache.org/dist/tomcat/tomcat-connectors/jk/binaries/)
 -   add the entry below in your httpd.conf apache configuration file
     located in \<apache-root\>/conf/ directory:
 
@@ -239,17 +239,17 @@ More Resource
 -------------
 
 [Jetty
-doc:Configuring+AJP13+Using+mod\_jk](http://web.archive.org/web/20090330083856/http://docs.codehaus.org/display/JETTY/Configuring+AJP13+Using+mod_jk)
+doc:Configuring+AJP13+Using+mod\_jk](http://docs.codehaus.org/display/JETTY/Configuring+AJP13+Using+mod_jk)
 \
  [Apache Httpd
-Document](http://web.archive.org/web/20090330083856/http://httpd.apache.org/docs/)
+Document](http://httpd.apache.org/docs/)
 \
  [HttpServerHelper Class
-API](http://web.archive.org/web/20090330083856/http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/jetty/HttpServerHelper.html)
+API](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/jetty/HttpServerHelper.html)
 \
  [Server Class
-API](http://web.archive.org/web/20090330083856/http://www.restlet.org/documentation/1.1/api/org/restlet/Server.html)
+API](http://www.restlet.org/documentation/1.1/api/org/restlet/Server.html)
 \
  [AjpServerHelper Class
-API](http://web.archive.org/web/20090330083856/http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/jetty/AjpServerHelper.html)
+API](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/jetty/AjpServerHelper.html)
 

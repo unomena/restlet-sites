@@ -7,9 +7,9 @@ Introduction
 This section will give you a first taste of the Restlet Framework:
 
 -   [First
-    server](http://web.archive.org/web/20111026041620/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/319-restlet.html "First server")
+    server](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/319-restlet.html "First server")
 -   [First
-    client](http://web.archive.org/web/20111026041620/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/320-restlet.html "First client")
+    client](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/320-restlet.html "First client")
 -   [First
-    application](http://web.archive.org/web/20111026041620/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html "First application")
+    application](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html "First application")
 

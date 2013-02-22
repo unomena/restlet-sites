@@ -11,7 +11,7 @@ NIO/HTTP internal connector, providing excellent scalability and
 performance.
 
 For now, you can get more details on the [Restlet/SIP specifications
-page](http://web.archive.org/web/20110309020619/http://wiki.restlet.org/developers/257-restlet/300-restlet.html).
+page](http://wiki.restlet.org/developers/257-restlet/300-restlet.html).
 
 Features
 ========
@@ -28,7 +28,7 @@ Mapping SIP headers
 ===================
 
 The [complete list of SIP
-headers](http://web.archive.org/web/20110309020619/http://www.iana.org/assignments/sip-parameters)
+headers](http://www.iana.org/assignments/sip-parameters)
 is available at the IANA site.
 
 SIP header
@@ -91,7 +91,7 @@ org.restlet.ext.sip.data.\
 
 Includes a list of tokens which indicates the event packages supported.
 [See RFC
-3265](http://web.archive.org/web/20110309020619/http://tools.ietf.org/html/rfc3265#section-3.3.7).
+3265](http://tools.ietf.org/html/rfc3265#section-3.3.7).
 
 Authentication-Info
 
@@ -206,7 +206,7 @@ org.restlet.ext.sip.data.\
  Event
 
 Describes an event notification. [See RFC
-3265](http://web.archive.org/web/20110309020619/http://tools.ietf.org/html/rfc3265#section-3.1).
+3265](http://tools.ietf.org/html/rfc3265#section-3.1).
 
 Expires
 
@@ -237,7 +237,7 @@ Enumerates the Call-IDs that this call references or returns.
 Max-Forwards
 
 [Support for proxies planned for
-later](http://web.archive.org/web/20110309020619/http://restlet.tigris.org/issues/show_bug.cgi?id=207)
+later](http://restlet.tigris.org/issues/show_bug.cgi?id=207)
 
 Identical to HTTP.
 
@@ -302,7 +302,7 @@ RAck
 ?
 
 Supports reliability of provisional responses. Mentionned in [RFC
-3262](http://web.archive.org/web/20110309020619/http://tools.ietf.org/html/rfc3262#section-7.2).
+3262](http://tools.ietf.org/html/rfc3262#section-7.2).
 
 Record-Route
 
@@ -324,7 +324,7 @@ org.restlet.ext.sip.data.\
  Address
 
 Provides a URL to reference. See [RFC
-3515](http://web.archive.org/web/20110309020619/http://tools.ietf.org/html/rfc3515#section-2.1).
+3515](http://tools.ietf.org/html/rfc3515#section-2.1).
 
 Reply-To
 
@@ -371,7 +371,7 @@ Rseq
 response
 
 Transmit provisional responses reliably. Mentionned in [RFC
-3262](http://web.archive.org/web/20110309020619/http://tools.ietf.org/html/rfc3262#section-7.1)
+3262](http://tools.ietf.org/html/rfc3262#section-7.1)
 
 Server
 
@@ -389,7 +389,7 @@ org.restlet.data.\
  Tag
 
 [See RFC
-3903](http://web.archive.org/web/20110309020619/http://tools.ietf.org/html/rfc3903#section-11.3.1)
+3903](http://tools.ietf.org/html/rfc3903#section-11.3.1)
 
 .
 
@@ -403,7 +403,7 @@ org.restlet.data.\
  Tag
 
 [See RFC
-3903](http://web.archive.org/web/20110309020619/http://tools.ietf.org/html/rfc3903#section-11.3.2)
+3903](http://tools.ietf.org/html/rfc3903#section-11.3.2)
 
 .
 
@@ -426,7 +426,7 @@ org.restlet.ext.sip.data.\
  SubscriptionState
 
 Provides the state of a subscription. [See RFC
-3265](http://web.archive.org/web/20110309020619/http://tools.ietf.org/html/rfc3265#section-3.2.4).
+3265](http://tools.ietf.org/html/rfc3265#section-3.2.4).
 
 Supported
 

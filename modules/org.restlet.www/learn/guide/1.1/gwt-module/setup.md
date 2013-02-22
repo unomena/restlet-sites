@@ -8,7 +8,7 @@ To use Restlet-GWT on the client side of your GWT application (Figure
 2-5 above):
 
 ​1) Create an application
-[normally](http://web.archive.org/web/20100429055116/http://code.google.com/webtoolkit/gettingstarted.html)
+[normally](http://code.google.com/webtoolkit/gettingstarted.html)
 with the applicationCreator and/or projectCreator scripts supplied with
 GWT, or using your favorite GWT design or IDE plugins.
 
@@ -22,12 +22,12 @@ classpath *^[explain]^*
 
 This will make the Restlet-GWT API available to your GWT compiled code. 
 The Restlet-GWT module in turn inherits the GWT standard
-[HTTP](http://web.archive.org/web/20100429055116/http://google-web-toolkit.googlecode.com/svn/javadoc/1.4/com/google/gwt/http/client/package-summary.html),
-[JSON](http://web.archive.org/web/20100429055116/http://google-web-toolkit.googlecode.com/svn/javadoc/1.4/com/google/gwt/json/client/package-summary.html),
+[HTTP](http://google-web-toolkit.googlecode.com/svn/javadoc/1.4/com/google/gwt/http/client/package-summary.html),
+[JSON](http://google-web-toolkit.googlecode.com/svn/javadoc/1.4/com/google/gwt/json/client/package-summary.html),
 and
-[XML](http://web.archive.org/web/20100429055116/http://google-web-toolkit.googlecode.com/svn/javadoc/1.4/com/google/gwt/xml/client/package-summary.html)
+[XML](http://google-web-toolkit.googlecode.com/svn/javadoc/1.4/com/google/gwt/xml/client/package-summary.html)
 modules. You can also check the [full Javadocs of the API
-online](http://web.archive.org/web/20100429055116/http://www.restlet.org/documentation/snapshot/gwt/).
+online](http://www.restlet.org/documentation/snapshot/gwt/).
 
 Hosted Mode
 ===========
@@ -38,11 +38,11 @@ GWT-generated `web.xml` file in hosted mode's
 `%projectHome%/tomcat/webapps/WEB-INF` directory (note that this
 directory is generated dynamically by GWT when launching the hosted mode
 for the first time). 
-[GwtShellServletWrapper](http://web.archive.org/web/20100429055116/http://www.restlet.org/documentation/snapshot/ext/com/noelios/restlet/ext/gwt/GwtShellServletWrapper.html),
+[GwtShellServletWrapper](http://www.restlet.org/documentation/snapshot/ext/com/noelios/restlet/ext/gwt/GwtShellServletWrapper.html),
 provided by the [Noelios GWT
-Extension](http://web.archive.org/web/20100429055116/http://www.restlet.org/documentation/snapshot/ext/com/noelios/restlet/ext/gwt/package-summary.html)
+Extension](http://www.restlet.org/documentation/snapshot/ext/com/noelios/restlet/ext/gwt/package-summary.html)
 (com.noelios.restlet.ext.gwt\_1.5.jar) extends
-[ServerServlet](http://web.archive.org/web/20100429055116/http://www.restlet.org/documentation/snapshot/ext/com/noelios/restlet/ext/servlet/ServerServlet.html)
+[ServerServlet](http://www.restlet.org/documentation/snapshot/ext/com/noelios/restlet/ext/servlet/ServerServlet.html)
 and shares its semantics, but also knows how to pass Hosted Mode
 requests to the GWT Shell Servlet.
 

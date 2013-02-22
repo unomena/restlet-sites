@@ -67,5 +67,5 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 
 This utilities mechanism is quite powerful and flexible, for more
 information [check this
-page](http://web.archive.org/web/20120305034314/http://static.springframework.org/spring/docs/2.5.x/reference/xsd-config.html#xsd-config-body-schemas-util-property-path).
+page](http://static.springframework.org/spring/docs/2.5.x/reference/xsd-config.html#xsd-config-body-schemas-util-property-path).
 

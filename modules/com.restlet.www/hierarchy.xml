@@ -129,7 +129,7 @@
 			</section>
 		</sections>
 	</section>
-	<section id="about-us">
+	<section id="about">
 		<label>
 			<en>About Us</en>
 			<fr>A propos de nous</fr>
@@ -169,16 +169,6 @@
                     <fr>Nos coordonnées</fr>
                 </title>
             </section>
-			<section id="legal-notice">
-				<label>
-					<en>Legal Notice</en>
-					<fr>Notice légale</fr>
-				</label>
-				<title>
-					<en>Legal Notice</en>
-					<fr>Notice légale</fr>
-				</title>
-			</section>
 		</sections>
 	</section>
 	<section id="admin" hidden="true">

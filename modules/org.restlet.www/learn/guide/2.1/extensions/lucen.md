@@ -6,11 +6,11 @@ Introduction
 
 The goal of this extension is to provide an integration between Restlet
 and [Apache Lucene
-project](http://web.archive.org/web/20101211203237/http://lucene.apache.org/)
+project](http://lucene.apache.org/)
 and subprojects such as
-[Solr](http://web.archive.org/web/20101211203237/http://lucene.apache.org/solr/)
+[Solr](http://lucene.apache.org/solr/)
 and
-[Tika](http://web.archive.org/web/20101211203237/http://lucene.apache.org/tika/).
+[Tika](http://lucene.apache.org/tika/).
 
 Its main feature is to allow an application to have access to Lucene
 indexing capabilities in a RESTful way thanks to Solr. The other feature
@@ -18,7 +18,7 @@ is to provide a TikaRepresentation leveraging Lucene Tika subproject to
 extract metadata from any Representation.
 
 For additional details, please consult the
-[Javadocs](http://web.archive.org/web/20101211203237/http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/lucene/package-summary.html).
+[Javadocs](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/lucene/package-summary.html).
 
 Solr integration
 ================
@@ -26,7 +26,7 @@ Solr integration
 The connector contributed allows you to interact with Solr with
 "solr://" references the same way you would do it through HTTP : \
 
-[http://wiki.apache.org/solr/SolrRequestHandler](http://web.archive.org/web/20101211203237/http://wiki.apache.org/solr/SolrRequestHandler)
+[http://wiki.apache.org/solr/SolrRequestHandler](http://wiki.apache.org/solr/SolrRequestHandler)
 
 Initialization
 --------------
@@ -47,7 +47,7 @@ Second one is to create the CoreContainer.
     solrClient.getContext().getAttributes().put("CoreContainer",coreContainer);
 
 To configure your core container see solr documentation :
-[http://wiki.apache.org/solr/](http://web.archive.org/web/20101211203237/http://wiki.apache.org/solr/)
+[http://wiki.apache.org/solr/](http://wiki.apache.org/solr/)
 
 Usage
 -----
@@ -60,7 +60,7 @@ SolrClientHelper returns instances of SolrRepresentation from which you
 can get results encoded as JSON or XML.
 
 To update a document like described
-[here](http://web.archive.org/web/20101211203237/http://wiki.apache.org/solr/UpdateXmlMessages)
+[here](http://wiki.apache.org/solr/UpdateXmlMessages)
 you can do :
 
     StringRepresentation repr = new StringRepresentation(xml, MediaType.TEXT_XML);

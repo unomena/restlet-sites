@@ -11,12 +11,12 @@ of the REST principles.
 
 Its main purpose it to define a format to represent Web feeds such as
 news feed. This is called the [Atom Syndication
-Format](http://web.archive.org/web/20090205114811/http://www.atomenabled.org/developers/syndication/atom-format-spec.php).
+Format](http://www.atomenabled.org/developers/syndication/atom-format-spec.php).
 
 The second purpose is to support the publication and modification of
 those Web feeds, remotely on the Web and in an interoperable manner.
 This is called the [Atom Publishing
-Protocol](http://web.archive.org/web/20090205114811/http://www.atomenabled.org/developers/protocol/atom-protocol-spec.php)
+Protocol](http://www.atomenabled.org/developers/protocol/atom-protocol-spec.php)
 (APP).
 
 Description
@@ -30,7 +30,7 @@ specifications.
 Links
 -----
 
--   [AtomEnabled.org](http://web.archive.org/web/20090205114811/http://www.atomenabled.org/)
+-   [AtomEnabled.org](http://www.atomenabled.org/)
 -   [Wikipedia
-    entry](http://web.archive.org/web/20090205114811/http://en.wikipedia.org/wiki/Atom_%28standard%29)
+    entry](http://en.wikipedia.org/wiki/Atom_%28standard%29)
 

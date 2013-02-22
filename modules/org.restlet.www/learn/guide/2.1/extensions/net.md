@@ -6,7 +6,7 @@ Introduction
 
 This connector is fully based on the JDK and more precisely on
 [java.net.HttpURLConnection
-class](http://web.archive.org/web/20101211204602/http://java.sun.com/j2se/1.5.0/docs/api/index.html?java/net/HttpURLConnection.html).
+class](http://java.sun.com/j2se/1.5.0/docs/api/index.html?java/net/HttpURLConnection.html).
 
 Description
 ===========
@@ -17,10 +17,10 @@ FTPS.
 The list of supported specific parameters is available in the Javadocs:
 
 -   [Client
-    parameters](http://web.archive.org/web/20101211204602/http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/net/HttpClientHelper.html)
+    parameters](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/net/HttpClientHelper.html)
 
 For additional details, please consult the
-[Javadocs](http://web.archive.org/web/20101211204602/http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/net/package-summary.html).
+[Javadocs](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/net/package-summary.html).
 
 Proxy
 =====

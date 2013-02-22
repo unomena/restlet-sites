@@ -20,24 +20,24 @@ Some links to start with:
 
 "OAuth Core 1.0"\
 
-[http://oauth.net/core/1.0/](http://web.archive.org/web/20090406195218/http://oauth.net/core/1.0/)
+[http://oauth.net/core/1.0/](http://oauth.net/core/1.0/)
 
 "Getting Started - Part I"\
 
-[http://oauth.net/documentation/getting-started](http://web.archive.org/web/20090406195218/http://oauth.net/documentation/getting-started)
+[http://oauth.net/documentation/getting-started](http://oauth.net/documentation/getting-started)
 
 "Explaining OAuth"\
 
-[http://www.hueniverse.com/hueniverse/2007/09/explaining-oaut.html](http://web.archive.org/web/20090406195218/http://www.hueniverse.com/hueniverse/2007/09/explaining-oaut.html)
+[http://www.hueniverse.com/hueniverse/2007/09/explaining-oaut.html](http://www.hueniverse.com/hueniverse/2007/09/explaining-oaut.html)
 
 Beginner’s Guide to OAuth
 
 -   [Part I :
-    Overwiew](http://web.archive.org/web/20090406195218/http://www.hueniverse.com/hueniverse/2007/10/beginners-guide.html)
+    Overwiew](http://www.hueniverse.com/hueniverse/2007/10/beginners-guide.html)
 -   [Part II : Protocol
-    Workflow](http://web.archive.org/web/20090406195218/http://www.hueniverse.com/hueniverse/2007/10/beginners-gui-1.html)
+    Workflow](http://www.hueniverse.com/hueniverse/2007/10/beginners-gui-1.html)
 -   [Part III : Security
-    Architecture](http://web.archive.org/web/20090406195218/http://www.hueniverse.com/hueniverse/2008/10/beginners-guide.html)
+    Architecture](http://www.hueniverse.com/hueniverse/2008/10/beginners-guide.html)
 -   [Part IV : Signing
-    Requests](http://web.archive.org/web/20090406195218/http://www.hueniverse.com/hueniverse/2008/10/beginners-gui-1.html)
+    Requests](http://www.hueniverse.com/hueniverse/2008/10/beginners-gui-1.html)
 

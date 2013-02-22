@@ -8,7 +8,7 @@ Since the example project provides a basic Restlet-powered server, it
 should be easy to deploy it inside a servlet container. GWT does not
 provide standard way to achieve this task, however, you can still get
 more information at this URL :
-[http://code.google.com/docreader/\#p=google-web-toolkit-doc-1-5&s=google-web-toolkit-doc-1-5&t=FAQ\_PackageAppInWARFile](http://web.archive.org/web/20111106195718/http://code.google.com/docreader/#p=google-web-toolkit-doc-1-5&s=google-web-toolkit-doc-1-5&t=FAQ_PackageAppInWARFile).
+[http://code.google.com/docreader/\#p=google-web-toolkit-doc-1-5&s=google-web-toolkit-doc-1-5&t=FAQ\_PackageAppInWARFile](http://code.google.com/docreader/#p=google-web-toolkit-doc-1-5&s=google-web-toolkit-doc-1-5&t=FAQ_PackageAppInWARFile).
 
 Our sample application is composed of:
 

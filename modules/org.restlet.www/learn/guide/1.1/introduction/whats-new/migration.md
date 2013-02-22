@@ -123,7 +123,7 @@ Usage of the Servlet Adapter
     define several applications either with a "/WEB-INF/restlet.xml
     file", or a "org.restlet.component" parameter in the "web.xml". see
     [ServerServlet
-    javadocs](http://web.archive.org/web/20120122021415/http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/servlet/ServerServlet.html)
+    javadocs](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/servlet/ServerServlet.html)
     for more details.
 
 Accessing current objects
@@ -162,9 +162,9 @@ duress. Typical case is when you need to integrate Restlet code with a
 third-party library that doesn't let you pass in your Restlet context or
 objects. For example, you should by default prefer obtaining the current
 context using methods such as
-[Restlet.getContext()](http://web.archive.org/web/20120122021415/http://www.restlet.org/documentation/snapshot/api/org/restlet/Restlet.html#getContext%28%29)
+[Restlet.getContext()](http://www.restlet.org/documentation/snapshot/api/org/restlet/Restlet.html#getContext%28%29)
 or
-[Handler.getContext()](http://web.archive.org/web/20120122021415/http://www.restlet.org/documentation/snapshot/api/org/restlet/Handler.html#getContext%28%29).
+[Handler.getContext()](http://www.restlet.org/documentation/snapshot/api/org/restlet/Handler.html#getContext%28%29).
 
 Accessing the original resource's reference
 ===========================================

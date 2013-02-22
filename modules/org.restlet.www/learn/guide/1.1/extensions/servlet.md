@@ -15,13 +15,13 @@ It enables you to run a Restlet based application inside any Servlet
 container such as Tomcat.
 
 Please, refer to the [ServerServlet extension
-Javadocs](http://web.archive.org/web/20090417023818/http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/servlet/package-summary.html)
+Javadocs](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/servlet/package-summary.html)
 and the [FAQ
-\#2](http://web.archive.org/web/20090417023818/http://www.restlet.org/documentation/1.1/faq#02)
+\#2](http://www.restlet.org/documentation/1.1/faq#02)
 for more details.
 
 Here is the list of dependencies for this extension:
 
 -   [Java Servlet
-    2.4](http://web.archive.org/web/20090417023818/http://java.sun.com/products/servlet/)
+    2.4](http://java.sun.com/products/servlet/)
 

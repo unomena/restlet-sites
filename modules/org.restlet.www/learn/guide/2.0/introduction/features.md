@@ -48,7 +48,7 @@ server:
     applications.
 -   Log service writes all accesses to your applications in a standard
     Web log file. The log format follows the [W3C Extended Log File
-    Format](http://web.archive.org/web/20111227072205/http://www.w3.org/TR/WD-logfile.html)
+    Format](http://www.w3.org/TR/WD-logfile.html)
     and is fully customizable.
 -   Powerful URI based redirection support similar to Apache Rewrite
     module.
@@ -106,39 +106,39 @@ Available Connectors
 
 -   Multiple server HTTP connectors available, based on either
     [Mortbay's
-    Jetty](http://web.archive.org/web/20111227072205/http://jetty.mortbay.org/)
+    Jetty](http://jetty.mortbay.org/)
     or the [Simple
-    framework](http://web.archive.org/web/20111227072205/http://www.simpleframework.org/)
+    framework](http://www.simpleframework.org/)
     or [Grizzly NIO
-    framework](http://web.archive.org/web/20111227072205/https://grizzly.dev.java.net/).
--   [AJP](http://web.archive.org/web/20111227072205/http://tomcat.apache.org/connectors-doc/)
+    framework](https://grizzly.dev.java.net/).
+-   [AJP](http://tomcat.apache.org/connectors-doc/)
     server connector available to let you plug behind an Apache HTTP
     server or Microsoft IIS. It is based on Jetty's connector.
 -   Multiple client HTTP connectors available, based on either the JDK's
-    [HttpURLConnection](http://web.archive.org/web/20111227072205/http://java.sun.com/j2se/1.5.0/docs/api/java/net/HttpURLConnection.html)
+    [HttpURLConnection](http://java.sun.com/j2se/1.5.0/docs/api/java/net/HttpURLConnection.html)
     class or on [Apache HTTP
-    Client](http://web.archive.org/web/20111227072205/http://jakarta.apache.org/commons/httpclient/).
+    Client](http://jakarta.apache.org/commons/httpclient/).
 -   Compact internal HTTP, HTTPS client and HTTP server for development
     and light deployments. No external dependency needed.
 -   Client SMTP, SMTPS, POP v3 and POPS v3 connectors are provided based
     on
-    [JavaMail](http://web.archive.org/web/20111227072205/http://java.sun.com/products/javamail/)
+    [JavaMail](http://java.sun.com/products/javamail/)
     and a custom email XML format.
 -   Client JDBC connector based on the JDBC API, a custom request XML
     format and the JDBC [WebRowSet
-    interface](http://web.archive.org/web/20111227072205/http://java.sun.com/j2se/1.5.0/docs/api/javax/sql/rowset/WebRowSet.html)
+    interface](http://java.sun.com/j2se/1.5.0/docs/api/javax/sql/rowset/WebRowSet.html)
     for XML responses.
 -   Client FILE connector supports GET, PUT and DELETE methods on files
     and directories. In addition, it is able to return directory
     listings.
 -   Client CLAP connector to access to the Classloader resources.
 -   Client and server [RIAP
-    connectors](http://web.archive.org/web/20111227072205/http://wiki.restlet.org/docs_2.0/13-restlet/48-restlet/86-restlet/45-restlet.html)
+    connectors](http://wiki.restlet.org/docs_2.0/13-restlet/48-restlet/86-restlet/45-restlet.html)
     to access to the Restlet internal resources, directly inside the
     JVM, relatively to the current application or virtual host or
     component.
 -   Client SOLR connector to call embedded [Apache Lucene
-    Solr](http://web.archive.org/web/20111227072205/http://lucene.apache.org/solr/)
+    Solr](http://lucene.apache.org/solr/)
     search and indexing engine.
 
 Available Representations
@@ -147,11 +147,11 @@ Available Representations
 -   Built-in support for XML representations (JAX, JibX, DOM or SAX
     based) with a simple XPath API based on JDK's built-in XPath engine.
 -   Integration with the [FreeMarker template
-    engine](http://web.archive.org/web/20111227072205/http://freemarker.org/)
+    engine](http://freemarker.org/)
 -   Integration with the [Velocity template
-    engine](http://web.archive.org/web/20111227072205/http://jakarta.apache.org/velocity/)
+    engine](http://jakarta.apache.org/velocity/)
 -   Integration with [Apache
-    FileUpload](http://web.archive.org/web/20111227072205/http://jakarta.apache.org/commons/fileupload/)
+    FileUpload](http://jakarta.apache.org/commons/fileupload/)
     to support multi-part forms and easily handle large file uploads
     from browsers
 -   Transformer filter to easily apply XSLT stylesheets on XML
@@ -160,7 +160,7 @@ Available Representations
     writable channels, BIO input or output streams.
 -   Support for Atom and JSON standards.
 -   Integration with [Apache Lucene
-    Tika](http://web.archive.org/web/20111227072205/http://lucene.apache.org/tika/)
+    Tika](http://lucene.apache.org/tika/)
     to support metadata extraction from any representation.
 
 Flexible configuration
@@ -174,7 +174,7 @@ Flexible configuration
 -   Implementation of the JAX-RS 1.0 standard API (based on JSR-311).
 -   Deployment as native services is possible and illustrated using the
     powerful [Java Service
-    Wrapper](http://web.archive.org/web/20111227072205/http://wrapper.tanukisoftware.org/).
+    Wrapper](http://wrapper.tanukisoftware.org/).
 -   Extensive integration with popular Spring IoC framework.
 -   Deployment to Oracle 11g embedded JVM supported by special
     extension.
@@ -215,8 +215,8 @@ Is something important for you missing? Maybe we are already working on
 it or are planning to do so.
 
 We suggest that you have a look at [our public
-roadmap](http://web.archive.org/web/20111227072205/http://www.restlet.org/about/roadmap)
+roadmap](http://www.restlet.org/about/roadmap)
 or at our [complete list of enhancement
-requests](http://web.archive.org/web/20111227072205/http://restlet.tigris.org/issues/buglist.cgi?Submit+query=Submit+query&issue_type=ENHANCEMENT&issue_type=FEATURE&issue_status=NEW&issue_status=STARTED&issue_status=REOPENED&email1=&emailtype1=exact&emailassigned_to1=1&email2=&emailtype2=exact&emailreporter2=1&issueidtype=include&issue_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&short_desc=&short_desc_type=substring&long_desc=&long_desc_type=substring&issue_file_loc=&issue_file_loc_type=substring&status_whiteboard=&status_whiteboard_type=substring&field0-0-0=noop&type0-0-0=noop&value0-0-0=&cmdtype=doit&newqueryname=&order=Reuse+same+sort+as+last+time).
+requests](http://restlet.tigris.org/issues/buglist.cgi?Submit+query=Submit+query&issue_type=ENHANCEMENT&issue_type=FEATURE&issue_status=NEW&issue_status=STARTED&issue_status=REOPENED&email1=&emailtype1=exact&emailassigned_to1=1&email2=&emailtype2=exact&emailreporter2=1&issueidtype=include&issue_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&short_desc=&short_desc_type=substring&long_desc=&long_desc_type=substring&issue_file_loc=&issue_file_loc_type=substring&status_whiteboard=&status_whiteboard_type=substring&field0-0-0=noop&type0-0-0=noop&value0-0-0=&cmdtype=doit&newqueryname=&order=Reuse+same+sort+as+last+time).
 Feel free to create some new ones if needed!
 

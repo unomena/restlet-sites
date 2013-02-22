@@ -14,20 +14,20 @@ between a server application and several kind of clients.
 Table of contents
 =================
 
-1.  [Requirements](http://web.archive.org/web/20111013171010/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_requirements)
-2.  [Scenario](http://web.archive.org/web/20111013171010/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_scenario)
+1.  [Requirements](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_requirements)
+2.  [Scenario](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_scenario)
 3.  [Archive
-    content](http://web.archive.org/web/20111013171010/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_archive-content)
+    content](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_archive-content)
 4.  [Common
-    classes](http://web.archive.org/web/20111013171010/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_common-classes)
+    classes](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_common-classes)
 5.  [GAE server
-    part](http://web.archive.org/web/20111013171010/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_gae)
+    part](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_gae)
 6.  [GWT
-    client](http://web.archive.org/web/20111013171010/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_gwt)
+    client](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_gwt)
 7.  [Android
-    client](http://web.archive.org/web/20111013171010/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_android)
+    client](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_android)
 8.  [Java SE
-    client](http://web.archive.org/web/20111013171010/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_jse)
+    client](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_jse)
 
 Requirements
 ============
@@ -35,7 +35,7 @@ Requirements
 It is based on the following editions of the Restlet Framework : Java SE
 (JSE), Google App Engine (GAE), Google Web Toolkit (GWT) and Android
 which must be downloaded separately from [this
-page](http://web.archive.org/web/20111013171010/http://www.restlet.org/downloads/).
+page](http://www.restlet.org/downloads/).
 It has been tested with the following environments:
 
 -   Restlet Framework 2.1 Milestone 4
@@ -79,9 +79,9 @@ Archive content
 ===============
 
 The full source code (without the required archives) is available here:
-[serializationFullSource.](http://web.archive.org/web/20111013171010/http://wiki.restlet.org/docs_2.1/304-restlet/version/default/part/AttachmentData/data/serializationFullSource.zip "serializationFullSource")
+[serializationFullSource.](http://wiki.restlet.org/docs_2.1/304-restlet/version/default/part/AttachmentData/data/serializationFullSource.zip "serializationFullSource")
 (application/zip, 1.4 MB,
-[info](http://web.archive.org/web/20111013171010/http://wiki.restlet.org/docs_2.1/304-restlet.html))
+[info](http://wiki.restlet.org/docs_2.1/304-restlet.html))
 
 It contains the full source code of three Eclipse projects with:
 
@@ -242,8 +242,8 @@ Here is a screenshot of the GWT client page once the user has clicked on
 the GET button.
 
   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [![serialization-gwt-screenshot](Firstapplication-303_files/data_002.html "serialization-gwt-screenshot")](http://web.archive.org/web/20111013171010/http://wiki.restlet.org/docs_2.1/305-restlet/version/default/part/ImageData/data)
-  [Click to enlarge](http://web.archive.org/web/20111013171010/http://wiki.restlet.org/docs_2.1/305-restlet/version/default/part/ImageData/data)
+  [![serialization-gwt-screenshot](Firstapplication-303_files/data_002.html "serialization-gwt-screenshot")](http://wiki.restlet.org/docs_2.1/305-restlet/version/default/part/ImageData/data)
+  [Click to enlarge](http://wiki.restlet.org/docs_2.1/305-restlet/version/default/part/ImageData/data)
   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 In order to update the contact, simply complete your contact object and

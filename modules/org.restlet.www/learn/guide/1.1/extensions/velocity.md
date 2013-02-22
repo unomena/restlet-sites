@@ -13,19 +13,19 @@ Description
 
 This extension lets you generate Representations based on the [Velocity
 template
-engine](http://web.archive.org/web/20091123194531/http://velocity.apache.org/engine/).
+engine](http://velocity.apache.org/engine/).
 Please, refer to the [Velocity extension
-Javadocs](http://web.archive.org/web/20091123194531/http://www.restlet.org/documentation/1.1/ext/org/restlet/ext/velocity/package-summary.html)
+Javadocs](http://www.restlet.org/documentation/1.1/ext/org/restlet/ext/velocity/package-summary.html)
 and the [FAQ
-\#10](http://web.archive.org/web/20091123194531/http://www.restlet.org/documentation/1.1/faq#10)
+\#10](http://www.restlet.org/documentation/1.1/faq#10)
 for more details.
 
 Here is the list of dependencies for this extension:
 
 -   [Apache Velocity
-    1.5](http://web.archive.org/web/20091123194531/http://velocity.apache.org/)
+    1.5](http://velocity.apache.org/)
 -   [Apache Commons Collections
-    3.2](http://web.archive.org/web/20091123194531/http://jakarta.apache.org/commons/collections)
+    3.2](http://jakarta.apache.org/commons/collections)
 -   [Apache Commons Lang
-    2.3](http://web.archive.org/web/20091123194531/http://jakarta.apache.org/commons/lang)
+    2.3](http://jakarta.apache.org/commons/lang)
 

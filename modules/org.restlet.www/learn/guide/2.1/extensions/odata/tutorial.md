@@ -10,9 +10,9 @@ Author
 ======
 
 Thierry Boileau, co-founder of [Noelios
-Technologies](http://web.archive.org/web/20110222202356/http://www.noelios.com/)
+Technologies](http://www.noelios.com/)
 and core committer on the [Restlet open source
-project](http://web.archive.org/web/20110222202356/http://www.restlet.org/).
+project](http://www.restlet.org/).
 
 Topics covered
 ==============
@@ -27,7 +27,7 @@ Table of contents
 
 -   Introduction: getting started
 -   [Code
-    generation](http://web.archive.org/web/20110222202356/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet/288-restlet.html#dsy288-restlet_codeGeneration)
+    generation](http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet/288-restlet.html#dsy288-restlet_codeGeneration)
 -   Get the current set of Cafes and Items Get a single entity
 -   Add a new entity
 -   Update an entity
@@ -46,9 +46,9 @@ Resources
 =========
 
 -   [Javadocs of the Restlet extension for OData
-    Services](http://web.archive.org/web/20110222202356/http://www.restlet.org/documentation/2.0/ext/org/restlet/ext/odata/package-summary.html)
+    Services](http://www.restlet.org/documentation/2.0/ext/org/restlet/ext/odata/package-summary.html)
 -   [MSDN documentation on WCF Data
-    Services](http://web.archive.org/web/20110222202356/http://msdn.microsoft.com/en-us/library/cc907912.aspx)
+    Services](http://msdn.microsoft.com/en-us/library/cc907912.aspx)
 
 Introduction
 ============
@@ -75,7 +75,7 @@ supporting the OData protocol. It allows access to the exposed entities,
 to their properties and their associations (when an entity is linked to
 other entities). We will illustrate this with a sample WCF Data Service
 with the following root URI:
-[http://restlet.cloudapp.net/TestAssociationOneToOne.svc/](http://web.archive.org/web/20110222202356/http://restlet.cloudapp.net/TestAssociationOneToOne.svc/)
+[http://restlet.cloudapp.net/TestAssociationOneToOne.svc/](http://restlet.cloudapp.net/TestAssociationOneToOne.svc/)
 
 Note that the Azure service mentionned above isn't available anymore as
 the account has expired. Sorry for the inconvenience.
@@ -621,7 +621,7 @@ server. \
  You can restrict your query to set of properties, either simple or
 complex or even navigation properties (links to other entities). The
 OData protocol specifies the usage of the **\$select** query parameter
-[here](http://web.archive.org/web/20110222202356/http://msdn.microsoft.com/en-us/library/ee525214%28PROT.10%29.aspx).
+[here](http://msdn.microsoft.com/en-us/library/ee525214%28PROT.10%29.aspx).
 \
  The result of such projection is a list of entities as usual, except
 that these entities are only populated with the selected properties.\
@@ -678,11 +678,11 @@ retrieve the number of entities contained by the target entity set.
 having said that, you must be aware that there are two ways to get the
 number of entities of an entity set (once filtering, if any, have been
 applied). If the service supports the
-[inlinecount](http://web.archive.org/web/20110222202356/http://msdn.microsoft.com/en-us/library/dd942040%28PROT.10%29.aspx)
+[inlinecount](http://msdn.microsoft.com/en-us/library/dd942040%28PROT.10%29.aspx)
 feature, this count is obtained from the Feed document itself. This
 allows to retrieve both count data and entries in the same request.
 Another way is to send a dedicated request using the [\$count
-segment](http://web.archive.org/web/20110222202356/http://msdn.microsoft.com/en-us/library/cc716656%28VS.100%29.aspx).
+segment](http://msdn.microsoft.com/en-us/library/cc716656%28VS.100%29.aspx).
 You can control this behaviour by invoking the **inlineCount** method on
 the Query object. It accepts as a parameter a boolean value indicating
 that you want to retrieve the count number using the *inlinecount* query
@@ -704,7 +704,7 @@ Support of customizable feeds
 =============================
 
 [Customizable
-feeds](http://web.archive.org/web/20110222202356/http://msdn.microsoft.com/en-us/library/ee373839%28VS.100%29.aspx)
+feeds](http://msdn.microsoft.com/en-us/library/ee373839%28VS.100%29.aspx)
 is a server-side feature that address specific use-case that requires
 that the Atom data feeds produced by the data service will use both
 standard Atom elements or custom feed elements. This of course has an
@@ -715,7 +715,7 @@ Handling blobs (aka media link entries)
 =======================================
 
 [Media link
-entries](http://web.archive.org/web/20110222202356/http://msdn.microsoft.com/en-us/library/ee473426.aspx)
+entries](http://msdn.microsoft.com/en-us/library/ee473426.aspx)
 are specific entities that allow to handle binary content such as
 images, documents, etc. Each entity can be seen as collection of
 metadata about the binary content, plus the binary content itself. Since
@@ -768,14 +768,14 @@ Access to NTLM secured services
 -------------------------------
 
 Please refer to [this
-document](http://web.archive.org/web/20110222202356/http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/46-restlet/112-restlet/364-restlet.html "NTLM authentication")
+document](http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/46-restlet/112-restlet/364-restlet.html "NTLM authentication")
 for how to access NTML secured services.
 
 Support of capability negotiation based on protocol versions
 ============================================================
 
 As stated by the WCF documentation
-([here](http://web.archive.org/web/20110222202356/http://msdn.microsoft.com/en-us/library/dd541202%28PROT.10%29.aspx)),
+([here](http://msdn.microsoft.com/en-us/library/dd541202%28PROT.10%29.aspx)),
 client and server may talk different dialects of the OData protocol. The
 Service class provides several methods that allow you to control these
 aspects:
@@ -789,7 +789,7 @@ aspects:
 
 The values setted by setClientVersion and setMaxClientVersion are not
 controlled by the framework, but they must follow a format specified
-[here](http://web.archive.org/web/20110222202356/http://msdn.microsoft.com/en-us/library/dd541109%28PROT.10%29.aspx).
+[here](http://msdn.microsoft.com/en-us/library/dd541109%28PROT.10%29.aspx).
 
 Conclusion
 ==========

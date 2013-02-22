@@ -5,10 +5,10 @@ Introduction
 ============
 
 This is the official User Guide for version 2.0 of the Restlet Framework
-([http://www.restlet.org](http://web.archive.org/web/20111228141744/http://www.restlet.org/)).
+([http://www.restlet.org](http://www.restlet.org/)).
 This document is edited in a collaborative way via this wiki site, byt
 [published
-versions](http://web.archive.org/web/20111228141744/http://wiki.restlet.org/books)
+versions](http://wiki.restlet.org/books)
 are also available in several formats.
 
 We are very happy to have you as a new user and hope that you will have
@@ -24,7 +24,7 @@ documentation or code improvements or by helping other users or
 developers in the mailing lists. Every contribution is valuable to the
 community and we give credit back to our team by listing all the
 contributors on [our team
-page](http://web.archive.org/web/20111228141744/http://www.restlet.org/about/team).
+page](http://www.restlet.org/about/team).
 
 Let's get started and again: welcome to the Restlet Team !
 
@@ -56,14 +56,14 @@ Community support
 
 If you can't find an answer to your question in this document, please
 use our [public mailing
-lists](http://web.archive.org/web/20111228141744/http://www.restlet.org/community/lists)
+lists](http://www.restlet.org/community/lists)
 and read the [recommended
-books](http://web.archive.org/web/20111228141744/http://www.restlet.org/documentation/books).
+books](http://www.restlet.org/documentation/books).
 We especially recommend our "[Restlet in
-Action](http://web.archive.org/web/20111228141744/http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217)"
+Action](http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217)"
 book available in early access (PDF version) from Manning.
 
-[![](Welcome%20to%20the%20Restlet%20Framework-21_files/restlet-in-action-150.png)](http://web.archive.org/web/20111228141744/http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217)
+[![](Welcome%20to%20the%20Restlet%20Framework-21_files/restlet-in-action-150.png)](http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217)
 
 Professional support
 ====================
@@ -71,8 +71,8 @@ Professional support
 If you can't wait to get an answer or need to keep your questions
 confidential, you can also obtain private support by buying a
 [professional support
-plan](http://web.archive.org/web/20111228141744/http://www.restlet.org/community/professional)
+plan](http://www.restlet.org/community/professional)
 from Noelios Technologies, the creator of the Restlet Framework.
 
-[![](Welcome%20to%20the%20Restlet%20Framework-21_files/logo135.png)](http://web.archive.org/web/20111228141744/http://www.noelios.com/products/support)
+[![](Welcome%20to%20the%20Restlet%20Framework-21_files/logo135.png)](http://www.noelios.com/products/support)
 

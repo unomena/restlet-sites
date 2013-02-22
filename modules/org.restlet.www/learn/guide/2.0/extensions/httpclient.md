@@ -5,7 +5,7 @@ Introduction
 ============
 
 This connector is based on [Apache Commons HTTP
-client](http://web.archive.org/web/20101209061751/http://hc.apache.org/httpcomponents-client/).
+client](http://hc.apache.org/httpcomponents-client/).
 It provides an HTTP and HTTPS client connector with advanced
 multi-threading and connection reuse support.
 
@@ -20,8 +20,8 @@ This connector supports the following protocols: HTTP, HTTPS. The list
 of supported specific parameters is available in the Javadocs:
 
 -   [HTTP client
-    parameters](http://web.archive.org/web/20101209061751/http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/httpclient/HttpClientHelper.html)
+    parameters](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/httpclient/HttpClientHelper.html)
 
 For additional details, please consult the
-[Javadocs](http://web.archive.org/web/20101209061751/http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/httpclient/package-summary.html).
+[Javadocs](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/httpclient/package-summary.html).
 

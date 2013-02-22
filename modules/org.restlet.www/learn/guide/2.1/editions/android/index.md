@@ -6,7 +6,7 @@ Introduction
 
 This document will cover the Restlet edition for Android, which is a
 port of the Restlet Framework to the [Android mobile
-OS](http://web.archive.org/web/20111105220910/http://code.google.com/android/).
+OS](http://code.google.com/android/).
 
 A Web server on a mobile phone
 ==============================

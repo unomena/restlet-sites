@@ -8,17 +8,17 @@ As a large amount of new features were added since version 1.1 of the
 Restlet Framework, major packages reorganization and API refactoring was
 done on the Restlet API (including the core Resource API) and a growing
 number of special Restlet editions (Java SE/EE, [Google Web
-Toolkit](http://web.archive.org/web/20111227072959/http://blog.noelios.com/2008/07/25/restlet-ported-to-gwt/),
+Toolkit](http://blog.noelios.com/2008/07/25/restlet-ported-to-gwt/),
 [Google App
-Engine](http://web.archive.org/web/20111227072959/http://blog.noelios.com/2009/04/11/restlet-in-the-cloud-with-google-app-engine/)
+Engine](http://blog.noelios.com/2009/04/11/restlet-in-the-cloud-with-google-app-engine/)
 and
-[Android](http://web.archive.org/web/20111227072959/http://blog.noelios.com/2009/05/06/restlet-available-on-android-phones/)),
+[Android](http://blog.noelios.com/2009/05/06/restlet-available-on-android-phones/)),
 we decided to rename the 1.2 version into a major 2.0.
 
 In the next sections, you will get a synthesis of the major changes done
 to the Restlet Framework. For a more details, you can read the [2.0
 announce on our
-blog](http://web.archive.org/web/20111227072959/http://blog.noelios.com/2010/07/19/restlet-framework-2-0-0-released/)
+blog](http://blog.noelios.com/2010/07/19/restlet-framework-2-0-0-released/)
 as well as [the full list of
-changes](http://web.archive.org/web/20111227072959/http://www.restlet.org/documentation/snapshot/jse/changes).
+changes](http://www.restlet.org/documentation/snapshot/jse/changes).
 

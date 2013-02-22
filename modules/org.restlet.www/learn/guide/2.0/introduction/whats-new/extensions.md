@@ -45,7 +45,7 @@ Jackson extension
 =================
 
 New
-[Jackson](http://web.archive.org/web/20120119072245/http://jackson.codehaus.org/)
+[Jackson](http://jackson.codehaus.org/)
 extension added, offering a nice alternative to the existing XStream
 extension for JSON object serialization (based on Jettison).
 
@@ -63,7 +63,7 @@ Lucene extension
 ================
 
 In addition, a [Lucene
-extension](http://web.archive.org/web/20120119072245/http://wiki.restlet.org/developers/172-restlet/215-restlet.html)has
+extension](http://wiki.restlet.org/developers/172-restlet/215-restlet.html)has
 been created to host the Solr client connector contributed by Rémi
 Dewitte who will lead this extension. There is also a TikaRepresentation
 available to leverage Lucene Tika subproject when extracting metadata
@@ -86,7 +86,7 @@ OData extension
 ===============
 
 A new extension for [Microsoft ADO.NET Data
-Services](http://web.archive.org/web/20120119072245/http://blog.noelios.com/2009/09/28/restlet-bridges-ado-net-data-services-and-java/)
+Services](http://blog.noelios.com/2009/09/28/restlet-bridges-ado-net-data-services-and-java/)
 technology (previously known as “project Astoria”) was added, later
 renamed to WCF Data Services then OData.
 
@@ -114,9 +114,9 @@ concept of resources and their representations (REST) and the expression
 of meaningful links between those resources (RDF).
 
 We have written a [detailed
-specification](http://web.archive.org/web/20120119072245/http://wiki.restlet.org/developers/172-restlet/160-restlet.html?branch=docs-1_1&language=en)
+specification](http://wiki.restlet.org/developers/172-restlet/160-restlet.html?branch=docs-1_1&language=en)
 and gathered feed-back from the community and especially [Henry
-Story](http://web.archive.org/web/20120119072245/http://blogs.sun.com/bblfish/),
+Story](http://blogs.sun.com/bblfish/),
 an expert in this area.
 
 In Restlet 2.0, we have added Literal, Link,  LinkReference, LinkSet and
@@ -153,7 +153,7 @@ SLF4J extension
 The Restlet logging, based on JULI (java.util.logging), now has an
 extension mechanism allowing an efficient redirection to alternate
 mechanisms like log4j as [explained in the
-wiki](http://web.archive.org/web/20120119072245/http://wiki.restlet.org/docs_2.0/13-restlet/48-restlet/101-restlet.html).
+wiki](http://wiki.restlet.org/docs_2.0/13-restlet/48-restlet/101-restlet.html).
 A new SLF4J extension has been added to facilitate the replacement of
 Restlet’s default logger facade.
 

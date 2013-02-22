@@ -11,10 +11,10 @@ and facilitates the exchange of representation beans via Restlet
 annotated interfaces. This format is based on the GWT-RPC serialization
 mechanism, even though it is used in a regular REST/HTTP way thanks to
 [Restlet Framework edition for
-GWT](http://web.archive.org/web/20111014100457/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/144-restlet.html "Restlet edition for Google Web Toolkit")(client-side).
+GWT](http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/144-restlet.html "Restlet edition for Google Web Toolkit")(client-side).
 
 For additional details, please consult [the
-specifications](http://web.archive.org/web/20111014100457/http://wiki.restlet.org/developers/172-restlet/g4/282-restlet.html)
+specifications](http://wiki.restlet.org/developers/172-restlet/g4/282-restlet.html)
 and the
-[Javadocs](http://web.archive.org/web/20111014100457/http://www.restlet.org/documentation/2.1/jse/ext/org/restlet/ext/gwt/package-summary.html).
+[Javadocs](http://www.restlet.org/documentation/2.1/jse/ext/org/restlet/ext/gwt/package-summary.html).
 

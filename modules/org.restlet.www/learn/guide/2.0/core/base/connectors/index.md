@@ -28,9 +28,9 @@ application is as simple as adding the archives of the chosen connector
 and its dependencies to the classpath.
 
 You can also have a look to the [FAQ
-\#4](http://web.archive.org/web/20111207085223/http://www.restlet.org/documentation/1.1/faq#04)
+\#4](http://www.restlet.org/documentation/1.1/faq#04)
 and [FAQ
-\#5](http://web.archive.org/web/20111207085223/http://www.restlet.org/documentation/1.1/faq#05)
+\#5](http://www.restlet.org/documentation/1.1/faq#05)
 which completes this subject.
 
 Configuration
@@ -46,18 +46,18 @@ most of them by the connector's ClientHelper or ServerHelper subclasses.
 The list of all parameters are available in the javadocs. Pleaser refer
 to the rest of this document for references to these documentation. Here
 are the [commons
-parameters](http://web.archive.org/web/20111207085223/http://www.restlet.org/documentation/2.0/jse/engine/org/restlet/engine/http/connector/BaseHelper.html)
+parameters](http://www.restlet.org/documentation/2.0/jse/engine/org/restlet/engine/http/connector/BaseHelper.html)
 dedicated to internal connectors.
 
 Server connectors
 -----------------
 
 Here are the [commons
-parameters](http://web.archive.org/web/20111207085223/http://www.restlet.org/documentation/2.0/jse/engine/org/restlet/engine/http/HttpServerHelper.html)
+parameters](http://www.restlet.org/documentation/2.0/jse/engine/org/restlet/engine/http/HttpServerHelper.html)
 dedicated to non-internal HTTP server connectors.
 
 Here are the [commons
-parameters](http://web.archive.org/web/20111207085223/http://www.restlet.org/documentation/2.0/jse/engine/org/restlet/engine/http/connector/BaseServerHelper.html)
+parameters](http://www.restlet.org/documentation/2.0/jse/engine/org/restlet/engine/http/connector/BaseServerHelper.html)
 dedicated to internal HTTP server connectors.
 
 Here is a sample code showing how to set such a parameter on a
@@ -73,11 +73,11 @@ Client connectors
 -----------------
 
 Here are the [commons
-parameters](http://web.archive.org/web/20111207085223/http://www.restlet.org/documentation/2.0/jse/engine/org/restlet/engine/http/HttpClientHelper.html)
+parameters](http://www.restlet.org/documentation/2.0/jse/engine/org/restlet/engine/http/HttpClientHelper.html)
 dedicated to non-internal HTTP client connectors.
 
 Here are the [commons
-parameters](http://web.archive.org/web/20111207085223/http://www.restlet.org/documentation/2.0/jse/engine/org/restlet/engine/http/connector/BaseClientHelper.html)
+parameters](http://www.restlet.org/documentation/2.0/jse/engine/org/restlet/engine/http/connector/BaseClientHelper.html)
 dedicated to internal HTTP client connectors.
 
 Here is a sample code showing how to set such a parameter.
@@ -124,7 +124,7 @@ Asynchronous
 
 Comment
 
-[Internal](http://web.archive.org/web/20111207085223/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors")
+[Internal](http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors")
 
 2.0
 
@@ -134,7 +134,7 @@ Yes
 
 Recommended for development
 
-[Grizzly](http://web.archive.org/web/20111207085223/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/73-restlet.html "Grizzly extension")
+[Grizzly](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/73-restlet.html "Grizzly extension")
 
 1.9
 
@@ -144,7 +144,7 @@ No
 
 Experimental integration
 
-[Jetty](http://web.archive.org/web/20111207085223/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/78-restlet.html "Eclipse Jetty extension")
+[Jetty](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/78-restlet.html "Eclipse Jetty extension")
 
 7.0
 
@@ -154,7 +154,7 @@ No
 
 Recommended for robust and scalable deployments
 
-[Netty](http://web.archive.org/web/20111207085223/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/296-restlet.html "JBoss Netty extension")
+[Netty](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/296-restlet.html "JBoss Netty extension")
 
 3.1
 
@@ -164,7 +164,7 @@ No
 
 Experimental integration
 
-[Simple](http://web.archive.org/web/20111207085223/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/82-restlet.html "Simple Framework extension")
+[Simple](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/82-restlet.html "Simple Framework extension")
 
 4.1
 
@@ -174,7 +174,7 @@ No
 
 Recommended for lightweight deployments
 
-[Servlet](http://web.archive.org/web/20111207085223/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/81-restlet.html "Servlet extension")
+[Servlet](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/81-restlet.html "Servlet extension")
 
 2.5
 
@@ -199,7 +199,7 @@ Proxy
 
 Comment
 
-[Internal](http://web.archive.org/web/20111207085223/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors")
+[Internal](http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors")
 
 2.0
 
@@ -212,7 +212,7 @@ No
 Stable but HTTP connectors are recommended for development only
 
 [Apache HTTP
-Client](http://web.archive.org/web/20111207085223/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/75-restlet.html "Apache HTTP Client extension")
+Client](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/75-restlet.html "Apache HTTP Client extension")
 
 4.0
 
@@ -225,7 +225,7 @@ Yes
 Recommended for robust and scalable deployments
 
 [Lucene
-Solr](http://web.archive.org/web/20111207085223/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/229-restlet.html "Lucene extension")
+Solr](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/229-restlet.html "Lucene extension")
 
 2.9
 
@@ -237,7 +237,7 @@ No
 
 Stable
 
-[Net](http://web.archive.org/web/20111207085223/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/79-restlet.html "Net extension")
+[Net](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/79-restlet.html "Net extension")
 (JDK's HttpURLConnection)
 
 1.5
@@ -250,7 +250,7 @@ Yes
 
 Recommended for lightweight deployments
 
-[JavaMail](http://web.archive.org/web/20111207085223/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/76-restlet.html "JavaMail extension")
+[JavaMail](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/76-restlet.html "JavaMail extension")
 
 1.4
 
@@ -262,7 +262,7 @@ No
 
 Stable
 
-[JDBC](http://web.archive.org/web/20111207085223/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/77-restlet.html "JDBC extension")
+[JDBC](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/77-restlet.html "JDBC extension")
 
 3.0
 

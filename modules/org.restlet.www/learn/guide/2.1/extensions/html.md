@@ -23,7 +23,7 @@ based on the "multipart" boolean property.
 
 For additional information on both encoding, please see the HTML 4.0
 specification, [section
-17.13](http://web.archive.org/web/20111014100518/http://www.w3.org/TR/html4/interact/forms.html#h-17.13).
+17.13](http://www.w3.org/TR/html4/interact/forms.html#h-17.13).
 
 Usage example
 -------------

@@ -13,8 +13,8 @@ Description
 
 This extension lets you generate Representations based on the [Velocity
 template
-engine](http://web.archive.org/web/20120305034157/http://velocity.apache.org/engine/).
+engine](http://velocity.apache.org/engine/).
 
 For additional details, please consult the
-[Javadocs](http://web.archive.org/web/20120305034157/http://www.restlet.org/documentation/2.1/jse/ext/org/restlet/ext/velocity/package-summary.html).
+[Javadocs](http://www.restlet.org/documentation/2.1/jse/ext/org/restlet/ext/velocity/package-summary.html).
 

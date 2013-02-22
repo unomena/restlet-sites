@@ -10,13 +10,13 @@
 </p>
 
 <p>
-        <a href="http://www.restlet.org"><img src="http://www.restlet.org/images/logo150" alt="Logo Restlet" /></a>
+        <a href="http://restlet.org"><img src="http://restlet.org/images/logo150" alt="Logo Restlet" /></a>
 </p>
 
 <p>
 	Restlet Framework est développé dans le cadre du projet libre Restlet. Vous pouvez trouver toute
 	la documentation technique et télécharger la dernière version du logiciel sur le
-	<a href="http://www.restlet.org">site communautaire</a>.
+	<a href="http://restlet.org">site communautaire</a>.
 </p>
 </@h3>
 
@@ -41,7 +41,7 @@
 </p>
 
 <p>
-	De nombreuses extensions sont disponibles et viennent compléter <a href="http://www.restlet.org/about/features">
+	De nombreuses extensions sont disponibles et viennent compléter <a href="http://restlet.org/about/features">
 	la palette de fonctionnalités</a> offertes par le framework Restlet. Vos 
 	applications peuvent être déployées dans de multiples environnements 
 	comme le conteneur de
@@ -101,7 +101,7 @@
 	Pour les utilisateurs qui ne peuvent pas bénéficier de l'une des licences libres que
 	nous utilisons pour distribuer Restlet Framework (LGPL 3.0, LGPL 2.1, CDDL 1.0
 	ou EPL 1.0), nous proposons également des licences commerciales. Cela est possible car
-	nous avons mis en place un <a href="http://www.restlet.org/community/contribute">processus légal</a> 
+	nous avons mis en place un <a href="http://restlet.org/community/contribute">processus légal</a> 
 	qui nous permet de conserver le copyright sur l'ensemble du code source tout en acceptant 
 	les contributions de notre communauté.
 </p>

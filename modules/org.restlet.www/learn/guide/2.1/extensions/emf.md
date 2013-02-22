@@ -5,14 +5,14 @@ Introduction
 ============
 
 [Eclipse
-EMF](http://web.archive.org/web/20111014100523/http://www.eclipse.org/modeling/emf/)
+EMF](http://www.eclipse.org/modeling/emf/)
 is a widely used modeling technology that can unify models defined in
 XML Schema, UML or Java code. This extension facilitates the usage of
 EMF to convert between "representation beans" generated from EMF and
 XML/XMI/ECore representations.
 
 For additional details, please consult [the
-Javadocs](http://web.archive.org/web/20111014100523/http://www.restlet.org/documentation/2.1/jse/ext/org/restlet/ext/emf/package-summary.html).
+Javadocs](http://www.restlet.org/documentation/2.1/jse/ext/org/restlet/ext/emf/package-summary.html).
 
 Description
 ===========

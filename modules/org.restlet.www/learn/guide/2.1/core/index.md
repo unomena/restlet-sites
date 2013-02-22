@@ -9,14 +9,14 @@ with classes, interfaces and enumerations that together provide a
 framework. This framework will guide you on the path to RESTful design
 and development. But be aware that you still need to understand REST in
 order to fully take advantage of the [Restlet
-features](http://web.archive.org/web/20111026041654/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/22-restlet.html "Features").
+features](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/22-restlet.html "Features").
 For this purpose, [we recommend the book "RESTful Web
-Services"](http://web.archive.org/web/20111026041654/http://www.restlet.org/documentation/books)
+Services"](http://www.restlet.org/documentation/books)
 from O'Reilly. We even wrote a part of it covering Restlet usage.
 
 For a more detailed presentation of the API, we recommend that you have
 a close look at its
-[Javadocs](http://web.archive.org/web/20111026041654/http://www.restlet.org/documentation/2.1/jse/api/)
+[Javadocs](http://www.restlet.org/documentation/2.1/jse/api/)
 available on the Restlet Web site. Below is a hierarchy diagram showing
 the main concepts of the API and their relationships:
 

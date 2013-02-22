@@ -11,29 +11,29 @@ References
 ==========
 
 -   [Blog post - Restlet supports OData, the Open Data
-    Protocol](http://web.archive.org/web/20101212040135/http://blog.noelios.com/2010/03/15/restlet-supports-odata-the-open-data-protocol/)
+    Protocol](http://blog.noelios.com/2010/03/15/restlet-supports-odata-the-open-data-protocol/)
 -   [Javadocs - Restlet extension for
-    OData](http://web.archive.org/web/20101212040135/http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/odata/package-summary.html)
+    OData](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/odata/package-summary.html)
 -   [Advanced tutorial on the OData
-    extension](http://web.archive.org/web/20101212040135/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet/288-restlet.html "Tutorial")
+    extension](http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet/288-restlet.html "Tutorial")
 -   [OData - Protocol
-    specification](http://web.archive.org/web/20101212040135/http://www.odata.org/developers/protocols)
+    specification](http://www.odata.org/developers/protocols)
 -   [MSDN - WCF Data
-    Services](http://web.archive.org/web/20101212040135/http://msdn.microsoft.com/en-us/data/bb931106.aspx)
+    Services](http://msdn.microsoft.com/en-us/data/bb931106.aspx)
 -   [Open Government Data Initiative
-    project](http://web.archive.org/web/20101212040135/http://ogdisdk.cloudapp.net/)
+    project](http://ogdisdk.cloudapp.net/)
 
 Table of contents
 =================
 
--   [Introduction](http://web.archive.org/web/20101212040135/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_introduction)
+-   [Introduction](http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_introduction)
 -   [Code
-    generation](http://web.archive.org/web/20101212040135/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_codeGeneration)
+    generation](http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_codeGeneration)
 -   [Get the two first building
-    permits](http://web.archive.org/web/20101212040135/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_get2FirstBuildingPermits)
+    permits](http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_get2FirstBuildingPermits)
 -   [Filter the set of the building
-    permits](http://web.archive.org/web/20101212040135/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_filterSetOfPermits)
--   [Conclusion](http://web.archive.org/web/20101212040135/http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_conclusion)
+    permits](http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_filterSetOfPermits)
+-   [Conclusion](http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_conclusion)
 
 Introduction
 ============
@@ -42,7 +42,7 @@ REST can play a key role in order to facilitate the interoperability
 between Java and Microsoft environments. To demonstrate this, the
 Restlet team collaborated with Microsoft in order to build a new Restlet
 extension that provides several high level features for accessing
-[OData](http://web.archive.org/web/20101212040135/http://www.odata.org/)
+[OData](http://www.odata.org/)
 services (Open Data Protocol).
 
 The Open Government Data Initiative (OGDI) is an initiative led by

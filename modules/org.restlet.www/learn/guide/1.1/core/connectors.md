@@ -28,9 +28,9 @@ application is as simple as adding the archives of the chosen connector
 and its dependencies to the classpath.
 
 You can also have a look to the [FAQ
-\#4](http://web.archive.org/web/20111231121013/http://www.restlet.org/documentation/1.1/faq#04)
+\#4](http://restlet.org/learn/1.1/faq#04)
 and [FAQ
-\#5](http://web.archive.org/web/20111231121013/http://www.restlet.org/documentation/1.1/faq#05)
+\#5](http://restlet.org/learn/1.1/faq#05)
 which completes this subject.
 
 Configuration
@@ -50,7 +50,7 @@ Server connectors
 -----------------
 
 Here are the [commons
-parameters](http://web.archive.org/web/20111231121013/http://www.restlet.org/documentation/1.1/nre/com/noelios/restlet/http/HttpServerHelper)
+parameters](http://restlet.org/learn/1.1/nre/com/noelios/restlet/http/HttpServerHelper)
 dedicated to HTTP server connectors.
 
 Here is a sample code showing how to set such a parameter.
@@ -72,7 +72,7 @@ Client connectors
 -----------------
 
 Here are the [commons
-parameters](http://web.archive.org/web/20111231121013/http://www.restlet.org/documentation/1.1/nre/com/noelios/restlet/http/HttpClientHelper)
+parameters](http://restlet.org/learn/1.1/nre/com/noelios/restlet/http/HttpClientHelper)
 dedicated to HTTP client connectors.
 
 Here is a sample code showing how to set such a parameter.
@@ -93,31 +93,31 @@ Version
 
 Protocols
 
-[Internal](http://web.archive.org/web/20111231121013/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors")
+[Internal](http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors")
 
 1.1
 
 HTTP, RIAP
 
-[Grizzly](http://web.archive.org/web/20111231121013/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/73-restlet.html "Grizzly extension")
+[Grizzly](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/73-restlet.html "Grizzly extension")
 
 1.8
 
 HTTP, HTTPS
 
-[Jetty](http://web.archive.org/web/20111231121013/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/78-restlet.html "Jetty extension")
+[Jetty](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/78-restlet.html "Jetty extension")
 
 6.1
 
 HTTP, HTTPS, AJP
 
-[Simple](http://web.archive.org/web/20111231121013/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/82-restlet.html "Simple extension")
+[Simple](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/82-restlet.html "Simple extension")
 
 3.1
 
 HTTP, HTTPS
 
-[Servlet](http://web.archive.org/web/20111231121013/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/81-restlet.html "Servlet extension")
+[Servlet](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/81-restlet.html "Servlet extension")
 
 2.5
 
@@ -132,33 +132,33 @@ Version
 
 Protocols
 
-[Internal](http://web.archive.org/web/20111231121013/http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors")
+[Internal](http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors")
 
 1.1
 
 HTTP, CLAP, FILE, RIAP
 
 [Apache HTTP
-Client](http://web.archive.org/web/20111231121013/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/75-restlet.html "HTTP Client extension")
+Client](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/75-restlet.html "HTTP Client extension")
 
 3.1
 
 HTTP, HTTPS
 
-[Net](http://web.archive.org/web/20111231121013/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/79-restlet.html "Net extension")
+[Net](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/79-restlet.html "Net extension")
 (JDK's HttpURLConnection)
 
 1.5
 
 HTTP, HTTPS
 
-[JavaMail](http://web.archive.org/web/20111231121013/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/76-restlet.html "JavaMail extension")
+[JavaMail](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/76-restlet.html "JavaMail extension")
 
 1.4
 
 SMTP, SMTPS, POP, POPS
 
-[JDBC](http://web.archive.org/web/20111231121013/http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/77-restlet.html "JDBC extension")
+[JDBC](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/77-restlet.html "JDBC extension")
 
 3.0
 

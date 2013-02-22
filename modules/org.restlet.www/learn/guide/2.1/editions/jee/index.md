@@ -10,7 +10,7 @@ Enterprise Edition).
 This edition is aimed for development and deployment of Restlet
 applications inside Java EE application server, or more precisely inside
 Servlet containers such as [Apache
-Tomcat](http://web.archive.org/web/20111218224609/http://tomcat.apache.org/).
+Tomcat](http://tomcat.apache.org/).
 
 Getting started
 ===============
@@ -20,12 +20,12 @@ Java EE edition, in less than 10 minutes. It explains how to create a
 resource that says "hello, world" and run it.
 
 1.  [What do I
-    need?](http://web.archive.org/web/20111218224609/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/312-restlet.html#dsy312-restlet_requirements)
+    need?](http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/312-restlet.html#dsy312-restlet_requirements)
 2.  [The "hello, world"
-    application](http://web.archive.org/web/20111218224609/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/312-restlet.html#dsy312-restlet_application)
+    application](http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/312-restlet.html#dsy312-restlet_application)
 3.  [Run in a Servlet
-    container](http://web.archive.org/web/20111218224609/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/312-restlet.html#dsy312-restlet_servletDeployment)
-4.  [Conclusion](http://web.archive.org/web/20111218224609/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/312-restlet.html#dsy312-restlet_conclusion)
+    container](http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/312-restlet.html#dsy312-restlet_servletDeployment)
+4.  [Conclusion](http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/312-restlet.html#dsy312-restlet_conclusion)
 
 What do I need?
 ---------------
@@ -34,7 +34,7 @@ We assume that you have a development environment set up and
 operational, and that you already have installed the Java 1.5 (or
 higher). In case you haven't downloaded the Restlet Framework yet,
 select one of the available distributions of the [Restlet Framework
-2.0](http://web.archive.org/web/20111218224609/http://www.restlet.org/downloads).
+2.0](http://www.restlet.org/downloads).
 
 The "hello, world" application
 ------------------------------
@@ -189,7 +189,7 @@ Conclusion
 
 We hope you that enjoyed these first steps and encourage you to check
 [the equivalent page in the Java SE
-edition](http://web.archive.org/web/20111218224609/http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/311-restlet.html "Restlet edition for Java SE")
+edition](http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/311-restlet.html "Restlet edition for Java SE")
 for standalone deployments of the same application. This can also be a
 convenient way to develop and test your Restlet application before
 actually deploying it in a Java EE application server.
@@ -197,6 +197,6 @@ actually deploying it in a Java EE application server.
 ### Notes
 
 -   Thanks to [Didier
-    Girard](http://web.archive.org/web/20111218224609/http://www.ongwt.com/)
+    Girard](http://www.ongwt.com/)
     for suggesting this page.
 

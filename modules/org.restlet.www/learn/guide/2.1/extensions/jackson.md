@@ -5,7 +5,7 @@ Introduction
 ============
 
 This extension provides and integration of Restlet with Jackson.
-[Jackson](http://web.archive.org/web/20111014100447/http://jackson.codehaus.org/)
+[Jackson](http://jackson.codehaus.org/)
 is a fast library to serialize objects to JSON and back again.
 
 Usage instructions
@@ -85,8 +85,8 @@ beans, with no special parent classes and no special annotations.
 What is nice is that the automatically generated JSON representations
 can be customized via Jackson annotations on the serialized beans. More
 details on annotations are [available in Jackson
-documentation](http://web.archive.org/web/20111014100447/http://wiki.fasterxml.com/JacksonInFiveMinutes).
+documentation](http://wiki.fasterxml.com/JacksonInFiveMinutes).
 
 For additional details, please consult the
-[Javadocs](http://web.archive.org/web/20111014100447/http://www.restlet.org/documentation/2.1/jse/ext/org/restlet/ext/jackson/package-summary.html).
+[Javadocs](http://www.restlet.org/documentation/2.1/jse/ext/org/restlet/ext/jackson/package-summary.html).
 

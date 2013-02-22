@@ -8,14 +8,14 @@ In order to simplify even more the learning and deployment of Restlet
 applications, the Restlet API and its implementation (ie. the Restlet
 Engine) have been merged into a single module (ie. JAR, bundle). All
 engine classes were moved to
-[org.restlet.engine](http://web.archive.org/web/20111219221217/http://www.restlet.org/documentation/snapshot/jse/engine/).
+[org.restlet.engine](http://www.restlet.org/documentation/snapshot/jse/engine/).
 
 In addition, all extensions are now located under a
-[org.restlet.ext](http://web.archive.org/web/20111219221217/http://www.restlet.org/documentation/snapshot/jse/ext/)
+[org.restlet.ext](http://www.restlet.org/documentation/snapshot/jse/ext/)
 root package. This means that all extensions previously under
 "com.noelios.restlet.ext" have been moved. Note that some classes from
 the [core Restlet
-API](http://web.archive.org/web/20111219221217/http://www.restlet.org/documentation/snapshot/api/)
+API](http://www.restlet.org/documentation/snapshot/api/)
 have been moved to the Restlet Engine such as:
 
 -   org.restlet.util.Engine moved to org.restlet.engine.Engine
@@ -68,7 +68,7 @@ API including “Age”, “Authentication-Info”, “Date”, "Expect",
 “If-Range”, “Retry-After”, "Via", “Warning”, and the frequently asked
 “Cache-Control” header! For a detailled mapping of those headers to the
 Restlet API, please consult [this page of the user
-guide](http://web.archive.org/web/20111219221217/http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/130-restlet.html).
+guide](http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/130-restlet.html).
 
 Character sets support was enhanced, fixing an issue with Macintosh and
 adding new constants in the CharacterSet class for all common ones
@@ -92,7 +92,7 @@ time for us to step-back and propose a better solution, taking the best
 of both experiences.
 
 We initiated a [specification
-effort](http://web.archive.org/web/20111219221217/http://wiki.restlet.org/developers/172-restlet/226-restlet.html)
+effort](http://wiki.restlet.org/developers/172-restlet/226-restlet.html)
 in our developers wiki at the beginning of this year, taking into
 account all the enhancement requests, issues and feed-back made by our
 community. Here is the overall architecture:
@@ -149,7 +149,7 @@ requested change since the Restlet 1.0 release. Fortunately, after a
 long maturation period, it has finally made a huge step forward,
 materialized by the addition of an “org.restlet.security” package. The
 new design is the
-[synthesis](http://web.archive.org/web/20111219221217/http://wiki.restlet.org/developers/172-restlet/212-restlet.html)
+[synthesis](http://wiki.restlet.org/developers/172-restlet/212-restlet.html)
 of many contributions and discussions from the community. Care has been
 taken to keep a separation of concern between Components and
 Applications regarding security.

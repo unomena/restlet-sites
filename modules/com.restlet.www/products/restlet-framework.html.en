@@ -9,13 +9,13 @@
 </p>
 
 <p>
-        <a href="http://www.restlet.org"><img src="http://www.restlet.org/images/logo150" alt="Logo Restlet" /></a>
+        <a href="http://restlet.org"><img src="http://restlet.org/images/logo150" alt="Logo Restlet" /></a>
 </p>
 
 <p>
 	Restlet Framework is developed in the context of the open source Restlet project. You can find 
 	all the technical documentation and download the latest version of the software
-	on the <a href="http://www.restlet.org">community site</a>.
+	on the <a href="http://restlet.org">community site</a>.
 </p>
 </@h3>
 
@@ -39,7 +39,7 @@
 </p>
 
 <p>
-	Numerous extensions are available and complete the <a href="http://www.restlet.org/about/features">
+	Numerous extensions are available and complete the <a href="http://restlet.org/about/features">
 	palette of features</a> offered by the Restlet framework. Your applications can be
 	deployed to several environments like the Servlet container Apache Tomcat, the
 	application servers JEE Oracle WebLogic, IBM WebSphere or Sun GlassFish, the Eclipse OSGi
@@ -95,7 +95,7 @@
 	For the users that can't benefit from one of the open source licenses that we use to
 	distribute Restlet Framework (LGPL 3.0, LGPL 2.1, CDDL 1.0 or EPL 1.0), we also
 	propose commercial licenses. We can give you this option because we have put in place a 
-	<a href="http://www.restlet.org/community/contribute">legal process</a> that allows
+	<a href="http://restlet.org/community/contribute">legal process</a> that allows
 	us to keep the copyright on the whole source code while accepting contributions
 	from our community.
 </p>

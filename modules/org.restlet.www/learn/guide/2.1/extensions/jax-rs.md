@@ -6,7 +6,7 @@ Introduction
 
 This Restlet Extension implements the Java Specification [JAX-RS: Java
 API for RESTful Web
-Services](http://web.archive.org/web/20110928010103/https://jsr311.dev.java.net/).
+Services](https://jsr311.dev.java.net/).
 Note that this implementation is not final yet.
 
 Description
@@ -14,9 +14,9 @@ Description
 
 To run this example, you need the Restlet libraries. Download a 2.1
 version from
-[www.restlet.org/downloads/](http://web.archive.org/web/20110928010103/http://www.restlet.org/downloads/).
+[www.restlet.org/downloads/](http://www.restlet.org/downloads/).
 (For a general Restlet example take a look at [the first steps
-examples](http://web.archive.org/web/20110928010103/http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet.html "First steps")).
+examples](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet.html "First steps")).
 
 Now create a new Java Project, and add the following jars (resp.
 projects) to the classpath (right click on project, Properties, Java
@@ -39,7 +39,7 @@ example root resource class and then show how to get it running by the
 Restlet JAX-RS extension.
 
 For additional details, please consult the
-[Javadocs](http://web.archive.org/web/20110928010103/http://www.restlet.org/documentation/2.1/jse/ext/org/restlet/ext/jaxrs/package-summary.html).
+[Javadocs](http://www.restlet.org/documentation/2.1/jse/ext/org/restlet/ext/jaxrs/package-summary.html).
 
 Create JAX-RS example
 =====================
@@ -148,7 +148,7 @@ Restlet server. Create a third class in the same package, named
     }
 
 Start this class, open a browser and request
-[http://localhost:8182/easy](http://web.archive.org/web/20110928010103/http://localhost:8182/easy).
+[http://localhost:8182/easy](http://localhost:8182/easy).
 Now you see the HTML representation. If you request the same URI with
 accepted media type "text/plain", you get a plain text representation.
 
@@ -185,7 +185,7 @@ the Application and sets the Guard and the RoleChecker (if needed).
 
 For details to run this Application in a Servet Container take a look at
 [Restlet
-FAQ](http://web.archive.org/web/20110928010103/http://wiki.restlet.org/docs_2.1/13-restlet/24-restlet/333-restlet.html "FAQ").
+FAQ](http://wiki.restlet.org/docs_2.1/13-restlet/24-restlet/333-restlet.html "FAQ").
 
 You could use this subclass also in the example above:
 
@@ -195,9 +195,9 @@ You could use this subclass also in the example above:
             // if you use this kind, you don't need to attach the Application again.
 
 Comments are welcome to the [Restlet mailing
-list](http://web.archive.org/web/20110928010103/http://www.restlet.org/community/lists)
+list](http://www.restlet.org/community/lists)
 or directly to Stephan.Koops\<AT\>web.de !
 
 This extension is the result of a (german) [master
-thesis](http://web.archive.org/web/20110928010103/http://users.informatik.haw-hamburg.de/%7Eubicomp/arbeiten/master/koops.pdf).
+thesis](http://users.informatik.haw-hamburg.de/%7Eubicomp/arbeiten/master/koops.pdf).
 

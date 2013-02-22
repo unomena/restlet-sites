@@ -6,7 +6,7 @@ Introduction
 
 This table presents the list of extensions provided by the [various
 editions of the Restlet
-Framework](http://web.archive.org/web/20100922122542/http://wiki.restlet.org/docs_2.0/13-restlet/275-restlet.html "Restlet Editions").
+Framework](http://wiki.restlet.org/docs_2.0/13-restlet/275-restlet.html "Restlet Editions").
 
 The core module including both the Restlet API and the Restlet Engine is
 shipped by all editions.

@@ -5,7 +5,7 @@ Introduction
 ============
 
 This extension leverages the [Apache FileUpload
-library](http://web.archive.org/web/20090205114806/http://commons.apache.org/fileupload/)
+library](http://commons.apache.org/fileupload/)
 to provide a robust, high-performance, Web-based file upload in Restlet
 server-side applications.
 
@@ -19,17 +19,17 @@ item corresponding to one file uploaded in the posted request, typically
 from a Web form.
 
 Please, refer to the [FileUpload extension
-Javadocs](http://web.archive.org/web/20090205114806/http://www.restlet.org/documentation/1.1/ext/org/restlet/ext/fileupload/package-summary.html)
+Javadocs](http://www.restlet.org/documentation/1.1/ext/org/restlet/ext/fileupload/package-summary.html)
 and the [FAQ
-\#18](http://web.archive.org/web/20090205114806/http://www.restlet.org/documentation/1.1/faq#18)
+\#18](http://www.restlet.org/documentation/1.1/faq#18)
 for more details.
 
 Here is the list of dependencies for this extension:
 
 -   [Java Servlet
-    2.4](http://web.archive.org/web/20090205114806/http://java.sun.com/products/servlet/)
+    2.4](http://java.sun.com/products/servlet/)
 -   [Apache Commons FileUpload
-    1.2](http://web.archive.org/web/20090205114806/http://jakarta.apache.org/commons/fileupload/)
+    1.2](http://jakarta.apache.org/commons/fileupload/)
 
 Usage example
 =============
@@ -153,9 +153,9 @@ Links
 -----
 
 -   [Apache FileUpload
-    library](http://web.archive.org/web/20090205114806/http://commons.apache.org/fileupload/)
+    library](http://commons.apache.org/fileupload/)
 -   [Server
-    connectors](http://web.archive.org/web/20090205114806/http://wiki.restlet.org/docs_1.1/38-restlet.html)
+    connectors](http://wiki.restlet.org/docs_1.1/38-restlet.html)
 -   [Sample code of FileUpload extension (zip
-    file)](http://web.archive.org/web/20090205114806/http://wiki.restlet.org/docs_1.1/42-restlet.html "Usage example of FileUpload extension")
+    file)](http://wiki.restlet.org/docs_1.1/42-restlet.html "Usage example of FileUpload extension")
 

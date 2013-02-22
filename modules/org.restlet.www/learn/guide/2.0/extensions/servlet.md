@@ -15,5 +15,5 @@ It enables you to run a Restlet based application inside any Servlet
 container such as Tomcat.
 
 For additional details, please consult the
-[Javadocs](http://web.archive.org/web/20111106211952/http://www.restlet.org/documentation/2.0/jee/ext/org/restlet/ext/servlet/package-summary.html).
+[Javadocs](http://www.restlet.org/documentation/2.0/jee/ext/org/restlet/ext/servlet/package-summary.html).
 

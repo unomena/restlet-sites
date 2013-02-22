@@ -61,5 +61,5 @@ in your XML configuration header. Here is a snippet for Spring 2.5:
 
 This utilities mechanism is quite powerful and flexible, for more
 information [check this
-page](http://web.archive.org/web/20091123211430/http://static.springframework.org/spring/docs/2.5.x/reference/xsd-config.html#xsd-config-body-schemas-util-property-path).
+page](http://static.springframework.org/spring/docs/2.5.x/reference/xsd-config.html#xsd-config-body-schemas-util-property-path).
 

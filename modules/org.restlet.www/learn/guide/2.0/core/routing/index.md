@@ -9,10 +9,10 @@ routing.
 
 Another advantage of the Restlet Framework is the built-in support for
 [cool
-URIs](http://web.archive.org/web/20110805003817/http://www.w3.org/Provider/Style/URI).
+URIs](http://www.w3.org/Provider/Style/URI).
 A good description of the importance of proper URI design is given by
 Jacob Nielsen in his
-[AlertBox](http://web.archive.org/web/20110805003817/http://www.useit.com/alertbox/990321.html).
+[AlertBox](http://www.useit.com/alertbox/990321.html).
 This document aims at showing the several configuration options of the
 routing process. From a high level point of view, routing is mainly
 based on the Router, Route, Template and Variable classes.
@@ -24,7 +24,7 @@ personified by an instance of the Route class. In general, people wants
 to express generic associations such as: all URIs
 "/my/base/uri/{variable part}" target this Restlet or Resource. Hence,
 the Restlet framework allows to define routes based on the [URI template
-specification](http://web.archive.org/web/20110805003817/http://bitworking.org/projects/URI-Templates/).
+specification](http://bitworking.org/projects/URI-Templates/).
 
 URI Templates allows to defines pattern of URIs that contain embedded
 variables. These concepts have been formalised in the Restlet famework
@@ -97,7 +97,7 @@ You can also change this configuration only for a specific route:
 
 If you are migrating from version 1.1 to 2.0, we recommend reading the
 [migration
-guide](http://web.archive.org/web/20110805003817/http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/171-restlet/155-restlet.html "Migration guide from version 1.1 to 2.0")as
+guide](http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/171-restlet/155-restlet.html "Migration guide from version 1.1 to 2.0")as
 well.
 
 Routing mode
@@ -178,9 +178,9 @@ the query, you cannot rely on the URI template based routing feature
 which is more or less based on regular expressions.\
  In this case you have to define your own router (with the "CUSTOM"
 routing mode). A sample implementation is available
-[here](http://web.archive.org/web/20110805003817/http://wiki.restlet.org/docs_2.0/211-restlet/version/default/part/AttachmentData/data "queryRouter")
+[here](http://wiki.restlet.org/docs_2.0/211-restlet/version/default/part/AttachmentData/data "queryRouter")
 (application/zip, 1.8 kB,
-[info](http://web.archive.org/web/20110805003817/http://wiki.restlet.org/docs_2.0/211-restlet.html)).
+[info](http://wiki.restlet.org/docs_2.0/211-restlet.html)).
 
 Matching of template variables
 ------------------------------

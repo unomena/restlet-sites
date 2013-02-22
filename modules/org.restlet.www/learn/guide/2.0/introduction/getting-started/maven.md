@@ -8,10 +8,10 @@ Maven is a comprehensive project management system built around the
 concept of POM (Project Object Model). One of the main advantages is the
 automated handling of project dependencies, including their download.
 For more information on Maven, check the [project home
-page](http://web.archive.org/web/20111228135932/http://maven.apache.org/).
+page](http://maven.apache.org/).
 
 The
-[Maven](http://web.archive.org/web/20111228135932/http://maven.apache.org/)
+[Maven](http://maven.apache.org/)
 support appeared to be important for many Restlet users. The initial
 response was to automatically generate the POM files for each module JAR
 shipped within the Restlet distribution. This enabled users to upload
@@ -26,15 +26,15 @@ the db4o, AsyncWeb or Simple.
 
 That's why it has been decided to launch two dedicated Maven
 repositories. The first one is freely accessible from
-[http://maven.restlet.org](http://web.archive.org/web/20111228135932/http://maven.restlet.org/)
+[http://maven.restlet.org](http://maven.restlet.org/)
 and contains all Restlet JARs and third party dependencies that aren't
 available in the main public Maven repository. It will be automatically
 refreshed every day.
 
 Another repository is available at
-[http://maven.noelios.com](http://web.archive.org/web/20111228135932/http://maven.noelios.com/)
+[http://maven.noelios.com](http://maven.noelios.com/)
 for the customers who subscribed to one of the [professional support
-plans](http://web.archive.org/web/20111228135932/http://www.noelios.com/products/support).
+plans](http://www.noelios.com/products/support).
 This repository is directly integrated with the release process and as
 soon as a new release is made, it is available from this repository,
 with no further delay.
@@ -48,7 +48,7 @@ with the online Maven repository.
 You should have Maven installed.
 
 -   Go to [Maven download
-    page](http://web.archive.org/web/20111228135932/http://maven.apache.org/download.html)
+    page](http://maven.apache.org/download.html)
 -   Download the latest version of Maven and install it on your local
     computer
 -   Add Maven bin folder to your PATH
@@ -91,7 +91,7 @@ Available artifacts
 
 The following table lists the available artifacts and their group and
 artifact ids. With the introduction of the
-[editions](http://web.archive.org/web/20111228135932/http://wiki.restlet.org/docs_2.0/13-restlet/275-restlet.html "Restlet Editions")
+[editions](http://wiki.restlet.org/docs_2.0/13-restlet/275-restlet.html "Restlet Editions")
 for the Restlet framework, it is necessary to make a distinction between
 an extension for a given edition and the same extension for another
 extension simply because the code of the extension may change between
@@ -101,7 +101,7 @@ the same pattern: "org.restlet.\<edition\>" where "\<edition\>" is
 three-letters code of an edition among: jse (Java SE edition), jee (Java
 EE edition), gae (Google App Engine edition), android (Android edition)
 and gwt (google Web Toolkit edition). You can find
-[here](http://web.archive.org/web/20111228135932/http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/313-restlet.html "Editions matrix")
+[here](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/313-restlet.html "Editions matrix")
 a full view of the list of extensions and the editions that ship them. 
 
 Group Id

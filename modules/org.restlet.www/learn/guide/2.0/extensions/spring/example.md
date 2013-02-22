@@ -6,20 +6,20 @@ Introduction
 
 This example is a Spring-enabled but otherwise functionally equivalent
 version of the [bookmarks
-example](http://web.archive.org/web/20120211020327/http://examples.oreilly.com/9780596529260/)
+example](http://examples.oreilly.com/9780596529260/)
 from chapter 7 of [RESTful Web
-Services](http://web.archive.org/web/20120211020327/http://www.oreilly.com/catalog/9780596529260/)
+Services](http://www.oreilly.com/catalog/9780596529260/)
 by Richardson and Ruby. The complete code for this version is available
 through Mercurial from
-[Bitbucket](http://web.archive.org/web/20120211020327/https://bitbucket.org/laufer/webservices/src/tip/BookmarksRestletSpring/).
+[Bitbucket](https://bitbucket.org/laufer/webservices/src/tip/BookmarksRestletSpring/).
 Project dependencies are managed using [Apache
-Maven](http://web.archive.org/web/20120211020327/http://maven.apache.org/),
+Maven](http://maven.apache.org/),
 and the example illustrates standalone and servlet-container deployment.
 
 In a nutshell, Spring handles the configuration of the top-level Restlet
 Component and Router beans. The Restlet Resources had to be modified to
 support the init method and the injection of the dependency on the
-[db4o](http://web.archive.org/web/20120211020327/http://www.db4o.com/)
+[db4o](http://www.db4o.com/)
 ObjectContainer, which is also configured in Spring. As expected, the
 domain objects User and Bookmark remained unchanged.
 
@@ -116,7 +116,7 @@ accessing a static field in a class.
 Unlike the preceding singleton beans, we define the ServerResources as
 prototype beans so that they get instantiated separately for each
 request. All of the Resource beans depend on the
-[db4o](http://web.archive.org/web/20120211020327/http://www.db4o.com/)
+[db4o](http://www.db4o.com/)
 ObjectContainer and are configured analogously, so we show only
 UserResource here.
 
@@ -129,9 +129,9 @@ UserResource here.
 ~~~~
 
 Using the
-[db4o](http://web.archive.org/web/20120211020327/http://www.db4o.com/)
+[db4o](http://www.db4o.com/)
 [Spring
-Module](http://web.archive.org/web/20120211020327/https://springmodules.dev.java.net/),
+Module](https://springmodules.dev.java.net/),
 configuring the ObjectContainer is straightforward.
 
 ~~~~ {.brush: .java}

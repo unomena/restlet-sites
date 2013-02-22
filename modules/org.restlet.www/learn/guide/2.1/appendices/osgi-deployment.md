@@ -8,11 +8,11 @@ This page will explain you how to run your Restlet application in an
 OSGi environment such as Eclipse Equinox or Apache Felix. For additional
 coverage of OSGi and Restlet, we recommend you to also read [this
 developer's
-page](http://web.archive.org/web/20120106073849/http://wiki.restlet.org/developers/172-restlet/124-restlet.html).
+page](http://wiki.restlet.org/developers/172-restlet/124-restlet.html).
 
 Since Restlet 2.1 RC2, a new edition of Restlet Framework for OSGi
 environements is available as well as an [Eclipse update
-site](http://web.archive.org/web/20120106073849/http://www.restlet.org/downloads/eclipse).
+site](http://www.restlet.org/downloads/eclipse).
 
 Simple example
 ==============
@@ -78,9 +78,9 @@ connector and attaching Resources to a Router. For this we will reuse
 the Part12 example of the Restlet tutorial.
 
 1.  Create a new "Plug-in Project", name it
-    "[OsgiUsageTest2](http://web.archive.org/web/20120106073849/http://wiki.restlet.org/docs_2.1/239-restlet/version/default/part/AttachmentData/data "OsgiUsageTest2")
+    "[OsgiUsageTest2](http://wiki.restlet.org/docs_2.1/239-restlet/version/default/part/AttachmentData/data "OsgiUsageTest2")
     (application/zip, 6.5 kB,
-    [info](http://web.archive.org/web/20120106073849/http://wiki.restlet.org/docs_2.1/239-restlet.html))"
+    [info](http://wiki.restlet.org/docs_2.1/239-restlet.html))"
     and press "Next \>"
 2.  Select the checkbox to generate an Activator and press "Finish"
 3.  In the Dependencies tab of the manifest editor, import the following
@@ -159,9 +159,9 @@ engine, for example:
     HttpServerHelper(null));
 
 An archive of this test project is [available
-here](http://web.archive.org/web/20120106073849/http://wiki.restlet.org/docs_2.1/239-restlet/version/default/part/AttachmentData/data "OsgiUsageTest2")
+here](http://wiki.restlet.org/docs_2.1/239-restlet/version/default/part/AttachmentData/data "OsgiUsageTest2")
 (application/zip, 6.5 kB,
-[info](http://web.archive.org/web/20120106073849/http://wiki.restlet.org/docs_2.1/239-restlet.html)).
+[info](http://wiki.restlet.org/docs_2.1/239-restlet.html)).
 
 Standalone Equinox deployment
 =============================
@@ -177,9 +177,9 @@ org.eclipse.osgi\_3.5.0.v20090127-1630.jar
 ​2) Download the FileInstall bundle by Peter Kriens, which will monitor
 a directory and automatically install bundles it finds there. (for a
 longer description you can see
-[http://www.aqute.biz/Code/FileInstall](http://web.archive.org/web/20120106073849/http://www.aqute.biz/Code/FileInstall))
+[http://www.aqute.biz/Code/FileInstall](http://www.aqute.biz/Code/FileInstall))
 
-[http://www.aqute.biz/repo/biz/aQute/fileinstall/1.3.4/fileinstall-1.3.4.jar](http://web.archive.org/web/20120106073849/http://www.aqute.biz/repo/biz/aQute/fileinstall/1.3.4/fileinstall-1.3.4.jar)
+[http://www.aqute.biz/repo/biz/aQute/fileinstall/1.3.4/fileinstall-1.3.4.jar](http://www.aqute.biz/repo/biz/aQute/fileinstall/1.3.4/fileinstall-1.3.4.jar)
 
 ​3) you then create the following directory structure (Note substitute
 your actual equinox bundle version for "3.X.X"):
@@ -303,11 +303,11 @@ Standalone Equinox
 ------------------
 
 -   David Fogel - Detailed instruction [in this
-    mail](http://web.archive.org/web/20120106073849/http://restlet.tigris.org/ds/viewMessage.do?dsForumId=4447&dsMessageId=1344544)
+    mail](http://restlet.tigris.org/ds/viewMessage.do?dsForumId=4447&dsMessageId=1344544)
 -   Wolfgang Werner - [Building web services on Equinox and Restlet
-    \#1](http://web.archive.org/web/20120106073849/http://blog.wolfgang-werner.net/building-on-equinox-and-restlet-1/)
+    \#1](http://blog.wolfgang-werner.net/building-on-equinox-and-restlet-1/)
 -   Wolfgang Werner - [Building web services on Equinox and Restlet
-    \#2](http://web.archive.org/web/20120106073849/http://blog.wolfgang-werner.net/building-web-services-on-equinox-and-restlet-2/)
+    \#2](http://blog.wolfgang-werner.net/building-web-services-on-equinox-and-restlet-2/)
 -   Wolfgang Werner - [Building web services on Equinox and Restlet
-    \#3](http://web.archive.org/web/20120106073849/http://blog.wolfgang-werner.net/building-web-services-on-equinox-and-restlet-3/)
+    \#3](http://blog.wolfgang-werner.net/building-web-services-on-equinox-and-restlet-3/)
 
