@@ -1,9 +1,12 @@
 <#global content>
 
+
+<@h3>
 <p>
    Our startup is composed of highly experienced engineers, pionneers of web APIs, book authors and 
    conference speakers. 
 </p>
+</@h3>
 
 <@h3 "Jérôme Louvel, CEO" "jerome-louvel">
 <img src="/images/photos/jerome-louvel-100" alt="Photo Jérôme Louvel" class="float-right" />
