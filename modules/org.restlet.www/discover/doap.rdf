@@ -28,7 +28,7 @@
 		<foaf:Person>
 			<foaf:name>Jerome Louvel</foaf:name>
 			<foaf:mbox rdf:resource="mailto:contact@restlet.com" />
-			<foaf:homepage rdf:resource="http://www.restlet.com" />
+			<foaf:homepage rdf:resource="http://restlet.com" />
 		</foaf:Person>
 	</maintainer>
 

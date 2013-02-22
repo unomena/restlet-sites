@@ -36,7 +36,7 @@ import com.restlet.frontend.web.services.RefreshStatusService;
 import freemarker.template.Configuration;
 
 /**
- * Application for the http://www.restlet.com site.
+ * Application for the http://restlet.com site.
  * 
  * @author Jerome Louvel
  */
@@ -176,7 +176,7 @@ public class WwwRestletCom extends BaseApplication implements
 
     @Override
     public String getName() {
-        return "Application for www.restlet.com";
+        return "Application for restlet.com";
     }
 
     public String getWwwUri() {
