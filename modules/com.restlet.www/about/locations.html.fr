@@ -1,0 +1,61 @@
+<#assign javascript_files=["http://maps.googleapis.com/maps/api/js?key=AIzaSyDaOrpjTjY3zMrOrXhJ8g1rxE_zNeaC6ho&sensor=true", "/javascript/gmap.js.fr"] />
+<#assign body_event_managers>onload="load()" onunload="GUnload()"</#assign>
+<#global content>
+
+<@h3 "Adresse" "address">
+<table cellpadding="0" cellspacing="0" style="width:100%">
+	<tr>
+    	<td style="width:50%; text-align:left">
+        	<p>
+            	<b>Restlet SAS</b><br/>
+                ESSEC Ventures - CNIT - BP 230<br/>
+                2 place de la D&eacute;fense<br/>
+                92053 Paris La D&eacute;fense<br/>
+               	FRANCE
+            </p>
+		</td>
+        <td style="width:50%; text-align:left">
+        	<p>
+            	<img src="/images/icons/enveloppe-20" alt="Contacter Restlet SAS"/>&nbsp;<a href="mailto:contact@restlet.com">contact@restlet.com</a><br/>
+               	<img src="/images/icons/phone-20" alt="Téléphoner à Restlet SAS"/>&nbsp;01 84 16 69 21<br/>
+               	<img src="/images/icons/fax-20" alt="Envoyer un fax à Restlet SAS"/>&nbsp;01 84 16 69 26<br/>
+            </p>
+    	</td>
+	</tr>
+</table>
+</@h3>
+
+<@h3 "Carte" "map">
+<div id="map" style="width: 600px; height: 400px"></div>
+</@h3>
+
+<@h3 "Renseignements administratifs" "admin-info">
+<table cellpadding="0" cellspacing="3">
+   <tr>
+      <td>SIRET</td>
+      <td>:</td>
+      <td>504 051 764 00042</td>
+   </tr>
+   <tr>
+      <td>SIREN</td>
+      <td>:</td>
+      <td>504 051 764</td>
+   </tr>
+   <tr>
+      <td>APE</td>
+      <td>:</td>
+      <td>5829C</td>
+   </tr>
+   <tr>
+      <td>RCS</td>
+      <td>:</td>
+      <td>Nanterre B, France</td>
+   </tr>
+   <tr>
+      <td>TVA</td>
+      <td>:</td>
+      <td>FR 91 504 051 764</td>
+   </tr>
+</table>
+</@h3>
+</#global>

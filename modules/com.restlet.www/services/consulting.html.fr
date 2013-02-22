@@ -1,127 +1,18 @@
 <#global content>
 
-<@h3 "Présentation" "presentation">
+<@h3>
 <p>
-   	Restlet SAS est à votre service pour des missions de conseil dans ses
-   	domaines de compétence. Nous disposons d'une expertise reconnue sur REST et notre
-   	technologie Restlet, mais nous avons également une forte expérience dans les domaines 
-   	de l'architecture logicielle, de la modélisation, des technologies du Web et dans 
-   	la plate-forme Java en général.
-</p>
-</@h3>
-
-<@h3 "Types de missions" "mission-types">
-<p>
-   	Voici une liste des principaux types de mission que nous vous proposons. Cette liste
-   	n'est pas exhaustive et une mission peut combiner plusieurs aspects&nbsp;:
+    Here is a list of the main types of mission that we can offer. This list isn't
+    exhaustive and a mission can combine several aspects:
 </p>
 
 <ul>
-	<li>Conception d'API web RESTful
-		<ul>
-			<li>basé sur notre méthodologie ROA/D (Resource-Oriented Analysis &amp; Design)</li>	
-			<li>compatible avec les approches WOA (Web-Oriented Architecture) et ROA</li>
-			<li>indépendant de la technologie utilisée (Java, .Net, Restlet API, JAX-RS, etc.)</li>
-			<li>documentation aux formats WADL et HTML</li>
-		</ul>
-	</li>
-	<li>Revue d'architecture logicielle</li>
-	<li>Conception d'architecture logicielle</li>
-	<li>Conception détaillée et prototypage</li>
-	<li>Optimisation des performances</li>
-	<li>Recueil et analyse des besoins</li>
-   	<li>Veille technologique et transfert de connaissances</li>
+    <li>Co-development of new features for Restlet Framework</li>
+    <li>Animation of API design workshops</li>
+    <li>Training on APIs, Restlet Framework and APISpark</li>
 </ul>
 
-<p>
-	Nous proposons également des services de développement autour de notre produit 
-	<a href="/products/restlet">Restlet Framework</a>. Veuillez consulter 
-	la page <a href="/services/development">développement</a> pour de plus amples détails. 
-</p>
+<p>Please <a href="mailto:contact@restlet.com">contact us</a> for additional details.</p>
 
-<p>
-	Nous sommes flexibles concernant la forme des missions. Elles peuvent être soit
-    à plein temps soit à temps partiel. Leur exécution peut être soit continue, soit
-    morcelée sur une période prédéfinie. 
-</p>
-    
-<p>
-    Concernant les sites d'exécution, nous préférons les missions de longue durée à 
-    distance ou dans notre zone géographique proche (la région parisienne). Pour des 
-    missions de courte durée (moins de 3 mois), nous nous déplaçons en Europe et au-delà.
-</p>
-</@h3>
-    
-<@h3 "Compétences" "competencies">
-<p>
-	Restlet SAS dispose d'une large expérience dans l'ingénierie et l'architecture 
-	logicielle, acquise dans des secteurs d'activité variés comme l'édition logicielle, 
-	l'industrie RFID ou les télécoms. Voici une liste plus détaillée de nos compétences&nbsp;:
-</p>
-
-<ul>
-	<li>Modélisation</li>
-    <li>Architecture</li>
-    <li>Performance</li>
-    <li>Sécurité</li>
-    <li>Serveurs d'application</li>
-    <li>Validation</li>
-    <li>Persistance</li>
-    <li>Langages</li>
-    <li>Qualité</li>
-</ul>
-</@h3>
-
-<@h3 "Prise de contact" "contact">
-<p>
-	Afin de discuter ensemble de votre projet, nous vous proposons de remplir le 
-	formulaire ci-dessous. Nous reviendrons vers vous très rapidement. 
-</p>
-
-</@h3>
-
-
-<@h3 "Développement" "developpement">
-<p>
-	Forts de notre maîtrise complète des technologies Restlet et JAX-RS développées
-	dans le cadre de notre produit <a href="/products/restlet">Restlet Framework</a>, 
-	nous vous proposons nos services de développement. 
-</p>
-
-<p>
-	Restlet SAS peut vous fournir des ressources humaines en complément
-	de vos équipes internes dans le cadre de prestations en régie. Les objectifs 
-	d'une mission de développement peuvent être variés&nbsp;:
-</p>
-<ul>
-	<li>Codage de besoins issus d'un cahier des charges</li>
-	<li>Développement itératif selon une méthodologie agile telle que SCRUM</li>
-    <li>Conversion d'applications existantes en équivalent RESTful</li>
-	<li>Expertise pour la résolution de problèmes complexes</li>
-	<li>Revue et optimisation de code</li>
-</ul>
-</@h3>
-
-<@h3 "Co-développement" "co-development">
-<p>
-	Dans le cadre de certains projets, il peut être intéressant de contribuer en retour
-	des fonctionnalités au projet libre Restlet. Voici une liste des principaux avantages&nbsp;:
-</p>
-
-<ul>
-	<li>Faire bénéficier de fonctionnalités génériques à toute la communauté Restlet</li>
-	<li>Pouvoir communiquer sur son implication au projet en tant que sponsor reconnu</li>
-	<li>Pérennisation du code grâce à sa maintenance faite par le projet Restlet</li>
-	<li>Remise de 20% sur nos tarifs de développement</li>
-</ul>
-
-<p>
-	Vous trouverez sur <a href="http://restlet.tigris.org/issues/buglist.cgi?Submit+query=Submit+query&issue_type=ENHANCEMENT&issue_type=FEATURE&issue_type=TASK&issue_status=NEW&issue_status=STARTED&issue_status=REOPENED&email1=&emailtype1=exact&emailassigned_to1=1&email2=&emailtype2=exact&emailreporter2=1&issueidtype=include&issue_id=&changedin=&votes=&chfieldfrom=&chfieldto=Now&chfieldvalue=&short_desc=&short_desc_type=substring&long_desc=&long_desc_type=substring&issue_file_loc=&issue_file_loc_type=substring&status_whiteboard=&status_whiteboard_type=substring&field0-0-0=noop&type0-0-0=noop&value0-0-0=&cmdtype=doit&newqueryname=&order=Reuse+same+sort+as+last+time">
-	cette page</a>, une liste de toutes les demandes d'amélioration recensées dans
-	le cadre du projet Restlet. Si vous souhaitez faire avancer l'une d'entre elles
-	en priorité ou en suggérer de nouvelles, n'hésitez pas à prendre contact
-	avec nous pour discuter d'une possibilité de co-développement.
-</p>
-	
 </@h3>
 </#global>

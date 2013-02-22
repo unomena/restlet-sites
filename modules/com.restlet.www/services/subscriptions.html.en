@@ -1,5 +1,6 @@
 <#global content>
 
+<@h3>
 <p>For our two products we offer subscription plans.</p>
 
 <p>
@@ -27,5 +28,5 @@
 </ul>
 
 <p>Please <a href="mailto:contact@restlet.com">contact us</a> for additional details.</p>
-
+</@h3>
 </#global>

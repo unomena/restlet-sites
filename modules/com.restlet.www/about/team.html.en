@@ -1,0 +1,61 @@
+<#global content>
+
+<p>
+   Our startup is composed of highly experienced engineers, pionneers of web APIs, book authors and 
+   conference speakers. 
+</p>
+
+<@h3 "Jérôme Louvel, CEO" "jerome-louvel">
+<img src="/images/photos/jerome-louvel-100" alt="Photo Jérôme Louvel" class="float-right" />
+<p>
+   Jérôme is an engineer in computer science and management, graduate of
+   <a href="http://www.polytech.univ-montp2.fr">Polytech'Montpellier</a>.
+   He started the open source <a href="http://restlet.org">Restlet Framework</a> project back in 2005, 
+   as the first RESTful web API framework for Java.
+</p>
+<p>   
+   He is in charge technical and commercial leadership of the company. 
+   Jérôme was also a member of the expert group that defined the standard JAX-RS API, contributor to the 
+   <a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&location=http%3A%2F%2Fwww.amazon.com%2FRestful-Web-Services-Leonard-Richardson%2Fdp%2F0596529260%3Fie%3DUTF8%26s%3Dbooks%26qid%3D1173381194%26sr%3D8-1&tag=restlet-20&linkCode=ur2&camp=1789&creative=9325">RESTful Web Services</a> 
+   book published by O'Reilly and co-author of the
+   <a href="http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217">Restlet in Action</a> book
+   published by Manning.
+</p>
+</@h3>
+
+<@h3 "Thierry Boileau, VP Engineering" "thierry-boileau">
+<img src="/images/photos/thierry-boileau-100" alt="Photo Thierry Boileau" class="float-right" />
+
+<p>
+   Thierry is also an engineer in computer science and management, graduate
+   of <a href="http://www.polytech.univ-montp2.fr">Polytech'Montpellier</a>
+   where he discovered with Jérôme the fun of object orientation in Smalltalk
+   then in Java. Thierry is core developer on the open source Restlet project
+   to which he contributes since 2006.
+</p>
+<p>
+   He is in charge on the overall engineering process, including R&D, QA and production for the cloud 
+   platform and its open source core. He is also co-author of the
+   <a href="http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217">Restlet in Action</a> book
+   published by Manning.
+</p>
+</@h3>
+
+<@h3 "Thierry Templier, Lead Architect" "thierry-templier">
+<img src="/images/photos/thierry-templier-100" alt="Photo Thierry Templier" class="float-right" />
+
+<p>
+   Thierry is an engineer in computer science, telecom and networks, graduate of 
+   <a href="http://www.esigetel.fr/">Esigetel</a>, expert in Java technologies, 
+   JavaScript, Modeling and the Web in general, as well as passionate of open source
+   which led him to be interested in the Restlet Framework.
+</p>
+<p>
+   He joined the company as an R&D architect in 2011 , taking in charge the development of APISpark and porting 
+   Restlet Framework to JavaScript. 
+   Thierry is also co-author of several books on JavaScript, Spring as well as the <a href="http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217">Restlet in Action</a>
+   book published by Manning. 
+</p>
+</@h3>
+
+</#global>

@@ -10,18 +10,16 @@
 			<en>Realize your Web APIs !</en>
 			<fr>Réalisez vos APIs Web !</fr>
 		</title>
-		<sections>
-			<section id="legal">
-				<label>
-					<en>Legal</en>
-					<fr>Mentions légales</fr>
-				</label>
-				<title>
-					<en>Legal notice</en>
-					<fr>Mentions légales</fr>
-				</title>
-			</section>
-		</sections>
+	</section>
+	<section id="legal" hidden="true">
+		<label>
+			<en>Legal notice</en>
+			<fr>Mentions légales</fr>
+		</label>
+		<title>
+			<en>Legal notice</en>
+			<fr>Mentions légales</fr>
+		</title>
 	</section>
 	<section id="products">
 		<label>
@@ -63,7 +61,7 @@
 					<en>APISpark</en>
 					<fr>APISpark</fr>
 				</title>
-                <a href="http://apispark.com" target="_blank" />
+				<a href="http://apispark.com" target="_blank" />
 			</section>
 			<section id="references">
 				<label>
@@ -97,16 +95,16 @@
 					<fr>Résumé</fr>
 				</title>
 			</section>
-            <section id="subscriptions">
-                <label>
-                    <en>Subscriptions</en>
-                    <fr>Souscriptions</fr>
-                </label>
-                <title>
-                    <en>Subscriptions</en>
-                    <fr>Souscriptions</fr>
-                </title>
-            </section>
+			<section id="subscriptions">
+				<label>
+					<en>Subscriptions</en>
+					<fr>Souscriptions</fr>
+				</label>
+				<title>
+					<en>Subscriptions</en>
+					<fr>Souscriptions</fr>
+				</title>
+			</section>
 			<section id="consulting">
 				<label>
 					<en>Consulting</en>
@@ -159,16 +157,16 @@
 					<fr>Notre équipe</fr>
 				</title>
 			</section>
-            <section id="locations">
-                <label>
-                    <en>Locations</en>
-                    <fr>Coordonnées</fr>
-                </label>
-                <title>
-                    <en>Our locations</en>
-                    <fr>Nos coordonnées</fr>
-                </title>
-            </section>
+			<section id="locations">
+				<label>
+					<en>Locations</en>
+					<fr>Coordonnées</fr>
+				</label>
+				<title>
+					<en>Our locations</en>
+					<fr>Nos coordonnées</fr>
+				</title>
+			</section>
 		</sections>
 	</section>
 	<section id="admin" hidden="true">

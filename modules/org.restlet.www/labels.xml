@@ -83,6 +83,12 @@
                 <fr>Roadmap</fr>
             </roadmap>
         </apisparksupport>
+        <copyright>
+            <legal>
+                <en>Legal Notice</en>
+                <fr>Mentions légales</fr>
+            </legal>
+        </copyright>
     </footer>
    <summaryRestletBlog>Summary of the Restlet latest news</summaryRestletBlog>
    <restletBlog>Restlet latest news</restletBlog>

@@ -183,7 +183,14 @@ a {
 	background-repeat: no-repeat;
 	width: 28px;
 	height: 21px;
-	/*border: solid 1px black;*/
+	/*border: solid 1px black;*/#footer #copyright {
+    display: block;
+    font-size: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    text-align: center;
+}
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 4px;
@@ -734,7 +741,7 @@ div.content.footerWrapper {
 }
 
 #footer #copyright {
-    display: inline-block;
+    display: block;
     font-size: 9px;
     margin-left: auto;
     margin-right: auto;

@@ -1,80 +1,32 @@
 <#global content>
 
-<@h3 "Présentation" "presentation">
-<p>
-	Afin de vous aider à réussir vos projets Web, nous vous proposons de partager notre
-    expertise au travers de formations sur REST et la technologie Restlet. Nos formateurs
-    sont expérimentés et disposent d'une expérience pratique des thèmes qu'ils enseignent.
-</p>
-</@h3>
+<@h3>
+<p>For our two products we offer subscription plans.</p>
 
-<@h3 "Formation 1&nbsp;: \"Comprendre et appliquer REST aux APIs web\"" "rest">
 <p>
-	Cette formation de deux jours vous permettra de comprendre les fondamentaux de REST, 
-	le style d'architecture du Web, et de les appliquer progressivement et concrètement
-	à l'aide d'une étude de cas. Les étapes d'architecture, d'analyse et de conception
-	classiques seront remises en perspective par rapport à REST. Des exercices pratiques
-	et interactifs vous permettront de mettre en &oelig;uvre les concepts présentés.
+    <a href="http://restlet.org" title="Restlet Framework">Restlet Framework</a>, our open source technology, 
+    offers yearly plans to let you develop your web APIs more efficiently, and to deploy them in production 
+    with solid technical support in case of emergency or for scaling help.
+    In addition to the free software that can be downloaded and used with our open source licenses, and our 
+    community forums, your subscription includes:
 </p>
-<ul>
-	<li>Introduction à REST</li>
-	<li>Le paradigme Orienté Ressource</li>
-	<li>Analyse et Conception Orientée Resource, la méthode ROA/D</li>
-	<li>Conception d'une application RESTful</li>
-	<li>De la conception à l'implémentation</li>
-	<li>Conclusion</li>
-</ul>
 
-<br/>
 <ul>
-   <li>Durée&nbsp;: 2 jours</li>
-   <li>Public&nbsp;: Concepteurs, Architectes et Développeurs</li>
-   <li>Emplacement&nbsp;: site client</li>
-   <li>Dates&nbsp;: flexibles</li>
-   <li>Coût&nbsp;: 1000 € par personne</li>
-   <li>Effectif&nbsp;: entre 2 et 10 personnes</li>
+    <li>technical support : several levels of service available</li>
+    <li>legal protection : we take responsibility in case of IP related issues</li>
+    <li>qualified versions : know which one to use in production</li>
 </ul>
 
 <p>
-	Pour de plus amples informations sur cette formation, n'hésitez pas
-	à <a href="mailto:formation@restlet.com?subject=Formation 'Comprendre et appliquer REST'">nous contacter</a>.
-</p>
-</@h3>
-
-<@h3 "Formation 2&nbsp;: \"Découvrir et apprendre Restlet\"" "restlet">
-<p>
-	Cette formation de trois jours est le parfait complément de la formation
-	"Comprendre et appliquer REST" également proposée par Restlet SAS, mais peut être
-	suivie indépendamment pour les personnes déjà familières avec REST.
+    APISpark, our cloud platform (PaaS) for web APIs, offers monthly plans to let you create, host, manage 
+    and use web APIs. In addition, you can also buy extra credits based on:
 </p>
 <ul>
-	<li>Introduction à Restlet</li>
-	<li>Premier pas avec Restlet dans Eclipse</li>
-	<li>Les fonctionnalités essentielles</li>
-	<li>La sécurisation des applications</li>
-	<li>Les fonctionnalités avancées</li>
-	<li>Conclusion</li>
-</ul>
-<br/>
-<ul>
-	<li>Durée&nbsp;: 3 jours</li>
-	<li>Public&nbsp;: Architectes et Développeurs</li>
-	<li>Emplacement&nbsp;: site client</li>
-	<li>Dates&nbsp;: flexibles</li>
-	<li>Coût&nbsp;: 1500 € par personne</li>
-	<li>Effectif&nbsp;: entre 2 et 10 personnes</li>
+    <li>the number of APIs that you manage,</li>
+    <li>the number of calls to your APIs,</li>
+    <li>the amount of data directly stored.</li>
 </ul>
 
-<p>
-   Pour de plus amples informations sur cette formation, n'hésitez pas
-   à <a href="mailto:formation@restlet.com?subject=Formation 'Decouvrir et maitriser Restlet'">nous contacter</a>.
-</p>
-</@h3>
-
-<@h3 "Pack formation&nbsp;: REST + Restlet" "pack">
-<p>
-	Pour les clients qui souhaitent enchaîner les deux formations au cours de la même semaine, 
-	nous offrons une remise de 10%, soit un prix final de 2250 € par personne au lieu de 2500 €.
-</p>
+<p>Please <a href="mailto:contact@restlet.com">contact us</a> for additional details.</p>
 </@h3>
 </#global>

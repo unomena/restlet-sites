@@ -173,7 +173,7 @@
             <li><a href="http://apispark.org/roadmap">${labels.footer.apisparksupport.roadmap['${language}']}</a></li>
           </ul>
         </div>
-        <div id="copyright">Copyright &copy; 2005-${pp.now?string("yyyy")} Restlet</div>
+        <div id="copyright">Copyright &copy; ${pp.now?string("yyyy")} Restlet</div>
       </div>
     </div>
     <!-- generated ${pp.now} -->

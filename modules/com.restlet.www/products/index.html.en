@@ -1,20 +1,6 @@
 <#global content>
     <div class='content container first'>
       <div class='span5'>
-        <h3>Our products</h3> 
-        <p>Restlet SAS is passionate about the Web, its REST architectural style, its protocols and standards like
-        HTTP, URIs, XML, XHTML, CSS, JSON as well as the Java, JavaScript and GWT languages.</p>
-        <p>This interest led us to create the Restlet Framework open source technology and to offer you our suite of
-        commercial products:</p>
-        <p>The Restlet Framework software, based on the open source Restlet project, the pioneer project specialized
-        in the support of REST for Java. We propose commercial licenses to cover all your usages of this software, in
-        the case where the constraints of the open source licenses cause you a problem.</p>
-        <p>Technical support plans can be subscribed to ensure a continuous help in your usage of the Restlet Framework
-        software. This is also a perfect safeguard for the performance, the stability and the permanence of your applications
-        deployed in production.</p>
-        <p>Those products are also completed by a suite of professionnal services that we invite you to discover.</p>
-        <p>You can finally consult the list of our latest customer references for those products.</p>
-
         <h3>Our vision</h3>
         <p>We think that web APIs will trigger a major technological revolution, during which a new generation of web
         sites, accessible by any type of machine in a cross­channel way will be built. Our products including Restlet

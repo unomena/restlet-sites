@@ -1,6 +1,7 @@
+<#global currentSection = "legal" />
 <#global content>
 
-<@h3 "Legal Information" "legal">
+<@h3>
 <h3>Covered sites</h3>
 <ul>
     <li>restlet.com</li>

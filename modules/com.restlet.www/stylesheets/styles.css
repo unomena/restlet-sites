@@ -62,30 +62,6 @@ body {
 .hero.section p{text-align: left;}
 .hero .big-media{margin-top:20px}
 
-ul.pages {
-	list-style: none;
-	margin-left: 30px; margin-top: 10px;
-}
-
-ul.pages li {
-	display: inline-block;
-	margin-right: 20px;
-	font-size: 14px;
-}
-
-ul.pages li a {
-	text-decoration: none;
-	color: #333;
-	font-weight: bold;
-	line-height: 16px;
-}
-
-ul.pages li.active a {
-	color: #e4630b;
-	font-weight: normal;
-	line-height: 16px;
-}
-
 .content.container {
 	border-left: solid 1px #d2d2d2;
 	border-right: solid 1px #d2d2d2;
@@ -164,6 +140,10 @@ p {
 	font-size: 13px;
 	line-height: 16px;
 	color: #757575;
+}
+
+ul li {
+    color: #757575;
 }
 
 a {
@@ -512,7 +492,7 @@ div.content.footerWrapper .footer {
 }
 
 #footer #copyright {
-    display: inline-block;
+    display: block;
     font-size: 9px;
     margin-left: auto;
     margin-right: auto;
@@ -528,3 +508,32 @@ form, form > input {
 .span900 {
 	margin-right: 30px; 
 }
+
+h3 {
+	font-size: 20px;
+}
+
+ul.pages {
+    list-style: none;
+    margin-left: 30px; margin-top: 10px;
+}
+
+ul.pages li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+ul.pages li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    line-height: 16px;
+}
+
+ul.pages li.active a {
+    color: #e4630b;
+    font-weight: normal;
+    line-height: 16px;
+}
+

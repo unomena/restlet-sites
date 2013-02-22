@@ -1,0 +1,57 @@
+<#global content>
+
+<@h3 "North America office" "north-america-office">
+<table cellpadding="0" cellspacing="0" style="width:100%">
+	<tr>
+    	<td style="width:50%; text-align:left">
+        	<p>
+            	<b>Restlet, Inc.</b><br/>
+                2415 Third Street, Suite 231<br/>
+                San Francisco, CA 94107<br/>
+               	USA
+            </p>
+		</td>
+        <td rowspan="2" style="width:50%; text-align:left">
+            <img src="/images/photos/office-us.png" />
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%; text-align:left">
+        	<p>
+            	Email&nbsp;<a href="mailto:contact@restlet.com">contact@restlet.com</a><br/>
+               	Office:&nbsp;+1 (650) 488 8090<br/>
+               	Fax;&nbsp;+1 (248) 671 0603<br/>
+            </p>
+    	</td>
+	</tr>
+</table>
+</@h3>
+
+<@h3 "Europe office" "europe-office">
+<table cellpadding="0" cellspacing="0" style="width:100%">
+    <tr>
+        <td style="width:50%; text-align:left">
+            <p>
+                <b>Restlet, SAS</b><br/>
+                ESSEC Ventures - CNIT - BP 230<br/>
+                2 place de la D&eacute;fense<br/>
+                92053 Paris La D&eacute;fense<br/>
+                FRANCE
+            </p>
+        </td>
+        <td rowspan="2" style="width:50%; text-align:left">
+            <img src="/images/photos/office-fr.png" />
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%; text-align:left">
+            <p>
+                Email:&nbsp;<a href="mailto:contact@restlet.com">contact@restlet.com</a><br/>
+                Office:&nbsp;+33 184 166 921<br/>
+                Fax:&nbsp;+33 184 166 926<br/>
+            </p>
+        </td>
+    </tr>
+</table>
+</@h3>
+</#global>
