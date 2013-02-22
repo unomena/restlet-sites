@@ -39,25 +39,30 @@
     <div class='content container first'>
       <div class='span5'>
         <h3>Who are we?</h3>
-        <p>Restlet is a web API platform vendor, pioneer of RESTful web APIs. We serve our customers all over the world, 
-        providing cutting edge software to build web APIs including APISpark, our disruptive all-in-one PaaS. 
-        APISpark lets you build your web APIs in a flash, including the creation, hosting, management and usage of those web APIs.
-        With offices in both Silicon Valley (San Francisco) and Europe (Paris), Restlet is a company led by a team of passionate 
+        <p>Restlet is a web API platform vendor, pioneer of RESTful web APIs.</p>
+        <p>We serve our customers all over the world, providing cutting edge software to build web APIs including APISpark, our 
+        disruptive all-in-one PaaS that lets you build your web APIs in a flash, including the creation, hosting, management and 
+        usage of those web APIs.</p>
+        <p>With offices in both Silicon Valley (San Francisco) and Europe (Paris), Restlet is a company led by a team of passionate 
         engineers. Please feel free to contact us if you have any question.</p>
       </div>
       <div class='span5'>
         <h3>What do we do?</h3>
         <p>Our main activities are the operations of our self-service APISpark cloud platform. In addition, 
         we offer subscription plans for our open source Restlet Framework including technical support 
-        and legal protection.
-        Finally, we also provide professional services such as consulting and training on RESTful web APIs and our technology.</p> 
+        and legal protection.</p>
+        <p>Finally, we also provide professional services such as consulting and training on RESTful web APIs 
+        and our technology.</p> 
       </div>
     </div>
     <div class='content container'>
       <div class='span5'>
         <h3>What is a Web API?</h3>
-        <p>A web Application Programming Interface (API) allows you to expose your business data and services to several clients 
-        in parallel in an interoperable and secure way. An API can be public or private, read-only or writable.</p>
+        <p>A web API (Application Programming Interface) allows you to expose and consume business data and services on the web. 
+        APIs can be invoked by several clients in parallel, in an interoperable and secure way. They can be public or 
+        private, writable or read-only.</p>
+        <p>APIs are strategic assets to build a new generation of cross-device web sites, accessible by any kind of machine, not 
+        only web browsers.</p>
       </div>
       <div id="restletFeedSummary" class="span5"></div>
     </div>
