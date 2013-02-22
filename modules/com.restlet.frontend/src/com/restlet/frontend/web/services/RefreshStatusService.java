@@ -1,17 +1,15 @@
 package com.restlet.frontend.web.services;
 
-import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import org.restlet.Application;
 import org.restlet.Request;
 import org.restlet.Response;
 import org.restlet.data.MediaType;
 import org.restlet.data.Status;
 import org.restlet.ext.freemarker.TemplateRepresentation;
 import org.restlet.representation.Representation;
-import org.restlet.representation.Variant;
+import org.restlet.resource.ClientResource;
 import org.restlet.service.StatusService;
 
 import com.restlet.frontend.web.applications.RefreshApplication;
@@ -25,9 +23,6 @@ public class RefreshStatusService extends StatusService {
     /** The application using this status service. */
     private final RefreshApplication application;
 
-    /** List of supported error variants. */
-    private final List<Variant> errorVariants;
-
     /**
      * Constructor.
      * 
@@ -36,11 +31,9 @@ public class RefreshStatusService extends StatusService {
      * @param application
      *            the application using this status service.
      */
-    public RefreshStatusService(boolean enabled,
-            RefreshApplication application, List<Variant> errorVariants) {
+    public RefreshStatusService(boolean enabled, RefreshApplication application) {
         super(enabled);
         this.application = application;
-        this.errorVariants = errorVariants;
     }
 
     @Override
@@ -55,28 +48,26 @@ public class RefreshStatusService extends StatusService {
             dataModel.put("exception", status.getThrowable());
         }
 
-        // TODO a bit awkward.
-        Application app = (Application) this.application;
-        Variant variant = app.getConnegService().getPreferredVariant(
-                errorVariants, request, app.getMetadataService());
-        if (variant != null) {
-            StringBuilder builder = new StringBuilder("error/error");
+        try {
+            ClientResource cr = new ClientResource(
+                    "riap://application/tmpl/error/");
             if (status.isInformational()) {
-                builder.append("-100");
-            } else if (status.isClientError()) {
-                builder.append("-400");
+                cr.getReference().addSegment("error-100");
             } else if (status.isServerError()) {
-                builder.append("-500");
+                cr.getReference().addSegment("error-500");
+            } else {
+                cr.getReference().addSegment("error-400");
             }
 
-            if (!variant.getLanguages().isEmpty()) {
-                builder.append(".").append(
-                        variant.getLanguages().get(0).getName());
-            }
-            builder.append(".html");
-
-            return new TemplateRepresentation(builder.toString(),
-                    application.getFmc(), dataModel, MediaType.TEXT_HTML);
+            cr.getClientInfo().setAcceptedLanguages(
+                    request.getClientInfo().getAcceptedLanguages());
+            cr.accept(MediaType.TEXT_HTML);
+            cr.head();
+            return new TemplateRepresentation("error/"
+                    + cr.getResponse().getEntity().getLocationRef()
+                            .getLastSegment(), application.getFmc(), dataModel,
+                    MediaType.TEXT_HTML);
+        } catch (Exception e) {
         }
 
         return super.getRepresentation(status, request, response);

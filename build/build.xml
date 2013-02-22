@@ -138,6 +138,7 @@
                 language: en
 				ant: antProperties()
             </data>
+		    <borders><![CDATA[border('<#include "/header.ftl"/>', '<#include "/footer.ftl"/>', **/*.html)]]></borders>
 			<include name="**/*" />
 			<exclude name="**/*.ftl" />
 		</fmpp>
@@ -161,8 +162,9 @@
                 layer()
                 case(**/*.fr*, {language: fr})
             </localData>
-            <include name="**/*" />
-            <exclude name="**/*.ftl" />
+            <borders><![CDATA[border('<#include "/header.ftl"/>', '<#include "/footer.ftl"/>', **/*.html*)]]></borders>
+        	<include name="**/*" />
+            <exclude name="**/*.ftl*" />
         </fmpp>
         <!-- no translation to French language for the moment. -->
         <move todir="${temp}/${www-restlet-com}">

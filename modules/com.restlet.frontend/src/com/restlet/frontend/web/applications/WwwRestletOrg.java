@@ -25,7 +25,6 @@ import org.restlet.engine.application.Encoder;
 import org.restlet.ext.atom.Entry;
 import org.restlet.ext.atom.Feed;
 import org.restlet.representation.Representation;
-import org.restlet.representation.Variant;
 import org.restlet.resource.ClientResource;
 import org.restlet.resource.Directory;
 import org.restlet.routing.Filter;
@@ -172,10 +171,7 @@ public class WwwRestletOrg extends BaseApplication implements
     public WwwRestletOrg(String propertiesFileReference) throws IOException {
         super(propertiesFileReference);
 
-        List<Variant> errorVariants = new ArrayList<Variant>();
-        errorVariants.add(new Variant(MediaType.TEXT_HTML));
-        this.setStatusService(new RefreshStatusService(true, this,
-                errorVariants));
+        this.setStatusService(new RefreshStatusService(true, this));
 
         this.dataUri = getProperties().getProperty("data.uri");
         this.wwwUri = getProperties().getProperty("www.uri");

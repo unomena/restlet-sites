@@ -1,4 +1,3 @@
-<#include "/header.ftl"/>
 <#global content>
    <h5>Description</h5>
 
@@ -28,4 +27,3 @@
 </#noparse>
 </div>
 </#global>
-<#include "/footer.ftl"/>

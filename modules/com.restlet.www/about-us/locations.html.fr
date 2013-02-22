@@ -1,4 +1,3 @@
-<#include "/header.ftl"/>
 <#assign javascript_files=["http://maps.googleapis.com/maps/api/js?key=AIzaSyDaOrpjTjY3zMrOrXhJ8g1rxE_zNeaC6ho&sensor=true", "/javascript/gmap.js.fr"] />
 <#assign body_event_managers>onload="load()" onunload="GUnload()"</#assign>
 <#global content>
@@ -60,4 +59,3 @@
 </table>
 </@h3>
 </#global>
-<#include "/footer.ftl"/>

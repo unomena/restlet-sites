@@ -1,4 +1,3 @@
-<#include "/header.ftl"/>
 <#global content>
 
 <p>
@@ -14,4 +13,3 @@
 
 <p>Please <a href="mailto:contact@restlet.com">contact us</a> for additional details.</p>
 </#global>
-<#include "/footer.ftl"/>

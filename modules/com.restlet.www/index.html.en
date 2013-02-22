@@ -1,4 +1,3 @@
-<#include "/header.ftl"/>
 <#global stylesheet_files=["/stylesheets/coin-slider-styles.css"] />
 <#global javascript_files=["/javascript/jquery-1.9.0.min.js", "/javascript/jsclass-core.js", "/javascript/json-minified.js", "/javascript/restlet-client.js", "/javascript/restlet-feedSummary.js","/javascript/coin-slider.js"] />
 <#global javascript>
@@ -63,4 +62,3 @@
       <div id="restletFeedSummary" class="span5"></div>
     </div>
 </#global>
-<#include "/footer.ftl"/>

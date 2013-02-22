@@ -12,14 +12,12 @@ import java.util.List;
 import org.restlet.Restlet;
 import org.restlet.data.ChallengeScheme;
 import org.restlet.data.CharacterSet;
-import org.restlet.data.Language;
 import org.restlet.data.LocalReference;
 import org.restlet.data.MediaType;
 import org.restlet.engine.application.Encoder;
 import org.restlet.ext.atom.Entry;
 import org.restlet.ext.atom.Feed;
 import org.restlet.representation.Representation;
-import org.restlet.representation.Variant;
 import org.restlet.resource.ClientResource;
 import org.restlet.resource.Directory;
 import org.restlet.routing.Router;
@@ -87,15 +85,7 @@ public class WwwRestletCom extends BaseApplication implements
     public WwwRestletCom(String propertiesFileReference) throws IOException {
         super(propertiesFileReference);
 
-        List<Variant> errorVariants = new ArrayList<Variant>();
-        Variant errorVariant = new Variant(MediaType.TEXT_HTML);
-        errorVariant.getLanguages().add(Language.ENGLISH);
-        errorVariants.add(errorVariant);
-        errorVariant = new Variant(MediaType.TEXT_HTML);
-        errorVariant.getLanguages().add(Language.FRENCH);
-        errorVariants.add(errorVariant);
-        this.setStatusService(new RefreshStatusService(true, this,
-                errorVariants));
+        this.setStatusService(new RefreshStatusService(true, this));
 
         this.dataUri = getProperties().getProperty("data.uri");
         this.wwwUri = getProperties().getProperty("www.uri");
@@ -160,11 +150,7 @@ public class WwwRestletCom extends BaseApplication implements
         Directory directory = new Directory(getContext(), this.wwwUri);
         directory.setNegotiatingContent(true);
         directory.setDeeplyAccessible(true);
-        if (Boolean.parseBoolean(getProperties().getProperty("nocache"))) {
-            router.attachDefault(directory);
-        } else {
-            router.attachDefault(new CacheFilter(getContext(), directory));
-        }
+        router.attachDefault(new CacheFilter(getContext(), directory));
 
         Encoder encoder = new Encoder(getContext(), false, true,
                 getEncoderService());
