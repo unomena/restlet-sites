@@ -19,11 +19,11 @@ This connector supports the following protocols: HTTP, HTTPS, AJP.
 The list of supported specific parameters is available in the javadocs:
 
 -   [Jetty common
-    parameters](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/jetty/JettyServerHelper)
+    parameters](http://restlet.org/learn/javadocs/1.1/ext/com/noelios/restlet/ext/jetty/JettyServerHelper)
 -   [HTTP specific
-    parameters](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/jetty/HttpServerHelper)
+    parameters](http://restlet.org/learn/javadocs/1.1/ext/com/noelios/restlet/ext/jetty/HttpServerHelper)
 -   [HTTPS specific
-    parameters](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/jetty/HttpsServerHelper)
+    parameters](http://restlet.org/learn/javadocs/1.1/ext/com/noelios/restlet/ext/jetty/HttpsServerHelper)
 
 Here is the list of dependencies of this connector:
 

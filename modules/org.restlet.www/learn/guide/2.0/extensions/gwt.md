@@ -14,5 +14,5 @@ mechanism, even though it is used in a regular REST/HTTP way thanks to
 GWT](http://wiki.restlet.org/docs_2.0/13-restlet/275-restlet/144-restlet.html "Restlet edition for Google Web Toolkit")(client-side).
 
 For additional details, please consult the
-[Javadocs](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/gwt/package-summary.html).
+[Javadocs](http://restlet.org/learn/javadocs/2.0/jse/ext/org/restlet/ext/gwt/package-summary.html).
 

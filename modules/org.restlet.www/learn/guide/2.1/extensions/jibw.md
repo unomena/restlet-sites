@@ -16,5 +16,5 @@ extends the XmlRepresentation and is able to both serialize and
 deserialize a Java objects graph to/from an XML document.
 
 For additional details, please consult the
-[Javadocs](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/jibx/package-summary.html).
+[Javadocs](http://restlet.org/learn/javadocs/2.0/jse/ext/org/restlet/ext/jibx/package-summary.html).
 

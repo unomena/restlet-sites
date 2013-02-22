@@ -17,12 +17,12 @@ This connector supports the following protocols: SMTP, SMTPS.
 The list of supported specific parameters is available in the javadocs:
 
 -   [JavaMail client
-    javadocs](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/javamail/JavaMailClientHelper.html)
+    javadocs](http://restlet.org/learn/javadocs/1.1/ext/com/noelios/restlet/ext/javamail/JavaMailClientHelper.html)
 
 The mail and its properties (sender, recipient, subject, content, etc)
 have to be specified as an XML representation. Please refer to the
 [JavaMail client
-javadocs](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/javamail/JavaMailClientHelper.html)
+javadocs](http://restlet.org/learn/javadocs/1.1/ext/com/noelios/restlet/ext/javamail/JavaMailClientHelper.html)
 for more details.
 
 Here is the list of dependencies of this connector:

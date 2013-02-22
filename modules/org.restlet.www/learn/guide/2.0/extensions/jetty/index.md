@@ -19,11 +19,11 @@ This connector supports the following protocols: HTTP, HTTPS, AJP.
 The list of supported specific parameters is available in the javadocs:
 
 -   [Jetty common
-    parameters](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/jetty/JettyServerHelper.html)
+    parameters](http://restlet.org/learn/javadocs/2.0/jse/ext/org/restlet/ext/jetty/JettyServerHelper.html)
 -   [HTTP specific
-    parameters](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/jetty/HttpServerHelper.html)
+    parameters](http://restlet.org/learn/javadocs/2.0/jse/ext/org/restlet/ext/jetty/HttpServerHelper.html)
 -   [HTTPS specific
-    parameters](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/jetty/HttpsServerHelper.html)
+    parameters](http://restlet.org/learn/javadocs/2.0/jse/ext/org/restlet/ext/jetty/HttpsServerHelper.html)
 
 Here is the list of dependencies of this connector:
 
@@ -32,7 +32,7 @@ Here is the list of dependencies of this connector:
     Servlet](http://java.sun.com/products/servlet/)
 
 For additional details, please consult the
-[Javadocs](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/jetty/package-summary.html).
+[Javadocs](http://restlet.org/learn/javadocs/2.0/jse/ext/org/restlet/ext/jetty/package-summary.html).
 
 Usage example
 =============

@@ -4,7 +4,7 @@
 	xmlns="http://usefulinc.com/ns/doap#">
 
 	<name>Restlet</name>
-	<homepage rdf:resource="http://www.restlet.org" />
+	<homepage rdf:resource="http://restlet.org" />
 	<created>2005-11-01</created>
 	<shortdesc xml:lang="en">
 	  The leading RESTful web framework for Java.
@@ -21,9 +21,9 @@
 	</description>
 	<programming-language>Java</programming-language>
 	<bug-database rdf:resource="https://github.com/restlet/restlet-framework-java/issues" />
-	<download-page rdf:resource="http://www.restlet.org" />
+	<download-page rdf:resource="http://restlet.org" />
 
-	<mailing-list rdf:resource="http://www.restlet.org/discuss" />
+	<mailing-list rdf:resource="http://restlet.org/discuss" />
 	<maintainer>
 		<foaf:Person>
 			<foaf:name>Jerome Louvel</foaf:name>
@@ -38,7 +38,7 @@
 			<name>Restlet ${ant["stable.restlet-version-minor"]}</name>
 			<created>${ant["stable.restlet-release-date"]}</created>
 			<revision>${ant["stable.restlet-version-compact"]}</revision>
-			<file-release rdf:resource="http://www.restlet.org/downloads/${ant["stable.restlet-version-minor"]}/restlet-${ant["stable.restlet-version-compact"]}.zip" /> 
+			<file-release rdf:resource="http://restlet.org/downloads/${ant["stable.restlet-version-minor"]}/restlet-${ant["stable.restlet-version-compact"]}.zip" /> 
 		</Version>
 	</release>
 

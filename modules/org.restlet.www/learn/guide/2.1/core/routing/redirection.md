@@ -35,7 +35,7 @@ parameter:
 Note that the Redirector needs three parameters only. The first is the
 parent context, the second one defines how the URI rewriting should be
 done, based on a URI template. This template will be processed by the
-[Template](http://www.restlet.org/documentation/2.0/api/org/restlet/util/Template.html)
+[Template](http://restlet.org/learn/javadocs/2.0/api/org/restlet/util/Template.html)
 class. The third parameter defines the type of redirection; here we
 chose the client redirection, for simplicity purpose.
 

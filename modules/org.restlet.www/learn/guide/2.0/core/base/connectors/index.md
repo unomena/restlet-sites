@@ -28,9 +28,9 @@ application is as simple as adding the archives of the chosen connector
 and its dependencies to the classpath.
 
 You can also have a look to the [FAQ
-\#4](http://www.restlet.org/documentation/1.1/faq#04)
+\#4](http://restlet.org/learn/javadocs/1.1/faq#04)
 and [FAQ
-\#5](http://www.restlet.org/documentation/1.1/faq#05)
+\#5](http://restlet.org/learn/javadocs/1.1/faq#05)
 which completes this subject.
 
 Configuration
@@ -46,18 +46,18 @@ most of them by the connector's ClientHelper or ServerHelper subclasses.
 The list of all parameters are available in the javadocs. Pleaser refer
 to the rest of this document for references to these documentation. Here
 are the [commons
-parameters](http://www.restlet.org/documentation/2.0/jse/engine/org/restlet/engine/http/connector/BaseHelper.html)
+parameters](http://restlet.org/learn/javadocs/2.0/jse/engine/org/restlet/engine/http/connector/BaseHelper.html)
 dedicated to internal connectors.
 
 Server connectors
 -----------------
 
 Here are the [commons
-parameters](http://www.restlet.org/documentation/2.0/jse/engine/org/restlet/engine/http/HttpServerHelper.html)
+parameters](http://restlet.org/learn/javadocs/2.0/jse/engine/org/restlet/engine/http/HttpServerHelper.html)
 dedicated to non-internal HTTP server connectors.
 
 Here are the [commons
-parameters](http://www.restlet.org/documentation/2.0/jse/engine/org/restlet/engine/http/connector/BaseServerHelper.html)
+parameters](http://restlet.org/learn/javadocs/2.0/jse/engine/org/restlet/engine/http/connector/BaseServerHelper.html)
 dedicated to internal HTTP server connectors.
 
 Here is a sample code showing how to set such a parameter on a
@@ -73,11 +73,11 @@ Client connectors
 -----------------
 
 Here are the [commons
-parameters](http://www.restlet.org/documentation/2.0/jse/engine/org/restlet/engine/http/HttpClientHelper.html)
+parameters](http://restlet.org/learn/javadocs/2.0/jse/engine/org/restlet/engine/http/HttpClientHelper.html)
 dedicated to non-internal HTTP client connectors.
 
 Here are the [commons
-parameters](http://www.restlet.org/documentation/2.0/jse/engine/org/restlet/engine/http/connector/BaseClientHelper.html)
+parameters](http://restlet.org/learn/javadocs/2.0/jse/engine/org/restlet/engine/http/connector/BaseClientHelper.html)
 dedicated to internal HTTP client connectors.
 
 Here is a sample code showing how to set such a parameter.

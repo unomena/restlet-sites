@@ -39,7 +39,7 @@ In addition to the parameters that are similar but specific to [each
 type of HTTPS server
 connector](http://wiki.restlet.org/docs_1.1/38-restlet.html),
 it is possible to configure the SSL connectors using an
-[SslContextFactory](http://www.restlet.org/documentation/1.1/nre/com/noelios/restlet/util/SslContextFactory.html),
+[SslContextFactory](http://restlet.org/learn/javadocs/1.1/nre/com/noelios/restlet/util/SslContextFactory.html),
 in a way that is common to all three types of HTTPS server connectors
 (Simple, Jetty and Grizzly). Configuring SSL is done in this order:
 
@@ -53,7 +53,7 @@ in a way that is common to all three types of HTTPS server connectors
     passed to its `init` method, so as to initialize the
     SslContextFactory instance via text parameters.\
      The
-    [com.noelios.restlet.util.DefaultSslContextFactory](http://www.restlet.org/documentation/1.1/nre/com/noelios/restlet/util/DefaultSslContextFactory.html#init%28org.restlet.util.Series%29)
+    [com.noelios.restlet.util.DefaultSslContextFactory](http://restlet.org/learn/javadocs/1.1/nre/com/noelios/restlet/util/DefaultSslContextFactory.html#init%28org.restlet.util.Series%29)
     is an SslContextFactory that supports a basic set of parameters, and
     will default to the values specified in the `javax.net.ssl.*` system
     properties (see [JSSE Reference

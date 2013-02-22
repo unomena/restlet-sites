@@ -20,5 +20,5 @@ to the Restlet Framework. For a more details, you can read the [2.0
 announce on our
 blog](http://blog.noelios.com/2010/07/19/restlet-framework-2-0-0-released/)
 as well as [the full list of
-changes](http://www.restlet.org/documentation/snapshot/jse/changes).
+changes](http://restlet.org/learn/javadocs/snapshot/jse/changes).
 

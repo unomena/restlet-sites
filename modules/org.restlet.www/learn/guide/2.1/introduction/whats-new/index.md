@@ -7,7 +7,7 @@ Introduction
 In the next sections, you will get a synthesis of the major changes done
 to the Restlet Framework in version 2.1. For more details, you can read
 the [full list of
-changes](http://www.restlet.org/documentation/snapshot/jse/changes).
+changes](http://restlet.org/learn/javadocs/snapshot/jse/changes).
 
 The sub-sections will be written when the 2.1 RC1 version is released
 only.
@@ -19,7 +19,7 @@ Better documentation
 
 We will finish writing the *Restlet in Action* book for Manning
 ([already available in early
-access](http://www.restlet.org/documentation/books))
+access](http://restlet.org/documentation/books))
 and make sure that the printed version is available at the same time as
 the 2.1.0 release.
 

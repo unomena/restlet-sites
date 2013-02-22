@@ -15,9 +15,9 @@ This extension lets you generate Representations based on the [Velocity
 template
 engine](http://velocity.apache.org/engine/).
 Please, refer to the [Velocity extension
-Javadocs](http://www.restlet.org/documentation/1.1/ext/org/restlet/ext/velocity/package-summary.html)
+Javadocs](http://restlet.org/learn/javadocs/1.1/ext/org/restlet/ext/velocity/package-summary.html)
 and the [FAQ
-\#10](http://www.restlet.org/documentation/1.1/faq#10)
+\#10](http://restlet.org/learn/javadocs/1.1/faq#10)
 for more details.
 
 Here is the list of dependencies for this extension:

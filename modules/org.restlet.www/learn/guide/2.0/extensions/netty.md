@@ -16,11 +16,11 @@ This connector supports the following protocols: HTTP and HTTPS.
 The list of supported specific parameters is available in the javadocs:
 
 -   [Netty common
-    parameters](http://www.restlet.org/documentation/snapshot/jee/ext/org/restlet/ext/netty/NettyServerHelper.html)
+    parameters](http://restlet.org/learn/javadocs/snapshot/jee/ext/org/restlet/ext/netty/NettyServerHelper.html)
 -   [HTTP specific
-    parameters](http://www.restlet.org/documentation/snapshot/jee/ext/org/restlet/ext/netty/HttpServerHelper.html)
+    parameters](http://restlet.org/learn/javadocs/snapshot/jee/ext/org/restlet/ext/netty/HttpServerHelper.html)
 -   [HTTPS specific
-    parameters](http://www.restlet.org/documentation/snapshot/jee/ext/org/restlet/ext/netty/HttpsServerHelper.html)
+    parameters](http://restlet.org/learn/javadocs/snapshot/jee/ext/org/restlet/ext/netty/HttpsServerHelper.html)
 
 Here is the list of dependencies of this connector:
 

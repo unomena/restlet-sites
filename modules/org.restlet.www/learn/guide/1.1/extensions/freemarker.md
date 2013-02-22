@@ -20,9 +20,9 @@ TemplateRepresentation class with the matching parameters and to set it
 as the response entity.
 
 Please, refer to the [FreeMarker extension
-Javadocs](http://www.restlet.org/documentation/1.1/ext/org/restlet/ext/freemarker/package-summary.html)
+Javadocs](http://restlet.org/learn/javadocs/1.1/ext/org/restlet/ext/freemarker/package-summary.html)
 and the [FAQ
-\#10](http://www.restlet.org/documentation/1.1/faq#10)
+\#10](http://restlet.org/learn/javadocs/1.1/faq#10)
 for more details.
 
 Here is the list of dependencies for this extension:

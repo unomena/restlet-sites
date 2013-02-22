@@ -6,7 +6,7 @@ Introduction
 
 The Restlet Framework is composed of two main parts. First, there is the
 "[Restlet
-API](http://www.restlet.org/documentation/2.0/api/)",
+API](http://restlet.org/learn/javadocs/2.0/api/)",
 a neutral API supporting the concepts of REST and facilitating the
 handling of calls for both client-side and server-side applications.
 This API is backed by the Restlet Engine and both are now shipped in a

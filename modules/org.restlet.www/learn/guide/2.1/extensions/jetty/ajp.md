@@ -247,11 +247,11 @@ doc:Configuring+AJP13+Using+mod\_jk](http://docs.codehaus.org/display/JETTY/Conf
 Document](http://httpd.apache.org/docs/)
 \
  [HttpServerHelper Class
-API](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/jetty/HttpServerHelper.html)
+API](http://restlet.org/learn/javadocs/1.1/ext/com/noelios/restlet/ext/jetty/HttpServerHelper.html)
 \
  [Server Class
-API](http://www.restlet.org/documentation/1.1/api/org/restlet/Server.html)
+API](http://restlet.org/learn/javadocs/1.1/api/org/restlet/Server.html)
 \
  [AjpServerHelper Class
-API](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/jetty/AjpServerHelper.html)
+API](http://restlet.org/learn/javadocs/1.1/ext/com/noelios/restlet/ext/jetty/AjpServerHelper.html)
 

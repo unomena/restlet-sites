@@ -70,7 +70,7 @@ How to trace the internal client and server connectors?
 
 These connectors are configured via the parameter called "tracing" of
 their context (see the
-[javadocs](http://www.restlet.org/documentation/2.1/jse/engine/org/restlet/engine/connector/BaseHelper.html)).
+[javadocs](http://restlet.org/learn/javadocs/2.1/jse/engine/org/restlet/engine/connector/BaseHelper.html)).
 
 Here is a sample code that illustrates how to configure the HTTP  server
 connector of a Component:

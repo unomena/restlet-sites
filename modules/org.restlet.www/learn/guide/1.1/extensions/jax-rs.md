@@ -15,9 +15,9 @@ Description
 
 To run this example, you need the Restlet libraries. Download a 1.1
 milestone from
-[www.restlet.org/downloads/](http://www.restlet.org/downloads/).
+[restlet.org/downloads/](http://restlet.org/downloads/).
 (For a general Restlet example take a look at
-[http://www.restlet.org/documentation/1.1/firstSteps](http://www.restlet.org/documentation/1.1/firstSteps).)
+[http://restlet.org/learn/javadocs/1.1/firstSteps](http://restlet.org/learn/javadocs/1.1/firstSteps).)
 
 Now create a new Java Project, and add the following jars (resp.
 projects) to the classpath (right click on project, Properties, Java
@@ -186,7 +186,7 @@ needed).
 
 For details to run this Application in a Servet Container take a look at
 [Restlet
-FAQ](http://www.restlet.org/documentation/1.1/firstSteps#part03).
+FAQ](http://restlet.org/learn/javadocs/1.1/firstSteps#part03).
 
 You could use this subclass also in the example above:
 
@@ -196,7 +196,7 @@ You could use this subclass also in the example above:
             // if you use this kind, you don't need to attach the ApplicationConfig again.
 
 Comments are welcome to the [Restlet mailing
-list](http://www.restlet.org/community/lists)
+list](http://restlet.org/community/lists)
 or directly to Stephan.Koops\<AT\>web.de !
 
 This extension is the result of a (german) [master

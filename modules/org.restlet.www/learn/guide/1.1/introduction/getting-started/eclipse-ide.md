@@ -12,5 +12,5 @@ an Eclipse RCP application.
 
 You can find more information in this FAQ entry: [What is the best way
 to use Restlet in
-Eclipse?](http://www.restlet.org/documentation/1.1/faq#21)
+Eclipse?](http://restlet.org/learn/javadocs/1.1/faq#21)
 

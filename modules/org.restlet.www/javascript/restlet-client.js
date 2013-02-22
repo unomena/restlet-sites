@@ -961,7 +961,7 @@ var Status = new JS.Class({
 
 Status.extend({
 	BASE_HTTP: "http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html",
-	BASE_RESTLET: "http://restlet.org/documentation/",
+	BASE_RESTLET: "http://restlet.org/learn/",
            /* + Engine.MAJOR_NUMBER
             + '.'
             + Engine.MINOR_NUMBER

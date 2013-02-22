@@ -14,7 +14,7 @@ Description
 
 To run this example, you need the Restlet libraries. Download a 2.1
 version from
-[www.restlet.org/downloads/](http://www.restlet.org/downloads/).
+[restlet.org/downloads/](http://restlet.org/downloads/).
 (For a general Restlet example take a look at [the first steps
 examples](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet.html "First steps")).
 
@@ -39,7 +39,7 @@ example root resource class and then show how to get it running by the
 Restlet JAX-RS extension.
 
 For additional details, please consult the
-[Javadocs](http://www.restlet.org/documentation/2.1/jse/ext/org/restlet/ext/jaxrs/package-summary.html).
+[Javadocs](http://restlet.org/learn/javadocs/2.1/jse/ext/org/restlet/ext/jaxrs/package-summary.html).
 
 Create JAX-RS example
 =====================
@@ -195,7 +195,7 @@ You could use this subclass also in the example above:
             // if you use this kind, you don't need to attach the Application again.
 
 Comments are welcome to the [Restlet mailing
-list](http://www.restlet.org/community/lists)
+list](http://restlet.org/community/lists)
 or directly to Stephan.Koops\<AT\>web.de !
 
 This extension is the result of a (german) [master

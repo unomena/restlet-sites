@@ -10,5 +10,5 @@ serialization formats (n3, Turtle, NTriples and RDF/XML) and can work in
 either a DOM-like or SAX-like way, with a unified API!
 
 See the [Javadocs for more
-details](http://www.restlet.org/documentation/snapshot/ext/index.html?org/restlet/ext/rdf/package-summary.html).
+details](http://restlet.org/learn/javadocs/snapshot/ext/index.html?org/restlet/ext/rdf/package-summary.html).
 

@@ -11,7 +11,7 @@ JSON support, it depends on Jettison 1.0 (note that usage Jettison 1.1
 with this version of XStream is discouraged).
 
 For additional details, please consult the
-[Javadocs](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/xstream/package-summary.html).
+[Javadocs](http://restlet.org/learn/javadocs/2.0/jse/ext/org/restlet/ext/xstream/package-summary.html).
 
 Usage instructions
 ==================

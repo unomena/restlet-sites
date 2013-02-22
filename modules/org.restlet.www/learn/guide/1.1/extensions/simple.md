@@ -17,11 +17,11 @@ This connector supports the following protocols: HTTP, HTTPS.
 The list of supported specific parameters is available in the javadocs:
 
 -   [Simple common
-    parameters](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/simple/SimpleServerHelper)
+    parameters](http://restlet.org/learn/javadocs/1.1/ext/com/noelios/restlet/ext/simple/SimpleServerHelper)
 -   [HTTP specific
-    parameters](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/simple/HttpServerHelper)
+    parameters](http://restlet.org/learn/javadocs/1.1/ext/com/noelios/restlet/ext/simple/HttpServerHelper)
 -   [HTTPS specific
-    parameters](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/simple/HttpsServerHelper)
+    parameters](http://restlet.org/learn/javadocs/1.1/ext/com/noelios/restlet/ext/simple/HttpsServerHelper)
 
 Here is the list of dependencies of this connector:
 

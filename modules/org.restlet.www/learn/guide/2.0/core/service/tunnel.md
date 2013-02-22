@@ -24,7 +24,7 @@ methodParameter
 method
 
 See values in
-[Method](http://www.restlet.org/documentation/1.1/api/org/restlet/data/Method.html)
+[Method](http://restlet.org/learn/javadocs/1.1/api/org/restlet/data/Method.html)
 
 For POST requests, let you specify the actual method to use (DELETE,
 PUT, MOVE, etc.).\
@@ -35,7 +35,7 @@ characterSetParameter
 charset
 
 Use extension names defined in
-[MetadataService](http://www.restlet.org/documentation/1.1/api/org/restlet/service/MetadataService.html)
+[MetadataService](http://restlet.org/learn/javadocs/1.1/api/org/restlet/service/MetadataService.html)
 
 For GET requests, replaces the accepted character set by the given
 value.
@@ -45,7 +45,7 @@ encodingParameter
 encoding
 
 Use extension names defined in
-[MetadataService](http://www.restlet.org/documentation/1.1/api/org/restlet/service/MetadataService.html)
+[MetadataService](http://restlet.org/learn/javadocs/1.1/api/org/restlet/service/MetadataService.html)
 
 For GET requests, replaces the accepted encoding by the given value.
 
@@ -54,7 +54,7 @@ languageParameter
 language
 
 Use extension names defined in
-[MetadataService](http://www.restlet.org/documentation/1.1/api/org/restlet/service/MetadataService.html)
+[MetadataService](http://restlet.org/learn/javadocs/1.1/api/org/restlet/service/MetadataService.html)
 
 For GET requests, replaces the accepted language by the given value.
 
@@ -63,7 +63,7 @@ mediaTypeParameter
 media
 
 Use extension names defined in
-[MetadataService](http://www.restlet.org/documentation/1.1/api/org/restlet/service/MetadataService.html)
+[MetadataService](http://restlet.org/learn/javadocs/1.1/api/org/restlet/service/MetadataService.html)
 
 For GET requests, replaces the accepted media type set by the given
 value.
@@ -74,12 +74,12 @@ extensions by allows several extensions to be present, in any particular
 order: e.g. "/path/foo.fr.txt"). This mechanism relies on the mapping
 between an extension and a metadata (e.g. "txt" =\> "text/plain")
 declared by the
-[MetadataService](http://www.restlet.org/documentation/1.1/api/org/restlet/service/MetadataService.html).
+[MetadataService](http://restlet.org/learn/javadocs/1.1/api/org/restlet/service/MetadataService.html).
 
 The client preferences can also be updated according to the user agent
 properties (its name, version, operating system, or other) available via
 the
-[ClientInfo.getAgentAttributes()](http://www.restlet.org/documentation/1.1/api/org/restlet/data/ClientInfo.html#getAgentAttributes%28%29)
+[ClientInfo.getAgentAttributes()](http://restlet.org/learn/javadocs/1.1/api/org/restlet/data/ClientInfo.html#getAgentAttributes%28%29)
 method. The feature is based on a property-like file called
 "accept.properties" and loaded from the classpath. Here is an excerpt of
 such file :

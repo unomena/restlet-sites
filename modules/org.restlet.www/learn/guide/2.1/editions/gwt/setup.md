@@ -27,7 +27,7 @@ the [JSON](http://google-web-toolkit.googlecode.com/svn/javadoc/2.0/com/google/
 and
 [XML](http://google-web-toolkit.googlecode.com/svn/javadoc/2.0/com/google/gwt/xml/client/package-summary.html)
 modules. You can also check the [full Javadocs of the API
-online](http://www.restlet.org/documentation/2.1/gwt/api/).
+online](http://restlet.org/learn/javadocs/2.1/gwt/api/).
 
 Server-side configuration
 =========================

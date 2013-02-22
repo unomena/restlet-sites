@@ -61,5 +61,5 @@ command:
 
 For custom access log format, see the syntax to use and the list of
 available variable names in
-[Template](http://www.restlet.org/documentation/1.1/api/org/restlet/util/Resolver.html#createResolver%28org.restlet.data.Request,%20org.restlet.data.Response%29).
+[Template](http://restlet.org/learn/javadocs/1.1/api/org/restlet/util/Resolver.html#createResolver%28org.restlet.data.Request,%20org.restlet.data.Response%29).
 

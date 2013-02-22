@@ -17,10 +17,10 @@ FTPS.
 The list of supported specific parameters is available in the Javadocs:
 
 -   [Client
-    parameters](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/net/HttpClientHelper.html)
+    parameters](http://restlet.org/learn/javadocs/2.0/jse/ext/org/restlet/ext/net/HttpClientHelper.html)
 
 For additional details, please consult the
-[Javadocs](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/net/package-summary.html).
+[Javadocs](http://restlet.org/learn/javadocs/2.0/jse/ext/org/restlet/ext/net/package-summary.html).
 
 Proxy
 =====

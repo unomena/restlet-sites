@@ -6,7 +6,7 @@ Introduction
 
 This is the official Restlet User Guide covering version 1.1 of the
 framework
-([http://www.restlet.org](http://www.restlet.org/)).
+([http://restlet.org](http://restlet.org/)).
 You can start reading this guide by going to the [introduction on the
 first
 page](http://wiki.restlet.org/docs_1.1/13-restlet/21-restlet.html "Introduction").

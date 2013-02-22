@@ -102,7 +102,7 @@ Build the component
 ===================
 
 Now we need to build the component containing our web applications. As
-we are handling several domain names (www.noelios.com, www.restlet.org,
+we are handling several domain names (www.noelios.com, restlet.org,
 search.restlet.org, etc.) via the same HTTP server connector (with a
 single IP address and port open), we also need to declare several
 virtual hosts.
@@ -137,24 +137,24 @@ virtual hosts.
        getClients().add(Protocol.FILE);
 
        // ---------------
-       // www.restlet.org
+       // restlet.org
        // ---------------
        VirtualHost host = new VirtualHost(getContext());
-       host.setHostDomain("www.restlet.org|81.67.81.67");
+       host.setHostDomain("restlet.org|81.67.81.67");
        host.setHostPort("80|" + Integer.toString(port));
        host.attach(new WwwRestletOrg(getContext(), dataUri, wwwUri
               + "/www-restlet-org"));
        getHosts().add(host);
 
        // ---------------------------
-       // Redirect to www.restlet.org
+       // Redirect to restlet.org
        // ---------------------------
        host = new VirtualHost(getContext());
        host.setHostDomain("restlet.org|restlet.net|restlet.com|"
               + "www.restlet.net|www.restlet.com");
        host.setHostPort("80|" + Integer.toString(port));
        host.attach(new RedirectApplication(getContext(),
-              "http://www.restlet.org{rr}", true));
+              "http://restlet.org{rr}", true));
        getHosts().add(host);
 
        // ----------------

@@ -3,7 +3,7 @@ Getting started
 
 We recommend that you consult the [documentation available on the
 Restlet Web
-site](http://www.restlet.org/documentation/1.1/)
+site](http://restlet.org/learn/javadocs/1.1/)
 to get you started. You will find a screencast, first steps and more
 detailed tutorial.
 

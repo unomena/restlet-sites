@@ -10,5 +10,5 @@ page](http://maven.apache.org/).
 It is easy to use Restlet in a Maven environment because all the Restlet
 artifacts are published in a dedicated Maven repository. For
 configuration details, you can [read this
-page](http://www.restlet.org/downloads/maven).
+page](http://restlet.org/downloads/maven).
 

@@ -13,7 +13,7 @@ References
 -   [Blog post - Restlet supports OData, the Open Data
     Protocol](http://blog.noelios.com/2010/03/15/restlet-supports-odata-the-open-data-protocol/)
 -   [Javadocs - Restlet extension for
-    OData](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/odata/package-summary.html)
+    OData](http://restlet.org/learn/javadocs/2.0/jse/ext/org/restlet/ext/odata/package-summary.html)
 -   [Advanced tutorial on the OData
     extension](http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet/288-restlet.html "Tutorial")
 -   [OData - Protocol

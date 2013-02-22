@@ -20,8 +20,8 @@ This connector supports the following protocols: HTTP, HTTPS. The list
 of supported specific parameters is available in the Javadocs:
 
 -   [HTTP client
-    parameters](http://www.restlet.org/documentation/2.1/jse/ext/org/restlet/ext/httpclient/HttpClientHelper.html)
+    parameters](http://restlet.org/learn/javadocs/2.1/jse/ext/org/restlet/ext/httpclient/HttpClientHelper.html)
 
 For additional details, please consult the
-[Javadocs](http://www.restlet.org/documentation/2.1/jse/ext/org/restlet/ext/httpclient/package-summary.html).
+[Javadocs](http://restlet.org/learn/javadocs/2.1/jse/ext/org/restlet/ext/httpclient/package-summary.html).
 

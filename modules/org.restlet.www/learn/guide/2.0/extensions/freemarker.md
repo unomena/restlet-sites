@@ -20,5 +20,5 @@ TemplateRepresentation class with the matching parameters and to set it
 as the response entity.
 
 For additional details, please consult the
-[Javadocs](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/freemarker/package-summary.html).
+[Javadocs](http://restlet.org/learn/javadocs/2.0/jse/ext/org/restlet/ext/freemarker/package-summary.html).
 

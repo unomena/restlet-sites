@@ -12,7 +12,7 @@ Author
 Thierry Boileau, co-founder of [Noelios
 Technologies](http://www.noelios.com/)
 and core committer on the [Restlet open source
-project](http://www.restlet.org/).
+project](http://restlet.org/).
 
 Topics covered
 ==============
@@ -46,7 +46,7 @@ Resources
 =========
 
 -   [Javadocs of the Restlet extension for OData
-    Services](http://www.restlet.org/documentation/2.0/ext/org/restlet/ext/odata/package-summary.html)
+    Services](http://restlet.org/learn/javadocs/2.0/ext/org/restlet/ext/odata/package-summary.html)
 -   [MSDN documentation on WCF Data
     Services](http://msdn.microsoft.com/en-us/library/cc907912.aspx)
 

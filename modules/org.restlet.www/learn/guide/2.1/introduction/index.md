@@ -5,7 +5,7 @@ User guide overview
 ===================
 
 This is the official User Guide for version 2.1 of the Restlet Framework
-([http://www.restlet.org](http://www.restlet.org/)).
+([http://restlet.org](http://restlet.org/)).
 This document is edited in a collaborative way via this wiki site, byt
 [published
 versions](http://wiki.restlet.org/books)
@@ -24,7 +24,7 @@ documentation or code improvements or by helping other users or
 developers in the mailing lists. Every contribution is valuable to the
 community and we give credit back to our team by listing all the
 contributors on [our team
-page](http://www.restlet.org/about/team).
+page](http://restlet.org/about/team).
 
 Let's get started and again: welcome to the Restlet Team !
 
@@ -55,9 +55,9 @@ Community support
 
 If you can't find an answer to your question in this document, please
 use our [public mailing
-lists](http://www.restlet.org/community/lists)
+lists](http://restlet.org/community/lists)
 and read the [recommended
-books](http://www.restlet.org/documentation/books).
+books](http://restlet.org/documentation/books).
 We especially recommend our "[Restlet in
 Action](http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217)"
 book available in early access (PDF version) from Manning.
@@ -70,7 +70,7 @@ Professional support
 If you can't wait to get an answer or need to keep your questions
 confidential, you can also obtain private support by buying a
 [professional support
-plan](http://www.restlet.org/community/professional)
+plan](http://restlet.org/community/professional)
 from Noelios Technologies, the creator of the Restlet Framework.
 
 [![](Part%20I%20-%20Introduction-21_files/logo135.png)](http://www.noelios.com/products/support)

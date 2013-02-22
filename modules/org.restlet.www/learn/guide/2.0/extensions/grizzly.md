@@ -15,12 +15,12 @@ Description
 
 This connector supports the following protocol: HTTP, HTTPS. For
 additional details, please consult the
-[Javadocs](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/grizzly/package-summary.html).
+[Javadocs](http://restlet.org/learn/javadocs/2.0/jse/ext/org/restlet/ext/grizzly/package-summary.html).
 
 The list of supported specific parameters is available in the Javadocs:
 
 -   [HTTPS specific
-    parameters](http://www.restlet.org/documentation/2.0/ext/org/restlet/ext/grizzly/HttpsServerHelper.html)
+    parameters](http://restlet.org/learn/javadocs/2.0/ext/org/restlet/ext/grizzly/HttpsServerHelper.html)
 
 Here is the list of dependencies of this connector:
 

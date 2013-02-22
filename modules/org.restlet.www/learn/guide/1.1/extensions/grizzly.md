@@ -18,7 +18,7 @@ This connector supports the following protocol: HTTP, HTTPS.
 The list of supported specific parameters is available in the javadocs:
 
 -   [HTTPS specific
-    parameters](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/grizzly/HttpsServerHelper.html)
+    parameters](http://restlet.org/learn/javadocs/1.1/ext/com/noelios/restlet/ext/grizzly/HttpsServerHelper.html)
 
 Here is the list of dependencies of this connector:
 

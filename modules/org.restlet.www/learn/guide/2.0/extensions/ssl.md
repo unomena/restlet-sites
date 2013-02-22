@@ -5,12 +5,12 @@ Introduction
 ============
 
 The SSL extension provides concrete implementations of the
-[SslContextFactory](http://www.restlet.org/documentation/2.0/jse/engine/org/restlet/engine/security/SslContextFactory.html)
+[SslContextFactory](http://restlet.org/learn/javadocs/2.0/jse/engine/org/restlet/engine/security/SslContextFactory.html)
 that rely on
 [jSSLutils](http://code.google.com/p/jsslutils/).
 
 For additional details, please consult the
-[Javadocs](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/ssl/package-summary.html).
+[Javadocs](http://restlet.org/learn/javadocs/2.0/jse/ext/org/restlet/ext/ssl/package-summary.html).
 
 Description
 ===========
@@ -37,9 +37,9 @@ configuration, it provides a way to set up certificate revocation lists
 
 ### Example using the Component XML configuration:
 
-    <component xmlns="http://www.restlet.org/schemas/1.1/Component"
+    <component xmlns="http://restlet.org/schemas/1.1/Component"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.restlet.org/schemas/1.1/Component">
+        xsi:schemaLocation="http://restlet.org/schemas/1.1/Component">
 
         <client protocol="FILE" />
 

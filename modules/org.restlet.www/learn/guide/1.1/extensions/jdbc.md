@@ -19,13 +19,13 @@ This connector supports the following protocol: JDBC.
 The SQL request and other kinds of parameters (such as pooling) are
 passed to the client connector via an XML representation. Please refer
 to the [JDBC client
-javadocs](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/jdbc/JdbcClientHelper.html)
+javadocs](http://restlet.org/learn/javadocs/1.1/ext/com/noelios/restlet/ext/jdbc/JdbcClientHelper.html)
 for more details. \
  The Response provides the result of the SQL request as a
 RowSetRepresentation which is a kind of XML representation of the
 ResultSet instance wrapped either in a JdbcResult or in a WebRowSet
 instance. See the
-[RowSetRepresentation](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/jdbc/RowSetRepresentation.html)
+[RowSetRepresentation](http://restlet.org/learn/javadocs/1.1/ext/com/noelios/restlet/ext/jdbc/RowSetRepresentation.html)
 for more details.
 
 Here is the list of dependencies of this connector:

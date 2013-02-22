@@ -23,7 +23,7 @@ This connector supports the following protocols: HTTP, HTTPS.
 The list of supported specific parameters is available in the javadocs:
 
 -   [HTTP client
-    parameters](http://www.restlet.org/documentation/1.1/ext/com/noelios/restlet/ext/httpclient/HttpClientHelper.html)
+    parameters](http://restlet.org/learn/javadocs/1.1/ext/com/noelios/restlet/ext/httpclient/HttpClientHelper.html)
 
 Here is the list of dependencies of this connector:
 

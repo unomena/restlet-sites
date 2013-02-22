@@ -29,11 +29,11 @@ Demo construction
 -   Server side: uses db4o to work as store service provider, and expose
     data in RESTful way.
 -   Server handle process:
-    [Application](http://www.restlet.org/documentation/1.1/api/org/restlet/Application.html)
+    [Application](http://restlet.org/learn/javadocs/1.1/api/org/restlet/Application.html)
     dispatches request to
-    [Router](http://www.restlet.org/documentation/1.1/api/org/restlet/Router.html),
+    [Router](http://restlet.org/learn/javadocs/1.1/api/org/restlet/Router.html),
     Router finds corresponding reource,
-    [Resource](http://www.restlet.org/documentation/1.1/api/org/restlet/resource/Resource.html)
+    [Resource](http://restlet.org/learn/javadocs/1.1/api/org/restlet/resource/Resource.html)
     handles request and returns representation.
 
 DB4OSimpler.Class
@@ -624,8 +624,8 @@ Thanks
 Links
 -----
 
--   [Router](http://www.restlet.org/documentation/1.1/api/org/restlet/Router.html)
--   [Application](http://www.restlet.org/documentation/1.1/api/org/restlet/Application.html)
--   [Resource](http://www.restlet.org/documentation/1.1/api/org/restlet/resource/Resource.html)
+-   [Router](http://restlet.org/learn/javadocs/1.1/api/org/restlet/Router.html)
+-   [Application](http://restlet.org/learn/javadocs/1.1/api/org/restlet/Application.html)
+-   [Resource](http://restlet.org/learn/javadocs/1.1/api/org/restlet/resource/Resource.html)
 -   [db4o](http://www.db4o.com/)
 

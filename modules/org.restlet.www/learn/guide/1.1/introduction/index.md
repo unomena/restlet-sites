@@ -17,7 +17,7 @@ documentation or code improvements or by helping other users or
 developers in the mailing lists. Every contribution is valuable to the
 community and we give credit back to our team by listing all the
 contributors on [our team
-page](http://www.restlet.org/about/team).
+page](http://restlet.org/about/team).
 
 Overview
 ========
@@ -45,28 +45,28 @@ Additional information
 
 From the Restlet.org web site
 
--   [Introduction](http://www.restlet.org/about/introduction),
+-   [Introduction](http://restlet.org/about/introduction),
     with an history of the project inception
 -   [Features
-    list](http://www.restlet.org/about/features),
+    list](http://restlet.org/about/features),
     including native REST support, complete Web server, available
     connectors, available representations, flexible configuration,
     security, scalability
 -   [User
-    quotes](http://www.restlet.org/about/quotes),
+    quotes](http://restlet.org/about/quotes),
     to see how others were excited and pleased by the framework
 -   [General
-    FAQ](http://www.restlet.org/about/faq),
+    FAQ](http://restlet.org/about/faq),
     including some comparisons with alternatives
 
--   [Road Map](http://www.restlet.org/about/roadmap),
+-   [Road Map](http://restlet.org/about/roadmap),
     with related links to our issue tracker
--   [Team](http://www.restlet.org/about/team),
+-   [Team](http://restlet.org/about/team),
     listing core committers, extension committers and all contributors
 -   [Legal
-    terms](http://www.restlet.org/about/legal),
+    terms](http://restlet.org/about/legal),
     important information about our licensing scheme and the registered
     Restlet trademark
--   [Acknowledgments](http://www.restlet.org/about/acknowledgments),
+-   [Acknowledgments](http://restlet.org/about/acknowledgments),
     to give credits to important software or organizations we rely on
 

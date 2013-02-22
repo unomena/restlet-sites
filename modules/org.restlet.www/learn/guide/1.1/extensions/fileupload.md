@@ -19,9 +19,9 @@ item corresponding to one file uploaded in the posted request, typically
 from a Web form.
 
 Please, refer to the [FileUpload extension
-Javadocs](http://www.restlet.org/documentation/1.1/ext/org/restlet/ext/fileupload/package-summary.html)
+Javadocs](http://restlet.org/learn/javadocs/1.1/ext/org/restlet/ext/fileupload/package-summary.html)
 and the [FAQ
-\#18](http://www.restlet.org/documentation/1.1/faq#18)
+\#18](http://restlet.org/learn/javadocs/1.1/faq#18)
 for more details.
 
 Here is the list of dependencies for this extension:

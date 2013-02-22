@@ -11,9 +11,9 @@ in,we should review some knowledge if you never know or forget it:
 -   [What's
     RESTful](http://www.xfront.com/REST-Web-Services.html)[?](http://www.xfront.com/REST-Web-Services.html)
 -   [What's
-    Restlet?](http://www.restlet.org/documentation/1.1/api/index.html)
+    Restlet?](http://restlet.org/learn/javadocs/1.1/api/index.html)
 -   [How to use
-    Restlet?](http://www.restlet.org/documentation/1.1/tutorial)
+    Restlet?](http://restlet.org/learn/javadocs/1.1/tutorial)
 -   [How to use db4o to simplify
     persistence?](http://db4o.com/about/productinformation/resources/db4o-6.3-tutorial-java.pdf)
 -   [How to use JSON in
@@ -29,11 +29,11 @@ Demo construction
 -   Server side: uses db4o to work as store service provider, and expose
     data in RESTful way.
 -   Server handle process:
-    [Application](http://www.restlet.org/documentation/1.1/api/org/restlet/Application.html)
+    [Application](http://restlet.org/learn/javadocs/1.1/api/org/restlet/Application.html)
     dispatches request to
-    [Router](http://www.restlet.org/documentation/1.1/api/org/restlet/Router.html),
+    [Router](http://restlet.org/learn/javadocs/1.1/api/org/restlet/Router.html),
     Router finds corresponding reource,
-    [Resource](http://www.restlet.org/documentation/1.1/api/org/restlet/resource/Resource.html)
+    [Resource](http://restlet.org/learn/javadocs/1.1/api/org/restlet/resource/Resource.html)
     handles request and returns representation.
 
 DB4OSimpler.Class
@@ -624,8 +624,8 @@ Thanks
 Links
 -----
 
--   [Router](http://www.restlet.org/documentation/1.1/api/org/restlet/Router.html)
--   [Application](http://www.restlet.org/documentation/1.1/api/org/restlet/Application.html)
--   [Resource](http://www.restlet.org/documentation/1.1/api/org/restlet/resource/Resource.html)
+-   [Router](http://restlet.org/learn/javadocs/1.1/api/org/restlet/Router.html)
+-   [Application](http://restlet.org/learn/javadocs/1.1/api/org/restlet/Application.html)
+-   [Resource](http://restlet.org/learn/javadocs/1.1/api/org/restlet/resource/Resource.html)
 -   [db4o](http://www.db4o.com/)
 

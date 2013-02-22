@@ -33,9 +33,9 @@ This extension aims at providing a better and more natural integration.
 It comes in two part, one extension for the Restlet API
 (org.restlet.ext.spring) and another for the Restlet engine
 (com.noelios.restlet.ext.spring). Please, refer to the [Spring extension
-Javadocs](http://www.restlet.org/documentation/1.1/ext/org/restlet/ext/spring/package-summary.html)
+Javadocs](http://restlet.org/learn/javadocs/1.1/ext/org/restlet/ext/spring/package-summary.html)
 and the [FAQ
-\#23](http://www.restlet.org/documentation/1.1/faq#23)
+\#23](http://restlet.org/learn/javadocs/1.1/faq#23)
 for more details and have a look the [Restlet
 wiki](http://wiki.restlet.org/)
 for several sample codes.

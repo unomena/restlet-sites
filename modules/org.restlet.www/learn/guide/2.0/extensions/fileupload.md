@@ -19,7 +19,7 @@ item corresponding to one file uploaded in the posted request, typically
 from a Web form.
 
 For additional details, please consult the
-[Javadocs](http://www.restlet.org/documentation/2.0/jse/ext/org/restlet/ext/fileupload/package-summary.html).
+[Javadocs](http://restlet.org/learn/javadocs/2.0/jse/ext/org/restlet/ext/fileupload/package-summary.html).
 
 Here is the list of dependencies for this extension:
 

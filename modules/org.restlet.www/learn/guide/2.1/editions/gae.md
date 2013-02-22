@@ -32,7 +32,7 @@ Usage example
 Create a new GAE project with the Eclipse plugin provided, add the
 "org.restlet.jar" and the "org.restlet.ext.servlet.jar" files from the
 [latest Restlet 2.0
-snapshots](http://www.restlet.org/downloads/unstable)(make
+snapshots](http://restlet.org/downloads/unstable)(make
 sure you download the edition for GAE) to your "/war/WEB-INF/lib/"
 directory and to your project build path.
 
@@ -115,7 +115,7 @@ Finally, here is the Servlet configuration file:
 ~~~~
 
 For more information on Restlet, please check our [documentation
-pages](http://www.restlet.org/documentation/2.0/).
+pages](http://restlet.org/learn/javadocs/2.0/).
 
 Javadocs
 ========
@@ -124,9 +124,9 @@ The Javadocs of the Restlet edition for GAE are available online as
 well:
 
 -   [Restlet
-    API](http://www.restlet.org/documentation/snapshot/gae/api/)
+    API](http://restlet.org/learn/javadocs/snapshot/gae/api/)
 -   [Restlet
-    Extensions](http://www.restlet.org/documentation/snapshot/gae/ext/)
+    Extensions](http://restlet.org/learn/javadocs/snapshot/gae/ext/)
 -   [Restlet
-    Engine](http://www.restlet.org/documentation/snapshot/gae/engine/)
+    Engine](http://restlet.org/learn/javadocs/snapshot/gae/engine/)
 

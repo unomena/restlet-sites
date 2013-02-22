@@ -15,7 +15,7 @@ Documentation
     class](http://wiki.restlet.org/docs_2.1/244-restlet.html "Oracle XDB Restlet Adapter - XdbRepresentation")
 
 For additional details, please consult the
-[Javadocs](http://www.restlet.org/documentation/2.1/jee/ext/org/restlet/ext/xdb/package-summary.html).
+[Javadocs](http://restlet.org/learn/javadocs/2.1/jee/ext/org/restlet/ext/xdb/package-summary.html).
 
 Using XDB Restlet Adapter within Maven projects
 ===============================================

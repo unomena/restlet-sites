@@ -182,7 +182,7 @@ Matching of template variables
 By default, as said above, a template variable is meant to match a URI
 segment. Here is the list of all available type of variables. For
 additional details, see the [Javadocs of the Variable
-class](http://www.restlet.org/documentation/2.1/jse/api/org/restlet/routing/Variable.html):
+class](http://restlet.org/learn/javadocs/2.1/jse/api/org/restlet/routing/Variable.html):
 
 Value
 

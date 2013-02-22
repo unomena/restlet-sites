@@ -12,7 +12,7 @@ EMF to convert between "representation beans" generated from EMF and
 XML/XMI/ECore representations.
 
 For additional details, please consult [the
-Javadocs](http://www.restlet.org/documentation/2.1/jse/ext/org/restlet/ext/emf/package-summary.html).
+Javadocs](http://restlet.org/learn/javadocs/2.1/jse/ext/org/restlet/ext/emf/package-summary.html).
 
 Description
 ===========
@@ -38,7 +38,7 @@ representations are defined using EMF.
 
 In order to display EMF attributes containing URI references into proper
 HTML hyperlinks, you just need to add eAnnotations to your EMF ECore
-metamodel using the "http://www.restlet.org/schemas/2011/emf/html"
+metamodel using the "http://restlet.org/schemas/2011/emf/html"
 namespace and then add an entry with the "linked" name and a "true"
 value.
 
