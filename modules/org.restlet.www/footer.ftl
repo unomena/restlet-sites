@@ -141,24 +141,24 @@
         <div class="clearBoth"></div>
         <div class="span2 intro below">${labels.footer.sites['${language}']}</div>
         <div class="span2a site">
-          <h4><img src="/images/logo-restlet-small.png" class="pull-left"/><a href="http://restlet.com">Restlet</a></h4>
+          <h4><img src="/images/logo-restlet-small.png" /><a href="http://restlet.com/">Restlet</a></h4>
           <ul class="sub-list">
-            <li><a href="http://restlet.com/products">${labels.footer.restlet.product['${language}']}</a></li>
-            <li><a href="http://restlet.com/services">${labels.footer.restlet.services['${language}']}</a></li>
-            <li><a href="http://restlet.com/about">${labels.footer.restlet.about['${language}']}</a></li>
+            <li><a href="http://restlet.com/products/">${labels.footer.restlet.product['${language}']}</a></li>
+            <li><a href="http://restlet.com/services/">${labels.footer.restlet.services['${language}']}</a></li>
+            <li><a href="http://restlet.com/about/">${labels.footer.restlet.about['${language}']}</a></li>
           </ul>
         </div>
         <div class="span2b site">
-          <h4><img src="/images/logo-restlet-framework-small.png" class="pull-left"/><a href="http://restlet.org">Restlet Framework</a></h4>
+          <h4><img src="/images/logo-restlet-framework-small.png" /><a href="http://restlet.org/">Restlet Framework</a></h4>
           <ul class="sub-list">
-            <li><a href="http://restlet.org/discover">${labels.footer.restletframework.discover['${language}']}</a></li>
-            <li><a href="http://restlet.org/download">${labels.footer.restletframework.download['${language}']}</a></li>
-            <li><a href="http://restlet.org/learn">${labels.footer.restletframework.learn['${language}']}</a></li>
-            <li><a href="http://restlet.org/participate">${labels.footer.restletframework.participate['${language}']}</a></li>
+            <li><a href="http://restlet.org/discover/">${labels.footer.restletframework.discover['${language}']}</a></li>
+            <li><a href="http://restlet.org/download/">${labels.footer.restletframework.download['${language}']}</a></li>
+            <li><a href="http://restlet.org/learn/">${labels.footer.restletframework.learn['${language}']}</a></li>
+            <li><a href="http://restlet.org/participate/">${labels.footer.restletframework.participate['${language}']}</a></li>
           </ul>
         </div>
         <div class="span2c site">
-          <h4><img src="/images/logo-apispark-small.png" class="pull-left"/><a href="http://apispark.com">APISpark</a></h4>
+          <h4><img src="/images/logo-apispark-small.png"/><a href="http://apispark.com/">APISpark</a></h4>
           <ul class="sub-list">
             <li><a href="http://apispark.com/features/user">${labels.footer.apispark.features['${language}']}</a></li>
             <li><a href="http://apispark.com/faq">${labels.footer.apispark.faq['${language}']}</a></li>
@@ -166,14 +166,14 @@
           </ul>
         </div>
         <div class="span2d site">
-          <h4><img src="/images/logo-apispark-support-small.png" class="pull-left"/><a href="http://apispark.org">APISpark Support</a></h4>
+          <h4><img src="/images/logo-apispark-support-small.png"/><a href="http://apispark.org/">APISpark Support</a></h4>
           <ul class="sub-list">
-            <li><a href="http://apispark.org/tutorials">${labels.footer.apisparksupport.tutorial['${language}']}</a></li>
+            <li><a href="http://apispark.org/tutorials/">${labels.footer.apisparksupport.tutorial['${language}']}</a></li>
             <li><a href="http://desk.apispark.org/">${labels.footer.apisparksupport.helpdesk['${language}']}</a></li>
             <li><a href="http://apispark.org/roadmap">${labels.footer.apisparksupport.roadmap['${language}']}</a></li>
           </ul>
         </div>
-        <div id="copyright">Copyright &copy; ${pp.now?string("yyyy")} Restlet</div>
+        <div id="copyright">Copyright &copy; ${pp.now?string("yyyy")} Restlet <a href="http://restlet.com/legal" title="${labels.footer.copyright.legal['${language}']}">${labels.footer.copyright.legal['${language}']}</div>
       </div>
     </div>
     <!-- generated ${pp.now} -->

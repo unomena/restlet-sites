@@ -17,9 +17,9 @@
     <#global currentSection = "-" />
 </#if>
 
-<#macro h3 title="-" anchor="-">
+<#macro h3 title="-" anchor="-" spanclass="span6">
     <div class="content container">
-    <div class="span6">
+    <div class="${spanclass}">
 	  <#if !(title=="-")><h3><#if !(anchor=="-")><a class="anchor" name="${anchor}"></a></#if>${title}</h3></#if>
       <#nested>
     </div>

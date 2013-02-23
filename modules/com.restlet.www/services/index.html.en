@@ -2,27 +2,20 @@
 <@h3 "Presentation" "presentation">
 <p>
 	To help you realize your Web ideas and succeed with your web APIs projects, Restlet SAS
-	proposes you a complete set of professional services:
+	offers a complete set of professional services including:
 </p>
 
 <ul>
-	<li><a href="/services/consulting">Consulting missions</a>, for example to help you
-	design your RESTful web APIs or your software architectures.</li>
-	<li><a href="/services/development">Development missions</a> around Restlet and
-	JAX-RS technologies, complementary to consulting missions. The goal is to accompany
-	your teams in the effective coding of your requirements or to bring an expertise 
-	for complex problems.</li>
-	<li><a href="/services/training">Training</a> on web APIs, REST and the Restlet technology to
-	accelerate your learning curve and benefit from our know-how.</li>
+    <li><a href="/services/subscriptions">Subscription plans</a>, for both Restlet framework and APISpark, and consulting</li>
+	<li><a href="/services/consulting">Consulting</a>, such as co-development, API workshops and training.</li>
 </ul>
 
 <p>
-	Many of those services are based on our suite of <a href="/products">products</a> 
-    that we invite you to discover.
+	Those services are directly related to our suite of <a href="/products">products</a> or our core expertise in RESTful web APIs. 
 </p>
 
 <p>
-	You can finally consult the list of our latest <a href="/services/references">customer
+	Finally, you can consult the list of our latest <a href="/services/references">customer
 	references</a> for those services.
 </p>
 </@h3>

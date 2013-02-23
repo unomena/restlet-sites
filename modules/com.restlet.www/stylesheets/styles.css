@@ -142,6 +142,10 @@ p {
 	color: #757575;
 }
 
+table {
+	color: #757575;
+}
+
 ul li {
     color: #757575;
 }
@@ -403,8 +407,7 @@ div.content.footerWrapper .footer {
 #footer .container .span2d.site h4 a {
 	height: 36px;
 	vertical-align: middle;
-	display: inline-block;
-	padding-top: 8px;
+	display: inline;
 	text-decoration: none;
 	color: #4D4D4D;
 }
@@ -500,6 +503,33 @@ div.content.footerWrapper .footer {
     text-align: center;
 }
 
+#footer img {
+    margin-right: 4px;
+}
+
+#footer .blog-icon {
+    background-image: url(/images/blog-ico.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 36px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+#footer .follow-icon {
+    background-image: url(/images/follow-ico.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+
 form, form > input {
     margin:0px;
     padding:0px;
@@ -507,6 +537,10 @@ form, form > input {
 
 .span900 {
 	margin-right: 30px; 
+}
+
+.span6 {
+	text-align: justify;
 }
 
 h3 {
@@ -537,3 +571,8 @@ ul.pages li.active a {
     line-height: 16px;
 }
 
+span.float-right {
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 1px
+}

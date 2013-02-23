@@ -8,15 +8,15 @@
 </p>
 </@h3>
 
-<@h3 "Jérôme Louvel, CEO" "jerome-louvel">
-<img src="/images/photos/jerome-louvel-100" alt="Photo Jérôme Louvel" class="float-right" />
+<@h3 "-" "jerome-louvel">
+<h3>Jérôme Louvel, CEO<span class="float-right"><img src="/images/photos/jerome-louvel-100" alt="Photo Jérôme Louvel" /></span></h3>
 <p>
    Jérôme is an engineer in computer science and management, graduate of
    <a href="http://www.polytech.univ-montp2.fr">Polytech'Montpellier</a>.
    He started the open source <a href="http://restlet.org">Restlet Framework</a> project back in 2005, 
    as the first RESTful web API framework for Java.
 </p>
-<p>   
+<p>
    He is in charge technical and commercial leadership of the company. 
    Jérôme was also a member of the expert group that defined the standard JAX-RS API, contributor to the 
    <a href="http://www.amazon.com/gp/redirect.html?ie=UTF8&location=http%3A%2F%2Fwww.amazon.com%2FRestful-Web-Services-Leonard-Richardson%2Fdp%2F0596529260%3Fie%3DUTF8%26s%3Dbooks%26qid%3D1173381194%26sr%3D8-1&tag=restlet-20&linkCode=ur2&camp=1789&creative=9325">RESTful Web Services</a> 
@@ -26,8 +26,9 @@
 </p>
 </@h3>
 
-<@h3 "Thierry Boileau, VP Engineering" "thierry-boileau">
-<img src="/images/photos/thierry-boileau-100" alt="Photo Thierry Boileau" class="float-right" />
+<@h3 "-" "thierry-boileau">
+
+<h3>Thierry Boileau, VP Engineering<span class="float-right"><img src="/images/photos/thierry-boileau-100" alt="Photo Thierry Boileau" /></span></h3>
 
 <p>
    Thierry is also an engineer in computer science and management, graduate
@@ -44,8 +45,8 @@
 </p>
 </@h3>
 
-<@h3 "Thierry Templier, Lead Architect" "thierry-templier">
-<img src="/images/photos/thierry-templier-100" alt="Photo Thierry Templier" class="float-right" />
+<@h3 "-" "thierry-templier">
+<h3>Thierry Templier, Lead Architect<span class="float-right"><img src="/images/photos/thierry-templier-100" alt="Photo Thierry Templier" /></span></h3>
 
 <p>
    Thierry is an engineer in computer science, telecom and networks, graduate of 

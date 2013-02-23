@@ -127,7 +127,7 @@ function refresh() {
 	$("#" + cReleases.attr('id') + '-bt').empty();
 	$("#" + cReleases.attr('id') + '-bt').append("<strong>" + version.fullVersionCompact + "</strong>");
 	$("#" + cEditions.attr('id') + '-bt').empty();
-	$("#" + cEditions.attr('id') + '-bt').append("<strong>" + edition.shortname + "</strong>");
+	$("#" + cEditions.attr('id') + '-bt').append("<strong>" + edition.longname + "</strong>");
 	$("#" + cTypesDistribution.attr('id') + '-bt').empty();
 	window.location.hash = "#branch=" + branch + "&release=" + version.id + "&edition=" + edition.id + "&distribution=" + distributionId;
 	if("zip" == distributionId){

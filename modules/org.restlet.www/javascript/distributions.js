@@ -94,7 +94,7 @@ function refresh() {
 			"<strong>" + qualifier.name + "</strong>");
 	$("#" + cEditions.attr('id') + '-bt').empty();
 	$("#" + cEditions.attr('id') + '-bt').append(
-			"<strong>" + edition.shortname + "</strong>");
+			"<strong>" + edition.longname + "</strong>");
 	$("#" + cTypesDistribution.attr('id') + '-bt').empty();
 	
 	if ("zip" == distributionId) {

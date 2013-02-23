@@ -4,6 +4,6 @@
 {"id":"gae", "shortname":"GAE", "longname":"Google App Engine", "middlename":"GAE"},
 {"id":"android", "shortname":"Android", "longname":"Android", "middlename":"Android"},
 {"id":"gwt", "shortname":"GWT", "longname":"Google Web Toolkit", "middlename":"GWT"},
-{"id":"osgi", "shortname":"OSGi", "longname":"OSGi", "middlename":"OSGi"},
+{"id":"osgi", "shortname":"OSGi", "longname":"OSGi Environments", "middlename":"OSGi"},
 {"id":"all", "shortname":"All", "longname":"All", "middlename":"All"}
 ]

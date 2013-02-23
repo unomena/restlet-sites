@@ -114,13 +114,12 @@
 	</target>
 
 	<target name="generate-templates" description="Generate template-based files.">
-		<!-- generate static files for the site : org.restlet.www -->
+		<!-- generate static files for the site : org.restlet.www, user guide generated with pandoc -->
 		<delete dir="${temp}/owr" />
 		<mkdir dir="${temp}/owr" />
 		<copy todir="${temp}/owr">
 			<fileset dir="../modules/org.restlet.www/" includes="**/*" />
 		</copy>
-		<!-- treat user guide with pandoc -->
 		<exec executable="sh" osfamily="unix">
 			<arg value="${tmpl}/md/unixtohtml.sh" />
 			<arg value="${temp}/owr" />
