@@ -1,6 +1,6 @@
 <#global content>
 
-<@h3>
+<@h3 "Mission types" "mission-types">
 <p>
 	Here is a list of the main types of mission that we can offer. This list isn't
 	exhaustive and a mission can combine several aspects:
