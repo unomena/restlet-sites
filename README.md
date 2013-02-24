@@ -1,4 +1,4 @@
-restlet-site
-============
+restlet-sites
+=============
 
-Restlet Framework Web Site
+Restlet public web sites
