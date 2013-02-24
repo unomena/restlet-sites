@@ -1,13 +1,13 @@
 <#global content>
-<@h3 "Presentation" "presentation">
+<@h3 "Services overview" "overview">
 <p>
-	To help you realize your Web ideas and succeed with your web APIs projects, Restlet SAS
+	To help you realize your Web ideas and succeed with your web APIs projects, Restlet
 	offers a complete set of professional services including:
 </p>
 
 <ul>
     <li><a href="/services/subscriptions">Subscription plans</a>, for both Restlet framework and APISpark, and consulting</li>
-	<li><a href="/services/consulting">Consulting</a>, such as co-development, API workshops and training.</li>
+    <li><a href="/services/consulting">Consulting</a>, such as co-development, API workshops and training.</li>
 </ul>
 
 <p>
