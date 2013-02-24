@@ -21,16 +21,10 @@
 <@h3 "APISpark" "apispark">
 <p>
     For <a href="http://apispark.com">APISpark</a>, our all-in-one cloud platform (PaaS) for web APIs, we offer
-    monthly subscription plans that let you create, host, manage 
-    and use web APIs. In addition, you can also buy extra credits based on:
-<ul>
-    <li>the number of APIs that you manage,</li>
-    <li>the number of calls to your APIs,</li>
-    <li>the amount of data directly stored.</li>
-</ul>
+    monthly subscription plans that let you create, host, manage and use web APIs. 
 </p>
 <p>
-    In addition, we offer custom subscription plans for larger enterprises that need: 
+    In addition, we offer custom subscription plans for enterprises that need: 
 <ul>
     <li>a single tenant (dedicated) platform instance,</li>
     <li>a dedicated APIs catalog (based on the public one).</li>
