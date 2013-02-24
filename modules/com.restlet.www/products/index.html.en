@@ -3,9 +3,10 @@
       <div class='span5'>
         <h3>Our vision</h3>
         <p>We think that web APIs will trigger a major technological revolution, during which a new generation of web
-        sites, accessible by any type of machine in a cross­channel way will be built. Our products including Restlet
-        Framework, the leading RESTful web API framework for Java, as well as APISpark, the first all­-in-­one web
-        API platform.
+        sites, accessible by any type of machine in a cross­channel way will be built.
+        </p>
+        <p>Our products including Restlet Framework, the leading RESTful web API framework for Java, as well as 
+        APISpark, the first all­-in-­one web API platform.
         </p>
       </div>
       <div class='span5'>
