@@ -8,13 +8,13 @@
     APISpark, the first all­-in-­one web API platform.
     </p>
 
-    <h3>Restlet Framework</h3>
+    <h3>Restlet Framework<span style="float:right"><img src="/images/logo-restlet.png"/></span></h3>
     <p><a href="http://restlet.org">Restlet Framework</a> is the leading RESTful web API framework for Java. First software, across all languages,
        to have proposed a development framework designed from the REST concepts in 2005. First also by the
        quality of its community of users and contributors. Finally, first by the richness of its features set!
     </p>
 
-    <h3>APISpark</h3>
+    <h3>APISpark<span style="float:right"><img src="/images/apispark-logo.png"/></span></h3>
     <p><a href="http://apispark.com">APISpark</a> is an innovative cloud platform (PaaS) that lets you create, host, manage and use web APIs in
        flash. Using the Restlet Framework at its core, APISpark radically simplifies the web API experience, the
        time­to­market and the overall cost to get started and to scale.
