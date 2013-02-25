@@ -6,6 +6,7 @@ body {
 	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f9fdff', endColorstr='#fff')";
 }
 
+
 .topbar {
 	padding-bottom: 8px;
 }
@@ -169,6 +170,12 @@ a {
 
 .span3.center {
 	text-align: center;
+}
+
+
+
+.content li {
+    color: #757575;
 }
 
 .content .follow-icon {
