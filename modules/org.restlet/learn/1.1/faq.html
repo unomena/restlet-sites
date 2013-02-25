@@ -10,14 +10,14 @@ window.onload = function () {
 
 <#global title="Restlet 1.1 - User FAQ" />
 <#global content>
-   <h1>Restlet 1.1 - User FAQ</h1>
+   <h3>Restlet 1.1 - User FAQ</h3>
 
    <p>
       Note that there is <a href="/about/faq">another FAQ</a> covering more general
       questions about the framework and REST.
    </p>
 
-   <h2><a name="toc">Table of contents</a></h2>
+   <h4><a name="toc">Table of contents</a></h4>
 
    <ol>
       <li><a href="#01">How can I get the raw HTTP headers if I
@@ -68,7 +68,7 @@ window.onload = function () {
       <li><a href="#26">How can I ask my Restlet client to retrieve a specific representation of a target resource?</a></li>
    </ol>
 
-   <h2><a name="01">1. How can I get the raw HTTP headers if I really need to?</a></h2>
+   <h4><a name="01">1. How can I get the raw HTTP headers if I really need to?</a></h4>
 
    <p>
       All standard HTTP headers have an equivalent class/property in the Restlet API.
@@ -88,7 +88,7 @@ window.onload = function () {
       directory.
    </p>
 
-   <h2><a name="02">2. Can I run Restlets inside Tomcat or any Servlet container?</a></h2>
+   <h4><a name="02">2. Can I run Restlets inside Tomcat or any Servlet container?</a></h4>
 
    <p>
       Yes you can, even if this is not required. If you can't use the
@@ -185,7 +185,7 @@ window.onload = function () {
       </pre>
    </div>
 
-   <h2><a name="03">3. Can the Restlets composing a site be defined in an XML file?</a></h2>
+   <h4><a name="03">3. Can the Restlets composing a site be defined in an XML file?</a></h4>
 
    <p>
       As XML has been frequently overused as an alternative programming
@@ -209,7 +209,7 @@ window.onload = function () {
       1.1 for details.
    </p>
 
-   <h2><a name="04">4. What JAR files must I have in my classpath for a minimal application?</a></h2>
+   <h4><a name="04">4. What JAR files must I have in my classpath for a minimal application?</a></h4>
 
    <p>
       In a Restlet distribution, all JAR files are located under the
@@ -222,7 +222,7 @@ window.onload = function () {
       <b>com.noelios.restlet.jar</b>.
    </p>
 
-   <h2><a name="05">5. What are the other JAR files for?</a></h2>
+   <h4><a name="05">5. What are the other JAR files for?</a></h4>
 
    <p>
       The core NRE doesn't contain any connector to receive or send
@@ -251,7 +251,7 @@ window.onload = function () {
       target).
    </p>
 
-   <h2><a name="06">6. How do I provide password protection on a server?</a></h2>
+   <h4><a name="06">6. How do I provide password protection on a server?</a></h4>
 
    <p>
       Currently, the Restlet Engine supports Basic HTTP and
@@ -262,8 +262,8 @@ window.onload = function () {
       tutorial</a>.
    </p>
 
-   <h2><a name="07">7. How do I check the mime type of a document
-   PUT on my server?</a></h2>
+   <h4><a name="07">7. How do I check the mime type of a document
+   PUT on my server?</a></h4>
 
    <p>
       This is simple: request.getEntity().getMediaType() which returns
@@ -271,8 +271,8 @@ window.onload = function () {
       main and sub types as well as the optional type parameters.
    </p>
 
-   <h2><a name="08">8. How do I attach a status report to a
-   client GET when the call fails on my server?</a></h2>
+   <h4><a name="08">8. How do I attach a status report to a
+   client GET when the call fails on my server?</a></h4>
 
    <p>
       This is also simple:
@@ -290,8 +290,8 @@ window.onload = function () {
       here").
    </p>
 
-   <h2><a name="09">9. What about performance, are new Restlets
-   created for each call received on my server?</a></h2>
+   <h4><a name="09">9. What about performance, are new Restlets
+   created for each call received on my server?</a></h4>
 
    <p>
       For a server connector such as Jetty HTTP, the main cost of
@@ -320,8 +320,8 @@ window.onload = function () {
       benchmark</a> illustrating that Restlets are scalable and efficient.
    </p>
 
-   <h2><a name="10">10. How do I implement the traditional MVC
-   pattern?</a></h2>
+   <h4><a name="10">10. How do I implement the traditional MVC
+   pattern?</a></h4>
 
    <p>
       There is only a rough correspondence between the <a href="http://en.wikipedia.org/wiki/Model-view-controller">MVC
@@ -351,8 +351,8 @@ window.onload = function () {
       documents, FreeMarker and Velocity templates.</li>
    </ol>
 
-   <h2><a name="11">11. Any recommendations/guidelines in terms of
-   how to deal with caching?</a></h2>
+   <h4><a name="11">11. Any recommendations/guidelines in terms of
+   how to deal with caching?</a></h4>
 
    <p>
       Currently, client-side caching is supported via the "conditions"
@@ -374,8 +374,8 @@ window.onload = function () {
       be installed transparently for the clients, as reverse proxies.
    </p>
 
-   <h2><a name="12">12. What is the performance of the HTTP
-   connectors?</a></h2>
+   <h4><a name="12">12. What is the performance of the HTTP
+   connectors?</a></h4>
 
    <p>
       For server connectors, the performance will depend on the actual
@@ -386,8 +386,8 @@ window.onload = function () {
       deployment environment.
    </p>
 
-   <h2><a name="13">13. Why is my HTTP client sending unwanted
-   "application/x-www-form-urlencoded" content type headers?</a></h2>
+   <h4><a name="13">13. Why is my HTTP client sending unwanted
+   "application/x-www-form-urlencoded" content type headers?</a></h4>
 
    <p>
       When you do a simple GET with the Restlet HTTP client connector based
@@ -399,8 +399,8 @@ window.onload = function () {
       report</a>.
    </p>
 
-   <h2><a name="14">14. Can a Filter modify the call like a
-   Servlet Filter?</a></h2>
+   <h4><a name="14">14. Can a Filter modify the call like a
+   Servlet Filter?</a></h4>
 
    <p>
       Absolutely! What the tutorial only says is that request's base
@@ -409,8 +409,8 @@ window.onload = function () {
       handling of the call by the attached Restlet.
    </p>
 
-   <h2><a name="15">15. My server is running behind a proxy, can I
-   get the actual client IP address?</a></h2>
+   <h4><a name="15">15. My server is running behind a proxy, can I
+   get the actual client IP address?</a></h4>
 
    <p>
       The immediate client IP address available is the only that is
@@ -431,8 +431,8 @@ window.onload = function () {
       especially if you are not controlling the intermediary proxies.
    </p>
 
-   <h2><a name="16">16. Is there a mechanism to pass data sets to
-   downstream Restlets?</a></h2>
+   <h4><a name="16">16. Is there a mechanism to pass data sets to
+   downstream Restlets?</a></h4>
 
    <p>
       Yes, there are multiple mechanisms available. If you need to
@@ -447,8 +447,8 @@ window.onload = function () {
       wrapper methods.
    </p>
 
-   <h2><a name="17">17. What is the difference between a Filter
-   and a Router?</a></h2>
+   <h4><a name="17">17. What is the difference between a Filter
+   and a Router?</a></h4>
 
    <p>
       Filters support some processing before or after the handling of a
@@ -466,8 +466,8 @@ window.onload = function () {
       for a comparison of Routers with the Servlet API.
    </p>
 
-   <h2><a name="18">18. How can I send and receive files with
-   Restlet?</a></h2>
+   <h4><a name="18">18. How can I send and receive files with
+   Restlet?</a></h4>
 
    <p>
       To receive large files, from browsers for example, you can rely
@@ -479,8 +479,8 @@ window.onload = function () {
       and set is as the input of your call.
    </p>
 
-   <h2><a name="19">19. How can I make PUT or DELETE calls from
-   browsers?</a></h2>
+   <h4><a name="19">19. How can I make PUT or DELETE calls from
+   browsers?</a></h4>
 
    <p>
       There are two solutions to this problem. The first one is to
@@ -492,8 +492,8 @@ window.onload = function () {
       DELETE methods from a browser using some JavaScript code.
    </p>
 
-   <h2><a name="20">20. What's the best practice for error
-   handling in an intermediate Restlet?</a></h2>
+   <h4><a name="20">20. What's the best practice for error
+   handling in an intermediate Restlet?</a></h4>
 
    <p>
       Typically, unexpected exceptions are handled at the Application
@@ -504,8 +504,8 @@ window.onload = function () {
       desired status on your response.
    </p>
 
-   <h2><a name="21">21. What is the best way to use Restlet in
-   Eclipse?</a></h2>
+   <h4><a name="21">21. What is the best way to use Restlet in
+   Eclipse?</a></h4>
 
    <p>
       Of course, you could manually use the JAR files in your Eclipse
@@ -548,7 +548,7 @@ window.onload = function () {
       use to create connectors.
    </p>
 
-   <h2><a name="22">22. How can I change the configuration of my connector?</a></h2>
+   <h4><a name="22">22. How can I change the configuration of my connector?</a></h4>
 
    <p>
       Each connector has a set of specific parameters that can be changed
@@ -564,7 +564,7 @@ myServer.getContext().getParameters().add("requestBufferSize", "30000");
 myServer.start();
    </pre>
 
-   <h2><a name="23">23. How can I integrate with Spring?</a></h2>
+   <h4><a name="23">23. How can I integrate with Spring?</a></h4>
 
    <p>
       A lot of effort has been provided in facilitating this integration in
@@ -575,7 +575,7 @@ myServer.start();
       page on our Wiki</a> with more information.
    </p>
 
-   <h2><a name="24">24. Can I prevent child URIs from being matched by Routers?</a></h2>
+   <h4><a name="24">24. Can I prevent child URIs from being matched by Routers?</a></h4>
 
    <p>
       The default behavior of a Router is to match the beginning of the request URI
@@ -608,7 +608,7 @@ Route route = router.attach("/users/{user}?{query}", UserResource.class);
 route.getTemplate().setMatchingMode(Template.MODE_EQUALS);
    </pre>
 
-   <h2><a name="25">25. Why do I get severe messages in the log after upgrading to Restlet 1.1?</a></h2>
+   <h4><a name="25">25. Why do I get severe messages in the log after upgrading to Restlet 1.1?</a></h4>
 
    <p>
       If you see messages like "For security reasons, don't pass the component context to 
@@ -655,8 +655,8 @@ route.getTemplate().setMatchingMode(Template.MODE_EQUALS);
       sufficient.
    </p>
 
-   <h2><a name="26">26. How can I ask my Restlet client to retrieve a specific representation
-   of a target resource?</a></h2>
+   <h4><a name="26">26. How can I ask my Restlet client to retrieve a specific representation
+   of a target resource?</a></h4>
 
    <p>
       In order to retrieve a specific representation, also called a variant, you need
@@ -672,7 +672,7 @@ Response response = client.handle(request);
    </pre>
 
    <div class="notes">
-      <h3><a name="notes">Notes</a></h3>
+      <h5><a name="notes">Notes</a></h5>
       <ul>
          <li>Thanks to Dave Pawson for drafting the first version of this FAQ.</li>
       </ul>

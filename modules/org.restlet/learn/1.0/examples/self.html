@@ -10,9 +10,9 @@ window.onload = function () {
 
 <#global title="Restlet - Example - Self" />
 <#global content>
-   <h1>Sample application</h1>
+   <h3>Sample application</h3>
 
-   <h2><a name="toc">Table of contents</a></h2>
+   <h4><a name="toc">Table of contents</a></h4>
 
    <ol>
       <li><a href="#part01">Introduction</a></li>
@@ -24,7 +24,7 @@ window.onload = function () {
       <li><a href="#part07">Conclusion</a></li>
    </ol>
 
-   <h2><a name="part01">1. Introduction</a></h2>
+   <h4><a name="part01">1. Introduction</a></h4>
 
    <p>
       The Restlet web site that you are currently navigating is powered
@@ -34,7 +34,7 @@ window.onload = function () {
       sites with Restlets is very simple.
    </p>
 
-   <h2><a name="part02">2. Imported classes</a></h2>
+   <h4><a name="part02">2. Imported classes</a></h4>
 
    <p>
       First, let's declare the imported classes required to support our
@@ -47,7 +47,7 @@ import org.restlet.VirtualHost;
 import org.restlet.data.Protocol;
    </pre>
 
-   <h2><a name="part03">3. Declaring the Main class</a></h2>
+   <h4><a name="part03">3. Declaring the Main class</a></h4>
 
    <p>
       Now, we declare the main class, called the WebComponent,
@@ -66,7 +66,7 @@ public class WebComponent extends Component {
       ...
    </pre>
 
-   <h2><a name="part04">4. Main method</a></h2>
+   <h4><a name="part04">4. Main method</a></h4>
 
    <p>
       Below, you have the main method that is invoked by our startup
@@ -110,7 +110,7 @@ public static void main(String[] args) {
 }
    </pre>
 
-   <h2><a name="part05">5. Build the component</a></h2>
+   <h4><a name="part05">5. Build the component</a></h4>
 
    <p>
       Now we need to build the component containing our web
@@ -225,7 +225,7 @@ public WebComponent(String ipAddress, int port, String wwwUri,
 }
    </pre>
 
-   <h2><a name="part06">6. Redirection Application</a></h2>
+   <h4><a name="part06">6. Redirection Application</a></h4>
 
    <p>
       In addition to the main WebComponent class, we also rely on four
@@ -277,7 +277,7 @@ public class RedirectApplication extends Application {
 }
    </pre>
 
-   <h2><a name="part07">6. Conclusion</a></h2>
+   <h4><a name="part07">6. Conclusion</a></h4>
 
    <p>
       In term of coding, that's about all that we use. In addition, we
@@ -288,7 +288,7 @@ public class RedirectApplication extends Application {
    </p>
 
    <div class="notes">
-      <h3><a name="notes">Notes</a></h3>
+      <h5><a name="notes">Notes</a></h5>
       <ul>
          <li>
          Thanks to Michael Mayer for the idea of providing the source

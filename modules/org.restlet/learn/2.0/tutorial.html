@@ -10,9 +10,9 @@ window.onload = function () {
 
 <#global title="Restlet 2.0 - Tutorial" />
 <#global content>
-   <h1>Restlet 2.0 - Tutorial</h1>
+   <h3>Restlet 2.0 - Tutorial</h3>
 
-   <h2><a name="toc">Table of contents</a></h2>
+   <h4><a name="toc">Table of contents</a></h4>
 
    <ol>
       <li><a href="#part01">Restlet overview</a></li>
@@ -31,7 +31,7 @@ window.onload = function () {
       <li><a href="#conclusion">Conclusion</a></li>
    </ol>
 
-   <h2><a name="part01">1. Restlet overview</a></h2>
+   <h4><a name="part01">1. Restlet overview</a></h4>
 
    <p>
       The Restlet framework is composed of two main parts. First, there
@@ -51,7 +51,7 @@ window.onload = function () {
       Tomcat, or between the JDBC API and concrete JDBC drivers.
    </p>
 
-   <h2><a name="part02">2. Retrieving the content of a Web page</a></h2>
+   <h4><a name="part02">2. Retrieving the content of a Web page</a></h4>
 
    <p>
       As we mentioned in the <a href="/about/introduction">introduction paper</a>,
@@ -95,7 +95,7 @@ resource.setReferrerRef("http://www.mysite.org");
 resource.get().write(System.out);
    </pre>
 
-   <h2><a name="part03">3. Listening to Web browsers</a></h2>
+   <h4><a name="part03">3. Listening to Web browsers</a></h4>
 
    <p>
       Now, we want to see how the Restlet framework can listen to
@@ -139,7 +139,7 @@ public class Part03 extends ServerResource {
         supported by a rich API, letting you manipulate all the REST artifacts.
    </p>
 
-   <h2><a name="part04">4. Overview of a REST architecture</a></h2>
+   <h4><a name="part04">4. Overview of a REST architecture</a></h4>
 
    <p>
       Let's step back a little and consider typical web architectures
@@ -161,7 +161,7 @@ public class Part03 extends ServerResource {
       Server.
    </p>
 
-   <h2><a name="part05">5. Components, virtual hosts and applications</a></h2>
+   <h4><a name="part05">5. Components, virtual hosts and applications</a></h4>
 
    <p>
       In addition to supporting the standard REST software architecture
@@ -238,7 +238,7 @@ Routed part   : http://localhost:8182/trace
 Remaining part: /abc/def?param=123
    </pre>
 
-   <h2><a name="part06">6. Serving static files</a></h2>
+   <h4><a name="part06">6. Serving static files</a></h4>
 
    <p>
       Do you have a part of your web application that serves static
@@ -282,7 +282,7 @@ component.start();
       property.
    </p>
 
-   <h2><a name="part07">7. Access logging</a></h2>
+   <h4><a name="part07">7. Access logging</a></h4>
 
    <p>
       Being able to properly log the activity of a Web application is a
@@ -313,7 +313,7 @@ System.setProperty("java.util.logging.config.file",
       <a href="/learn/guide/2.0#/101-restlet.html">Restlet 2.0 logging documentation</a>.
    </p>
 
-   <h2><a name="part08">8. Displaying error pages</a></h2>
+   <h4><a name="part08">8. Displaying error pages</a></h4>
 
    <p>
       Another common requirement is the ability to customize the status
@@ -334,7 +334,7 @@ System.setProperty("java.util.logging.config.file",
       property.
    </p>
 
-   <h2><a name="part09">9. Guarding access to sensitive resources</a></h2>
+   <h4><a name="part09">9. Guarding access to sensitive resources</a></h4>
 
    <p>
       When you need to secure the access to some Restlets, several
@@ -440,7 +440,7 @@ if (resource.getStatus().isSuccess()) {
       of URIs by default.
    </p>
 
-   <h2><a name="part10">10. URI rewriting and redirection</a></h2>
+   <h4><a name="part10">10. URI rewriting and redirection</a></h4>
 
    <p>
       Another advantage of the Restlet framework is the built-in
@@ -495,7 +495,7 @@ router.attach("/search", extractor);
       formatting its target URIs.
    </p>
 
-   <h2><a name="part11">11. Routers and hierarchical URIs</a></h2>
+   <h4><a name="part11">11. Routers and hierarchical URIs</a></h4>
 
    <p>
       In addition to the Redirector, we have another tool to manage
@@ -614,7 +614,7 @@ router.attach("/users/{user}/orders/{order}", order);
       method.
    </p>
 
-   <h2><a name="part12">12. Reaching target Resources</a></h2>
+   <h4><a name="part12">12. Reaching target Resources</a></h4>
 
    <p>
       In the previous example, we took advantage of the flexible
@@ -717,7 +717,7 @@ public class UserResource extends ServerResource {
       for further details.
    </p>
 
-   <h2><a name="conclusion">Conclusion</a></h2>
+   <h4><a name="conclusion">Conclusion</a></h4>
 
    <p>
       We have already covered many aspects of the framework. Before you
@@ -752,7 +752,7 @@ public class UserResource extends ServerResource {
    </p>
 
    <div class="notes">
-      <h3><a name="notes">Notes</a></h3>
+      <h5><a name="notes">Notes</a></h5>
       <ul>
          <li>We encourage you to run the examples. The full source code is
             available in the latest release.</li>

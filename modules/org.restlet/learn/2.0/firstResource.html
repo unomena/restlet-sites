@@ -10,9 +10,9 @@ window.onload = function () {
 
 <#global title="Restlet 2.0 - First resource" />
 <#global content>
-   <h1>Restlet 2.0 - First resource</h1>
+   <h3>Restlet 2.0 - First resource</h3>
 
-   <h2><a name="toc">Table of contents</a></h2>
+   <h4><a name="toc">Table of contents</a></h4>
 
    <p>
       This page illustrates how a Resource can handle the GET, POST, PUT and
@@ -30,7 +30,7 @@ window.onload = function () {
       <li><a href="#conclusion">Conclusion</a></li>
    </ol>
 
-   <h2><a name="part01">Introduction</a></h2>
+   <h4><a name="part01">Introduction</a></h4>
 
    <p>
       Before starting to develop, we need to briefly introduce the idea of
@@ -78,7 +78,7 @@ window.onload = function () {
       some notions of what Component and Application are.
    </p>
 
-   <h2><a name="part02">The sample application</a></h2>
+   <h4><a name="part02">The sample application</a></h4>
 
    <p>
       Let's begin with the description of our sample application. It manages a
@@ -187,7 +187,7 @@ public class FirstResourceApplication extends Application {
 }
    </pre>
 
-   <h2><a name="part03">Implementation of the Items Resource</a></h2>
+   <h4><a name="part03">Implementation of the Items Resource</a></h4>
 
    <p>
       Let's begin with the Items resource. As seen above, it allows GET and
@@ -337,7 +337,7 @@ public class ItemsResource extends BaseResource {
 }
    </pre>
 
-   <h2><a name="part04">Implementation of the Item Resource</a></h2>
+   <h4><a name="part04">Implementation of the Item Resource</a></h4>
 
    <p>
       Let's continue with the Item resource. As seen above, it allows GET, PUT
@@ -456,7 +456,7 @@ public class ItemResource extends BaseResource {
 }
    </pre>
 
-   <h2><a name="part05">Implementation of the base Resource</a></h2>
+   <h4><a name="part05">Implementation of the base Resource</a></h4>
 
    <p>
       Since our resources share the same need for access to the map of items
@@ -490,7 +490,7 @@ public abstract class BaseResource extends ServerResource {
 }
    </pre>
 
-   <h2><a name="part06">Running the application</a></h2>
+   <h4><a name="part06">Running the application</a></h4>
 
    <p>
       Please refer to the corresponding sections of the
@@ -499,7 +499,7 @@ public abstract class BaseResource extends ServerResource {
       standalone application.
    </p>
 
-   <h2><a name="part07">The client application</a></h2>
+   <h4><a name="part07">The client application</a></h4>
 
    <p>
       Once our Application is running, in a servlet container or a standalone
@@ -600,7 +600,7 @@ public class FirstResourceClientMain {
       <a href="examples/firstResource/sources.zip" title='"First resource application" files'>"First resource application" files</a>.
    </p>
 
-   <h2><a name="conclusion">Conclusion</a></h2>
+   <h4><a name="conclusion">Conclusion</a></h4>
 
    <p>
       This page illustrates the use of one of the central concepts of the
@@ -625,7 +625,7 @@ public class FirstResourceClientMain {
    </p>
 
    <div class="notes">
-      <h3><a name="notes">Notes</a></h3>
+      <h5><a name="notes">Notes</a></h5>
       <ul>
          <li>
             Thanks to Tim Peierls for the feed-back especially about

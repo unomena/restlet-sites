@@ -1,9 +1,9 @@
 <#global title="Restlet 1.0 - Benchmark" />
 <#global content>
 
-   <h1>Restlet 1.0 - Benchmark</h1>
+   <h3>Restlet 1.0 - Benchmark</h3>
 
-   <h2>Introduction</h2>
+   <h4>Introduction</h4>
 
    <p>
       This section describes some performance tests involving the various
@@ -24,7 +24,7 @@
       usable in production environments.
    </p>
 
-   <h2>Environment</h2>
+   <h4>Environment</h4>
 
    <div>
       The tests have been made on a laptop with the following characteristics:<br/>
@@ -98,9 +98,9 @@
       </table>
    </div>
 
-   <h2>Specifications</h2>
+   <h4>Specifications</h4>
 
-   <h3>Stress tool</h3>
+   <h5>Stress tool</h5>
 
    <p>
       The following tests have been made with <a href="http://httpd.apache.org/docs/2.0/programs/ab.html">Apache Bench</a> delivered by Apache HTTP Server 2.0.
@@ -123,7 +123,7 @@ ab -q -t 60 -c %concurrency% -e %csv_test_file%.csv %url_test%
       where %concurrency% took the following values: 1, 20, 80, 300.
    </p>
 
-   <h3>Servlet containers configuration</h3>
+   <h5>Servlet containers configuration</h5>
 
    <p>
       As written in the introduction, both tested Servlet containers Apache
@@ -131,7 +131,7 @@ ab -q -t 60 -c %concurrency% -e %csv_test_file%.csv %url_test%
       They were just installed, and then ready to use.
    </p>
 
-   <h3>Restlet connectors configuration</h3>
+   <h5>Restlet connectors configuration</h5>
 
    <p>
       The Restlet connectors have been tested with their default behaviour.
@@ -154,9 +154,9 @@ ab -q -t 60 -c %concurrency% -e %csv_test_file%.csv %url_test%
 -Djava.util.logging.config.file=%PROD_HOME%/data/config/logging.properties
    </pre>
 
-   <h2>Results</h2>
+   <h4>Results</h4>
 
-   <h3>Results obtained for an HTML page (35 kb)</h3>
+   <h5>Results obtained for an HTML page (35 kb)</h5>
 
    <p style="text-align: center">
       Requests per second (mean)<br/>
@@ -165,7 +165,7 @@ ab -q -t 60 -c %concurrency% -e %csv_test_file%.csv %url_test%
       <img src="images/benchmark-html-timelimit-tpr" alt="benchmark results - html page - time per request" />
    </p>
 
-   <h3 style="margin-top: 30px">Results obtained for a Zip file (8.8 mb)</h3>
+   <h3 style="margin-top: 30px">Results obtained for a Zip file (8.8 mb)</h5>
 
    <p style="text-align: center">
       Requests per second (mean)<br/>
@@ -174,7 +174,7 @@ ab -q -t 60 -c %concurrency% -e %csv_test_file%.csv %url_test%
       <img src="images/benchmark-zip-timelimit-tpr" alt="benchmark results - zip file - time per request"/>
    </p>
 
-   <h2>Conclusion</h2>
+   <h4>Conclusion</h4>
 
    <p>
       These simple tests show that under normal conditions, each connector or

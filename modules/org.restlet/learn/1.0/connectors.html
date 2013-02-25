@@ -11,9 +11,9 @@ window.onload = function () {
 <#global title="Restlet 1.0 - Connectors" />
 <#global content>
 
-<h1>Restlet 1.0 - Connectors</h1>
+<h3>Restlet 1.0 - Connectors</h3>
 
-<h2>Introduction</h2>
+<h4>Introduction</h4>
 
 <p>
    A connector in the REST architecture style is a software element that manages
@@ -35,7 +35,7 @@ window.onload = function () {
    connectors.
 </p>
 
-<h2>Add a connector to your application</h2>
+<h4>Add a connector to your application</h4>
 
 <p>
    All connectors and their dependencies are shipped with the Restlet
@@ -47,7 +47,7 @@ window.onload = function () {
    which completes this subject.
 </p>
 
-<h2>Configuration</h2>
+<h4>Configuration</h4>
 
 <p>
    Each connector looks for its configuration from its context. The latter
@@ -64,11 +64,11 @@ window.onload = function () {
    to the rest of this document for references to these documentation.
 </p>
 
-<h2>List of available connectors</h2>
+<h4>List of available connectors</h4>
 
 <div style="text-align:center">
    <div style="width:45%;float:left; text-align:center;">
-      <h3><a href="#server_connectors">Server connectors</a></h3>
+      <h5><a href="#server_connectors">Server connectors</a></h5>
       <div style="text-align:center;">
          <table class="classic" style="display:inline">
             <tr>
@@ -95,7 +95,7 @@ window.onload = function () {
       </div>
    </div>
    <div style="width:45%;float:right; text-align:center;">
-      <h3><a href="#client_connectors">Client connectors</a></h3>
+      <h5><a href="#client_connectors">Client connectors</a></h5>
       <div style="text-align:center;">
          <table class="classic" style="display:inline">
             <tr>
@@ -140,9 +140,9 @@ window.onload = function () {
    </div>
 </div>
 
-<h1><a name="server_connectors">Server Connectors</a></h1>
+<h3><a name="server_connectors">Server Connectors</a></h3>
 
-<h2>Configuration</h2>
+<h4>Configuration</h4>
 
 <p>
    Here are the <a href="nre/com/noelios/restlet/http/HttpServerHelper">commons parameters</a>
@@ -167,7 +167,7 @@ server.getContext().getParameters().add("useForwardedForHeader", "true");
 server.start();
 </pre>
 
-<h2><a name="asyncweb">AsyncWeb</a></h2>
+<h4><a name="asyncweb">AsyncWeb</a></h4>
 
 <p>
    This connector is based on the open source project <a href="http://docs.safehaus.org/display/ASYNCWEB/">AsyncWeb</a>.
@@ -198,7 +198,7 @@ server.start();
    </ul>
 </div>
 
-<h2><a name="jetty">Jetty</a></h2>
+<h4><a name="jetty">Jetty</a></h4>
 
 <p>
    This connector is based on the <a href="http://www.mortbay.org/">Jetty</a>
@@ -233,7 +233,7 @@ server.start();
    </ul>
 </div>
 
-<h2><a name="simple">Simple</a></h2>
+<h4><a name="simple">Simple</a></h4>
 
 <p>
    This connector is based on <a href="http://www.simpleframework.org/">Simple 3.1</a>
@@ -263,9 +263,9 @@ server.start();
    </ul>
 </div>
 
-<h1><a name="client_connectors">Client Connectors</a></h1>
+<h3><a name="client_connectors">Client Connectors</a></h3>
 
-<h2>Configuration</h2>
+<h4>Configuration</h4>
 
 <p>
    Here are the <a href="nre/com/noelios/restlet/http/HttpClientHelper">commons parameters</a>
@@ -281,7 +281,7 @@ client.getContext().getParameters().add("converter",
                        "com.noelios.restlet.http.HttpClientConverter");
 </pre>
 
-<h2><a name="httpclient">Apache HTTP Client</a></h2>
+<h4><a name="httpclient">Apache HTTP Client</a></h4>
 
 <p>
    This connector is based on <a href="http://jakarta.apache.org/commons/httpclient/">Apache Commons HTTP client</a>.
@@ -320,7 +320,7 @@ client.getContext().getParameters().add("converter",
    </ul>
 </div>
 
-<h2><a name="net">Net</a></h2>
+<h4><a name="net">Net</a></h4>
 
 <p>
    This connector is fully based on the JDK and more precisely on
@@ -341,7 +341,7 @@ client.getContext().getParameters().add("converter",
    </ul>
 </div>
 
-<h2><a name="javamail">JavaMail</a></h2>
+<h4><a name="javamail">JavaMail</a></h4>
 
 <p>
    This connector is based on <a href="http://java.sun.com/products/javamail/">JavaMail</a>
@@ -369,7 +369,7 @@ client.getContext().getParameters().add("converter",
    </ul>
 </div>
 
-<h2><a name="jdbc">JDBC</a></h2>
+<h4><a name="jdbc">JDBC</a></h4>
 
 <p>
    This connector is a client to a JDBC database. It is based on the
@@ -407,7 +407,7 @@ client.getContext().getParameters().add("converter",
    </ul>
 </div>
 
-<h2><a name="nre">NRE Local client</a></h2>
+<h4><a name="nre">NRE Local client</a></h4>
 
 <p>
    This internal connector is shipped with the Restlet Engine

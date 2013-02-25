@@ -1,8 +1,8 @@
 <#global title="Restlet 1.1 - Benchmark" />
 <#global content>
-   <h1>Restlet 1.1 - Benchmark</h1>
+   <h3>Restlet 1.1 - Benchmark</h3>
 
-   <h2>Introduction</h2>
+   <h4>Introduction</h4>
 
    <p>
       This section describes some performance tests involving the various
@@ -22,7 +22,7 @@
       connectors are scalable and usable in production environments.
    </p>
 
-   <h2>Environment</h2>
+   <h4>Environment</h4>
 
    <div>
       The tests have been made on a laptop with the following characteristics:<br/>
@@ -91,9 +91,9 @@
       </table>
    </div>
 
-   <h2>Specifications</h2>
+   <h4>Specifications</h4>
 
-   <h3>Stress tool</h3>
+   <h5>Stress tool</h5>
 
    <p>
       The following tests have been made with <a href="http://httpd.apache.org/docs/2.0/programs/ab.html">Apache Bench</a> delivered by Apache HTTP Server 2.0.
@@ -123,7 +123,7 @@ ab -q -c 1 -n %nbRequests% %url_test%
       where %nbRequests% varied from 1 to 500.
    </p>
 
-   <h3>Restlet connectors configuration</h3>
+   <h5>Restlet connectors configuration</h5>
 
    <p>
       The Restlet connectors have been tested with their default configuration 
@@ -151,7 +151,7 @@ ab -q -c 1 -n %nbRequests% %url_test%
 -Djava.util.logging.config.file=%PROD_HOME%/data/config/logging.properties
    </pre>
 
-   <h3>Servlet containers configuration</h3>
+   <h5>Servlet containers configuration</h5>
 
    <p>
       As written in the introduction, both tested Servlet containers Apache 
@@ -159,9 +159,9 @@ ab -q -c 1 -n %nbRequests% %url_test%
       They were just installed, and then ready to use.
    </p>
 
-   <h2>Results</h2>
+   <h4>Results</h4>
 
-   <h3>First series of tests: variation of the concurrency</h3>
+   <h5>First series of tests: variation of the concurrency</h5>
 
    <table>
       <tr>
@@ -200,7 +200,7 @@ ab -q -c 1 -n %nbRequests% %url_test%
       of concurrent requests.
    </p>
    
-   <h3 style="margin-top: 30px">Second series of tests: variation of the number of requests</h3>
+   <h3 style="margin-top: 30px">Second series of tests: variation of the number of requests</h5>
 
    <table>
       <tr>
@@ -239,7 +239,7 @@ ab -q -c 1 -n %nbRequests% %url_test%
       of all connectors looks generally good.
    </p>
 
-   <h2>Conclusion</h2>
+   <h4>Conclusion</h4>
 
    <p>
       These simple tests show that under normal conditions, each connector 
