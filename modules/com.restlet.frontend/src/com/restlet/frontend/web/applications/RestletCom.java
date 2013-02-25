@@ -40,7 +40,7 @@ import freemarker.template.Configuration;
  * 
  * @author Jerome Louvel
  */
-public class WwwRestletCom extends BaseApplication implements
+public class RestletCom extends BaseApplication implements
         RefreshApplication {
     /** The data file URI. */
     private final String dataUri;
@@ -82,7 +82,7 @@ public class WwwRestletCom extends BaseApplication implements
      *            The Reference to the application's properties file.
      * @throws IOException
      */
-    public WwwRestletCom(String propertiesFileReference) throws IOException {
+    public RestletCom(String propertiesFileReference) throws IOException {
         super(propertiesFileReference);
 
         this.setStatusService(new RefreshStatusService(true, this));

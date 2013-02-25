@@ -118,13 +118,13 @@
     <div id="footer">
       <div class="container">
         <div class="span2 intro below">${labels.footer.intouch['${language}']}</div>
-        <div class="span2a site"><h4><i class="blog-icon"></i><a href="http://blog.restlet.com/">${labels.footer.blog['${language}']}</a></h4></div>
-        <div class="span2b site"><h4><i class="follow-icon"></i><a href="https://twitter.com/restlet_com">${labels.footer.twitter['${language}']}</a></h4></div>
+        <div class="span2a site"><h4><a href="http://blog.restlet.com/"><i class="blog-icon"></i>${labels.footer.blog['${language}']}</a></h4></div>
+        <div class="span2b site"><h4><a href="https://twitter.com/restlet_com"><i class="follow-icon"></i>${labels.footer.twitter['${language}']}</a></h4></div>
         <div class="span4 newsletter"><form action="http://restlet.us4.list-manage1.com/subscribe/post?u=6e9d916ca1faf05c7dc49d21e&id=a8aa911b32" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank"><input type="hidden" value="4" name="group[9053][4]" /><input type="hidden" id="EMAIL" name="EMAIL" value=""/><span id="footerNewsLetterWrapper"><input type="email" name="EMAIL" required="required" placeholder="${labels.footer.newsletter['${language}']}"/><input type="submit" id="footerNewsLetterOkButton" value="OK"></span></form></div>
         <div class="clearBoth"></div>
         <div class="span2 intro below">${labels.footer.sites['${language}']}</div>
         <div class="span2a site">
-          <h4><img src="/images/logo-restlet-small.png" /><a href="http://restlet.com/">Restlet</a></h4>
+          <h4><a href="http://restlet.com/"><img src="/images/logo-restlet-small.png" />Restlet</a></h4>
           <ul class="sub-list">
             <li><a href="http://restlet.com/products/">${labels.footer.restlet.product['${language}']}</a></li>
             <li><a href="http://restlet.com/services/">${labels.footer.restlet.services['${language}']}</a></li>
@@ -132,7 +132,7 @@
           </ul>
         </div>
         <div class="span2b site">
-          <h4><img src="/images/logo-restlet-framework-small.png" /><a href="http://restlet.org/">Restlet Framework</a></h4>
+          <h4><a href="http://restlet.org/"><img src="/images/logo-restlet-framework-small.png" />Restlet Framework</a></h4>
           <ul class="sub-list">
             <li><a href="http://restlet.org/discover/">${labels.footer.restletframework.discover['${language}']}</a></li>
             <li><a href="http://restlet.org/download/">${labels.footer.restletframework.download['${language}']}</a></li>
@@ -141,7 +141,7 @@
           </ul>
         </div>
         <div class="span2c site">
-          <h4><img src="/images/logo-apispark-small.png" /><a href="http://apispark.com/">APISpark</a></h4>
+          <h4><a href="http://apispark.com/"><img src="/images/logo-apispark-small.png" />APISpark</a></h4>
           <ul class="sub-list">
             <li><a href="http://apispark.com/features/user">${labels.footer.apispark.features['${language}']}</a></li>
             <li><a href="http://apispark.com/faq">${labels.footer.apispark.faq['${language}']}</a></li>
@@ -149,14 +149,14 @@
           </ul>
         </div>
         <div class="span2d site">
-          <h4><img src="/images/logo-apispark-support-small.png"/><a href="http://apispark.org/">APISpark Support</a></h4>
+          <h4><a href="http://apispark.org/"><img src="/images/logo-apispark-support-small.png"/>APISpark Support</a></h4>
           <ul class="sub-list">
             <li><a href="http://apispark.org/tutorials/">${labels.footer.apisparksupport.tutorial['${language}']}</a></li>
             <li><a href="http://desk.apispark.org/">${labels.footer.apisparksupport.helpdesk['${language}']}</a></li>
             <li><a href="http://apispark.org/roadmap">${labels.footer.apisparksupport.roadmap['${language}']}</a></li>
           </ul>
         </div>
-        <div id="copyright">Copyright &copy; ${pp.now?string("yyyy")} Restlet <a href="/legal" title="${labels.footer.copyright.legal['${language}']}">${labels.footer.copyright.legal['${language}']}</div>
+        <div id="copyright">Copyright &copy; ${pp.now?string("yyyy")} Restlet - <a href="/legal" title="${labels.footer.copyright.legal['${language}']}">${labels.footer.copyright.legal['${language}']}</div>
       </div>
     </div>
     <!-- generated ${pp.now} -->

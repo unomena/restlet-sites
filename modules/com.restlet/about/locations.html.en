@@ -1,6 +1,6 @@
 <#global content>
 
-<@h3 "-" "north-america-office" "span7">
+<@h3 "-" "north-america-office" "span8">
 <span class="float-right"><img src="/images/photos/office-us.png" /></span>
 <h3>North America office</h3>
 <p>
@@ -16,7 +16,7 @@
 </p>
 </@h3>
 
-<@h3 "-" "europe-office" "span7">
+<@h3 "-" "europe-office" "span8">
 <span class="float-right"><img src="/images/photos/office-fr.png" /></span>
 <h3>Europe office</h3>
 <p>

@@ -1,18 +1,12 @@
 body {
 	font-family: Verdana, Arial;
 	background-image: -moz-linear-gradient(top, #f9fdff, #fff);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f9fdff),
-		color-stop(1, #fff) );
-	filter: progid:      DXImageTransform.Microsoft.gradient(      GradientType=
-		
-		
-		   0, startColorstr=      '#f9fdff', endColorstr=      '#fff' );
-	-ms-filter:
-		"progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f9fdff', endColorstr='#fff')";
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f9fdff), color-stop(1, #fff) );
+	filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#f9fdff', endColorstr='#fff')";
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f9fdff', endColorstr='#fff')";
 }
 
 .topbar {
-	background: #f0f7fd;
 	padding-bottom: 8px;
 }
 

@@ -60,7 +60,7 @@ import freemarker.template.Configuration;
  * 
  * @author Jerome Louvel
  */
-public class WwwRestletOrg extends BaseApplication implements
+public class RestletOrg extends BaseApplication implements
         RefreshApplication {
 
     /**
@@ -168,7 +168,7 @@ public class WwwRestletOrg extends BaseApplication implements
      *            The Reference to the application's properties file.
      * @throws IOException
      */
-    public WwwRestletOrg(String propertiesFileReference) throws IOException {
+    public RestletOrg(String propertiesFileReference) throws IOException {
         super(propertiesFileReference);
 
         this.setStatusService(new RefreshStatusService(true, this));

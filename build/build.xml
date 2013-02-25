@@ -27,8 +27,8 @@
 	<property name="lib" location="../librairies" />
 
 	<property name="www" value="www" />
-	<property name="www-restlet-com" value="${www}/www-restlet-com" />
-	<property name="www-restlet-org" value="${www}/www-restlet-org" />
+	<property name="restlet-com" value="${www}/restlet-com" />
+	<property name="restlet-org" value="${www}/restlet-org" />
 
 	<path id="main.path">
 		<fileset dir="${lib}" includes="**/*.jar" />
@@ -114,18 +114,18 @@
 	</target>
 
 	<target name="generate-templates" description="Generate template-based files.">
-		<!-- generate static files for the site : org.restlet.www, user guide generated with pandoc -->
+		<!-- generate static files for the site : restlet.org, user guide generated with pandoc -->
 		<delete dir="${temp}/owr" />
 		<mkdir dir="${temp}/owr" />
 		<copy todir="${temp}/owr">
-			<fileset dir="../modules/org.restlet.www/" includes="**/*" />
+			<fileset dir="../modules/org.restlet/" includes="**/*" />
 		</copy>
 		<exec executable="sh" osfamily="unix">
 			<arg value="${tmpl}/md/unixtohtml.sh" />
 			<arg value="${temp}/owr" />
 			<arg value="${tmpl}/md/userguide.tmpl" />
 		</exec>
-		<fmpp sourceRoot="${temp}/owr" outputRoot="${temp}/${www-restlet-org}" modes="ignore(**/.svn,**/Thumbs.db)" quiet="reallyQuiet">
+		<fmpp sourceRoot="${temp}/owr" outputRoot="${temp}/${restlet-org}" modes="ignore(**/.svn,**/Thumbs.db)" quiet="reallyQuiet">
 			<data expandProperties="yes">
                 labels:xml(labels.xml)
                 hierarchy:xml(hierarchy.xml)
@@ -142,14 +142,14 @@
 			<exclude name="**/*.ftl" />
 		</fmpp>
 		<delete dir="${temp}/owr" />
-        <!-- generate static files for the site : www.restlet.com -->
+        <!-- generate static files for the site : restlet.com -->
         <delete dir="${temp}/cwr" />
         <mkdir dir="${temp}/cwr" />
         <!-- no translation to French language for the moment. -->
         <copy todir="${temp}/cwr">
-            <fileset dir="../modules/com.restlet.www/" includes="**/*" excludes="**/*.fr" />
+            <fileset dir="../modules/com.restlet/" includes="**/*" excludes="**/*.fr" />
         </copy>
-        <fmpp sourceencoding="UTF-8" outputencoding="UTF-8" sourceRoot="${temp}/cwr" outputRoot="${temp}/${www-restlet-com}" modes="ignore(**/.svn,**/Thumbs.db), copy(javascript/*.js, **/*.css)" quiet="reallyQuiet">
+        <fmpp sourceencoding="UTF-8" outputencoding="UTF-8" sourceRoot="${temp}/cwr" outputRoot="${temp}/${restlet-com}" modes="ignore(**/.svn,**/Thumbs.db), copy(javascript/*.js, **/*.css)" quiet="reallyQuiet">
             <data expandProperties="yes">
                 hierarchy:xml(hierarchy.xml)
                 messages:xml(messages.xml)
@@ -166,8 +166,8 @@
             <exclude name="**/*.ftl*" />
         </fmpp>
         <!-- no translation to French language for the moment. -->
-        <move todir="${temp}/${www-restlet-com}">
-            <fileset dir="${temp}/${www-restlet-com}" includes="**/*.en" />
+        <move todir="${temp}/${restlet-com}">
+            <fileset dir="${temp}/${restlet-com}" includes="**/*.en" />
             <filterchain>
                 <replacestring from=".js.en" to=".js"/>
             </filterchain>
@@ -205,18 +205,18 @@
 	<mkdir dir="${dist}/${dist-path}/conf" />
 	<mkdir dir="${dist}/${dist-path}/bin" />
 	<mkdir dir="${dist}/${dist-path}/lib" />
-	<mkdir dir="${dist}/${dist-path}/${www-restlet-com}" />
-	<mkdir dir="${dist}/${dist-path}/${www-restlet-org}" />
+	<mkdir dir="${dist}/${dist-path}/${restlet-com}" />
+	<mkdir dir="${dist}/${dist-path}/${restlet-org}" />
 
 	<!-- Put everything in ${classes} into the JAR file -->
 	<jar jarfile="${dist}/${dist-path}/lib/com.restlet.frontend.jar" basedir="${classes}" includes="com/restlet/frontend/**" />
 
 	<!-- Copy the Web directories -->
-	<copy todir="${dist}/${dist-path}/${www-restlet-com}">
-		<fileset dir="${temp}/${www-restlet-com}" />
+	<copy todir="${dist}/${dist-path}/${restlet-com}">
+		<fileset dir="${temp}/${restlet-com}" />
 	</copy>
-	<copy todir="${dist}/${dist-path}/${www-restlet-org}">
-		<fileset dir="${temp}/${www-restlet-org}" />
+	<copy todir="${dist}/${dist-path}/${restlet-org}">
+		<fileset dir="${temp}/${restlet-org}" />
 	</copy>
 	<!-- Copy the config file -->
 	<copy todir="${dist}/${dist-path}/conf">

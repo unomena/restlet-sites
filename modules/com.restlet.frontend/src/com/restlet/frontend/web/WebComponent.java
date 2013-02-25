@@ -17,8 +17,8 @@ import org.restlet.routing.VirtualHost;
 
 import com.restlet.frontend.web.applications.MavenRestletOrg;
 import com.restlet.frontend.web.applications.P2RestletOrg;
-import com.restlet.frontend.web.applications.WwwRestletCom;
-import com.restlet.frontend.web.applications.WwwRestletOrg;
+import com.restlet.frontend.web.applications.RestletCom;
+import com.restlet.frontend.web.applications.RestletOrg;
 
 /**
  * The web component managing the Restlet web servers.
@@ -107,14 +107,14 @@ public class WebComponent extends Component {
         // ---------------
         // restlet.org
         // ---------------
-        VirtualHost host = addHost("restlet.org", port, new WwwRestletOrg(
-                "clap://class/config/wwwRestletOrg.properties"), properties);
+        VirtualHost host = addHost("restlet.org", port, new RestletOrg(
+                "clap://class/config/restletOrg.properties"), properties);
         getHosts().add(host);
         // ---------------
         // restlet.com
         // ---------------
-        host = addHost("restlet.com", port, new WwwRestletCom(
-                "clap://class/config/wwwRestletCom.properties"), properties);
+        host = addHost("restlet.com", port, new RestletCom(
+                "clap://class/config/restletCom.properties"), properties);
         getHosts().add(host);
         // -----------------
         // maven.restlet.org

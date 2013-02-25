@@ -134,6 +134,7 @@ body {
 
 .content.container p {
 	margin-bottom: 20px;
+	text-align: justify;
 }
 
 p {

@@ -9,14 +9,16 @@
 <p>
     In addition to the free software that can be downloaded and used with our open source licenses, and our 
     community forums, your subscription includes:
+</p>
 <ul>
     <li>technical support : several levels of service available</li>
     <li>legal protection : we take responsibility in case of IP related issues</li>
     <li>qualified versions : know which one to use in production</li>
 </ul>
-</P
+
 
 <p>Please <a href="mailto:contact@restlet.com?subject=Restlet Framework subscription">contact us</a> for additional details.</p>
+</@h3>
 
 <@h3 "APISpark" "apispark">
 <p>
@@ -25,12 +27,12 @@
 </p>
 <p>
     In addition, we offer custom subscription plans for enterprises that need: 
+</p>
 <ul>
     <li>a single tenant (dedicated) platform instance,</li>
     <li>a dedicated APIs catalog (based on the public one).</li>
     <li>custom branding (white label UI),</li>
 </ul>
-</p>
 
 <p>Please <a href="mailto:contact@restlet.com?subject=APISpark enterprise plan">contact us</a> for additional details.</p>
 </@h3>

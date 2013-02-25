@@ -23,7 +23,7 @@ import org.restlet.resource.ServerResource;
 
 import com.restlet.frontend.objects.BlogEntry;
 import com.restlet.frontend.util.Helper;
-import com.restlet.frontend.web.applications.WwwRestletOrg;
+import com.restlet.frontend.web.applications.RestletOrg;
 
 /**
  * Resource that builds a view of the Noelios's blog feed aimed for the Restlet
@@ -37,7 +37,7 @@ public class FeedGeneralResource extends ServerResource {
 
     @Override
     protected void doInit() throws ResourceException {
-        WwwRestletOrg app = (WwwRestletOrg) getApplication();
+        RestletOrg app = (RestletOrg) getApplication();
         if (app.getFeedGeneral() == null || app.getFeedGeneral().isEmpty()) {
             app.refresh();
         } else {
