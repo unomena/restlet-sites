@@ -362,7 +362,7 @@ ul.toc li,ol.toc li {
 ul.toc li a,ol.toc li a {
 	text-decoration: none;
 	color: #4C4D4D;
-	font-weight: bold;
+	font-weight: normal;
 	line-height: 20px;
 }
 
