@@ -8,7 +8,7 @@ This page will explain you how to run your Restlet application in an
 OSGi environment such as Eclipse Equinox or Apache Felix. For additional
 coverage of OSGi and Restlet, we recommend you to also read [this
 developer's
-page](http://wiki.restlet.org/developers/172-restlet/124-restlet.html).
+page](/participate#/172-restlet/124-restlet.html).
 
 Simple example
 ==============
@@ -74,9 +74,9 @@ connector and attaching Resources to a Router. For this we will reuse
 the Part12 example of the Restlet tutorial.
 
 1.  Create a new "Plug-in Project", name it
-    "[OsgiUsageTest2](http://wiki.restlet.org/docs_2.0/239-restlet/version/default/part/AttachmentData/data "OsgiUsageTest2")
+    "[OsgiUsageTest2](/learn/guide/2.0#/239-restlet/version/default/part/AttachmentData/data "OsgiUsageTest2")
     (application/zip, 6.5 kB,
-    [info](http://wiki.restlet.org/docs_2.0/239-restlet.html))"
+    [info](/learn/guide/2.0#/239-restlet.html))"
     and press "Next \>"
 2.  Select the checkbox to generate an Activator and press "Finish"
 3.  In the Dependencies tab of the manifest editor, import the following
@@ -155,9 +155,9 @@ engine, for example:
     HttpServerHelper(null));
 
 An archive of this test project is [available
-here](http://wiki.restlet.org/docs_2.0/239-restlet/version/default/part/AttachmentData/data "OsgiUsageTest2")
+here](/learn/guide/2.0#/239-restlet/version/default/part/AttachmentData/data "OsgiUsageTest2")
 (application/zip, 6.5 kB,
-[info](http://wiki.restlet.org/docs_2.0/239-restlet.html)).
+[info](/learn/guide/2.0#/239-restlet.html)).
 
 Standalone Equinox deployment
 =============================

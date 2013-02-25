@@ -131,7 +131,7 @@ Available Connectors
     listings.
 -   Client CLAP connector to access to the Classloader resources.
 -   Client and server [RIAP
-    connectors](http://wiki.restlet.org/docs_2.0/13-restlet/48-restlet/86-restlet/45-restlet.html)
+    connectors](/learn/guide/2.0#/13-restlet/48-restlet/86-restlet/45-restlet.html)
     to access to the Restlet internal resources, directly inside the
     JVM, relatively to the current application or virtual host or
     component.

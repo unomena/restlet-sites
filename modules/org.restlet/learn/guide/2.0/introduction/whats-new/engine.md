@@ -20,7 +20,7 @@ Internal HTTP connectors
 
 The internal HTTP connectors were replaced with new ones based
 supporting [the new asynchronous processing features in Restlet
-API](http://wiki.restlet.org/developers/172-restlet/297-restlet.html).
+API](/participate#/172-restlet/297-restlet.html).
 They are actually the only connectors for now, beside the GWT edition,
 supporting those new asynchronous capabilities which should be
 considered as a preview feature at this point. In version 2.1 we attempt
@@ -32,7 +32,7 @@ nature and will provide you production ready performance when we
 leverage non-blocking NIO. This is working in the Restlet Incubator but
 is only planned for the next 2.1 version. For now, you should mainly use
 these connectors for development purpose and [configure
-connectors](http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/325-restlet/37-restlet.html "Connectors")such
+connectors](/learn/guide/2.0#/13-restlet/27-restlet/325-restlet/37-restlet.html "Connectors")such
 as Jetty and Apache HTTP Client when deploying to production.
 
 Internal JAR and ZIP clients

@@ -20,12 +20,12 @@ Java EE edition, in less than 10 minutes. It explains how to create a
 resource that says "hello, world" and run it.
 
 1.  [What do I
-    need?](http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/312-restlet.html#dsy312-restlet_requirements)
+    need?](/learn/guide/2.1#/13-restlet/275-restlet/312-restlet.html#dsy312-restlet_requirements)
 2.  [The "hello, world"
-    application](http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/312-restlet.html#dsy312-restlet_application)
+    application](/learn/guide/2.1#/13-restlet/275-restlet/312-restlet.html#dsy312-restlet_application)
 3.  [Run in a Servlet
-    container](http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/312-restlet.html#dsy312-restlet_servletDeployment)
-4.  [Conclusion](http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/312-restlet.html#dsy312-restlet_conclusion)
+    container](/learn/guide/2.1#/13-restlet/275-restlet/312-restlet.html#dsy312-restlet_servletDeployment)
+4.  [Conclusion](/learn/guide/2.1#/13-restlet/275-restlet/312-restlet.html#dsy312-restlet_conclusion)
 
 What do I need?
 ---------------
@@ -189,7 +189,7 @@ Conclusion
 
 We hope you that enjoyed these first steps and encourage you to check
 [the equivalent page in the Java SE
-edition](http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/311-restlet.html "Restlet edition for Java SE")
+edition](/learn/guide/2.1#/13-restlet/275-restlet/311-restlet.html "Restlet edition for Java SE")
 for standalone deployments of the same application. This can also be a
 convenient way to develop and test your Restlet application before
 actually deploying it in a Java EE application server.

@@ -37,7 +37,7 @@ alias names and custom SSL context factories.
 
 In addition to the parameters that are similar but specific to [each
 type of HTTPS server
-connector](http://wiki.restlet.org/docs_1.1/38-restlet.html),
+connector](/learn/guide/1.1#/38-restlet.html),
 it is possible to configure the SSL connectors using an
 [SslContextFactory](http://restlet.org/learn/javadocs/1.1/nre/com/noelios/restlet/util/SslContextFactory.html),
 in a way that is common to all three types of HTTPS server connectors

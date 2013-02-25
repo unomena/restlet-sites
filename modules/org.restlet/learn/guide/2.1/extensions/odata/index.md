@@ -15,7 +15,7 @@ References
 -   [Javadocs - Restlet extension for
     OData](http://restlet.org/learn/javadocs/2.0/jse/ext/org/restlet/ext/odata/package-summary.html)
 -   [Advanced tutorial on the OData
-    extension](http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet/288-restlet.html "Tutorial")
+    extension](/learn/guide/2.1#/13-restlet/28-restlet/287-restlet/288-restlet.html "Tutorial")
 -   [OData - Protocol
     specification](http://www.odata.org/developers/protocols)
 -   [MSDN - WCF Data
@@ -26,14 +26,14 @@ References
 Table of contents
 =================
 
--   [Introduction](http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_introduction)
+-   [Introduction](/learn/guide/2.1#/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_introduction)
 -   [Code
-    generation](http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_codeGeneration)
+    generation](/learn/guide/2.1#/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_codeGeneration)
 -   [Get the two first building
-    permits](http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_get2FirstBuildingPermits)
+    permits](/learn/guide/2.1#/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_get2FirstBuildingPermits)
 -   [Filter the set of the building
-    permits](http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_filterSetOfPermits)
--   [Conclusion](http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_conclusion)
+    permits](/learn/guide/2.1#/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_filterSetOfPermits)
+-   [Conclusion](/learn/guide/2.1#/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_conclusion)
 
 Introduction
 ============

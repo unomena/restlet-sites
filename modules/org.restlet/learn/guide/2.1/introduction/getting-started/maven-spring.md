@@ -316,8 +316,8 @@ If you now go to your web browser and enter the following URL the
 service, which you have just created, should respond with 'Hello World!'
 
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [![Basecamp Browser](Getting%20Started%20with%20Maven%20and%20Spring-381_files/data.html "Basecamp Browser")](http://wiki.restlet.org/docs_2.1/382-restlet/version/default/part/ImageData/data)
-  [Click to enlarge](http://wiki.restlet.org/docs_2.1/382-restlet/version/default/part/ImageData/data)
+  [![Basecamp Browser](Getting%20Started%20with%20Maven%20and%20Spring-381_files/data.html "Basecamp Browser")](/learn/guide/2.1#/382-restlet/version/default/part/ImageData/data)
+  [Click to enlarge](/learn/guide/2.1#/382-restlet/version/default/part/ImageData/data)
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Accessing the resource via a browser
@@ -359,7 +359,7 @@ Resources
 
 This archive contains all the source code described in this document.
 
-[restlet-basecamp](http://wiki.restlet.org/docs_2.1/384-restlet/version/default/part/AttachmentData/data "restlet-basecamp")
+[restlet-basecamp](/learn/guide/2.1#/384-restlet/version/default/part/AttachmentData/data "restlet-basecamp")
 (application/zip, 8.4 kB,
-[info](http://wiki.restlet.org/docs_2.1/384-restlet.html))
+[info](/learn/guide/2.1#/384-restlet.html))
 

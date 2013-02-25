@@ -6,7 +6,7 @@ Introduction
 
 For a short introduction on the usage of client resource, you should
 read the [first
-client](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet/320-restlet.html "First client")
+client](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet/320-restlet.html "First client")
 page.
 
 Automatic conversion
@@ -31,7 +31,7 @@ subclasses or on the client side to consume it:
 In this case, automatic conversion is handled for you. By default, the
 Restlet Engine support Java object serialization (binary or XML), but
 for more interoperable representations, we suggest to add our [XStream
-extension](http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/264-restlet.html "XStream extension")to
+extension](/learn/guide/2.1#/13-restlet/28-restlet/264-restlet.html "XStream extension")to
 your classpath in order to get clean XML or JSON representations.
 
 Leveraging annotations

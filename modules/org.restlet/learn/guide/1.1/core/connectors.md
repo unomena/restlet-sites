@@ -93,31 +93,31 @@ Version
 
 Protocols
 
-[Internal](http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors")
+[Internal](/learn/guide/1.1#/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors")
 
 1.1
 
 HTTP, RIAP
 
-[Grizzly](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/73-restlet.html "Grizzly extension")
+[Grizzly](/learn/guide/1.1#/13-restlet/28-restlet/73-restlet.html "Grizzly extension")
 
 1.8
 
 HTTP, HTTPS
 
-[Jetty](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/78-restlet.html "Jetty extension")
+[Jetty](/learn/guide/1.1#/13-restlet/28-restlet/78-restlet.html "Jetty extension")
 
 6.1
 
 HTTP, HTTPS, AJP
 
-[Simple](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/82-restlet.html "Simple extension")
+[Simple](/learn/guide/1.1#/13-restlet/28-restlet/82-restlet.html "Simple extension")
 
 3.1
 
 HTTP, HTTPS
 
-[Servlet](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/81-restlet.html "Servlet extension")
+[Servlet](/learn/guide/1.1#/13-restlet/28-restlet/81-restlet.html "Servlet extension")
 
 2.5
 
@@ -132,33 +132,33 @@ Version
 
 Protocols
 
-[Internal](http://wiki.restlet.org/docs_1.1/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors")
+[Internal](/learn/guide/1.1#/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors")
 
 1.1
 
 HTTP, CLAP, FILE, RIAP
 
 [Apache HTTP
-Client](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/75-restlet.html "HTTP Client extension")
+Client](/learn/guide/1.1#/13-restlet/28-restlet/75-restlet.html "HTTP Client extension")
 
 3.1
 
 HTTP, HTTPS
 
-[Net](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/79-restlet.html "Net extension")
+[Net](/learn/guide/1.1#/13-restlet/28-restlet/79-restlet.html "Net extension")
 (JDK's HttpURLConnection)
 
 1.5
 
 HTTP, HTTPS
 
-[JavaMail](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/76-restlet.html "JavaMail extension")
+[JavaMail](/learn/guide/1.1#/13-restlet/28-restlet/76-restlet.html "JavaMail extension")
 
 1.4
 
 SMTP, SMTPS, POP, POPS
 
-[JDBC](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/77-restlet.html "JDBC extension")
+[JDBC](/learn/guide/1.1#/13-restlet/28-restlet/77-restlet.html "JDBC extension")
 
 3.0
 

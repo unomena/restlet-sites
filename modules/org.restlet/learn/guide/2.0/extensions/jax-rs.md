@@ -17,7 +17,7 @@ To run this example, you need the Restlet libraries. Download a 2.0
 version from
 [restlet.org/downloads/](http://restlet.org/downloads/).
 (For a general Restlet example take a look at [the first steps
-examples](http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet.html "First steps")).
+examples](/learn/guide/2.0#/13-restlet/21-restlet/318-restlet.html "First steps")).
 
 Now create a new Java Project, and add the following jars (resp.
 projects) to the classpath (right click on project, Properties, Java
@@ -186,7 +186,7 @@ the Application and sets the Guard and the RoleChecker (if needed).
 
 For details to run this Application in a Servet Container take a look at
 [Restlet
-FAQ](http://wiki.restlet.org/docs_2.0/13-restlet/24-restlet/333-restlet.html "FAQ").
+FAQ](/learn/guide/2.0#/13-restlet/24-restlet/333-restlet.html "FAQ").
 
 You could use this subclass also in the example above:
 

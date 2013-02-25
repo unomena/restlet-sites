@@ -27,7 +27,7 @@ Table of contents
 
 -   Introduction: getting started
 -   [Code
-    generation](http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/287-restlet/288-restlet.html#dsy288-restlet_codeGeneration)
+    generation](/learn/guide/2.1#/13-restlet/28-restlet/287-restlet/288-restlet.html#dsy288-restlet_codeGeneration)
 -   Get the current set of Cafes and Items Get a single entity
 -   Add a new entity
 -   Update an entity
@@ -768,7 +768,7 @@ Access to NTLM secured services
 -------------------------------
 
 Please refer to [this
-document](http://wiki.restlet.org/docs_2.1/13-restlet/27-restlet/46-restlet/112-restlet/364-restlet.html "NTLM authentication")
+document](/learn/guide/2.1#/13-restlet/27-restlet/46-restlet/112-restlet/364-restlet.html "NTLM authentication")
 for how to access NTML secured services.
 
 Support of capability negotiation based on protocol versions

@@ -12,5 +12,5 @@ either a DOM-like or SAX-like way, with a unified API!
 For additional details, please consult the
 [Javadocs](http://restlet.org/learn/javadocs/2.0/jse/ext/org/restlet/ext/rdf/package-summary.html).See
 also the [sample
-application](http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/270-restlet/245-restlet.html "Sample application").
+application](/learn/guide/2.1#/13-restlet/28-restlet/270-restlet/245-restlet.html "Sample application").
 

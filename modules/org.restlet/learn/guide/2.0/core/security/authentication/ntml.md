@@ -6,10 +6,10 @@ Using the "net" extension
 
 At this time, the access to services secured with NTML is supported via
 the ["java.net"
-extension](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/79-restlet.html "Net extension")
+extension](/learn/guide/2.0#/13-restlet/28-restlet/79-restlet.html "Net extension")
 based on the support of NTML authenticated introduced in the JDK5. So,
 add this connector to your application as explained in the
-["connectors"](http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/325-restlet/37-restlet.html "Connectors")
+["connectors"](/learn/guide/2.0#/13-restlet/27-restlet/325-restlet/37-restlet.html "Connectors")
 document.\
  The required step is to setup your custom Authenticator instance wich
 will be referenced each the client connector will issue a request.
@@ -50,11 +50,11 @@ Basically, the following steps are required:
     using the Apache HttpClient and JCIFS libraries
 
 Here is [a sample
-implementation](http://wiki.restlet.org/docs_2.0/363-restlet/version/default/part/AttachmentData/data/MyNtlmHttpClientHelper.java "MyNtlmHttpClientHelper")
+implementation](/learn/guide/2.0#/363-restlet/version/default/part/AttachmentData/data/MyNtlmHttpClientHelper.java "MyNtlmHttpClientHelper")
 (text/x-java, 2.6 kB,
-[info](http://wiki.restlet.org/docs_2.0/363-restlet.html))
+[info](/learn/guide/2.0#/363-restlet.html))
 of such client helper. It extends the one provided by the ["HttpClient"
-extension](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/75-restlet.html "Apache HTTP Client extension")
+extension](/learn/guide/2.0#/13-restlet/28-restlet/75-restlet.html "Apache HTTP Client extension")
 that must be added to your project.
 
 -   Make the Engine register this client helper:

@@ -8,7 +8,7 @@ to get you started. You will find a screencast, first steps and more
 detailed tutorial.
 
 In addition, we highly recommend that you read these [community
-tutorials](http://wiki.restlet.org/community/167-restlet.html)
+tutorials](/participate#/167-restlet.html)
 provided by Restlet users in various forms:
 
 -   Detailled article

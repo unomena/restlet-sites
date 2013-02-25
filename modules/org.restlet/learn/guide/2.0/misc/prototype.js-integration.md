@@ -538,16 +538,16 @@ http://localhost:8182/www/microblog.html.
 ### 
 
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [![running\_applicaion](Prototype.js%20integration-52_files/data.html "running_applicaion")](http://wiki.restlet.org/docs_2.0/53-restlet/version/default/part/ImageData/data)
-  [Click to enlarge](http://wiki.restlet.org/docs_2.0/53-restlet/version/default/part/ImageData/data)
+  [![running\_applicaion](Prototype.js%20integration-52_files/data.html "running_applicaion")](/learn/guide/2.0#/53-restlet/version/default/part/ImageData/data)
+  [Click to enlarge](/learn/guide/2.0#/53-restlet/version/default/part/ImageData/data)
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Checkout Full Code
 ==================
 
-[microblog\_sourcecode](http://wiki.restlet.org/docs_2.0/54-restlet/version/default/part/AttachmentData/data "microblog_sourcecode")
+[microblog\_sourcecode](/learn/guide/2.0#/54-restlet/version/default/part/AttachmentData/data "microblog_sourcecode")
 (application/x-zip, 2.3 MB,
-[info](http://wiki.restlet.org/docs_2.0/54-restlet.html))
+[info](/learn/guide/2.0#/54-restlet.html))
 
 How to custom Finder to replace TunnelService
 =============================================

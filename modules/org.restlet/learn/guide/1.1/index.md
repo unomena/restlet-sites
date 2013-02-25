@@ -9,13 +9,10 @@ framework
 ([http://restlet.org](http://restlet.org/)).
 You can start reading this guide by going to the [introduction on the
 first
-page](http://wiki.restlet.org/docs_1.1/13-restlet/21-restlet.html "Introduction").
+page](/learn/guide/1.1#/13-restlet/21-restlet.html "Introduction").
 
 This effort was started during the 1.1 development cycle and is still a
-work in progress. If you want to help us improve this guide, you can
-check the [Restlet Wiki
-Site](http://wiki.restlet.org/about/2-restlet.html)
-which contains all the necessary information for authors.
+work in progress.
 
 -   [Introduction](introduction/ "Introduction")
     -   [Features](introduction/features "Features")

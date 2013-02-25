@@ -5,22 +5,22 @@ Documentation
 =============
 
 -   [Architecture -
-    Introduction](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/84-restlet/131-restlet.html "Oracle XDB Restlet Adapter - Architecture - Introduction")
--   [Installing](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/84-restlet/132-restlet.html "Oracle XDB Restlet Adapter - Installing")
--   [Testing](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/84-restlet/133-restlet.html "Oracle XDB Restlet Adapter - Testing")
--   [FAQ](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/84-restlet/134-restlet.html "Oracle XDB Restlet Adapter - FAQ")
+    Introduction](/learn/guide/1.1#/13-restlet/28-restlet/84-restlet/131-restlet.html "Oracle XDB Restlet Adapter - Architecture - Introduction")
+-   [Installing](/learn/guide/1.1#/13-restlet/28-restlet/84-restlet/132-restlet.html "Oracle XDB Restlet Adapter - Installing")
+-   [Testing](/learn/guide/1.1#/13-restlet/28-restlet/84-restlet/133-restlet.html "Oracle XDB Restlet Adapter - Testing")
+-   [FAQ](/learn/guide/1.1#/13-restlet/28-restlet/84-restlet/134-restlet.html "Oracle XDB Restlet Adapter - FAQ")
 -   [Future plans - Know
-    caveats](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/84-restlet/135-restlet.html "Oracle XDB Restlet Adapter - Others")
+    caveats](/learn/guide/1.1#/13-restlet/28-restlet/84-restlet/135-restlet.html "Oracle XDB Restlet Adapter - Others")
 
 Using XDB Restlet Adapter within Maven projects
 ===============================================
 
 -   [Introduction, download, compiling and
-    installing](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/84-restlet/138-restlet.html "XMLDB Restet Adapter/Lucene/Maven")
+    installing](/learn/guide/1.1#/13-restlet/28-restlet/84-restlet/138-restlet.html "XMLDB Restet Adapter/Lucene/Maven")
 -   [Running and
-    testing](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/84-restlet/140-restlet.html "XMLDB Restet Adapter/Lucene/Maven - Running/Testing")
+    testing](/learn/guide/1.1#/13-restlet/28-restlet/84-restlet/140-restlet.html "XMLDB Restet Adapter/Lucene/Maven - Running/Testing")
 -   [Implemented
-    services](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/84-restlet/139-restlet.html "XMLDB Restet Adapter/Lucene/Maven - Services implemented")
+    services](/learn/guide/1.1#/13-restlet/28-restlet/84-restlet/139-restlet.html "XMLDB Restet Adapter/Lucene/Maven - Services implemented")
 -   [Todo
-    List](http://wiki.restlet.org/docs_1.1/13-restlet/28-restlet/84-restlet/141-restlet.html "XMLDB Restet Adapter/Lucene/Maven - Todo List")
+    List](/learn/guide/1.1#/13-restlet/28-restlet/84-restlet/141-restlet.html "XMLDB Restet Adapter/Lucene/Maven - Todo List")
 

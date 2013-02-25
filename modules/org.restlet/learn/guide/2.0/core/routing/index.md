@@ -97,7 +97,7 @@ You can also change this configuration only for a specific route:
 
 If you are migrating from version 1.1 to 2.0, we recommend reading the
 [migration
-guide](http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/171-restlet/155-restlet.html "Migration guide from version 1.1 to 2.0")as
+guide](/learn/guide/2.0#/13-restlet/21-restlet/171-restlet/155-restlet.html "Migration guide from version 1.1 to 2.0")as
 well.
 
 Routing mode
@@ -178,9 +178,9 @@ the query, you cannot rely on the URI template based routing feature
 which is more or less based on regular expressions.\
  In this case you have to define your own router (with the "CUSTOM"
 routing mode). A sample implementation is available
-[here](http://wiki.restlet.org/docs_2.0/211-restlet/version/default/part/AttachmentData/data "queryRouter")
+[here](/learn/guide/2.0#/211-restlet/version/default/part/AttachmentData/data "queryRouter")
 (application/zip, 1.8 kB,
-[info](http://wiki.restlet.org/docs_2.0/211-restlet.html)).
+[info](/learn/guide/2.0#/211-restlet.html)).
 
 Matching of template variables
 ------------------------------

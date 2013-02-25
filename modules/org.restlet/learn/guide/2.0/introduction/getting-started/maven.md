@@ -91,7 +91,7 @@ Available artifacts
 
 The following table lists the available artifacts and their group and
 artifact ids. With the introduction of the
-[editions](http://wiki.restlet.org/docs_2.0/13-restlet/275-restlet.html "Restlet Editions")
+[editions](/learn/guide/2.0#/13-restlet/275-restlet.html "Restlet Editions")
 for the Restlet framework, it is necessary to make a distinction between
 an extension for a given edition and the same extension for another
 extension simply because the code of the extension may change between
@@ -101,7 +101,7 @@ the same pattern: "org.restlet.\<edition\>" where "\<edition\>" is
 three-letters code of an edition among: jse (Java SE edition), jee (Java
 EE edition), gae (Google App Engine edition), android (Android edition)
 and gwt (google Web Toolkit edition). You can find
-[here](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/313-restlet.html "Editions matrix")
+[here](/learn/guide/2.0#/13-restlet/28-restlet/313-restlet.html "Editions matrix")
 a full view of the list of extensions and the editions that ship them. 
 
 Group Id

@@ -4,18 +4,18 @@ Restlet.org example
 Table of contents
 =================
 
-1.  [Introduction](http://wiki.restlet.org/docs_2.1/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Introduction)
+1.  [Introduction](/learn/guide/2.1#/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Introduction)
 2.  [Imported
-    classes](http://wiki.restlet.org/docs_2.1/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Imported%20classes)
+    classes](/learn/guide/2.1#/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Imported%20classes)
 3.  [Declaring the Main
-    class](http://wiki.restlet.org/docs_2.1/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Declaring%20the%20Main%20class)
+    class](/learn/guide/2.1#/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Declaring%20the%20Main%20class)
 4.  [Main
-    method](http://wiki.restlet.org/docs_2.1/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Main%20method)
+    method](/learn/guide/2.1#/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Main%20method)
 5.  [Build the
-    component](http://wiki.restlet.org/docs_2.1/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Build%20the%20component)
+    component](/learn/guide/2.1#/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Build%20the%20component)
 6.  [Redirection
-    application](http://wiki.restlet.org/docs_2.1/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Redirection%20Application)
-7.  [Conclusion](http://wiki.restlet.org/docs_2.1/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Conclusion)
+    application](/learn/guide/2.1#/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Redirection%20Application)
+7.  [Conclusion](/learn/guide/2.1#/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Conclusion)
 
 Introduction
 ============

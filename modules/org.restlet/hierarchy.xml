@@ -44,12 +44,10 @@
 		<label>Learn Restlet Framework</label>
 		<title>Learn</title>
 		<sections>
-			<section id="tutorial">
-				<label>Tutorial</label>
+			<!-- <section id="tutorial"> <label>Tutorial</label> </section> -->
+			<section id="guide">
+				<label>User guide</label>
 			</section>
-            <section id="guide">
-                <label>User guide</label>
-            </section>
 			<section id="javadocs">
 				<label>Javadocs</label>
 			</section>
@@ -80,9 +78,7 @@
 			<section id="governance">
 				<label>Governance</label>
 			</section>
-			<section id="faq">
-				<label>FAQ</label>
-			</section>
+			<!-- <section id="faq"> <label>FAQ</label> </section> -->
 		</sections>
 	</section>
 	<section id="error" hidden="true">

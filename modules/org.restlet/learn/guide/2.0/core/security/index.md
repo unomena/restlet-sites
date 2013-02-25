@@ -108,7 +108,7 @@ Restlet API
 
 The Restlet API in version 2.0 has fully refactored its security model
 ([see specifications
-here](http://wiki.restlet.org/developers/172-restlet/212-restlet.html)).
+here](/participate#/172-restlet/212-restlet.html)).
 It is based on some properties of the ClientInfo class: user and roles.
 This model relies on Java security principals in a way similar to JAAS.
 But Restlet security API and JAAS are distinct, and some bridges are
@@ -255,7 +255,7 @@ alias names and custom SSL context factories.
 
 In addition to the parameters that are similar but specific to [each
 type of HTTPS server
-connector](http://wiki.restlet.org/docs_2.0/38-restlet.html),
+connector](/learn/guide/2.0#/38-restlet.html),
 it is possible to configure the SSL connectors using an
 [SslContextFactory](http://restlet.org/learn/javadocs/2.0/engine/org/restlet/engine/util/SslContextFactory.html),
 in a way that is common to all three types of HTTPS server connectors
@@ -407,7 +407,7 @@ Sample code
 ===========
 
 [Security
-sample](http://wiki.restlet.org/docs_2.0/307-restlet/version/default/part/AttachmentData/data/Security%20sample.zip "Security sample")
+sample](/learn/guide/2.0#/307-restlet/version/default/part/AttachmentData/data/Security%20sample.zip "Security sample")
 (application/x-zip, 2.7 kB,
-[info](http://wiki.restlet.org/docs_2.0/307-restlet.html))
+[info](/learn/guide/2.0#/307-restlet.html))
 

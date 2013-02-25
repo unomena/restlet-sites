@@ -22,7 +22,7 @@ dependency versions for example.
 ![](Misc-60_files/maven1.png)
 
 For details on building Restlet with Maven, please read [this short
-page](http://wiki.restlet.org/developers/179-restlet/240-restlet.html)
+page](/participate#/179-restlet/240-restlet.html)
 on our developers wiki. Note that we have also adjusted our Maven
 GroupId (only “org.restlet” is used now) are redistributed third-party
 libraries are now packaged with a “org.restlet.lib.” ArtifactId prefix.
@@ -37,7 +37,7 @@ OAuth extension
 
 The OAuth extension available in Restlet 1.1 has been moved to the
 [Restlet
-Incubator](http://wiki.restlet.org/docs_2.0/257-restlet.html?branch=main "Restlet Incubator")
+Incubator](/learn/guide/2.0#/257-restlet.html?branch=main "Restlet Incubator")
 as it would require too much work to get aligned with the new Restlet
 security and resource APIs in version 2.0. Note that this is temporary
 and we definitely want to reintroduce this feature in Restlet 2.1.

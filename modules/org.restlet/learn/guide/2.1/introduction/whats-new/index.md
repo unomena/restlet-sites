@@ -29,7 +29,7 @@ Scalable internal connector
 ### Non blocking NIO
 
 In version 2.0, we have added support for [asynchronous processing of
-calls](http://wiki.restlet.org/developers/172-restlet/297-restlet.html)
+calls](/participate#/172-restlet/297-restlet.html)
 as a preview feature, including provisional responses (1xx status code
 in HTTP). This feature was only usable with the internal HTTP connector
 that is part of the Restlet engine (org.restlet.jar file), relying on
@@ -39,7 +39,7 @@ per connection which limits its scalability, even if persistent
 connections and pipelining and now supported.
 
 There, we have started work on a new [NIO version of this internal
-connector](http://wiki.restlet.org/developers/172-restlet/354-restlet.html)that
+connector](/participate#/172-restlet/354-restlet.html)that
 leverages the non-blocking features of NIO to support a large number of
 concurrent connections and messages with only a single IO thread! The
 first results were very promising and we want to complete this connector
@@ -53,7 +53,7 @@ session. It has been designed based on the HTTP protocol, using the same
 syntax for request and messages and with a similar processing flow,
 leveraging a lot provisional responses. We explored over the past months
 the possibility to provide a [SIP
-connector](http://wiki.restlet.org/developers/257-restlet/300-restlet.html)
+connector](/participate#/257-restlet/300-restlet.html)
 based on the same internal connector that we use for HTTP and already we
 have a prototype working in the Restlet Incubator.
 
@@ -100,7 +100,7 @@ solution.
 
 There will also be a focus on facilitating the validation of form
 submissions based on [this specifications
-document](http://wiki.restlet.org/developers/172-restlet/g5/367-restlet.html).
+document](/participate#/172-restlet/g5/367-restlet.html).
 
 Conneg service
 --------------
@@ -131,7 +131,7 @@ adds a lot of value. In version 2.1, we will add those new related
 extensions:
 
 -   [EMF
-    extension](http://wiki.restlet.org/developers/257-restlet/345-restlet.html)
+    extension](/participate#/257-restlet/345-restlet.html)
     : to convert EMF representation beans into XML, XMI or HTML
     representations
 
@@ -149,5 +149,5 @@ installers, we want to add a possibility to install and update Restlet
 modules and dependent libraries via the Eclipse IDE directly. For this
 we will provide an update site. Restlet modules are already OSGi bundles
 so this should be straightforward. See the [specifications
-page](http://wiki.restlet.org/developers/172-restlet/g1/417-restlet.html).
+page](/participate#/172-restlet/g1/417-restlet.html).
 

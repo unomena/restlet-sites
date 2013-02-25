@@ -152,7 +152,7 @@
           <h4><a href="http://apispark.org/"><img src="/images/logo-apispark-support-small.png"/>APISpark Support</a></h4>
           <ul class="sub-list">
             <li><a href="http://apispark.org/tutorials/">${labels.footer.apisparksupport.tutorial['${language}']}</a></li>
-            <li><a href="http://desk.apispark.org/">${labels.footer.apisparksupport.helpdesk['${language}']}</a></li>
+            <li><a href="http://desk.apispark.org/" target="_blank">${labels.footer.apisparksupport.helpdesk['${language}']}</a></li>
             <li><a href="http://apispark.org/roadmap">${labels.footer.apisparksupport.roadmap['${language}']}</a></li>
           </ul>
         </div>

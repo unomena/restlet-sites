@@ -155,7 +155,7 @@ Links
 -   [Apache FileUpload
     library](http://commons.apache.org/fileupload/)
 -   [Server
-    connectors](http://wiki.restlet.org/docs_1.1/38-restlet.html)
+    connectors](/learn/guide/1.1#/38-restlet.html)
 -   [Sample code of FileUpload extension (zip
-    file)](http://wiki.restlet.org/docs_1.1/42-restlet.html "Usage example of FileUpload extension")
+    file)](/learn/guide/1.1#/42-restlet.html "Usage example of FileUpload extension")
 

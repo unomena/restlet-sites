@@ -11,9 +11,9 @@ and demonstrates how the compiled GWT application can be bundled into an
 executable server JAR.
 
 Download [Restlet GWT -- Simple
-Example](http://wiki.restlet.org/docs_2.1/298-restlet/version/default/part/AttachmentData/data "testGwtRestlet-2.0")
+Example](/learn/guide/2.1#/298-restlet/version/default/part/AttachmentData/data "testGwtRestlet-2.0")
 (application/force-download, 3.0 MB,
-[info](http://wiki.restlet.org/docs_2.1/298-restlet.html))
+[info](/learn/guide/2.1#/298-restlet.html))
 
 This is a simple example demonstrating some basic patterns for using
 Restlet and GWT.  It produces an executable JAR file which depends only

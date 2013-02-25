@@ -58,7 +58,7 @@ Annotate methods that store representations.
 Those annotations are specific to the Restlet API and shouldn't be
 confused with those of the JAX-RS API. For support of the JAX-RS API by
 the Restlet Framework, you should look at [the provided
-extension](http://wiki.restlet.org/docs_2.1/13-restlet/28-restlet/57-restlet.html "JAX-RS extension").
+extension](/learn/guide/2.1#/13-restlet/28-restlet/57-restlet.html "JAX-RS extension").
 
 Annotations parameter
 ---------------------

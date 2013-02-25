@@ -63,7 +63,7 @@ Lucene extension
 ================
 
 In addition, a [Lucene
-extension](http://wiki.restlet.org/developers/172-restlet/215-restlet.html)has
+extension](/participate#/172-restlet/215-restlet.html)has
 been created to host the Solr client connector contributed by Rémi
 Dewitte who will lead this extension. There is also a TikaRepresentation
 available to leverage Lucene Tika subproject when extracting metadata
@@ -114,7 +114,7 @@ concept of resources and their representations (REST) and the expression
 of meaningful links between those resources (RDF).
 
 We have written a [detailed
-specification](http://wiki.restlet.org/developers/172-restlet/160-restlet.html?branch=docs-1_1&language=en)
+specification](/participate#/172-restlet/160-restlet.html?branch=docs-1_1&language=en)
 and gathered feed-back from the community and especially [Henry
 Story](http://blogs.sun.com/bblfish/),
 an expert in this area.
@@ -153,7 +153,7 @@ SLF4J extension
 The Restlet logging, based on JULI (java.util.logging), now has an
 extension mechanism allowing an efficient redirection to alternate
 mechanisms like log4j as [explained in the
-wiki](http://wiki.restlet.org/docs_2.0/13-restlet/48-restlet/101-restlet.html).
+wiki](/learn/guide/2.0#/13-restlet/48-restlet/101-restlet.html).
 A new SLF4J extension has been added to facilitate the replacement of
 Restlet’s default logger facade.
 

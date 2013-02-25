@@ -6,15 +6,15 @@ including set up and debugging tools in common development environments
 such as:
 
 -   [Eclipse
-    IDE](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/192-restlet/93-restlet.html "Getting started with Eclipse IDE")
--   [Maven](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/192-restlet/92-restlet.html "Getting started with Maven")
+    IDE](/learn/guide/2.1#/13-restlet/21-restlet/192-restlet/93-restlet.html "Getting started with Eclipse IDE")
+-   [Maven](/learn/guide/2.1#/13-restlet/21-restlet/192-restlet/92-restlet.html "Getting started with Maven")
 -   [Maven and
-    Spring](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/192-restlet/381-restlet.html "Getting Started with Maven and Spring")
+    Spring](/learn/guide/2.1#/13-restlet/21-restlet/192-restlet/381-restlet.html "Getting Started with Maven and Spring")
 -   [Debugging
-    tools](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/192-restlet/102-restlet.html "Debugging tools")
+    tools](/learn/guide/2.1#/13-restlet/21-restlet/192-restlet/102-restlet.html "Debugging tools")
 
 In addition, we highly recommend that you read these [community
-tutorials](http://wiki.restlet.org/community/167-restlet.html)
+tutorials](/participate#/167-restlet.html)
 provided by Restlet users in various forms:
 
 -   Detailled article

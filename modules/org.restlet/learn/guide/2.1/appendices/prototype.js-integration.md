@@ -11,9 +11,9 @@ in,we should review some knowledge if you never know or forget it:
 -   [What's
     RESTful](http://www.xfront.com/REST-Web-Services.html)[?](http://www.xfront.com/REST-Web-Services.html)
 -   [What's
-    Restlet?](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/22-restlet.html "Features")
+    Restlet?](/learn/guide/2.1#/13-restlet/21-restlet/22-restlet.html "Features")
 -   [How to use
-    Restlet?](http://wiki.restlet.org/docs_2.1/13-restlet/21-restlet/318-restlet.html "First steps")
+    Restlet?](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet.html "First steps")
 -   [How to use db4o to simplify
     persistence?](http://db4o.com/about/productinformation/resources/db4o-6.3-tutorial-java.pdf)
 -   [How to use JSON in
@@ -538,16 +538,16 @@ http://localhost:8182/www/microblog.html.
 ### 
 
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [![running\_applicaion](Prototype.js%20integration-52_files/data.html "running_applicaion")](http://wiki.restlet.org/docs_2.1/53-restlet/version/default/part/ImageData/data)
-  [Click to enlarge](http://wiki.restlet.org/docs_2.1/53-restlet/version/default/part/ImageData/data)
+  [![running\_applicaion](Prototype.js%20integration-52_files/data.html "running_applicaion")](/learn/guide/2.1#/53-restlet/version/default/part/ImageData/data)
+  [Click to enlarge](/learn/guide/2.1#/53-restlet/version/default/part/ImageData/data)
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Checkout Full Code
 ==================
 
-[microblog\_sourcecode](http://wiki.restlet.org/docs_2.1/54-restlet/version/default/part/AttachmentData/data "microblog_sourcecode")
+[microblog\_sourcecode](/learn/guide/2.1#/54-restlet/version/default/part/AttachmentData/data "microblog_sourcecode")
 (application/x-zip, 2.3 MB,
-[info](http://wiki.restlet.org/docs_2.1/54-restlet.html))
+[info](/learn/guide/2.1#/54-restlet.html))
 
 How to custom Finder to replace TunnelService
 =============================================

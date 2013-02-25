@@ -124,7 +124,7 @@ Asynchronous
 
 Comment
 
-[Internal](http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors")
+[Internal](/learn/guide/2.0#/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors")
 
 2.0
 
@@ -134,7 +134,7 @@ Yes
 
 Recommended for development
 
-[Grizzly](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/73-restlet.html "Grizzly extension")
+[Grizzly](/learn/guide/2.0#/13-restlet/28-restlet/73-restlet.html "Grizzly extension")
 
 1.9
 
@@ -144,7 +144,7 @@ No
 
 Experimental integration
 
-[Jetty](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/78-restlet.html "Eclipse Jetty extension")
+[Jetty](/learn/guide/2.0#/13-restlet/28-restlet/78-restlet.html "Eclipse Jetty extension")
 
 7.0
 
@@ -154,7 +154,7 @@ No
 
 Recommended for robust and scalable deployments
 
-[Netty](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/296-restlet.html "JBoss Netty extension")
+[Netty](/learn/guide/2.0#/13-restlet/28-restlet/296-restlet.html "JBoss Netty extension")
 
 3.1
 
@@ -164,7 +164,7 @@ No
 
 Experimental integration
 
-[Simple](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/82-restlet.html "Simple Framework extension")
+[Simple](/learn/guide/2.0#/13-restlet/28-restlet/82-restlet.html "Simple Framework extension")
 
 4.1
 
@@ -174,7 +174,7 @@ No
 
 Recommended for lightweight deployments
 
-[Servlet](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/81-restlet.html "Servlet extension")
+[Servlet](/learn/guide/2.0#/13-restlet/28-restlet/81-restlet.html "Servlet extension")
 
 2.5
 
@@ -199,7 +199,7 @@ Proxy
 
 Comment
 
-[Internal](http://wiki.restlet.org/docs_2.0/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors")
+[Internal](/learn/guide/2.0#/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors")
 
 2.0
 
@@ -212,7 +212,7 @@ No
 Stable but HTTP connectors are recommended for development only
 
 [Apache HTTP
-Client](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/75-restlet.html "Apache HTTP Client extension")
+Client](/learn/guide/2.0#/13-restlet/28-restlet/75-restlet.html "Apache HTTP Client extension")
 
 4.0
 
@@ -225,7 +225,7 @@ Yes
 Recommended for robust and scalable deployments
 
 [Lucene
-Solr](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/229-restlet.html "Lucene extension")
+Solr](/learn/guide/2.0#/13-restlet/28-restlet/229-restlet.html "Lucene extension")
 
 2.9
 
@@ -237,7 +237,7 @@ No
 
 Stable
 
-[Net](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/79-restlet.html "Net extension")
+[Net](/learn/guide/2.0#/13-restlet/28-restlet/79-restlet.html "Net extension")
 (JDK's HttpURLConnection)
 
 1.5
@@ -250,7 +250,7 @@ Yes
 
 Recommended for lightweight deployments
 
-[JavaMail](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/76-restlet.html "JavaMail extension")
+[JavaMail](/learn/guide/2.0#/13-restlet/28-restlet/76-restlet.html "JavaMail extension")
 
 1.4
 
@@ -262,7 +262,7 @@ No
 
 Stable
 
-[JDBC](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/77-restlet.html "JDBC extension")
+[JDBC](/learn/guide/2.0#/13-restlet/28-restlet/77-restlet.html "JDBC extension")
 
 3.0
 

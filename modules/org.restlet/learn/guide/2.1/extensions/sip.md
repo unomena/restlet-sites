@@ -11,7 +11,7 @@ NIO/HTTP internal connector, providing excellent scalability and
 performance.
 
 For now, you can get more details on the [Restlet/SIP specifications
-page](http://wiki.restlet.org/developers/257-restlet/300-restlet.html).
+page](/participate#/257-restlet/300-restlet.html).
 
 Features
 ========

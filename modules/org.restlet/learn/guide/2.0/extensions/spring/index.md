@@ -4,15 +4,15 @@ Spring extension
 Table of contents
 =================
 
-1.  [Introduction](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/70-restlet.html#dsy70-restlet_Introduction)
+1.  [Introduction](/learn/guide/2.0#/13-restlet/28-restlet/70-restlet.html#dsy70-restlet_Introduction)
 2.  [Integration
-    modes](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/70-restlet/194-restlet.html "Spring extension - Integration modes")
+    modes](/learn/guide/2.0#/13-restlet/28-restlet/70-restlet/194-restlet.html "Spring extension - Integration modes")
 3.  [Configuring Restlet
-    beans](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/70-restlet/195-restlet.html "Spring extension - Configuring Restlet beans")
+    beans](/learn/guide/2.0#/13-restlet/28-restlet/70-restlet/195-restlet.html "Spring extension - Configuring Restlet beans")
 4.  [A complete
-    example](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/70-restlet/196-restlet.html "Spring extension - A complete example")
+    example](/learn/guide/2.0#/13-restlet/28-restlet/70-restlet/196-restlet.html "Spring extension - A complete example")
 5.  [Configuration of Restlet Resources in
-    Spring](http://wiki.restlet.org/docs_2.0/13-restlet/28-restlet/70-restlet/197-restlet.html "Spring extension - Configuration of Restlet resources")
+    Spring](/learn/guide/2.0#/13-restlet/28-restlet/70-restlet/197-restlet.html "Spring extension - Configuration of Restlet resources")
 
 Introduction
 ============

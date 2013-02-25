@@ -12,7 +12,7 @@ necessary.
 A good way to start a debugging session is to put a breakpoint inside
 the handle() method or inside the constructor of your Resource subclass.
 Think also about turning one the access and application
-[loggings](http://wiki.restlet.org/docs_2.1/13-restlet/275-restlet/311-restlet/101-restlet.html "Logging").
+[loggings](/learn/guide/2.1#/13-restlet/275-restlet/311-restlet/101-restlet.html "Logging").
 
 Tools
 =====

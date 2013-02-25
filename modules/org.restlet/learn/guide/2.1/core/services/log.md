@@ -26,7 +26,7 @@ configuration file by setting a system property like:
 For details on the configuration file format, please check the [JDK's
 LogManager](http://java.sun.com/j2se/1.5.0/docs/api/index.html?java/util/logging/LogManager.html)
 class. You can also have a look at the [Restlet 2.0 logging
-documentation](http://wiki.restlet.org/docs_2.0/101-restlet.html).
+documentation](/learn/guide/2.0#/101-restlet.html).
 
 Default access log format
 =========================

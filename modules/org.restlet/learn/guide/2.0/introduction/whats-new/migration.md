@@ -58,5 +58,5 @@ advantage of doing this is that your contract is well isolated and can
 be written first. Most importantly, it can be used on the client-side by
 the ClientResource class to remotely call your server resource. See an
 example in this [first application
-page](http://wiki.restlet.org/docs_2.0/13-restlet/21-restlet/318-restlet/303-restlet.html "First application").
+page](/learn/guide/2.0#/13-restlet/21-restlet/318-restlet/303-restlet.html "First application").
 

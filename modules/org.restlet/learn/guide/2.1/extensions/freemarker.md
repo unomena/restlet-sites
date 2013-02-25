@@ -23,5 +23,5 @@ For additional details, please consult the
 [Javadocs](http://restlet.org/learn/javadocs/2.1/jse/ext/org/restlet/ext/freemarker/package-summary.html).
 
 You can also have a look at this sample
-[application](http://wiki.restlet.org/docs_2.1/410-restlet/version/2/part/8/data?branch=docs-2_1&language=default).
+[application](/learn/guide/2.1#/410-restlet/version/2/part/8/data?branch=docs-2_1&language=default).
 
