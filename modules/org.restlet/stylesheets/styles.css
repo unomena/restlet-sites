@@ -227,7 +227,7 @@ ul.sub-list {
 }
 
 .btn-group .btn:not(.dropdown-toggle){
-    width: 140px;
+    width: 180px;
     text-align: left;
     background-color: #fff;
     background-image:none;
@@ -750,4 +750,16 @@ div.content.footerWrapper {
 form, form > input {
     margin:0px;
     padding:0px;
+}
+
+.downloadsection .left {
+    width: 260px;
+}
+
+.downloadsection .center {
+    width: 320px;
+}
+
+.downloadsection .right {
+    width: 260px;
 }
