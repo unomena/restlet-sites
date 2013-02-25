@@ -1,36 +1,34 @@
 <#global content>
-    <div class='content container first'>
-      <div class='span5'>
-        <h3>Our vision</h3>
-        <p>We think that web APIs will trigger a major technological revolution, during which a new generation of web
-        sites, accessible by any type of machine in a cross­channel way will be built. Our products including Restlet
-        Framework, the leading RESTful web API framework for Java, as well as APISpark, the first all­-in-­one web
-        API platform.
-        </p>
-      </div>
-      <div class='span5'>
-        <p style="line-height: 40px;"><a href="http://restlet.org">Restlet Framework</a> <span style="float:right"><img src="/images/logo-restlet.png"/></span></p>
-        <p>Restlet Framework is the leading RESTful web API framework for Java. First software, across all languages,
-           to have proposed a development framework designed from the REST concepts in 2005. First also by the
-           quality of its community of users and contributors. Finally, first by the richness of its features set!
-        </p>
+<@h3>
+    <h3>Our vision</h3>
+    <p>We think that web APIs will trigger a major technological revolution, during which a new generation of web
+    sites, accessible by any type of machine in a cross­channel way will be built.
+    </p>
+    <p>Our products including Restlet Framework, the leading RESTful web API framework for Java, as well as 
+    APISpark, the first all­-in-­one web API platform.
+    </p>
 
-        <p style="line-height: 40px;"><a href="http://apispark.com">APISpark</a> <span style="float:right"><img src="/images/apispark-logo.png"/></span></>
-        <p>APISpark is an innovative cloud platform (PaaS) that lets you create, host, manage and use web APIs in
-           flash. Using the Restlet Framework at its core, APISpark radically simplifies the web API experience, the
-           time­to­market and the overall cost to get started and to scale.
-        </p>
+    <h3>Restlet Framework<span style="float:right"><img src="/images/logo-restlet.png"/></span></h3>
+    <p><a href="http://restlet.org">Restlet Framework</a> is the leading RESTful web API framework for Java. First software, across all languages,
+       to have proposed a development framework designed from the REST concepts in 2005. First also by the
+       quality of its community of users and contributors. Finally, first by the richness of its features set!
+    </p>
 
-        <a href="./references">References</a>
-        <p>Here are some of our latest references. <a href="/products/references">Learn more</a></p>
-        <div class="references">
-          <span class="reference"><img src="/images/user-arc90.png"/></span>
-          <span class="reference"><img src="/images/user-coradiant.png"/></span>
-          <span class="reference"><img src="/images/user-google.png"/></span><br/>
-          <span class="reference"><img src="/images/user-jalios.png"/></span>
-          <span class="reference"><img src="/images/user-nasa.png"/></span>
-          <span class="reference"><img src="/images/user-rapt.png"/></span>
-        </div>
-      </div>
+    <h3>APISpark<span style="float:right"><img src="/images/apispark-logo.png"/></span></h3>
+    <p><a href="http://apispark.com">APISpark</a> is an innovative cloud platform (PaaS) that lets you create, host, manage and use web APIs in
+       flash. Using the Restlet Framework at its core, APISpark radically simplifies the web API experience, the
+       time­to­market and the overall cost to get started and to scale.
+    </p>
+
+    <h3>References</h3>
+    <p>Here are some of our latest references. <a href="/products/references">Learn more</a></p>
+    <div class="references">
+      <span class="reference"><img src="/images/user-arc90.png"/></span>
+      <span class="reference"><img src="/images/user-coradiant.png"/></span>
+      <span class="reference"><img src="/images/user-google.png"/></span><br/>
+      <span class="reference"><img src="/images/user-jalios.png"/></span>
+      <span class="reference"><img src="/images/user-nasa.png"/></span>
+      <span class="reference"><img src="/images/user-rapt.png"/></span>
     </div>
+</@h3>
 </#global>
