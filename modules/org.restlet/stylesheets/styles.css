@@ -172,10 +172,12 @@ a {
 	text-align: center;
 }
 
-
-
 .content li {
     color: #757575;
+}
+
+.content p {
+    text-align: justify;
 }
 
 .content .follow-icon {
