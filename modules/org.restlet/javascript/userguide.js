@@ -13,7 +13,9 @@ function loadBranches() {
      };
      cBranches.children().click(function() {
           setBranch(this.id);
-          $(location).attr('href',"/learn/guide/" + branch + "/");
+  		var oldBranch = branch;
+		setBranch(this.id);
+		$(location).attr('href', $(location).attr('href').replace(oldBranch, branch));
      });
 };
 function refresh() {

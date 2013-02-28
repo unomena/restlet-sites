@@ -31,7 +31,7 @@
 <#list javascript_files as javascript_file>
       <script                type="text/javascript"     src="${javascript_file}"></script>
 </#list>
-<#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!""))>
+<#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>
       <script                type="text/javascript"     src="/javascript/jquery-1.9.0.min.js"></script>
       <script                type="text/javascript"     src="/javascript/jquery-cookie.js"></script>
       <script                type="text/javascript"     src="/javascript/jsclass-core.js"></script>
@@ -45,6 +45,8 @@
       <script                type="text/javascript"     src="/javascript/javadocs.js"></script>
     <#elseif ("guide" == currentSubSection!"")>
       <script                type="text/javascript"     src="/javascript/userguide.js"></script>
+    <#elseif ("tutorial" == currentSubSection!"")>
+      <script                type="text/javascript"     src="/javascript/tutorial.js"></script>
     </#if>
 </#if>
       <script type="text/javascript">
@@ -68,7 +70,7 @@
              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
 */
-<#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!""))>
+<#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>
     $(document).ready(function() {
         init($("#cBranch"));
     });
@@ -125,7 +127,7 @@
 </#list>
 </#compress>
     <div class='container<#if "-"=currentSection> topics</#if> content'>
-    <#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorials" == currentSubSection!""))>${branchSwitch!""}</#if>    
+    <#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>${branchSwitch!""}</#if>    
       ${content}
     </div>
     <div class="content footerWrapper">
