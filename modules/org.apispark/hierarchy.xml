@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE menus []>
+<!-- Data file that declares the hierarchy of sections and sub sections -->
+<sections>
+	<section id="-" hidden="true">
+		<label>RESTful web framework for Java</label>
+        <sections>
+            <section id="features">
+                <label>Features</label>
+            </section>
+            <section id="quotes">
+                <label>User quotes</label>
+            </section>
+            <section id="firststeps">
+                <label>First steps</label>
+            </section>
+            <section id="faq">
+                <label>FAQ</label>
+            </section>
+        </sections>
+	</section>
+	<section id="error" hidden="true">
+		<label>Error page</label>
+		<title>Error page</title>
+		<sections>
+			<section id="status-100">
+				<label>Informational status</label>
+			</section>
+			<section id="status-400">
+				<label>Client error</label>
+			</section>
+			<section id="status-500">
+				<label>Server error</label>
+			</section>
+		</sections>
+	</section>
+</sections>

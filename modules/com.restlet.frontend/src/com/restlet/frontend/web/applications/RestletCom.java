@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.restlet.Restlet;
-import org.restlet.data.ChallengeScheme;
 import org.restlet.data.CharacterSet;
 import org.restlet.data.LocalReference;
 import org.restlet.data.MediaType;
@@ -23,13 +22,10 @@ import org.restlet.resource.Directory;
 import org.restlet.routing.Router;
 import org.restlet.routing.Template;
 import org.restlet.routing.TemplateRoute;
-import org.restlet.security.ChallengeAuthenticator;
-import org.restlet.security.MapVerifier;
 
 import com.restlet.frontend.web.resources.company.FeedGeneralResource;
 import com.restlet.frontend.web.resources.company.FeedReleasesResource;
 import com.restlet.frontend.web.resources.company.FeedSummaryResource;
-import com.restlet.frontend.web.resources.company.RestletComRefreshResource;
 import com.restlet.frontend.web.services.CacheFilter;
 import com.restlet.frontend.web.services.RefreshStatusService;
 
@@ -40,15 +36,12 @@ import freemarker.template.Configuration;
  * 
  * @author Jerome Louvel
  */
-public class RestletCom extends BaseApplication implements
-        RefreshApplication {
-    /** The data file URI. */
-    private final String dataUri;
+public class RestletCom extends BaseApplication implements RefreshApplication {
 
     /** List of current Restlet feeds. */
     private List<Entry> feedGeneral;
 
-    /** URI of the general Noelios feed. */
+    /** URI of the general Restlet feed. */
     private final String feedGeneralAtomUri;
 
     /** List of current Restlet feeds. */
@@ -66,12 +59,6 @@ public class RestletCom extends BaseApplication implements
     /** Freemarker configuration object. */
     private final Configuration fmc;
 
-    /** Login for protected pages. */
-    private final String login;
-
-    /** Password for protected pages. */
-    private final String password;
-
     /** The Web file URI. */
     private final String wwwUri;
 
@@ -87,15 +74,12 @@ public class RestletCom extends BaseApplication implements
 
         this.setStatusService(new RefreshStatusService(true, this));
 
-        this.dataUri = getProperties().getProperty("data.uri");
         this.wwwUri = getProperties().getProperty("www.uri");
-        this.login = getProperties().getProperty("admin.login");
-        this.password = getProperties().getProperty("admin.password");
 
         this.feedSummaryUri = getProperties().getProperty(
-                "feed.noelios.summary");
+                "feed.restlet.summary");
         this.feedGeneralAtomUri = getProperties().getProperty(
-                "feed.noelios.general.atom");
+                "feed.restlet.general.atom");
         this.feedReleasesAtomUri = getProperties().getProperty(
                 "feed.restlet.releases.atom");
 
@@ -116,27 +100,6 @@ public class RestletCom extends BaseApplication implements
     public Restlet createInboundRoot() {
         // Create the root router
         Router router = new Router(getContext());
-
-        // Guarding access to sensitive services
-        ChallengeAuthenticator guard = new ChallengeAuthenticator(getContext(),
-                ChallengeScheme.HTTP_BASIC, "Admin section");
-        MapVerifier verifier = new MapVerifier();
-        verifier.getLocalSecrets().put(this.login, this.password.toCharArray());
-        guard.setVerifier(verifier);
-
-        Router adminRouter = new Router(getContext());
-        Directory reportsDir = new Directory(getContext(), this.dataUri
-                + "/log/reports");
-        adminRouter.attach("/reports", reportsDir);
-        adminRouter.attach("/refresh", RestletComRefreshResource.class);
-
-        Directory adminDir = new Directory(getContext(), this.wwwUri + "/admin");
-        adminDir.setNegotiatingContent(true);
-        adminDir.setDeeplyAccessible(true);
-        adminRouter.attach("/", adminDir);
-
-        guard.setNext(adminRouter);
-        router.attach("/admin", guard);
 
         router.attach("/feeds/summary", FeedSummaryResource.class);
         router.attach("/feeds/general", FeedGeneralResource.class);
@@ -199,7 +162,7 @@ public class RestletCom extends BaseApplication implements
     public synchronized void start() throws Exception {
         // Update the context
         getContext().getAttributes().put("feed", this.feedSummaryUri);
-        getContext().getAttributes().put("feed-noelios-general",
+        getContext().getAttributes().put("feed-restlet-general",
                 this.feedGeneralAtomUri);
         getContext().getAttributes().put("feed-restlet-releases",
                 this.feedReleasesAtomUri);
@@ -214,10 +177,10 @@ public class RestletCom extends BaseApplication implements
             // Get the feed
             ClientResource cr = new ClientResource(this.feedGeneralAtomUri);
             Representation rep = cr.get(MediaType.APPLICATION_ATOM);
-            Feed noeliosFeed = null;
+            Feed restletFeed = null;
             if (rep != null && rep.isAvailable()) {
                 try {
-                    noeliosFeed = new Feed(rep);
+                    restletFeed = new Feed(rep);
                 } catch (IOException e) {
                     getLogger().warning(
                             "Cannot parse the general feed." + e.getMessage());
@@ -238,12 +201,12 @@ public class RestletCom extends BaseApplication implements
 
             // Aggregate the two feeds : avoid doublons, and take only one entry
             // from release feed.
-            if (noeliosFeed != null && restletReleasesFeed != null) {
+            if (restletFeed != null && restletReleasesFeed != null) {
                 ArrayList<Entry> digestEntries = new ArrayList<Entry>();
                 boolean rrEmpty = restletReleasesFeed.getEntries().isEmpty();
                 String rrFirstId = rrEmpty ? null : restletReleasesFeed
                         .getEntries().get(0).getId();
-                for (Entry nEntry : noeliosFeed.getEntries()) {
+                for (Entry nEntry : restletFeed.getEntries()) {
                     boolean found = false;
                     if (!rrEmpty && !nEntry.getId().equals(rrFirstId)) {
                         for (Entry rrEntry : restletReleasesFeed.getEntries()) {
@@ -258,7 +221,7 @@ public class RestletCom extends BaseApplication implements
                     }
                 }
                 setFeedSummary(digestEntries);
-                setFeedGeneral(noeliosFeed.getEntries());
+                setFeedGeneral(restletFeed.getEntries());
                 setFeedReleases(restletReleasesFeed.getEntries());
             }
         } catch (Exception e) {

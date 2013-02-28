@@ -18,7 +18,7 @@ import org.restlet.resource.ResourceException;
 import org.restlet.resource.ServerResource;
 
 /**
- * Resource that builds a view of the Noelios's blog feed aimed for the Noelios
+ * Resource that builds a view of the Restlet's blog feed aimed for the restlet
  * Web site.
  */
 public class RestletComFeedResource extends ServerResource {
@@ -33,15 +33,15 @@ public class RestletComFeedResource extends ServerResource {
         Representation result = null;
 
         ClientResource cr = new ClientResource((String) getContext()
-                .getAttributes().get("feed-noelios-general"));
+                .getAttributes().get("feed-restlet-general"));
         Representation rep = cr.get(MediaType.APPLICATION_ATOM);
-        Feed noeliosFeed = null;
+        Feed restletFeed = null;
         if (rep != null && rep.isAvailable()) {
             try {
-                noeliosFeed = new Feed(rep);
+                restletFeed = new Feed(rep);
             } catch (IOException e) {
                 getLogger().warning(
-                        "Cannot parse the Noelios feed." + e.getMessage());
+                        "Cannot parse the Restlet feed." + e.getMessage());
             }
         }
 
@@ -54,17 +54,17 @@ public class RestletComFeedResource extends ServerResource {
                 restletReleasesFeed = new Feed(rep);
             } catch (IOException e) {
                 getLogger().warning(
-                        "Cannot parse the Noelios feed." + e.getMessage());
+                        "Cannot parse the restlet feed." + e.getMessage());
             }
         }
 
         // Aggregate the two feeds
-        if (noeliosFeed != null && restletReleasesFeed != null) {
+        if (restletFeed != null && restletReleasesFeed != null) {
             boolean rrEmpty = restletReleasesFeed.getEntries().isEmpty();
             String rrFirstId = rrEmpty ? null : restletReleasesFeed
                     .getEntries().get(0).getId();
             List<Entry> list = new ArrayList<Entry>();
-            for (Entry nEntry : noeliosFeed.getEntries()) {
+            for (Entry nEntry : restletFeed.getEntries()) {
                 boolean found = false;
                 if (!rrEmpty && !nEntry.getId().equals(rrFirstId)) {
                     for (Entry rrEntry : restletReleasesFeed.getEntries()) {
@@ -78,9 +78,9 @@ public class RestletComFeedResource extends ServerResource {
                     list.add(nEntry);
                 }
             }
-            noeliosFeed.getEntries().clear();
-            noeliosFeed.getEntries().addAll(list);
-            result = noeliosFeed;
+            restletFeed.getEntries().clear();
+            restletFeed.getEntries().addAll(list);
+            result = restletFeed;
         }
 
         return result;

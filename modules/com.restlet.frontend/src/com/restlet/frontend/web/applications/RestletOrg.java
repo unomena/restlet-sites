@@ -423,10 +423,10 @@ public class RestletOrg extends BaseApplication implements
             // Get the feed
             cr = new ClientResource(this.feedGeneralAtomUri);
             Representation rep = cr.get(MediaType.APPLICATION_ATOM);
-            Feed noeliosFeed = null;
+            Feed restletFeed = null;
             if (rep != null && rep.isAvailable()) {
                 try {
-                    noeliosFeed = new Feed(rep);
+                    restletFeed = new Feed(rep);
                 } catch (IOException e) {
                     getLogger().warning(
                             "Cannot parse the general feed." + e.getMessage());
@@ -447,12 +447,12 @@ public class RestletOrg extends BaseApplication implements
 
             // Aggregate the two feeds : avoid doublons, and take only one entry
             // from release feed.
-            if (noeliosFeed != null && restletReleasesFeed != null) {
+            if (restletFeed != null && restletReleasesFeed != null) {
                 ArrayList<Entry> digestEntries = new ArrayList<Entry>();
                 boolean rrEmpty = restletReleasesFeed.getEntries().isEmpty();
                 String rrFirstId = rrEmpty ? null : restletReleasesFeed
                         .getEntries().get(0).getId();
-                for (Entry nEntry : noeliosFeed.getEntries()) {
+                for (Entry nEntry : restletFeed.getEntries()) {
                     boolean found = false;
                     if (!rrEmpty && !nEntry.getId().equals(rrFirstId)) {
                         for (Entry rrEntry : restletReleasesFeed.getEntries()) {
@@ -467,7 +467,7 @@ public class RestletOrg extends BaseApplication implements
                     }
                 }
                 setFeedSummary(digestEntries);
-                setFeedGeneral(noeliosFeed.getEntries());
+                setFeedGeneral(restletFeed.getEntries());
                 setFeedReleases(restletReleasesFeed.getEntries());
             }
         } catch (Exception e) {
@@ -588,13 +588,21 @@ public class RestletOrg extends BaseApplication implements
         redirect(router, "/learn/", "/learn/tutorial");
         redirect(router, "/participate", "/participate/");
 
+        
+        redirect(router, "learn/1.0/tutorial", "/learn/tutorial/1.0");
+        redirect(router, "learn/1.1/tutorial", "/learn/tutorial/1.1");
+        redirect(router, "learn/2.0/tutorial", "/learn/tutorial/2.0");
+        
         redirectBranch(router, "/learn/guide/stable", "/learn/guide/{branch}",
                 "stable");
         redirectBranch(router, "/learn/guide/testing", "/learn/guide/{branch}",
                 "testing");
+        redirectBranch(router, "/learn/tutorial", "/learn/tutorial/{branch}",
+                null);
         redirectBranch(router, "/learn/guide", "/learn/guide/{branch}", null);
         redirectBranch(router, "/learn/javadocs", "/learn/javadocs/{branch}",
                 null);
+        
     }
 
     @Override

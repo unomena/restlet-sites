@@ -519,17 +519,17 @@ div.content.footerWrapper {
 	font-size: 12px;
 }
 
-.userguideswitch {
+.branchwitch {
 	float: right;
 	width: 200px;
 }
 
-.userguideswitch .btn-group .btn:not(.dropdown-toggle){
+.branchwitch .btn-group .btn:not(.dropdown-toggle){
     width:50px;
     margin-left:20px;
 }
 
-.userguideswitch .dropdown-menu {
+.branchwitch .dropdown-menu {
 	min-width: 50px;
 	margin-left: 20px;
 }

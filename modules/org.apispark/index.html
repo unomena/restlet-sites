@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/images/favicon-api-support.gif"/>
+    <title>APISpark Support</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet"></link>
+    <link href="/stylesheets/styles.css" rel="stylesheet"></link>
+    <link href="/stylesheets/bootstrap-responsive.css" rel="stylesheet"></link>
+
+    <script type="text/javascript" src="/javascript/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="/javascript/jsclass-core.js"></script>
+    <script type="text/javascript" src="/javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/javascript/json-minified.js"></script>
+    <script type="text/javascript" src="/javascript/restlet-client.js"></script>
+    
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var clientResource = new ClientResource("/restletFeed");
+        clientResource.get(function(representation) {
+            var jsonRepresentation = new JsonRepresentation(representation);
+
+            var listContent = "";
+            var elements = jsonRepresentation.getObject();
+            if(elements.length && elements.length>0){
+                listContent = '<h4 class="blog">News</h4><h5 class="blog"><a href="http://blog.restlet.com">Our blog&nbsp;<img style="margin:5px" alt="Syndication feed" src="/images/feed-20.png"></a></h5>';
+                listContent += '<ul class="blog">';
+                for (var i=0; i < elements.length; i++) {
+                    listContent += createFeedElement(elements[i]);
+                }
+                listContent += '</ul>';
+            }
+            $("#restletFeed").html(listContent);
+        }, MediaType.APPLICATION_JSON);
+
+        $("#searchTopicButton").click(function() {
+            $(location).attr('href',"https://www.google.com/search?q=apispark+" + $("#searchArea").val());            
+        });
+
+        $("#signupButton").click(function() {
+            $(location).attr('href',"http://restlet.us4.list-manage2.com/subscribe?u=6e9d916ca1faf05c7dc49d21e&id=a8aa911b32");            
+        });
+
+    });
+
+    // newsletter
+    createFeedElement = function(element) {
+        var result = "<li>";
+        result += element.published;
+        result += "&nbsp;<a href=\""+element.uri+"\">"+element.title+"</a>";
+        result += "</li>";
+        return result;
+    };
+    </script>
+    
+  </head>
+
+  <body>
+    <div class='topbar'>
+      <div class='header'>
+        <div class='container'>
+          <a class='brand' href="/" title='APISpark Support'>
+            <img alt='APISpark Support' height='132' src='/images/apispark-support-logo.png' width='348' />
+          </a>
+          <ul class='nav'>
+            <li><a href="/tutorials">Tutorials</a></li>
+            <!--<li><a class='' href=''>User Guide</a></li>-->
+            <li><a href='http://desk.apispark.org' target="_blank">Help Desk</a></li>
+            <li><a href='/roadmap'>Road Map</a></li>
+          </ul>
+          <div id="toolSignInButtonWrapper">
+            <div id="toolSignInButton"><a class="rpxnow" onclick="return false;" href="http://apispark.rpxnow.com/openid/v2/signin?token_url=http%3A%2F%2Fbeta.api-spark.com/signin">Sign in</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='hero ac header1'>
+      <div class='container'>
+        <div class="span6">
+          <h3>Learn how to use APISpark,<br/>the all-in-one platform for web APIs!</h3>
+          <p>Find online resources, tutorials and answers to all your questions for successful web API products.</p>
+        </div>
+        <div id="superBee"></div> 
+      </div>
+    </div>
+    <div class='hero ac header2'>
+      <div class='container'>
+        <div class="span4">
+          <h4>Looking for help?</h4>
+          <input id="searchArea" type="text" class="searchArea" placeholder="Your topic of interest">&nbsp;<button id="searchTopicButton" class="btn search"><i class="searchIcon"></i></button>
+        </div>
+        <div class="span4">
+          <h4>Not an APISpark user yet?</h4>
+          <button id="signupButton" class="btn signup">Sign up to APISpark</button>
+        </div>
+      </div>
+    </div>
+    <div class='container topics content'>
+      <div class='span3 left section'>
+        <div>
+          <a href="/tutorials"><div class="logo tutorials"></div></a>
+          <h2>Tutorials</h2>
+          <p>Get started with APISpark with a series of visual tutorials. See how a web API such as "Hello, world!" can be developed.<br/><a href="/tutorials">Learn more</a></p>
+        </div>
+      </div>
+<!-- 
+      <div class='span2 center section'>
+        <div>
+          <div class="logo userguide"></a></div>
+          <h2>User Guide</h2>
+        </div>
+      </div>
+ -->
+      <div class='span3 center section'>
+        <div>
+          <a href="http://desk.apispark.org" target="_blank"><div class="logo helpdesk"></div></a>
+          <h2>Help Desk</h2>
+          <p>Couldn't find an answer to your question in the tutorials or in the user guide? Please consider submitting to our help desk.<br/><a href="http://desk.apispark.org" target="_blank">Learn more</a></p>
+        </div>
+      </div>
+      <div class='span3 right section'>
+        <div>
+          <a href="/roadmap"><div class="logo roadmap"></div></a>
+          <h2>Road Map</h2>
+          <p>What to know what new features are coming up next, what were the latest enhancement released on the platform?<br/><a href="/roadmap">Learn more</a></p>
+        </div>
+      </div>
+
+      <div class="clearBoth"></div>
+      <div class="span7 left section">
+        <div id="restletFeed"></div>
+      </div>
+      <div class="clearBoth"></div>
+      <div class="emptySeparator"></div>
+    </div>
+
+      <div class="content footerWrapper">
+        <div class="footer"></div>
+      </div>
+
+    <div id="footer">
+      <div class="container">
+        <div class="span2 intro below">Stay in touch:</div>
+        <div class="span2a site"><h4><a href="http://blog.restlet.com/"><i class="blog-icon"></i>Our blog</a></h4></div>
+        <div class="span2b site"><h4><a href="https://twitter.com/apispark"><i class="follow-icon"></i>Follow Us</a></h4></div>
+        <div class="span4 newsletter"><form action="http://restlet.us4.list-manage1.com/subscribe/post?u=6e9d916ca1faf05c7dc49d21e&id=a8aa911b32" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank"><input type="hidden" value="2" name="group[9053][2]" /><input type="hidden" id="EMAIL" name="EMAIL" value=""/><span id="footerNewsLetterWrapper"><input type="email" name="EMAIL" required="required" placeholder="Newsletter (no spam)"/><input type="submit" id="footerNewsLetterOkButton" value="OK"></span></form></div>
+        <div class="clearBoth"></div>
+        <div class="span2 intro below">Our sites</div>
+        <div class="span2a site">
+          <h4><a href="http://restlet.com/"><img src="/images/logo-restlet-small.png"/>Restlet</a></h4>
+          <ul class="sub-list">
+            <li><a href="http://restlet.com/products/">Products</a></li>
+            <li><a href="http://restlet.com/services/">Services</a></li>
+            <li><a href="http://restlet.com/about/">About Us</a></li>
+          </ul>
+        </div>
+        <div class="span2b site">
+          <h4><a href="http://restlet.org/"><img src="/images/logo-restlet-framework-small.png"/>Restlet Framework</a></h4>
+          <ul class="sub-list">
+            <li><a href="http://restlet.org/discover/">Discover</a></li>
+            <li><a href="http://restlet.org/download/">Download</a></li>
+            <li><a href="http://restlet.org/learn/">Learn</a></li>
+            <li><a href="http://restlet.org/participate/">Participate</a></li>
+          </ul>
+        </div>
+        <div class="span2c site">
+          <h4><a href="http://apispark.com/"><img src="/images/logo-apispark-small.png"/>APISpark</a></h4>
+          <ul class="sub-list">
+            <li><a href="http://apispark.com/features/user">Features</a></li>
+            <li><a href="http://apispark.com/faq">FAQ</a></li>
+            <li><a href="http://apispark.com/about">About Us</a></li>
+          </ul>
+        </div>
+        <div class="span2d site">
+          <h4><a href="http://apispark.org/"><img src="/images/logo-apispark-support-small.png"/>APISpark Support</a></h4>
+          <ul class="sub-list">
+            <li><a href="http://apispark.org/tutorials">Tutorials</a></li>
+            <li><a href="http://desk.apispark.org/" target="_blank">Help Desk</a></li>
+            <li><a href="http://apispark.org/roadmap">Road Map</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="copyright">Copyright &copy; 2013 Restlet - <a href="http://restlet.com/legal" title="Legal notice">Legal notice</a></div>
+    </div>
+    <script type="text/javascript">
+      var rpxJsHost = (("https:" == document.location.protocol) ? "https://" : "http://static.");
+      document.write(unescape("%3Cscript src='" + rpxJsHost +
+        "rpxnow.com/js/lib/rpx.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      RPXNOW.overlay = true;
+      RPXNOW.language_preference = 'en';
+    </script>
+  </body>
+</html>

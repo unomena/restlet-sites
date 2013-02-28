@@ -148,8 +148,8 @@
 </div>
 </#global>
 
-<#global userGuideBranchSwitch>
-<div class='center userguideswitch'>
+<#global branchSwitch>
+<div class='center branchwitch'>
     <form class="form-horizontal">
         <div class="control-group">
             <label class="control-label">Branch:</label>

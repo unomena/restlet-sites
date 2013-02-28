@@ -26,7 +26,7 @@ import com.restlet.frontend.util.Helper;
 import com.restlet.frontend.web.applications.RestletOrg;
 
 /**
- * Resource that builds a view of the Noelios's blog feed aimed for the Restlet
+ * Resource that builds a view of the restlet's blog feed aimed for the Restlet
  * Web site.
  */
 public class FeedGeneralResource extends ServerResource {

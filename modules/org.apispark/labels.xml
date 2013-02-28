@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE labels []>
+
+<!-- Data file that declares localizable labels -->
+<labels>
+    <footer>
+        <blog>
+            <en>Our blog</en>
+            <fr>Notre blog</fr>
+        </blog>
+        <newsletter>
+            <en>Newsletter (no spam)</en>
+            <fr>Newsletter (pas de spam)</fr>
+        </newsletter>
+        <sites>
+            <en>Our sites</en>
+            <fr>Nos sites</fr>
+        </sites>
+        <twitter>
+            <en>Follow Us</en>
+            <fr>Suivez nous</fr>
+        </twitter>
+        <intouch>
+            <en>Stay in touch:</en>
+            <fr>Restez en contact :</fr>
+        </intouch>
+        <restlet>
+            <product>
+                <en>Products</en>
+                <fr>Produits</fr>
+            </product>
+            <services>
+                <en>Services</en>
+                <fr>Services</fr>
+            </services>
+            <about>
+                <en>About Us</en>
+                <fr>A propos de nous</fr>
+            </about>
+        </restlet>
+        <restletframework>
+            <discover>
+                <en>Discover</en>
+                <fr>Découvrir</fr>
+            </discover>
+            <download>
+                <en>Download</en>
+                <fr>Télécharger</fr>
+            </download>
+            <learn>
+                <en>Learn</en>
+                <fr>apprendre</fr>
+            </learn>
+            <participate>
+                <en>Participate</en>
+                <fr>Participer</fr>
+            </participate>
+        </restletframework>
+        <apispark>
+            <features>
+                <en>Features</en>
+                <fr>Fonctionnalités</fr>
+            </features>
+            <faq>
+                <en>FAQ</en>
+                <fr>FAQ</fr>
+            </faq>
+            <about>
+                <en>About Us</en>
+                <fr>A propos de nous</fr>
+            </about>
+        </apispark>
+        <apisparksupport>
+            <tutorial>
+                <en>Tutorials</en>
+                <fr>Tutoriel</fr>
+            </tutorial>
+            <helpdesk>
+                <en>Help Desk</en>
+                <fr>Support</fr>
+            </helpdesk>
+            <roadmap>
+                <en>Road Map</en>
+                <fr>Roadmap</fr>
+            </roadmap>
+        </apisparksupport>
+        <copyright>
+            <legal>
+                <en>Legal Notice</en>
+                <fr>Mentions légales</fr>
+            </legal>
+        </copyright>
+    </footer>
+   <summaryRestletBlog>Summary of the Restlet latest news</summaryRestletBlog>
+   <restletBlog>Restlet latest news</restletBlog>
+   <sectionTitleError>Error</sectionTitleError>
+</labels>

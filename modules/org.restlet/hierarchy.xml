@@ -44,7 +44,7 @@
 		<label>Learn Restlet Framework</label>
 		<title>Learn</title>
 		<sections>
-			<!-- <section id="tutorial"> <label>Tutorial</label> </section> -->
+			<section id="tutorial"> <label>Tutorial</label> </section>
 			<section id="guide">
 				<label>User guide</label>
 			</section>

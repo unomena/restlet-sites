@@ -125,7 +125,7 @@
 </#list>
 </#compress>
     <div class='container<#if "-"=currentSection> topics</#if> content'>
-    <#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!""))>${userGuideBranchSwitch!""}</#if>    
+    <#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorials" == currentSubSection!""))>${branchSwitch!""}</#if>    
       ${content}
     </div>
     <div class="content footerWrapper">
