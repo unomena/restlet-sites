@@ -77,7 +77,7 @@ function setDownloadButton() {
 		} else {
 			urlChangesLog += version.minorVersion;
 		}
-		urlChangesLog += "/jse/changes";
+		urlChangesLog += "/changes";
 
 		$('#download').append(
 				'<p><button class="btn btn-large btn-success" type="button">Download '
