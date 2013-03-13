@@ -186,29 +186,21 @@ function refresh(distroId) {
 	}
 
 	$("#" + cBranches.attr('id') + '-bt').empty();
-	$("#" + cBranches.attr('id') + '-bt').append(
-			"<strong>" + branch + "</strong>");
+	$("#" + cBranches.attr('id') + '-bt').append("<strong>" + branch + "</strong>");
 	$("#" + cReleases.attr('id') + '-bt').empty();
-	$("#" + cReleases.attr('id') + '-bt').append(
-			"<strong>" + version.fullVersionCompact + "</strong>");
+	$("#" + cReleases.attr('id') + '-bt').append("<strong>" + version.fullVersionCompact + "</strong>");
 	$("#" + cEditions.attr('id') + '-bt').empty();
-	$("#" + cEditions.attr('id') + '-bt').append(
-			"<strong>" + edition.longname + "</strong>");
+	$("#" + cEditions.attr('id') + '-bt').append("<strong>" + edition.longname + "</strong>");
 	$("#" + cTypesDistribution.attr('id') + '-bt').empty();
-	window.location.hash = "#branch=" + branch + "&release=" + version.id
-			+ "&edition=" + edition.id + "&distribution=" + distributionId;
+	window.location.hash = "#branch=" + branch + "&release=" + version.id + "&edition=" + edition.id + "&distribution=" + distributionId;
 	if ("zip" == distributionId) {
-		$("#" + cTypesDistribution.attr('id') + '-bt').append(
-				"<strong>ZIP file</strong>");
+		$("#" + cTypesDistribution.attr('id') + '-bt').append("<strong>ZIP file</strong>");
 	} else if ("exe" == distributionId) {
-		$("#" + cTypesDistribution.attr('id') + '-bt').append(
-				"<strong>Windows installer</strong>");
+		$("#" + cTypesDistribution.attr('id') + '-bt').append("<strong>Windows installer</strong>");
 	} else if ("maven" == distributionId) {
-		$("#" + cTypesDistribution.attr('id') + '-bt').append(
-				"<strong>Maven</strong>");
+		$("#" + cTypesDistribution.attr('id') + '-bt').append("<strong>Maven</strong>");
 	} else if ("p2" == distributionId) {
-		$("#" + cTypesDistribution.attr('id') + '-bt').append(
-				"<strong>OSGi</strong>");
+		$("#" + cTypesDistribution.attr('id') + '-bt').append("<strong>OSGi</strong>");
 	}
 	setDownloadButton();
 	// listDistributions();
@@ -226,19 +218,13 @@ function setDownloadButton() {
 		}
 		urlChangesLog += "/jse/changes";
 
-		$('#download').append(
-				'<p><button class="btn btn-large btn-success" type="button">Download '
-						+ version.fullVersionCompact + '</button></p>');
-		$('#download')
-				.append('<p>File size: ' + distribution.fileSize + '</p>');
+		$('#download').append('<p><button class="btn btn-large btn-success" type="button">Download ' + version.fullVersionCompact + '</button></p>');
+		$('#download').append('<p>File size: ' + distribution.fileSize + '</p>');
 		$('#download').append('<p>Date: ' + version.published + '</p>');
-		$('#download').append(
-				'<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
+		$('#download').append('<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
 		$('#download button').click(
 				function() {
-					document.location.href = "/download/"
-							+ version.minorVersion + "/"
-							+ distribution.fileName;
+					document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
 				});
 	}
 }

@@ -25,8 +25,7 @@ function loadQualifiers() {
 	cQualifiers.empty();
 	for ( var i = 0; q = qualifiers[i]; i++) {
 		cQualifiers.append('<li id="' + q.id + '">' + q.name + '</li>');
-	}
-	;
+	};
 	cQualifiers.children().click(function() {
 		setQualifier(this.id);
 		refresh();
@@ -39,8 +38,7 @@ function loadEditions() {
 			cEditions.append('<li id="' + edition.id + '">' + edition.longname
 					+ '</li>');
 		}
-	}
-	;
+	};
 	cEditions.children().click(function() {
 		setEdition(this.id);
 		refresh();
@@ -69,19 +67,13 @@ function setDownloadButton() {
 		}
 		urlChangesLog += "/changes";
 
-		$('#download').append(
-				'<p><button class="btn btn-large btn-success" type="button">Download '
-						+ version.fullVersionCompact + '</button></p>');
-		$('#download')
-				.append('<p>File size: ' + distribution.fileSize + '</p>');
+		$('#download').append('<p><button class="btn btn-large btn-success" type="button">Download ' + version.fullVersionCompact + '</button></p>');
+		$('#download').append('<p>File size: ' + distribution.fileSize + '</p>');
 		$('#download').append('<p>Date: ' + version.published + '</p>');
-		$('#download').append(
-				'<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
+		$('#download').append('<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
 		$('#download button').click(
 				function() {
-					document.location.href = "/download/"
-							+ version.minorVersion + "/"
-							+ distribution.fileName;
+					document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
 				});
 	}
 }
@@ -90,29 +82,23 @@ function refresh() {
 	// Look for the current distribution.
 	distribution = getDistribution(distributionId);
 	$("#" + cQualifiers.attr('id') + '-bt').empty();
-	$("#" + cQualifiers.attr('id') + '-bt').append(
-			"<strong>" + qualifier.name + "</strong>");
+	$("#" + cQualifiers.attr('id') + '-bt').append("<strong>" + qualifier.name + "</strong>");
 	$("#" + cEditions.attr('id') + '-bt').empty();
-	$("#" + cEditions.attr('id') + '-bt').append(
-			"<strong>" + edition.longname + "</strong>");
+	$("#" + cEditions.attr('id') + '-bt').append("<strong>" + edition.longname + "</strong>");
 	$("#" + cTypesDistribution.attr('id') + '-bt').empty();
 	
 	if ("zip" == distributionId) {
-		$("#" + cTypesDistribution.attr('id') + '-bt').append(
-				"<strong>ZIP file</strong>");
+		$("#" + cTypesDistribution.attr('id') + '-bt').append("<strong>ZIP file</strong>");
 	} else if ("exe" == distributionId) {
-		$("#" + cTypesDistribution.attr('id') + '-bt').append(
-				"<strong>Windows installer</strong>");
+		$("#" + cTypesDistribution.attr('id') + '-bt').append("<strong>Windows installer</strong>");
 	} else if ("maven" == distributionId) {
-		$("#" + cTypesDistribution.attr('id') + '-bt').append(
-				"<strong>Maven</strong>");
+		$("#" + cTypesDistribution.attr('id') + '-bt').append("<strong>Maven</strong>");
 	} else if ("p2" == distributionId) {
-		$("#" + cTypesDistribution.attr('id') + '-bt').append(
-				"<strong>OSGi</strong>");
+		$("#" + cTypesDistribution.attr('id') + '-bt').append("<strong>OSGi</strong>");
 	}
 
 	if (handleFragment) {
-		window.location.hash = "#qualifier=" + qualifier.id +"&edition=" + edition.id + "&distribution=" + distributionId;
+		window.location.hash = "#release=" + qualifier.id +"&edition=" + edition.id + "&distribution=" + distributionId;
 	}
 
 	setDownloadButton();
@@ -144,7 +130,7 @@ function init(sq, se, std, hf) {
 	loadDistributions();
 
 	var hash = window.location.hash;
-	var itemId = getParameterByName(hash, "qualifier", $.cookie('qualifier'));
+	var itemId = getParameterByName(hash, "release", $.cookie('qualifier'));
 
 	qualifier = getQualifier(itemId);
 	if (!qualifier) {
