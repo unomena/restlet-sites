@@ -174,7 +174,7 @@
           </ul>
         </div>
       </div>
-      <div id="copyright">Copyright &copy; ${pp.now?string("yyyy")} Restlet - <a href="http://restlet.com/legal" title="${labels.footer.copyright.legal['${language}']}">${labels.footer.copyright.legal['${language}']}</div>
+      <div id="copyright">Copyright &copy; ${pp.now?string("yyyy")} Restlet - <a href="http://restlet.com/legal" title="${labels.footer.copyright.legal['${language}']}">${labels.footer.copyright.legal['${language}']}</a></div>
     </div>
     <!-- generated ${pp.now} -->
    </body>

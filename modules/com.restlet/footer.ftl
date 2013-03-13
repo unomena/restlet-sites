@@ -111,7 +111,7 @@
 
       ${content}
       <div class="content footerWrapper">
-        <div class="footer"></div>
+        <div class="footer"><a href="https://github.com/restlet/restlet-sites/blob/master/modules/com.restlet/${pp.sourceFile}" title="Edit, comment this page">Edit, comment this page</a></div>
       </div>
     </div>
 
@@ -157,7 +157,7 @@
           </ul>
         </div>
       </div>
-      <div id="copyright">Copyright &copy; ${pp.now?string("yyyy")} Restlet - <a href="/legal" title="${labels.footer.copyright.legal['${language}']}">${labels.footer.copyright.legal['${language}']}</div>
+      <div id="copyright">Copyright &copy; ${pp.now?string("yyyy")} Restlet - <a href="/legal" title="${labels.footer.copyright.legal['${language}']}">${labels.footer.copyright.legal['${language}']}</a></div>
     </div>
     <!-- generated ${pp.now} -->
    </body>

@@ -639,6 +639,7 @@ div.content.footerWrapper .footer {
     border-right: solid 1px #d3d2d2;
     border-bottom: solid 1px #d3d2d2;
     background-color: #fff;
+    font-size: 9px;
 }
 
 #footerWrapperSeparator {

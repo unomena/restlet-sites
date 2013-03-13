@@ -6,7 +6,6 @@ body {
 	-ms-filter:"progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f9fdff', endColorstr='#fff')";
 }
 
-
 .topbar {
 	padding-bottom: 8px;
 }
@@ -485,6 +484,7 @@ div.content.footerWrapper .footer {
 	margin-right: auto;
 	padding: 15px 10px;
 	width: 900px;
+    font-size: 9px;
 }
 
 .content.container,.subsections {
