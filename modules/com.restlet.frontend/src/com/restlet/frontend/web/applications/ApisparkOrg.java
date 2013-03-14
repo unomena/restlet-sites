@@ -23,9 +23,7 @@ import org.restlet.routing.Router;
 import org.restlet.routing.Template;
 import org.restlet.routing.TemplateRoute;
 
-import com.restlet.frontend.web.resources.company.FeedGeneralResource;
-import com.restlet.frontend.web.resources.company.FeedReleasesResource;
-import com.restlet.frontend.web.resources.company.FeedSummaryResource;
+import com.restlet.frontend.web.resources.apispark.FeedSummaryResource;
 import com.restlet.frontend.web.services.CacheFilter;
 import com.restlet.frontend.web.services.RefreshStatusService;
 
@@ -101,15 +99,11 @@ public class ApisparkOrg extends BaseApplication implements RefreshApplication {
         // Create the root router
         Router router = new Router(getContext());
 
+        redirect(router, "/tutorials/", "/tutorials");
+
         router.attach("/feeds/summary", FeedSummaryResource.class);
-        router.attach("/feeds/general", FeedGeneralResource.class);
-        router.attach("/feeds/releases", FeedReleasesResource.class);
 
-        TemplateRoute route = router.redirectPermanent("/products/restlet",
-                "/products/restlet-framework");
-        route.getTemplate().setMatchingMode(Template.MODE_EQUALS);
-
-        // Serve other files from the Restlet.com directory
+        // Serve other files from the apispark.org directory
         Directory directory = new Directory(getContext(), this.wwwUri);
         directory.setNegotiatingContent(true);
         directory.setDeeplyAccessible(true);
@@ -146,30 +140,24 @@ public class ApisparkOrg extends BaseApplication implements RefreshApplication {
         return this.wwwUri;
     }
 
-    public void setFeedGeneral(List<Entry> feedGeneral) {
-        this.feedGeneral = feedGeneral;
-    }
-
-    public void setFeedReleases(List<Entry> feedReleases) {
-        this.feedReleases = feedReleases;
-    }
-
-    public void setFeedSummary(List<Entry> feedSummary) {
-        this.feedSummary = feedSummary;
-    }
-
-    @Override
-    public synchronized void start() throws Exception {
-        // Update the context
-        getContext().getAttributes().put("feed", this.feedSummaryUri);
-        getContext().getAttributes().put("feed-restlet-general",
-                this.feedGeneralAtomUri);
-        getContext().getAttributes().put("feed-restlet-releases",
-                this.feedReleasesAtomUri);
-
-        refresh();
-
-        super.start();
+    /**
+     * Helps to define redirections assuming that the router defines route by
+     * using the {@link Template.MODE_STARTS_WITH} mode.
+     * 
+     * @param router
+     *            The router where to define the redirection.
+     * @param from
+     *            The source template.
+     * @param to
+     *            The target template.
+     * @return The defined route.
+     */
+    private TemplateRoute redirect(Router router, String from, String to) {
+        TemplateRoute route = router.redirectPermanent(from, to);
+        if (to.contains("{rr}")) {
+            route.setMatchingMode(Template.MODE_STARTS_WITH);
+        }
+        return route;
     }
 
     public void refresh() {
@@ -228,6 +216,32 @@ public class ApisparkOrg extends BaseApplication implements RefreshApplication {
             e.printStackTrace();
             getLogger().warning("Cannot load feeds.");
         }
+    }
+
+    public void setFeedGeneral(List<Entry> feedGeneral) {
+        this.feedGeneral = feedGeneral;
+    }
+
+    public void setFeedReleases(List<Entry> feedReleases) {
+        this.feedReleases = feedReleases;
+    }
+
+    public void setFeedSummary(List<Entry> feedSummary) {
+        this.feedSummary = feedSummary;
+    }
+
+    @Override
+    public synchronized void start() throws Exception {
+        // Update the context
+        getContext().getAttributes().put("feed", this.feedSummaryUri);
+        getContext().getAttributes().put("feed-restlet-general",
+                this.feedGeneralAtomUri);
+        getContext().getAttributes().put("feed-restlet-releases",
+                this.feedReleasesAtomUri);
+
+        refresh();
+
+        super.start();
     }
 
 }

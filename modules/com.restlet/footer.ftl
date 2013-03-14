@@ -92,7 +92,7 @@
       </div>
 
 <#list sections.section as section>
-   <#if (section.@hidden[0]!'false') != 'true' && (section.@id == currentSection)>
+   <#if (section.@hidden[0]!'false') != 'true' && (section.@id == currentSection) && section.sections.section?has_content>
       <div class="content container">
         <ul class="pages">
       <#list section.sections.section as subsection>
@@ -111,7 +111,7 @@
 
       ${content}
       <div class="content footerWrapper">
-        <div class="footer"><a href="https://github.com/restlet/restlet-sites/blob/master/modules/com.restlet/${pp.sourceFile}" title="Edit, comment this page">Edit, comment this page</a></div>
+        <div class="footer"><!-- <#if "error"!=currentSection><a href="https://github.com/restlet/restlet-sites/blob/master/modules/com.restlet/${pp.sourceFile}" title="Edit, comment this page">Edit, comment this page</a></#if> --></div>
       </div>
     </div>
 

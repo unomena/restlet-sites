@@ -1,25 +1,21 @@
 <#if !(title?has_content)>
 <#list sections.section as section>
       <#if section.@id == currentSection>
-         <#assign title="Restlet - ${section.label?trim}"  />
+         <#assign title="APISpark Support - ${section.label?trim}"  />
       </#if>
 </#list>
 </#if>
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
    <head>
       <title>${title}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="keywords"  content="REST, Java, framework, toolkit, HTTP, GWT, GAE, Android, JSE, JEE, Servlet, NIO" />
+      <meta name="keywords"  content="apispark,web, apis" />
       <meta charset="utf-8">
-      <link sizes="32x32" href="/images/favicon-restlet-org.gif" rel="icon">
-      <!-- link type="image/x-icon" href="/images/icons/favicon.ico" rel="shortcut icon" -->
+      <link rel="icon" href="/images/favicon-api-support.gif" />
       <link rel="stylesheet" type="text/css"             href='/stylesheets/bootstrap.css' />
       <link rel="stylesheet" type="text/css"             href='/stylesheets/styles.css' />
       <link rel="stylesheet" type="text/css"             href='/stylesheets/bootstrap-responsive.css' />
-      <link rel="alternate"  type="application/atom+xml" href="/feeds/summary" title="${labels.summaryRestletBlog?trim}" />
-      <link rel="alternate"  type="application/rss+xml"  href="http://blog.restlet.com/feed/?cat=15314" title="${labels.restletBlog?trim}" />
 <#list stylesheet_files as stylesheet_file>
       <link rel="stylesheet" type="text/css"            href="${stylesheet_file}" />
 </#list>
@@ -31,66 +27,42 @@
 <#list javascript_files as javascript_file>
       <script                type="text/javascript"     src="${javascript_file}"></script>
 </#list>
-<#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!""))>
-      <script                type="text/javascript"     src="/javascript/jquery-1.9.0.min.js"></script>
-      <script                type="text/javascript"     src="/javascript/jquery-cookie.js"></script>
-      <script                type="text/javascript"     src="/javascript/jsclass-core.js"></script>
-      <script                type="text/javascript"     src="/javascript/json-minified.js"></script>
-      <script                type="text/javascript"     src="/javascript/restlet-client.js"></script>
-      <script                type="text/javascript"     src="/javascript/restlet-client.js"></script>
-      <script                type="text/javascript"     src="/javascript/bootstrap.min.js"></script>
-      <script                type="text/javascript"     src="/javascript/data.js"></script>
-      <script                type="text/javascript"     src="/javascript/combo-widget.js"></script>
-    <#if ("javadocs" == currentSubSection!"")>
-      <script                type="text/javascript"     src="/javascript/javadocs.js"></script>
-    <#elseif ("guide" == currentSubSection!"")>
-      <script                type="text/javascript"     src="/javascript/userguide.js"></script>
-    </#if>
-</#if>
-      <script type="text/javascript">
-<#if pp.sourceFile?matches("learn\\/[0-9]\\.[0-9]$") >
-        $.cookie('branch', '${pp.sourceFile?substring(6)}', {path: '/' });
-<#elseif pp.sourceFile?matches("learn\\/[0-9]\\.[0-9]/.*$") >
-        $.cookie('branch', '${pp.sourceFile?substring(6, 9)}', {path: '/' });
-</#if>
+
 <#if javascript??>
+      <script type="text/javascript">
       ${javascript}
-</#if>
-/*
-         var _gaq = _gaq || [];
-         _gaq.push(['_setAccount', 'UA-32616835-1']);
-         _gaq.push(['_setDomainName', 'restlet.com']);
-         _gaq.push(['_setAllowLinker', true]);
-         _gaq.push(['_trackPageview']);
-         (function() {
-             var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-*/
-<#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!""))>
-    $(document).ready(function() {
-        init($("#cBranch"));
-    });
-</#if>
       </script>
+</#if>
+
    </head>
 
    <body>
-    <div class='topbar'>
-      <div class='header'>
-        <div class='container'>
-          <a class='brand' href="/" title='Restlet Framework'>
-            <img alt='Restlet Framework Logo' height='136' width='129' src='/images/logo-restlet.png' />
-          </a>
-          <ul class='nav'>
+    <div class="topbar">
+        <div class="header">
+            <div class="container">
+                <a class="brand" href="/" title="APISpark Support"><img alt="APISpark Support Logo" src="/images/apispark-support-logo.png" height="132" width="348" /></a>
+                <ul class='nav'>
     <#list sections.section as section>
-      <#if !(section.@hidden?has_content)><li><a<#if section.@id == currentSection> class='active'</#if> href="/${section.@id}/">${section.title}</a></li></#if>
-	</#list>
-          </ul>
+        <#if !(section.@hidden?has_content)>
+                <#if !section.a?has_content>
+          <li><a<#if section.@id == currentSection> class='active'</#if> href="/${section.@id}<#if section.sections.section?has_content>/</#if>">${section.title}</a></li>
+            <#else>
+          <li><a title="${section.label?trim}"<#list section.a.@@ as attr> ${attr?node_name}="${attr}"</#list>>${section.label?trim}</a></li>
+            </#if>
+        </#if>
+    </#list>
+                </ul>
+                <div id="toolSignInButtonWrapper">
+                    <div id="toolSignInButton">
+                        <a class="rpxnow" onclick="return false;"
+                            href="http://apispark.rpxnow.com/openid/v2/signin?token_url=http%3A%2F%2Fapispark.com/signin">Sign
+                            in</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+
     <div class='hero ac <#if headerClass?has_content>${headerClass}<#else>smallHeader</#if>'>
       <div class='container'>
 <#compress>
@@ -106,10 +78,11 @@
 </#compress>
       </div>
     </div>
+    ${subheader!""}
 
 <#compress>
 <#list sections.section as section>
-   <#if (section.@hidden[0]!'false') != 'true' && (section.@id == currentSection)>
+   <#if (section.@hidden[0]!'false') != 'true' && (section.@id == currentSection) && section.sections.section?has_content>
     <div class="container subsections">
       <ul class="pages">
       <#list section.sections.section as subsection>
@@ -124,19 +97,18 @@
    </#if>
 </#list>
 </#compress>
-    <div class='container<#if "-"=currentSection> topics</#if> content'>
-    <#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!""))>${userGuideBranchSwitch!""}</#if>    
+    <div class='container content<#if "-"=currentSection> topics</#if>'>
       ${content}
     </div>
     <div class="content footerWrapper">
-        <div class="footer"></div>
+        <div class="footer"><!-- <#if "error"!=currentSection><a href="https://github.com/restlet/restlet-sites/blob/master/modules/org.apispark/${pp.sourceFile}" title="Edit, comment this page">Edit, comment this page</a></#if> --></div>
     </div>
 
     <div id="footer">
       <div class="container">
         <div class="span2 intro below">${labels.footer.intouch['${language}']}</div>
         <div class="span2a site"><h4><a href="http://blog.restlet.com/"><i class="blog-icon"></i>${labels.footer.blog['${language}']}</a></h4></div>
-        <div class="span2b site"><h4><a href="https://twitter.com/restlet_org"><i class="follow-icon"></i>${labels.footer.twitter['${language}']}</a></h4></div>
+        <div class="span2b site"><h4><a href="https://twitter.com/apispark"><i class="follow-icon"></i>${labels.footer.twitter['${language}']}</a></h4></div>
         <div class="span4 newsletter"><form action="http://restlet.us4.list-manage1.com/subscribe/post?u=6e9d916ca1faf05c7dc49d21e&id=a8aa911b32" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank"><input type="hidden" value="2" name="group[9053][2]" /><input type="hidden" id="EMAIL" name="EMAIL" value=""/><span id="footerNewsLetterWrapper"><input type="email" name="EMAIL" required="required" placeholder="${labels.footer.newsletter['${language}']}"/><input type="submit" id="footerNewsLetterOkButton" value="OK"></span></form></div>
         <div class="clearBoth"></div>
         <div class="span2 intro below">${labels.footer.sites['${language}']}</div>

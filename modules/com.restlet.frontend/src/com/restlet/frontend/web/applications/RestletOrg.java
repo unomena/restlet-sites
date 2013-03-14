@@ -60,8 +60,7 @@ import freemarker.template.Configuration;
  * 
  * @author Jerome Louvel
  */
-public class RestletOrg extends BaseApplication implements
-        RefreshApplication {
+public class RestletOrg extends BaseApplication implements RefreshApplication {
 
     /**
      * {@link TemplateRoute} that scores URIs according to a regex pattern. Once
@@ -588,11 +587,10 @@ public class RestletOrg extends BaseApplication implements
         redirect(router, "/learn/", "/learn/tutorial");
         redirect(router, "/participate", "/participate/");
 
-        
         redirect(router, "learn/1.0/tutorial", "/learn/tutorial/1.0");
         redirect(router, "learn/1.1/tutorial", "/learn/tutorial/1.1");
         redirect(router, "learn/2.0/tutorial", "/learn/tutorial/2.0");
-        
+
         redirectBranch(router, "/learn/guide/stable", "/learn/guide/{branch}",
                 "stable");
         redirectBranch(router, "/learn/guide/testing", "/learn/guide/{branch}",
@@ -602,7 +600,7 @@ public class RestletOrg extends BaseApplication implements
         redirectBranch(router, "/learn/guide", "/learn/guide/{branch}", null);
         redirectBranch(router, "/learn/javadocs", "/learn/javadocs/{branch}",
                 null);
-        
+
     }
 
     @Override

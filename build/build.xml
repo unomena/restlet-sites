@@ -178,14 +178,12 @@
         <!-- generate static files for the site : apispark.org -->
         <delete dir="${temp}/apispark" />
         <mkdir dir="${temp}/apispark" />
-        <copy todir="${temp}/${apispark-org}">
+        <copy todir="${temp}/apispark">
             <fileset dir="../modules/org.apispark/" includes="**/*" />
         </copy>
-		<!--
         <fmpp sourceencoding="UTF-8" outputencoding="UTF-8" sourceRoot="${temp}/apispark" outputRoot="${temp}/${apispark-org}" modes="ignore(**/.svn,**/Thumbs.db), copy(javascript/*.js, **/*.css)" quiet="reallyQuiet">
             <data expandProperties="yes">
                 hierarchy:xml(hierarchy.xml)
-                messages:xml(messages.xml)
                 labels:xml(labels.xml)
                 language: en
                 header: ""
@@ -194,7 +192,6 @@
             <include name="**/*" />
             <exclude name="**/*.ftl*" />
         </fmpp>
-        -->
         <delete dir="${temp}/apispark" />
 	</target>
 
