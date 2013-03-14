@@ -557,21 +557,33 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
         redirect(router, "/roadmap", "/learn/roadmap");
         redirect(router, "/tutorial", "/learn");
         redirect(router, "/examples", "/learn/examples");
+
         redirect(router, "/documentation/1.1/connectors",
                 "http://wiki.restlet.org/docs_1.1/37-restlet.html");
         redirect(router, "/documentation/2.0/connectors",
                 "http://wiki.restlet.org/docs_2.0/37-restlet.html");
         redirect(router, "/documentation/1.2", "/learn/2.0{rr}");
-        redirect(router, "/documentation/2.0/api", "/learn/2.0/jse/api{rr}");
+        redirect(router, "/documentation/2.0/api",
+                "/learn/javadocs/2.0/jse/api{rr}");
         redirect(router, "/documentation/2.0/engine",
-                "/learn/2.0/jse/engine{rr}");
-        redirect(router, "/documentation/2.0/ext", "/learn/2.0/jse/ext{rr}");
+                "/learn/javadocs/2.0/jse/engine{rr}");
+        redirect(router, "/documentation/2.0/ext",
+                "/learn/javadocs/2.0/jse/ext{rr}");
         redirect(router, "/documentation/snapshot/api",
-                "/learn/snapshot/jse/api{rr}");
+                "/learn/javadocs/snapshot/jse/api{rr}");
         redirect(router, "/documentation/snapshot/engine",
-                "/learn/snapshot/jse/engine{rr}");
+                "/learn/javadocs/snapshot/jse/engine{rr}");
         redirect(router, "/documentation/snapshot/ext",
-                "/learn/snapshot/jse/ext{rr}");
+                "/learn/javadocs/snapshot/jse/ext{rr}");
+        
+        // generic redirections to javadocs.
+        redirect(router, "/documentation/{branch}/{edition}/api",
+                "/learn/javadocs/{branch}/{edition}/api{rr}");
+        redirect(router, "/documentation/{branch}/{edition}/engine",
+                "/learn/javadocs/{branch}/{edition}/engine{rr}");
+        redirect(router, "/documentation/{branch}/{edition}/ext",
+                "/learn/javadocs/{branch}/{edition}/ext{rr}");
+
         redirect(router, "/downloads/archives/", "/download");
         redirect(router, "/downloads/archives/{variable}",
                 "/download/{variable}{rr}");
