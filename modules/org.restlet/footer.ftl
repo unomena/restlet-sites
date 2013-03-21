@@ -1,7 +1,7 @@
 <#if !(title?has_content)>
 <#list sections.section as section>
       <#if section.@id == currentSection>
-         <#assign title="Restlet - ${section.label?trim}"  />
+         <#assign title="Restlet Framework - ${section.label?trim}"  />
       </#if>
 </#list>
 </#if>
