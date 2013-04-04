@@ -21,6 +21,16 @@
 			<fr>Mentions légales</fr>
 		</title>
 	</section>
+    <section id="news" hidden="true">
+        <label>
+            <en>News</en>
+            <fr>News</fr>
+        </label>
+        <title>
+            <en>News</en>
+            <fr>News</fr>
+        </title>
+    </section>
 	<section id="products">
 		<label>
 			<en>Products</en>
