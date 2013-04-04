@@ -44,10 +44,10 @@ public class CacheFilter extends Filter {
                 response.getEntity().setTag(null);
                 response.getCacheDirectives().add(CacheDirective.noCache());
             } else {
-                // One day.
+                // One hour.
                 Calendar c = new GregorianCalendar();
                 c.setTime(new Date());
-                c.add(Calendar.DAY_OF_MONTH, 1);
+                c.add(Calendar.HOUR, 1);
                 response.getEntity().setExpirationDate(c.getTime());
                 response.getEntity().setModificationDate(null);
             }
