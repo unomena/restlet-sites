@@ -538,6 +538,31 @@ div.content.footerWrapper {
 	margin-left: 20px;
 }
 
+.editButton {
+    float: right;
+    width: 50px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.editButton .btn-group {
+    width:50px;
+    margin-left:20px;
+}
+
+.editButton .btn-group .btn:not(.dropdown-toggle) {
+    background-color: #FFFFFF;
+    background-image: none;
+    text-align: left;
+    width: 50px;
+}
+
+.editButton a {
+    color: #333333;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .book {
 	margin-bottom: 20px;
 	display: inline-block;

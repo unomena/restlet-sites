@@ -127,11 +127,11 @@
 </#list>
 </#compress>
     <div class='container<#if "-"=currentSection> topics</#if> content'>
-    <#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>${branchSwitch!""}</#if>    
+    <#if ("learn"=currentSection!"") && (("guide" == currentSubSection!""))>${editButton!""}</#if><#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>${branchSwitch!""}</#if>
       ${content}
     </div>
     <div class="content footerWrapper">
-        <div class="footer"><!-- <#if "error"!=currentSection><a href="https://github.com/restlet/restlet-sites/blob/master/modules/org.restlet/${pp.sourceFile}" title="Edit, comment this page">Edit, comment this page</a></#if> --></div>
+        <div class="footer"><!-- <#if "error"!=currentSection><a href="https://github.com/restlet/restlet-sites/blob/master/modules/org.restlet/${pp.sourceFile}" title="Edit this page">Edit this page</a></#if> --></div>
     </div>
 
     <div id="footer">
