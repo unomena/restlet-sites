@@ -179,6 +179,10 @@ a {
     text-align: justify;
 }
 
+.content table {
+    font-size: 90%;
+}
+
 .content .follow-icon {
 	background-image: url(/images/follow-ico-blue.png);
 	background-position: center;
