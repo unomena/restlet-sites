@@ -1,7 +1,7 @@
 <#if !(title?has_content)>
 <#list sections.section as section>
       <#if section.@id == currentSection>
-         <#assign title="APISpark Support - ${section.label?trim}"  />
+         <#assign title="APISpark | ${section.label?trim}"  />
       </#if>
 </#list>
 </#if>
