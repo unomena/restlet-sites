@@ -7,9 +7,9 @@ Introduction
 This section will give you a first taste of the Restlet Framework:
 
 -   [First
-    server](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet/319-restlet.html "First server")
+    server](first-server "First server")
 -   [First
-    client](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet/320-restlet.html "First client")
+    client](first-client "First client")
 -   [First
-    application](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet/303-restlet.html "First application")
+    application](first-application "First application")
 
