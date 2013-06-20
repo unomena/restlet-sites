@@ -68,6 +68,10 @@
 				<en>About Us</en>
 				<fr>A propos de nous</fr>
 			</about>
+			<pricing>
+				<en>Pricing</en>
+				<fr>Pricing</fr>
+			</pricing>
 		</apispark>
 		<apisparksupport>
 			<tutorial>

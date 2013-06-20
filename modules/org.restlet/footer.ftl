@@ -165,6 +165,7 @@
             <li><a href="http://apispark.com/features/user">${labels.footer.apispark.features['${language}']}</a></li>
             <li><a href="http://apispark.com/faq">${labels.footer.apispark.faq['${language}']}</a></li>
             <li><a href="http://apispark.com/about">${labels.footer.apispark.about['${language}']}</a></li>
+            <li><a href="http://apispark.com/pricing">${labels.footer.apispark.pricing['${language}']}</a></li>
           </ul>
         </div>
         <div class="span2d site">
