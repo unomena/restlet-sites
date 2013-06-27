@@ -147,7 +147,7 @@
           </ul>
         </div>
       </div>
-      <div id="copyright">Copyright &copy; ${pp.now?string("yyyy")} Restlet - <a href="http://restlet.com/legal" title="${labels.footer.copyright.legal['${language}']}">${labels.footer.copyright.legal['${language}']}</a></div>
+      <div id="copyright">&copy; ${pp.now?string("yyyy")} Restlet, Inc. - All rights reserved - <a href="http://apispark.com/terms" title="${labels.footer.copyright.terms['${language}']}">${labels.footer.copyright.terms['${language}']}</a> - <a href="http://apispark.com/privacy" title="${labels.footer.copyright.privacy['${language}']}">${labels.footer.copyright.privacy['${language}']}</a></div>
     </div>
     <!-- generated ${pp.now} -->
    </body>

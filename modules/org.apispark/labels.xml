@@ -92,6 +92,14 @@
                 <en>Legal Notice</en>
                 <fr>Mentions légales</fr>
             </legal>
+            <terms>
+                <en>Terms of Use</en>
+                <fr>Terms of Use</fr>
+            </terms>
+            <privacy>
+                <en>Privacy Policy</en>
+                <fr>Privacy Policy</fr>
+            </privacy>
         </copyright>
     </footer>
    <summaryRestletBlog>Summary of the Restlet latest news</summaryRestletBlog>
