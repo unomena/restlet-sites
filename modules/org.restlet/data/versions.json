@@ -1,5 +1,5 @@
 [
-{"id":"2.2snapshot","majorVersion":"2","minorVersion":"2.2","fullVersion":"2.2 Snapshot","fullVersionCompact":"2.2 Snapshot","published":"07 march 2013","editions":[{"id":"jse"},{"id":"jee"},{"id":"gae"},{"id":"android"},{"id":"gwt"},{"id":"osgi"}]},
+{"id":"2.2snapshot","majorVersion":"2","minorVersion":"2.2","fullVersion":"2.2 Snapshot","fullVersionCompact":"2.2 Snapshot","published":"23 august 2013","editions":[{"id":"jse"},{"id":"jee"},{"id":"gae"},{"id":"android"},{"id":"gwt"},{"id":"osgi"}]},
 {"id":"2.1snapshot","majorVersion":"2","minorVersion":"2.1","fullVersion":"2.1 Snapshot","fullVersionCompact":"2.1 Snapshot","published":"25 august 2012","editions":[{"id":"jse"},{"id":"jee"},{"id":"gae"},{"id":"android"},{"id":"gwt"},{"id":"osgi"}]},
 {"id":"2.2m4","majorVersion":"2","minorVersion":"2.2","fullVersion":"2.2 Milestone 4","fullVersionCompact":"2.2 M4","published":"23 august 2013","editions":[{"id":"jse"},{"id":"jee"},{"id":"gae"},{"id":"android"},{"id":"gwt"},{"id":"osgi"}]},
 {"id":"2.2m3","majorVersion":"2","minorVersion":"2.2","fullVersion":"2.2 Milestone 3","fullVersionCompact":"2.2 M3","published":"07 march 2013","editions":[{"id":"jse"},{"id":"jee"},{"id":"gae"},{"id":"android"},{"id":"gwt"},{"id":"osgi"}]},
