@@ -115,6 +115,24 @@
 	</target>
 
 	<target name="generate-templates" description="Generate template-based files.">
+        <!-- generate static files for the site : apispark.org -->
+        <delete dir="${temp}/apispark" />
+        <mkdir dir="${temp}/apispark" />
+        <copy todir="${temp}/apispark">
+            <fileset dir="../modules/org.apispark/" includes="**/*" />
+        </copy>
+        <fmpp sourceencoding="UTF-8" outputencoding="UTF-8" sourceRoot="${temp}/apispark" outputRoot="${temp}/${apispark-org}" modes="ignore(**/.svn,**/Thumbs.db), copy(javascript/*.js, **/*.css)" quiet="reallyQuiet">
+            <data expandProperties="yes">
+                hierarchy:xml(hierarchy.xml)
+                labels:xml(labels.xml)
+                language: en
+                header: ""
+            </data>
+            <borders><![CDATA[border('<#include "/header.ftl"/>', '<#include "/footer.ftl"/>', **/*.html*)]]></borders>
+            <include name="**/*" />
+            <exclude name="**/*.ftl*" />
+        </fmpp>
+        <delete dir="${temp}/apispark" />
 		<!-- generate static files for the site : restlet.org, user guide generated with pandoc -->
 		<delete dir="${temp}/owr" />
 		<mkdir dir="${temp}/owr" />
@@ -136,7 +154,7 @@
                 restletEditions: text(data/editions.json)
                 restletContributors: slicedText(data/contributors.txt)
                 language: en
-				ant: antProperties()
+                ant: antProperties()
             </data>
 		    <borders><![CDATA[border('<#include "/header.ftl"/>', '<#include "/footer.ftl"/>', **/*.html)]]></borders>
 			<include name="**/*" />
@@ -175,24 +193,6 @@
             <globmapper from="*.en" to="*" />
         </move>
         <delete dir="${temp}/cwr" />
-        <!-- generate static files for the site : apispark.org -->
-        <delete dir="${temp}/apispark" />
-        <mkdir dir="${temp}/apispark" />
-        <copy todir="${temp}/apispark">
-            <fileset dir="../modules/org.apispark/" includes="**/*" />
-        </copy>
-        <fmpp sourceencoding="UTF-8" outputencoding="UTF-8" sourceRoot="${temp}/apispark" outputRoot="${temp}/${apispark-org}" modes="ignore(**/.svn,**/Thumbs.db), copy(javascript/*.js, **/*.css)" quiet="reallyQuiet">
-            <data expandProperties="yes">
-                hierarchy:xml(hierarchy.xml)
-                labels:xml(labels.xml)
-                language: en
-                header: ""
-            </data>
-            <borders><![CDATA[border('<#include "/header.ftl"/>', '<#include "/footer.ftl"/>', **/*.html*)]]></borders>
-            <include name="**/*" />
-            <exclude name="**/*.ftl*" />
-        </fmpp>
-        <delete dir="${temp}/apispark" />
 	</target>
 
 	<target name="generate-javadocs" if="do-javadoc" description="Generate the Javadocs.">

@@ -99,7 +99,7 @@ public class ApisparkOrg extends BaseApplication implements RefreshApplication {
         // Create the root router
         Router router = new Router(getContext());
 
-        redirect(router, "/tutorials/", "/tutorials");
+        //redirect(router, "/tutorials/", "/tutorials");
 
         router.attach("/feeds/summary", FeedSummaryResource.class);
 

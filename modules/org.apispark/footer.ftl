@@ -1,8 +1,13 @@
 <#if !(title?has_content)>
 <#list sections.section as section>
-      <#if section.@id == currentSection>
-         <#assign title="APISpark | ${section.label?trim}"  />
-      </#if>
+    <#if section.@id == currentSection>
+        <#assign title="APISpark | ${section.label?trim}"  />
+        <#list section.sections.section as subsection>
+            <#if subsection.@id == currentSubSection>
+                <#assign title="APISpark | ${section.label?trim} | ${subsection.label?trim}"  />
+            </#if>
+        </#list>
+    </#if>
 </#list>
 </#if>
 <!DOCTYPE html>

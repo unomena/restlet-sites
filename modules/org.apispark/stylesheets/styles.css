@@ -938,3 +938,10 @@ form, form > input {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
+.content.container, .subsections {
+    border-left: solid 1px #D2D2D2;
+    border-right: solid 1px #D2D2D2;
+    background-color: white;
+    padding: 10px 10px 0px 10px;
+}
