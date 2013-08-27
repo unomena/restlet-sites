@@ -2,9 +2,9 @@
 <div class='span3 left section toc'>
 	<ul>
 		<li><a href="#tutorial-parsecom-introduction">1. Introduction</a></li>
-		<li><a href="#tutorial-parsecom-configuration">1. Configuration</a></li>
-		<li><a href="#tutorial-parsecom-entity-wrapper">2. Parse.com entity store wrapper configuration</a></li>
-		<li><a href="#tutorial-parsecom-using">3. Using the entity store wrapper</a></li>
+		<li><a href="#tutorial-parsecom-configuration">2. Configuration</a></li>
+		<li><a href="#tutorial-parsecom-entity-wrapper">3. Parse.com entity store wrapper configuration</a></li>
+		<li><a href="#tutorial-parsecom-using">4. Using the entity store wrapper</a></li>
 	</ul>
 </div>
 <div class='span6 left section'>
@@ -19,7 +19,7 @@
 	<p>APISpark provides an entity store wrapper for existing Parse data that can be reexposed through one or more custom web APIs.</p>
 
 	<h4>
-		<a id="tutorial-parsecom-configuration" name="tutorial-parsecom-configuration"></a>2. Introduction
+		<a id="tutorial-parsecom-configuration" name="tutorial-parsecom-configuration"></a>2. Configuration
 	</h4>
 
 	<p>Let’s get started by configuring a Parse schema named Contact with following fields :</p>
@@ -46,7 +46,7 @@
     </p>
 
 	<h4>
-		<a id="tutorial-parsecom-configuration" name="tutorial-parsecom-configuration"></a>2. Configuration
+		<a id="tutorial-parsecom-entity-wrapper" name="tutorial-parsecom-entity-wrapper"></a>3. Parse.com entity store wrapper configuration
 	</h4>
 
 	<p>The second step is to plug your API on your existing Parse.com schema. Unfortunately Parse.com doesn’t provide at the moment introspection support of schemas. This means that APISpark can’t provide automatic configuration and you need to manually configure the mapping between APISpark and Parse.com schemas. But no worry, such configuration is actually quite simple.</p>
@@ -80,7 +80,7 @@
     </p>
 
 	<h4>
-		<a id="tutorial-parsecom-using" name="tutorial-parsecom-using"></a>1. Using the entity store wrapper
+		<a id="tutorial-parsecom-using" name="tutorial-parsecom-using"></a>4. Using the entity store wrapper
 	</h4>
 
 	<p>Since such an entity store wrapper is an entity store, you can simply import it from a Web API project and use it to build your API. See this other tutorial for more details on this feature.</p>
