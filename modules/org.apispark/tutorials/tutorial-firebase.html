@@ -1,16 +1,17 @@
 <#global content>
 <div class='span3 left section toc'>
 	<ul>
-    <li><a href="#firebase-introduction">1. Introduction</a></li>
-    <li><a href="#firebase-entity-wrapper">2. Firebase entity store wrapper configuration</a></li>
-    <li><a href="#firebase-using">3. Using the entity store wrapper</a></li>
+    <li><a href="#tutorial-firebase-introduction">1. Introduction</a></li>
+    <li><a href="#tutorial-firebase-configuration">2. Configuration</a></li>
+    <li><a href="#tutorial-firebase-entity-wrapper">3. Firebase entity store wrapper configuration</a></li>
+    <li><a href="#tutorial-firebase-using">4. Using the entity store wrapper</a></li>
 	</ul>
 </div>
 <div class='span6 left section'>
 	<h3>Exposing custom APIs for Firebase backends</h3>
 
 	<h4>
-		<a id="firebase-introduction" name="firebase-introduction"></a>1. Introduction
+		<a id="tutorial-firebase-introduction" name="tutorial-firebase-introduction"></a>1. Introduction
 	</h4>
 
 	<p>This tutorial describes how to create a custom web API that reexposes existing data stored in a Firebase backend.
@@ -19,7 +20,7 @@
   <p>APISpark provides an entity store wrapper for existing Firebase data that can be reexposed through one or more custom web APIs.</p>
 
 	<h4>
-		<a id="firebase-configuration" name="firebase-configuration"></a>2. Configuration
+		<a id="tutorial-firebase-configuration" name="tutorial-firebase-configuration"></a>2. Configuration
 	</h4>
 
   <p>Let’s get started by configuring a Firebase entity named Contact with following fields :</p>
@@ -53,7 +54,7 @@
                    width="433">
   </p>
 
-In this case, you need to authenticate your request with a secret token available in the auth tab of the firebase console.
+  <p>In this case, you need to authenticate your request with a secret token available in the auth tab of the firebase console.</p>
 
   <p style="text-align:center;">
     <img src="/images/tutorials/tutorial-firebase-03.png"
@@ -61,33 +62,33 @@ In this case, you need to authenticate your request with a secret token availabl
   </p>
 
   <h4>
-    <a id="firebase-entity-wrapper" name="firebase-entity-wrapper"></a>2. Firebase entity store wrapper configuration
+    <a id="tutorial-firebase-entity-wrapper" name="tutorial-firebase-entity-wrapper"></a>3. Firebase entity store wrapper configuration
   </h4>
 
-The second step is to plug your store on your existing Firebase class. Unfortunately Firebase doesn’t have support for classes introspection at the moment. This means that APISpark can’t provide automatic configuration and you need to manually configure the mapping between APISpark and Firebase schemas. But no worry, such configuration is actually quite simple.
+  <p>The second step is to plug your store on your existing Firebase class. Unfortunately Firebase doesn’t have support for classes introspection at the moment. This means that APISpark can’t provide automatic configuration and you need to manually configure the mapping between APISpark and Firebase schemas. But no worry, such configuration is actually quite simple.</p>
 
-First, you need to create an entity store with a source of type “Firebase”. This is the way to create a Firebase entity store wrapper.
+  <p>First, you need to create an entity store with a source of type “Firebase”. This is the way to create a Firebase entity store wrapper.</p>
 
   <p style="text-align:center;">
     <img src="/images/tutorials/tutorial-firebase-04.png"
                    width="533">
   </p>
 
-Then configure the general hints to access your Firebase application in the Settings tab (entry Firebase Account), meaning setting the application name and auth token previously gotten. You can notice that the auth token is only required if you have the corresponding firebase is secured.
+  <p>Then configure the general hints to access your Firebase application in the Settings tab (entry Firebase Account), meaning setting the application name and auth token previously gotten. You can notice that the auth token is only required if you have the corresponding firebase is secured.</p>
 
   <p style="text-align:center;">
     <img src="/images/tutorials/tutorial-firebase-05.png"
                    width="533">
   </p>
 
-If the entity field names in APISpark exactly match, you simply have to create an entity with same name and same fields within the store:
+  <p>If the entity field names in APISpark exactly match, you simply have to create an entity with same name and same fields within the store:</p>
 
   <p style="text-align:center;">
     <img src="/images/tutorials/tutorial-firebase-06.png"
                    width="533">
   </p>
 
-It’s possible that there is a gap between your entity elements and the schema elements in Firebase. For this purpose, you can use the Mapping tab of the entity. This allows specifying the mapping between each element (entity name and field names).
+  <p>It’s possible that there is a gap between your entity elements and the schema elements in Firebase. For this purpose, you can use the Mapping tab of the entity. This allows specifying the mapping between each element (entity name and field names).</p>
 
   <p style="text-align:center;">
     <img src="/images/tutorials/tutorial-firebase-07.png"
@@ -95,7 +96,7 @@ It’s possible that there is a gap between your entity elements and the schema 
   </p>
 
   <h4>
-    <a id="firebase-using" name="firebase-using"></a>3. Using the entity store wrapper
+    <a id="tutorial-firebase-using" name="tutorial-firebase-using"></a>4. Using the entity store wrapper
   </h4>
 
   <p>Since such an entity store wrapper is an entity store, you can simply import it from a Web API project and use it to build your API. See this other tutorial for more details on this feature.</p>
@@ -103,7 +104,7 @@ It’s possible that there is a gap between your entity elements and the schema 
   <p>Nevertheless you need to deploy your store to make it actually usable at runtime. For this simply use the “Deploy” button in the store header.</p>
 
     <p>
-      <img src="/images/tutorials/tutorial-stackmob-8.png"
+      <img src="/images/tutorials/tutorial-firebase-8.png"
                    width="533">
     </p>
 

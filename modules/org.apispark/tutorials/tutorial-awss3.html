@@ -1,16 +1,93 @@
 <#global content>
 <div class='span3 left section toc'>
 	<ul>
-		<li><a href="#tutorial1-introduction">1. Introduction</a></li>
+		<li><a href="#tutorial-aws-introduction">1. Introduction</a></li>
+		<li><a href="tutorial-aws-configuration">2. Configuration</a></li>
+		<li><a href="tutorial-aws-file-wrapper">3. S3 file store wrapper configuration</a></li>
+		<li><a href="tutorial-aws-using">4. Using the file store wrapper</a></li>
 	</ul>
 </div>
 <div class='span6 left section'>
-	<h3>AWS S3</h3>
+	<h3>Reusing AWS S3 buckets in APISpark</h3>
 
 	<h4>
-		<a id="tutorial1-introduction" name="tutorial1-introduction"></a>1. Introduction
+		<a id="tutorial-aws-introduction" name="tutorial-aws-introduction"></a>1. Introduction
 	</h4>
 
-	<p></p>
+	<p>We want to manipulate and store files into dedicated S3 buckets. We want to expose suc operations as an API using APISpark and its S3 support (file store wrapper).</p>
+
+	<h4>
+		<a id="tutorial-aws-configuration" name="tutorial-aws-configuration"></a>2. Configuration
+	</h4>
+
+	<p>This tutorial doesn’t describe how to configure S3 but simply list what you need to collect from S3 administrators to configure APISpark:</p>
+
+	<ul>
+		<li>S3 access key</li>
+		<li>S3 secret key</li>
+	</ul>
+
+	<h4>
+		<a id="tutorial-aws-file-wrapper" name="tutorial-aws-file-wrapper"></a>3. S3 file store wrapper configuration
+	</h4>
+
+	<p>The second step is to plug your store on your existing buckets. Fortunately the AWS S3 platform provides intropection support of existing buckets that you have access. This means that APISpark can provide automatic configuration.</p>
+
+	<p>Firstly you need to create an file store with a source of type “S3”. This is the way to create a S3 file store wrapper.</p>
+
+    <p>
+	    <img src="/images/tutorials/tutorial-aws-01.png"
+                   width="533">
+    </p>
+
+	<p>Then configure the general hints to access your buckets in the Settings tab (entry AWS Account), meaning setting the access and secret keys.</p>
+
+    <p>
+	    <img src="/images/tutorials/tutorial-aws-02.png"
+                   width="533">
+    </p>
+
+	<p>Now you have these hints configured and tested connection, you can import a bucket. APISpark automatically detects all buckets that you have access.</p>
+
+    <p>
+	    <img src="/images/tutorials/tutorial-aws-03.png"
+                   width="533">
+    </p>
+
+	<p>After imported the sheet, you can select the corresponding import in the list on the left menu. This allows displaying hints about the bucket.</p>
+
+    <p>
+	    <img src="/images/tutorials/tutorial-aws-04.png"
+                   width="533">
+    </p>
+
+	<p>You can then go on the Folders tab to automatically create the associated folders like for classical file entity stores. You can notice that one folder will be created for each folder using the Add folders button.</p>
+
+    <p>
+	    <img src="/images/tutorials/tutorial-aws-05.png"
+                   width="533">
+    </p>
+
+	<p>In our case, several folders were created for each root folders of the imported bucket.</p>
+
+    <p>
+	    <img src="/images/tutorials/tutorial-aws-06.png"
+                   width="533">
+    </p>
+
+	<h4>
+		<a id="tutorial-aws-using" name="tutorial-aws-using"></a>4. Using the file store wrapper
+
+	</h4>
+
+	<p>Since such a file store wrapper is a file store, you can simply import it from a Web API and use it to build your API. See the basic tutorial for more details on this feature.</p>
+
+	<p>Nevertheless you need to deploy your store to make it actually usable at runtime. For this simply use the “Deploy” button in the store header.</p>
+
+    <p>
+	    <img src="/images/tutorials/tutorial-aws-07.png"
+                   width="533">
+    </p>
+
 </div>
 </#global>
