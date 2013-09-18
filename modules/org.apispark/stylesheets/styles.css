@@ -898,10 +898,10 @@ div.content.footerWrapper .footer {
 
 #footer #copyright {
     display: block;
-    font-size: 9px;
+    font-size: 10px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
+    margin-top: 20px;
     width: 400px;
     text-align: center;
 }
