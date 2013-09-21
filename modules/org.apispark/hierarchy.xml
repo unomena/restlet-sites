@@ -18,8 +18,8 @@
 				<title>AWS S3</title>
 			</section>
             <section id="parsecom">
-                <label>Parse.com</label>
-                <title>Parse.com</title>
+                <label>Parse</label>
+                <title>Parse</title>
             </section>
             <section id="stackmob">
                 <label>StackMob</label>
@@ -44,7 +44,7 @@
 		<a href="http://desk.apispark.org" target="_blank" />
 	</section>
 	<section id="roadmap">
-		<label>Road map</label>
+		<label>Road Map</label>
 		<title>Road Map</title>
 	</section>
 	<section id="error" hidden="true">
