@@ -946,3 +946,7 @@ form, form > input {
     background-color: white;
     padding: 10px 10px 0px 10px;
 }
+
+.content.container h3, .content.container h4 {
+    text-align: left;
+}
