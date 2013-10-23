@@ -950,3 +950,10 @@ form, form > input {
 .content.container h3, .content.container h4 {
     text-align: left;
 }
+
+.content.container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
