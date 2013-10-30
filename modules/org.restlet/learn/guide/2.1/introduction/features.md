@@ -182,8 +182,8 @@ Security
 
 -   Supports HTTP Basic and Digest authentication (client and server
     side)
--   Supports Amazon S3 authentication. Supports Microsoft Shared Key and
-    Shared Key Lite authentication (client side)
+-   Supports Amazon S3 authentication.
+-   Supports Microsoft Shared Key and Shared Key Lite authentication (client side)
 -   Supports OAuth authentication
 -   Supports HTTPS (HTTP over SSL)
 -   Supports SMTPS (SMTP over SSL) and SMTP-STARTTLS
