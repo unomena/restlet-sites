@@ -30,7 +30,7 @@ Complete Web server
 
 Contrary to the Servlet API, the Restlet API gives you an extensive
 control on the URI mapping and on the virtual hosts configuration. It
-allows includes a powerful Directory class to server static files in a
+includes a powerful Directory class to server static files in a
 way comparable to what a Apache Web Server would do. For example, we run
 our Restlet.org web site directly with Restlet!
 
@@ -182,11 +182,9 @@ Flexible configuration
 Security
 ========
 
--   Supports HTTP Basic and Digest authentication (client and server
-    side)
+-   Supports HTTP Basic and Digest authentication (client and server side)
 -   Supports Amazon S3 authentication (client side)
--   Supports Microsoft Shared Key and Shared Key Lite authentication
-    (client side)
+-   Supports Microsoft Shared Key and Shared Key Lite authentication (client side)
 -   Supports OAuth authentication (server side)
 -   Supports HTTPS (HTTP over SSL)
 -   Supports SMTPS (SMTP over SSL) and SMTP-STARTTLS
