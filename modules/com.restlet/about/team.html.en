@@ -1,9 +1,9 @@
-<#global content>
+﻿<#global content>
 
 
 <@h3>
 <p>
-   Our startup is composed of highly experienced engineers, pionneers of web APIs, book authors and 
+   Our company is composed of highly experienced engineers, pionneers of web APIs, book authors and 
    conference speakers. 
 </p>
 </@h3>
@@ -32,14 +32,11 @@
 <@h3 "-" "olfa-zorgati">
 <h3>Olfa Zorgati, CFO<span class="float-right"><img src="/images/photos/olfa-zorgati-100" alt="Photo Olfa Zorgati" /></span></h3>
 <p>
-   Olfa is graduated from <a href="http://www.hec.edu/">HEC Paris</a>, Finance Major. She holds successfully 
-   several finance executive positions within the Vivendi Group/Canal+, worked at Société Générale 
-  (M&A department) and was CFO of Ventadis, Bertelsmann e-commerce group.
+   Olfa is graduated from <a href="http://www.hec.edu/">HEC Paris</a>, Finance Major. She successfully held several finance executive positions within the Vivendi Group/Canal+ group, Société Générale (M&A department) and was CFO of Ventadis, Bertelsmann e-commerce group.
 </p>
 <p>
-   She is in charge of the financial, legal and HR aspects of Restlet, bringing a broad range of financial 
-   leadership experience. She recently moved into the San Francisco Bay Area where she serves as a consulting 
-   CFO to various fast-growing startups. 
+   She is in charge of the financial, legal and HR leadership of the company, bringing to Restlet
+her broad range of experience. She recently moved into the San Francisco Bay Area where she serves as a consulting CFO to various fast-growing startups. 
 </p>
 <p>
    <a href="http://www.linkedin.com/in/olfazorgati">LinkedIn profile</a>
@@ -96,10 +93,7 @@
    which led him to be interested in the Restlet Framework.
 </p>
 <p>
-   He joined the company as an R&D architect in 2011 , taking in charge the development of APISpark and porting 
-   Restlet Framework to JavaScript. Thierry is also co-author of several books on JavaScript, Spring as well 
-   as the <a href="http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217">Restlet in Action</a>
-   book published by Manning. 
+   He joined the company as an R&D architect in 2011, initiating the development of APISpark PaaS and porting Restlet Framework to JavaScript. Thierry is also co-author of several books on JavaScript, Spring as well as the <a href="http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217">Restlet in Action</a> book published by Manning. 
 </p>
 </@h3>
 
