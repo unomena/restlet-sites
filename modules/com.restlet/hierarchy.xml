@@ -167,6 +167,16 @@
 					<fr>Notre équipe</fr>
 				</title>
 			</section>
+			<section id="hiring">
+				<label>
+					<en>Hiring</en>
+					<fr>Hiring</fr>
+				</label>
+				<title>
+					<en>Hiring</en>
+					<fr>Hiring</fr>
+				</title>
+			</section>
 			<section id="locations">
 				<label>
 					<en>Locations</en>
