@@ -1,4 +1,4 @@
-<#global content>
+﻿<#global content>
 
 <@h3 "Presentation" "presentation">
 <p>
@@ -86,7 +86,7 @@
 </ul>
 
 <p>
-	A summary <a href="factsheet">product sheet</a> for version 2.0 is also available.
+	A summary <a href="restlet-framework-factsheet">product sheet</a> for version 2 is also available.
 </p>
 </@h3>
 
