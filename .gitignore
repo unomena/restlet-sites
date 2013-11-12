@@ -3,3 +3,6 @@
 # Package Files #
 *.war
 *.ear
+
+/modules/com.restlet/images/Thumbs.db
+Thumbs.db

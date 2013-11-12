@@ -1,3 +1,0 @@
-<#assign currentSubSection="status-500" />
-
-<#include "error.ftl.fr" />
