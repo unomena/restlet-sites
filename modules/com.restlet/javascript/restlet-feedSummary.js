@@ -19,7 +19,7 @@
 
 	createFeedElement = function(element) {
 		var result = "<li>";
-		result += element.published;
+		//result += element.published;
 		result += "&nbsp;<a href=\""+element.uri+"\">"+element.title+"</a>";
 		result += "</li>";
 		return result;

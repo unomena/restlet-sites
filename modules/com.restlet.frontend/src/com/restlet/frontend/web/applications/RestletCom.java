@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.restlet.Restlet;
+import org.restlet.data.ChallengeScheme;
 import org.restlet.data.CharacterSet;
 import org.restlet.data.LocalReference;
 import org.restlet.data.MediaType;
@@ -22,10 +23,13 @@ import org.restlet.resource.Directory;
 import org.restlet.routing.Router;
 import org.restlet.routing.Template;
 import org.restlet.routing.TemplateRoute;
+import org.restlet.security.ChallengeAuthenticator;
+import org.restlet.security.MapVerifier;
 
 import com.restlet.frontend.web.resources.company.FeedGeneralResource;
 import com.restlet.frontend.web.resources.company.FeedReleasesResource;
 import com.restlet.frontend.web.resources.company.FeedSummaryResource;
+import com.restlet.frontend.web.resources.company.RestletComRefreshResource;
 import com.restlet.frontend.web.services.CacheFilter;
 import com.restlet.frontend.web.services.RefreshStatusService;
 
@@ -59,6 +63,12 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
     /** Freemarker configuration object. */
     private final Configuration fmc;
 
+    /** Login for protected pages. */
+    private String login;
+
+    /** Password for protected pages. */
+    private String password;
+    
     /** The Web file URI. */
     private final String wwwUri;
 
@@ -74,6 +84,8 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 
         this.setStatusService(new RefreshStatusService(true, this));
 
+        this.login = getProperties().getProperty("admin.login");
+        this.password = getProperties().getProperty("admin.password");
         this.wwwUri = getProperties().getProperty("www.uri");
 
         this.feedSummaryUri = getProperties().getProperty(
@@ -108,6 +120,16 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
         TemplateRoute route = router.redirectPermanent("/products/restlet",
                 "/products/restlet-framework");
         route.getTemplate().setMatchingMode(Template.MODE_EQUALS);
+        // Guarding access to sensitive services
+        ChallengeAuthenticator guard = new ChallengeAuthenticator(getContext(),
+                ChallengeScheme.HTTP_BASIC, "Admin section");
+        MapVerifier verifier = new MapVerifier();
+        verifier.getLocalSecrets().put(this.login, this.password.toCharArray());
+        guard.setVerifier(verifier);
+        Router adminRouter = new Router(getContext());
+        adminRouter.attach("/refresh", RestletComRefreshResource.class);
+        guard.setNext(adminRouter);
+        router.attach("/admin", guard);
 
         // Serve other files from the Restlet.com directory
         Directory directory = new Directory(getContext(), this.wwwUri);
@@ -144,32 +166,6 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 
     public String getWwwUri() {
         return this.wwwUri;
-    }
-
-    public void setFeedGeneral(List<Entry> feedGeneral) {
-        this.feedGeneral = feedGeneral;
-    }
-
-    public void setFeedReleases(List<Entry> feedReleases) {
-        this.feedReleases = feedReleases;
-    }
-
-    public void setFeedSummary(List<Entry> feedSummary) {
-        this.feedSummary = feedSummary;
-    }
-
-    @Override
-    public synchronized void start() throws Exception {
-        // Update the context
-        getContext().getAttributes().put("feed", this.feedSummaryUri);
-        getContext().getAttributes().put("feed-restlet-general",
-                this.feedGeneralAtomUri);
-        getContext().getAttributes().put("feed-restlet-releases",
-                this.feedReleasesAtomUri);
-
-        refresh();
-
-        super.start();
     }
 
     public void refresh() {
@@ -228,6 +224,32 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
             e.printStackTrace();
             getLogger().warning("Cannot load feeds.");
         }
+    }
+
+    public void setFeedGeneral(List<Entry> feedGeneral) {
+        this.feedGeneral = feedGeneral;
+    }
+
+    public void setFeedReleases(List<Entry> feedReleases) {
+        this.feedReleases = feedReleases;
+    }
+
+    public void setFeedSummary(List<Entry> feedSummary) {
+        this.feedSummary = feedSummary;
+    }
+
+    @Override
+    public synchronized void start() throws Exception {
+        // Update the context
+        getContext().getAttributes().put("feed", this.feedSummaryUri);
+        getContext().getAttributes().put("feed-restlet-general",
+                this.feedGeneralAtomUri);
+        getContext().getAttributes().put("feed-restlet-releases",
+                this.feedReleasesAtomUri);
+
+        refresh();
+
+        super.start();
     }
 
 }
