@@ -1,0 +1,28 @@
+
+
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" media="screen" href="/v1/css/styles.css" />
+    <script type="text/javascript" src="/v1/html/jquery-min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $.getJSON("/v1/contacts/", function(data) {
+            var content = "";
+            for (var i=0; i<data.list.length; i++) {
+                var contact = data.list[i];
+                content += "<li>"+contact.lastName+" "+contact.firstName+" ("+contact.age+")</li>";
+            }
+            $("#contacts").html(content);
+        });
+    });
+    </script>
+  </head>
+  <body>
+  <h2>Liste des contacts</h2>
+  <ul id="contacts"></ul>
+  </body>
+</html>
+
+
+
