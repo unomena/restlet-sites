@@ -14,21 +14,16 @@ between a server application and several kind of clients.
 Table of contents
 =================
 
-1.  [Requirements](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_requirements)
-2.  [Scenario](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_scenario)
-3.  [Archive
-    content](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_archive-content)
-4.  [Common
-    classes](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_common-classes)
-5.  [GAE server
-    part](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_gae)
-6.  [GWT
-    client](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_gwt)
-7.  [Android
-    client](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_android)
-8.  [Java SE
-    client](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet/303-restlet.html#dsy303-restlet_jse)
+1.  [Requirements](#requirements)
+2.  [Scenario](#scenario)
+3.  [Archive content](#archive-content)
+4.  [Common classes](#common-classes)
+5.  [GAE server](#gae-server)
+6.  [GWT client](#gwt-client)
+7.  [Android client](#android-client)
+8.  [Java SE client](#javase-client)
 
+<a name="requirements"/>
 Requirements
 ============
 
@@ -50,6 +45,7 @@ entity to prevent chunk encoding. To use it, call the
 ClientResource\#setRequestEntityBuffering(boolean) method with a "true"
 value. Note that this workaround isn't required for the GWT edition.
 
+<a name="scenario"/>
 Scenario
 ========
 
@@ -75,6 +71,7 @@ The "contact" object has the following attributes:
 -   Android application
 -   Java SE client
 
+<a name="archive-content"/>
 Archive content
 ===============
 
@@ -89,6 +86,7 @@ It contains the full source code of three Eclipse projects with:
 2.  Project that contains the source code of the Android client
 3.  Project that contains the source code of the Java SE client
 
+<a name="common-classes"/>
 Common classes
 ==============
 
@@ -122,8 +120,9 @@ When using collections of objects as method parameters, you need to use
 concrete classes if you intend to have GWT clients. For example use
 ArrayList\<Contact\> instead of List\<Contact\>.
 
-GAE server part
-===============
+<a name="gae-server"/>
+GAE server
+==========
 
 We propose to host the server application on the GAE platform. The
 server project relies on the following JAR files:
@@ -180,8 +179,9 @@ This resource is then exposed by the server application:
     }
 ~~~~
 
-GWT client part
-===============
+<a name="gwt-client"/>
+GWT client
+==========
 
 The GWT client relies only on the core Restlet JAR (org.restlet.jar)
 provided in the GWT edition.
@@ -265,8 +265,9 @@ contactResource.store(contact, new Result<Void>() {
 });
 ~~~~
 
-Android client part
-===================
+<a name="android-client"/>
+Android client
+==============
 
 The Android client project relies only on the core Restlet JAR
 (org.restlet.jar) provided by the Android edition of the Restlet
@@ -306,6 +307,7 @@ Here is a screenshot of the Android user interface.
 
 ### ![serialization-android-screenshot](Firstapplication-303_files/data.html "serialization-android-screenshot")
 
+<a name="javase-client"/>
 Java SE client
 ==============
 
