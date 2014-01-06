@@ -33,7 +33,7 @@ which must be downloaded separately from [this
 page](http://restlet.org/downloads/).
 It has been tested with the following environments:
 
--   Restlet Framework 2.1 Milestone 4
+-   Restlet Framework 2.1
 -   Google App Engine (GAE) 1.4.3, 1.5.2
 -   Google Web Toolkit (GWT) 2.2 and 2.3
 -   Android 2.1, 2.2, 2.3.3, 3.0
