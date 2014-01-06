@@ -5,8 +5,7 @@ Introduction
 ============
 
 For a short introduction on the usage of client resource, you should
-read the [first client](/learn/guide/2.0#/13-restlet/21-restlet/318-restlet/320-restlet.html "First client")
-page.
+read the [first client](../../introduction/first-steps/first-client.md "First client") page.
 
 Automatic conversion
 ====================
