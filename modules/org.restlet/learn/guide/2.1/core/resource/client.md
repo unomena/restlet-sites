@@ -29,7 +29,7 @@ subclasses or on the client side to consume it:
 In this case, automatic conversion is handled for you. By default, the
 Restlet Engine support Java object serialization (binary or XML), but
 for more interoperable representations, we suggest to add our [XStream
-extension](/learn/guide/2.1#/13-restlet/28-restlet/264-restlet.html "XStream extension")to
+extension](../../extensions/xstream.md "XStream extension") to
 your classpath in order to get clean XML or JSON representations.
 
 Leveraging annotations
