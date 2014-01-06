@@ -5,9 +5,7 @@ Introduction
 ============
 
 For a short introduction on the usage of client resource, you should
-read the [first
-client](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet/320-restlet.html "First client")
-page.
+read the [first client](../../introduction/first-steps/first-client.md "First client") page.
 
 Automatic conversion
 ====================
@@ -176,4 +174,3 @@ Representation\#release() method immediately which will close the
 underlying stream but might also close the underlying socket connection.
 In case you are not interested in the request at all, it is however
 better to explicitly call the ClientResource\#abort() method.
-
