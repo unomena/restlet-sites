@@ -13,7 +13,7 @@ A connector in REST is a software element that enables the communication
 between components, typically by implementing one side of a network
 protocol. Restlet provides several implementations of client connectors
 based on existing open-source projects. The
-[connectors](../../core/base/connectors/index.md "Connectors") 
+[connectors](../../core/base/connectors/index.md "Connectors")
 section lists all available client and server connectors and explain how
 to use and configure them.
 
@@ -26,7 +26,7 @@ new ClientResource("http://restlet.org").get().write(System.out);
 ~~~~
 
 If you are running your client behind a proxy, please [check this
-page](/learn/guide/2.0#/13-restlet/27-restlet/325-restlet/37-restlet.html)to
+page](../../core/base/connectors/index.md) to
 pick an HTTP client that can be configured. The internal HTTP client
 doesn't support proxies at the moment.
 
