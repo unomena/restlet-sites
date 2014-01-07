@@ -88,3 +88,11 @@ connector of a resource:
     ClientResource resource = new ClientResource("http://localhost:8182/<resource>");
     resource.setNext(client);
 
+How do I implement the traditional MVC pattern?
+===============================================
+
+There is only a rough correspondence between the [MVC pattern](http://en.wikipedia.org/wiki/Model-view-controller) and the Restlet framework; some [debate](http://n2.nabble.com/Restlet-MVC-tp1560691p1561792.html) exists as to whether it should be employed at all. For those who wish to follow the MVC pattern with Restlet, here is the basic proposition:
+
+ * Controller == Restlets (mainly Filters, Routers, Finders). You can visualize the controller as a sort of processing chain, where the last node should be a Finder with all the information necessary to locate the target Resource for the call. Note that Finders are generally implicitely created when attaching Resource classes to a Router.
+ * Model == Resource + Domain Objects. Just start from the [org.restlet.resource.Resource class](/learn/javadocs/2.1/jse/api/org/restlet/resource/Resource.html) and load the related Domain Objects in the constructor based on the request attributes (ex: identifier extracted from the URI). Then you can declare the available variants with getVariants() and override methods like represent(Variant) for GET, acceptRepresentation(Representation) for POST, removeRepresentations() for DELETE or storeRepresentation(Representation) for PUT.
+ * View == Representation. To expose views of your model, you create new Representations for your Resources. You can leverage on one of the numerous Representation subclasses (InputRepresentation for example) available in the org.restlet.resource package or in extension packages like for JSON documents, FreeMarker and Velocity templates.
