@@ -118,8 +118,9 @@
         <!-- generate static files for the site : apispark.org -->
         <delete dir="${temp}/apispark" />
         <mkdir dir="${temp}/apispark" />
-        <copy todir="${temp}/apispark">
-            <fileset dir="../modules/org.apispark/" includes="**/*" />
+		<!-- do not template sample files. -->
+		<copy todir="${temp}/apispark">
+            <fileset dir="../modules/org.apispark/" includes="**/*"  excludes="tutorials/files/*"/>
         </copy>
         <fmpp sourceencoding="UTF-8" outputencoding="UTF-8" sourceRoot="${temp}/apispark" outputRoot="${temp}/${apispark-org}" modes="ignore(**/.svn,**/Thumbs.db), copy(javascript/*.js, **/*.css)" quiet="reallyQuiet">
             <data expandProperties="yes">
@@ -130,9 +131,12 @@
             </data>
             <borders><![CDATA[border('<#include "/header.ftl"/>', '<#include "/footer.ftl"/>', **/*.html*)]]></borders>
             <include name="**/*" />
-            <exclude name="**/*.ftl*" />
+            <exclude name="**/*.ftl" />
         </fmpp>
-        <delete dir="${temp}/apispark" />
+	    <copy todir="${temp}/apispark">
+	        <fileset dir="../modules/org.apispark/" includes="tutorials/files/*"/>
+	    </copy>
+		<delete dir="${temp}/apispark" />
 		<!-- generate static files for the site : restlet.org, user guide generated with pandoc -->
 		<delete dir="${temp}/owr" />
 		<mkdir dir="${temp}/owr" />
