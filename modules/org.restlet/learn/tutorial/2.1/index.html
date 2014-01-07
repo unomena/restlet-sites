@@ -35,7 +35,7 @@ window.onload = function () {
 
    <p>
       The Restlet framework is composed of two main parts. First, there
-      is the "<a href="api/">Restlet API</a>", a
+      is the "<a href="/learn/javadocs/2.1/jse/api/">Restlet API</a>", a
       neutral API supporting the concepts of REST and facilitating the
       handling of calls for both client-side and server-side applications.
       This API is backed by the Restlet Engine and both are now shipped 
@@ -54,13 +54,13 @@ window.onload = function () {
    <h4><a name="part02">2. Retrieving the content of a Web page</a></h4>
 
    <p>
-      As we mentioned in the <a href="/about/introduction">introduction paper</a>,
+      As we mentioned in the <a href="/learn/guide/2.1/introduction/">introduction paper</a>,
       the Restlet framework is at the same time a client and a server framework.
       For example, Restlet can easily work with remote resources using its HTTP
       client connector. A connector in REST is a software element that enables
       the communication between components, typically by implementing one side
       of a network protocol. Restlet provides several implementations of client
-      connectors based on existing open-source projects. The <a href="connectors">connectors</a>
+      connectors based on existing open-source projects. The <a href="/learn/guide/2.1/core/base/connectors/">connectors</a>
       section lists all available client and server connectors and explain how
       to use and configure them.
    </p>
@@ -278,7 +278,7 @@ component.start();
       the mapping between file extensions and metadata (media type, language or 
       encoding) or if you want to specify a different index name, you can use the
       Application's <a
-         href="api/org/restlet/service/MetadataService.html">"metadataService"</a>
+         href="/learn/javadocs/2.1/jse/api/org/restlet/service/MetadataService.html">"metadataService"</a>
       property.
    </p>
 
@@ -310,7 +310,7 @@ System.setProperty("java.util.logging.config.file",
    </p>
    
    <p>You can also have a look at the 
-      <a href="/learn/guide/2.0#/101-restlet.html">Restlet 2.0 logging documentation</a>.
+      <a href="/learn/guide/2.1/editions/jse/logging">Restlet 2.1 logging documentation</a>.
    </p>
 
    <h4><a name="part08">8. Displaying error pages</a></h4>
@@ -342,13 +342,13 @@ System.setProperty("java.util.logging.config.file",
       clients (or client sessions) and to check a given user ID or session ID
       against your application state to determine if access should be granted.
       Restlets natively support cookies via the <a
-         href="api/org/restlet/data/Cookie.html">Cookie</a>
+         href="/learn/javadocs/2.1/jse/api/org/restlet/data/Cookie.html">Cookie</a>
       and <a
          href="api/org/restlet/data/CookieSetting.html">CookieSetting</a>
       objects accessible from a <a
-         href="api/org/restlet/data/Request.html">Request</a>
+         href="/learn/javadocs/2.1/jse/api/org/restlet/Request.html">Request</a>
       or a <a
-         href="api/org/restlet/data/Response.html">Response</a>.
+         href="/learn/javadocs/2.1/jse/api/org/restlet/Response.html">Response</a>.
    </p>
 
    <p>
@@ -485,7 +485,7 @@ router.attach("/search", extractor);
       Note that the Redirector needs three parameters only. The first
       is the parent context, the second one defines how the URI rewriting
       should be done, based on a URI template. This template will be processed
-      by the <a href="api/org/restlet/util/Template.html">Template</a>
+      by the <a href="/learn/javadocs/2.1/jse/api/org/restlet/routing/Template.html">Template</a>
       class. The third parameter defines the type of redirection; here we
       chose the client redirection, for simplicity purpose.</p>
       <p>Also, we are relying on the Route class to extract the query
@@ -610,7 +610,7 @@ router.attach("/users/{user}/orders/{order}", order);
       Please note that the values of the variables are directly extracted from
       the URI and are therefore not percent-decoded. In order to achieve such a
       task, have a look to the
-      <a href="api/org/restlet/data/Reference.html#decode(java.lang.String)" title="Reference#decode(String)">Reference#decode(String)</a>
+      <a href="/learn/javadocs/2.1/jse/api/org/restlet/data/Reference.html#decode(java.lang.String)" title="Reference#decode(String)">Reference#decode(String)</a>
       method.
    </p>
 
@@ -631,11 +631,9 @@ router.attach("/users/{user}/orders/{order}", order);
       name! If  haven't done so already, you can learn more about the
       REST architecture style and the best practices to follow when applying
       it to a Web application. There is a related <a href="/about/faq#04">FAQ entry</a>
-      that will give you some starting pointers and we also maintain a <a
-      href="http://search.onrest.org">REST search engine</a> (based on
-      Google) that can be useful. If you have some experience with a
+      that will give you some starting pointers. If you have some experience with a
       traditional MVC framework, you can read more about the relationship to
-      Restlets in this other <a href="faq#10">FAQ
+      Restlet in this other <a href="/about/faq#10">FAQ
       entry</a>.
    </p>
 
@@ -740,8 +738,8 @@ public class UserResource extends ServerResource {
 
    <p>
       Beside this tutorial, your best source of information will be the Javadocs
-      available for the <a href="api/">Restlet API</a>, the
-      <a href="ext/">Restlet Extensions</a> and the <a href="Restlet/">Restlet</a>. Have
+      available for the <a href="/learn/javadocs/2.1/jse/api/">Restlet API</a>, the
+      <a href="/learn/javadocs/2.1/jse/ext/">Restlet Extensions</a> and the <a href="/learn/javadocs/2.1/jse/engine/">Restlet engine</a>. Have
       also a look at the <a href="connectors">connectors</a> section that lists
       all available client and server connectors and explain how to use and
       configure them, and the <a href="integrations">integrations</a>

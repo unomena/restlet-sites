@@ -40,9 +40,10 @@
 <#list javascript_files as javascript_file>
       <script                type="text/javascript"     src="${javascript_file}"></script>
 </#list>
-      <script type="text/javascript">
 <#if javascript??>
+      <script type="text/javascript">
       ${javascript}
+      </script>
 </#if>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -54,7 +55,7 @@
   ga('send', 'pageview');
 
 </script>
-      </script>
+
    </head>
 
   <body<#if body_event_managers?has_content>${body_event_managers}</#if>>
