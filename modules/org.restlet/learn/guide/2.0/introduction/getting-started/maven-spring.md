@@ -313,10 +313,8 @@ available on **localhost:8080** with a root context of '**/basecamp**'
 If you now go to your web browser and enter the following URL the
 service, which you have just created, should respond with 'Hello World!'
 
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [![Basecamp Browser](Getting%20Started%20with%20Maven%20and%20Spring-381_files/data.html "Basecamp Browser")](/learn/guide/2.0#/382-restlet/version/default/part/ImageData/data/basecamp-hello.png)
-  [Click to enlarge](/learn/guide/2.0#/382-restlet/version/default/part/ImageData/data/basecamp-hello.png)
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ![Web browser screenshot](/learn/guide/2.0/introduction/getting-started/basecamp-hello.png)
+  
 
 Accessing the resource via a browser
 
