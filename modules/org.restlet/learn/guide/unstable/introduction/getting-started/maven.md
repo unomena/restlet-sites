@@ -95,210 +95,41 @@ and gwt (google Web Toolkit edition). You can find
 [here](/learn/guide/2.1#/13-restlet/28-restlet/313-restlet.html "Editions matrix")
 a full view of the list of extensions and the editions that ship them. 
 
-Group Id
-
-Artifact ID
-
-Description
-
-org.restlet.\<edition\>
-
-org.restlet
-
-Restlet API
-
-org.restlet.\<edition\>
-
-org.restlet.example
-
-Examples
-
-org.restlet.\<edition\>
-
-org.restlet.ext.atom
-
-Atom extension
-
-org.restlet.\<edition\>
-
-org.restlet.ext.crypto
-
-Cryptography extension including Amazon S3 and Windows Azure client
-authentication
-
-org.restlet.\<edition\>
-
-org.restlet.ext.fileupload
-
-Integration with Apache FileUpload
-
-org.restlet.\<edition\>
-
-org.restlet.ext.freemarker
-
-Integration with FreeMarker
-
-org.restlet.\<edition\>
-
-org.restlet.ext.gwt
-
-Server-side integration with GWT
-
-org.restlet.\<edition\>
-
-org.restlet.ext.httpclient
-
-Integration with Apache HTTP Client
-
-org.restlet.\<edition\>
-
-org.restlet.ext.jaas
-
-Support for JAAS authentication and authorization framework
-
-org.restlet.\<edition\>
-
-org.restlet.ext.jackson
-
-Integration with Jackson
-
-org.restlet.\<edition\>
-
-org.restlet.ext.javamail
-
-Integration with JavaMail (POP3 and SMTP clients)
-
-org.restlet.\<edition\>
-
-org.restlet.ext.jaxb
-
-Integration with Java XML Binding (JAXB)
-
-org.restlet.\<edition\>
-
-org.restlet.ext.jaxrs
-
-Implementation of JAX-RS
-
-org.restlet.\<edition\>
-
-org.restlet.ext.jdbc
-
-Integration with Java DataBase Connectivity (JDBC)
-
-org.restlet.\<edition\>
-
-org.restlet.ext.jetty
-
-Integration with Jetty
-
-org.restlet.\<edition\>
-
-org.restlet.ext.jibx
-
-Integration with JiBX
-
-org.restlet.\<edition\>
-
-org.restlet.ext.json
-
-Support for JSON representations
-
-org.restlet.\<edition\>
-
-org.restlet.ext.lucene
-
-Integration with Apache Lucene
-
-org.restlet.\<edition\>
-
-org.restlet.ext.net
-
-Integration with Java URLConnection class
-
-org.restlet.\<edition\>
-
-org.restlet.ext.odata
-
-Support for OData and Microsoft WCF Data Services
-
-org.restlet.\<edition\>
-
-org.restlet.ext.rdf
-
-Support for the RDF parsing and generation
-
-org.restlet.\<edition\>
-
-org.restlet.ext.rome
-
-Integration with ROME
-
-org.restlet.\<edition\>
-
-org.restlet.ext.servlet
-
-Integration with Servlet API
-
-org.restlet.\<edition\>
-
-org.restlet.ext.simple
-
-Integration with Simple framework
-
-org.restlet.\<edition\>
-
-org.restlet.ext.slf4j
-
-Integration with SLF4J
-
-org.restlet.\<edition\>
-
-org.restlet.ext.spring
-
-Integration with Spring framework
-
-org.restlet.\<edition\>
-
-org.restlet.ext.ssl
-
-Support for SSL utilities and integration with jSSLutils library
-
-org.restlet.\<edition\>
-
-org.restlet.ext.velocity
-
-Integration with Apache Velocity
-
-org.restlet.\<edition\>
-
-org.restlet.ext.wadl
-
-Support the WADL specification
-
-org.restlet.\<edition\>
-
-org.restlet.ext.xdb
-
-Integration with Oracle 11g XML DB feature.
-
-org.restlet.\<edition\>
-
-org.restlet.ext.xml
-
-Support for XML and XSLT representations.
-
-org.restlet.\<edition\>
-
-org.restlet.ext.xstream
-
-Integration with XStream
-
-org.restlet.\<edition\>
-
-org.restlet.test
-
-Test module
+Group Id                Artifact ID                Description                                                                        
+----------------------- -------------------------- ---------------------------------------------------------------------------------- 
+org.restlet.\<edition\> org.restlet                Restlet API                                                                        
+org.restlet.\<edition\> org.restlet.example        Examples                                                                           
+org.restlet.\<edition\> org.restlet.ext.atom       Atom extension                                                                     
+org.restlet.\<edition\> org.restlet.ext.crypto     Cryptography extension including Amazon S3 and Windows Azure client authentication 
+org.restlet.\<edition\> org.restlet.ext.fileupload Integration with Apache FileUpload                                                 
+org.restlet.\<edition\> org.restlet.ext.freemarker Integration with FreeMarker                                                        
+org.restlet.\<edition\> org.restlet.ext.gwt        Server-side integration with GWT                                                   
+org.restlet.\<edition\> org.restlet.ext.httpclient Integration with Apache HTTP Client                                                
+org.restlet.\<edition\> org.restlet.ext.jaas       Support for JAAS authentication and authorization framework                        
+org.restlet.\<edition\> org.restlet.ext.jackson    Integration with Jackson                                                           
+org.restlet.\<edition\> org.restlet.ext.javamail   Integration with JavaMail (POP3 and SMTP clients)                                  
+org.restlet.\<edition\> org.restlet.ext.jaxb       Integration with Java XML Binding (JAXB)                                           
+org.restlet.\<edition\> org.restlet.ext.jaxrs      Implementation of JAX-RS                                                           
+org.restlet.\<edition\> org.restlet.ext.jdbc       Integration with Java DataBase Connectivity (JDBC)                                 
+org.restlet.\<edition\> org.restlet.ext.jetty      Integration with Jetty                                                             
+org.restlet.\<edition\> org.restlet.ext.jibx       Integration with JiBX                                                              
+org.restlet.\<edition\> org.restlet.ext.json       Support for JSON representations                                                   
+org.restlet.\<edition\> org.restlet.ext.lucene     Integration with Apache Lucene                                                     
+org.restlet.\<edition\> org.restlet.ext.net        Integration with Java URLConnection class                                          
+org.restlet.\<edition\> org.restlet.ext.odata      Support for OData and Microsoft WCF Data Services                                  
+org.restlet.\<edition\> org.restlet.ext.rdf        Support for the RDF parsing and generation                                         
+org.restlet.\<edition\> org.restlet.ext.rome       Integration with ROME                                                              
+org.restlet.\<edition\> org.restlet.ext.servlet    Integration with Servlet API                                                       
+org.restlet.\<edition\> org.restlet.ext.simple     Integration with Simple framework                                                  
+org.restlet.\<edition\> org.restlet.ext.slf4j      Integration with SLF4J                                                             
+org.restlet.\<edition\> org.restlet.ext.spring     Integration with Spring framework                                                  
+org.restlet.\<edition\> org.restlet.ext.ssl        Support for SSL utilities and integration with jSSLutils library                   
+org.restlet.\<edition\> org.restlet.ext.velocity   Integration with Apache Velocity                                                   
+org.restlet.\<edition\> org.restlet.ext.wadl       Support the WADL specification                                                     
+org.restlet.\<edition\> org.restlet.ext.xdb        Integration with Oracle 11g XML DB feature.                                        
+org.restlet.\<edition\> org.restlet.ext.xml        Support for XML and XSLT representations.                                          
+org.restlet.\<edition\> org.restlet.ext.xstream    Integration with XStream                                                           
+org.restlet.\<edition\> org.restlet.test           Test module                                                                        
 
 Sample dependencies declaration
 ===============================
@@ -322,4 +153,3 @@ add the following lines of text into the \<dependencies\> section.
       <artifactId>org.restlet.ext.simple</artifactId>
       <version>2.1-M3</version>
     </dependency>
-
