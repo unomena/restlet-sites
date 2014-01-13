@@ -357,7 +357,7 @@ Resources
 
 This archive contains all the source code described in this document.
 
-[restlet-basecamp](/learn/guide/2.0#/384-restlet/version/default/part/AttachmentData/data/restlet-basecamp.zip "restlet-basecamp")
+[restlet-basecamp](/learn/guide/2.0/introduction/getting-started/restlet-basecamp.zip "restlet-basecamp")
 (application/zip, 8.4 kB,
 [info](/learn/guide/2.0#/384-restlet.html))
 
