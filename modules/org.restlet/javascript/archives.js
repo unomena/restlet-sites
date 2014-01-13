@@ -67,34 +67,6 @@ function displayDistribution(tab, distribution) {
 	}
 	tab.append(str);
 }
-function setDownloadButton() {
-	$('#download').empty();
-	if (distribution && "file" == distribution.type) {
-		// Update download button
-		var urlChangesLog = "/learn/";
-		if (qualifier != null && "unstable" == qualifier.id) {
-			urlChangesLog += "snapshot";
-		} else {
-			urlChangesLog += version.minorVersion;
-		}
-		urlChangesLog += "/changes";
-
-		$('#download').append(
-				'<p><button class="btn btn-large btn-success" type="button">Download '
-						+ version.fullVersionCompact + '</button></p>');
-		$('#download')
-				.append('<p>File size: ' + distribution.fileSize + '</p>');
-		$('#download').append('<p>Date: ' + version.published + '</p>');
-		$('#download').append(
-				'<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
-		$('#download button').click(
-				function() {
-					document.location.href = "/download/"
-							+ version.minorVersion + "/"
-							+ distribution.fileName;
-				});
-	}
-}
 
 function refreshBranch(branchId) {
 	setBranch(branchId);
@@ -211,20 +183,26 @@ function setDownloadButton() {
 	if (distribution && "file" == distribution.type) {
 		// Update download button
 		var urlChangesLog = "/learn/";
-		if ((qualifier != null) && ("unstable" == qualifier.id)) {
+		if (qualifier != null && "unstable" == qualifier.id) {
 			urlChangesLog += "snapshot";
 		} else {
 			urlChangesLog += version.minorVersion;
 		}
-		urlChangesLog += "/jse/changes";
+		urlChangesLog += "/changes";
 
-		$('#download').append('<p><button class="btn btn-large btn-success" type="button">Download ' + version.fullVersionCompact + '</button></p>');
-		$('#download').append('<p>File size: ' + distribution.fileSize + '</p>');
+		$('#download').append(
+				'<p><button class="btn btn-large btn-success" type="button">Download '
+						+ version.fullVersionCompact + '</button></p>');
+		$('#download')
+				.append('<p>File size: ' + distribution.fileSize + '</p>');
 		$('#download').append('<p>Date: ' + version.published + '</p>');
-		$('#download').append('<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
+		$('#download').append(
+				'<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
 		$('#download button').click(
 				function() {
-					document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
+					document.location.href = "/download/"
+							+ version.minorVersion + "/"
+							+ distribution.fileName;
 				});
 	}
 }
