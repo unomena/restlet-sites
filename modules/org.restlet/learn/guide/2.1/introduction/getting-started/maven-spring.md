@@ -7,8 +7,6 @@ Overview
 This document outlines how to integrate the Restlet Framework with Maven
 and Spring. It is not a tutorial on using the Restlet Framework.
 
-Needs to be updated for version 2.1
-
 Prerequisites
 =============
 
@@ -315,10 +313,8 @@ available on **localhost:8080** with a root context of '**/basecamp**'
 If you now go to your web browser and enter the following URL the
 service, which you have just created, should respond with 'Hello World!'
 
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [![Basecamp Browser](Getting%20Started%20with%20Maven%20and%20Spring-381_files/data.html "Basecamp Browser")](/learn/guide/2.1#/382-restlet/version/default/part/ImageData/data)
-  [Click to enlarge](/learn/guide/2.1#/382-restlet/version/default/part/ImageData/data)
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  ![Web browser screenshot](./basecamp-hello.png)
+  
 
 Accessing the resource via a browser
 
@@ -359,7 +355,6 @@ Resources
 
 This archive contains all the source code described in this document.
 
-[restlet-basecamp](/learn/guide/2.1#/384-restlet/version/default/part/AttachmentData/data "restlet-basecamp")
-(application/zip, 8.4 kB,
-[info](/learn/guide/2.1#/384-restlet.html))
+[restlet-basecamp](./restlet-basecamp.zip "restlet-basecamp")
+(application/zip, 8.4 kB)
 

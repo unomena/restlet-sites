@@ -313,7 +313,7 @@ available on **localhost:8080** with a root context of '**/basecamp**'
 If you now go to your web browser and enter the following URL the
 service, which you have just created, should respond with 'Hello World!'
 
-  ![Web browser screenshot](/learn/guide/2.0/introduction/getting-started/basecamp-hello.png)
+  ![Web browser screenshot](./basecamp-hello.png)
   
 
 Accessing the resource via a browser
@@ -355,7 +355,6 @@ Resources
 
 This archive contains all the source code described in this document.
 
-[restlet-basecamp](/learn/guide/2.0/introduction/getting-started/restlet-basecamp.zip "restlet-basecamp")
-(application/zip, 8.4 kB,
-[info](/learn/guide/2.0#/384-restlet.html))
+[restlet-basecamp](./restlet-basecamp.zip "restlet-basecamp")
+(application/zip, 8.4 kB)
 
