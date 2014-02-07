@@ -1,405 +1,69 @@
 <#global content>
 <div class="span2 left section">
 	<ul id="toc" class="toc">
+		<li><a href="#milestones">Milestones</a></li>
 		<li><a href="#version-2.2">Version 2.2</a></li>
-		<li><a href="#version-2.3">Version 2.3</a></li>
-		<li><a href="#timeline">Timeline</a></li>
-        <li><a href="#conclusion">Conclusion</a></li>
-		<li><a href="#remark">Remark</a></li>
+		<li><a href="#version-3.0">Version 3.0</a></li>
+        	<li><a href="#conclusion">Conclusion</a></li>
 	</ul>
 </div>
 
 <div class="span7">
+
+	<h4>
+		<a name="milestones"></a>Milestones
+	</h4>
+
+	<ul>
+		<li>February 2014
+			<ul>
+				<li>2.2.0<a href="https://github.com/restlet/restlet-framework-java/issues?milestone=9&state=open">Open issues</a>.</li>
+				<li>3.0 M1<a href="https://github.com/restlet/restlet-framework-java/issues?milestone=17&state=open">Open issues</a>.</li>
+			</ul>
+		</li>
+		<li>April 2014
+			<ul>
+				<li>2.2.1</li>
+				<li>3.0 M2</li>
+			</ul>
+		</li>
+		<li>June 2014
+			<ul>
+				<li>2.2.2</li>
+				<li>3.0 M3</li>
+			</ul>
+		</li>
+		<li>August 2014
+			<ul>
+				<li>2.2.3</li>
+				<li>3.0 M4</li>
+			</ul>
+		</li>
+		<li>October 2014
+			<ul>
+				<li>2.2.4</li>
+				<li>3.0 RC1</li>
+			</ul>
+		</li>
+		<li>December 2014
+			<ul>
+				<li>2.2.5</li>
+				<li>3.0.0</li>
+			</ul>
+		</li>
+	</ul>
+
 	<h4>
 		<a name="version-2.2"></a>Version 2.2
 	</h4>
 
-	<p>Our current goal is to develop version 2.2 of the Restlet
-		Framework based on this plan.</p>
-
-	<p>This document contains a rather detailled roadmap for future
-		Restlet version and is continuously updated to indicate the progress
-		made and the adjustments necessary. The goal for next 2.x versions of
-		the Restlet Framework is to develop incremental releases in a short
-		time-frame of about 6 months.</p>
-
-	<h5 id="support-for-spdy">Support for SPDY</h5>
-	<p>
-		As this protocol <a
-			href="http://web.archive.org/web/20111225113020/http://www.chromium.org/spdy">defined
-			by Google</a> is gaining more acceptance with its <a
-			href="http://web.archive.org/web/20111225113020/http://en.wikipedia.org/wiki/Amazon_Silk">support
-			in Amazon Silk browser</a> and is compatible with HTTP semantics, hence
-		with the Restlet API, we will add support for it by leveraging and
-		extending our internal NIO connector. Mozilla is <a
-			href="http://web.archive.org/web/20111225113020/https://wiki.mozilla.org/Platform/Features/SPDY">also
-			adding support for SPDY</a> in Firefox.
-	</p>
-	<p>
-		There are <a
-			href="http://web.archive.org/web/20111225113020/http://www.mnot.net/blog/2009/11/13/flip">some
-			good chances</a> that a HTTP/2.0 standardization effort will emerge in
-		the near future, also based on Roy T. Fielding's Waka and the <a
-			href="http://web.archive.org/web/20111225113020/http://trac.tools.ietf.org/wg/httpbis/trac/wiki">HTTPbis
-			working group</a> that split the HTTP/1.1 specification in several layer,
-		including a separate messaging layer and semantics layer. See <a
-			href="http://web.archive.org/web/20111225113020/http://blog.noelios.com/2011/10/06/can-the-rise-of-spdy-threaten-http/">this
-			blog post</a> for details on Noelios's vision.
-	</p>
-	<p>We will also further optimize those NIO connectors (HTTP, SIP
-		and SPDY) by performing a comparison benchmark with other connectors
-		(Jetty, Simple) and further improving the NIO controller loop. We will
-		also facilitate the reporting of statistics on the connector via the
-		ConnetorService, such as the number of active connections, the number
-		of calls per second and so on. Finally, we will attempt to use a
-		single NIO controller to manage several connector instances (client
-		and server sides, several listening addresses, etc.).</p>
-	<h5 id="better-community-tools">Better community tools</h5>
-	<h6 id="forge-migration-to-github">Forge migration to GitHub</h6>
-	<p>
-		Over the past years, the GitHub service has gained a lot of popularity
-		to host open source projects. Our goal is to migrate our source code
-		repository and issue tracker from <a
-			href="http://web.archive.org/web/20111225113020/http://restlet.tigris.org/">Tigris</a>
-		to <a
-			href="http://web.archive.org/web/20111225113020/https://github.com/">GitHub</a>.
-		Beside the modern user interface, one major advantage will be the
-		management of contributions via the &quot;pull requests&quot; feature.
-		As a result, we will switch from SVN to Git.
-	</p>
-	<h6 id="user-questions-migration-to-stackoverflow">User questions
-		migration to StackOverflow</h6>
-	<p>
-		Over the past years, the <a
-			href="http://web.archive.org/web/20111225113020/http://stackoverflow.com/">StackOverflow</a>
-		service has gained a lot of popularity and many Restlet users have
-		naturally started to ask their usage questions via this site. While
-		initially hard to keep track of in addition to our regular mailing
-		list on Tigris, we know think that this is more convenient for many
-		kinds of questions.
-	</p>
-	<p>
-		The plan is to make this support more official and promote the usage
-		of StackOverflow on Restlet web site. See the <a
-			href="http://web.archive.org/web/20111225113020/http://stackoverflow.com/questions/tagged/restlet">existing
-			Restlet related questions</a>.
-	</p>
-	<h6 id="mailing-lists-migration-to-google-groups">Mailing lists
-		migration to Google Groups</h6>
-	<p>
-		Taking into account the migration of the Restlet forge (source code,
-		issue tracker and misc downloads) from Tigris to GitHub, the last
-		remaining service will be our mailing lists. To simplify our community
-		management tasks, we intend to merge both discuss@restlet.tigris.org
-		and code@restlet.tigris.org mailing lists to the new version/UI of <a
-			href="http://web.archive.org/web/20111225113020/https://groups.google.com/forum/#%21overview">Google
-			Groups</a>.
-	</p>
-	<h5 id="migration-to-java-se-6">Migration to Java SE 6</h5>
-	<p>
-		The main code trunk will be migrated from Java SE 5, that reached its
-		end of life, to Java SE 6. We will look at taking advantage on <a
-			href="http://web.archive.org/web/20111225113020/http://www.oracle.com/technetwork/java/javase/features-141434.html">new
-			features added</a>and will also leverage the new Servlet 3.0 API which
-		requires Java SE 6 as well.
-	</p>
-	<h5 id="option-for-apache-license-2.0">Option for Apache License
-		2.0</h5>
-	<p>
-		In addition to LGPL 2.1/3.0, EPL 1.0 and CDDL 1.0 currently proposed,
-		we are planning to add another open source license option for the <a
-			href="http://web.archive.org/web/20111225113020/http://apache.org/licenses/LICENSE-2.0">Apache
-			License 2.0</a>. This will make the usage of Restlet in Apache Foundation
-		projects <a
-			href="http://web.archive.org/web/20111225113020/http://www.apache.org/legal/resolved.html#category-b">easier</a>.
-	</p>
-	<h5 id="new-tutorial">New tutorial</h5>
-	<p>So far our user guide documentation has been rather technical,
-		with first steps documents, basic tutorials, edition and extension
-		description and Javadocs. In addition, we are publishing the
-		comprehensive &quot;Restlet in Action&quot; book for users wanting to
-		get a deeper understanding of the framework.</p>
-	<p>However, we received several feed-back for a better introductory
-		documentation, that would help understand the potential of the
-		technology with a sensible use case, a complete end-to-end example
-		including persistence and UI. This would also give a way to share best
-		practices and illustrate usage scenarios of the technology such as:</p>
-	<ul>
-		<li>open web API</li>
-		<li>cloud migration and portability</li>
-		<li>mobile web sites and services</li>
-		<li>unification of web sites and web services</li>
-	</ul>
-	<p>
-		Therefore, we want to write a new and in depth tutorial presenting a
-		example comparable to <a
-			href="http://web.archive.org/web/20111225113020/http://docs.jboss.org/seam/2.2.1.CR1/reference/en-US/html/tutorial.html#booking">Seam's
-			Hotel Booking one</a> or a RESTful Java PetStore (we already have a
-		prototype based on older 1.1 version).
-	</p>
-	<h5 id="size-optimization-of-editions">Size optimization of
-		editions</h5>
-	<p>Restlet editions for Android and GWT required special
-		adaptations in version 2.0 to run in those restricted environments. In
-		version 2.2, we want to go further into the customization effort, with
-		a special focus on footprint.</p>
-	<p>Regarding Android, the core org.restlet.jar for Android contains
-		the internal Restlet HTTP connector (client and server), but in many
-		cases, we could just leverage the client connector based on Apache
-		HTTP Client, especially because it is part of the Android runtime. We
-		should therefore provide an addition org.restlet.jar file, without the
-		internal connector but preconfigured to leverage Apache HTTP Client,
-		resulting in a smaller footprint. Also, there is a Base 64
-		implementation in android.util that we could leverage as well as
-		Apache HTTP Components 4.0 on the server side.</p>
-	<p>Regarding GWT, we added support for annotated interfaces and
-		client proxies in version 2.0 with automatic POJOs serialization and
-		deserialization, generated using GWT's deferred binding mechanism.
-		When using those proxies, we rely on the whole Restlet Core (GWT
-		edition) for the actual implementation, but this is mostly transparent
-		unless the user needs to modify the underlying ClientResource for
-		advanced use cases (authentication is a classic case).</p>
-	<p>In order to not add the footprint of the Restlet Core in those
-		simple cases, we could optionally generate a lighter proxy relying
-		directly and only on GWT's lower-level HTTP API and the classes needed
-		for serialization and deserialization from GWT-RPC internal packages.</p>
-	<p>In addition, we will look into distributing several profiles for
-		each Restlet module, like a client-side only
-		&quot;org.restlet-client.jar&quot; and
-		&quot;org.restlet-server.jar&quot; in addition to
-		&quot;org.restlet.jar&quot;. The Restlet API and Engine would be
-		unchanged, just partially shipped in those JAR files.</p>
-	<h5 id="osgi-environments-edition">OSGi Environments edition</h5>
-	<p>We will enhance the edition for OSGi Environments added late in
-		the Restlet Framework 2.1 development process, in order to take full
-		advantage of the available OSGi core services, such as the log service
-		and the HTTP service.</p>
-	<p>
-		We will add an org.restlet.ext.osgi extension facilitating the
-		development of highly dynamic Restlet applications, by integrating the
-		code currently in the Restlet incubator. See <a
-			href="http://web.archive.org/web/20111225113020/http://wiki.restlet.org/developers/172-restlet/g4/124-restlet.html">this
-			specification document</a> for additional details.
-	</p>
-	<h5 id="cache-service">Cache service</h5>
-	<p>The Restlet API has a comprehensive support for HTTP caching
-		metadata and directives. However, we have no built-in way to support
-		client-side and server-side caching of actual representation content.</p>
-	<p>
-		The plan is to provide a CacheService class with configuration option
-		based on size, media type and so on, with a default behavior and a
-		very extensible implementation to plug any kind of caching mechanism
-		(in memory, on file, distributed cache, database, etc.). For details,
-		see <a
-			href="http://web.archive.org/web/20111225113020/http://wiki.restlet.org/172-restlet/g2/388-restlet.html">this
-			specification document</a>.
-	</p>
-	<h5 id="restlet-api">Restlet API</h5>
-	<p>Beyond the above mentioned features, here are some additional
-		ones that we are considering:</p>
-	<p>Removal of deprecated artifacts in the API, engine and
-		extensions to reduce size</p>
-	<p>Consider a Container/Composite class, parent of Component and
-		Application</p>
-	<ul>
-		<li>Restlets and resource classes contained in a Composite cannot
-			directly manipulate objects outside their parent container</li>
-	</ul>
-	<p>Support server-side resource proxies based on Restlet annotated
-		interfaces that would allow a POJO to become a stateful REST resource.
-		Those objects would be thread-safe all potentially called by several
-		threads at the same time</p>
-	<h5 id="easier-dependency-injection">Easier dependency injection</h5>
-	<h6 id="guice-extension">Guice extension</h6>
-	<p>There is already such an extension maturing in the Restlet
-		Incubator that we should try to migrate to the main trunk. Necessary
-		adjustments to the Restlet API should also be made.</p>
-	<h4 id="version-2.3">Version 2.3</h4>
-	<h5 id="eclipse-ide-tooling">Eclipse IDE tooling</h5>
-	<p>
-		In order to facilitate the usage of the Restlet Framework withing
-		Eclipse IDE, we would like to start providing tooling support such as
-		wizards to facilitate the creation of Restlet applications, filters,
-		resources, etc. See <a
-			href="http://web.archive.org/web/20111225113020/http://wiki.restlet.org/172-restlet/g5/361-restlet.html">this
-			wiki page for details</a>.
-	</p>
-	<p>In addition, the core development team will migrate to the
-		latest version of Eclipse Indigo (3.7) as their main IDE development
-		tool, ensuring that no errors and warnings appear with the source code
-		in trunk.</p>
-	<h5 id="pure-javascript-edition-in-progress">Pure JavaScript
-		edition [in progress]</h5>
-	<p>Due to the emergence of HTML 5 on all sorts of browser platforms
-		(mobile), the improvement of JavaScript engines such as Chrome V8 and
-		the emergence of Node.js on the server-side, it sounds like a good
-		time to push for a comprehensive Restlet port to JavaScript both
-		client-side (browser and Node.js) and server-side (Node.js), reusing
-		the Restlet API semantics but in clean JavaScript way.</p>
-	<p>
-		Of course, we already have the GWT edition of Restlet which provides a
-		nice solution, but there seems to be room for a more hypermedia
-		driven/document oriented solution, combining AJAX and UI libraries
-		such as jQuery, Ext JS, YUI to name a few. In Restlet Incubator, we
-		already have a prototype of such port working in both browsers and
-		Node.js on the client-side. See <a
-			href="http://web.archive.org/web/20111225113020/http://wiki.restlet.org/172-restlet/g5/368-restlet.html">this
-			specifications document</a> for details.
-	</p>
-	<h5 id="dart-edition">Dart edition</h5>
-	<p>
-		<a
-			href="http://web.archive.org/web/20111225113020/http://www.dartlang.org/">Dart</a>
-		is a promising programming language launched by Google in 2011 at the
-		cross-roads of JavaScript and Java that is both statically and
-		dynamically typed. It looks easier to port Restlet to than to pure
-		JavaScript, a bit similar to the porting done for the GWT edition.
-	</p>
-	<h5 id="enhanced-conneg-service">Enhanced conneg service</h5>
-	<p>We want to facilitate content negotiation based on other
-		dimensions than representation metadata byenhancing the existing
-		ConnegService added in version 2.1. For example the
-		&quot;account.html.ftl.ie&quot; file could be mapped to the HTML media
-		type, decoded using the FreeMarker template engine and returned only
-		for Internet Explorer. The &quot;vary&quot; HTTP header
-		(Response#dimensions property) should also be updated properly.
-		Example of new dimensions that could be taken into account:</p>
-	<ul>
-		<li>user agent type (ex: Firefox)</li>
-		<li>user agent category (ex: mobile, desktop, etc.)</li>
-		<li>user agent version</li>
-		<li>user preferences</li>
-		<li>IP address and domain name (ex: UI branding, white-label)</li>
-		<li>authentication state (ex: anonymous version)</li>
-		<li>authorization state (ex: user role)</li>
-	</ul>
-	<h5 id="enhanced-converter-service">Enhanced converter service</h5>
-	<p>The current converter service supports the serialization of
-		objects into representations or the deserialization of representations
-		into objects. This works fine and uses a plugin mechanism for
-		extensions such as XStream, Jackson, JAXB, JiBX and a few more. We
-		want to go beyond in 2.1 and support three other scenarios.</p>
-	<h6 id="unified-bean-converter">Unified bean converter</h6>
-	<p>
-		We currently rely on many extension to support serialization between
-		POJOs and common formats such as JSON (JSON.org, XStream+Jettison,
-		Jackson), XML (XStream, JAXB, JiBX), RDF, GWT, etc. However, those
-		extensions and related libraries tend to have much redundancy and lack
-		integration with REST representations such as metadata and hyperlinks.
-		As Roy T. Fielding reminded in <a
-			href="http://web.archive.org/web/20111225113020/http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven">this
-			blog post</a>, REST APIs must be hypermedia-driven, especially on the
-		client-side if you really want to loosely couple web clients with web
-		servers.
-	</p>
-	<p>
-		We will help Restlet users to easily support conneg over various media
-		types, with a single consistent set of representation annotations and
-		illustrate this support for common media types such as XML, JSON,
-		HTML/Form post, RDF or CSV. See <a
-			href="http://web.archive.org/web/20111225113020/http://wiki.restlet.org/172-restlet/365-restlet.html">this
-			specifications page</a> for more details.
-	</p>
-	<p id="from-representation-to-representation">From representation
-		to representation</p>
-	<p>This is based on a transformation document (typically a template
-		or skeleton of the result document). An example case is the usage of
-		XSLT to automatically convert a WADL representation or a
-		XStream/JAXB/JiBX XML representation into HTML representations. A
-		mechanism to register or discover the transformation documents should
-		be provided, based on the source and result media types.</p>
-	<p id="from-object-to-representation-using-a-template-document">From
-		object to representation using a template document</p>
-	<p>An example is an object returned by a @Get annotated Java
-		method) that needs to be converted into a result representation (for
-		example an HTML document). There are currently two ways provided by
-		the framework to do that via the FreeMarker and Velocity extensions.
-		This idea would be to simplify the usage of those extensions and their
-		TemplateRepresentation classes via the ConverterService.</p>
-	<p>It would also be useful to be able to select a different
-		template based on a query parameter or any attribute actually, for
-		example to display a read-only HTML document or an HTML form capable
-		of editing the resource.</p>
-	<p>
-		This would be pluggable so other template mechanisms such as <a
-			href="http://www.eclipse.org/acceleo/">Acceleo</a> (generates text
-		from <a href="http://www.eclipse.org/modeling/emf/">EMF</a> beans)
-		could be supported. A mechanism to register or discover the
-		transformation documents should be provided (for example based on the
-		qualified class name of the source object in a base directory of
-		templates).
-	</p>
-	<p id="from-object-to-object-using-a-transformation-document">From
-		object to object using a transformation document</p>
-	<p>
-		Third, the conversion of a source object into a result object should
-		be supported. This could be leveraged by technologies such <a
-			href="http://www.eclipse.org/m2m/atl/">ATL</a> (transforms source <a
-			href="http://www.eclipse.org/modeling/emf/">EMF</a> beans into result
-		EMF beans). A mechanism to register or discover the transformation
-		documents should be provided, based on the source and result qualified
-		class names.
-	</p>
-	<h5 id="support-html-5-server-sent-events">Support HTML 5
-		Server-Sent events</h5>
-	<p>This W3C specification part of HTML 5 is now supported in major
-		web browsers and is RESTful so we should support it directly in the
-		framework. Generally, we should Improve our asynchronous support for
-		use cases such as CouchDB notifications and Twitter live API.</p>
-	<h5 id="easier-dependency-injection-1">Easier dependency injection</h5>
-	<h6 id="spring-extension">Spring extension</h6>
-	<p>
-		We will add support for custom XML schema in Spring, based on our
-		existing custom XML syntax implemented by the Component class. This
-		will also be the opportunity to improve the Spring extension document
-		which is a regular topic for questions. See related issues <a
-			href="http://restlet.tigris.org/issues/show_bug.cgi?id=614">#614</a>,
-		<a href="http://restlet.tigris.org/issues/show_bug.cgi?id=638">#638</a>
-		and <a href="http://restlet.tigris.org/issues/show_bug.cgi?id=992">#992</a>.
-	</p>
-	<h5 id="miscellaneous">Miscellaneous</h5>
-	<ul>
-		<li><a
-			href="http://restlet.org/learn/guide/2.1#257-restlet/346-restlet.html">ATL
-				extension</a> : to convert EMF representation beans into other EMF
-			representation beans, like XSLT for XML representations</li>
-		<li><a href="http://www.eclipse.org/acceleo/">Acceleo</a>
-			extension : to convert EMF representations into textual
-			representations, similar to FreeMarker and Velocity template
-			representations</li>
-		<li>Support new compact template languages dedicated to HTML such
-			as <a href="http://haml-lang.com/">Haml,</a> <a
-			href="http://scalate.fusesource.org/documentation/jade.html">Jade</a>
-			or Textile.
-		</li>
-	</ul>
+	<p></p>
 
 	<h4>
-		<a name="timeline"></a>Timeline
+		<a name="version-3.0"></a>Version 3.0
 	</h4>
 
-	<ul>
-		<li>2013 Q2
-			<ul>
-				<li>2.2 M3. <a
-					href="https://github.com/restlet/restlet-framework-java/issues?milestone=5&state=open">Open
-						issues</a>.
-				</li>
-				<li>2.2 RC. <a
-					href="https://github.com/restlet/restlet-framework-java/issues?milestone=8&state=open">Open
-						issues</a>.
-				</li>
-			</ul>
-		</li>
-		<li>2013 Q3
-			<ul>
-				<li>2.2.0. <a
-					href="https://github.com/restlet/restlet-framework-java/issues?milestone=9&state=open">Open
-						issues</a>.
-				</li>
-			</ul>
-		</li>
-	</ul>
+	<p></p>
 
     <h4 id="conclusion">Conclusion</h4>
     <p>
