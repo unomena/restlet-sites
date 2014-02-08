@@ -1,8 +1,6 @@
-Debugging tools
-===============
+# Debugging tools
 
-Introduction
-============
+## Introduction
 
 As a set of pure Java library, the Restlet framework can easily be
 debugged in your favorite IDE. All the source code is available, making
@@ -14,10 +12,9 @@ the handle() method or inside the constructor of your Resource subclass.
 Think also about turning one the access and application
 [loggings](/learn/guide/2.1#/13-restlet/275-restlet/311-restlet/101-restlet.html "Logging").
 
-Tools
-=====
+## Tools
 
-Regarding protocol debugging, we recommand the you install tools such
+Regarding protocol debugging, we recommend the you install tools such
 as:
 
 -   [cURL](http://curl.haxx.se/)

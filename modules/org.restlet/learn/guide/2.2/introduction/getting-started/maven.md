@@ -1,17 +1,13 @@
-Getting started with Maven
-==========================
+# Getting started with Maven
 
-Introduction
-============
+## Introduction
 
 Maven is a comprehensive project management system built around the
 concept of POM (Project Object Model). One of the main advantages is the
 automated handling of project dependencies, including their download.
-For more information on Maven, check the [project home
-page](http://maven.apache.org/).
+For more information on Maven, check the [project home page](http://maven.apache.org/).
 
-The
-[Maven](http://maven.apache.org/)
+The [Maven](http://maven.apache.org/)
 support appeared to be important for many Restlet users. The initial
 response was to automatically generate the POM files for each module JAR
 shipped within the Restlet distribution. This enabled users to upload
@@ -30,8 +26,7 @@ It is freely accessible from
 and contains all Restlet JARs and third party dependencies that aren't
 available in the main public Maven repository.
 
-Public repository configuration
-===============================
+## Public repository configuration
 
 Here are some instructions about how to configure Maven client to work
 with the online Maven repository.
@@ -77,8 +72,7 @@ Just after the \</profiles\> add the following:
     </activeProfiles> 
        
 
-Available artifacts
-===================
+## Available artifacts
 
 The following table lists the available artifacts and their group and
 artifact ids. With the introduction of the
@@ -300,8 +294,7 @@ org.restlet.test
 
 Test module
 
-Sample dependencies declaration
-===============================
+## Sample dependencies declaration
 
 Each project based on the Restlet Framework needs to declare at least
 one dependency: the Restlet core module. According to your needs, you
@@ -315,11 +308,10 @@ add the following lines of text into the \<dependencies\> section.
     <dependency>
       <groupId>org.restlet.jse</groupId>
       <artifactId>org.restlet</artifactId>
-      <version>2.1-M3</version>
+      <version>2.2-RC1</version>
     </dependency>
     <dependency>
       <groupId>org.restlet.jse</groupId>
       <artifactId>org.restlet.ext.simple</artifactId>
-      <version>2.1-M3</version>
+      <version>2.2-RC1</version>
     </dependency>
-
