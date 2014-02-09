@@ -1,8 +1,6 @@
-Getting started with Eclipse IDE
-================================
+# Getting started with Eclipse IDE
 
-Introduction
-============
+## Introduction
 
 There are two ways to use Restlet within Eclipse IDE. The first one is
 to create a Java project and use the Restlet JARs as external

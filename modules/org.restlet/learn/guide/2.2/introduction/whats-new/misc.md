@@ -1,8 +1,0 @@
-Misc
-====
-
-Maven support
-=============
-
-TODO
-

@@ -1,8 +1,6 @@
-First client
-============
+# First client
 
-Introduction
-============
+## Introduction
 
 As we mentioned in the [introduction](../index.md "Part I - Introduction"),
 the Restlet Framework is at the same time a client and a server

@@ -1,12 +1,9 @@
-Architecture
-============
+# Architecture
 
-Introduction
-============
+## Introduction
 
 The Restlet Framework is composed of two main parts. First, there is the
-[Restlet
-API](/learn/guide/2.1#/13-restlet/27-restlet.html "Part II - Core Restlet"),
+[Restlet API](/learn/guide/2.1#/13-restlet/27-restlet.html "Part II - Core Restlet"),
 a neutral API supporting the concepts of REST and HTTP, facilitating the
 handling of calls for both client-side and server-side applications.
 This API is backed by the Restlet Engine and both are now shipped in a
@@ -18,8 +15,7 @@ This separation between the API and the implementation is similar to the
 one between the Servlet API and Web containers like Jetty or Tomcat, or
 between the JDBC API and concrete JDBC drivers.
 
-Overview of a REST architecture
-===============================
+## Overview of a REST architecture
 
 Let's step back a little and consider typical web architectures from a
 REST point of view. In the diagram below, ports represent the connector
@@ -34,8 +30,7 @@ connectors attached to it. Web Server B, for example, has both a server
 connector to respond to requests from the User Agent component, and
 client connectors to send requests to Web Server A and the Mail Server.
 
-Overview of a Restlet architecture
-==================================
+## Overview of a Restlet architecture
 
 In addition to supporting the standard REST software architecture
 elements as presented before, the Restlet framework also provides a set

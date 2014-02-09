@@ -1,8 +1,6 @@
-Presentation layer
-==================
+# Presentation layer
 
-Introduction
-============
+## Introduction
 
 When compared to the Servlet API, the Restlet API doesn't have a sister
 API like Java Server Pages (JSP). Instead we made the design choice to
@@ -10,8 +8,7 @@ be equally open to all presentation technologies. This openess is
 materialized in the Representation class which is used for response
 entities. 
 
-Description
-===========
+## Description
 
 More concretely, we provide integrations with three popular template
 technologies : XSLT, FreeMarker and Apache Velocity. In addition,

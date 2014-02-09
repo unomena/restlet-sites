@@ -1,0 +1,249 @@
+<#global title="Restlet 1.1 - Benchmark" />
+<#global content>
+   <h3>Restlet 1.1 - Benchmark</h3>
+
+   <h4>Introduction</h4>
+
+   <p>
+      This section describes some performance tests involving the various
+      standalone HTTP server connectors distributed with Restlet Engine.
+      For comparison purpose, we also tested the Servlet adapter with popular 
+      Servlet containers. The tests have been made with the release 1.1.3 of the 
+      Restlet.
+   </p>
+
+   <p>
+      This benchmark doesn't aim to provide an absolute comparison between the
+      various connectors and the servlet containers tested for at least one reason:
+      only their default configuration was used, with no particular optimization
+      or performance tuning except for the connector based on Jetty. We would 
+      like to show the behavior of the Restlet framework in different situations 
+      where the server load varies from light to heavy, and prove that the various 
+      connectors are scalable and usable in production environments.
+   </p>
+
+   <h4>Environment</h4>
+
+   <div>
+      The tests have been made on a laptop with the following characteristics:<br/>
+      Hardware Environment
+      <ul>
+         <li>Processor : Pentium M Centrino 1.8 Ghz</li>
+         <li>RAM : 1.5 GB</li>
+      </ul>
+      Software environment
+      <ul>
+         <li>OS : Linux Xubuntu 8.04 (Hardy)</li>
+         <li>JRE Version : 1.5.0_16</li>
+         <li>Java VM : Java HotSpot(TM) Server VM</li>
+      </ul>
+      Note that the usage of the JVM in the HotSpot server mode is generally
+      recommended for Restlet deployments as it tend to slightly improve the performance.
+   </div>
+
+   <div style="margin-top: 15px;margin-bottom: 10px; text-align:center">
+      <table class="classic" style="display:inline" cellspacing="2" cellpadding="3">
+         <tr>
+            <th>Connector</th>
+            <th>Dependencies</th>
+         </tr>
+         <tr>
+            <td style="text-align: center">Grizzly</td>
+            <td style="text-align: left">
+               <ul style="margin-top:-2px;margin-bottom:-3px;margin-right:3px;">
+                  <li><a href="https://grizzly.dev.java.net/">Grizzly 1.9.8</a></li>
+               </ul>
+            </td>
+         </tr>
+         <tr>
+            <td style="text-align: center">Simple</td>
+            <td style="text-align: left">
+               <ul style="margin-top:-2px;margin-bottom:-3px;margin-right:3px;">
+                  <li><a href="http://www.simpleframework.org/">Simple 3.1.3</a></li>
+               </ul>
+            </td>
+         </tr>
+         <tr>
+            <td style="text-align: center">Jetty</td>
+            <td style="text-align: left">
+               <ul style="margin-top:-2px;margin-bottom:-3px;margin-right:3px;">
+                  <li><a href="http://www.mortbay.org/">Jetty 6.1.15</a></li>
+               </ul>
+            </td>
+         </tr>
+      </table>
+   </div>
+
+   <div style="text-align:center">
+      <table class="classic" style="display:inline" cellspacing="2" cellpadding="3">
+         <tr>
+            <th>Servlet container</th>
+            <th>Release</th>
+         </tr>
+         <tr>
+            <td style="text-align: center"><a href="http://tomcat.apache.org/">Tomcat</a></td>
+            <td>6.0.18</td>
+         </tr>
+         <tr>
+            <td style="text-align: center"><a href="http://www.mortbay.org/">Jetty</a></td>
+            <td>6.1.15</td>
+         </tr>
+      </table>
+   </div>
+
+   <h4>Specifications</h4>
+
+   <h5>Stress tool</h5>
+
+   <p>
+      The following tests have been made with <a href="http://httpd.apache.org/docs/2.0/programs/ab.html">Apache Bench</a> delivered by Apache HTTP Server 2.0.
+      Ab especially shows how many requests per second the web server is capable
+      of serving. For this benchmark, one file is served: a single text file
+      (2.1 kb). The number of concurrent requests varied from 1 to 200 for one serie of tests, 
+      and the number of requests (with only one client) varied from 1 to 500 for the other.
+   </p>
+
+   <p>
+      Apache Bench command line:
+   </p>
+
+   <pre>
+ab -q -c %concurrency% -n 1000 %url_test%
+   </pre>
+
+   <p>
+      where %concurrency% varied from 1 to 200.
+   </p>
+
+   <pre>
+ab -q -c 1 -n %nbRequests% %url_test%
+   </pre>
+
+   <p>
+      where %nbRequests% varied from 1 to 500.
+   </p>
+
+   <h5>Restlet connectors configuration</h5>
+
+   <p>
+      The Restlet connectors have been tested with their default configuration 
+      except for the connector based on Jetty. The maximum number of threads 
+      has been increased to 1000 ("maxThread" parameter).
+   </p>
+   
+   <p>
+      Please refer to the <a href="connectors">connectors page</a> for more
+      details about the available parameters for each tested connectors.
+   </p>
+
+   <p>
+      The application using the Restlet connectors has been launched via the
+      <a href="http://wrapper.tanukisoftware.org">Tanuki wrapper</a>, that
+      provides several nice services especially "write once run everywhere"
+      service. It manages a dedicated JVM instance where your application is 
+      running. For these tests, the JVM has been configured with the following 
+      parameters:
+   </p>
+
+   <pre>
+-server
+-Djava.awt.headless=true
+-Djava.util.logging.config.file=%PROD_HOME%/data/config/logging.properties
+   </pre>
+
+   <h5>Servlet containers configuration</h5>
+
+   <p>
+      As written in the introduction, both tested Servlet containers Apache 
+      Tomcat and Jetty haven't been especially configured for this benchmark. 
+      They were just installed, and then ready to use.
+   </p>
+
+   <h4>Results</h4>
+
+   <h5>First series of tests: variation of the concurrency</h5>
+
+   <table>
+      <tr>
+         <td style="text-align: center" colspan="2">Click on the image to enlarge it.</td>
+      </tr>
+      <tr>
+         <td><a href="images/concurrency-reqBySec-txt"><img src="images/concurrency-reqBySec-txt-thumb" alt="benchmark results - concurrency - requests per second" /></a></td>
+         <td><a href="images/concurrency-reqTime-txt"><img src="images/concurrency-reqTime-txt-thumb" alt="benchmark results - concurrency - time per request" /></a></td>
+      </tr>
+      <tr>
+         <td><a href="images/concurrency-reqBySec-servlet-txt"><img src="images/concurrency-reqBySec-servlet-txt-thumb" alt="benchmark results - concurrency - Servlet containers - requests per second" /></a></td>
+         <td><a href="images/concurrency-reqTime-servlet-txt"><img src="images/concurrency-reqTime-servlet-txt-thumb" alt="benchmark results - concurrency - Servlet containers  - time per request" /></a></td>
+      </tr>
+   </table>
+
+   <p>
+      In this series of tests, an increasing number of concurrent clients that 
+      ranges from 1 to 200 are asked to send 1000 requests. This test tends to 
+      illustrate the scalability of the server connector. What can explain the 
+      upper limit of 1000 requests by second? At first sight, it could be the 
+      number of threads (1000 for Jetty), but actually the pool of threads of 
+      the internal and the Grizzly connectors are not limited at all. The main 
+      reason must be that there is only 1000 requests to achieve.
+   </p>
+
+   <p>
+      We notice that the average time per request increases linearly with the 
+      number of concurrent clients varies, although the response rate seems 
+      more or less constant.
+   </p>
+
+   <p>
+      Except for the connector based on Simple 3, the connnectors seem to
+      perform homogenously, regarding the number of requests handled per 
+      second. Unsurprisingly, the response time is increasing with the number 
+      of concurrent requests.
+   </p>
+   
+   <h3 style="margin-top: 30px">Second series of tests: variation of the number of requests</h5>
+
+   <table>
+      <tr>
+         <td style="text-align: center" colspan="2">Click on the image to enlarge it.</td>
+      </tr>
+      <tr>
+         <td><a href="images/clients-reqBySec-txt"><img src="images/clients-reqBySec-txt-thumb" alt="benchmark results - number of clients - requests per second" /></a></td>
+         <td><a href="images/clients-reqTime-txt"><img src="images/clients-reqTime-txt-thumb" alt="benchmark results - number of clients - time per request"/></a></td>
+      </tr>
+      <tr>
+         <td><a href="images/clients-reqBySec-servlet-txt"><img src="images/clients-reqBySec-servlet-txt-thumb" alt="benchmark results - number of clients - servlet containers - requests per second" /></a></td>
+         <td><a href="images/clients-reqTime-servlet-txt"><img src="images/clients-reqTime-servlet-txt-thumb" alt="benchmark results - number of clients - servlet containers - time per request"/></a></td>
+      </tr>
+   </table>
+
+   <p>
+      In this series of tests, a single client is asked to launch a number of 
+      requests that ranges from 1 to 500. This test tends to illustrate how 
+      the connector performs when there is no processing overload on the server
+      since the content is not generated but only delivered.
+   </p>
+
+   <p>
+      When the number of requests varies, we notice that the time spent per 
+      request is more or less constant and does not exceed 20 ms. At the same 
+      time, the response rate degrades quite regularly which seems to denote 
+      an increasing latency.
+   </p>
+
+   <p>
+      The graphs seem to establish a hierarchy between the connector based on 
+      Simple 3 and the others. We can notice than the former has not been 
+      updated since May 2006 (since the team is focused on Simple 4, that we 
+      will support in Restlet 2.0), whereas the ones based on Grizzly and Jetty 
+      are pretty recent (March 2009). We can also notice that the performance 
+      of all connectors looks generally good.
+   </p>
+
+   <h4>Conclusion</h4>
+
+   <p>
+      These simple tests show that under normal conditions, each connector 
+      responds quickly and correctly. The response time are correct and each of 
+      them seems reasonably scalable.
+   </p>
+</#global>
