@@ -1,5 +1,5 @@
-SSL extension
-=============
+jSSLutils extension
+===================
 
 Introduction
 ============
