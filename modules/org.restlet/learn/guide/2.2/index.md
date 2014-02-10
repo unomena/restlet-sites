@@ -1,7 +1,7 @@
 -   [Part I - Introduction](introduction/index.md "Part I - Introduction")
     -   [Features](introduction/features.md "Features")
     -   [What's new](introduction/whats-new/index.md "What's new")
-    -   [First steps](introduction/first-steps/ "First steps")
+    -   [First steps](introduction/first-steps/index.md "First steps")
     -   [Architecture](introduction/architecture/ "Architecture")
     -   [Getting started](introduction/getting-started/ "Getting started")
 -   [Part II - Core Restlet](core/ "Part II - Core Restlet")
