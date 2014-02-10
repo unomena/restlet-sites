@@ -15,13 +15,11 @@ only.
 Better documentation
 --------------------
 
-### Restlet in Action book [10/12 chapters written]
+### Restlet in Action book
 
-We will finish writing the *Restlet in Action* book for Manning
-([already available in early
-access](http://restlet.org/documentation/books))
-and make sure that the printed version is available at the same time as
-the 2.1.0 release.
+Finished writing the [Restlet in Action](http://restlet.org/documentation/books) 
+book, published by Manning. We made sure that the printed version was
+available at the same time as the 2.1.0 release.
 
 Scalable internal connector
 ---------------------------
