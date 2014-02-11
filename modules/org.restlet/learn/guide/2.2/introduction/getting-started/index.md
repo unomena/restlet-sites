@@ -9,8 +9,7 @@ such as:
 -   [Maven and Spring](/learn/guide/2.1#/13-restlet/21-restlet/192-restlet/381-restlet.html "Getting Started with Maven and Spring")
 -   [Debugging tools](/learn/guide/2.1#/13-restlet/21-restlet/192-restlet/102-restlet.html "Debugging tools")
 
-In addition, we highly recommend that you read these [community tutorials](/participate#/167-restlet.html)
-provided by Restlet users in various forms:
+In addition, we highly recommend that you read community tutorials provided by Restlet users in various forms:
 
 -   Detailled article
 -   YouTube videos
