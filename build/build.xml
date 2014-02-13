@@ -143,6 +143,24 @@
 		<copy todir="${temp}/owr">
 			<fileset dir="../modules/org.restlet/" includes="**/*" />
 		</copy>
+		<replace dir="${temp}/owr/learn/guide/1.0" token="${restlet.version}" value="1.0">
+			<include name="**/*.md"/>
+		</replace>
+		<replace dir="${temp}/owr/learn/guide/1.1" token="${restlet.version}" value="1.1">
+			<include name="**/*.md"/>
+		</replace>
+		<replace dir="${temp}/owr/learn/guide/2.0" token="${restlet.version}" value="2.0">
+			<include name="**/*.md"/>
+		</replace>
+		<replace dir="${temp}/owr/learn/guide/2.1" token="${restlet.version}" value="2.1">
+			<include name="**/*.md"/>
+		</replace>
+		<replace dir="${temp}/owr/learn/guide/2.2" token="${restlet.version}" value="2.2">
+			<include name="**/*.md"/>
+		</replace>
+		<replace dir="${temp}/owr/learn/guide/unstable" token="${restlet.version}" value="unstable">
+			<include name="**/*.md"/>
+		</replace>
 		<exec executable="sh" osfamily="unix">
 			<arg value="${tmpl}/md/unixtohtml.sh" />
 			<arg value="${temp}/owr" />
