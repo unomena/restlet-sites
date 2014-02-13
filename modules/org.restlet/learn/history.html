@@ -14,9 +14,9 @@
    <p>
      The Web and Java have a long history in common already. Since its
       creation in 1994, Java includes the <a
-     href="http://java.sun.com/j2se/1.5.0/docs/api/java/net/package-summary.html">java.net
+     href="http://docs.oracle.com/javase/1.5.0/docs/api/java/net/package-summary.html">java.net
       package</a> and in particular a HTTP client via the <a
-      href="http://java.sun.com/j2se/1.5.0/docs/api/java/net/HttpURLConnection.html">HttpURLConnection</a>
+      href="http://docs.oracle.com/javase/1.5.0/docs/api/java/net/HttpURLConnection.html">HttpURLConnection</a>
       class. At that time, Applets were a popular technology running in Web
       browsers that needed a way to call back their origin Web server. Using a
       HTTP client was a good way to do this, limiting the security issues with
@@ -25,16 +25,16 @@
 
    <p>
       Later, around 1998, the <a
-      href="http://java.sun.com/j2ee/1.4/docs/api/javax/servlet/http/package-summary.html">Servlet
+      href="http://docs.oracle.com/javaee/1.4/api/javax/servlet/http/package-summary.html">Servlet
       API</a> was introduced as a way to generate dynamic content on HTTP servers.
       It basically tries to represent a HTTP request/response cycle in an
       object-oriented model. Along with <a
-      href="http://java.sun.com/j2ee/1.4/docs/api/javax/servlet/jsp/package-summary.html">Java
+      href="http://docs.oracle.com/javaee/1.4/api/javax/servlet/jsp/package-summary.html">Java
       Server Pages (JSP)</a>, its sister specification, it became part of a large
       effort to bring Java technologies inside the enterprise. In those applications,
       developers adopt the common object-oriented MVC (Model-View-Controller)
-      design pattern, also known as the <a
-      href="http://en.wikipedia.org/wiki/Model_2">"Model 2"</a> approach. In
+      design pattern, also known as the "<a
+      href="http://en.wikipedia.org/wiki/Model_2">Model 2</a>"" approach. In
       this model, Servlets are acting as controllers, JSP pages as views and
       JavaBeans objects as models.
    </p>
@@ -61,7 +61,7 @@
       provided a higher level of abstraction than pure Servlets, especially
       for forms handling. Later, numerous other frameworks appeared to address
       similar problems. The most notable is <a
-       href="http://www.springframework.org">Spring</a> which is a more
+       href="http://spring.io/">Spring</a> which is a more
       comprehensive Java/J2EE application framework than Struts, also
       implementing the <a
        href="http://static.springframework.org/spring/docs/2.0.x/reference/mvc.html">MVC
@@ -101,22 +101,17 @@
    <h4><a name="servlet"></a>Servlet limitations</h4>
 
    <p>
-      At the end of 2003, <a
-       href="http://www.webtide.com/about_us.jsp">Greg Wilkins</a>, the author
-      of the <a href="http://jetty.mortbay.org">Jetty Web
-      container</a> and contributor to the <a
-       href="http://www.jcp.org/en/jsr/detail?id=154">Servlet
-      specifications</a>, <a
-       href="http://www.mortbay.com/MB/log/gregw/?permalink=servletsMustDieSlowly.html">blogged</a>
+      At the end of 2003, <a href="http://www.linkedin.com/in/gregwilkins">Greg Wilkins</a>, the author
+      of the <a href="http://www.eclipse.org/jetty/">Eclipse Jetty</a> and contributor to the
+      <a href="http://www.jcp.org/en/jsr/detail?id=154">Servlet specifications</a>,
+      <a href="https://webtide.intalio.com/2003/12/servlets-must-die-slowly/">blogged</a>
       about some issues with Servlets:
    </p>
 
    <ul>
-      <li>No clear separation between the protocol concerns and the
-       application concerns.</li>
-       <li>Unable to take full advantage of the non-blocking NIO due to
-       blocking IO assumptions.</li>
-       <li>Full Servlet Web containers are overkill for many applications.</li>
+      <li>No clear separation between the protocol concerns and the application concerns.</li>
+      <li>Unable to take full advantage of the non-blocking NIO due to blocking IO assumptions.</li>
+      <li>Full Servlet Web containers are overkill for many applications.</li>
    </ul>
 
    <p>
@@ -124,12 +119,12 @@
       protocol-independent and define contentlets to expose content and its
       metadata. These ideas were both thought-provoking and inspiring for the
       creation of the Restlet project. In a
-      <a href="http://blogs.webtide.com/gregw/2004/02/09/1076359560000.html">later
+      <a href="https://webtide.intalio.com/2004/02/nio-and-the-servlet-api/">later
       post</a>, Greg Wilkins explains with detailed arguments why the current Servlet
       API, without a concept like contentlets, limits the efficient usage of
       the non-blocking NIO API. This traditionally imposes the use of a
       separate thread for each HTTP requests to handle. He goes even further
-      in <a href="http://blogs.webtide.com/gregw/2004/09/24/1096051860000.html">this
+      in <a href="https://webtide.intalio.com/2004/09/next-generation-jetty-and-servlets/">this
       post</a>, specifying the next generation of Servlets.
    </p>
 

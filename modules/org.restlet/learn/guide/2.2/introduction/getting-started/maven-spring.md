@@ -1,28 +1,22 @@
-Getting Started with Maven and Spring
-=====================================
+# Getting Started with Maven and Spring
 
-Overview
-========
+## Overview
 
 This document outlines how to integrate the Restlet Framework with Maven
 and Spring. It is not a tutorial on using the Restlet Framework.
 
-Prerequisites
-=============
+## Prerequisites
 
-The reader should be familiar with
-[Maven](http://maven.apache.org/),
-[Spring](http://www.springsource.org/)
-and the Restlet Framework since it deals exclusively with integration
+The reader should be familiar with [Maven](http://maven.apache.org/),
+[Spring](http://www.springsource.org/) and the Restlet Framework since it 
+deals exclusively with integration
 issues. To play along you will need to have a version of Maven installed
 on your environment. The code in this document has been tested against
 Maven 2.2.1.
 
-The Steps
-=========
+## The Steps
 
-Step 1: Create a Maven Project
-------------------------------
+### Step 1: Create a Maven Project
 
 We can use the Maven '**archetype**' goal to quickly create a basic java
 project structure. We define the name of the artifact and the group
@@ -50,8 +44,7 @@ source files since we will be creating our own classes.
     restlet-basecamp/src/test/java/com/mycompany/restlet/basecamp
     restlet-basecamp/src/test/java/com/mycompany/restlet/basecamp/AppTest.java 
 
-Step 2: Configure the POM
--------------------------
+### Step 2: Configure the POM
 
 The pom.xml file generate from the previous step was for a 'jar'
 project. We are creating a 'war' project so we will make significant
@@ -126,8 +119,7 @@ embedded Jetty server.
       </properties>
     </project>
 
-Step 3: Create the BaseCampResource
------------------------------------
+### Step 3: Create the BaseCampResource
 
 We will create the simplest of resources, called BaseCampResource, which
 extends ServerResource and responds to the HTTP GET method. Note the use
@@ -147,8 +139,7 @@ purpose of this document we will only define this simple resource.
       }
     }
 
-Step 4: Create the BaseCampApplication
---------------------------------------
+### Step 4: Create the BaseCampApplication
 
 In this step we define our Restlet Application, namely
 BaseCampApplication, which extends the core framework class. It's not
@@ -162,8 +153,7 @@ behaviour this is how you would go about it.
     public class BaseCampApplication extends Application {
     }
 
-Step 5: Sprinkle Some Spring
-----------------------------
+### Step 5: Sprinkle Some Spring
 
 The application context, is used by Spring, to create and start the
 various components.
@@ -200,8 +190,7 @@ various components.
       <bean name="/hello" class="com.mycompany.restlet.basecamp.resource.demo.BaseCampResource" scope="prototype" autowire="byName" />
     </beans>
 
-Step 6: Set up the web.xml
---------------------------
+### Step 6: Set up the web.xml
 
 Finally, we need to configure the web.xml, which is packaged in the war.
 The important parts are the **context-param** entries. One points to the
@@ -239,8 +228,7 @@ other points to the location of the application context file.
 
     </web-app>
 
-Step 7: Build It
-----------------
+### Step 7: Build It
 
 To create the war file execute '**mvn package'** in your shell. The war
 file will in the **target** subdirectory.
@@ -290,8 +278,7 @@ file will in the **target** subdirectory.
     [INFO] Final Memory: 18M/81M
     [INFO] ------------------------------------------------------------------------
 
-Step 8: Run It
---------------
+### Step 8: Run It
 
 To run the web service in an embedded jetty server simple execute 
 "**mvn jetty:run-war**" this will compile and package the war file and
@@ -324,14 +311,11 @@ should see some logging similar to what is displayed below
     Nov 9, 2010 9:34:31 PM org.restlet.engine.log.LogFilter afterHandle
     INFO: 2010-11-09    21:34:31    0:0:0:0:0:0:0:1%0   -   0:0:0:0:0:0:0:1%0   8080    GET /basecamp/hello -   200 12  0   57  http://localhost:8080   Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_4; en-us) AppleWebKit/533.18.1 (KHTML, like Gecko) Version/5.0.2 Safari/533.18.5 -
 
-Step 9: Deploy It
------------------
+### Step 9: Deploy It
 
 You can also deploy the web service to a standalone web server such as
-[Apache
-Tomcat](http://tomcat.apache.org/)
-using the [Tomcat Maven
-Plugin](http://mojo.codehaus.org/tomcat-maven-plugin/).
+[Apache Tomcat](http://tomcat.apache.org/)
+using the [Tomcat Maven Plugin](http://mojo.codehaus.org/tomcat-maven-plugin/).
 Basically, you need to define the plugin in your pom.xml and call '**mvn
 tomcat:deploy**' and '**mvn tomcat:undeploy**' to deploy and undeploy
 the web service respectively.
@@ -350,8 +334,7 @@ consult the documentation for the finer details.
             </configuration>
           </plugin>
 
-Resources
-=========
+## Resources
 
 This archive contains all the source code described in this document.
 

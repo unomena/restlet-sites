@@ -1,8 +1,6 @@
-First application
-=================
+# First application
 
-Introduction
-============
+## Introduction
 
 This first application illustrates how to develop a Restlet application
 that combines several editions of the Restlet Framework : GAE, GWT,
@@ -11,8 +9,7 @@ interfaces and of the ConverterService that offers transparent
 serialization between Restlet representations and Java objects, usable
 between a server application and several kind of clients.
 
-Table of contents
-=================
+## Table of contents
 
 1.  [Requirements](#requirements)
 2.  [Scenario](#scenario)
@@ -24,13 +21,12 @@ Table of contents
 8.  [Java SE client](#javase-client)
 
 <a name="requirements"/>
-Requirements
-============
+
+## Requirements
 
 It is based on the following editions of the Restlet Framework : Java SE
 (JSE), Google App Engine (GAE), Google Web Toolkit (GWT) and Android
-which must be downloaded separately from [this
-page](http://restlet.org/downloads/).
+which must be downloaded separately from [this page](http://restlet.org/download/).
 It has been tested with the following environments:
 
 -   Restlet Framework 2.1 Milestone 4
@@ -46,8 +42,8 @@ ClientResource\#setRequestEntityBuffering(boolean) method with a "true"
 value. Note that this workaround isn't required for the GWT edition.
 
 <a name="scenario"/>
-Scenario
-========
+
+## Scenario
 
 The server application is hosted on the Google App Engine (GAE)
 platform. For the sake of simplicity it serves only one resource named
@@ -72,8 +68,8 @@ The "contact" object has the following attributes:
 -   Java SE client
 
 <a name="archive-content"/>
-Archive content
-===============
+
+## Archive content
 
 The full source code (without the required archives) is available here:
 [serializationFullSource.](/learn/guide/2.1#/304-restlet/version/default/part/AttachmentData/data/serializationFullSource.zip "serializationFullSource")
@@ -87,8 +83,8 @@ It contains the full source code of three Eclipse projects with:
 3.  Project that contains the source code of the Java SE client
 
 <a name="common-classes"/>
-Common classes
-==============
+
+## Common classes
 
 The following classes are available on the three project. They are used
 by the server and the clients in order to produce the serialized
@@ -121,8 +117,8 @@ concrete classes if you intend to have GWT clients. For example use
 ArrayList\<Contact\> instead of List\<Contact\>.
 
 <a name="gae-server"/>
-GAE server
-==========
+
+## GAE server
 
 We propose to host the server application on the GAE platform. The
 server project relies on the following JAR files:

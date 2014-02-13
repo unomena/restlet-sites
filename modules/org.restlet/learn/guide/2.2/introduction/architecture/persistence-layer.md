@@ -1,16 +1,13 @@
-Persistence layer
-=================
+# Persistence layer
 
-Introduction
-============
+## Introduction
 
 The Restlet framework is completely agnostic regarding the persistence
 technology that you want to use. Many alternatives having been used
 successfully and we are confident that you won't hit any special
 limitation in this area.
 
-Description
-===========
+## Description
 
 The basic idea is that from a Restlet point of view, your application
 with be composed of resources, extending the

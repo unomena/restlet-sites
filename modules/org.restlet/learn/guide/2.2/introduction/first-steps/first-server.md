@@ -1,8 +1,6 @@
-First server
-============
+# First server
 
-Introduction
-============
+## Introduction
 
 Let's first see how the Restlet Framework can listen to client requests
 and reply to them. We will use the internal Restlet HTTP server
