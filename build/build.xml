@@ -158,6 +158,9 @@
 		<replace dir="${temp}/owr/learn/guide/2.2" token="${restlet.version}" value="2.2">
 			<include name="**/*.md"/>
 		</replace>
+		<replace dir="${temp}/owr/learn/guide/3.0" token="${restlet.version}" value="3.0">
+			<include name="**/*.md"/>
+		</replace>
 		<replace dir="${temp}/owr/learn/guide/unstable" token="${restlet.version}" value="unstable">
 			<include name="**/*.md"/>
 		</replace>
