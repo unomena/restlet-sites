@@ -113,7 +113,7 @@
 		<!-- Compiles source files -->
 		<javac compiler="javac1.6" debug="true" srcdir="${src}" destdir="${classes}" classpathref="main.path" />
 	</target>
-
+	
 	<target name="generate-templates" description="Generate template-based files.">
         <!-- generate static files for the site : apispark.org -->
         <delete dir="${temp}/apispark" />
@@ -143,27 +143,14 @@
 		<copy todir="${temp}/owr">
 			<fileset dir="../modules/org.restlet/" includes="**/*" />
 		</copy>
-		<replace dir="${temp}/owr/learn/guide/1.0" token="${restlet.version}" value="1.0">
-			<include name="**/*.md"/>
-		</replace>
-		<replace dir="${temp}/owr/learn/guide/1.1" token="${restlet.version}" value="1.1">
-			<include name="**/*.md"/>
-		</replace>
-		<replace dir="${temp}/owr/learn/guide/2.0" token="${restlet.version}" value="2.0">
-			<include name="**/*.md"/>
-		</replace>
-		<replace dir="${temp}/owr/learn/guide/2.1" token="${restlet.version}" value="2.1">
-			<include name="**/*.md"/>
-		</replace>
-		<replace dir="${temp}/owr/learn/guide/2.2" token="${restlet.version}" value="2.2">
-			<include name="**/*.md"/>
-		</replace>
-		<replace dir="${temp}/owr/learn/guide/3.0" token="${restlet.version}" value="3.0">
-			<include name="**/*.md"/>
-		</replace>
-		<replace dir="${temp}/owr/learn/guide/unstable" token="${restlet.version}" value="unstable">
-			<include name="**/*.md"/>
-		</replace>
+		<ant antfile="${tmpl}/config/generate-config.xml" target="generate-config" inheritAll="false">
+			<property name="restlet.version" value="2.2"/>
+			<property name="tmpl" value="${tmpl}"/>
+			<property name="temp" value="${temp}"/>
+			<property name="file.model" value="${temp}/model.properties"/>
+		</ant>
+		<replace dir="${temp}/owr/learn/guide/2.2" replacefilterfile="${temp}/model.properties"/>
+		
 		<exec executable="sh" osfamily="unix">
 			<arg value="${tmpl}/md/unixtohtml.sh" />
 			<arg value="${temp}/owr" />
@@ -171,17 +158,17 @@
 		</exec>
 		<fmpp sourceRoot="${temp}/owr" outputRoot="${temp}/${restlet-org}" modes="ignore(**/.svn,**/Thumbs.db)" quiet="reallyQuiet">
 			<data expandProperties="yes">
-                labels:xml(labels.xml)
-                hierarchy:xml(hierarchy.xml)
-                restletDistributions: text(data/distributions.json)
-                restletVersions: text(data/versions.json)
-                restletQualifiers: text(data/qualifiers.json)
-                restletEditions: text(data/editions.json)
-                restletContributors: slicedText(data/contributors.txt)
-                language: en
-                ant: antProperties()
-            </data>
-		    <borders><![CDATA[border('<#include "/header.ftl"/>', '<#include "/footer.ftl"/>', **/*.html)]]></borders>
+				labels:xml(labels.xml)
+				hierarchy:xml(hierarchy.xml)
+				restletDistributions: text(data/distributions.json)
+				restletVersions: text(data/versions.json)
+				restletQualifiers: text(data/qualifiers.json)
+				restletEditions: text(data/editions.json)
+				restletContributors: slicedText(data/contributors.txt)
+				language: en
+				ant: antProperties()
+			</data>
+			<borders><![CDATA[border('<#include "/header.ftl"/>', '<#include "/footer.ftl"/>', **/*.html)]]></borders>
 			<include name="**/*" />
 			<exclude name="**/*.ftl" />
 		</fmpp>
