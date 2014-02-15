@@ -150,7 +150,13 @@
 			<property name="file.model" value="${temp}/model.properties"/>
 		</ant>
 		<replace dir="${temp}/owr/learn/guide/2.2" replacefilterfile="${temp}/model.properties"/>
-		
+		<ant antfile="${tmpl}/config/generate-config.xml" target="generate-config" inheritAll="false">
+			<property name="restlet.version" value="3.0"/>
+			<property name="tmpl" value="${tmpl}"/>
+			<property name="temp" value="${temp}"/>
+			<property name="file.model" value="${temp}/model.properties"/>
+		</ant>
+		<replace dir="${temp}/owr/learn/guide/3.0" replacefilterfile="${temp}/model.properties"/>
 		<exec executable="sh" osfamily="unix">
 			<arg value="${tmpl}/md/unixtohtml.sh" />
 			<arg value="${temp}/owr" />
