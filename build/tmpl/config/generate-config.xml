@@ -7,7 +7,7 @@
 			<fileset file="${tmpl}/config/restlet.${restlet.version}.properties" />
 			<fileset file="${tmpl}/config/version.${meta.release-type}.properties" />
 		</concat>
-		<replaceregexp file="${temp}/properties.txt" match="(.*):.*" replace="${restlet.\1}:${\1}" byline="true"/>
+		<replaceregexp file="${temp}/properties.txt" match="(.*):.*" replace="${restlet-\1}:${\1}" byline="true"/>
 		<copy file="${temp}/properties.txt" tofile="${file.model}">
 			<filterchain>
 				<expandproperties/>
