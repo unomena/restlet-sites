@@ -38,7 +38,7 @@
 			<name>Restlet ${ant["stable.restlet-version-minor"]}</name>
 			<created>${ant["stable.restlet-release-date"]}</created>
 			<revision>${ant["stable.restlet-version-compact"]}</revision>
-			<file-release rdf:resource="http://restlet.org/downloads/${ant["stable.restlet-version-minor"]}/restlet-${ant["stable.restlet-version-compact"]}.zip" /> 
+			<file-release rdf:resource="http://restlet.org/download/${ant["stable.restlet-version-minor"]}/restlet-jse-${ant["stable.restlet-version-compact"]}.zip" /> 
 		</Version>
 	</release>
 
