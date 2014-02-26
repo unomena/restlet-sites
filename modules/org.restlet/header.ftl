@@ -170,9 +170,9 @@
 <div class='center editButton'>
         <div class="control-group">
             <div class="controls">
-                    <div class="btn no-radius"><strong><a href="https://github.com/restlet/restlet-sites/blob/master/modules/org.restlet/${pp.sourceFile?replace("html", "md")}" title="Edit this page">Edit</a></strong></div>
+                    <div class="btn no-radius"><strong><a href="https://github.com/restlet/restlet-sites/edit/master/modules/org.restlet/${pp.sourceFile?replace("html", "md")}" title="Edit this page">Edit</a></strong></div>
             </div>
         </div>
 </div>
 </#global>
-<!-- <#if "error"!=currentSection><a href="https://github.com/restlet/restlet-sites/blob/master/modules/org.restlet/${pp.sourceFile}" title="Edit this page">Edit this page</a></#if> -->
+<!-- <#if "error"!=currentSection><a href="https://github.com/restlet/restlet-sites/edit/master/modules/org.restlet/${pp.sourceFile}" title="Edit this page">Edit this page</a></#if> -->

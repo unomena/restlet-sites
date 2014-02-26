@@ -110,7 +110,7 @@
 
       ${content}
       <div class="content footerWrapper">
-        <div class="footer"><!-- <#if "error"!=currentSection><a href="https://github.com/restlet/restlet-sites/blob/master/modules/com.restlet/${pp.sourceFile}" title="Edit, comment this page">Edit, comment this page</a></#if> --></div>
+        <div class="footer"><!-- <#if "error"!=currentSection><a href="https://github.com/restlet/restlet-sites/edit/master/modules/com.restlet/${pp.sourceFile}" title="Edit, comment this page">Edit, comment this page</a></#if> --></div>
       </div>
     </div>
 
