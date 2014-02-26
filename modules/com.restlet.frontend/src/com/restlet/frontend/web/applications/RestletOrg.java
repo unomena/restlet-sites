@@ -598,6 +598,8 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
         redirect(router, "/discover", "/discover/");
         redirect(router, "/discover/", "/discover/features");
         redirect(router, "/learn", "/learn/");
+        redirect(router, "/learn/tutorial/", "/learn/tutorial");
+        redirect(router, "/learn/guide/", "/learn/guide");
         redirect(router, "/learn/", "/learn/tutorial");
         redirect(router, "/participate", "/participate/");
 
