@@ -99,7 +99,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
         this.fmc.setDefaultEncoding(CharacterSet.UTF_8.getName());
         try {
             this.fmc.setDirectoryForTemplateLoading(new File(
-                    new LocalReference(this.wwwUri).getFile(), "tmpl"));
+                    new LocalReference(this.wwwUri).getFile(), ""));
         } catch (IOException e) {
             getLogger()
                     .warning(

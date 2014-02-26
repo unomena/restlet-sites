@@ -47,7 +47,7 @@ function listDistributions() {
 function displayDistribution(tab, distribution) {
 	var v = getVersion(distribution.version);
 	if (v) {
-		var str = '<tr><td><a href="/downloads/' + v.minorVersion + '/'
+		var str = '<tr><td><a href="/download/notifications?file=/downloads/' + v.minorVersion + '/'
 				+ distribution.fileName + '" class="file">';
 		// str += '<img alt="File:"';
 		// if("exe" == distribution.fileType){
@@ -200,7 +200,7 @@ function setDownloadButton() {
 				'<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
 		$('#download button').click(
 				function() {
-					document.location.href = "/download/"
+					document.location.href = "download/notifications?file=/download/"
 							+ version.minorVersion + "/"
 							+ distribution.fileName;
 				});

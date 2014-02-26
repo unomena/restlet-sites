@@ -13,6 +13,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="keywords"  content="REST, Java, framework, toolkit, HTTP, GWT, GAE, Android, JSE, JEE, Servlet, NIO" />
       <meta charset="utf-8">
+      ${metaheader!""}
       <link sizes="32x32" href="/images/favicon-restlet-org.gif" rel="icon">
       <!-- link type="image/x-icon" href="/images/icons/favicon.ico" rel="shortcut icon" -->
       <link rel="stylesheet" type="text/css"             href='/stylesheets/bootstrap.css' />
@@ -138,7 +139,7 @@
         <div class="span2 intro below">${labels.footer.intouch['${language}']}</div>
         <div class="span2a site"><h4><a href="http://blog.restlet.com/"><i class="blog-icon"></i>${labels.footer.blog['${language}']}</a></h4></div>
         <div class="span2b site"><h4><a href="https://twitter.com/restlet_org"><i class="follow-icon"></i>${labels.footer.twitter['${language}']}</a></h4></div>
-        <div class="span4 newsletter"><form action="http://restlet.us4.list-manage1.com/subscribe/post?u=6e9d916ca1faf05c7dc49d21e&id=a8aa911b32" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank"><input type="hidden" value="2" name="group[9053][2]" /><input type="hidden" id="EMAIL" name="EMAIL" value=""/><span id="footerNewsLetterWrapper"><input type="email" name="EMAIL" required="required" placeholder="${labels.footer.newsletter['${language}']}"/><input type="submit" id="footerNewsLetterOkButton" value="OK"></span></form></div>
+        <div class="span2b site"><h4><a href="/download/notifications"><i class="notifications-icon"></i>${labels.notifications.submit['${language}']}</a></h4></div>
         <div class="clearBoth"></div>
         <div class="span2 intro below">${labels.footer.sites['${language}']}</div>
         <div class="span2a site">
@@ -161,18 +162,10 @@
         <div class="span2c site">
           <h4><a href="http://apispark.com/"><img src="/images/logo-apispark-small.png"/>APISpark</a></h4>
           <ul class="sub-list">
-            <li><a href="http://apispark.com/features/user">${labels.footer.apispark.features['${language}']}</a></li>
-            <li><a href="http://apispark.com/faq">${labels.footer.apispark.faq['${language}']}</a></li>
-            <li><a href="http://apispark.com/about">${labels.footer.apispark.about['${language}']}</a></li>
+            <li><a href="http://apispark.com/docs/">${labels.footer.apispark.docs['${language}']}</a></li>
+            <li><a href="http://apispark.com/features">${labels.footer.apispark.features['${language}']}</a></li>
             <li><a href="http://apispark.com/pricing">${labels.footer.apispark.pricing['${language}']}</a></li>
-          </ul>
-        </div>
-        <div class="span2d site">
-          <h4><a href="http://apispark.org/"><img src="/images/logo-apispark-support-small.png"/>APISpark Support</a></h4>
-          <ul class="sub-list">
-            <li><a href="http://apispark.org/tutorials/">${labels.footer.apisparksupport.tutorial['${language}']}</a></li>
-            <li><a href="http://desk.apispark.org/" target="_blank">${labels.footer.apisparksupport.helpdesk['${language}']}</a></li>
-            <li><a href="http://apispark.org/roadmap">${labels.footer.apisparksupport.roadmap['${language}']}</a></li>
+            <li><a href="http://apispark.com/about">${labels.footer.apispark.about['${language}']}</a></li>
           </ul>
         </div>
       </div>

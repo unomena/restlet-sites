@@ -23,6 +23,10 @@
 			<en>Stay in touch:</en>
 			<fr>Restez en contact :</fr>
 		</intouch>
+        <notifications>
+            <en>Notify me</en>
+            <fr>Notifiez moi</fr>
+        </notifications>
 		<restlet>
 			<product>
 				<en>Products</en>
@@ -72,6 +76,10 @@
 				<en>Pricing</en>
 				<fr>Pricing</fr>
 			</pricing>
+            <docs>
+                <en>Docs</en>
+                <fr>Docs</fr>
+            </docs>
 		</apispark>
 		<apisparksupport>
 			<tutorial>

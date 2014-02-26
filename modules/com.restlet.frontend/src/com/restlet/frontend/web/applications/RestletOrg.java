@@ -47,6 +47,7 @@ import com.restlet.frontend.web.resources.framework.EditionsResource;
 import com.restlet.frontend.web.resources.framework.FeedGeneralResource;
 import com.restlet.frontend.web.resources.framework.FeedReleasesResource;
 import com.restlet.frontend.web.resources.framework.FeedSummaryResource;
+import com.restlet.frontend.web.resources.framework.NotificationsServerResource;
 import com.restlet.frontend.web.resources.framework.QualifiersResource;
 import com.restlet.frontend.web.resources.framework.VersionsResource;
 import com.restlet.frontend.web.resources.framework.impl.RestletOrgRefreshResource;
@@ -192,7 +193,7 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
         this.fmc = new Configuration();
         try {
             this.fmc.setDirectoryForTemplateLoading(new File(
-                    new LocalReference(this.wwwUri).getFile(), "tmpl"));
+                    new LocalReference(this.wwwUri).getFile(), ""));
         } catch (IOException e) {
             getLogger()
                     .warning(
@@ -504,6 +505,7 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
                     qualifier.getId());
         }
         // Serve Web pages
+        downloadRouter.attach("/notifications", NotificationsServerResource.class);
         downloadRouter.getRoutes().add(
                 new StartsWithRoute(downloadRouter, new Directory(getContext(),
                         this.wwwUri + "/download"), "\\/[a-zA-Z]+"));
@@ -575,7 +577,7 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
                 "/learn/javadocs/snapshot/jse/engine{rr}");
         redirect(router, "/documentation/snapshot/ext",
                 "/learn/javadocs/snapshot/jse/ext{rr}");
-        
+
         // generic redirections to javadocs.
         redirect(router, "/documentation/{branch}/{edition}/api",
                 "/learn/javadocs/{branch}/{edition}/api{rr}");

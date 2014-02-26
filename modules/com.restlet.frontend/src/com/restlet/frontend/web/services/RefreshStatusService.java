@@ -63,7 +63,7 @@ public class RefreshStatusService extends StatusService {
                     request.getClientInfo().getAcceptedLanguages());
             cr.accept(MediaType.TEXT_HTML);
             cr.head();
-            return new TemplateRepresentation("error/"
+            return new TemplateRepresentation("tmpl/error/"
                     + cr.getResponse().getEntity().getLocationRef()
                             .getLastSegment(), application.getFmc(), dataModel,
                     MediaType.TEXT_HTML);

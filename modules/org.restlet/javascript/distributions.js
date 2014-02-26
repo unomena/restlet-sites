@@ -73,7 +73,7 @@ function setDownloadButton() {
 		$('#download').append('<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
 		$('#download button').click(
 				function() {
-					document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
+					document.location.href = "/download/notifications?file=/download/" + version.minorVersion + "/" + distribution.fileName;
 				});
 	}
 }
