@@ -119,7 +119,7 @@
         <div class="span2 intro below">${labels.footer.intouch['${language}']}</div>
         <div class="span2a site"><h4><a href="http://blog.restlet.com/"><i class="blog-icon"></i>${labels.footer.blog['${language}']}</a></h4></div>
         <div class="span2b site"><h4><a href="https://twitter.com/restlet_com"><i class="follow-icon"></i>${labels.footer.twitter['${language}']}</a></h4></div>
-        <div class="span2b site"><h4><a href="http://restlet.org/download/notifications"><i class="notifications-icon"></i>${labels.footer.notifications['${language}']}</a></h4></div>
+        <div class="span4 newsletter"><form action="http://restlet.us4.list-manage1.com/subscribe/post?u=6e9d916ca1faf05c7dc49d21e&id=a8aa911b32" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank"><input type="hidden" value="1" name="group[9053][1]" /><input type="hidden" value="2" name="group[9053][2]" /><input type="hidden" id="EMAIL" name="EMAIL" value=""/><span id="footerNewsLetterWrapper"><input type="email" name="EMAIL" required="required" placeholder="${labels.footer.newsletter['${language}']}"/><input type="submit" id="footerNewsLetterOkButton" value="OK"></span></form></div>
         <div class="clearBoth"></div>
         <div class="span2 intro below">${labels.footer.sites['${language}']}</div>
         <div class="span2a site">

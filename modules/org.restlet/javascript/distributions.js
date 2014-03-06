@@ -2,6 +2,7 @@ var cQualifiers;
 var cEditions;
 var cTypesDistribution;
 var handleFragment = false;
+var redirectDownload = false;
 // var myCombo = (new Dropdown("idCombo")).initialize();
 // myCombo.addSelectionListener(function(value) {
 // (...)
@@ -71,10 +72,18 @@ function setDownloadButton() {
 		$('#download').append('<p>File size: ' + distribution.fileSize + '</p>');
 		$('#download').append('<p>Date: ' + version.published + '</p>');
 		$('#download').append('<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
-		$('#download button').click(
-				function() {
-					document.location.href = "/download/notifications?file=/download/" + version.minorVersion + "/" + distribution.fileName;
-				});
+		if (redirectDownload) {
+			$('#download button').click(
+					function() {
+						document.location.href = "/download/current?file=/download/" + version.minorVersion + "/" + distribution.fileName;
+					});			
+		} else {
+			$('#download button').click(
+					function() {
+						document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
+					});
+		}
+
 	}
 }
 
@@ -115,7 +124,7 @@ function refresh() {
  * @param hf
  * 		True indicates that the uri will reflect the selectors's value in the uri fragment.
  */
-function init(sq, se, std, hf) {
+function init(sq, se, std, hf, rd) {
 	cQualifiers = sq;
 	cEditions = se;
 	cTypesDistribution = std;
@@ -123,6 +132,11 @@ function init(sq, se, std, hf) {
 		handleFragment = true;
 	} else {
 		handleFragment = false;
+	}
+	if (rd) {
+		redirectDownload = true;
+	} else {
+		redirectDownload = false;
 	}
 
 	loadQualifiers();

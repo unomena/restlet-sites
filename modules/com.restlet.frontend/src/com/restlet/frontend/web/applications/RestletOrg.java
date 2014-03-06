@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.logging.Level;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -21,6 +22,7 @@ import org.restlet.data.CookieSetting;
 import org.restlet.data.LocalReference;
 import org.restlet.data.MediaType;
 import org.restlet.data.Reference;
+import org.restlet.engine.Engine;
 import org.restlet.engine.application.Encoder;
 import org.restlet.ext.atom.Entry;
 import org.restlet.ext.atom.Feed;
@@ -43,11 +45,12 @@ import com.restlet.frontend.objects.framework.QualifiersList;
 import com.restlet.frontend.objects.framework.Version;
 import com.restlet.frontend.objects.framework.VersionsList;
 import com.restlet.frontend.web.resources.framework.DistributionsResource;
+import com.restlet.frontend.web.resources.framework.DownloadCurrentServerResource;
+import com.restlet.frontend.web.resources.framework.DownloadPastServerResource;
 import com.restlet.frontend.web.resources.framework.EditionsResource;
 import com.restlet.frontend.web.resources.framework.FeedGeneralResource;
 import com.restlet.frontend.web.resources.framework.FeedReleasesResource;
 import com.restlet.frontend.web.resources.framework.FeedSummaryResource;
-import com.restlet.frontend.web.resources.framework.NotificationsServerResource;
 import com.restlet.frontend.web.resources.framework.QualifiersResource;
 import com.restlet.frontend.web.resources.framework.VersionsResource;
 import com.restlet.frontend.web.resources.framework.impl.RestletOrgRefreshResource;
@@ -211,6 +214,7 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
 
     @Override
     public Restlet createInboundRoot() {
+        Engine.setLogLevel(Level.FINEST);
         // Create a root router
         Router result = new Router(getContext());
 
@@ -505,7 +509,8 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
                     qualifier.getId());
         }
         // Serve Web pages
-        downloadRouter.attach("/notifications", NotificationsServerResource.class);
+        downloadRouter.attach("/current", DownloadCurrentServerResource.class);
+        downloadRouter.attach("/past", DownloadPastServerResource.class);
         downloadRouter.getRoutes().add(
                 new StartsWithRoute(downloadRouter, new Directory(getContext(),
                         this.wwwUri + "/download"), "\\/[a-zA-Z]+"));

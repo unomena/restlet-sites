@@ -1,6 +1,7 @@
 [
 {"id":"2.2snapshot","majorVersion":"2","minorVersion":"2.2","fullVersion":"2.2 Snapshot","fullVersionCompact":"2.2 Snapshot","published":"09 february 2014","editions":[{"id":"jse"},{"id":"jee"},{"id":"gae"},{"id":"android"},{"id":"gwt"},{"id":"osgi"}]},
 {"id":"2.1snapshot","majorVersion":"2","minorVersion":"2.1","fullVersion":"2.1 Snapshot","fullVersionCompact":"2.1 Snapshot","published":"09 february 2014","editions":[{"id":"jse"},{"id":"jee"},{"id":"gae"},{"id":"android"},{"id":"gwt"},{"id":"osgi"}]},
+{"id":"2.2rc3","majorVersion":"2","minorVersion":"2.2","fullVersion":"2.2 Release Candidate 3","fullVersionCompact":"2.2 RC3","published":"04 march 2014","editions":[{"id":"jse"},{"id":"jee"},{"id":"gae"},{"id":"android"},{"id":"gwt"},{"id":"osgi"}]},
 {"id":"2.2rc2","majorVersion":"2","minorVersion":"2.2","fullVersion":"2.2 Release Candidate 2","fullVersionCompact":"2.2 RC2","published":"18 february 2014","editions":[{"id":"jse"},{"id":"jee"},{"id":"gae"},{"id":"android"},{"id":"gwt"},{"id":"osgi"}]},
 {"id":"2.2rc1","majorVersion":"2","minorVersion":"2.2","fullVersion":"2.2 Release Candidate 1","fullVersionCompact":"2.2 RC1","published":"09 february 2014","editions":[{"id":"jse"},{"id":"jee"},{"id":"gae"},{"id":"android"},{"id":"gwt"},{"id":"osgi"}]},
 {"id":"2.2m6","majorVersion":"2","minorVersion":"2.2","fullVersion":"2.2 Milestone 6","fullVersionCompact":"2.2 M6","published":"05 december 2013","editions":[{"id":"jse"},{"id":"jee"},{"id":"gae"},{"id":"android"},{"id":"gwt"},{"id":"osgi"}]},

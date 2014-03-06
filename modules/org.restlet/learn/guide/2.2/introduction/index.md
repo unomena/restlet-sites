@@ -2,11 +2,11 @@
 
 ## User guide overview
 
-This is the official User Guide for version 2.2 of the Restlet Framework
+This is the official User Guide for version ${restlet-version-minor} of the Restlet Framework
 ([http://restlet.org](http://restlet.org/)).
 
 This document is edited in a collaborative way via this
-[GitHub repository](https://github.com/restlet/restlet-sites/tree/master/modules/org.restlet/learn/guide/2.2)
+[GitHub repository](https://github.com/restlet/restlet-sites/tree/master/modules/org.restlet/learn/guide/${restlet-version-minor})
 as a set of Markdown pages.
 
 We are very happy to have you as a new user and hope that you will have

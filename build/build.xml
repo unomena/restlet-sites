@@ -29,7 +29,7 @@
 	<property name="www" value="www" />
 	<property name="restlet-com" value="${www}/restlet-com" />
 	<property name="restlet-org" value="${www}/restlet-org" />
-	<property name="apispark-org" value="${www}/apispark-org" />
+<!--	<property name="apispark-org" value="${www}/apispark-org" /> -->
 
 <!-- Used to parse the unique json data base. -->
 <script language="javascript"> <![CDATA[
@@ -169,9 +169,11 @@
 	
 	<target name="generate-templates" description="Generate template-based files.">
         <!-- generate static files for the site : apispark.org -->
+<!--
         <delete dir="${temp}/apispark" />
-        <mkdir dir="${temp}/apispark" />
+        <mkdir dir="${temp}/apispark" /> -->
 		<!-- do not template sample files. -->
+		<!--
 		<copy todir="${temp}/apispark">
             <fileset dir="../modules/org.apispark/" includes="**/*"  excludes="tutorials/files/*"/>
         </copy>
@@ -190,6 +192,7 @@
 	        <fileset dir="../modules/org.apispark/" includes="tutorials/files/*"/>
 	    </copy>
 		<delete dir="${temp}/apispark" />
+-->
 		<!-- generate static files for the site : restlet.org, user guide generated with pandoc -->
 		<delete dir="${temp}/owr" />
 		<mkdir dir="${temp}/owr" />
@@ -308,9 +311,11 @@
 	<copy todir="${dist}/${dist-path}/${restlet-org}">
 		<fileset dir="${temp}/${restlet-org}" />
 	</copy>
+<!--
     <copy todir="${dist}/${dist-path}/${apispark-org}">
         <fileset dir="${temp}/${apispark-org}" />
     </copy>
+-->
 	<!-- Copy the config file -->
 	<copy todir="${dist}/${dist-path}/conf">
 		<fileset dir="${conf}" excludes="**/.svn,**/Thumbs.db" />
