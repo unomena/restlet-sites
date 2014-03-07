@@ -15,7 +15,6 @@ import org.restlet.resource.ClientResource;
 import org.restlet.routing.Redirector;
 import org.restlet.routing.VirtualHost;
 
-import com.restlet.frontend.web.applications.ApisparkOrg;
 import com.restlet.frontend.web.applications.MavenRestletOrg;
 import com.restlet.frontend.web.applications.P2RestletOrg;
 import com.restlet.frontend.web.applications.RestletCom;
@@ -133,9 +132,9 @@ public class WebComponent extends Component {
         // -----------------
         // apispark.org
         // -----------------
-        host = addHost("apispark.org", port, new ApisparkOrg(
-                "clap://class/config/apisparkOrg.properties"), properties);
-        getHosts().add(host);
+        // host = addHost("apispark.org", port, new ApisparkOrg(
+        // "clap://class/config/apisparkOrg.properties"), properties);
+        // getHosts().add(host);
 
         // -----------------------
         // Redirect to restlet.org

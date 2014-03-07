@@ -7,8 +7,10 @@ package com.restlet.frontend.web.applications;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.regex.Matcher;
@@ -115,7 +117,7 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
     }
 
     /** The list of defined branches. */
-    private List<String> branches;
+    private Set<String> branches;
 
     /** The data file URI. */
     private String dataUri;
@@ -208,7 +210,7 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
         versions = new VersionsList();
         distributions = new DistributionsList();
         editions = new EditionsList();
-        branches = new ArrayList<String>();
+        branches = new HashSet<String>();
         toBranch = new ConcurrentHashMap<String, String>();
     }
 
@@ -255,6 +257,39 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
         // "download" routing
         downloadRouter = new Router(getContext());
         setDownloadRouter();
+
+        Directory userGuideDirectory = new Directory(getContext(), this.wwwUri
+                + "/learn/guide");
+        userGuideDirectory.setNegotiatingContent(true);
+        userGuideDirectory.setDeeplyAccessible(true);
+        result.attach("/learn/guide", new Filter(getContext(),
+                userGuideDirectory) {
+            @Override
+            protected int beforeHandle(Request request, Response response) {
+                if (request.getResourceRef().getRemainingPart()
+                        .startsWith("/2.1")
+                        || request.getResourceRef().getRemainingPart()
+                                .startsWith("/2.0")
+                        || request.getResourceRef().getRemainingPart()
+                                .startsWith("/1.1")
+                        || request.getResourceRef().getRemainingPart()
+                                .startsWith("/1.0")) {
+                    response.redirectTemporary("/learn/guide/2.2");
+                    // Set the branch cookie
+                    setCookie(response, "branch", "2.2");
+                    // Set the qualifier to branch cookie
+                    for (Qualifier q : qualifiers) {
+                        String branch = q.getVersion().substring(0, 3);
+                        if (branch.equals("2.2") && !"unstable".equals(q.getId())) {
+                            setCookie(response, "qualifierToBranch", q.getId());
+                        }
+                    }
+
+                    return Filter.STOP;
+                }
+                return super.beforeHandle(request, response);
+            }
+        });
         result.attach("/download", downloadRouter);
         result.attach("/feeds/summary", FeedSummaryResource.class);
         result.attach("/feeds/general", FeedGeneralResource.class);
@@ -350,8 +385,12 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
                     // induce it from the request's cookies
                     b = request.getCookies().getFirstValue("branch", "");
                 }
-                if (b == null || "".equals(b) || !branches.contains(b)) {
-                    b = toBranch.get("stable");
+                if (b == null || b.isEmpty() || !branches.contains(b)) {
+                    if (branches.contains(qualifier)) {
+                        b = qualifier;
+                    } else {
+                        b = toBranch.get("stable");
+                    }
                 }
                 request.getAttributes().put("branch", b);
                 return super.getTargetRef(request, response);
@@ -361,7 +400,6 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
             route.setMatchingMode(Template.MODE_STARTS_WITH);
         }
         wrapCookie(route, "qualifierToBranch", qualifier);
-
         return route;
     }
 
@@ -544,31 +582,28 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
      *            The router to complete.
      */
     private void setRedirections(Router router) {
-        redirect(router, "/downloads/snapshot", "/download/unstable");
         // Redirections.
+        redirect(router, "/downloads/snapshot", "/download/unstable");
         redirect(router, "/download", "/download/");
         redirect(router, "/download/", "/download/current");
 
         // Maintain some old links
         redirect(router, "/a", "/");
+        redirect(router, "/community/lists", "/participate");
+        redirect(router, "/discuss", "/participate");
         redirect(router, "/docs", "/learn");
         redirect(router, "/docs/core", "/learn");
         redirect(router, "/downloads/restlet-0.18b.zip", "/download/");
         redirect(router, "/downloads/restlet{version}", "/download/");
-        redirect(router, "/discuss", "/participate");
-        redirect(router, "/community/lists", "/participate");
+        redirect(router, "/examples", "/learn/examples");
         redirect(router, "/faq", "/learn/faq");
-        redirect(router, "/glossary",
-                "http://wiki.restlet.org/docs_2.0/180-restlet.html");
+        redirect(router, "/glossary", "/learn");
         redirect(router, "/introduction", "/discover");
         redirect(router, "/roadmap", "/learn/roadmap");
         redirect(router, "/tutorial", "/learn");
-        redirect(router, "/examples", "/learn/examples");
 
-        redirect(router, "/documentation/1.1/connectors",
-                "http://wiki.restlet.org/docs_1.1/37-restlet.html");
-        redirect(router, "/documentation/2.0/connectors",
-                "http://wiki.restlet.org/docs_2.0/37-restlet.html");
+        redirect(router, "/documentation/1.1/connectors", "/learn/guide");
+        redirect(router, "/documentation/2.0/connectors", "/learn/guide");
         redirect(router, "/documentation/1.2", "/learn/2.0{rr}");
         redirect(router, "/documentation/2.0/api",
                 "/learn/javadocs/2.0/jse/api{rr}");
@@ -608,19 +643,20 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
         redirect(router, "/learn/", "/learn/tutorial");
         redirect(router, "/participate", "/participate/");
 
-        redirect(router, "learn/1.0/tutorial", "/learn/tutorial/1.0");
-        redirect(router, "learn/1.1/tutorial", "/learn/tutorial/1.1");
-        redirect(router, "learn/2.0/tutorial", "/learn/tutorial/2.0");
+        redirect(router, "/learn/1.0/tutorial", "/learn/tutorial/1.0");
+        redirect(router, "/learn/1.1/tutorial", "/learn/tutorial/1.1");
+        redirect(router, "/learn/2.0/tutorial", "/learn/tutorial/2.0");
 
-        redirectBranch(router, "/learn/guide/stable", "/learn/guide/{branch}",
-                "stable");
-        redirectBranch(router, "/learn/guide/testing", "/learn/guide/{branch}",
-                "testing");
-        redirectBranch(router, "/learn/tutorial", "/learn/tutorial/{branch}",
-                null);
-        redirectBranch(router, "/learn/guide", "/learn/guide/{branch}", null);
         redirectBranch(router, "/learn/javadocs", "/learn/javadocs/{branch}",
                 null);
+        // Issue #36: always route undefined user guide to 2.2, which is not the
+        // stable release at this time.
+        redirect(router, "/learn/guide/stable", "/learn/guide/2.2{rr}");
+        redirectBranch(router, "/learn/guide/testing", "/learn/guide/{branch}/",
+                "testing");
+        redirectBranch(router, "/learn/tutorial", "/learn/tutorial/{branch}/",
+                null);
+        redirectBranch(router, "/learn/guide", "/learn/guide/{branch}/", null);
 
     }
 
@@ -665,7 +701,7 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
                         // induce it from the request's cookies
                         b = request.getCookies().getFirstValue("branch", "");
                     }
-                    if (b == null || "".equals(b) || !branches.contains(b)) {
+                    if (b == null || b.isEmpty() || !branches.contains(b)) {
                         b = toBranch.get("stable");
                     }
                     setCookie(response, cookie, b);
