@@ -281,7 +281,7 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
                     for (Qualifier q : qualifiers) {
                         String branch = q.getVersion().substring(0, 3);
                         if (branch.equals("2.2") && !"unstable".equals(q.getId())) {
-                            setCookie(response, "qualifierToBranch", q.getId());
+                            setCookie(response, "release", q.getId());
                         }
                     }
 
@@ -704,7 +704,7 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
                     if (b == null || b.isEmpty() || !branches.contains(b)) {
                         b = toBranch.get("stable");
                     }
-                    setCookie(response, cookie, b);
+                    setCookie(response, "branch", b);
                 }
             };
             route.setNext(filter);
