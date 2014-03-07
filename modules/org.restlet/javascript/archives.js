@@ -3,6 +3,9 @@ var cReleases;
 var cEditions;
 var cTypesDistribution;
 var tabDir;
+var handleFragment = false;
+var redirectDownload = false;
+
 // var myCombo = (new Dropdown("idCombo")).initialize();
 // myCombo.addSelectionListener(function(value) {
 // (...)
@@ -137,6 +140,20 @@ function refreshEdition(editionId) {
 					distroId = d.fileType;					
 				}
 				first = false;
+			} else if ("maven" == d.fileType || first) {
+				cTypesDistribution
+						.append('<li id="maven">Maven</li>');
+				if (d.fileType == distributionId || first) {
+					distroId = d.fileType;					
+				}
+				first = false;
+			} else if ("p2" == d.fileType || first) {
+				cTypesDistribution
+						.append('<li id="p2">Eclipse</li>');
+				if (d.fileType == distributionId || first) {
+					distroId = d.fileType;					
+				}
+				first = false;
 			}
 
 		}
@@ -172,7 +189,7 @@ function refresh(distroId) {
 	} else if ("maven" == distributionId) {
 		$("#" + cTypesDistribution.attr('id') + '-bt').append("<strong>Maven</strong>");
 	} else if ("p2" == distributionId) {
-		$("#" + cTypesDistribution.attr('id') + '-bt').append("<strong>OSGi</strong>");
+		$("#" + cTypesDistribution.attr('id') + '-bt').append("<strong>Eclipse</strong>");
 	}
 	setDownloadButton();
 	// listDistributions();
@@ -193,17 +210,40 @@ function setDownloadButton() {
 		$('#download').append(
 				'<p><button class="btn btn-large btn-success" type="button">Download '
 						+ version.fullVersionCompact + '</button></p>');
-		$('#download')
-				.append('<p>File size: ' + distribution.fileSize + '</p>');
+		if (distribution.fileType == "maven") {
+			$('#download').append('<p>Group id: ' + distribution.mavenGroupId + '</p>');
+			$('#download').append('<p>Version: ' + version.mavenVersion + '</p>');
+		} else if (distribution.fileType == "p2") {
+			$('#download').append('<p>Url: ' + distribution.p2Url + '</p>');			
+		} else {
+			$('#download').append('<p>File size: ' + distribution.fileSize + '</p>');			
+		}
 		$('#download').append('<p>Date: ' + version.published + '</p>');
 		$('#download').append(
 				'<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
-		$('#download button').click(
-				function() {
-					document.location.href = "/download/"
-							+ version.minorVersion + "/"
-							+ distribution.fileName;
-				});
+		if (distribution.fileType == "maven") {
+			$('#download button').click(
+					function() {
+						document.location.href = "/download/maven";
+					});
+		} else if (distribution.fileType == "p2") {
+			$('#download button').click(
+					function() {
+						document.location.href = "/download/eclipse";
+					});			
+		} else if (redirectDownload) {
+			$('#download button').click(
+					function() {
+						document.location.href = "/download/past?file=/download/" + version.minorVersion + "/" + distribution.fileName;
+					});			
+		} else {
+			$('#download button').click(
+					function() {
+						document.location.href = "/download/"
+								+ version.minorVersion + "/"
+								+ distribution.fileName;
+					});
+		}
 	}
 }
 
@@ -221,12 +261,22 @@ function setDownloadButton() {
  * @param dir
  *            The div where to display the listing.
  */
-function init(sb, sr, se, std, dir) {
+function init(sb, sr, se, std, dir, hf, rd) {
 	cBranches = sb;
 	cReleases = sr;
 	cEditions = se;
 	cTypesDistribution = std;
 	tabDir = dir;
+	if (hf) {
+		handleFragment = true;
+	} else {
+		handleFragment = false;
+	}
+	if (rd) {
+		redirectDownload = true;
+	} else {
+		redirectDownload = false;
+	}
 
 	var hash = window.location.hash;
 	var itemId = getParameterByName(hash, "branch", $.cookie('branch'));

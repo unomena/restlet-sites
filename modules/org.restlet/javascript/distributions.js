@@ -50,6 +50,8 @@ function loadDistributions() {
 	cTypesDistribution.empty();
 	cTypesDistribution.append('<li id="zip">ZIP file</li>');
 	cTypesDistribution.append('<li id="exe">Windows installer</li>');
+	cTypesDistribution.append('<li id="maven">Maven</li>');
+	cTypesDistribution.append('<li id="p2">Eclipse</li>');
 	cTypesDistribution.children().click(function() {
 		setDistribution(this.id);
 		refresh();
@@ -69,10 +71,28 @@ function setDownloadButton() {
 		urlChangesLog += "/changes";
 
 		$('#download').append('<p><button class="btn btn-large btn-success" type="button">Download ' + version.fullVersionCompact + '</button></p>');
-		$('#download').append('<p>File size: ' + distribution.fileSize + '</p>');
+		if (distribution.fileType == "maven") {
+			$('#download').append('<p>Group id: ' + distribution.mavenGroupId + '</p>');
+			$('#download').append('<p>Version: ' + version.mavenVersion + '</p>');
+		} else if (distribution.fileType == "p2") {
+			$('#download').append('<p>Url: ' + distribution.p2Url + '</p>');			
+		} else {
+			$('#download').append('<p>File size: ' + distribution.fileSize + '</p>');			
+		}
 		$('#download').append('<p>Date: ' + version.published + '</p>');
 		$('#download').append('<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
-		if (redirectDownload) {
+
+		if (distribution.fileType == "maven") {
+			$('#download button').click(
+					function() {
+						document.location.href = "/download/maven";
+					});
+		} else if (distribution.fileType == "p2") {
+			$('#download button').click(
+					function() {
+						document.location.href = "/download/eclipse";
+					});			
+		} else if (redirectDownload) {
 			$('#download button').click(
 					function() {
 						document.location.href = "/download/current?file=/download/" + version.minorVersion + "/" + distribution.fileName;
@@ -83,7 +103,6 @@ function setDownloadButton() {
 						document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
 					});
 		}
-
 	}
 }
 
@@ -103,7 +122,7 @@ function refresh() {
 	} else if ("maven" == distributionId) {
 		$("#" + cTypesDistribution.attr('id') + '-bt').append("<strong>Maven</strong>");
 	} else if ("p2" == distributionId) {
-		$("#" + cTypesDistribution.attr('id') + '-bt').append("<strong>OSGi</strong>");
+		$("#" + cTypesDistribution.attr('id') + '-bt').append("<strong>Eclipse</strong>");
 	}
 
 	if (handleFragment) {
@@ -123,6 +142,8 @@ function refresh() {
  * 		The selector of type of distributions.
  * @param hf
  * 		True indicates that the uri will reflect the selectors's value in the uri fragment.
+ * @param rd
+ * 		True indicates if the click on the download button redirects to the download page.
  */
 function init(sq, se, std, hf, rd) {
 	cQualifiers = sq;

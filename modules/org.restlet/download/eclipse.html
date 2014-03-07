@@ -1,8 +1,12 @@
 
 <#global stylesheet_files=["/stylesheets/SyntaxHighlighter.css"] />
 <#global javascript_files=["/javascript/shCore.js", "/javascript/shBrushXml.js"] />
+<#global javascript_files=["/javascript/jquery-1.9.0.min.js", "/javascript/jquery-cookie.js", "/javascript/jsclass-core.js", "/javascript/json-minified.js","/javascript/bootstrap.min.js", "/javascript/data.js", "/javascript/archives.js", "/javascript/combo-widget.js"] />
 <#global javascript>
-window.onload = function () {
+    $(document).ready(function() {
+        init($("#cBranch"), $("#cRelease"), $("#cEdition"), $("#cDistribution"), $("#archives"), false, true);
+    });
+   window.onload = function () {
     dp.SyntaxHighlighter.ClipboardSwf = '/flash/clipboard.swf';
     dp.SyntaxHighlighter.HighlightAll('code');
 }
@@ -44,6 +48,12 @@ window.onload = function () {
 }
 </#global>
 <#global content>
+<!-- Start Download section -->
+${downloadSection}
+<!-- End Download section -->
+<div class="clearBoth"></div>
+<hr />
+
 <div id="mc_embed_signup" class="notifications">
     <!-- Begin MailChimp Signup Form -->
     <form action="http://restlet.us4.list-manage.com/subscribe/post?u=6e9d916ca1faf05c7dc49d21e&amp;id=a8aa911b32" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
