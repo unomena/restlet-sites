@@ -15,7 +15,7 @@
    </p>
    <p>
       The URL of the update site is based on the following pattern 
-      <a href="http://p2.restlet.org/">http://p2.restlet.org/${branch}/</a>. It provides all tagged 
+      <a href="http://p2.restlet.org/${branch}/">http://p2.restlet.org/${branch}/</a>. It provides all tagged 
       releases (such as current snapshot, or milestones, releases candidates, 
       etc). It is automatically refreshed once a day if the build succeeds.
    </p>
