@@ -29,7 +29,7 @@ function init(cb) {
 	loadBranches();
 	branch = $.cookie('branch');
 	if (!branch) {
-		$.cookie('branch', getDefaultBranch($.cookie('qualifier')), {
+		$.cookie('branch', getDefaultBranch($.cookie('release')), {
 			path : '/'
 		});
 		branch = $.cookie('branch');

@@ -72,10 +72,10 @@ function setDownloadButton() {
 
 		$('#download').append('<p><button class="btn btn-large btn-success" type="button">Download ' + version.fullVersionCompact + '</button></p>');
 		if (distribution.fileType == "maven") {
-			$('#download').append('<p>Group id: ' + distribution.mavenGroupId + '</p>');
-			$('#download').append('<p>Version: ' + version.mavenVersion + '</p>');
+			//$('#download').append('<p>Group id: ' + distribution.mavenGroupId + '</p>');
+			//$('#download').append('<p>Version: ' + version.mavenVersion + '</p>');
 		} else if (distribution.fileType == "p2") {
-			$('#download').append('<p>Url: ' + distribution.p2Url + '</p>');			
+			//$('#download').append('<p>Url: ' + distribution.p2Url + '</p>');			
 		} else {
 			$('#download').append('<p>File size: ' + distribution.fileSize + '</p>');			
 		}
@@ -85,17 +85,17 @@ function setDownloadButton() {
 		if (distribution.fileType == "maven") {
 			$('#download button').click(
 					function() {
-						document.location.href = "/download/maven";
+						document.location.href = "/download/current?distribution=maven&release=" + version.id + "&edition=" + edition.id;
 					});
 		} else if (distribution.fileType == "p2") {
 			$('#download button').click(
 					function() {
-						document.location.href = "/download/eclipse";
+						document.location.href = "/download/current?distribution=p2&release=" + version.id + "&edition=" + edition.id;
 					});			
 		} else if (redirectDownload) {
 			$('#download button').click(
 					function() {
-						document.location.href = "/download/current?file=/download/" + version.minorVersion + "/" + distribution.fileName;
+						document.location.href = "/download/current?distribution=" + distribution.fileType + "&release=" + version.id + "&edition=" + edition.id;
 					});			
 		} else {
 			$('#download button').click(
@@ -165,13 +165,13 @@ function init(sq, se, std, hf, rd) {
 	loadDistributions();
 
 	var hash = window.location.hash;
-	var itemId = getParameterByName(hash, "release", $.cookie('qualifier'));
+	var itemId = getParameterByName(hash, "release", $.cookie('release'));
 
 	qualifier = getQualifier(itemId);
 	if (!qualifier) {
 		qualifier = getQualifier(getDefaultQualifier($.cookie('branch')));
 	}
-	$.cookie('qualifier', qualifier.id, {path : '/'});
+	$.cookie('release', qualifier.id, {path : '/'});
 
 	version = getVersion(qualifier.version);
 

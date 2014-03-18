@@ -5,11 +5,17 @@
 </#if>
 </#noparse>
 </#global>
-<#global javascript_files=["/javascript/jquery-1.9.0.min.js", "/javascript/jquery-cookie.js", "/javascript/jsclass-core.js", "/javascript/json-minified.js","/javascript/bootstrap.min.js", "/javascript/data.js", "/javascript/archives.js", "/javascript/combo-widget.js"] />
+<#global javascript_files=["/javascript/shCore.js", "/javascript/shBrushXml.js","/javascript/jquery-1.9.0.min.js", "/javascript/jquery-cookie.js", "/javascript/jsclass-core.js", "/javascript/json-minified.js", "/javascript/restlet-client.js", "/javascript/restlet-feedSummary.js", "/javascript/bootstrap.min.js", "/javascript/data.js", "/javascript/archives.js", "/javascript/combo-widget.js"] />
 <#global javascript>
-	$(document).ready(function() {
-        init($("#cBranch"), $("#cRelease"), $("#cEdition"), $("#cDistribution"), $("#archives"));
-	});
+<#noparse>
+    $(document).ready(function() {
+        init($("#cBranch"), $("#cRelease"), $("#cEdition"), $("#cDistribution"), $("#archives")<#if ("zip" ==  distribution) || ("exe" ==  distribution)>, true<#else>, false, true</#if>);
+    });
+   window.onload = function () {
+    dp.SyntaxHighlighter.ClipboardSwf = '/flash/clipboard.swf';
+    dp.SyntaxHighlighter.HighlightAll('code');
+}
+</#noparse>
 </#global>
 <#global stylesheet_files=["//cdn-images.mailchimp.com/embedcode/classic-081711.css"] />
 <#global stylesheet>
@@ -76,10 +82,11 @@ ${archivesSection}
     </form>
 </div>
 <!--End mc_embed_signup-->
-<div class="clearBoth"></div>
-<hr />
-   <p class="index">
-      <a href="maven">Maven repository</a><br/>
-      <a href="eclipse">Eclipse update site</a><br />
-   </p>
+<#noparse>
+<#if "maven" == distribution>
+<#include "maven.ftl">
+<#elseif "p2" == distribution>
+<#include "eclipse.ftl">
+</#if>
+</#noparse>
 </#global>

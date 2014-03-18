@@ -49,9 +49,8 @@ function listDistributions() {
 };
 function displayDistribution(tab, distribution) {
 	var v = getVersion(distribution.version);
-	if (v) {//branch=2.1&release=2.1.7&edition=jse&distribution=zip
-		var str = '<tr><td><a href="/download/current?file=/downloads/' + v.minorVersion + '/'
-				+ distribution.fileName + '" class="file">';
+	if (v) {
+		var str = '<tr><td><a href="/download/current?release=' + v.fullVersionCompact + '&edition=' + distribution.edition  + '&distribution=' + distribution.fileType + '" class="file">';
 		// str += '<img alt="File:"';
 		// if("exe" == distribution.fileType){
 		// str += ' src="/images/executable.png">';
@@ -211,10 +210,10 @@ function setDownloadButton() {
 				'<p><button class="btn btn-large btn-success" type="button">Download '
 						+ version.fullVersionCompact + '</button></p>');
 		if (distribution.fileType == "maven") {
-			$('#download').append('<p>Group id: ' + distribution.mavenGroupId + '</p>');
-			$('#download').append('<p>Version: ' + version.mavenVersion + '</p>');
+			//$('#download').append('<p>Group id: ' + distribution.mavenGroupId + '</p>');
+			//$('#download').append('<p>Version: ' + version.mavenVersion + '</p>');
 		} else if (distribution.fileType == "p2") {
-			$('#download').append('<p>Url: ' + distribution.p2Url + '</p>');			
+			//$('#download').append('<p>Url: ' + distribution.p2Url + '</p>');			
 		} else {
 			$('#download').append('<p>File size: ' + distribution.fileSize + '</p>');			
 		}
@@ -224,24 +223,22 @@ function setDownloadButton() {
 		if (distribution.fileType == "maven") {
 			$('#download button').click(
 					function() {
-						document.location.href = "/download/maven";
+						document.location.href = "/download/past?distribution=maven&release=" + version.id + "&edition=" + edition.id;
 					});
 		} else if (distribution.fileType == "p2") {
 			$('#download button').click(
 					function() {
-						document.location.href = "/download/eclipse";
+						document.location.href = "/download/past?distribution=p2&release=" + version.id + "&edition=" + edition.id;
 					});			
 		} else if (redirectDownload) {
 			$('#download button').click(
 					function() {
-						document.location.href = "/download/past?file=/download/" + version.minorVersion + "/" + distribution.fileName;
+						document.location.href = "/download/past?distribution=" + distribution.fileType + "&release=" + version.id + "&edition=" + edition.id;
 					});			
 		} else {
 			$('#download button').click(
 					function() {
-						document.location.href = "/download/"
-								+ version.minorVersion + "/"
-								+ distribution.fileName;
+						document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
 					});
 		}
 	}
@@ -283,21 +280,25 @@ function init(sb, sr, se, std, dir, hf, rd) {
 
 	branch = itemId;
 	if (!branch) {
-		branch = getDefaultBranch($.cookie('qualifier'));
+		branch = getDefaultBranch($.cookie('release'));
 	}
 	$.cookie('branch', branch, {
 		path : '/'
 	});
 
-	itemId = getParameterByName(hash, "qualifier", $.cookie('qualifier'));
+	itemId = getParameterByName(hash, "release", $.cookie('release'));
 	qualifier = getQualifier(itemId);
 	if (!qualifier) {
-		qualifier = getQualifier(getDefaultQualifier());
+		$.cookie('release', itemId, {
+			path : '/'
+		});
+		version = getVersion(itemId);
+	} else {
+		$.cookie('release', qualifier.id, {
+			path : '/'
+		});
+		version = getVersion(qualifier.version);
 	}
-	$.cookie('qualifier', qualifier.id, {
-		path : '/'
-	});
-	version = getVersion(qualifier.version);
 
 	itemId = getParameterByName(hash, "edition", $.cookie('edition'));
 	edition = getEdition(itemId);
