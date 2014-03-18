@@ -48,6 +48,7 @@ public class DownloadCurrentServerResource extends BaseResource {
     public Representation toHtml() {
         Map<String, Object> model = new HashMap<String, Object>();
         model.put("version", version.getFullVersionCompact());
+        model.put("versionMaven", version.getMavenVersion());
         model.put("branch", version.getMinorVersion());
         model.put("release", version.getQualifier());
 

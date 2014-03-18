@@ -283,11 +283,11 @@
 &lt;dependency&gt;
    &lt;groupId&gt;org.restlet.jse&lt;/groupId&gt;
    &lt;artifactId&gt;org.restlet&lt;/artifactId&gt;
-   &lt;version&gt;${version}&lt;/version&gt;
+   &lt;version&gt;${versionMaven}&lt;/version&gt;
 &lt;/dependency&gt;
 &lt;dependency&gt;
    &lt;groupId&gt;org.restlet.jse&lt;/groupId&gt;
    &lt;artifactId&gt;org.restlet.ext.simple&lt;/artifactId&gt;
-   &lt;version&gt;${version}&lt;/version&gt;
+   &lt;version&gt;${versionMaven}&lt;/version&gt;
 &lt;/dependency&gt;
    </pre>

@@ -15,7 +15,7 @@
    </p>
    <p>
       The URL of the update site is based on the following pattern 
-      <a href="http://p2.restlet.org/">http://p2.restlet.org/${branch}</a>. It provides all tagged 
+      <a href="http://p2.restlet.org/">http://p2.restlet.org/${branch}/</a>. It provides all tagged 
       releases (such as current snapshot, or milestones, releases candidates, 
       etc). It is automatically refreshed once a day if the build succeeds.
    </p>
@@ -32,14 +32,14 @@
       desired repository in the upper field:
    </p>
  
-   <img style="display:block;margin-left:auto;margin-right:auto" src="/images/downloads/eclipse-p2-1.png" width="600px" alt="Add the eclipse update site to the IDE." /> 
+   <img style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" src="/images/downloads/eclipse-p2-1.png" width="600px" alt="Add the eclipse update site to the IDE." /> 
 
    <p>
       The available items are listed by category (Restlet Core, Pluggable connectors, 
       etc.). Just make your selection, and click on the “Next” button:
    </p>
    
-   <img src="/images/downloads/eclipse-p2-2.png" style="display:block;margin-left:auto;margin-right:auto" width="600px" alt="Select plugins to be installed." />
+   <img src="/images/downloads/eclipse-p2-2.png" style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" width="600px" alt="Select plugins to be installed." />
       
    <p>
       After a few moments of calculation (required dependencies among others calculation), 
@@ -47,7 +47,7 @@
       to your choice and click the “OK” button:
    </p>
    
-   <img src="/images/downloads/eclipse-p2-3.png" style="display:block;margin-left:auto;margin-right:auto" alt="Valid the warning message: the content is unsigned." /> 
+   <img src="/images/downloads/eclipse-p2-3.png" style="display:block;margin-left:auto;margin-right:auto;margin-bottom:10px;" alt="Valid the warning message: the content is unsigned." /> 
 
    <p>
       The installation process goes on, and after a few moment you will be asked to restart 
