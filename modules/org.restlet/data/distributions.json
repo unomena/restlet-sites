@@ -17,7 +17,7 @@
 {"id":"2.2rc4-jse-exe","version":"2.2rc4", "edition":"jse","type":"file", "fileName":"restlet-jse-2.2rc4.exe", "fileType":"exe","fileSize":"44 Mb","mavenGroupId":"","p2Url":""},
 {"id":"2.2rc4-jee-zip","version":"2.2rc4", "edition":"jee","type":"file", "fileName":"restlet-jee-2.2rc4.zip", "fileType":"zip","fileSize":"44 Mb","mavenGroupId":"","p2Url":""},
 {"id":"2.2rc4-jee-exe","version":"2.2rc4", "edition":"jee","type":"file", "fileName":"restlet-jee-2.2rc4.exe", "fileType":"exe","fileSize":"43 Mb","mavenGroupId":"","p2Url":""},
-{"id":"2.2rc4-gwt-zip","version":"2.2rc4", "edition":"gwt","type":"file", "fileName":"restlet-gwt-2.2rc4.zip", "fileType":"zip","fileSize":"976 Kb","mavenGroupId":"","p2Url":""},
+{"id":"2.2rc4-gwt-zip","version":"2.2rc4", "edition":"gwt","type":"file", "fileName":"restlet-gwt-2.2rc4.zip", "fileType":"zip","fileSize":"972 Kb","mavenGroupId":"","p2Url":""},
 {"id":"2.2rc4-gwt-exe","version":"2.2rc4", "edition":"gwt","type":"file", "fileName":"restlet-gwt-2.2rc4.exe", "fileType":"exe","fileSize":"1.1 Mb","mavenGroupId":"","p2Url":""},
 {"id":"2.2rc4-gae-zip","version":"2.2rc4", "edition":"gae","type":"file", "fileName":"restlet-gae-2.2rc4.zip", "fileType":"zip","fileSize":"28 Mb","mavenGroupId":"","p2Url":""},
 {"id":"2.2rc4-gae-exe","version":"2.2rc4", "edition":"gae","type":"file", "fileName":"restlet-gae-2.2rc4.exe", "fileType":"exe","fileSize":"27 Mb","mavenGroupId":"","p2Url":""},
