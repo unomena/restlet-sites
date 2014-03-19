@@ -28,7 +28,7 @@
    <pre class="xml:nocontrols:nogutter">
 &lt;repository&gt;
    &lt;id&gt;maven-restlet&lt;/id&gt;
-   &lt;name&gt;Public online Restlet repository&lt;/name&gt;
+   &lt;name&gt;Restlet Framework repository&lt;/name&gt;
    &lt;url&gt;http://maven.restlet.org&lt;/url&gt;
 &lt;/repository&gt;
    </pre>
@@ -44,7 +44,7 @@
   &lt;repositories&gt;
      &lt;repository&gt;
         &lt;id&gt;maven-restlet&lt;/id&gt;
-        &lt;name&gt;Public online Restlet repository&lt;/name&gt;
+        &lt;name&gt;Restlet Framework repository&lt;/name&gt;
         &lt;url&gt;http://maven.restlet.org&lt;/url&gt;
      &lt;/repository&gt;
   &lt;/repositories&gt;
@@ -64,26 +64,30 @@
 
    <div>
       The following table lists the available artifacts and their group and 
-      artifact ids. With the introduction of the 
-      <a href="/learn/guide/2.2/editions/" title="Editions of the Restlet framework">editions</a> 
-      for the Restlet framework, it is necessary to make a distinction between
+      artifact ids. With the introduction of <a href="/learn/guide/2.2/editions/" title="Restlet Framework editions">Restlet Framework editions</a> 
+      , it is necessary to make a distinction between
       an extension for a given edition and the same extension for another extension 
-      simply because the code of the extension may change between each edition. 
+      simply because the code of the extension may change between each edition.
+   </div>
+   <div>
       This distinction is reflected in the group id of each artifacts which 
       contains a reference to an edition. They are all set on the same pattern: 
       "org.restlet.&lt;edition&gt;" where "&lt;edition&gt;" is three-letters 
       code of an edition among: jse (Java SE edition), jee (Java EE edition), 
       gae (Google App Engine edition), android (Android edition) and 
-      gwt (google Web Toolkit edition). You can find 
-      <a href="/learn/guide/2.2/extensions/editions-matrix" title="Extensions per edition.">here</a>  
-      a full view of the list of extensions and the editions that ship them. 
+      gwt (google Web Toolkit edition).
+   </div>
+   <div>
+        Please find below 
+      <a href="/learn/guide/2.2/extensions/editions-matrix" title="Extensions per edition.">the list of extensions</a>  
+       available for the release and edition that you selected. 
    </div>
 
-   <div style="margin-top: 15px;margin-bottom: 10px; text-align:center">
+   <div style="margin-top: 15px;margin-bottom: 10px; text-align:left">
       <table class="classic" style="display:inline" cellspacing="2" cellpadding="3">
          <tr>
-            <th>Group id</th>
-            <th>Artifact id</th>
+            <th>groupId</th>
+            <th>artifactId</th>
             <th>Description</th>
          </tr>
          <tr>
