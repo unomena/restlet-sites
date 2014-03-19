@@ -56,6 +56,7 @@
     -   [SLF4J](extensions/slf4j.md "SLF4J")
     -   [Spring](extensions/spring/index.md "Spring")
     -   [jSSLutils](extensions/jsslutils.md "jSSLutils")
+    -   [Swagger](extensions/swagger.md "Swagger")
     -   [Velocity](extensions/velocity.md "Velocity")
     -   [WADL](extensions/wadl.md "WADL")
     -   [XDB](extensions/xdb/index.md "XDB")
