@@ -55,10 +55,20 @@ public class DownloadPastServerResource extends BaseResource {
         model.put("distribution", distribution.getFileType());
         model.put("edition", edition.getId());
 
-        if ("zip".equals(getQueryValue("distribution"))
-                || "exe".equals(getQueryValue("distribution"))) {
+        if ("zip".equals(getQueryValue("distribution"))) {
+            model.put("showNewsletter", Boolean.TRUE);
             model.put("downloadurl", "/download/" + version.getMinorVersion()
                     + "/" + distribution.getFileName());
+        } else if ("exe".equals(getQueryValue("distribution"))) {
+            model.put("showNewsletter", Boolean.TRUE);
+            model.put("downloadurl", "/download/" + version.getMinorVersion()
+                    + "/" + distribution.getFileName());
+        } else if ("maven".equals(getQueryValue("distribution"))) {
+            model.put("showNewsletter", Boolean.TRUE);
+            model.put("showMaven", Boolean.TRUE);
+        } else if ("p2".equals(getQueryValue("distribution"))) {
+            model.put("showNewsletter", Boolean.TRUE);
+            model.put("showEclipse", Boolean.TRUE);
         }
 
         return getHTMLTemplateRepresentation("download/past.html", model);
