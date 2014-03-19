@@ -163,9 +163,9 @@
         <div class="span2c site">
           <h4><a href="http://apispark.com/"><img src="/images/logo-apispark-small.png"/>APISpark</a></h4>
           <ul class="sub-list">
-            <li><a href="http://apispark.com/docs/">${labels.footer.apispark.docs['${language}']}</a></li>
             <li><a href="http://apispark.com/features">${labels.footer.apispark.features['${language}']}</a></li>
             <li><a href="http://apispark.com/pricing">${labels.footer.apispark.pricing['${language}']}</a></li>
+            <li><a href="http://apispark.com/docs/">${labels.footer.apispark.docs['${language}']}</a></li>
             <li><a href="http://apispark.com/about">${labels.footer.apispark.about['${language}']}</a></li>
           </ul>
         </div>

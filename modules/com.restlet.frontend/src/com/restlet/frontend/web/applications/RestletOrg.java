@@ -7,6 +7,7 @@ package com.restlet.frontend.web.applications;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,9 @@ import org.restlet.Request;
 import org.restlet.Response;
 import org.restlet.Restlet;
 import org.restlet.data.ChallengeScheme;
+import org.restlet.data.Cookie;
 import org.restlet.data.CookieSetting;
+import org.restlet.data.Form;
 import org.restlet.data.LocalReference;
 import org.restlet.data.MediaType;
 import org.restlet.data.Reference;
@@ -38,7 +41,9 @@ import org.restlet.routing.Template;
 import org.restlet.routing.TemplateRoute;
 import org.restlet.security.ChallengeAuthenticator;
 import org.restlet.security.MapVerifier;
+import org.restlet.util.Series;
 
+import com.restlet.frontend.objects.framework.Distribution;
 import com.restlet.frontend.objects.framework.DistributionsList;
 import com.restlet.frontend.objects.framework.Edition;
 import com.restlet.frontend.objects.framework.EditionsList;
@@ -125,6 +130,10 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
     /** List of current distributions. */
     private DistributionsList distributions;
 
+    private Map<String, DistributionsList> distributionsByVersion;
+
+    private Map<String, DistributionsList> distributionsByVersionEdition;
+
     /** The download router. */
     private Router downloadRouter;
 
@@ -158,10 +167,16 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
     /** List of current editions. */
     private QualifiersList qualifiers;
 
+    /** List of current qualifiers. */
+    private Map<String, Qualifier> qualifiersMap;
+
     private Map<String, String> toBranch;
 
     /** List of current versions. */
     private VersionsList versions;
+
+    /** List of current versions. */
+    private Map<String, Version> versionsMap;
 
     /** The Web files root directory URI. */
     private String wwwUri;
@@ -280,8 +295,9 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
                     // Set the qualifier to branch cookie
                     for (Qualifier q : qualifiers) {
                         String branch = q.getVersion().substring(0, 3);
-                        if (branch.equals("2.2") && !"unstable".equals(q.getId())) {
-                            setCookie(response, "qualifierToBranch", q.getId());
+                        if (branch.equals("2.2")
+                                && !"unstable".equals(q.getId())) {
+                            setCookie(response, "release", q.getId());
                         }
                     }
 
@@ -316,6 +332,88 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
         return this.dataUri;
     }
 
+    public Distribution getDistribution(Form query, Series<Cookie> cookies,
+            Version version, Edition edition) {
+        DistributionsList dl = distributionsByVersionEdition.get(version
+                .getId() + "|" + edition.getId());
+        // looking for the distribution
+        Distribution distribution = getDistribution(
+                query.getFirstValue("distribution"), dl);
+        if (distribution == null) {
+            distribution = getDistribution(
+                    cookies.getFirstValue("distribution"), dl);
+        }
+        if (distribution == null) {
+            // Or set default value
+            for (Distribution d : dl) {
+                if ("zip".equals(d.getFileType())) {
+                    distribution = d;
+                    break;
+                }
+            }
+        }
+        return distribution;
+    }
+
+    private Distribution getDistribution(String id, DistributionsList dl) {
+        Distribution result = null;
+        if (id != null) {
+            for (Distribution d : dl) {
+                if (id.equals(d.getFileType())) {
+                    result = d;
+                    break;
+                }
+            }
+        }
+
+        return result;
+    }
+
+    public Edition getEdition(Form query, Series<Cookie> cookies,
+            Version version) {
+        // looking for the edition
+        DistributionsList dl = distributionsByVersion.get(version.getId());
+        Edition edition = getEdition(query.getFirstValue("edition"), dl);
+        if (edition == null) {
+            edition = getEdition(cookies.getFirstValue("edition"), dl);
+        }
+
+        if (edition == null) {
+            // Or set default value
+            for (Distribution d : dl) {
+                if ("jse".equals(d.getEdition())
+                        || "all".equals(d.getEdition())) {
+                    for (Edition e : editions) {
+                        if (e.getId().equals(d.getEdition())) {
+                            edition = e;
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+        }
+        return edition;
+    }
+
+    private Edition getEdition(String id, DistributionsList dl) {
+        Edition result = null;
+        if (id != null) {
+            for (Edition e : editions) {
+                if (id.equals(e.getId())) {
+                    // check also this edition exists for the given version
+                    for (Distribution d : dl) {
+                        if (d.getEdition().equals(e.getId())) {
+                            result = e;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
     public List<Entry> getFeedGeneral() {
         return feedGeneral;
     }
@@ -335,6 +433,27 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
     @Override
     public String getName() {
         return "Application for restlet.org";
+    }
+
+    public Version getVersion(Form query, Series<Cookie> cookies) {
+        Version version = getVersion(query.getFirstValue("release"));
+        if (version == null) {
+            // check the cookies
+            version = getVersion(cookies.getFirstValue("release"));
+        }
+        if (version == null) {
+            // or set the default value
+            version = versionsMap.get(qualifiersMap.get("stable").getVersion());
+        }
+        return version;
+    }
+
+    private Version getVersion(String id) {
+        // looking for the qualified version, if any
+        if (qualifiersMap.containsKey(id)) {
+            id = qualifiersMap.get(id).getVersion();
+        }
+        return versionsMap.get(id);
     }
 
     public String getWwwUri() {
@@ -407,6 +526,10 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
      * Refreshes the list of distributions, versions, etc.
      */
     public void refresh() {
+        qualifiersMap = new HashMap<String, Qualifier>();
+        versionsMap = new HashMap<String, Version>();
+        distributionsByVersion = new HashMap<String, DistributionsList>();
+        distributionsByVersionEdition = new HashMap<String, DistributionsList>();
         try {
             // Read the available editions, versions, distributions
             ClientResource cr;
@@ -454,10 +577,37 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
                 branches.clear();
                 for (Version version : versions) {
                     branches.add(version.getMinorVersion());
+                    versionsMap.put(version.getId(), version);
+                    for (Qualifier q : qualifiers) {
+                        if (q.getVersion().equals(version.getId())) {
+                            version.setQualifier(q.getId());
+                            break;
+                        } else {
+                            version.setQualifier(version.getId());
+                        }
+                    }
+                    DistributionsList dlv = new DistributionsList();
+                    for (Distribution distribution : distributions) {
+                        if (distribution.getVersion().equals(version.getId())) {
+                            dlv.add(distribution);
+
+                            String keyVe = distribution.getVersion() + "|"
+                                    + distribution.getEdition();
+                            DistributionsList dlve = distributionsByVersionEdition
+                                    .get(keyVe);
+                            if (dlve == null) {
+                                dlve = new DistributionsList();
+                            }
+                            dlve.add(distribution);
+                            distributionsByVersionEdition.put(keyVe, dlve);
+                        }
+                    }
+                    distributionsByVersion.put(version.getId(), dlv);
                 }
                 for (Qualifier qualifier : qualifiers) {
                     String branch = qualifier.getVersion().substring(0, 3);
                     toBranch.put(qualifier.getId(), branch);
+                    qualifiersMap.put(qualifier.getId(), qualifier);
                 }
             }
             setDownloadRouter();
@@ -652,8 +802,8 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
         // Issue #36: always route undefined user guide to 2.2, which is not the
         // stable release at this time.
         redirect(router, "/learn/guide/stable", "/learn/guide/2.2{rr}");
-        redirectBranch(router, "/learn/guide/testing", "/learn/guide/{branch}/",
-                "testing");
+        redirectBranch(router, "/learn/guide/testing",
+                "/learn/guide/{branch}/", "testing");
         redirectBranch(router, "/learn/tutorial", "/learn/tutorial/{branch}/",
                 null);
         redirectBranch(router, "/learn/guide", "/learn/guide/{branch}/", null);
@@ -664,6 +814,28 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
     public synchronized void start() throws Exception {
         super.start();
         refresh();
+    }
+
+    /**
+     * Maintains coherency of the cookies
+     * 
+     * @param version
+     *            The current version.
+     * @param edition
+     *            The current edition.
+     * @param distribution
+     *            The current distribution.
+     * @param response
+     *            The current response to update.
+     */
+
+    public void updateCookies(Version version, Edition edition,
+            Distribution distribution, Response response) {
+        setCookie(response, "branch", version.getMinorVersion());
+        setCookie(response, "distribution", distribution.getFileType());
+        setCookie(response, "edition", edition.getId());
+        setCookie(response, "release", version.getQualifier());
+        setCookie(response, "version", version.getId());
     }
 
     /**
@@ -704,7 +876,7 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
                     if (b == null || b.isEmpty() || !branches.contains(b)) {
                         b = toBranch.get("stable");
                     }
-                    setCookie(response, cookie, b);
+                    setCookie(response, "branch", b);
                 }
             };
             route.setNext(filter);

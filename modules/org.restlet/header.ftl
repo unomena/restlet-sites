@@ -105,7 +105,7 @@
                 <label class="control-label">Release:</label>
                 <div class="controls">
                     <div class="btn-group">
-                        <button id="cRelease-bt" class="btn no-radius" data-toggle="dropdown"><strong>2.1.1</strong></button>
+                        <button id="cRelease-bt" class="btn no-radius" data-toggle="dropdown"><strong>2.1.7</strong></button>
                         <button class="btn dropdown-toggle no-radius" data-toggle="dropdown"><strong><span class="caret"></span></strong></button>
                         <ul id="cRelease" class="dropdown-menu" role="menu" aria-labelledby="drop5">
                             <!-- dropdown menu links -->
@@ -117,7 +117,7 @@
                 <label class="control-label">Edition:</label>
                 <div class="controls">
                     <div class="btn-group">
-                        <button id="cEdition-bt" class="btn no-radius" data-toggle="dropdown"><strong>OSGi</strong></button>
+                        <button id="cEdition-bt" class="btn no-radius" data-toggle="dropdown"><strong>Zip</strong></button>
                         <button class="btn dropdown-toggle no-radius"
                             data-toggle="dropdown">
                             <strong><span class="caret"></span></strong>

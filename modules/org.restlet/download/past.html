@@ -5,11 +5,17 @@
 </#if>
 </#noparse>
 </#global>
-<#global javascript_files=["/javascript/jquery-1.9.0.min.js", "/javascript/jquery-cookie.js", "/javascript/jsclass-core.js", "/javascript/json-minified.js","/javascript/bootstrap.min.js", "/javascript/data.js", "/javascript/archives.js", "/javascript/combo-widget.js"] />
+<#global javascript_files=["/javascript/shCore.js", "/javascript/shBrushXml.js","/javascript/jquery-1.9.0.min.js", "/javascript/jquery-cookie.js", "/javascript/jsclass-core.js", "/javascript/json-minified.js", "/javascript/restlet-client.js", "/javascript/restlet-feedSummary.js", "/javascript/bootstrap.min.js", "/javascript/data.js", "/javascript/archives.js", "/javascript/combo-widget.js"] />
 <#global javascript>
-	$(document).ready(function() {
-        init($("#cBranch"), $("#cRelease"), $("#cEdition"), $("#cDistribution"), $("#archives"));
-	});
+<#noparse>
+    $(document).ready(function() {
+        init($("#cBranch"), $("#cRelease"), $("#cEdition"), $("#cDistribution"), $("#archives")<#if ("zip" ==  distribution) || ("exe" ==  distribution)>, true<#else>, false, true</#if>);
+    });
+   window.onload = function () {
+    dp.SyntaxHighlighter.ClipboardSwf = '/flash/clipboard.swf';
+    dp.SyntaxHighlighter.HighlightAll('code');
+}
+</#noparse>
 </#global>
 <#global stylesheet_files=["//cdn-images.mailchimp.com/embedcode/classic-081711.css"] />
 <#global stylesheet>
@@ -30,7 +36,7 @@
     height: 30px;
     margin-left: 0;
     margin-top: -3px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 .container.content #footerNewsLetterWrapper {
     width: 360px;
@@ -51,6 +57,7 @@
 <#global content>
 <!-- Start Download section -->
 ${archivesSection}
+<#noparse><#if showNewsletter?has_content>
 <!-- End Download section -->
 <div class="clearBoth"></div>
 <hr />
@@ -60,8 +67,8 @@ ${archivesSection}
         <h4 class="notifications">Keep me informed about</h4>
         <div class="mc-field-group input-group">
             <ul>
-                <li><input type="checkbox" value="2" name="group[9053][2]" id="mce-group[9053]-9053-1" checked="checked"><label for="mce-group[9053]-9053-1">Restlet Framework (new releases, security fixes, etc.)</label></li>
-                <li><input type="checkbox" value="1" name="group[9053][1]" id="mce-group[9053]-9053-0" checked="checked" ><label for="mce-group[9053]-9053-0">APISpark by Restlet (cloud platform based on the framework)</label></li>
+                <li><input type="checkbox" value="2" name="group[9053][2]" id="mce-group[9053]-9053-1" checked="checked"><label for="mce-group[9053]-9053-1"><strong>Restlet Framework</strong> (new releases, security fixes, etc.)</label></li>
+                <li><input type="checkbox" value="1" name="group[9053][1]" id="mce-group[9053]-9053-0" checked="checked" ><label for="mce-group[9053]-9053-0"><strong>APISpark</strong> (cloud platform based on Restlet framework)</label></li>
             </ul>
         </div>
         <div id="mce-responses" class="clear">
@@ -72,14 +79,17 @@ ${archivesSection}
         <div style="position: absolute; left: -5000px;">
             <input type="text" name="b_6e9d916ca1faf05c7dc49d21e_a8aa911b32" value="">
         </div>
+</#noparse>
         <div class="span4 newsletter"><span id="footerNewsLetterWrapper"><input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="${labels.notifications.placeholder['${language}']}"><input type="submit" id="footerNewsLetterOkButton" value="${labels.notifications.submit['${language}']}" name="subscribe" id="mc-embedded-subscribe" class="button"></span></div>
+<#noparse>
     </form>
 </div>
 <!--End mc_embed_signup-->
-<div class="clearBoth"></div>
-<hr />
-   <p class="index">
-      <a href="maven">Maven repository</a><br/>
-      <a href="eclipse">Eclipse update site</a><br />
-   </p>
+</#if>
+<#if showMaven?has_content>
+<#include "maven.ftl">
+<#elseif showP2?has_content>
+<#include "eclipse.ftl">
+</#if>
+</#noparse>
 </#global>

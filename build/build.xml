@@ -234,6 +234,9 @@
 			<include name="**/*" />
 			<exclude name="**/*.ftl" />
 		</fmpp>
+		<copy todir="${temp}/${restlet-org}/download/">
+			<fileset dir="../modules/org.restlet/download/" includes="*.ftl" />
+		</copy>
 		<delete dir="${temp}/owr" />
         <!-- generate static files for the site : restlet.com -->
         <delete dir="${temp}/cwr" />

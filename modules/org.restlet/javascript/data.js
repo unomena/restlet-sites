@@ -85,16 +85,16 @@ function getDistribution(id) {
 function setQualifier(id) {
 	qualifier = getQualifier(id);
 	version  = getVersion(qualifier.version);
-	$.cookie('qualifier', id, {path: '/' });
+	$.cookie('release', id, {path: '/' });
 	$.cookie('version', version.id, {path: '/' });
 }
 function setVersion(id) {
 	version  = getVersion(id);
 	qualifier = getQualifierByVersion(id);		
 	if(qualifier){
-		$.cookie('qualifier', id, {path: '/' });			
+		$.cookie('release', id, {path: '/' });			
 	} else {
-		$.removeCookie('qualifier', {path: '/' });
+		$.removeCookie('release', {path: '/' });
 	}
 	$.cookie('version', version.id, {path: '/' });
 }

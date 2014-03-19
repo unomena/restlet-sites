@@ -25,6 +25,8 @@ public class Version implements Serializable {
     private String id;
 
     private String majorVersion;
+    
+    private String mavenVersion;
 
     private String minorVersion;
 
@@ -53,6 +55,10 @@ public class Version implements Serializable {
 
     public String getMajorVersion() {
         return majorVersion;
+    }
+
+    public String getMavenVersion() {
+        return mavenVersion;
     }
 
     public String getMinorVersion() {
@@ -85,6 +91,10 @@ public class Version implements Serializable {
 
     public void setMajorVersion(String majorVersion) {
         this.majorVersion = majorVersion;
+    }
+
+    public void setMavenVersion(String mavenVersion) {
+        this.mavenVersion = mavenVersion;
     }
 
     public void setMinorVersion(String minorVersion) {
