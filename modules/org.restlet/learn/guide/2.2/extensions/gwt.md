@@ -16,5 +16,5 @@ GWT](/learn/guide/2.1#/13-restlet/275-restlet/144-restlet.html "Restlet edition 
 For additional details, please consult [the
 specifications](/participate#/172-restlet/g4/282-restlet.html)
 and the
-[Javadocs](http://restlet.org/learn/javadocs/2.1/jse/ext/org/restlet/ext/gwt/package-summary.html).
+[Javadocs](javadocs://jse/ext/org/restlet/ext/gwt/package-summary.html).
 

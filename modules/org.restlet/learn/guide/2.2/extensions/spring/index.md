@@ -26,5 +26,5 @@ and the conceptual choices of the Restlet Framework that didn't
 systematize the use of simple POJOs. 
 
 For additional details, please consult the
-[Javadocs](http://restlet.org/learn/javadocs/2.0/jee/ext/org/restlet/ext/spring/package-summary.html).
+[Javadocs](javadocs://jse/jee/ext/org/restlet/ext/spring/package-summary.html).
 

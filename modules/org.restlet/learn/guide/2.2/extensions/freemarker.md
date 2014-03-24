@@ -20,7 +20,7 @@ TemplateRepresentation class with the matching parameters and to set it
 as the response entity.
 
 For additional details, please consult the
-[Javadocs](http://restlet.org/learn/javadocs/2.1/jse/ext/org/restlet/ext/freemarker/package-summary.html).
+[Javadocs](javadocs://jse/ext/org/restlet/ext/freemarker/package-summary.html).
 
 You can also have a look at this sample
 [application](/learn/guide/2.1#/410-restlet/version/2/part/8/data?branch=docs-2_1&language=default).

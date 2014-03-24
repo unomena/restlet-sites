@@ -39,7 +39,7 @@ example root resource class and then show how to get it running by the
 Restlet JAX-RS extension.
 
 For additional details, please consult the
-[Javadocs](http://restlet.org/learn/javadocs/2.1/jse/ext/org/restlet/ext/jaxrs/package-summary.html).
+[Javadocs](javadocs://jse/ext/org/restlet/ext/jaxrs/package-summary.html).
 
 Create JAX-RS example
 =====================

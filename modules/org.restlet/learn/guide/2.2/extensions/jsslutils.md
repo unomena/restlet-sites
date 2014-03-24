@@ -5,12 +5,12 @@ Introduction
 ============
 
 The SSL extension provides concrete implementations of the
-[SslContextFactory](http://restlet.org/learn/javadocs/2.1/jse/engine/org/restlet/engine/security/SslContextFactory.html)
+[SslContextFactory](javadocs://jse/engine/org/restlet/engine/security/SslContextFactory.html)
 that rely on
 [jSSLutils](http://code.google.com/p/jsslutils/).
 
 For additional details, please consult the
-[Javadocs](http://restlet.org/learn/javadocs/2.1/jse/ext/org/restlet/ext/ssl/package-summary.html).
+[Javadocs](javadocs://jse/ext/org/restlet/ext/ssl/package-summary.html).
 
 Description
 ===========

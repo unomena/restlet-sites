@@ -13,13 +13,13 @@ application. It also knows how to convert this WADL/XML document into a
 user friendly HTML document.
 
 For additional details, please consult the
-[Javadocs](http://restlet.org/learn/javadocs/2.1/jse/ext/org/restlet/ext/wadl/package-summary.html).
+[Javadocs](javadocs://jse/ext/org/restlet/ext/wadl/package-summary.html).
 
 Usage example
 =============
 
 This sample code is an extension of the ["firstResource" sample
-application](http://restlet.org/learn/javadocs/2.1/firstResource).
+application](javadocs://firstResource).
 The source code is available in the "org.restlet.example" extension,
 more precisely in the "org.restlet.ext.wadl" package.
 

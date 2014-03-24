@@ -21,5 +21,5 @@ JsonRepresentations can also be generated from String and any kind of
 Representation.
 
 For additional details, please consult the
-[Javadocs](http://restlet.org/learn/javadocs/2.0/jse/ext/org/restlet/ext/json/package-summary.html).
+[Javadocs](javadocs://jse/jse/ext/org/restlet/ext/json/package-summary.html).
 

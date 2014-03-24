@@ -22,7 +22,7 @@ header "XXX" is discouraged. Future versions of the Restlet API will
 directly support it".
 
 See details in the Javadocs of the
-[Message.getAttributes()](http://restlet.org/learn/javadocs/2.1/jse/api/org/restlet/Message.html#getAttributes%28%29)
+[Message.getAttributes()](javadocs://jse/api/org/restlet/Message.html#getAttributes%28%29)
 method.
 
 From HTTP headers to Restlet API

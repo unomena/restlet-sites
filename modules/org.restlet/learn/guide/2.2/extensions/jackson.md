@@ -88,5 +88,5 @@ details on annotations are [available in Jackson
 documentation](http://wiki.fasterxml.com/JacksonInFiveMinutes).
 
 For additional details, please consult the
-[Javadocs](http://restlet.org/learn/javadocs/2.1/jse/ext/org/restlet/ext/jackson/package-summary.html).
+[Javadocs](javadocs://jse/ext/org/restlet/ext/jackson/package-summary.html).
 

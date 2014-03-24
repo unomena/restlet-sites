@@ -175,4 +175,38 @@
         </div>
 </div>
 </#global>
-<!-- <#if "error"!=currentSection><a href="https://github.com/restlet/restlet-sites/edit/master/modules/org.restlet/${pp.sourceFile}" title="Edit this page">Edit this page</a></#if> -->
+
+<#macro navigationtitle sourcedirectory filepath version>
+<#local key = (sourcedirectory?substring(16) + filepath?substring(0, (filepath?length) -5) + ".md")?replace("/", ".") />
+<#if nodes[(version + "."  + key + ".title")]?has_content>${nodes[(version + "."  + key + ".title")]}</#if>
+</#macro>
+
+<#macro navigationbar sourcedirectory filepath version>
+    <#local key = (sourcedirectory?substring(16) + filepath?substring(0, (filepath?length) -5) + ".md")?replace("/", ".") />
+<div class="guide navigation bar">
+    <#if nodes[(version + "." + key + ".title")]?has_content>
+        <@navigationlink navnodes key "prev" "Prev" version/>
+<div class="guide navigation middle">
+        <@navigationlink nodes key "up" "Up" version />
+<div class="guide navigation top">
+<a href="/learn/guide/${version}">Top</a>
+</div>
+</div>
+        <@navigationlink navnodes key "next" "Next" version />
+    </#if>
+</div>
+</#macro>
+
+<#macro navigationlink map key property label version>
+<div class="guide navigation ${property}">
+        <#if map[version + "."  + key + "." + property]?has_content>
+<#local source=nodes[version + "."  + key + ".url"]>
+<#local tab=source?split("/") />
+<#local target=nodes[map[version + "."  + key + "." + property] + ".url"]>
+<div><a href="<#list tab as segment><#if segment_has_next>../</#if></#list>${target}">${label}</a></div>
+<div>${nodes[map[version + "."  + key + "." + property] + ".title"]}</div>
+        <#else>
+${label}
+        </#if>
+</div>
+</#macro>

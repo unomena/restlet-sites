@@ -11,7 +11,7 @@ For this purpose, [we recommend the book "RESTful Web Services"](http://restlet.
 from O'Reilly. We even wrote a part of it covering Restlet usage.
 
 For a more detailed presentation of the API, we recommend that you have
-a close look at its [Javadocs](http://restlet.org/learn/javadocs/2.2/jse/api/)
+a close look at its [Javadocs](javadocs://jse/api/)
 available on the Restlet Web site. Below is a hierarchy diagram showing
 the main concepts of the API and their relationships:
 

@@ -131,7 +131,7 @@
       ${content}
     </div>
     <div class="content footerWrapper">
-        <div class="footer"><!-- <#if "error"!=currentSection><a href="https://github.com/restlet/restlet-sites/edit/master/modules/org.restlet/${pp.sourceFile}" title="Edit this page">Edit this page</a></#if> --></div>
+        <div class="footer"></div>
     </div>
 
     <div id="footer">

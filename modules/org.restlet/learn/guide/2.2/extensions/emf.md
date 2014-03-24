@@ -12,7 +12,7 @@ EMF to convert between "representation beans" generated from EMF and
 XML/XMI/ECore representations.
 
 For additional details, please consult [the
-Javadocs](http://restlet.org/learn/javadocs/2.1/jse/ext/org/restlet/ext/emf/package-summary.html).
+Javadocs](javadocs://jse/ext/org/restlet/ext/emf/package-summary.html).
 
 Description
 ===========

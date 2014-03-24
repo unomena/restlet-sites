@@ -1,1 +1,0 @@
-This will contain the User Guide for version ${restlet-version-minor}
