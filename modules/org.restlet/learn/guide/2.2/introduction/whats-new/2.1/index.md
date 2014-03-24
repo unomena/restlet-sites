@@ -3,11 +3,10 @@
 ## Introduction
 
 In the next sections, you will get a synthesis of the major changes done
-to the Restlet Framework in version 2.1. For more details, you can read
-the [full list of changes](http://restlet.org/learn/2.1/changes).
+to the Restlet Framework in version 2.1.
 
-The sub-sections will be written when the 2.1 RC1 version is released
-only.
+For more details, you can read the [2.1 announce on our blog](http://blog.restlet.com/2012/09/27/restlet-framework-2-1-0-released-5/)
+as well as [the full list of changes](http://restlet.org/learn/2.1/changes).
 
 ## Better documentation
 
