@@ -5,7 +5,7 @@ Introduction
 ============
 
 This connector is based on [Apache Commons HTTP
-client](http://hc.apache.org/httpcomponents-client/).
+client](https://hc.apache.org/httpcomponents-client-ga/index.html).
 It provides an HTTP and HTTPS client connector with advanced
 multi-threading and connection reuse support.
 

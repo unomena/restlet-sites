@@ -6,17 +6,17 @@ Introduction
 
 This Restlet Extension implements the Java Specification [JAX-RS: Java
 API for RESTful Web
-Services](https://jsr311.dev.java.net/).
+Services](https://jcp.org/en/jsr/detail?id=311).
 Note that this implementation is not final yet.
 
 Description
 ===========
 
-To run this example, you need the Restlet libraries. Download a 2.1
+To run this example, you need the Restlet libraries. Download a ${restlet-version-minor}
 version from
 [restlet.org/downloads/](http://restlet.org/downloads/).
 (For a general Restlet example take a look at [the first steps
-examples](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet.html "First steps")).
+examples](../introduction/first-steps/ "First steps")).
 
 Now create a new Java Project, and add the following jars (resp.
 projects) to the classpath (right click on project, Properties, Java
@@ -185,7 +185,7 @@ the Application and sets the Guard and the RoleChecker (if needed).
 
 For details to run this Application in a Servet Container take a look at
 [Restlet
-FAQ](/learn/guide/2.1#/13-restlet/24-restlet/333-restlet.html "FAQ").
+FAQ](../appendices/faq "FAQ").
 
 You could use this subclass also in the example above:
 

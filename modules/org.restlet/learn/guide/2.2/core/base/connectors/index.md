@@ -106,143 +106,22 @@ List of available connectors
 Server connectors
 -----------------
 
-Extension
-
-Version
-
-Protocols
-
-Asynchronous
-
-Comment
-
-[Internal](/learn/guide/2.1#/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors")
-
-2.0
-
-HTTP, RIAP
-
-Yes
-
-Recommended for development
-
-[Jetty](/learn/guide/2.1#/13-restlet/28-restlet/78-restlet.html "Eclipse Jetty extension")
-
-7.0
-
-HTTP, HTTPS, AJP
-
-No
-
-Recommended for robust and scalable deployments
-
-[Simple](/learn/guide/2.1#/13-restlet/28-restlet/82-restlet.html "Simple Framework extension")
-
-4.1
-
-HTTP, HTTPS
-
-No
-
-Recommended for lightweight deployments
-
-[Servlet](/learn/guide/2.1#/13-restlet/28-restlet/81-restlet.html "Servlet extension")
-
-2.5
-
-HTTP, HTTPS, AJP
-
-No
-
-Recommended for deployments inside Java EE servers
+Extension | Version | Protocols | Asynchronous | Comment
+--------- | ------- | --------- | ------------ | ---------
+[Internal](/learn/guide/2.1#/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors") | 2.0 | HTTP, RIAP | Yes | Recommended for development
+[Jetty](/learn/guide/2.1#/13-restlet/28-restlet/78-restlet.html "Eclipse Jetty extension") | 7.0 | HTTP, HTTPS, AJP | No | Recommended for robust and scalable deployments
+[Simple](/learn/guide/2.1#/13-restlet/28-restlet/82-restlet.html "Simple Framework extension") | 4.1 | HTTP, HTTPS | No | Recommended for lightweight deployments
+[Servlet](/learn/guide/2.1#/13-restlet/28-restlet/81-restlet.html "Servlet extension") | 2.5 | HTTP, HTTPS, AJP | No | Recommended for deployments inside Java EE servers
 
 Client connectors
 -----------------
 
-Extension
-
-Version
-
-Protocols
-
-Asynchronous
-
-Proxy
-
-Comment
-
-[Internal](/learn/guide/2.1#/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors")
-
-2.0
-
-HTTP, CLAP, FILE, RIAP
-
-Yes
-
-No
-
-Stable but HTTP connectors are recommended for development only
-
-[Apache HTTP
-Client](/learn/guide/2.1#/13-restlet/28-restlet/75-restlet.html "Apache HTTP Client extension")
-
-4.0
-
-HTTP, HTTPS
-
-No
-
-Yes
-
-Recommended for robust and scalable deployments
-
-[Lucene
-Solr](/learn/guide/2.1#/13-restlet/28-restlet/229-restlet.html "Lucene extension")
-
-2.9
-
-SOLR
-
-No
-
-No
-
-Stable
-
-[Net](/learn/guide/2.1#/13-restlet/28-restlet/79-restlet.html "Net extension")
-(JDK's HttpURLConnection)
-
-1.5
-
-HTTP, HTTPS, FTP
-
-No
-
-Yes
-
-Recommended for lightweight deployments
-
-[JavaMail](/learn/guide/2.1#/13-restlet/28-restlet/76-restlet.html "JavaMail extension")
-
-1.4
-
-SMTP, SMTPS, POP, POPS
-
-No
-
-No
-
-Stable
-
-[JDBC](/learn/guide/2.1#/13-restlet/28-restlet/77-restlet.html "JDBC extension")
-
-3.0
-
-JDBC
-
-No
-
-No
-
-Stable
+Extension | Version | Protocols | Asynchronous | Proxy | Comment
+--------- | ------- | --------- | ------------ | ---------
+[Internal](/learn/guide/2.1#/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors") | 2.0 | HTTP, CLAP, FILE, RIAP | Yes | No | Stable but HTTP connectors are recommended for development only
+[Apache HTTP Client](/learn/guide/2.1#/13-restlet/28-restlet/75-restlet.html "Apache HTTP Client extension") | 4.0 | HTTP, HTTPS | No | Yes | Recommended for robust and scalable deployments
+[Lucene Solr](/learn/guide/2.1#/13-restlet/28-restlet/229-restlet.html "Lucene extension") | 2.9 | SOLR | No | No | Stable
+[Net](/learn/guide/2.1#/13-restlet/28-restlet/79-restlet.html "Net extension") (JDK's HttpURLConnection)  | 1.5 | HTTP, HTTPS, FTP | No | Yes | Recommended for lightweight deployments
+[JavaMail](/learn/guide/2.1#/13-restlet/28-restlet/76-restlet.html "JavaMail extension") | 1.4 | SMTP, SMTPS, POP, POPS | No |  No | Stable
+[JDBC](/learn/guide/2.1#/13-restlet/28-restlet/77-restlet.html "JDBC extension") | 3.0 | JDBC | No | No | Stable
 

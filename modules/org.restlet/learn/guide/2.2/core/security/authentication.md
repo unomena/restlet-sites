@@ -22,8 +22,7 @@ applications with the BASIC authentication scheme.
 
 The whole code can be downloaded
 [here](/learn/guide/2.1#/177-restlet/version/default/part/AttachmentData/data "testHttpBasic")
-(application/force-download, 1.2 kB,
-[info](/learn/guide/2.1#/177-restlet.html)).
+(application/force-download, 1.2 kB).
 
 Description of the server side
 ------------------------------
@@ -120,8 +119,7 @@ applications with the DIGEST authentication scheme.
 
 The whole code can be downloaded
 [here](/learn/guide/2.1#/176-restlet/version/default/part/AttachmentData/data "Sample code illustrating Digest authentication")
-(application/force-download, 1.6 kB,
-[info](/learn/guide/2.1#/176-restlet.html)).
+(application/force-download, 1.6 kB).
 
 Description of the server side
 ------------------------------

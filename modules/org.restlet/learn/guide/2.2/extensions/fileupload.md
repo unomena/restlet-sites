@@ -23,10 +23,8 @@ For additional details, please consult the
 
 Here is the list of dependencies for this extension:
 
--   [Java
-    Servlet](http://java.sun.com/products/servlet/)
--   [Apache Commons
-    FileUpload](http://jakarta.apache.org/commons/fileupload/)
+-   [Java Servlet](http://java.sun.com/products/servlet/)
+-   [Apache Commons FileUpload](http://jakarta.apache.org/commons/fileupload/)
 
 Usage example
 =============
@@ -127,8 +125,7 @@ Before running this example, please add the following jars to the
 classpath:
 
 -   org.restlet (Restlet API)
--   org.restlet.ext.fileupload (Restlet extension based on the Apache
-    FileUpload project)
+-   org.restlet.ext.fileupload (Restlet extension based on the Apache FileUpload project)
 -   org.apache.commons.fileupload (Apache FileUpload project)
 -   org.apache.commons.io (Apache FileUpload project)
 -   javax.servlet.jar (Servlet archive used by the FileUpload library)
@@ -136,10 +133,7 @@ classpath:
 Links
 -----
 
--   [Apache FileUpload
-    library](http://commons.apache.org/fileupload/)
--   [Server
-    connectors](/learn/guide/2.1#/38-restlet.html)
--   [Sample code of FileUpload extension (zip
-    file)](/learn/guide/2.1#/42-restlet.html "Usage example of FileUpload extension")
+-   [Apache FileUpload library](http://commons.apache.org/fileupload/)
+-   [Server connectors](../core/base/connectors/#server-connectors-1)
+-   [Sample code of FileUpload extension (zip file)](/learn/guide/2.1#/42-restlet.html "Usage example of FileUpload extension")
 

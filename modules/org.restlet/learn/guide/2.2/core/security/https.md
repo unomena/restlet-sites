@@ -114,51 +114,19 @@ Generating 2,048 bit RSA key pair and self-signed certificate
 
 To explain each option:
 
-*-genkey*
-
-generate a pair of keys and a self-signed certificate
-
-*-v*
-
-display the output message
-
-*-alias*
-
-a unique name for the keys (does not need to be the name of the machine)
-
-*-dname*
-
-details of the machine where the keys and certificate will be used
-
-*-keypass*
-
-the password for the key pair identified by the '-alias' option
-
-*-keystore*
-
-the name of the operating system file where the keys/certificate will be
-saved
-
-*-storepass*
-
-the password for the keystore file
-
-*-keyalg*
-
-the encryption algorithm to use; “DSA” or “RSA”
-
-*-sigalg*
-
-the signature algorithm to use; “Sha1withDSA” and “MD5withRSA” are two
-
-*-keysize*
-
-the size of the key (larger = more secure; e.g. 512, 1024 or 2048)
-
-*-validity*
-
-the number of days before the certificate expires (3650 = approx. 10
-years)
+Option | Explanation
+------ | -----------
+*-genkey* | generate a pair of keys and a self-signed certificate
+*-v* | display the output message
+*-alias* | a unique name for the keys (does not need to be the name of the machine)
+*-dname* | details of the machine where the keys and certificate will be used
+*-keypass* | the password for the key pair identified by the '-alias' option
+*-keystore* | the name of the operating system file where the keys/certificate will be saved
+*-storepass* | the password for the keystore file
+*-keyalg* | the encryption algorithm to use; “DSA” or “RSA”
+*-sigalg* | the signature algorithm to use; “Sha1withDSA” and “MD5withRSA” are two
+*-keysize* | the size of the key (larger = more secure; e.g. 512, 1024 or 2048)
+*-validity*  | the number of days before the certificate expires (3650 = approx. 10 years)
 
 Keystore files can have different formats. The example above, the
 default format of “JKS” (Java Key Store) was used. The type for PKCS\#12
@@ -189,25 +157,13 @@ Certificate stored in file \<serverX.cer\>
 
 To explain each option:
 
-*-export*
-
-export the certificate
-
-*-alias*
-
-the name of the public key/certificate to export
-
-*-file*
-
-the name of a file where the certificate is to be saved
-
-*-keystore*
-
-the name of the keystore file containing the certificate
-
-*-storepass*
-
-the password for the keystore file
+Option | Explanation
+------ | -----------
+*-export* | export the certificate
+*-alias* | the name of the public key/certificate to export
+*-file* | the name of a file where the certificate is to be saved
+*-keystore* | the name of the keystore file containing the certificate
+*-storepass* | the password for the keystore file
 
 Note that the name of the alias and the keystore/certificate files are
 not significant, but they are named 'serverX' for consistency and

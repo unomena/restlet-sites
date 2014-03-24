@@ -12,8 +12,7 @@ executable server JAR.
 
 Download [Restlet GWT -- Simple
 Example](/learn/guide/2.1#/298-restlet/version/default/part/AttachmentData/data "testGwtRestlet-2.0")
-(application/force-download, 3.0 MB,
-[info](/learn/guide/2.1#/298-restlet.html))
+(application/force-download, 3.0 MB)
 
 This is a simple example demonstrating some basic patterns for using
 Restlet and GWT.  It produces an executable JAR file which depends only

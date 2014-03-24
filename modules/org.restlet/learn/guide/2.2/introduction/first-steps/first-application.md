@@ -73,8 +73,7 @@ The "contact" object has the following attributes:
 
 The full source code (without the required archives) is available here:
 [serializationFullSource.](/learn/guide/2.1#/304-restlet/version/default/part/AttachmentData/data/serializationFullSource.zip "serializationFullSource")
-(application/zip, 1.4 MB,
-[info](/learn/guide/2.1#/304-restlet.html))
+(application/zip, 1.4 MB)
 
 It contains the full source code of three Eclipse projects with:
 

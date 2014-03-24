@@ -546,8 +546,7 @@ Checkout Full Code
 ==================
 
 [microblog\_sourcecode](/learn/guide/2.1#/54-restlet/version/default/part/AttachmentData/data "microblog_sourcecode")
-(application/x-zip, 2.3 MB,
-[info](/learn/guide/2.1#/54-restlet.html))
+(application/x-zip, 2.3 MB)
 
 How to custom Finder to replace TunnelService
 =============================================

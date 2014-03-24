@@ -10,6 +10,8 @@
     -   [What's new](introduction/whats-new/index.md)
     -   [First steps](introduction/first-steps/index.md)
     -   [Architecture](introduction/architecture/index.md)
+        -   [Persistence layer](introduction/architecture/persistence-layer.md "notoc")
+        -   [Presentation layer](introduction/architecture/presentation-layer.md "notoc")
     -   [Getting started](introduction/getting-started/index.md)
 -   [Part II - Core Restlet](core/index.md)
     -   [Mapping HTTP headers](core/http-headers-mapping.md)

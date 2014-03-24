@@ -15,7 +15,7 @@ with the official announce.
 Due to the restrictions of the GAE, we need to provide an adaptation of
 Restlet for this environment. GAE is based on Java 6, with a restricted
 list of APIs. See [GAE developers
-documentation](http://code.google.com/intl/fr/appengine/docs/java/overview.html)
+documentation](https://developers.google.com/appengine/)
 for details.
 
 Modules availables:
@@ -31,8 +31,7 @@ Usage example
 
 Create a new GAE project with the Eclipse plugin provided, add the
 "org.restlet.jar" and the "org.restlet.ext.servlet.jar" files from the
-[latest Restlet 2.0
-snapshots](http://restlet.org/downloads/unstable)(make
+[latest Restlet snapshots](http://restlet.org/downloads/unstable)(make
 sure you download the edition for GAE) to your "/war/WEB-INF/lib/"
 directory and to your project build path.
 

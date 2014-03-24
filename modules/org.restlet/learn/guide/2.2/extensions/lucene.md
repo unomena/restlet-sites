@@ -18,7 +18,7 @@ is to provide a TikaRepresentation leveraging Lucene Tika subproject to
 extract metadata from any Representation.
 
 For additional details, please consult the
-[Javadocs](javadocs://jse/jse/ext/org/restlet/ext/lucene/package-summary.html).
+[Javadocs](javadocs://jse/ext/org/restlet/ext/lucene/package-summary.html).
 
 Solr integration
 ================

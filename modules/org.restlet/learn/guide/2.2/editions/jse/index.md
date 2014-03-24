@@ -10,8 +10,7 @@ Standard Edition).
 This edition is aimed for development and deployment of Restlet
 applications inside a regular Java virtual machine using the internal
 HTTP server of the Restlet Engine, or a pluggable one such as Jetty.
-[This
-page](/learn/guide/2.1#/13-restlet/27-restlet/325-restlet/37-restlet.html "Connectors")
+[This page](../../core/base/connectors "Connectors")
 contains a detailed list of available HTTP server connectors.
 
 Getting started
@@ -21,13 +20,11 @@ The rest of this page should get you started with the Restlet Framework,
 Java SE edition, in less than 10 minutes. It explains how to create a
 resource that says "hello, world" and run it.
 
-1.  [What do I
-    need?](/learn/guide/2.0#/13-restlet/275-restlet/312-restlet/edit/1021428d75520b32821c6a676e4d5f442f074c17/part-SimpleDocumentContent#requirements)
-2.  [The "hello, world"
-    application](/learn/guide/2.0#/13-restlet/275-restlet/312-restlet/edit/1021428d75520b32821c6a676e4d5f442f074c17/part-SimpleDocumentContent#application)
-3.  [Run as a standalone Java
-    application](/learn/guide/2.0#/13-restlet/275-restlet/312-restlet/edit/1021428d75520b32821c6a676e4d5f442f074c17/part-SimpleDocumentContent#standaloneDeployment)
-4.  [Conclusion](/learn/guide/2.0#/13-restlet/275-restlet/312-restlet/edit/1021428d75520b32821c6a676e4d5f442f074c17/part-SimpleDocumentContent#conclusion)
+1.  [What do I need?](#what_do_i_need)
+2.  [The "hello, world" application](#the-hello-world-application)
+3.  [Run in a Servlet container](#run-in-a-servlet-container)
+4.  [Run as a standalone application](#run-as-a-standalone-java-application)
+5.  [Conclusion](#conclusion)
 
 What do I need?
 ---------------
@@ -36,7 +33,7 @@ We assume that you have a development environment set up and
 operational, and that you already have installed the Java 1.5 (or
 higher). In case you haven't downloaded the Restlet Framework yet,
 select one of the available distributions of the [Restlet Framework
-2.0](http://restlet.org/downloads).
+${restlet-version-minor}](http://restlet.org/downloads).
 
 The "hello, world" application
 ------------------------------
@@ -130,8 +127,7 @@ is correct and that no other program is currently using the port 8182.
 
 You can find the sources of this sample application in the
 "[FirstStepsStandalone](/learn/guide/2.1#/371-restlet/version/default/part/AttachmentData/data "firstStepsStandalone")
-(application/zip, 1.4 kB,
-[info](/learn/guide/2.1#/371-restlet.html))"
+(application/zip, 1.4 kB)"
 file.
 
 Conclusion
@@ -139,7 +135,7 @@ Conclusion
 
 We hope you that enjoyed these first steps and encourage you to check
 [the equivalent page in the Java EE
-edition](/learn/guide/2.1#/13-restlet/275-restlet/312-restlet.html "Restlet edition for Java EE")
+edition](../jee/ "Restlet edition for Java EE")
 for deployments of the same application in Servlet containers. This can
 also be a convenient way to deploy your Restlet application in an
 existing Java EE application server available in your organization.

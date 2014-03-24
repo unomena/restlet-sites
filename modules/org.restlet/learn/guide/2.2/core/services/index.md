@@ -14,12 +14,8 @@ Component services
 Here is the list of services hosted by default by an instance of
 Component:
 
--   [Log
-    service](/learn/guide/2.1#/13-restlet/27-restlet/331-restlet/201-restlet.html "Log service"):
-    provide access to logging service.
--   [Status
-    service](/learn/guide/2.1#/13-restlet/27-restlet/331-restlet/202-restlet.html "Status service"):
-    provide common representations for exception status.
+-   [Log service](log "Log service"): provide access to logging service.
+-   [Status service](status "Status service"): provide common representations for exception status.
 
 Application services
 ====================
@@ -27,25 +23,11 @@ Application services
 Here is the list of services hosted by default by an instance of
 Application :
 
--   [Connector
-    service](/learn/guide/2.1#/13-restlet/27-restlet/331-restlet/203-restlet.html "Connector service"):
-    declare necessary client and server connectors.
--   [Decoder
-    service](/learn/guide/2.1#/13-restlet/27-restlet/331-restlet/204-restlet.html "Decoder service"):
-    automatically decode or decompress request entities.
--   [Metadata
-    service](/learn/guide/2.1#/13-restlet/27-restlet/331-restlet/205-restlet.html "Metadata service"):
-    provide access to metadata and their associated extension names.
--   [Range
-    service](/learn/guide/2.1#/13-restlet/27-restlet/331-restlet/208-restlet.html "Range service"):
-    automatically exposes ranges of response entities.
--   [Status
-    service](/learn/guide/2.1#/13-restlet/27-restlet/331-restlet/202-restlet.html "Status service"):
-    provide common representations for exception status.
--   [Task
-    service](/learn/guide/2.1#/13-restlet/27-restlet/331-restlet/206-restlet.html "Task service"):
-    run tasks asynchronously.
--   [Tunnel
-    service](/learn/guide/2.1#/13-restlet/27-restlet/331-restlet/207-restlet.html "Tunnel service"):
-    tunnel method names or client preferences via query parameters.
+-   [Connector service](connector "Connector service"): declare necessary client and server connectors.
+-   [Decoder service](decoder "Decoder service"): automatically decode or decompress request entities.
+-   [Metadata service](metadata "Metadata service"): provide access to metadata and their associated extension names.
+-   [Range service](range "Range service"): automatically exposes ranges of response entities.
+-   [Status service](status "Status service"): provide common representations for exception status.
+-   [Task service](task "Task service"): run tasks asynchronously.
+-   [Tunnel service](tunnel "Tunnel service"): tunnel method names or client preferences via query parameters.
 

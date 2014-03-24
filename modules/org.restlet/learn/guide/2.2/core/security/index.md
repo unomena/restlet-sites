@@ -26,9 +26,9 @@ natively support cookies via the
 and
 [CookieSetting](javadocs://jse/api/org/restlet/data/CookieSetting.html)
 objects accessible from a
-[Request](javadocs://jse/api/org/restlet/data/Request.html)
+[Request](javadocs://jse/api/org/restlet/Request.html)
 or a
-[Response](javadocs://jse/api/org/restlet/data/Response.html).
+[Response](javadocs://jse/api/org/restlet/Response.html).
 
 There is another way based on the standard HTTP authentication
 mechanism. By default, the Restlet Engine accepts credentials sent and
@@ -44,6 +44,7 @@ the Servlet API, the concept is similar to the
 interface. See below how we would modify the previous example to secure
 the access to the Directory:
 
+~~~~ {.brush: .java}
     // Create a simple password verifier
     MapVerifier verifier = new MapVerifier();
     verifier.getLocalSecrets().put("scott", "tiger".toCharArray());
@@ -59,6 +60,7 @@ the access to the Directory:
     guard.setNext(directory);
 
     return guard;
+~~~~
 
 ![](Security%20package-46_files/data.html)
 
@@ -69,6 +71,7 @@ ChallengeAuthenticator) and the Authorizer abstract classes. Here we
 simply hard-coded a single user and password couple. In order to test,
 let's use the client-side Restlet API:
 
+~~~~ {.brush: .java}
     // Prepare the request 
     ClientResource resource = new ClientResource("http://localhost:8182/"); 
       
@@ -93,6 +96,7 @@ let's use the client-side Restlet API:
        System.out.println("An unexpected status was returned: " 
            + resource.getStatus()); 
     } 
+~~~~
 
 You can change the user ID or password sent by this test client in order
 to check the response returned by the server. Remember to launch the
@@ -106,7 +110,7 @@ default.
 Restlet API
 ===========
 
-The Restlet API in version 2.0 has fully refactored its security model
+The Restlet API in version ${restlet-version-minor} has fully refactored its security model
 ([see specifications
 here](/participate#/172-restlet/212-restlet.html)).
 It is based on some properties of the ClientInfo class: user and roles.
@@ -255,9 +259,9 @@ alias names and custom SSL context factories.
 
 In addition to the parameters that are similar but specific to [each
 type of HTTPS server
-connector](/learn/guide/2.1#/38-restlet.html),
+connector](../base/connectors/#server-connectors-1),
 it is possible to configure the SSL connectors using an
-[SslContextFactory](javadocs://jse/engine/org/restlet/engine/util/SslContextFactory.html),
+[SslContextFactory](javadocs://jse/ext/org/restlet/ext/ssl/SslContextFactory.html),
 in a way that is common to all three types of HTTPS server connectors
 (Simple, Jetty and Grizzly). Configuring SSL is done in this order:
 
@@ -271,7 +275,7 @@ in a way that is common to all three types of HTTPS server connectors
     passed to its `init` method, so as to initialize the
     SslContextFactory instance via text parameters.\
      The
-    [org.restlet.engine.security.DefaultSslContextFactory](javadocs://jse/engine/org/restlet/engine/security/DefaultSslContextFactory.html#init%28org.restlet.util.Series%29)
+    [org.restlet.engine.security.DefaultSslContextFactory](javadocs://jse/engine/org/restlet/engine/ssl/DefaultSslContextFactory.html#init%28org.restlet.util.Series%29)
     is an SslContextFactory that supports a basic set of parameters, and
     will default to the values specified in the `javax.net.ssl.*` system
     properties (see [JSSE Reference
@@ -408,6 +412,5 @@ Sample code
 
 [Security
 sample](/learn/guide/2.1#/307-restlet/version/default/part/AttachmentData/data/Security%20sample.zip "Security sample")
-(application/zip, 2.9 kB,
-[info](/learn/guide/2.1#/307-restlet.html))
+(application/zip, 2.9 kB)
 

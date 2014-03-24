@@ -3,7 +3,7 @@
 ## Introduction
 
 The Restlet Framework is composed of two main parts. First, there is the
-[Restlet API](/learn/guide/2.1#/13-restlet/27-restlet.html "Part II - Core Restlet"),
+[Restlet API](../../core "Part II - Core Restlet"),
 a neutral API supporting the concepts of REST and HTTP, facilitating the
 handling of calls for both client-side and server-side applications.
 This API is backed by the Restlet Engine and both are now shipped in a
@@ -23,7 +23,7 @@ that enables the communication between components which are represented
 by the larger boxes. The links represents the particular protocol (HTTP,
 SMTP, etc.) used for the actual communication.
 
-![](Architecture-378_files/data.html)
+![](/learn/tutorial/${restlet-version-minor}/images/tutorial04)
 
 Note that the same component can have any number of client and server
 connectors attached to it. Web Server B, for example, has both a server

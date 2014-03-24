@@ -31,34 +31,18 @@ Annotations
 
 We also defined a set of method level annotations:
 
-Annotation
-
-Description
-
-@Delete
-
-Annotate methods that remove resources.
-
-@Get
-
-Annotate methods that represent a variant of a resource
-
-@Options
-
-Annotate methods that accept representations.
-
-@Post
-
-Annotate methods that accept representations.
-
-@Put
-
-Annotate methods that store representations.
+Annotation | Description
+---------- | -----------
+@Delete    | Annotate methods that remove resources.
+@Get       | Annotate methods that represent a variant of a resource
+@Options   | Annotate methods that accept representations.
+@Post      | Annotate methods that accept representations.
+@Put       | Annotate methods that store representations.
 
 Those annotations are specific to the Restlet API and shouldn't be
 confused with those of the JAX-RS API. For support of the JAX-RS API by
 the Restlet Framework, you should look at [the provided
-extension](/learn/guide/2.1#/13-restlet/28-restlet/57-restlet.html "JAX-RS extension").
+extension](../../extensions/jaxrs "JAX-RS extension").
 
 Annotations parameter
 ---------------------
@@ -68,6 +52,7 @@ All annotation have a single optional parameter. Its name is the default
 
 Here is the grammar for this parameter:
 
+```
     CHARACTER  = 'a-z' | 'A-Z' | '0-9'
     TOKEN      = CHARACTER [CHARACTER]*
     EXTENSION  = TOKEN
@@ -78,9 +63,11 @@ Here is the grammar for this parameter:
     OUTPUT     = ENTITY
     QUERY      = PARAMETER ['&' PARAMETER]
     ANNOTATION = INPUT [',' INPUT]* [':' OUTPUT] ['?' QUERY]
+```
 
 Here are some valid values:
 
+~~~~ {.brush: .java}
     // Returns a representation in the "text/xml" media type
     @Get("xml")
     String toString();
@@ -104,6 +91,7 @@ Here are some valid values:
 
     // Alternative variants
     @Put("xml+ascii | json+utf8 : json")
+~~~~
 
 Note the importance of registering the proper extension names via the
 MetadataService in order to use additional extension names.
@@ -115,6 +103,7 @@ Here is how a sample resource would look like with the refactored API.
 Note that both extension names and full MIME type would be supported.
 Extensions can be updated via the MetadataService.
 
+~~~~ {.brush: .java}
     import java.io.InputStream;
 
     import org.restlet.ext.atom.Feed;
@@ -162,4 +151,4 @@ Extensions can be updated via the MetadataService.
         }
 
     }
-
+~~~~

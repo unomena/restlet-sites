@@ -24,7 +24,7 @@ applications lists the current contacts registered in the address book.
 For those who provide a FOAF URI, a click on their entry in the list
 invokes the FOAF service illustrated below. This service is built on top
 of Restlet and its recently added [RDF
-extension](/learn/guide/1.2#/13-restlet/28-restlet/270-restlet.html).
+extension](../../extensions/rdf.md).
 It retrieves the FOAF representation, parses it and displays the friends
 of your contact in the GUI. The user can then add some of those friends
 as new local contacts.
@@ -250,6 +250,5 @@ Used to bind the service, when the activity starts.
 Here is the Eclipse project of the sample application (including
 dependencies jars):
 [androidRestlet](/learn/guide/2.1#/277-restlet/version/default/part/AttachmentData/data "androidRestlet")
-(application/zip, 623.6 kB,
-[info](/learn/guide/2.1#/277-restlet.html))
+(application/zip, 623.6 kB)
 

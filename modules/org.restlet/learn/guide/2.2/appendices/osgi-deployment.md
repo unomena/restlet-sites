@@ -79,8 +79,7 @@ the Part12 example of the Restlet tutorial.
 
 1.  Create a new "Plug-in Project", name it
     "[OsgiUsageTest2](/learn/guide/2.1#/239-restlet/version/default/part/AttachmentData/data "OsgiUsageTest2")
-    (application/zip, 6.5 kB,
-    [info](/learn/guide/2.1#/239-restlet.html))"
+    (application/zip, 6.5 kB)"
     and press "Next \>"
 2.  Select the checkbox to generate an Activator and press "Finish"
 3.  In the Dependencies tab of the manifest editor, import the following
@@ -160,8 +159,7 @@ engine, for example:
 
 An archive of this test project is [available
 here](/learn/guide/2.1#/239-restlet/version/default/part/AttachmentData/data "OsgiUsageTest2")
-(application/zip, 6.5 kB,
-[info](/learn/guide/2.1#/239-restlet.html)).
+(application/zip, 6.5 kB).
 
 Standalone Equinox deployment
 =============================

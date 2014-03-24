@@ -173,8 +173,7 @@ which is more or less based on regular expressions.\
  In this case you have to define your own router (with the "CUSTOM"
 routing mode). A sample implementation is available
 [here](/learn/guide/2.1#/211-restlet/version/default/part/AttachmentData/data "queryRouter")
-(application/zip, 1.8 kB,
-[info](/learn/guide/2.1#/211-restlet.html)).
+(application/zip, 1.8 kB).
 
 Matching of template variables
 ------------------------------

@@ -95,224 +95,44 @@ Available converters
 Conversion from representations to objects
 ------------------------------------------
 
-Module
-
-From Representations with media type
-
-To Object
-
-Core
-
-APPLICATION\_JAVA\_OBJECT
-
-java.lang.Object
-
-Core
-
-APPLICATION\_JAVA\_OBJECT\_XML
-
-java.lang.Object
-
-Core
-
-APPLICATION\_WWW\_FORM
-
-org.restlet.Form
-
-Core
-
-any kind of Representations
-
-java.lang.String, java.io.InputStream, java.io.Reader,
-java.nio.ReadableByteChannel
-
-Atom
-
-APPLICATION\_ATOM
-
-org.restlet.ext.atom.Feed
-
-Atom
-
-APPLICATION\_ATOM\_PUB
-
-org.restlet.ext.atom.Service
-
-GWT
-
-APPLICATION\_JAVA\_OBJECT\_GWT
-
-an Object, org.restlet.ext.gwt.ObjectRepresentation
-
-Jackson
-
-APPLICATION\_JSON
-
-an Object
-
-JAXB
-
-APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML
-
-object supporting JAXB annotations, org.restlet.ext.JaxbRepresentation
-
-JiBX
-
-APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML
-
-JiBX bound object, org.restlet.ext.JibxRepresentation
-
-JSON
-
-APPLICATION\_JSON
-
-org.json.JSONArray, org.json.JSONObject, org.json.JSONTokener
-
-RDF
-
-TEXT\_RDF\_N3, TEXT\_RDF\_NTRIPLES, APPLICATION\_RDF\_TURTLE,
-APPLICATION\_ALL\_XML
-
-org.restlet.ext.rdf.Graph
-
-WADL
-
-APPLICATION\_WADL
-
-org.restlet.ext.wadl.ApplicationInfo
-
-XML
-
-APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML
-
-org.w3c.dom.Document, org.restlet.ext.xml.DomRepresentation,
-org.restlet.ext.xml.SaxRepresentation
-
-XStream
-
-APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML, APPLICATION\_JSON
-(requires Jettison dependency)
-
-java.lang.Object, org.restlet.ext.xstream.XStreamRepresentation
+Module | From Representations with media type | To Object
+------ | ------------------------------------ | ---------
+Core | APPLICATION\_JAVA\_OBJECT | java.lang.Object
+Core | APPLICATION\_JAVA\_OBJECT\_XML | java.lang.Object
+Core | APPLICATION\_WWW\_FORM | org.restlet.Form
+Core | any kind of Representations | java.lang.String, java.io.InputStream, java.io.Reader, java.nio.ReadableByteChannel
+Atom | APPLICATION\_ATOM | org.restlet.ext.atom.Feed
+Atom | APPLICATION\_ATOM\_PUB | org.restlet.ext.atom.Service
+GWT | APPLICATION\_JAVA\_OBJECT\_GWT | an Object, org.restlet.ext.gwt.ObjectRepresentation
+Jackson | APPLICATION\_JSON | an Object
+JAXB | APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML | object supporting JAXB annotations, org.restlet.ext.JaxbRepresentation
+JiBX | APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML | JiBX bound object, org.restlet.ext.JibxRepresentation
+JSON | APPLICATION\_JSON | org.json.JSONArray, org.json.JSONObject, org.json.JSONTokener
+RDF | TEXT\_RDF\_N3, TEXT\_RDF\_NTRIPLES, APPLICATION\_RDF\_TURTLE,APPLICATION\_ALL\_XML | org.restlet.ext.rdf.Graph
+WADL | APPLICATION\_WADL | org.restlet.ext.wadl.ApplicationInfo
+XML | APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML | org.w3c.dom.Document, org.restlet.ext.xml.DomRepresentation, org.restlet.ext.xml.SaxRepresentation
+XStream | APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML, APPLICATION\_JSON | (requires Jettison dependency) java.lang.Object, org.restlet.ext.xstream.XStreamRepresentation
 
 Conversion from objects to representations
 ------------------------------------------
 
-Module
-
-From Object
-
-To Representations with media type
-
-Core
-
-java.lang.String, java.io.File, java.io.InputStream, java.io.Reader,
-StringRepresentation, FileRepresentation, InputStreamRepresentation,
-ReaderRepresentation, org.restlet.representation.Representation.
-
-any
-
-Core
-
-org.restlet.Form
-
-APPLICATION\_WWW\_FORM
-
-Core
-
-java.io.Serializable
-
-APPLICATION\_JAVA\_OBJECT, APPLICATION\_JAVA\_OBJECT\_XML
-
-Atom
-
-org.restlet.ext.atom.Feed
-
-APPLICATION\_ATOM
-
-Atom
-
-org.restlet.ext.atom.Service
-
-APPLICATION\_ATOM\_PUB
-
-FreeMarker
-
-freemarker.template.Template
-
-any
-
-GWT
-
-an Object, org.restlet.ext.gwt.ObjectRepresentation
-
-APPLICATION\_JAVA\_OBJECT\_GWT
-
-Jackson
-
-an Object
-
-APPLICATION\_JSON
-
-JavaMail
-
-a javax.mail.Message
-
-a org.restlet.ext.javamail.MessageRepresentation
-
-JAXB
-
-object supporting JAXB annotations, org.restlet.ext.JaxbRepresentation
-
-APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML
-
-JiBX
-
-JiBX bound object, org.restlet.ext.JibxRepresentation
-
-APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML
-
-JSON
-
-org.json.JSONArray, org.json.JSONObject, org.json.JSONTokener
-
-APPLICATION\_JSON
-
-RDF
-
-org.restlet.ext.rdf.Graph
-
-TEXT\_RDF\_N3, TEXT\_RDF\_NTRIPLES, APPLICATION\_RDF\_TURTLE,
-APPLICATION\_ALL\_XML
-
-ROME
-
-com.sun.syndication..fedd.synd.SyndFeed
-
-org.restlet.ext.rome.SyndFeedRepresentation
-
-Velocity
-
-org.apache.velocity.Template
-
-any
-
-WADL
-
-org.restlet.ext.wadl.ApplicationInfo
-
-APPLICATION\_WADL
-
-XML
-
-org.w3c.dom.Document, org.restlet.ext.xml.DomRepresentation,
-org.restlet.ext.xml.SaxRepresentation
-
-APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML
-
-XStream
-
-an object
-
-APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML, APPLICATION\_JSON
-
+Module | From Object | To Representations with media type
+------ | --------- | ------------------------------------
+Core | java.lang.String, java.io.File, java.io.InputStream, java.io.Reader, StringRepresentation, FileRepresentation, InputStreamRepresentation, ReaderRepresentation, org.restlet.representation.Representation | any
+Core | org.restlet.Form | APPLICATION\_WWW\_FORM
+Core | java.io.Serializable | APPLICATION\_JAVA\_OBJECT, APPLICATION\_JAVA\_OBJECT\_XML
+Atom | org.restlet.ext.atom.Feed | APPLICATION\_ATOM
+Atom | org.restlet.ext.atom.Service | APPLICATION\_ATOM\_PUB
+FreeMarker | freemarker.template.Template | any
+GWT | an Object, org.restlet.ext.gwt.ObjectRepresentation | APPLICATION\_JAVA\_OBJECT\_GWT
+Jackson | an Object | APPLICATION\_JSON
+JavaMail | a javax.mail.Message | a org.restlet.ext.javamail.MessageRepresentation
+JAXB | object supporting JAXB annotations, org.restlet.ext.JaxbRepresentation | APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML
+JiBX | JiBX bound object, org.restlet.ext.JibxRepresentation | APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML
+JSON | org.json.JSONArray, org.json.JSONObject, org.json.JSONTokener | APPLICATION\_JSON
+RDF | org.restlet.ext.rdf.Graph | TEXT\_RDF\_N3, TEXT\_RDF\_NTRIPLES, APPLICATION\_RDF\_TURTLE, APPLICATION\_ALL\_XML
+ROME | com.sun.syndication..fedd.synd.SyndFeed | org.restlet.ext.rome.SyndFeedRepresentation
+Velocity | org.apache.velocity.Template | any
+WADL | org.restlet.ext.wadl.ApplicationInfo | APPLICATION\_WADL
+XML | org.w3c.dom.Document, org.restlet.ext.xml.DomRepresentation, org.restlet.ext.xml.SaxRepresentation | APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML
+XStream | an object | APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML, APPLICATION\_JSON
