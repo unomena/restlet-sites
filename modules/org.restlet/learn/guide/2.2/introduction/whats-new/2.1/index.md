@@ -7,7 +7,7 @@ Introduction
 In the next sections, you will get a synthesis of the major changes done
 to the Restlet Framework in version 2.1. For more details, you can read
 the [full list of
-changes](javadocs://jse/changes).
+changes](/learn/2.1/changes).
 
 The sub-sections will be written when the 2.1 RC1 version is released
 only.
