@@ -46,7 +46,7 @@ Automatic bean serialization
 Finally, Restlet 2.0 added support for annotated Restlet interfaces and
 automatic bean serialization into its GWT edition, in a way that is
 consistent with other editions. See this [first application
-example](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet/303-restlet.html "First application").
+example](../../introduction/first-steps/first-application "First application").
 With this feature, you don't need to care about formatting or parsing
 your beans in JSON or XML as the Restlet edition for GWT with
 automatically generate serializer classes for you using GWT Deferred
