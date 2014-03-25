@@ -34,20 +34,14 @@ It has been tested with the following environments:
 -   Google Web Toolkit (GWT) 2.2 and 2.3
 -   Android 2.1, 2.2, 2.3.3, 3.0
 
-GAE doesn't support HTTP chunked encoding, therefore serialized object
-can't be sent (via POST or PUT) to a GAE server. In Restlet Framework
-version 2.1 M4 we have a workaround available that buffers the HTTP
-entity to prevent chunk encoding. To use it, call the
-ClientResource\#setRequestEntityBuffering(boolean) method with a "true"
-value. Note that this workaround isn't required for the GWT edition.
+GAE doesn't support HTTP chunked encoding, therefore serialized object can't be sent (via POST or PUT) to a GAE server. In Restlet Framework version 2.1 M4 we have a workaround available that buffers the HTTP
+entity to prevent chunk encoding. To use it, call the ClientResource.setRequestEntityBuffering(boolean) method with a "true" value. Note that this workaround isn't required for the GWT edition.
 
 <a name="scenario"/>
 
 ## Scenario
 
-The server application is hosted on the Google App Engine (GAE)
-platform. For the sake of simplicity it serves only one resource named
-"contact", with the following characteristics:
+The server application is hosted on the Google App Engine (GAE) platform. For the sake of simplicity it serves only one resource named "contact", with the following characteristics:
 
 -   its relative URI is "/contacts/123"
 -   it supports the GET, PUT and DELETE methods.
