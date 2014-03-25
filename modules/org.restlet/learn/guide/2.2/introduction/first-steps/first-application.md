@@ -20,8 +20,6 @@ between a server application and several kind of clients.
 7.  [Android client](#android-client)
 8.  [Java SE client](#javase-client)
 
-<a name="requirements"/>
-
 ## Requirements
 
 It is based on the following editions of the Restlet Framework : Java SE
@@ -29,15 +27,13 @@ It is based on the following editions of the Restlet Framework : Java SE
 which must be downloaded separately from [this page](http://restlet.org/download/).
 It has been tested with the following environments:
 
--   Restlet Framework 2.1 Milestone 4
--   Google App Engine (GAE) 1.4.3, 1.5.2
--   Google Web Toolkit (GWT) 2.2 and 2.3
--   Android 2.1, 2.2, 2.3.3, 3.0
+-   Restlet Framework 2.2 RC 4
+-   Google App Engine (GAE) 1.7.0
+-   Google Web Toolkit (GWT) 2.5
+-   Android 4
 
-GAE doesn't support HTTP chunked encoding, therefore serialized object can't be sent (via POST or PUT) to a GAE server. In Restlet Framework version 2.1 M4 we have a workaround available that buffers the HTTP
+GAE doesn't support HTTP chunked encoding, therefore serialized object can't be sent (via POST or PUT) to a GAE server. Since Restlet Framework version 2.1 M4 we have a workaround available that buffers the HTTP
 entity to prevent chunk encoding. To use it, call the ClientResource.setRequestEntityBuffering(boolean) method with a "true" value. Note that this workaround isn't required for the GWT edition.
-
-<a name="scenario"/>
 
 ## Scenario
 
@@ -61,21 +57,17 @@ The "contact" object has the following attributes:
 -   Android application
 -   Java SE client
 
-<a name="archive-content"/>
-
 ## Archive content
 
 The full source code (without the required archives) is available here:
-[serializationFullSource.](/learn/guide/2.1#/304-restlet/version/default/part/AttachmentData/data/serializationFullSource.zip "serializationFullSource")
-(application/zip, 1.4 MB)
+[firstapplication.zip](/learn/archives/examples/firstApplication/${restlet-version-minor}/firstapplication.zip "firstapplication.zip")
+(application/zip, 1.0 MB)
 
 It contains the full source code of three Eclipse projects with:
 
 1.  Project that contains both the GAE server and the GWT client code
 2.  Project that contains the source code of the Android client
 3.  Project that contains the source code of the Java SE client
-
-<a name="common-classes"/>
 
 ## Common classes
 
@@ -92,14 +84,14 @@ ContactResource is an interface annotated with Restlet annotations:
 
 ~~~~ {.brush: .java}
 public interface ContactResource {
-    @Get
-    public Contact retrieve();
+    @Get
+    public Contact retrieve();
 
-    @Put
-    public void store(Contact contact);
+    @Put
+    public void store(Contact contact);
 
-    @Delete
-    public void remove();
+    @Delete
+    public void remove();
 }
 ~~~~
 
@@ -108,8 +100,6 @@ It represents the contract passed between the client and the server.
 When using collections of objects as method parameters, you need to use
 concrete classes if you intend to have GWT clients. For example use
 ArrayList\<Contact\> instead of List\<Contact\>.
-
-<a name="gae-server"/>
 
 ## GAE server
 
@@ -168,7 +158,6 @@ This resource is then exposed by the server application:
     }
 ~~~~
 
-<a name="gwt-client"/>
 GWT client
 ==========
 
@@ -230,10 +219,8 @@ contactResource.retrieve(new Result<Contact>() {
 Here is a screenshot of the GWT client page once the user has clicked on
 the GET button.
 
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  [![serialization-gwt-screenshot](Firstapplication-303_files/data_002.html "serialization-gwt-screenshot")](/learn/guide/2.1#/305-restlet/version/default/part/ImageData/data)
-  [Click to enlarge](/learn/guide/2.1#/305-restlet/version/default/part/ImageData/data)
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+![serialization gwt screenshot](/learn/archives/examples/firstApplication/${restlet-version-minor}/serialization-gwt-screenshot.png "Serialization gwt screenshot")
+
 
 In order to update the contact, simply complete your contact object and
 invoke the "store" method as specified by the proxy interface:
@@ -254,7 +241,6 @@ contactResource.store(contact, new Result<Void>() {
 });
 ~~~~
 
-<a name="android-client"/>
 Android client
 ==============
 
@@ -294,9 +280,8 @@ System.setProperty("java.net.preferIPv6Addresses", "false");
 
 Here is a screenshot of the Android user interface.
 
-### ![serialization-android-screenshot](Firstapplication-303_files/data.html "serialization-android-screenshot")
+![serialization android screenshot](/learn/archives/examples/firstApplication/${restlet-version-minor}/serialization-android-screenshot.png "Serialization android screenshot")
 
-<a name="javase-client"/>
 Java SE client
 ==============
 
