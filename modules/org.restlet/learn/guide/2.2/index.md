@@ -1,12 +1,12 @@
-[comment]: <> (do not remove these comment lines)
-[comment]: <> (This is the full table of content, describing documents, their title)
-[comment]: <> (use the following syntax :)
-[comment]: <> ([title](path/to/file.md))
-[comment]: <> (use the following syntax to exclude a document from the table of content :)
-[comment]: <> ([title](path/to/file.md) "notoc")
-
 # Restlet Framework User Guide
 ## Version 2.2
+
+This is the full table of content, describing documents, their title.
+Use the following syntax ("notoc" excludes a document from the table of content):
+```
+[title](path/to/file.md)
+[title](path/to/file.md) "notoc"
+```
 
 -   [Part I - Introduction](introduction/index.md)
     -   [Features](introduction/features.md)
