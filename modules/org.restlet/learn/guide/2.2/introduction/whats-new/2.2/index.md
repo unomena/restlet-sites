@@ -43,9 +43,8 @@ Both releases are meant to be compatible at the API level, so you should
 at most observe deprecate features while upgrading.
 
 Note that if you intend to migrate directly from 1.1 to 2.2, you should
-really consider migrating first from 1.1 to 2.0 and then from 2.0 to
-2.2. For migration instructions between 1.1 and 2.0, you can check [this
-page](../../2.0/introduction/whats-new/migration "Migration guide from version 1.1 to 2.0").
+really consider migrating first from 1.1 to 2.0. For migration instructions between 1.1 and 2.0, 
+you can check [this page](../../2.0/introduction/whats-new/migration "Migration guide from version 1.1 to 2.0").
 
 ### Replace all JAR files
 
