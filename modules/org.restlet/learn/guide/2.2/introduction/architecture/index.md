@@ -9,7 +9,7 @@ handling of calls for both client-side and server-side applications.
 This API is backed by the Restlet Engine and both are now shipped in a
 single JAR ("org.restlet.jar").
 
-![](Architecture-378_files/data_003.html)
+![](/learn/tutorial/${restlet-version-minor}/images/tutorial01)
 
 This separation between the API and the implementation is similar to the
 one between the Servlet API and Web containers like Jetty or Tomcat, or
@@ -33,7 +33,7 @@ client connectors to send requests to Web Server A and the Mail Server.
 ## Overview of a Restlet architecture
 
 In addition to supporting the standard REST software architecture
-elements as presented before, the Restlet framework also provides a set
+elements as presented before, the Restlet Framework also provides a set
 of classes that greatly simplify the hosting of multiple applications
 within a single JVM. The goal is to provide a RESTful, portable and more
 flexible alternative to the existing Servlet API. In the diagram below,
@@ -51,7 +51,7 @@ different virtual hosts. In addition, they provide important services
 like access logging, automatic decoding of request entities,
 configurable status page setting and more!
 
-![](Architecture-378_files/data_002.html)
+![](/learn/tutorial/${restlet-version-minor}/images/tutorial05)
 
 In order to illustrate these classes, let's examine a simple example.
 Here we create a Component, then add an HTTP server connector to it,
