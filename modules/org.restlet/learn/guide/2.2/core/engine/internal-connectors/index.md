@@ -3,11 +3,11 @@ Internal connectors
 
 Here is the list of connectors built-in the Restlet engine:
 
--   [Local](local "Local connectors")
--   [FILE](local "File connector")
--   [CLAP](clap "CLAP connector")
--   [HTTP](http "HTTP connector (internal)")
--   [RIAP](riap "Restlet Internal Access Protocol")
+-   [Local](local.md "Local connectors")
+-   [FILE](local.md "File connector")
+-   [CLAP](clap.md "CLAP connector")
+-   [HTTP](http.md "HTTP connector (internal)")
+-   [RIAP](riap.md "Restlet Internal Access Protocol")
 -   Zip
 
 Note that those connectors available in the engine JAR but still need to
