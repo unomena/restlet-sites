@@ -28,6 +28,10 @@
         -   [Persistence layer](introduction/architecture/persistence-layer.md) "notoc"
         -   [Presentation layer](introduction/architecture/presentation-layer.md) "notoc"
     -   [Getting started](introduction/getting-started/index.md)
+        -   [Maven](introduction/getting-started/maven.md) "notoc"
+        -   [Maven Spring](introduction/getting-started/maven-spring.md) "notoc"
+        -   [Eclipse](introduction/getting-started/eclipse.md) "notoc"
+        -   [Debugging tools](introduction/getting-started/debugging-tools.md) "notoc"
 -   [Part II - Core Restlet](core/index.md)
     -   [Mapping HTTP headers](core/http-headers-mapping.md)
     -   [Base package](core/base/index.md)

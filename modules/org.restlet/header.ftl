@@ -188,12 +188,12 @@
     <hr />
     <#if nodes[(version + "." + key + ".title")]?has_content>
         <@navigationlink navnodes key "prev" "Previous" version/>
-<div class="guide navigation middle">
+    <div class="guide navigation middle">
         <@navigationlink nodes key "up" "Up" version />
-<div class="guide navigation top">
-<a href="/learn/guide/${version}">Top</a>
-</div>
-</div>
+        <div class="guide navigation top">
+            <a href="/learn/guide/${version}">Top</a>
+        </div>
+    </div>
         <@navigationlink navnodes key "next" "Next" version />
     </#if>
 </div>
