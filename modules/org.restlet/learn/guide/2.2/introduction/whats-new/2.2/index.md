@@ -30,7 +30,7 @@ as well as [the full list of changes](http://restlet.org/learn/2.2/changes).
  - Converter exceptions are now properly transmitted
  - OSGi extension support RESTful inter-bundle communication
  - Updated over 25 dependencies (Jackson, Jetty, Apache, MongoDB, etc.)
- - Forge migration to GitHub
+ - Forge migration to GitHub and Travis CI
  - User questions migration to StackOverflow
  - Easier contribution as modules are now regular Eclipse projects (not PDE plugins)
  - Many bug fixes
