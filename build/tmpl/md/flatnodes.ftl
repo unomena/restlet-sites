@@ -1,3 +1,4 @@
+${version}.index.md
 <#if toc?has_content>
     <@loop toc.ul />
 </#if>

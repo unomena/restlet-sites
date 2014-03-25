@@ -1,3 +1,5 @@
+${version}.index.md.title=Table of content
+${version}.index.md.url=
 <#if toc?has_content>
     <@loop toc.ul />
 </#if>
