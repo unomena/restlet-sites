@@ -98,7 +98,7 @@ of all users of the technology:
 -   LGPL 2.1
 -   LGPL 3.0
 -   CDDL 1.0
--   [Commercial license](/download/legal) (optionally transferable)
+-   [Commercial license](http://restlet.com/services/subscriptions) (optionally transferable)
 
 ## More Extensions
 
