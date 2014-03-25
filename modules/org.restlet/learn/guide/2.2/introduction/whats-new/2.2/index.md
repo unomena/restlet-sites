@@ -20,6 +20,7 @@ as well as [the full list of changes](http://restlet.org/learn/2.2/changes).
  - New Swagger extension (only JAX-RS API support for now)
  - New Thymeleaf templating extension
  - New GSON extension, supporting Google’s JSON serialization library
+ - New Guice extension, supporting Google's dependency injection library
  - OAuth 2.0 final RFC (preview)
    - added client support for HTTP OAuth MAC authentication
  - HTTP PATCH method support
