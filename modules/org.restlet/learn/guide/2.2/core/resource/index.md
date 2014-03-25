@@ -1,30 +1,21 @@
-Resource package
-================
+# Resource package
 
-Introduction
-============
+## Introduction
 
-The **org.restlet.resource** package contains client and server resource
-classes.
+The **org.restlet.resource** package contains client and server resource classes.
 
-Overview
-========
+## Architecture
 
-Architecture
-------------
+Below is an overview of the architecture, including all processing layers, from the lowest TCP/IP network  layer to the highest annotated interface proxies.
 
-Here is below an overview of the architecture, including all processing
-layers, from the lowest TCP/IP network  layer to the highest annotated
-interface proxies.
-
-![](Resource%20package-328_files/data_002.html)
+![](abstraction-layers.png)
 
 Class diagram
 -------------
 
 Here is a tentative class design:
 
-![](Resource%20package-328_files/data.html)
+![](hierarchy.png)
 
 Annotations
 -----------
