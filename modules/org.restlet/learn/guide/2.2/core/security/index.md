@@ -62,7 +62,7 @@ the access to the Directory:
     return guard;
 ~~~~
 
-![](Security%20package-46_files/data.html)
+![](guard.png)
 
 Note that the authentication and authorization decisions are clearly
 considered as distinct concerns and are fully customizable via dedicated
