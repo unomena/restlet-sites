@@ -15,7 +15,7 @@ The web form is in fact the entity of the POST request sent to the
 server, thus you have access to it via request.getEntity().
  There is a shortcut which allows to have a list of all input fields:
 
-    Form form = request.getEntityAsForm();
+    Form form = new Form(request.getEntity())
     for (Parameter parameter : form) {
         System.out.print("parameter " + parameter.getName());
         System.out.println("/" + parameter.getValue());

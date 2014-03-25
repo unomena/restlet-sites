@@ -4,7 +4,7 @@ Representation package
 Introduction
 ============
 
-The **org.restlet.representation**package contains common representation
+The **org.restlet.representation** package contains common representation
 data elements. Here is a hierarchy diagram with the core Representation
 classes:
 

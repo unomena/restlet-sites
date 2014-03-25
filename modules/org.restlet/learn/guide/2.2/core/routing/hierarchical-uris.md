@@ -34,10 +34,17 @@ See the implementation code below. In a real application, you will probably want
     // Create a root router
     Router router = new Router(getContext());
 
+    // Create a simple password verifier
+    MapVerifier verifier = new MapVerifier();
+    verifier.getLocalSecrets().put("scott", "tiger".toCharArray());
+
+    // Create a Guard
     // Attach a guard to secure access to the directory
-    Guard guard = new Guard(getContext(), ChallengeScheme.HTTP_BASIC, "Restlet tutorial");
-    guard.getSecrets().put("scott", "tiger".toCharArray());
-    router.attach("/docs/", guard);
+    ChallengeAuthenticator guard = new ChallengeAuthenticator(getContext(),
+            ChallengeScheme.HTTP_BASIC, "Tutorial");
+    guard.setVerifier(verifier);
+    router.attach("/docs/", guard).setMatchingMode(
+            Template.MODE_STARTS_WITH);
 
     // Create a directory able to expose a hierarchy of files
     Directory directory = new Directory(getContext(), ROOT_URI);

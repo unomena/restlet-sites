@@ -4,7 +4,7 @@ Security package
 Introduction
 ============
 
-The **org.restlet.security**package contains classes related to
+The **org.restlet.security** package contains classes related to
 security. As there are numerous protocols (like HTTP, SMTP, etc.) that
 we want to support and as each one has various ways to authenticate
 requests (HTTP Basic, HTTP Digest, SMTP Plain, etc.), the Restlet API
@@ -80,22 +80,22 @@ let's use the client-side Restlet API:
     ChallengeResponse authentication = new ChallengeResponse(scheme, "scott", "tiger"); 
     resource.setChallengeResponse(authentication); 
       
-    // Send the HTTP GET request 
-    resource.get(); 
-      
-    if (resource.getStatus().isSuccess()) { 
-       // Output the response entity on the JVM console 
-       resource.getResponseEntity().write(System.out); 
-    } else if (resource.getStatus() 
-         .equals(Status.CLIENT_ERROR_UNAUTHORIZED)) { 
-       // Unauthorized access 
-       System.out 
-           .println("Access authorized by the server, check your credentials"); 
-    } else { 
-       // Unexpected status 
-       System.out.println("An unexpected status was returned: " 
-           + resource.getStatus()); 
-    } 
+    try {
+        // Send the HTTP GET request
+        resource.get();
+        // Output the response entity on the JVM console
+        resource.getResponseEntity().write(System.out);
+    } catch (Exception e) {
+        if (resource.getStatus().equals(Status.CLIENT_ERROR_UNAUTHORIZED)) {
+            // Unauthorized access
+            System.out
+                    .println("Access authorized by the server, check your credentials");
+        } else {
+            // Unexpected status
+            System.out.println("An unexpected status was returned: "
+                    + resource.getStatus());
+        }
+    }
 ~~~~
 
 You can change the user ID or password sent by this test client in order

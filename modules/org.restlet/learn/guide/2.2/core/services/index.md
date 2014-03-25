@@ -4,7 +4,7 @@ Service package
 Introduction
 ============
 
-The **org.restlet.service**package contains services used by
+The **org.restlet.service** package contains services used by
 applications and components. This chapter lists the services hosted by
 default by Component and Application instances.
 

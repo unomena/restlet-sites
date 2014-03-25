@@ -155,10 +155,10 @@ add the following lines of text into the \<dependencies\> section.
     <dependency>
       <groupId>org.restlet.jse</groupId>
       <artifactId>org.restlet</artifactId>
-      <version>2.2-RC1</version>
+      <version>2.2-RC4</version>
     </dependency>
     <dependency>
       <groupId>org.restlet.jse</groupId>
       <artifactId>org.restlet.ext.simple</artifactId>
-      <version>2.2-RC1</version>
+      <version>2.2-RC4</version>
     </dependency>

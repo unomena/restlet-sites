@@ -4,7 +4,7 @@ Routing package
 Introduction
 ============
 
-The **org.restlet.routing**package contains classes related to call
+The **org.restlet.routing** package contains classes related to call
 routing.
 
 Another advantage of the Restlet Framework is the built-in support for
@@ -183,69 +183,23 @@ segment. Here is the list of all available type of variables. For
 additional details, see the [Javadocs of the Variable
 class](javadocs://jse/api/org/restlet/routing/Variable.html):
 
-Value
-
-Description
-
-**TYPE\_ALL**
-
-Matches all characters.
-
-**TYPE\_ALPHA**
-
-Matches all alphabetical characters.
-
-**TYPE\_ALPHA\_DIGIT**
-
-Matches all alphabetical and digital characters.
-
-**TYPE\_COMMENT**
-
-Matches any TEXT excluding "(" and ")".
-
-**TYPE\_COMMENT\_ATTRIBUTE**
-
-Matches any TEXT inside a comment excluding ";".
-
-**TYPE\_DIGIT**
-
-Matches all digital characters.
-
-**TYPE\_TOKEN**
-
-Matches any CHAR except CTLs or separators.
-
-**TYPE\_URI\_ALL**
-
-Matches all URI characters.
-
-**TYPE\_URI\_FRAGMENT**
-
-Matches URI fragment characters.
-
-**TYPE\_URI\_PATH**
-
-Matches URI path characters (not the query or the fragment parts).
-
-**TYPE\_URI\_QUERY**
-
-Matches URI query characters.
-
-**TYPE\_URI\_SCHEME**
-
-Matches URI scheme characters.
-
-**TYPE\_URI\_SEGMENT**
-
-Matches URI segment characters.
-
-**TYPE\_URI\_UNRESERVED**
-
-Matches unreserved URI characters.
-
-**TYPE\_WORD**
-
-Matches all alphabetical and digital characters plus the underscore.
+Value | Description
+----- | -----------
+**TYPE\_ALL** | Matches all characters.
+**TYPE\_ALPHA** | Matches all alphabetical characters.
+**TYPE\_ALPHA\_DIGIT** | Matches all alphabetical and digital characters.
+**TYPE\_COMMENT** | Matches any TEXT excluding "(" and ")".
+**TYPE\_COMMENT\_ATTRIBUTE** | Matches any TEXT inside a comment excluding ";".
+**TYPE\_DIGIT** | Matches all digital characters.
+**TYPE\_TOKEN** | Matches any CHAR except CTLs or separators.
+**TYPE\_URI\_ALL** | Matches all URI characters.
+**TYPE\_URI\_FRAGMENT** | Matches URI fragment characters.
+**TYPE\_URI\_PATH** | Matches URI path characters (not the query or the fragment parts).
+**TYPE\_URI\_QUERY** | Matches URI query characters.
+**TYPE\_URI\_SCHEME** | Matches URI scheme characters.
+**TYPE\_URI\_SEGMENT** | Matches URI segment characters.
+**TYPE\_URI\_UNRESERVED** | Matches unreserved URI characters.
+**TYPE\_WORD** | Matches all alphabetical and digital characters plus the underscore.
 
 Here is the way to change the type of a variable:
 
