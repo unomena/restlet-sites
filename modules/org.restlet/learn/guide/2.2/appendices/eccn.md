@@ -112,7 +112,7 @@ contain or rely on any encryption algorithm:
     the key used and parse parameters
 
  So, only DefaultSslContextFactory is interesting here ([see source code
-here](github://org.restlet/src/org/restlet/engine/security/DefaultSslContextFactory.java?view=markup)).
+here](github://org.restlet/src/org/restlet/engine/ssl/DefaultSslContextFactory.java?view=markup)).
 
 ### Is there both object and source code for the encryption technology?
 

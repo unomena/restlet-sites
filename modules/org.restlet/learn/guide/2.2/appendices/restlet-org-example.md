@@ -4,18 +4,13 @@ Restlet.org example
 Table of contents
 =================
 
-1.  [Introduction](/learn/guide/2.1#/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Introduction)
-2.  [Imported
-    classes](/learn/guide/2.1#/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Imported%20classes)
-3.  [Declaring the Main
-    class](/learn/guide/2.1#/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Declaring%20the%20Main%20class)
-4.  [Main
-    method](/learn/guide/2.1#/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Main%20method)
-5.  [Build the
-    component](/learn/guide/2.1#/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Build%20the%20component)
-6.  [Redirection
-    application](/learn/guide/2.1#/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Redirection%20Application)
-7.  [Conclusion](/learn/guide/2.1#/13-restlet/24-restlet/182-restlet.html#dsy182-restlet_Conclusion)
+1.  [Introduction](#introduction "Introduction")
+2.  [Imported classes](#imported-classes "Imported classes")
+3.  [Declaring the Main class](#declaring-the-main-class "Declaring the Main class")
+4.  [Main method](#main-method "Main method")
+5.  [Build the component](#build-the-component "Build the component")
+6.  [Redirection application](#redirection-application "Redirection application")
+7.  [Conclusion](#conclusion "Conclusion")
 
 Introduction
 ============
@@ -47,10 +42,9 @@ org.restlet.Component. This component contains several virtual hosts and
 associated applications.
 
     /**
-     * The web component managing the Restlet and Noelios Technologies web
-     * servers.
+     * The web component managing the Restlet web servers.
      *
-     * @author Jerome Louvel (contact@noelios.com)
+     * @author Jerome Louvel (contact@restlet.com)
      */
     public class WebComponent extends Component {
           ...
@@ -222,7 +216,7 @@ is generic and reused several times.
     /**
      * Application redirecting to a target URI.
      *
-     * @author Jerome Louvel (contact@noelios.com)
+     * @author Jerome Louvel (contact@restlet.com)
      */
     public class RedirectApplication extends Application {
         /** The target URI template. */

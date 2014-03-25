@@ -5,7 +5,7 @@ Introduction
 ============
 
 Integration with
-[ROME](https://rome.dev.java.net/),
+[ROME](https://rometools.jira.com),
 supporting the formatting of syndicated feeds in various versions of the
 RSS and Atom languages.
 

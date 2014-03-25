@@ -7,7 +7,7 @@ Introduction
 This chapter presents the Restlet edition for GWT, which is a
 client-side port of the Restlet Framework to GWT 2.2 and above releases.
 See [this blog
-post](http://blog.noelios.com/2008/07/25/restlet-ported-to-gwt/)
+post](http://blog.restlet.com/2008/07/25/restlet-ported-to-gwt/)
 for the official announce.
 
 Description

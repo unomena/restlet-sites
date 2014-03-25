@@ -9,8 +9,7 @@ Java developers that want to access OData services in Java
 Author
 ======
 
-Thierry Boileau, co-founder of [Noelios
-Technologies](http://www.noelios.com/)
+Thierry Boileau, co-founder of [Restlet](http://restlet.com/)
 and core committer on the [Restlet open source
 project](http://restlet.org/).
 
@@ -26,8 +25,7 @@ Table of contents
 =================
 
 -   Introduction: getting started
--   [Code
-    generation](/learn/guide/2.1#/13-restlet/28-restlet/287-restlet/288-restlet.html#dsy288-restlet_codeGeneration)
+-   [Code generation](#code-generation "Code generation")
 -   Get the current set of Cafes and Items Get a single entity
 -   Add a new entity
 -   Update an entity
@@ -185,57 +183,20 @@ Java primitive types and classes
 Regarding the conversion of the data type, an equivalence table has been
 established as follow:
 
-EDM data type
-
-Java data type
-
-Binary
-
-byte[]
-
-Boolean
-
-boolean
-
-DateTime
-
-java.util.Date
-
-Decimal
-
-long
-
-Single
-
-float
-
-Double
-
-double
-
-Guid
-
-java.lang.String
-
-Int16
-
-short
-
-Int32
-
-int
-
-Int64
-
-long
-
-Byte
-
-byte
-
-String
-
-java.lang.String
+EDM data type | Java data type
+------------- | --------------
+Binary | byte[]
+Boolean | boolean
+DateTime | java.util.Date
+Decimal | long
+Single | float
+Double | double
+Guid | java.lang.String
+Int16 | short
+Int32 | int
+Int64 | long
+Byte | byte
+String | java.lang.String
 
 ##### Data type conversion table
 

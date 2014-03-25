@@ -10,30 +10,21 @@ Topics covered
 References
 ==========
 
--   [Blog post - Restlet supports OData, the Open Data
-    Protocol](http://blog.noelios.com/2010/03/15/restlet-supports-odata-the-open-data-protocol/)
--   [Javadocs - Restlet extension for
-    OData](javadocs://jse/ext/org/restlet/ext/odata/package-summary.html)
--   [Advanced tutorial on the OData
-    extension](/learn/guide/2.1#/13-restlet/28-restlet/287-restlet/288-restlet.html "Tutorial")
--   [OData - Protocol
-    specification](http://www.odata.org/developers/protocols)
--   [MSDN - WCF Data
-    Services](http://msdn.microsoft.com/en-us/data/bb931106.aspx)
--   [Open Government Data Initiative
-    project](http://ogdisdk.cloudapp.net/)
+-   [Blog post - Restlet supports OData, the Open Data Protocol](http://blog.restlet.com/2010/03/15/restlet-supports-odata-the-open-data-protocol/)
+-   [Javadocs - Restlet extension for OData](javadocs://jse/ext/org/restlet/ext/odata/package-summary.html)
+-   [Advanced tutorial on the OData extension](tutorial "Tutorial")
+-   [OData - Protocol specification](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)
+-   [MSDN - WCF Data Services](http://msdn.microsoft.com/en-us/data/bb931106.aspx)
+-   [Open Government Data Initiative project](http://ogdi.codeplex.com/)
 
 Table of contents
 =================
 
--   [Introduction](/learn/guide/2.1#/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_introduction)
--   [Code
-    generation](/learn/guide/2.1#/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_codeGeneration)
--   [Get the two first building
-    permits](/learn/guide/2.1#/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_get2FirstBuildingPermits)
--   [Filter the set of the building
-    permits](/learn/guide/2.1#/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_filterSetOfPermits)
--   [Conclusion](/learn/guide/2.1#/13-restlet/28-restlet/287-restlet.html#dsy287-restlet_conclusion)
+-   [Introduction](#introduction "Introduction")
+-   [Code generation](#code-generation "Code generation")
+-   [Get the two first building permits](#get-the-two-first-building-permits "Get the two first building permits")
+-   [Filter the set of the building permits](#filter-the-set-of-the-building-permits  "Filter the set of the building permits")
+-   [Conclusion](conclusion "Conclusion")
 
 Introduction
 ============

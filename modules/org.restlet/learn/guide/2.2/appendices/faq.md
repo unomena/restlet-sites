@@ -56,7 +56,7 @@ In this case, the client requires a JSON representation but the server
 resource is not able to generate it.
 
 This may also happen when you rely on the [converter
-service](/learn/guide/2.0#/13-restlet/27-restlet/331-restlet/360-restlet.html),
+service](../core/services/converter),
 and that you don't have properly configured the classpath of your
 project. Did you reference the archive of the right Restlet extension
 (such as the Jackson extension) and the archives of its library

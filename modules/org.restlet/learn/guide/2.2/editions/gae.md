@@ -9,7 +9,7 @@ PaaS (Platform as a Service) solution that offers massive and flexible
 scalability for your Web applications by hosting them on the Google
 cloud (based on Google computing infrastructure). For more details, you
 can read [our blog
-post](http://blog.noelios.com/2009/04/11/restlet-in-the-cloud-with-google-app-engine/)
+post](http://blog.restlet.com/2009/04/11/restlet-in-the-cloud-with-google-app-engine/)
 with the official announce.
 
 Due to the restrictions of the GAE, we need to provide an adaptation of
@@ -31,7 +31,7 @@ Usage example
 
 Create a new GAE project with the Eclipse plugin provided, add the
 "org.restlet.jar" and the "org.restlet.ext.servlet.jar" files from the
-[latest Restlet snapshots](http://restlet.org/downloads/unstable)(make
+[latest Restlet snapshots](http://restlet.org/download/current?distribution=zip&release=unstable&edition=gae)(make
 sure you download the edition for GAE) to your "/war/WEB-INF/lib/"
 directory and to your project build path.
 

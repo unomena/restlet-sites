@@ -231,9 +231,9 @@ In addition to the standard Restlet jar files, you also need to
 reference jar files for HTTPS. The 'Simple' HTTPS connector uses these
 jar files:
 
-lib/com.noelios.restlet.ext.simple\_3.1.jar\
+lib/org.restlet.ext.simple\_3.1.jar\
  lib/org.simpleframework\_3.1/org.simpleframework.jar
-lib/com.noelios.restlet.ext.ssl.jar\
+lib/org.restlet.ext.ssl.jar\
  lib/org.jsslutils\_0.5/org.jsslutils.jar
 
 The server code in this example will explicitly load the certificate

@@ -5,7 +5,7 @@ Enhanced Maven support
 ======================
 
 A long time ago, we offered a Maven distribution via [our own Maven
-repositories](http://restlet.org/downloads/maven)
+repositories](http://restlet.org/download/current?distribution=maven&release=stable&edition=jse)
 and regularly we try to improve its quality, for example working with
 Buckminster users to adjust our Maven metadata. However, we use a custom
 forge based on Ant as our official build system and this has been

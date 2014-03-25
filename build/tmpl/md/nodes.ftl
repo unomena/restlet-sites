@@ -7,7 +7,7 @@
 <#local key = section.a.@href?replace("/", ".") />
 <#local pathtab = section.a.@href?split("/") />
 <#if (pathtab?size > 2)>
-${version}.${key}.up=<#list pathtab as path><#if (path_index < (pathtab?size - 2))>${path}.</#if></#list>index.md
+${version}.${key}.up=${version}.<#list pathtab as path><#if (path_index < (pathtab?size - 2))>${path}.</#if></#list>index.md
 </#if>
 ${version}.${key}.title=${section.a}
 <#if section.a.@href?ends_with("index.md")>

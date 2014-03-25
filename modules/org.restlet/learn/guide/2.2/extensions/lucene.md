@@ -5,12 +5,11 @@ Introduction
 ============
 
 The goal of this extension is to provide an integration between Restlet
-and [Apache Lucene
-project](http://lucene.apache.org/)
+and [Apache Lucene project](http://lucene.apache.org/)
 and subprojects such as
 [Solr](http://lucene.apache.org/solr/)
 and
-[Tika](http://lucene.apache.org/tika/).
+[Tika](http://tika.apache.org/).
 
 Its main feature is to allow an application to have access to Lucene
 indexing capabilities in a RESTful way thanks to Solr. The other feature

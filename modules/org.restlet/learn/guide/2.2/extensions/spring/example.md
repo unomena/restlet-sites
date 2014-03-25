@@ -130,8 +130,7 @@ UserResource here.
 
 Using the
 [db4o](http://www.db4o.com/)
-[Spring
-Module](https://springmodules.dev.java.net/),
+[Spring Module](http://community.versant.com/Projects/html/projectspaces/db4o-spring.html),
 configuring the ObjectContainer is straightforward.
 
 ~~~~ {.brush: .java}

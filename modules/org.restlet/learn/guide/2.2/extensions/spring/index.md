@@ -4,15 +4,11 @@ Spring extension
 Table of contents
 =================
 
-1.  [Introduction](/learn/guide/2.1#/13-restlet/28-restlet/70-restlet.html#dsy70-restlet_Introduction)
-2.  [Integration
-    modes](/learn/guide/2.1#/13-restlet/28-restlet/70-restlet/194-restlet.html "Spring extension - Integration modes")
-3.  [Configuring Restlet
-    beans](/learn/guide/2.1#/13-restlet/28-restlet/70-restlet/195-restlet.html "Spring extension - Configuring Restlet beans")
-4.  [A complete
-    example](/learn/guide/2.1#/13-restlet/28-restlet/70-restlet/196-restlet.html "Spring extension - A complete example")
-5.  [Configuration of Restlet Resources in
-    Spring](/learn/guide/2.1#/13-restlet/28-restlet/70-restlet/197-restlet.html "Spring extension - Configuration of Restlet resources")
+1.  [Introduction](#introduction "Introduction")
+2.  [Integration modes](integration "Spring extension - Integration modes")
+3.  [Configuring Restlet beans](beans-configuration "Spring extension - Configuring Restlet beans")
+4.  [A complete example](example "Spring extension - A complete example")
+5.  [Configuration of Restlet Resources in Spring](resource-configuration "Spring extension - Configuration of Restlet resources")
 
 Introduction
 ============
@@ -26,5 +22,5 @@ and the conceptual choices of the Restlet Framework that didn't
 systematize the use of simple POJOs. 
 
 For additional details, please consult the
-[Javadocs](javadocs://jse/jee/ext/org/restlet/ext/spring/package-summary.html).
+[Javadocs](javadocs://jse/ext/org/restlet/ext/spring/package-summary.html).
 

@@ -8,16 +8,11 @@ I will start this tutorial with a sample "microblog", that's a text
 based blog demonstrating the usage of AJAX in Restlet. Before we step
 in,we should review some knowledge if you never know or forget it:
 
--   [What's
-    RESTful](http://www.xfront.com/REST-Web-Services.html)[?](http://www.xfront.com/REST-Web-Services.html)
--   [What's
-    Restlet?](/learn/guide/2.1#/13-restlet/21-restlet/22-restlet.html "Features")
--   [How to use
-    Restlet?](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet.html "First steps")
--   [How to use db4o to simplify
-    persistence?](http://db4o.com/about/productinformation/resources/db4o-6.3-tutorial-java.pdf)
--   [How to use JSON in
-    Prototype.js?](http://www.prototypejs.org/learn/json)
+-   [What's RESTful](http://www.xfront.com/REST-Web-Services.html)[?](http://www.xfront.com/REST-Web-Services.html)
+-   [What's Restlet?](../introduction/features "Features")
+-   [How to use Restlet?](../introduction/first-steps/ "First steps")
+-   [How to use db4o to simplify persistence?](http://db4o.com/about/productinformation/resources/db4o-6.3-tutorial-java.pdf)
+-   [How to use JSON in Prototype.js?](http://www.prototypejs.org/learn/json)
 
 This example needs to be updated for Restlet Framework 2.1. Help welcome
 
@@ -31,7 +26,7 @@ Demo construction
 -   Server handle process:
     [Application](javadocs://jse/api/org/restlet/Application.html)
     dispatches request to
-    [Router](javadocs://jse/api/org/restlet/Router.html),
+    [Router](javadocs://jse/api/org/restlet/routing/Router.html),
     Router finds corresponding reource,
     [Resource](javadocs://jse/api/org/restlet/resource/Resource.html)
     handles request and returns representation.
@@ -623,7 +618,7 @@ Thanks
 Links
 -----
 
--   [Router](javadocs://jse/api/org/restlet/Router.html)
+-   [Router](javadocs://jse/api/org/restlet/routing/Router.html)
 -   [Application](javadocs://jse/api/org/restlet/Application.html)
 -   [Resource](javadocs://jse/api/org/restlet/resource/Resource.html)
 -   [db4o](http://www.db4o.com/)

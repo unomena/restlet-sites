@@ -86,7 +86,7 @@ OData extension
 ===============
 
 A new extension for [Microsoft ADO.NET Data
-Services](http://blog.noelios.com/2009/09/28/restlet-bridges-ado-net-data-services-and-java/)
+Services](http://blog.restlet.com/2009/09/28/restlet-bridges-ado-net-data-services-and-java/)
 technology (previously known as “project Astoria”) was added, later
 renamed to WCF Data Services then OData.
 

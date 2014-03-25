@@ -176,11 +176,8 @@
 				<arg value="${temp}/toc/userguide.@{version}.tmpl" />
 			</exec>
 			<!-- complete properties with this version''s set of properties, before we cope with the wwhole page decoration -->
-			<concat append="true" destfile="${temp}/toc/tocnav.properties">
-				<filelist files="${temp}/toc/tocnav.@{version}.properties" />
-			</concat>
 			<concat append="true" destfile="${temp}/toc/toc.properties">
-				<filelist files="${temp}/toc/toc.@{version}.properties" />
+				<filelist files="${temp}/toc/toc.@{version}.properties,${temp}/toc/tocnav.@{version}.properties" />
 			</concat>
 		</sequential>
 	</macrodef>
@@ -290,7 +287,6 @@
 				language: en
 				ant: antProperties()
                 nodes: properties(${temp}/toc/toc.properties)
-                navnodes: properties(${temp}/toc/tocnav.properties)
 			</data>
 			<borders>
 				<![CDATA[border('<#include "/header.ftl"/>', '<#include "/footer.ftl"/>', **/*.html)]]></borders>

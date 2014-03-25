@@ -44,7 +44,7 @@ and mapping REST resources, it also provides useful facilities like the
 Redirector, which can be used to gateway requests to other servers,
 easily working around the single-source limitations of the AJAX
 programming model.  The Restlet server-side library even works in GWT
-Hosted Mode using the Noelios GWT Extension, so your entire application
+Hosted Mode using the Restlet Framework GWT Extension, so your entire application
 can be readily debugged.
 
 Integration with standalone Restlet connectors

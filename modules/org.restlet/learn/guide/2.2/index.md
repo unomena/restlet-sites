@@ -110,11 +110,11 @@
     -   [JSON](extensions/json.md)
     -   [jSSLutils](extensions/jsslutils.md)
     -   [Lucene](extensions/lucene.md)
-    -   [Net](extensions/net.md)
     -   [OAuth](extensions/oauth.md)
     -   [OData](extensions/odata/index.md)
         -   [Tutorial](extensions/odata/tutorial.md) "notoc"
     -   [OpenID](extensions/openid.md)
+    -   [OSGi](extensions/osgi.md)
     -   [RDF](extensions/rdf.md)
     -   [ROME](extensions/rome.md)
     -   [SDC](extensions/sdc.md)
@@ -128,6 +128,7 @@
         -   [Integration](extensions/spring/integration.md) "notoc"
         -   [Resources configuration](extensions/spring/resources-configuration.md) "notoc"
     -   [Swagger](extensions/swagger.md)
+    -   [Thymeleaf](extensions/thymeleaf.md)
     -   [Velocity](extensions/velocity.md)
     -   [WADL](extensions/wadl.md)
     -   [XDB](extensions/xdb.md)
