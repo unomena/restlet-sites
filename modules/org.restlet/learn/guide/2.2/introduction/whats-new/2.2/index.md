@@ -14,7 +14,7 @@ as well as [the full list of changes](http://restlet.org/learn/2.2/changes).
  - Apache License 2.0 option
  - Jackson extension now supports JSON, JSON binary (Smile), XML, YAML and CSV formats
  - Internal HTTP client and server now based on stable JDK Net classes
-   - reduced size of org.restlet.jar of about 20Kb
+   - reduced size of org.restlet.jar by about 45Kb
    - best default HTTP client on Android
    - moved previous internal connector to new NIO extension (preview)
  - New Swagger extension (only JAX-RS API support for now)
@@ -44,7 +44,7 @@ at most observe deprecate features while upgrading.
 Note that if you intend to migrate directly from 1.1 to 2.2, you should
 really consider migrating first from 1.1 to 2.0 and then from 2.0 to
 2.2. For migration instructions between 1.1 and 2.0, you can check [this
-page](../../../2.0/introduction/whats-new/migration "Migration guide from version 1.1 to 2.0").
+page](../../2.0/introduction/whats-new/migration "Migration guide from version 1.1 to 2.0").
 
 ### Replace all JAR files
 
