@@ -1,8 +1,6 @@
-Connectors
-==========
+# Connectors
 
-Introduction
-============
+## Introduction
 
 A connector in the REST architecture style is a software element that
 manages network communication for a component, typically by implementing
@@ -17,16 +15,14 @@ document will describe how to add a connector to your application, how
 to configure it and will give you the list of available server and
 client connectors.
 
-Add a connector to your application
-===================================
+## Add a connector to your application
 
 All connectors and their dependencies are shipped with the Restlet
 distribution by the way of jar files. Adding a connector to your
 application is as simple as adding the archives of the chosen connector
 and its dependencies to the classpath.
 
-Configuration
-=============
+## Configuration
 
 Each connector looks for its configuration from its context. The latter
 provides a list of modifiable parameters, which is the right place to
@@ -41,8 +37,7 @@ are the [commons
 parameters](javadocs://jse/engine/org/restlet/engine/connector/BaseHelper.html)
 dedicated to internal connectors.
 
-Server connectors
------------------
+### Server connectors
 
 Here are the [commons
 parameters](javadocs://jse/engine/org/restlet/engine/adapter/HttpServerHelper.html)
@@ -61,15 +56,12 @@ component's server connector.
     server.getContext().getParameters().add("useForwardedForHeader", "true");
     c.start();
 
-Client connectors
------------------
+### Client connectors
 
-Here are the [commons
-parameters](javadocs://jse/engine/org/restlet/engine/adapter/HttpClientHelper.html)
+Here are the [commons parameters](javadocs://jse/engine/org/restlet/engine/adapter/HttpClientHelper.html)
 dedicated to non-internal HTTP client connectors.
 
-Here are the [commons
-parameters](javadocs://jse/engine/org/restlet/engine/connector/ClientConnectionHelper.html)
+Here are the [commons parameters](javadocs://jse/engine/org/restlet/engine/connector/ClientConnectionHelper.html)
 dedicated to internal HTTP client connectors.
 
 Here is a sample code showing how to set such a parameter.
@@ -100,11 +92,9 @@ just set it:
     ClientResource cr = new ClientResource("http://www.example.com/");
     cr.setNext(client);
 
-List of available connectors
-============================
+## List of available connectors
 
-Server connectors
------------------
+### Server connectors
 
 Extension | Version | Protocols | Asynchronous | Comment
 --------- | ------- | --------- | ------------ | ---------
@@ -113,11 +103,10 @@ Extension | Version | Protocols | Asynchronous | Comment
 [Simple](/learn/guide/2.1#/13-restlet/28-restlet/82-restlet.html "Simple Framework extension") | 4.1 | HTTP, HTTPS | No | Recommended for lightweight deployments
 [Servlet](/learn/guide/2.1#/13-restlet/28-restlet/81-restlet.html "Servlet extension") | 2.5 | HTTP, HTTPS, AJP | No | Recommended for deployments inside Java EE servers
 
-Client connectors
------------------
+### Client connectors
 
 Extension | Version | Protocols | Asynchronous | Proxy | Comment
---------- | ------- | --------- | ------------ | ---------
+--------- | ------- | --------- | ------------ | ----- | -------
 [Internal](/learn/guide/2.1#/13-restlet/27-restlet/48-restlet/86-restlet.html "Internal connectors") | 2.0 | HTTP, CLAP, FILE, RIAP | Yes | No | Stable but HTTP connectors are recommended for development only
 [Apache HTTP Client](/learn/guide/2.1#/13-restlet/28-restlet/75-restlet.html "Apache HTTP Client extension") | 4.0 | HTTP, HTTPS | No | Yes | Recommended for robust and scalable deployments
 [Lucene Solr](/learn/guide/2.1#/13-restlet/28-restlet/229-restlet.html "Lucene extension") | 2.9 | SOLR | No | No | Stable
