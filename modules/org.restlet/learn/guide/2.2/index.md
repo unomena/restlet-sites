@@ -5,6 +5,9 @@
 [comment]: <> (use the following syntax to exclude a document from the table of content :)
 [comment]: <> ([title](path/to/file.md) "notoc")
 
+# Restlet Framework User Guide
+## Version 2.2
+
 -   [Part I - Introduction](introduction/index.md)
     -   [Features](introduction/features.md)
     -   [What's new](introduction/whats-new/index.md)

@@ -2,41 +2,26 @@
 
 ## Introduction
 
-Restlet is a very flexible framework that is suitable for most Web
-application developments.
+Restlet Framework is mature and scalable, based on a small core and many optional extensions, making it suitable for any kind of web API development, including cross-channel web sites and applications.
 
 ## Client and server side
 
-Thanks for its unique design, it can be used for both client-side and
-server-side applications and of course for applications that act as both
-clients and servers. With the availability of a port for the GWT
-platform, it can also works in your favorite Web browser!
+Thanks to its unique design, it can be used on both client-side and server-side, or even both sides at the same time like for composite web APIs and mashups. With the availability of a port to Google Web Toolkit, it can even be used in your favorite Web browser!
 
 ## Servlet compatible
 
-Restlet was an attempt to build a better Servlet API, more inline with
-the true Web architecture (REST) and standards (HTTP, URI). Therefore
-the Restlet API has no dependency on the Servlet API, it only depends on
-the Java SE. However, it is perfectly possible to deploy a Restlet
-application into JavaEE application servers and Servlet containers. This is
+Restlet was an attempt to build a better Servlet API, aligned with the true Web architecture (REST) and standards (HTTP, URI). Therefore the Restlet API has no dependency on the Servlet API, it only depends on the Java SE. However, it is perfectly possible to deploy a Restlet application into Java EE application servers or just Servlet containers. This is
 possible using an adapter Servlet provided as an extension.
 
 ## Complete Web server
 
-Contrary to the Servlet API, the Restlet API gives you an extensive
-control on the URI mapping and on the virtual hosts configuration. It
-includes a powerful Directory class to server static files in a
-way comparable to what a Apache Web Server would do. For example, we run
-our Restlet.org web site directly with Restlet!
+Contrary to the Servlet API, the Restlet API gives you extensive control on the URI mapping and on the virtual hosts configuration. It includes a powerful Directory class to server static files in a way similar to Apache Web Server. For example, our Restlet.org web site is directly powered by Restlet Framework on a regular JVM!
 
-Here is a more exhaustive list of features provided by the internal Web
-server:
-- Static file serving similar to Apache HTTP Server, with metadata
-  association based on file extensions.
+Here is a more complete list of features provided by the internal Web server:
+- Static file serving similar to Apache HTTP Server, with metadata association based on file extensions.
 - Transparent content negotiation based on client preferences.
 - Conditional requests automatically supported for resources.
-- Remote edition of files based on PUT and DELETE methods (aka
-  mini-WebDAV mode).
+- Remote edition of files based on PUT and DELETE methods (aka mini-WebDAV mode).
 - Decoder service transparently decodes compressed or encoded input
   representations. This service is transparent for Restlet
   applications.
