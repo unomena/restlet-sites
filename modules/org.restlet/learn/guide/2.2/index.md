@@ -3,70 +3,85 @@
 [comment]: <> (use the following syntax :)
 [comment]: <> ([title](path/to/file.md))
 [comment]: <> (use the following syntax to exclude a document from the table of content :)
-[comment]: <> ([title](path/to/file.md "notoc"))
+[comment]: <> ([title](path/to/file.md) "notoc")
 
 -   [Part I - Introduction](introduction/index.md)
     -   [Features](introduction/features.md)
     -   [What's new](introduction/whats-new/index.md)
+        -   [1.1](introduction/whats-new/1.1/index.md) "notoc"
+            -   [extensions](introduction/whats-new/1.1/extensions.md) "notoc"
+            -   [migration](introduction/whats-new/1.1/migration.md) "notoc"
+        -   [2.0](introduction/whats-new/2.0/index.md) "notoc"
+            -   [api](introduction/whats-new/2.0/api.md) "notoc"
+            -   [editions](introduction/whats-new/2.0/editions.md) "notoc"
+            -   [engine](introduction/whats-new/2.0/engine.md) "notoc"
+            -   [extensions](introduction/whats-new/2.0/extensions.md) "notoc"
+            -   [migration](introduction/whats-new/2.0/migration.md) "notoc"
+            -   [misc](introduction/whats-new/2.0/misc.md) "notoc"
+        -   [2.1](introduction/whats-new/2.1/index.md) "notoc"
+        -   [2.2](introduction/whats-new/2.2/index.md) "notoc"
     -   [First steps](introduction/first-steps/index.md)
+        -   [First client](introduction/first-steps/first-client.md) "notoc"
+        -   [First server](introduction/first-steps/first-server.md) "notoc"
+        -   [First application](introduction/first-steps/first-application.md) "notoc"
     -   [Architecture](introduction/architecture/index.md)
-        -   [Persistence layer](introduction/architecture/persistence-layer.md "notoc")
-        -   [Presentation layer](introduction/architecture/presentation-layer.md "notoc")
+        -   [Persistence layer](introduction/architecture/persistence-layer.md) "notoc"
+        -   [Presentation layer](introduction/architecture/presentation-layer.md) "notoc"
     -   [Getting started](introduction/getting-started/index.md)
 -   [Part II - Core Restlet](core/index.md)
     -   [Mapping HTTP headers](core/http-headers-mapping.md)
     -   [Base package](core/base/index.md)
-        -   [Connectors](core/base/connectors/index.md "notoc")
+        -   [Connectors](core/base/connectors/index.md) "notoc"
     -   [Data package](core/data/index.md)
-        -   [Parameters](core/data/parameters.md "notoc")
+        -   [Parameters](core/data/parameters.md) "notoc"
     -   [Representation package](core/representation.md)
     -   [Resource package](core/resource/index.md)
-        -   [Client resource](core/resource/client.md "notoc")
-        -   [Server resource](core/resource/server.md "notoc")
+        -   [Client resource](core/resource/client.md) "notoc"
+        -   [Server resource](core/resource/server.md) "notoc"
     -   [Routing package](core/routing/index.md)
-        -   [Attributes](core/routing/attributes.md "notoc")
-        -   [Hierarchical URIs](core/routing/hierarchical-uris.md "notoc")
-        -   [Redirection](core/routing/redirection.md "notoc")
-        -   [Static files](core/routing/static-files.md "notoc")
+        -   [Attributes](core/routing/attributes.md) "notoc"
+        -   [Hierarchical URIs](core/routing/hierarchical-uris.md) "notoc"
+        -   [Redirection](core/routing/redirection.md) "notoc"
+        -   [Static files](core/routing/static-files.md) "notoc"
     -   [Security package](core/security/index.md)
-        -   [Authentication](core/security/authentication.md "notoc")
-        -   [Authorization](core/security/authorization.md "notoc")
-        -   [HTTPS](core/security/https.md "notoc")
-        -   [Pluggable Authentication](core/security/pluggable-authenticators.md "notoc")
+        -   [Authentication](core/security/authentication.md) "notoc"
+        -   [Authorization](core/security/authorization.md) "notoc"
+        -   [HTTPS](core/security/https.md) "notoc"
+        -   [Pluggable Authentication](core/security/pluggable-authenticators.md) "notoc"
     -   [Service package](core/services/index.md)
-        -   [Connector service](core/services/connector.md "notoc")
-        -   [Converter service](core/services/converter.md "notoc")
-        -   [Decoder service](core/services/decoder.md "notoc")
-        -   [Logging service](core/services/log.md "notoc")
-        -   [Metadata service](core/services/metadata.md "notoc")
-        -   [Range service](core/services/range.md "notoc")
-        -   [Status service](core/services/status.md "notoc")
-        -   [Task service](core/services/task.md "notoc")
-        -   [Tunnel service](core/services/tunnel.md "notoc")
+        -   [Connector service](core/services/connector.md) "notoc"
+        -   [Converter service](core/services/converter.md) "notoc"
+        -   [Decoder service](core/services/decoder.md) "notoc"
+        -   [Logging service](core/services/log.md) "notoc"
+        -   [Metadata service](core/services/metadata.md) "notoc"
+        -   [Range service](core/services/range.md) "notoc"
+        -   [Status service](core/services/status.md) "notoc"
+        -   [Task service](core/services/task.md) "notoc"
+        -   [Tunnel service](core/services/tunnel.md) "notoc"
     -   [Util package](core/util.md)
     -   [Engine](core/engine/index.md)
-        -   [Internal connectors](core/engine/internal-connectors/index.md "notoc")
-            -   [CLAP connector](core/engine/internal-connectors/clap.md "notoc")
-            -   [HTTP connector](core/engine/internal-connectors/http.md "notoc")
-            -   [LOCAL connector](core/engine/internal-connectors/local.md "notoc")
-            -   [RIAP connector](core/engine/internal-connectors/riap.md "notoc")
+        -   [Internal connectors](core/engine/internal-connectors/index.md) "notoc"
+            -   [CLAP connector](core/engine/internal-connectors/clap.md) "notoc"
+            -   [HTTP connector](core/engine/internal-connectors/http.md) "notoc"
+            -   [LOCAL connector](core/engine/internal-connectors/local.md) "notoc"
+            -   [RIAP connector](core/engine/internal-connectors/riap.md) "notoc"
 -   [Part III - Restlet Editions](editions/index.md)
     -   [Android](editions/android/index.md)
-        -   [Sample](editions/android/sample.md "notoc")
+        -   [Sample](editions/android/sample.md) "notoc"
     -   [Google App Engine](editions/gae.md)
     -   [Google Web Tookit](editions/gwt/index.md)
-        -   [Architecture](editions/gwt/architecture.md "notoc")
-        -   [Deployment](editions/gwt/deployment.md "notoc")
-        -   [Examples](editions/gwt/examples.md "notoc")
-        -   [JSON](editions/gwt/json.md "notoc")
-        -   [Server code invocation](editions/gwt/server-code-invocation.md "notoc")
-        -   [Setup](editions/gwt/setup.md "notoc")
-        -   [Tips](editions/gwt/tips.md "notoc")
-        -   [XML](editions/gwt/xml.md "notoc")
+        -   [Architecture](editions/gwt/architecture.md) "notoc"
+        -   [Deployment](editions/gwt/deployment.md) "notoc"
+        -   [Examples](editions/gwt/examples.md) "notoc"
+        -   [JSON](editions/gwt/json.md) "notoc"
+        -   [Server code invocation](editions/gwt/server-code-invocation.md) "notoc"
+        -   [Setup](editions/gwt/setup.md) "notoc"
+        -   [Tips](editions/gwt/tips.md) "notoc"
+        -   [XML](editions/gwt/xml.md) "notoc"
     -   [Java EE](editions/jee/index.md)
-        -   [Client connectors](editions/jee/client-connectors.md "notoc")
+        -   [Client connectors](editions/jee/client-connectors.md) "notoc"
     -   [Java SE](editions/jse/index.md)
-        -   [Logging](editions/jse/logging.md "notoc")
+        -   [Logging](editions/jse/logging.md) "notoc"
     -   [OSGi](editions/osgi.md)
 -   [Part IV - Restlet Extensions](extensions/index.md)
     -   [Editions matrix](extensions/editions-matrix.md)
@@ -86,7 +101,7 @@
     -   [JAX-RS](extensions/jaxrs.md)
     -   [JDBC](extensions/jdbc.md)
     -   [Jetty](extensions/jetty/index.md)
-        -   [AJP](extensions/jetty/ajp.md "notoc")
+        -   [AJP](extensions/jetty/ajp.md) "notoc"
     -   [JiBX](extensions/jibx.md)
     -   [JSON](extensions/json.md)
     -   [jSSLutils](extensions/jsslutils.md)
@@ -94,7 +109,7 @@
     -   [Net](extensions/net.md)
     -   [OAuth](extensions/oauth.md)
     -   [OData](extensions/odata/index.md)
-        -   [Tutorial](extensions/odata/tutorial.md "notoc")
+        -   [Tutorial](extensions/odata/tutorial.md) "notoc"
     -   [OpenID](extensions/openid.md)
     -   [RDF](extensions/rdf.md)
     -   [ROME](extensions/rome.md)
@@ -104,10 +119,10 @@
     -   [SIP](extensions/sip.md)
     -   [SLF4J](extensions/slf4j.md)
     -   [Spring](extensions/spring/index.md)
-        -   [Beans configuration](extensions/spring/beans-configuration.md "notoc")
-        -   [Example](extensions/spring/example.md "notoc")
-        -   [Integration](extensions/spring/integration.md "notoc")
-        -   [Resources configuration](extensions/spring/resources-configuration.md "notoc")
+        -   [Beans configuration](extensions/spring/beans-configuration.md) "notoc"
+        -   [Example](extensions/spring/example.md) "notoc"
+        -   [Integration](extensions/spring/integration.md) "notoc"
+        -   [Resources configuration](extensions/spring/resources-configuration.md) "notoc"
     -   [Swagger](extensions/swagger.md)
     -   [Velocity](extensions/velocity.md)
     -   [WADL](extensions/wadl.md)

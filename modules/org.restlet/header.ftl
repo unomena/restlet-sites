@@ -184,8 +184,10 @@
 <#macro navigationbar sourcedirectory filepath version>
     <#local key = (sourcedirectory?substring(16) + filepath?substring(0, (filepath?length) -5) + ".md")?replace("/", ".") />
 <div class="guide navigation bar">
+    <div class="clearBoth"></div>
+    <hr />
     <#if nodes[(version + "." + key + ".title")]?has_content>
-        <@navigationlink navnodes key "prev" "Prev" version/>
+        <@navigationlink navnodes key "prev" "Previous" version/>
 <div class="guide navigation middle">
         <@navigationlink nodes key "up" "Up" version />
 <div class="guide navigation top">
@@ -206,7 +208,7 @@
 <div><a href="<#list tab as segment><#if segment_has_next>../</#if></#list>${target}">${label}</a></div>
 <div>${nodes[map[version + "."  + key + "." + property] + ".title"]}</div>
         <#else>
-${label}
+&nbsp;
         </#if>
 </div>
 </#macro>
