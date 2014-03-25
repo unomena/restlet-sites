@@ -107,15 +107,13 @@ We propose to host the server application on the GAE platform. The
 server project relies on the following JAR files:
 
 -   org.restlet.jar: core archive (*GAE edition*)
--   org.restlet.ext.gwt.jar: GWT server-side extension to convert Java
-    objects to a GWT-specific serialization format (*GAE edition*)
--   org.restlet.ext.servlet.jar: Servlet extension to deploy the Restlet
-    application in GAE (*GAE edition*)
--   org.restlet.ext.jackson.jar: Jackson extension used to generate JSON
-    representations of the contact resource (*GAE edition*)
--   org.codehaus.jackson.core.jar, org.codehaus.jackson.mapper.jar:
-    archives of the Jackson libraries required by the Jackson extension,
-    and available in the GAE edition.
+-   org.restlet.ext.gwt.jar: GWT server-side extension to convert Java objects to a GWT-specific serialization format (*GAE edition*)
+-   org.restlet.ext.gae.jar: GAE server-side extension (*GAE edition*)
+-   org.restlet.ext.servlet.jar: Servlet extension to deploy the Restlet application in GAE (*GAE edition*)
+-   org.restlet.ext.jackson.jar: Jackson extension used to generate JSON representations of the contact resource (*GAE edition*)
+-   com.fasterxml.jackson.core.jar, com.fasterxml.jackson.databind.jar, com.fasterxml.jackson.annotations.jar: archives of the Jackson libraries required by the Jackson extension, and available in the GAE edition.
+
+See also the "readme.txt" file located in the sources file. It list also all necessary binaries taken from the GAE platform.
 
 The server-side resource implements the annotated interface.
 
