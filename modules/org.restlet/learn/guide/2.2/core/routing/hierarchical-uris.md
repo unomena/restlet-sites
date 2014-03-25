@@ -26,7 +26,7 @@ the request URI will received the call and be able to invoke its
 attached Restlet. At the same time, the request's attributes map will be
 automatically updated with the value of the URI template variables!
 
-![](Routers%20and%20hierarchical%20URIs-376_files/data.html) \
+![](hierarchy.png) \
  See the implementation code below. In a real application, you will
 probably want to create separate subclasses instead of the anonymous
 ones we use here:
