@@ -16,5 +16,5 @@ The support of Swagger must be completed for 2.2.0:
 
 
 For additional details, please consult the
-[Javadocs](http://restlet.org/learn/javadocs/${restlet-version-minor}/jse/ext/org/restlet/ext/swagger/package-summary.html).
+[Javadocs](javadocs://jse/ext/org/restlet/ext/swagger/package-summary.html).
 
