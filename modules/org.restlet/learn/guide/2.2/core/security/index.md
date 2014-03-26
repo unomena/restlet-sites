@@ -93,7 +93,7 @@ let's use the client-side Restlet API:
             if (resource.getStatus().equals(Status.CLIENT_ERROR_UNAUTHORIZED)) {
                 // Unauthorized access
                 System.out
-                        .println("Access authorized by the server, check your credentials");
+                        .println("Access unauthorized by the server, check your credentials");
             } else {
                 // Unexpected status
                 System.out.println("An unexpected status was returned: "

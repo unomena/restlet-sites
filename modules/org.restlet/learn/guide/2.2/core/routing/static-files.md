@@ -36,7 +36,7 @@ simple it is to use it:
 
 In order to run this example, you need to specify a valid value for
 ROOT\_URI, In this case, it is set to
-"file:///c:/restlet/docs/api/".Note that no additional configuration is
+"file:///c:/path/to/root/".Note that no additional configuration is
 needed. If you want to customize the mapping between file extensions and
 metadata (media type, language or encoding) or if you want to specify a
 different index name, you can use the Application's

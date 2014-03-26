@@ -239,73 +239,75 @@ lib/org.restlet.ext.ssl.jar\
 The server code in this example will explicitly load the certificate
 from the keystore file (serverX.jks):
 
-package com.jpc.samples;
+    package com.jpc.samples;
 
-import org.restlet.Component;\
- import org.restlet.Server;\
- import org.restlet.data.Parameter;\
- import org.restlet.data.Protocol;\
- import org.restlet.util.Series;
+    import org.restlet.Component;
+    import org.restlet.Server;
+    import org.restlet.data.Parameter;
+    import org.restlet.data.Protocol;
+    import org.restlet.util.Series;
 
-public class SampleServer { public static void main(String[] args)
-throws Exception {\
- // Create a new Component.\
- Component component = new Component();
+    public class SampleServer { 
+        public static void main(String[] args)
+            throws Exception {
+            // Create a new Component.
+            Component component = new Component();
+    
+            // Add a new HTTPS server listening on port 8183
+            Server server = component.getServers().add(Protocol.HTTPS, 8183);  
+            Series\<Parameter\> parameters = server.getContext().getParameters();
+            parameters.add("sslContextFactory",
+            "org.restlet.ext.ssl.PkixSslContextFactory");
+            parameters.add("keystorePath", "\<path\>serverX.jks");
+            parameters.add("keystorePassword", "password");
+            parameters.add("keyPassword", "password");
+            parameters.add("keystoreType", "JKS");
 
-// Add a new HTTPS server listening on port 8183\
- Server server = component.getServers().add(Protocol.HTTPS, 8183);\
- Series\<Parameter\> parameters = server.getContext().getParameters();\
- parameters.add("sslContextFactory",
-"org.restlet.ext.ssl.PkixSslContextFactory");\
- parameters.add("keystorePath", "\<path\>serverX.jks");\
- parameters.add("keystorePassword", "password");\
- parameters.add("keyPassword", "password");\
- parameters.add("keystoreType", "JKS");
+            // Attach the sample application.
+            component.getDefaultHost().attach("", new SampleApplication());
 
-// Attach the sample application.\
- component.getDefaultHost().attach("", new SampleApplication());
-
-// Start the component.\
- component.start();\
- }\
- }
+            // Start the component.
+            component.start();
+        }
+    }
 
 Step 5: Sample Restlet Client Code
 ----------------------------------
 
-package com.jpc.samples;\
- import java.io.IOException;\
- import org.restlet.Client;\
- import org.restlet.data.Form;\
- import org.restlet.data.Protocol;\
- import org.restlet.data.Reference;\
- import org.restlet.data.Response;\
- import org.restlet.resource.Representation;
+    package com.jpc.samples;
 
-public class SampleClient {
+    import java.io.IOException;
+    import org.restlet.Client;\
+    import org.restlet.data.Form;\
+    import org.restlet.data.Protocol;\
+    import org.restlet.data.Reference;\
+    import org.restlet.data.Response;\
+    import org.restlet.resource.Representation;
 
-public static void main(String[] args) throws IOException {\
- // Define our Restlet HTTPS client.\
- Client client = new Client(Protocol.HTTPS);
+    public class SampleClient {
 
-// The URI of the resource "list of items".\
- Reference samplesUri = new Reference("https://serverX:8183/sample";);
+        public static void main(String[] args) throws IOException {
+            // Define our Restlet HTTPS client.
+            Client client = new Client(Protocol.HTTPS);
 
-// Create 9 new items\
- for (int i = 1; i \< 10; i++)\
- {\
- Sample sample = new Sample(Integer.toString(i), "sample " + i, "this is
-sample " + i + ".");\
- Reference sampleUri = createSample(sample, client, samplesUri);\
- if (sampleUri != null) {\
- // Prints the representation of the newly created resource.\
- get(client, sampleUri);\
- }\
- }
+            // The URI of the resource "list of items".
+            Reference samplesUri = new Reference("https://serverX:8183/sample";);
 
-// Prints the list of registered items.\
- get(client, samplesUri);\
- }
+            // Create 9 new items
+            for (int i = 1; i \< 10; i++) {
+                Sample sample = new Sample(Integer.toString(i), "sample " + i, "this is
+                    sample " + i + ".");\
+                Reference sampleUri = createSample(sample, client, samplesUri);
+                if (sampleUri != null) {\
+                    // Prints the representation of the newly created resource
+                    get(client, sampleUri);
+                }
+            }
+
+            // Prints the list of registered items
+            get(client, samplesUri);
+        }
+    }
 
 ...other code not shown (similar to original HTTP Restlet example)...
 

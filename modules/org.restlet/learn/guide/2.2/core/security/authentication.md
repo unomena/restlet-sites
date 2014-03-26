@@ -57,7 +57,10 @@ created, it is given the list of known (login/password) pairs via the
 
     guard.setNext(restlet);
 
+    Component component = new Component();  
+    component.getServers().add(Protocol.HTTP, 8182);  
     component.getDefaultHost().attachDefault(guard);
+    component.start();
 
 ### Customization
 
@@ -98,15 +101,20 @@ Description of the client side
 The credentials are transmitted to the request via a ChallengeResponse
 object as follow:
 
-    ClientResource resource = new ClientResource("http://localhost:8182/");
+    public static void main(String args[]) {
+        ClientResource resource = new ClientResource("http://localhost:8182/");
 
-    // Send an authenticated request using the Basic authentication scheme.
-    resource.setChallengeResponse(ChallengeScheme.HTTP_BASIC, "login", "secret");
+        // Send an authenticated request using the Basic authentication scheme.
+        resource.setChallengeResponse(ChallengeScheme.HTTP_BASIC, "login", "secret");
 
-    // Send the request
-    resource.get();
-    // Should be 200
-    System.out.println(resource.getStatus());
+        // Send the request
+        resource.get();
+        // Should be 200
+        System.out.println(resource.getStatus());
+    }
+
+If you try to access http://localhost:8182/ via a web browser, a window will 
+appear to type in your credentials.
 
 HTTP Digest authentication
 ==========================
