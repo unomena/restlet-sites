@@ -315,7 +315,7 @@ should see some logging similar to what is displayed below
 
 You can also deploy the web service to a standalone web server such as
 [Apache Tomcat](http://tomcat.apache.org/)
-using the [Tomcat Maven Plugin](http://mojo.codehaus.org/tomcat-maven-plugin/).
+using the [Tomcat Maven Plugin](http://tomcat.apache.org/maven-plugin.html).
 Basically, you need to define the plugin in your pom.xml and call '**mvn
 tomcat:deploy**' and '**mvn tomcat:undeploy**' to deploy and undeploy
 the web service respectively.

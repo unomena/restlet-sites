@@ -24,7 +24,7 @@ Table of contents
 -   [Code generation](#code-generation "Code generation")
 -   [Get the two first building permits](#get-the-two-first-building-permits "Get the two first building permits")
 -   [Filter the set of the building permits](#filter-the-set-of-the-building-permits  "Filter the set of the building permits")
--   [Conclusion](conclusion "Conclusion")
+-   [Conclusion](#conclusion "Conclusion")
 
 Introduction
 ============

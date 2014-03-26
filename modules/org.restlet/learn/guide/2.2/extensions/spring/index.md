@@ -8,7 +8,7 @@ Table of contents
 2.  [Integration modes](integration "Spring extension - Integration modes")
 3.  [Configuring Restlet beans](beans-configuration "Spring extension - Configuring Restlet beans")
 4.  [A complete example](example "Spring extension - A complete example")
-5.  [Configuration of Restlet Resources in Spring](resource-configuration "Spring extension - Configuration of Restlet resources")
+5.  [Configuration of Restlet Resources in Spring](resources-configuration "Spring extension - Configuration of Restlet resources")
 
 Introduction
 ============

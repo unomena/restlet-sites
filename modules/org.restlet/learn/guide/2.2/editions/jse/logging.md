@@ -85,160 +85,41 @@ logging mechanisms to the JDK logging one or the other way around.
 Here is an attempt to list the logger names used by those libraries.
 Please help us to complete this table.
 
-Library
-
-Package name
-
-Logger name
-
-Comment
-
-db4o
-
-com.db4o
-
-Grizzly
-
-com.sun.grizzly
-
-Bloat
-
-edu.purdue.cs.bloat
-
-Java Activation
-
-javax.activation
-
-Java Mail
-
-javax.mail
-
-Java Servlet
-
-javax.servlet
-
-JAX-RS
-
-javax.ws.rs
-
-JAXB
-
-javax.xml.bind
-
-StAX
-
-javax.xml.stream
-
-JLine
-
-jline
-
-JXTA
-
-net.jxta
-
-OAuth
-
-net.oauth
-
-AntLR
-
-org.antlr.runtime
-
-Commons Codec
-
-org.apache.commons.codec
-
-Commons Collections
-
-org.apache.commons.collections
-
-Commons DBCP
-
-org.apache.commons.dbcp
-
-Commons FileUpload
-
-org.apache.commons.fileupload
-
-Commons HTTP Client
-
-org.apache.commons.httpclient
-
-org.apache.commons.httpclient.\*\
- httpclient.wire.\*
-
-For more details, see the [logging documentation
-page](http://hc.apache.org/httpclient-3.x/logging.html).
-
-Commons IO
-
-org.apache.commons.io
-
-Commons Lang
-
-org.apache.commons.lang
-
-Commons Logging
-
-org.apache.commons.logging
-
-Commons Pool
-
-org.apache.commons.pool
-
-MINA
-
-org.apache.mina
-
-Velocity
-
-org.apache.velocity
-
-Bouncy Castle
-
-org.bouncycastle
-
-FreeMarker
-
-freemarker
-
-JiBX
-
-org.jibx.runtime
-
-JSON
-
-org.json
-
-JUnit
-
-junit
-
-Jetty
-
-org.mortbay.jetty
-
-org.mortbay.\*
-
-Jetty chooses its logger from the property\
- "org.mortbay.log.class", biased towards SLF4J but overrideable
-
-Simple
-
-simple
-
-Spring
-
-org.springframework
-
-org.springframework.\*
-
-Commons logging
-
-Tanuki Wrapper
-
-org.tanukisoftware.wrapper
+Library | Package name | Logger name | Comment
+------- | ------------ | ----------- | -------
+db4o | com.db4o |  | 
+Grizzly | com.sun.grizzly |  | 
+Bloat | edu.purdue.cs.bloat |  | 
+Java Activation | javax.activation |  | 
+Java Mail | javax.mail |  | 
+Java Servlet | javax.servlet |  | 
+JAX-RS | javax.ws.rs |  | 
+JAXB | javax.xml.bind |  | 
+StAX | javax.xml.stream |  | 
+JLine | jline |  | 
+JXTA | net.jxta |  | 
+OAuth | net.oauth |  | 
+AntLR | org.antlr.runtime |  | 
+Commons Codec | org.apache.commons.codec |  | 
+Commons Collections | org.apache.commons.collections |  | 
+Commons DBCP | org.apache.commons.dbcp |  | 
+Commons FileUpload | org.apache.commons.fileupload |  | 
+Commons HTTP Client | org.apache.commons.httpclient | org.apache.commons.httpclient.\* httpclient.wire.\* | For more details, see the [logging documentation page](http://hc.apache.org/httpclient-3.x/logging.html).
+Commons IO | org.apache.commons.io |  | 
+Commons Lang | org.apache.commons.lang |  | 
+Commons Logging | org.apache.commons.logging |  | 
+Commons Pool | org.apache.commons.pool |  | 
+MINA | org.apache.mina |  | 
+Velocity | org.apache.velocity |  | 
+Bouncy Castle | org.bouncycastle |  | 
+FreeMarker | freemarker |  | 
+JiBX | org.jibx.runtime |  | 
+JSON | org.json |  | 
+JUnit | junit |  | 
+Jetty | org.mortbay.jetty | org.mortbay.\* |  Jetty chooses its logger from the property "org.mortbay.log.class", biased towards SLF4J but overrideable
+Simple | simple |  | 
+Spring | org.springframework | org.springframework.\* | 
+Tanuki Wrapper | org.tanukisoftware.wrapper |  | 
 
 If the logger name you are looking for isn't listed, there is an easy
 way to detect it. You just have to call the static
@@ -458,6 +339,5 @@ programmatically with the System\#setProperty() method.
 Additional resources
 ====================
 
--   [Java Logging API and How To Use
-    It](http://www.crazysquirrel.com/computing/java/logging.jspx)
+-   [Java Logging API and How To Use It](http://www.crazysquirrel.com/computing/java/logging.jspx)
 

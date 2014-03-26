@@ -11,7 +11,7 @@ modularization of larger Restlet applications.
 This pseudo-protocol came to life as a solution for the [issue 374 "Add
 support for pseudo
 protocols"](http://restlet.tigris.org/issues/show_bug.cgi?id=374).
-Which in turn started of based from discussion on [issue 371 "Optimize
+Which in turn started of based from discussion on [issue 157 "Optimize
 Internal
 Calls"](http://restlet.tigris.org/issues/show_bug.cgi?id=157)?
 

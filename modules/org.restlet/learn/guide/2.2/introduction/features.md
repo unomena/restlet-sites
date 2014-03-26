@@ -102,7 +102,7 @@ is available in the Android, GWT, GAE, classic Java editions:
   and directories. In addition, it is able to return directory
   listings.
 - Client CLAP connector to access to the Classloader resources.
-- Client and server [RIAP connectors](/learn/guide/2.0#/13-restlet/48-restlet/86-restlet/45-restlet.html)
+- Client and server [RIAP connectors](../core/base/connectors)
   to access to the Restlet internal resources, directly inside the
   JVM, relatively to the current application or virtual host or
   component.
@@ -114,7 +114,7 @@ is available in the Android, GWT, GAE, classic Java editions:
 - Built-in support for XML representations (JAX, JibX, DOM or SAX
   based) with a simple XPath API based on JDK's built-in XPath engine.
 - Integration with the [FreeMarker template engine](http://freemarker.org/)
-- Integration with the [Velocity template engine](http://jakarta.apache.org/velocity/)
+- Integration with the [Velocity template engine](http://velocity.apache.org/)
 - Integration with [Apache FileUpload](http://jakarta.apache.org/commons/fileupload/)
   to support multi-part forms and easily handle large file uploads from browsers
 - Transformer filter to easily apply XSLT stylesheets on XML

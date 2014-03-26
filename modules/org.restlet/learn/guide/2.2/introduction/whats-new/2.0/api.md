@@ -8,14 +8,13 @@ In order to simplify even more the learning and deployment of Restlet
 applications, the Restlet API and its implementation (ie. the Restlet
 Engine) have been merged into a single module (ie. JAR, bundle). All
 engine classes were moved to
-[org.restlet.engine](javadocs://jse/engine/).
+[org.restlet.engine](javadocs://2.0/jse/engine/).
 
 In addition, all extensions are now located under a
-[org.restlet.ext](http://restlet.org/learn/javadocs/2.0/jse/ext/)
+[org.restlet.ext](javadocs://2.0/jse/ext/)
 root package. This means that all extensions previously under
 "com.noelios.restlet.ext" have been moved. Note that some classes from
-the [core Restlet
-API](http://restlet.org/learn/javadocs/2.0/jse/api/)
+the [core Restlet API](javadocs://2.0/jse/api/)
 have been moved to the Restlet Engine such as:
 
 -   org.restlet.util.Engine moved to org.restlet.engine.Engine
@@ -67,8 +66,7 @@ Nearly all standard HTTP headers are now fully supported by the Restlet
 API including “Age”, “Authentication-Info”, “Date”, "Expect",
 “If-Range”, “Retry-After”, "Via", “Warning”, and the frequently asked
 “Cache-Control” header! For a detailled mapping of those headers to the
-Restlet API, please consult [this page of the user
-guide](/learn/guide/2.0#/13-restlet/27-restlet/130-restlet.html).
+Restlet API, please consult [this page of the user guide](../../../core/http-headers-mapping.md).
 
 Character sets support was enhanced, fixing an issue with Macintosh and
 adding new constants in the CharacterSet class for all common ones

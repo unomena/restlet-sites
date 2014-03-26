@@ -8,8 +8,7 @@ The **org.restlet.routing** package contains classes related to call
 routing.
 
 Another advantage of the Restlet Framework is the built-in support for
-[cool
-URIs](http://www.w3.org/Provider/Style/URI).
+[cool URIs](http://www.w3.org/Provider/Style/URI).
 A good description of the importance of proper URI design is given by
 Jacob Nielsen in his
 [AlertBox](http://www.useit.com/alertbox/990321.html).

@@ -18,7 +18,7 @@ between a server application and several kind of clients.
 5.  [GAE server](#gae-server)
 6.  [GWT client](#gwt-client)
 7.  [Android client](#android-client)
-8.  [Java SE client](#javase-client)
+8.  [Java SE client](#java-se-client)
 
 ## Requirements
 

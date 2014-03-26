@@ -119,6 +119,10 @@
 			<!-- parse the files according to this version properties -->
 			<replace dir="${temp}/owr/learn/guide/@{version}" replacefilterfile="${temp}/model.@{version}.properties" />
 			<!-- deal with the "javadocs" links -->
+            <replaceregexp match="javadocs://(.\..)/(.*)" replace="http://restlet.org/learn/javadocs/\1/\2" byline="true">
+                <fileset dir="${temp}/owr/learn/guide/@{version}" includes="**/*" />
+            </replaceregexp>
+
 			<replaceregexp match="javadocs://(.*)" replace="http://restlet.org/learn/javadocs/@{version}/\1" byline="true">
 				<fileset dir="${temp}/owr/learn/guide/@{version}" includes="**/*" />
 			</replaceregexp>

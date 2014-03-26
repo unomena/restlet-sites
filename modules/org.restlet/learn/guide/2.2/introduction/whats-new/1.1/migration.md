@@ -123,7 +123,7 @@ Usage of the Servlet Adapter
     define several applications either with a "/WEB-INF/restlet.xml
     file", or a "org.restlet.component" parameter in the "web.xml". see
     [ServerServlet
-    javadocs](javadocs://jse/ext/com/noelios/restlet/ext/servlet/ServerServlet.html)
+    javadocs](javadocs://1.1/all/ext/com/noelios/restlet/ext/servlet/ServerServlet.html)
     for more details.
 
 Accessing current objects
@@ -135,26 +135,12 @@ gives direct access to such properties (e.g.
 "Resource\#getApplication"), it was generally not the case with Restlet
 1.0, thus some static methods have been introduced in Restlet 1.1:
 
-Method name
-
-Description
-
-Response.getCurrent()
-
-The current Response object handled by the current thread.
-
-Application.getCurrent()
-
-The current Application object handled by the current thread.
-
-Context.getCurrent()
-
-The current Context handled by the current thread.
-
-Context.getCurrentLogger()
-
-Always returns a non-null logger, if possible the current context's
-logger.
+Method name | Description
+----------- | -----------
+Response.getCurrent() | The current Response object handled by the current thread.
+Application.getCurrent() | The current Application object handled by the current thread.
+Context.getCurrent() | The current Context handled by the current thread.
+Context.getCurrentLogger() | Always returns a non-null logger, if possible the current context's logger.
 
 These methods may help you to reduce the number of lines of code but,
 for proper object-oriented design, we recommend using them only under
@@ -162,9 +148,9 @@ duress. Typical case is when you need to integrate Restlet code with a
 third-party library that doesn't let you pass in your Restlet context or
 objects. For example, you should by default prefer obtaining the current
 context using methods such as
-[Restlet.getContext()](javadocs://jse/api/org/restlet/Restlet.html#getContext%28%29)
+[Restlet.getContext()](javadocs://1.1/all/api/org/restlet/Restlet.html#getContext%28%29)
 or
-[Handler.getContext()](javadocs://jse/api/org/restlet/Handler.html#getContext%28%29).
+[Handler.getContext()](javadocs://1.1/all/api/org/restlet/Handler.html#getContext%28%29).
 
 Accessing the original resource's reference
 ===========================================
@@ -225,29 +211,13 @@ List of renamed methods to prevent confusion with lower-level methods
 handleGet(), handletPost(), handlePut() and handleDelete() now part of
 the parent class of Resource, the Handler class.
 
-Method
-
-Replacement
-
-getPreferredRepresentation()
-
-represent()
-
-getRepresentation(Variant)
-
-represent(Variant)
-
-post(Representation)
-
-acceptRepresentation(Representation)
-
-put(Representation)
-
-storeRepresentation(Representation)
-
-delete()
-
-removeRepresentations()
+Method | Replacement
+------ | -----------
+getPreferredRepresentation() | represent()
+getRepresentation(Variant) | represent(Variant)
+post(Representation) | acceptRepresentation(Representation)
+put(Representation) | storeRepresentation(Representation)
+delete() | removeRepresentations()
 
 Variant class
 -------------
@@ -266,41 +236,16 @@ TunnelService
 
 List of renamed methods.
 
-Method
-
-Replacement
-
-getCharacterSetAttribute
-
-getCharacterSetParameter
-
-setCharacterSetAttribute
-
-setCharacterSetParameter
-
-getEncodingAttribute
-
-getEncodingParameter
-
-setEncodingAttribute
-
-setEncodingParameter
-
-getLanguageAttribute
-
-getLanguageParameter
-
-setLanguageAttribute
-
-setLanguageParameter
-
-getMediaTypeAttribute
-
-getMediaTypeParameter
-
-setMediaTypeAttribute
-
-setMediaTypeParameter
+Method | Replacement
+------ | -----------
+getCharacterSetAttribute | getCharacterSetParameter
+setCharacterSetAttribute | setCharacterSetParameter
+getEncodingAttribute | getEncodingParameter
+setEncodingAttribute | setEncodingParameter
+getLanguageAttribute | getLanguageParameter
+setLanguageAttribute | setLanguageParameter
+getMediaTypeAttribute | getMediaTypeParameter
+setMediaTypeAttribute | setMediaTypeParameter
 
 MetadataService
 ---------------
@@ -331,33 +276,18 @@ Response
 
 List of renamed methods.
 
-Method
-
-Replacement
-
-getChallengeRequest
-
-getChallengeRequests
-
-getRedirectRef
-
-getLocationRef
-
-setRedirectRef
-
-setLocationRef
+Method | Replacement
+------ | -----------
+getChallengeRequest | getChallengeRequests
+getRedirectRef | getLocationRef
+setRedirectRef | setLocationRef
 
 Finder
 ------
 
-Method
-
-Replacement
-
-createResource(Request, Response)
-
- createTarget(Request, Response) and take care of the targetClass
-property.
+Method | Replacement
+------ | -----------
+createResource(Request, Response) | createTarget(Request, Response) and take care of the targetClass property.
 
 Template
 --------
@@ -380,17 +310,10 @@ Removed the Logger parameter to all constructors.
 Status
 ------
 
-Method
-
-Replacement
-
-isInfo(int code)
-
-isInformational(int)
-
-isInfo()
-
-isInformational()
+Method | Replacement
+------ | -----------
+isInfo(int code) | isInformational(int)
+isInfo() | isInformational()
 
 ChallengeScheme
 ---------------
@@ -406,63 +329,37 @@ the JavaMail connector instead.
 Response
 --------
 
-Method
-
-Replacement
-
-getChallengeRequest
-
-getChallengeRequests
-
-getRedirectRef
-
-getLocationRef
-
-setRedirectRef
-
-setLocationRef
+Method | Replacement
+------ | -----------
+getChallengeRequest | getChallengeRequests
+getRedirectRef | getLocationRef
+setRedirectRef | setLocationRef
 
 Guard
 -----
 
 List of renamed methods.
 
-Method
-
-Replacement
-
-challenge(Response)
-
-challenge(Response, boolean) The added boolean indicates if the new
-challenge is due to a stale response.
-
-checkSecret(String, char[])
-
-checkSecret(Request, String, char[]) Added the request parameter
+Method | Replacement
+------ | -----------
+challenge(Response) | challenge(Response, boolean) The added boolean indicates if the new challenge is due to a stale response.
+checkSecret(String, char[]) | checkSecret(Request, String, char[]) Added the request parameter
 
 Context
 -------
 
 List of renamed method.
 
-Method
-
-Replacement
-
-getDispatcher
-
-getClientDispatcher NB: it exists a server dispatcher.
+Method | Replacement
+------ | -----------
+getDispatcher | getClientDispatcher NB: it exists a server dispatcher.
 
 TransformRepresentation
 -----------------------
 
 List of renamed methods
 
-Method
-
-Replacement
-
-getURIResolver
-
-getUriResolver
+Method | Replacement
+------ | -----------
+getURIResolver | getUriResolver
 

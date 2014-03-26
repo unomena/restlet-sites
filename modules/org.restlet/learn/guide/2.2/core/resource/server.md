@@ -1,9 +1,7 @@
 Server resources
 ================
 
-See the [first
-server](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet/319-restlet.html "First server")
-and [first
-application](/learn/guide/2.1#/13-restlet/21-restlet/318-restlet/303-restlet.html "First application")
+See the [first server](../../introduction/first-steps/first-server "First server")
+and [first application](../../introduction/first-steps/first-application "First application")
 examples.
 

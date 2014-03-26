@@ -1,12 +1,9 @@
 body {
 	font-family: Verdana, Arial;
 	background-image: -moz-linear-gradient(top, #f9fdff, #fff);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f9fdff),
-		color-stop(1, #fff) );
-	filter:
-		"progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#f9fdff', endColorstr='#fff')";
-	-ms-filter:
-		"progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f9fdff', endColorstr='#fff')";
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f9fdff), color-stop(1, #fff) );
+	filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#f9fdff', endColorstr='#fff')";
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f9fdff', endColorstr='#fff')";
 }
 
 .topbar {
@@ -232,7 +229,7 @@ ul.sub-list {
 	font-weight: bold;
 }
 
-.btn-group .btn:not (.dropdown-toggle ){
+.btn-group .btn:not(.dropdown-toggle){
 	width: 180px;
 	text-align: left;
 	background-color: #fff;
@@ -245,7 +242,7 @@ ul.sub-list {
 	background-image: none;
 }
 
-.btn-group .btn.no-radius:not   (.dropdown-toggle ),.btn-group .btn.dropdown-toggle.no-radius
+.btn-group .btn.no-radius:not(.dropdown-toggle ),.btn-group .btn.dropdown-toggle.no-radius
 	{
 	border-radius: 0px;
 	-moz-border-radius: 0px;
@@ -532,7 +529,7 @@ div.content.footerWrapper {
 	width: 200px;
 }
 
-.branchwitch .btn-group .btn:not (.dropdown-toggle ){
+.branchwitch .btn-group .btn:not(.dropdown-toggle ){
 	width: 50px;
 	margin-left: 20px;
 }
@@ -554,7 +551,7 @@ div.content.footerWrapper {
 	margin-left: 20px;
 }
 
-.editButton .btn-group .btn:not (.dropdown-toggle ) {
+.editButton .btn-group .btn:not(.dropdown-toggle ) {
 	background-color: #FFFFFF;
 	background-image: none;
 	text-align: left;

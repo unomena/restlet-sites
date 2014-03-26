@@ -6,14 +6,10 @@ Introduction
 
 Here are a few links that will get you started:
 
--   [What's AJP(Apache JServ
-    Protocol)?](http://en.wikipedia.org/wiki/Apache_JServ_Protocol)
--   [What's Apache module
-    mod\_jk?](http://tomcat.apache.org/connectors-doc/webserver_howto/apache.html)
--   [What's Jetty,and how to get
-    it?!](http://www.mortbay.org/)
--   [How to embedding Jetty in program
-    way?](http://docs.codehaus.org/display/JETTY/Embedding+Jetty)
+-   [What's AJP(Apache JServ Protocol)?](http://en.wikipedia.org/wiki/Apache_JServ_Protocol)
+-   [What's Apache module  mod\_jk?](http://tomcat.apache.org/connectors-doc/webserver_howto/apache.html)
+-   [What's Jetty,and how to get it?!](http://www.eclipse.org/jetty/)
+-   [How to embedding Jetty in program way?](http://wiki.eclipse.org/Jetty/Tutorial/Embedding_Jetty)
 
 This page needs to be updated for Restlet 2.x
 
@@ -107,23 +103,15 @@ Configuring Apache HTTPd server with mod\_jk
     located in \<apache-root\>/conf/ directory:
 
             <IfModule !mod_jk.c>
-
                  LoadModule jk_module  modules/mod_jk.so
-
             </IfModule>
 
             <IfModule mod_jk.c>
-
                  JkWorkersFile "conf/worker.properties"
-
                  JkLogFile "logs/mod_jk.log"
-
                  JkLogLevel info
-
                  JkLogStampFormat "[%a %b %d %H:%M:%S %Y] "
-
                  JkOptions +ForwardKeySize +ForwardURICompat
-
             </IfModule>   
 
 -   **LoadModule jk\_module modules/mod\_jk.so** tells your apache
@@ -137,19 +125,13 @@ After adding the mod\_jk configuration you may add a **VirtualHost**
 Entry in the same file (httpd.conf) as long as its located below your
 mod\_jk configuration entry:
 
->         <VirtualHost host:*>
->
->             ServerName yourserver
->
->              ServerAdmin user@yourserver
->
->              ## you may add further entries concerning log-files, log-level, URL-rewriting, ...
->
->              ## pass requests through to jetty worker
->
->         JkMount /* jetty
->
->         </VirtualHost>
+         <VirtualHost host:*>
+             ServerName yourserver
+              ServerAdmin user@yourserver
+              ## you may add further entries concerning log-files, log-level, URL-rewriting, ...
+              ## pass requests through to jetty worker
+         JkMount /* jetty
+         </VirtualHost>
 
 -   Add a worker file **worker.properties** in your
     \<apache-root\>/conf/
@@ -157,80 +139,20 @@ mod\_jk configuration entry:
     hostname in **worker.jetty.host** property entry to where your jetty
     application is runnning
 
-> `worker.list=jetty`
->
-> `worker.jetty.port=8009`
->
-> `worker.jetty.host=<server name or ip where your jetty will be running>`
->
-> `worker.jetty.type=ajp13`
+ `worker.list=jetty`
+ `worker.jetty.port=8009`
+ `worker.jetty.host=<server name or ip where your jetty will be running>`
+ `worker.jetty.type=ajp13`
 
 mod\_jk Compatibilities
 -----------------------
 
-> Apache
->
-> mod\_jk
->
-> Win32
->
-> Linux(ubuntu)
->
-> Apache 1.3
->
-> No HTTPD Binary Available
->
-> mod\_jk-1.2.14
->
-> Not yet tested
->
-> mod\_jk-1.2.15
->
-> Not yet tested
->
-> mod\_jk-1.2.18
->
-> Not yet tested
->
-> mod\_jk-1.2.19
->
-> Not yet tested
->
-> Apache 2.0 (2.0.59)
->
-> mod\_jk-1.2.14
->
-> ![](Supporting%20AJP%20with%20Jetty-55_files/check.gif)
->
-> mod\_jk-1.2.15
->
-> ![](Supporting%20AJP%20with%20Jetty-55_files/check.gif)
->
-> mod\_jk-1.2.18
->
-> ![](Supporting%20AJP%20with%20Jetty-55_files/check.gif)
->
-> mod\_jk-1.2.19
->
-> ![](Supporting%20AJP%20with%20Jetty-55_files/check.gif)
->
-> Apache 2.2
->
-> mod\_jk-1.2.14
->
-> No Binary Available
->
-> mod\_jk-1.2.15
->
-> No Binary Available
->
-> mod\_jk-1.2.18
->
-> ![](Supporting%20AJP%20with%20Jetty-55_files/check.gif)
->
-> mod\_jk-1.2.19
->
-> ![](Supporting%20AJP%20with%20Jetty-55_files/check.gif)
+
+Apache | Win32 | Linux(ubuntu)
+------ | ----- | -------------
+Apache 1.3 | no mod_proxy_ajp bundled |no mod_proxy_ajp bundled
+Apache 2.0 (2.0.59) | no mod_proxy_ajp bundled | no mod_proxy_ajp bundled
+Apache 2.2 | ![](/images/icons/8/puce.png) | ![](/images/icons/8/puce.png)
 
 Running Apache Httpd and test your application
 ----------------------------------------------
@@ -240,18 +162,9 @@ Running Apache Httpd and test your application
 More Resource
 -------------
 
-[Jetty
-doc:Configuring+AJP13+Using+mod\_jk](http://docs.codehaus.org/display/JETTY/Configuring+AJP13+Using+mod_jk)
-\
- [Apache Httpd
-Document](http://httpd.apache.org/docs/)
-\
- [HttpServerHelper Class
-API](javadocs://jse/ext/com/noelios/restlet/ext/jetty/HttpServerHelper.html)
-\
- [Server Class
-API](javadocs://jse/api/org/restlet/Server.html)
-\
- [AjpServerHelper Class
-API](javadocs://jse/ext/com/noelios/restlet/ext/jetty/AjpServerHelper.html)
+* [Jetty doc:Configuring+AJP13+Using+mod\_jk](http://docs.codehaus.org/display/JETTY/Configuring+AJP13+Using+mod_jk) moved to [Jetty/Tutorial/Apache](http://wiki.eclipse.org/Jetty/Tutorial/Apache)
+* [Apache Httpd Document](http://httpd.apache.org/docs/)
+* [HttpServerHelper Class API](javadocs://jse/ext/org/restlet/ext/jetty/HttpServerHelper.html)
+* [Server Class API](javadocs://jse/api/org/restlet/Server.html)
+* [AjpServerHelper Class API](javadocs://jse/ext/org/restlet/ext/jetty/AjpServerHelper.html)
 

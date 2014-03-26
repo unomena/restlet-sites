@@ -4,8 +4,7 @@ Eclipse Jetty extension
 Introduction
 ============
 
-This connector is based on the [Eclipse
-Jetty](http://www.eclipse.org/jetty/)
+This connector is based on the [Eclipse Jetty](http://www.eclipse.org/jetty/)
 open-source web server. Jetty is popular alternative to Tomcat developed
 by Mortbay Consulting and has a nice separation between its HTTP
 protocol implementation and its support for the Servlet API which led to
@@ -18,18 +17,14 @@ This connector supports the following protocols: HTTP, HTTPS, AJP.
 
 The list of supported specific parameters is available in the javadocs:
 
--   [Jetty common
-    parameters](javadocs://jse/ext/org/restlet/ext/jetty/JettyServerHelper.html)
--   [HTTP specific
-    parameters](javadocs://jse/ext/org/restlet/ext/jetty/HttpServerHelper.html)
--   [HTTPS specific
-    parameters](javadocs://jse/ext/org/restlet/ext/jetty/HttpsServerHelper.html)
+-   [Jetty common parameters](javadocs://jse/ext/org/restlet/ext/jetty/JettyServerHelper.html)
+-   [HTTP specific parameters](javadocs://jse/ext/org/restlet/ext/jetty/HttpServerHelper.html)
+-   [HTTPS specific parameters](javadocs://jse/ext/org/restlet/ext/jetty/HttpsServerHelper.html)
 
 Here is the list of dependencies of this connector:
 
--   [Jetty](http://www.mortbay.org/)
--   [Java
-    Servlet](http://java.sun.com/products/servlet/)
+-   [Jetty](http://www.eclipse.org/jetty/)
+-   [Java Servlet](http://java.sun.com/products/servlet/)
 
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/jetty/package-summary.html).
@@ -41,8 +36,7 @@ HTTPS
 -----
 
 For general information on Jetty HTTPS/SSL configuration, please read
-[this
-document](http://docs.codehaus.org/display/JETTY/How+to+configure+SSL).
+[this document](http://wiki.eclipse.org/Jetty/Howto/Configure_SSL).
 For configuration of the connector in a Restlet component, you will need
 to set some of the HTTPS parameters listed above, for example:
 
