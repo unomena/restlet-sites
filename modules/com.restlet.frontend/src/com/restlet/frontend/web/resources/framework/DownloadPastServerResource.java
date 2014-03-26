@@ -57,10 +57,12 @@ public class DownloadPastServerResource extends BaseResource {
 
         if ("zip".equals(getQueryValue("distribution"))) {
             model.put("showNewsletter", Boolean.TRUE);
+            model.put("showArchive", Boolean.TRUE);
             model.put("downloadurl", "/download/" + version.getMinorVersion()
                     + "/" + distribution.getFileName());
         } else if ("exe".equals(getQueryValue("distribution"))) {
             model.put("showNewsletter", Boolean.TRUE);
+            model.put("showArchive", Boolean.TRUE);
             model.put("downloadurl", "/download/" + version.getMinorVersion()
                     + "/" + distribution.getFileName());
         } else if ("maven".equals(getQueryValue("distribution"))) {
