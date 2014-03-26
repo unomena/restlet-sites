@@ -3,10 +3,6 @@ var cEditions;
 var cTypesDistribution;
 var handleFragment = false;
 var redirectDownload = false;
-// var myCombo = (new Dropdown("idCombo")).initialize();
-// myCombo.addSelectionListener(function(value) {
-// (...)
-// });
 
 function getParameterByName(query, name, defaultValue) {
 	var result = defaultValue;

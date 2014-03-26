@@ -88,11 +88,6 @@ From HTTP headers to Restlet API
 Appendix
 ========
 
-[Registry](http://www.iana.org/assignments/message-headers/perm-headers.html)[of
-headers](http://www.iana.org/assignments/message-headers/perm-headers.html)
-maintained by IANA.
-
-[Regsitry of HTTP status
-codes](http://www.iana.org/assignments/http-status-codes)
-maintained by IANA.
+[Registry](http://www.iana.org/assignments/message-headers/perm-headers.html) [of headers](http://www.iana.org/assignments/message-headers/perm-headers.html) maintained by IANA.
+[Regsitry of HTTP status codes](http://www.iana.org/assignments/http-status-codes) maintained by IANA.
 
