@@ -20,8 +20,7 @@ have been moved to the Restlet Engine such as:
 -   org.restlet.util.Engine moved to org.restlet.engine.Engine
 -   org.restlet.util.Helper moved to org.restlet.engine.Helper
 -   org.restlet.util.ByteUtils moved to org.restlet.engine.io.BioUtils
--   org.restlet.util.DateUtils moved to
-    org.restlet.engine.util.DateUtils
+-   org.restlet.util.DateUtils moved to org.restlet.engine.util.DateUtils
 
 Note also, that there were two Spring extensions in Restlet 1.1. Now
 they are merged under the org.restlet.ext.spring extension.
@@ -89,13 +88,12 @@ API (that we support as a special Restlet extension), we felt it was
 time for us to step-back and propose a better solution, taking the best
 of both experiences.
 
-We initiated a [specification
-effort](/participate#/172-restlet/226-restlet.html)
+We initiated a [specification effort](/participate#/172-restlet/226-restlet.html)
 in our developers wiki at the beginning of this year, taking into
 account all the enhancement requests, issues and feed-back made by our
 community. Here is the overall architecture:
 
-![](API%20improvements-62_files/resource-design.png)
+![](../../../core/resource/hierarchy.png)
 
 The new design uses three foundation classes (UniformResource,
 ClientResource and ServerResource) which support just four annotations

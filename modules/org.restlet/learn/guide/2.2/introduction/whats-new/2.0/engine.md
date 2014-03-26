@@ -31,8 +31,7 @@ In addition, the new design of the internal connector is asynchronous in
 nature and will provide you production ready performance when we
 leverage non-blocking NIO. This is working in the Restlet Incubator but
 is only planned for the next 2.1 version. For now, you should mainly use
-these connectors for development purpose and [configure
-connectors](/learn/guide/2.0#/13-restlet/27-restlet/325-restlet/37-restlet.html "Connectors")such
+these connectors for development purpose and [configure connectors](../../../core/base/connectors "Connectors") such
 as Jetty and Apache HTTP Client when deploying to production.
 
 Internal JAR and ZIP clients

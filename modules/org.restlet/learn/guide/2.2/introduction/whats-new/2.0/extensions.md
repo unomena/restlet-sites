@@ -62,8 +62,7 @@ Updated to leverage the recent Jetty 7.0 version now hosted at Eclipse.
 Lucene extension
 ================
 
-In addition, a [Lucene
-extension](/participate#/172-restlet/215-restlet.html)has
+In addition, a [Lucene extension](../../../extensions/lucene)has
 been created to host the Solr client connector contributed by Rémi
 Dewitte who will lead this extension. There is also a TikaRepresentation
 available to leverage Lucene Tika subproject when extracting metadata
@@ -115,8 +114,7 @@ of meaningful links between those resources (RDF).
 
 We have written a [detailed
 specification](/participate#/172-restlet/160-restlet.html?branch=docs-1_1&language=en)
-and gathered feed-back from the community and especially [Henry
-Story](http://blogs.sun.com/bblfish/),
+and gathered feed-back from the community and especially [Henry Story](http://bblfish.net/),
 an expert in this area.
 
 In Restlet 2.0, we have added Literal, Link,  LinkReference, LinkSet and
@@ -152,8 +150,7 @@ SLF4J extension
 
 The Restlet logging, based on JULI (java.util.logging), now has an
 extension mechanism allowing an efficient redirection to alternate
-mechanisms like log4j as [explained in the
-wiki](/learn/guide/2.0#/13-restlet/48-restlet/101-restlet.html).
+mechanisms like log4j as [explained here](../../editions/jse/logging).
 A new SLF4J extension has been added to facilitate the replacement of
 Restlet’s default logger facade.
 

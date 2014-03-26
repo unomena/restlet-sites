@@ -94,52 +94,52 @@ three-letters code of an edition among:
 You can find [here](../../extensions/editions-matrix "Editions matrix")
 a full view of the list of extensions and the editions that ship them. 
 
-group Id | artifactId | Description
--------- | ---------- | ------------
-org.restlet.\<edition\> | [org.restlet](../../core "restlet") | Restlet API
-org.restlet.\<edition\> | [org.restlet.ext.atom](../../extensions/atom "atom")|Support for the Atom syndication and the AtomPub (Atom Publication Protocol) standards in their 1.0 version.
-org.restlet.\<edition\> | [org.restlet.ext.crypto](../../extensions/crypto "crypto")|Support for cryptography.
-org.restlet.\<edition\> | [org.restlet.ext.e4](../../extensions/e4 "e4")|Support for the WADL specification.
-org.restlet.\<edition\> | [org.restlet.ext.emf](../../extensions/emf "emf")|Integration with Eclipse Modeling Framework.
-org.restlet.\<edition\> | [org.restlet.ext.fileupload](../../extensions/fileupload "fileupload")|Integration with Apache FileUpload.
-org.restlet.\<edition\> | [org.restlet.ext.freemarker](../../extensions/freemarker "freemarker")|Integration with FreeMarker.
-org.restlet.\<edition\> | [org.restlet.ext.gae](../../extensions/gae "gae")|Integration to the Google App Engine UserService for the GAE edition.
-org.restlet.\<edition\> | [org.restlet.ext.gson](../../extensions/gson "gson")|Support for GSON representations.
-org.restlet.\<edition\> | [org.restlet.ext.gwt](../../extensions/gwt "gwt")|Server-side integration with GWT.
-org.restlet.\<edition\> | [org.restlet.ext.html](../../extensions/html "html")|Support for the HTML (HyperText Markup Language) standard in its 4.0 version and above.
-org.restlet.\<edition\> | [org.restlet.ext.httpclient](../../extensions/httpclient "httpclient")|Integration with Apache Commons HTTP Client.
-org.restlet.\<edition\> | [org.restlet.ext.jaas](../../extensions/jaas "jaas")|Support for JAAS based security.
-org.restlet.\<edition\> | [org.restlet.ext.jackson](../../extensions/jackson "jackson")|Integration with Jackson.
-org.restlet.\<edition\> | [org.restlet.ext.javamail](../../extensions/javamail "javamail")|Integration with JavaMail.
-org.restlet.\<edition\> | [org.restlet.ext.jaxb](../../extensions/jaxb "jaxb")|Integration with Java XML Binding.
-org.restlet.\<edition\> | [org.restlet.ext.jaxrs](../../extensions/jaxrs "jaxrs")|Implementation of JAX-RS (JSR-311)
-org.restlet.\<edition\> | [org.restlet.ext.jdbc](../../extensions/jdbc "jdbc")|Integration with Java DataBase Connectivity (JDBC).
-org.restlet.\<edition\> | [org.restlet.ext.jetty](../../extensions/jetty "jetty")|Integration with Jetty.
-org.restlet.\<edition\> | [org.restlet.ext.jibx](../../extensions/jibx "jibx")|Integration with JiBX.
-org.restlet.\<edition\> | [org.restlet.ext.json](../../extensions/json "json")|Support for JSON representations.
-org.restlet.\<edition\> | [org.restlet.ext.jsslutils](../../extensions/jsslutils "jsslutils")|Utilities to provide additional SSL support.
-org.restlet.\<edition\> | [org.restlet.ext.lucene](../../extensions/lucene "lucene")|Integration with Apache Lucene, Solr and Tika sub-projects.
-org.restlet.\<edition\> | [org.restlet.ext.nio](../../extensions/nio "nio")|Integration with java.nio package.
-org.restlet.\<edition\> | [org.restlet.ext.oauth](../../extensions/oauth "oauth")|Support for OAuth HTTP authentication.
-org.restlet.\<edition\> | [org.restlet.ext.odata](../../extensions/odata "odata")|Integration with OData services.
-org.restlet.\<edition\> | [org.restlet.ext.openid](../../extensions/openid "openid")|Support for OpenID authentication.
-org.restlet.\<edition\> | [org.restlet.ext.osgi](../../extensions/osgi "osgi")|Support for the OSGi specification.
-org.restlet.\<edition\> | [org.restlet.ext.rdf](../../extensions/rdf "rdf")|Support for the RDF parsing and generation.
-org.restlet.\<edition\> | [org.restlet.ext.rome](../../extensions/rome "rome")|Support for syndicated representations via the ROME library.
-org.restlet.\<edition\> | [org.restlet.ext.sdc](../../extensions/sdc "sdc")|Integration with Google Secure Data Connector on the cloud side.
-org.restlet.\<edition\> | [org.restlet.ext.servlet](../../extensions/servlet "servlet")|Integration with Servlet API.
-org.restlet.\<edition\> | [org.restlet.ext.simple](../../extensions/simple "simple")|Integration with Simple framework.
-org.restlet.\<edition\> | [org.restlet.ext.sip](../../extensions/sip "sip")|Support for Session Initiation Protocol (SIP).
-org.restlet.\<edition\> | [org.restlet.ext.slf4j](../../extensions/slf4j "slf4j")|Support for the SLF4J logging bridge.
-org.restlet.\<edition\> | [org.restlet.ext.spring](../../extensions/spring "spring")|Integration with Spring Framework.
-org.restlet.\<edition\> | [org.restlet.ext.swagger](../../extensions/swagger "swagger")|Integration with Simple framework.
-org.restlet.\<edition\> | [org.restlet.ext.thymeleaf](../../extensions/thymeleaf "thymeleaf")|Integration with Thymeleaf.
-org.restlet.\<edition\> | [org.restlet.ext.velocity](../../extensions/velocity "velocity")|Integration with Apache Velocity.
-org.restlet.\<edition\> | [org.restlet.ext.wadl](../../extensions/wadl "wadl")|Support for the WADL specification.
-org.restlet.\<edition\> | [org.restlet.ext.xdb](../../extensions/xdb "xdb")|Integration within OracleJVM via the Oracle XML DB feature.
-org.restlet.\<edition\> | [org.restlet.ext.xml](../../extensions/xml "xml")|Support for the XML documents.
-org.restlet.\<edition\> | [org.restlet.ext.xstream](../../extensions/xstream "xstream")|Integration with XStream.
-org.restlet.\<edition\> | org.restlet.test | Test module
+artifactId | Description
+---------- | ------------
+[org.restlet](../../core "restlet") | Restlet API
+[org.restlet.ext.atom](../../extensions/atom "atom")|Support for the Atom syndication and the AtomPub (Atom Publication Protocol) standards in their 1.0 version.
+[org.restlet.ext.crypto](../../extensions/crypto "crypto")|Support for cryptography.
+[org.restlet.ext.e4](../../extensions/e4 "e4")|Support for the WADL specification.
+[org.restlet.ext.emf](../../extensions/emf "emf")|Integration with Eclipse Modeling Framework.
+[org.restlet.ext.fileupload](../../extensions/fileupload "fileupload")|Integration with Apache FileUpload.
+[org.restlet.ext.freemarker](../../extensions/freemarker "freemarker")|Integration with FreeMarker.
+[org.restlet.ext.gae](../../extensions/gae "gae")|Integration to the Google App Engine UserService for the GAE edition.
+[org.restlet.ext.gson](../../extensions/gson "gson")|Support for GSON representations.
+[org.restlet.ext.gwt](../../extensions/gwt "gwt")|Server-side integration with GWT.
+[org.restlet.ext.html](../../extensions/html "html")|Support for the HTML (HyperText Markup Language) standard in its 4.0 version and above.
+[org.restlet.ext.httpclient](../../extensions/httpclient "httpclient")|Integration with Apache Commons HTTP Client.
+[org.restlet.ext.jaas](../../extensions/jaas "jaas")|Support for JAAS based security.
+[org.restlet.ext.jackson](../../extensions/jackson "jackson")|Integration with Jackson.
+[org.restlet.ext.javamail](../../extensions/javamail "javamail")|Integration with JavaMail.
+[org.restlet.ext.jaxb](../../extensions/jaxb "jaxb")|Integration with Java XML Binding.
+[org.restlet.ext.jaxrs](../../extensions/jaxrs "jaxrs")|Implementation of JAX-RS (JSR-311)
+[org.restlet.ext.jdbc](../../extensions/jdbc "jdbc")|Integration with Java DataBase Connectivity (JDBC).
+[org.restlet.ext.jetty](../../extensions/jetty "jetty")|Integration with Jetty.
+[org.restlet.ext.jibx](../../extensions/jibx "jibx")|Integration with JiBX.
+[org.restlet.ext.json](../../extensions/json "json")|Support for JSON representations.
+[org.restlet.ext.jsslutils](../../extensions/jsslutils "jsslutils")|Utilities to provide additional SSL support.
+[org.restlet.ext.lucene](../../extensions/lucene "lucene")|Integration with Apache Lucene, Solr and Tika sub-projects.
+[org.restlet.ext.nio](../../extensions/nio "nio")|Integration with java.nio package.
+[org.restlet.ext.oauth](../../extensions/oauth "oauth")|Support for OAuth HTTP authentication.
+[org.restlet.ext.odata](../../extensions/odata "odata")|Integration with OData services.
+[org.restlet.ext.openid](../../extensions/openid "openid")|Support for OpenID authentication.
+[org.restlet.ext.osgi](../../extensions/osgi "osgi")|Support for the OSGi specification.
+[org.restlet.ext.rdf](../../extensions/rdf "rdf")|Support for the RDF parsing and generation.
+[org.restlet.ext.rome](../../extensions/rome "rome")|Support for syndicated representations via the ROME library.
+[org.restlet.ext.sdc](../../extensions/sdc "sdc")|Integration with Google Secure Data Connector on the cloud side.
+[org.restlet.ext.servlet](../../extensions/servlet "servlet")|Integration with Servlet API.
+[org.restlet.ext.simple](../../extensions/simple "simple")|Integration with Simple framework.
+[org.restlet.ext.sip](../../extensions/sip "sip")|Support for Session Initiation Protocol (SIP).
+[org.restlet.ext.slf4j](../../extensions/slf4j "slf4j")|Support for the SLF4J logging bridge.
+[org.restlet.ext.spring](../../extensions/spring "spring")|Integration with Spring Framework.
+[org.restlet.ext.swagger](../../extensions/swagger "swagger")|Integration with Simple framework.
+[org.restlet.ext.thymeleaf](../../extensions/thymeleaf "thymeleaf")|Integration with Thymeleaf.
+[org.restlet.ext.velocity](../../extensions/velocity "velocity")|Integration with Apache Velocity.
+[org.restlet.ext.wadl](../../extensions/wadl "wadl")|Support for the WADL specification.
+[org.restlet.ext.xdb](../../extensions/xdb "xdb")|Integration within OracleJVM via the Oracle XML DB feature.
+[org.restlet.ext.xml](../../extensions/xml "xml")|Support for the XML documents.
+[org.restlet.ext.xstream](../../extensions/xstream "xstream")|Integration with XStream.
+org.restlet.test | Test module
 
 ## Sample dependencies declaration
 
