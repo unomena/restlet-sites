@@ -45,21 +45,24 @@ interface. See below how we would modify the previous example to secure
 the access to the Directory:
 
 ~~~~ {.brush: .java}
-    // Create a simple password verifier
-    MapVerifier verifier = new MapVerifier();
-    verifier.getLocalSecrets().put("scott", "tiger".toCharArray());
+    @Override
+    public Restlet createInboundRoot() {
+        // Create a simple password verifier
+        MapVerifier verifier = new MapVerifier();
+        verifier.getLocalSecrets().put("scott", "tiger".toCharArray());
 
-    // Create a guard
-    ChallengeAuthenticator guard = new ChallengeAuthenticator(
-        getContext(), ChallengeScheme.HTTP_BASIC, "Tutorial");
-    guard.setVerifier(verifier);
+        // Create a guard
+        ChallengeAuthenticator guard = new ChallengeAuthenticator(
+            getContext(), ChallengeScheme.HTTP_BASIC, "Tutorial");
+        guard.setVerifier(verifier);
 
-    // Create a Directory able to return a deep hierarchy of files
-    Directory directory = new Directory(getContext(), ROOT_URI);
-    directory.setListingAllowed(true);
-    guard.setNext(directory);
+        // Create a Directory able to return a deep hierarchy of files
+        Directory directory = new Directory(getContext(), ROOT_URI);
+        directory.setListingAllowed(true);
+        guard.setNext(directory);
 
-    return guard;
+        return guard;
+    }
 ~~~~
 
 ![](guard.png)
@@ -72,28 +75,30 @@ simply hard-coded a single user and password couple. In order to test,
 let's use the client-side Restlet API:
 
 ~~~~ {.brush: .java}
-    // Prepare the request 
-    ClientResource resource = new ClientResource("http://localhost:8182/"); 
+    public static void main(String[] args) {
+        // Prepare the request 
+        ClientResource resource = new ClientResource("http://localhost:8182/"); 
       
-    // Add the client authentication to the call 
-    ChallengeScheme scheme = ChallengeScheme.HTTP_BASIC; 
-    ChallengeResponse authentication = new ChallengeResponse(scheme, "scott", "tiger"); 
-    resource.setChallengeResponse(authentication); 
+        // Add the client authentication to the call 
+        ChallengeScheme scheme = ChallengeScheme.HTTP_BASIC; 
+        ChallengeResponse authentication = new ChallengeResponse(scheme, "scott", "tiger"); 
+        resource.setChallengeResponse(authentication); 
       
-    try {
-        // Send the HTTP GET request
-        resource.get();
-        // Output the response entity on the JVM console
-        resource.getResponseEntity().write(System.out);
-    } catch (Exception e) {
-        if (resource.getStatus().equals(Status.CLIENT_ERROR_UNAUTHORIZED)) {
-            // Unauthorized access
-            System.out
-                    .println("Access authorized by the server, check your credentials");
-        } else {
-            // Unexpected status
-            System.out.println("An unexpected status was returned: "
-                    + resource.getStatus());
+        try {
+            // Send the HTTP GET request
+            resource.get();
+            // Output the response entity on the JVM console
+            resource.getResponseEntity().write(System.out);
+        } catch (Exception e) {
+            if (resource.getStatus().equals(Status.CLIENT_ERROR_UNAUTHORIZED)) {
+                // Unauthorized access
+                System.out
+                        .println("Access authorized by the server, check your credentials");
+            } else {
+                // Unexpected status
+                System.out.println("An unexpected status was returned: "
+                        + resource.getStatus());
+            }
         }
     }
 ~~~~
