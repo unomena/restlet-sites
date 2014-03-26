@@ -248,8 +248,8 @@ from the keystore file (serverX.jks):
     import org.restlet.util.Series;
 
     public class SampleServer { 
-        public static void main(String[] args)
-            throws Exception {
+        public static void main(String[] args) throws Exception {
+
             // Create a new Component.
             Component component = new Component();
     
@@ -277,11 +277,11 @@ Step 5: Sample Restlet Client Code
     package com.jpc.samples;
 
     import java.io.IOException;
-    import org.restlet.Client;\
-    import org.restlet.data.Form;\
-    import org.restlet.data.Protocol;\
-    import org.restlet.data.Reference;\
-    import org.restlet.data.Response;\
+    import org.restlet.Client;
+    import org.restlet.data.Form;
+    import org.restlet.data.Protocol;
+    import org.restlet.data.Reference;
+    import org.restlet.data.Response;
     import org.restlet.resource.Representation;
 
     public class SampleClient {
@@ -296,9 +296,9 @@ Step 5: Sample Restlet Client Code
             // Create 9 new items
             for (int i = 1; i \< 10; i++) {
                 Sample sample = new Sample(Integer.toString(i), "sample " + i, "this is
-                    sample " + i + ".");\
+                    sample " + i + ".");
                 Reference sampleUri = createSample(sample, client, samplesUri);
-                if (sampleUri != null) {\
+                if (sampleUri != null) {
                     // Prints the representation of the newly created resource
                     get(client, sampleUri);
                 }
