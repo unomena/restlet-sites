@@ -42,3 +42,8 @@ Example 1. Creating a Protected Resource
     }
 
 Example 2. Creating a Proxies to access protected resources
+
+
+For additional details, please consult the
+[Javadocs](javadocs://jse/ext/org/restlet/ext/oauth/package-summary.html).
+
