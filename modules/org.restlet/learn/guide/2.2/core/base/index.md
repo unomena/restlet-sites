@@ -1,8 +1,4 @@
-Base package
-============
-
-Introduction
-============
+# Base package
 
 This **org.restlet** package contains the most important classes of the Restlet API,
 mapping key HTTP and REST concepts to Java including:
