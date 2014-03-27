@@ -1,7 +1,5 @@
 # First steps
 
-## Introduction
-
 This section will give you a first taste of the Restlet Framework:
 
 - [First server](first-server.md "First server")
