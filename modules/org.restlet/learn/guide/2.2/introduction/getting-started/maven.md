@@ -89,7 +89,8 @@ three-letters code of an edition among:
 -   jee (Java EE edition),
 -   gae (Google App Engine edition),
 -   android (Android edition)
--   gwt (google Web Toolkit edition).
+-   gwt (Google Web Toolkit edition),
+-   osgi (OSGi Environments edition).
 
 You can find [here](../../extensions/editions-matrix "Editions matrix")
 a full view of the list of extensions and the editions that ship them. 
