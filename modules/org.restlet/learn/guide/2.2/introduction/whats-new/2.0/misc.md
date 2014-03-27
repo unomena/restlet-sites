@@ -19,8 +19,6 @@ distributed in our Maven repository and are consistently synchronized
 with our main Ant script to ensure that they don’t diverge in term of
 dependency versions for example.
 
-![](Misc-60_files/maven1.png)
-
 For details on building Restlet with Maven, please read [this short
 page](/participate#/179-restlet/240-restlet.html)
 on our developers wiki. Note that we have also adjusted our Maven
