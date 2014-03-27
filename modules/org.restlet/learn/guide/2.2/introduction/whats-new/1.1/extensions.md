@@ -1,4 +1,4 @@
-# 1.1 extensions
+# Extensions in version 1.1
 
 -   Full support for WADL, a popular description language for RESTful
     application. It can be used to configure components, applications
