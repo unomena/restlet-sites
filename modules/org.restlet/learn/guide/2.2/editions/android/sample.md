@@ -29,8 +29,6 @@ It retrieves the FOAF representation, parses it and displays the friends
 of your contact in the GUI. The user can then add some of those friends
 as new local contacts.
 
-![Restlet+FOAF](Sample%20application-269_files/data_004.html "Restlet+FOAF")
-
 For testing purpose, we run a local HTTP server with Restlet that can
 server FOAF profiles (in the RDF/N-Triples media type) at those URIs:
 
@@ -39,12 +37,6 @@ server FOAF profiles (in the RDF/N-Triples media type) at those URIs:
 
 Screenshots
 ===========
-
-![contactsList](Sample%20application-269_files/data_003.html "contactsList")
-
-![friendsList](Sample%20application-269_files/data.html "friendsList")
-
-![contactAdded](Sample%20application-269_files/data_002.html "contactAdded")
 
 List of currently registered contacts in the Android's address book
 
