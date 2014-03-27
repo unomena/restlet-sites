@@ -57,9 +57,6 @@ Restlet team Restlet team worked with Microsoft in order to provide a
 new Restlet extension that will provide several high level features for
 accessing WCF Data Services.
 
-![ADO.NET Data Services
-architecture](Tutorial-288_files/data_003.html "ADO.NET Data Services architecture")
-
 ##### Figure 1 - The WCF Data Services Framework Architecture
 
 Initially known as “Astoria” then ADO.NET Data Services, the WCF Data
@@ -88,9 +85,6 @@ Item is simply defined by an “ID” and a “Description”. Cafe and Item are
 linked, for intentional simplification, in a “one to one” association.
 That is to say, a “Cafe” has one attribute called “Item”.
 
-![TestAssociationOneToOne service
-model](Tutorial-288_files/data.html "TestAssociationOneToOne service model")
-
 ##### Figure 2 - Class diagram of the TestAssociationOneToOne service
 
 Code generation
@@ -102,8 +96,6 @@ attributes, and pray that you have correctly spelled them and defined
 their type. Thanks to the Restlet extension, a generation tool will make
 your life easier. It will take care of this task for you, and generate
 the whole set of Java classes with correct types.
-
-![codeGeneration](Tutorial-288_files/data_002.html "codeGeneration")
 
 ##### Figure 3 - Overview of code generation
 
