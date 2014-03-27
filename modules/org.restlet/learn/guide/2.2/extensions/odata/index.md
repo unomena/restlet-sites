@@ -65,9 +65,6 @@ their type. Thanks to the Restlet extension, a generation tool will make
 your life easier. It will take care of this task for you, and generate
 the whole set of Java classes with correct types.
 
-![Overview of code
-generation](OData%20extension-287_files/data.html "Overview of code generation")
-
 Just note the URI of the target service, and specify the directory where
 you would like to generate the code via the command line:
 
