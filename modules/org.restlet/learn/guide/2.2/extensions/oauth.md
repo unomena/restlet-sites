@@ -1,12 +1,42 @@
-OAUTH extension
-=============
+# OAuth extension
 
-Introduction
-============
+This extensions is a preview support of the OAuth v2.0 standard. This is intended to be used with primarily following use-cases in mind:
+- Create a protected resource
+- Create a authenticating server
+- Create a web client accessing protected resources
 
-This extensions is a preview support of the OAUTH v2.0 standard.
+It is very simple to create an OAuth server with just a few lines of code. It is also possible to implement a custom back end for data storage and retrieval. The default implementation stores only to memory, so a JVM restart flushes all data.
 
-Description
-===========
+    {
+        public Restlet createInboundRoot(){
+        ...
+        OAuthAuthorizer auth = new OAuthAuthorizer(
+            "http://localhost:8080/OAuth2Provider/validate");
+        auth.setNext(ProtectedResource.class);
+        router.attach("/me", auth);
+        ...
+    }
 
+Example 1. Creating a Protected Resource
 
+    {
+        OAuthParameter params = new OAuthParameters("clientId", "clientSecret",
+            oauthURL, "scope1 scope2");
+        OAuthProxy proxy = new OauthProxy(params, getContext(), true);
+        proxy.setNext(DummyResource.class);
+        router.attach("/write", write);
+        
+        //A Slightly more advanced example that also sets some SSL client parameters
+        Client client = new Client(Protocol.HTTPS);
+        Context c = new Context();
+        client.setContext(c);
+        c.getParameters().add("truststorePath", "pathToKeyStoreFile");
+        c.getParameters(0.add("truststorePassword", "password");
+        OAuthParameter params = new OAuthParameters("clientId", "clientSecret",
+            oauthURL, "scope1 scope2");
+        OAuthProxy proxy = new OauthProxy(params, getContext(), true, client);
+        proxy.setNext(DummyResource.class);
+        router.attach("/write", write);   
+    }
+
+Example 2. Creating a Proxies to access protected resources
