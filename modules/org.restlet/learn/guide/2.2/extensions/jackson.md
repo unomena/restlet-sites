@@ -1,24 +1,15 @@
-Jackson extension
-=================
+# Jackson extension
 
-Introduction
-============
-
-This extension provides and integration of Restlet with Jackson.
-[Jackson](http://jackson.codehaus.org/)
+This extension provides and integration of Restlet with Jackson. [Jackson](http://jackson.codehaus.org/)
 is a fast library to serialize objects to JSON and back again.
 
-Usage instructions
-==================
+## Usage instructions
 
 The extension comes with a JacksonRepresentation that can either:
+-   wrap a Java object to serialize it as JSON, JSON Binary (Smile), XML, CSV or YAML representation,
+-   wrap a representation to parse it back as a Java object.
 
--   wrap a Java object to serialize as JSON
--   wrap a JSON representation to parse as a Java object
-
-It also provides a plugin for the ConverterService which will
-automatically serialize and deserialize your Java objets returned by
-annotated methods in ServerResource subclasses.
+It also provides a plugin for the ConverterService which will automatically serialize and deserialize your Java objets returned by annotated methods in ServerResource subclasses.
 
 Here is an example server resource:
 
@@ -79,14 +70,9 @@ Here is the matching client resource:
 
     }
 
-Note that our Customer and Address classes are just regular serializable
-beans, with no special parent classes and no special annotations.
+Note that our Customer and Address classes are just regular serializablecbeans, with no special parent classes and no special annotations.
 
-What is nice is that the automatically generated JSON representations
-can be customized via Jackson annotations on the serialized beans. More
-details on annotations are [available in Jackson
-documentation](http://wiki.fasterxml.com/JacksonInFiveMinutes).
+What is nice is that the automatically generated representations can be customized via Jackson annotations on the serialized beans. More details on annotations are [available in Jackson documentation](http://wiki.fasterxml.com/JacksonInFiveMinutes).
 
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/jackson/package-summary.html).
-
