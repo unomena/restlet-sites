@@ -12,15 +12,15 @@ Use the following syntax ("notoc" excludes a document from the table of content)
     -   [Features](introduction/features.md)
     -   [What's new](introduction/whats-new/index.md)
         -   [1.1](introduction/whats-new/1.1/index.md) "notoc"
-            -   [extensions](introduction/whats-new/1.1/extensions.md) "notoc"
-            -   [migration](introduction/whats-new/1.1/migration.md) "notoc"
+            -   [Extensions](introduction/whats-new/1.1/extensions.md) "notoc"
+            -   [Migration](introduction/whats-new/1.1/migration.md) "notoc"
         -   [2.0](introduction/whats-new/2.0/index.md) "notoc"
-            -   [api](introduction/whats-new/2.0/api.md) "notoc"
-            -   [editions](introduction/whats-new/2.0/editions.md) "notoc"
-            -   [engine](introduction/whats-new/2.0/engine.md) "notoc"
-            -   [extensions](introduction/whats-new/2.0/extensions.md) "notoc"
-            -   [migration](introduction/whats-new/2.0/migration.md) "notoc"
-            -   [misc](introduction/whats-new/2.0/misc.md) "notoc"
+            -   [Api](introduction/whats-new/2.0/api.md) "notoc"
+            -   [Editions](introduction/whats-new/2.0/editions.md) "notoc"
+            -   [Engine](introduction/whats-new/2.0/engine.md) "notoc"
+            -   [Extensions](introduction/whats-new/2.0/extensions.md) "notoc"
+            -   [Migration](introduction/whats-new/2.0/migration.md) "notoc"
+            -   [Misc](introduction/whats-new/2.0/misc.md) "notoc"
         -   [2.1](introduction/whats-new/2.1/index.md) "notoc"
         -   [2.2](introduction/whats-new/2.2/index.md) "notoc"
     -   [First steps](introduction/first-steps/index.md)
