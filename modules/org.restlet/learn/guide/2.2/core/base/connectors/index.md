@@ -98,17 +98,17 @@ just set it:
 
 Extension | Version | Protocols | Asynchronous | Comment
 --------- | ------- | --------- | ------------ | ---------
-[Internal](../../../core/engine/internal-connectors "Internal connectors") | 2.2 | HTTP, HTTPS, RIAP | Yes | Recommended for development
+[Internal](../../../core/engine/internal-connectors "Internal connectors") | 2.2 | HTTP, HTTPS, RIAP | No | Recommended for development and lightweight deployments
 [Jetty](../../../extensions/jetty "Eclipse Jetty extension") | 8.1 | HTTP, HTTPS, AJP | No | Recommended for robust and scalable deployments
 [NIO](../../../extensions/nio "NIO extension") | 2.2 | HTTP, HTTPS | Yes | Fully asynchronous, preview mode
-[Simple](../../../extensions/simple "Simple Framework extension") | 5.1 | HTTP, HTTPS | No | Recommended for lightweight deployments
+[Simple](../../../extensions/simple "Simple Framework extension") | 5.1 | HTTP, HTTPS | No | Recommended for lightweight and scalable deployments
 [Servlet](../../../extensions/servlet "Servlet extension") | 3.0 | HTTP, HTTPS, AJP | No | Recommended for deployments inside Java EE servers
 
 ### Client connectors
 
 Extension | Version | Protocols | Asynchronous | Proxy | Comment
 --------- | ------- | --------- | ------------ | ----- | -------
-[Internal](../../../core/engine/internal-connectors "Internal connectors") | 2.2 | CLAP, FILE, FTP, HTTP, HTTPS, RIAP | Yes | No | Stable but HTTP connectors are recommended for development and lightweight deployments
+[Internal](../../../core/engine/internal-connectors "Internal connectors") | 2.2 | CLAP, FILE, FTP, HTTP, HTTPS, RIAP | No | Yes | Recommended for development and lightweight deployments
 [Apache HTTP Client](../../../extensions/httpclient "Apache HTTP Client extension") | 4.3 | HTTP, HTTPS | No | Yes | Recommended for robust and scalable deployments
 [JavaMail](../../../extensions/javamail "JavaMail extension") | 1.4 | SMTP, SMTPS, POP, POPS | No |  No | Stable
 [JDBC](../../../extensions/jdbc "JDBC extension") | 3.0 | JDBC | No | No | Stable
