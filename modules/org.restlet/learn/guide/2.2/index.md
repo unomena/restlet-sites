@@ -11,29 +11,29 @@ Use the following syntax ("notoc" excludes a document from the table of content)
 -   [Part I - Introduction](introduction/index.md)
     -   [Features](introduction/features.md)
     -   [What's new](introduction/whats-new/index.md)
+        -   [2.2](introduction/whats-new/2.2/index.md) "notoc"
+        -   [2.1](introduction/whats-new/2.1/index.md) "notoc"
+        -   [2.0](introduction/whats-new/2.0/index.md) "notoc"
+            -   [API](introduction/whats-new/2.0/api.md) "notoc"
+            -   [Engine](introduction/whats-new/2.0/engine.md) "notoc"
+            -   [Extensions](introduction/whats-new/2.0/extensions.md) "notoc"
+            -   [Editions](introduction/whats-new/2.0/editions.md) "notoc"
+            -   [Misc](introduction/whats-new/2.0/misc.md) "notoc"
+            -   [Migration](introduction/whats-new/2.0/migration.md) "notoc"
         -   [1.1](introduction/whats-new/1.1/index.md) "notoc"
             -   [Extensions](introduction/whats-new/1.1/extensions.md) "notoc"
             -   [Migration](introduction/whats-new/1.1/migration.md) "notoc"
-        -   [2.0](introduction/whats-new/2.0/index.md) "notoc"
-            -   [Api](introduction/whats-new/2.0/api.md) "notoc"
-            -   [Editions](introduction/whats-new/2.0/editions.md) "notoc"
-            -   [Engine](introduction/whats-new/2.0/engine.md) "notoc"
-            -   [Extensions](introduction/whats-new/2.0/extensions.md) "notoc"
-            -   [Migration](introduction/whats-new/2.0/migration.md) "notoc"
-            -   [Misc](introduction/whats-new/2.0/misc.md) "notoc"
-        -   [2.1](introduction/whats-new/2.1/index.md) "notoc"
-        -   [2.2](introduction/whats-new/2.2/index.md) "notoc"
     -   [First steps](introduction/first-steps/index.md)
-        -   [First client](introduction/first-steps/first-client.md) "notoc"
         -   [First server](introduction/first-steps/first-server.md) "notoc"
+        -   [First client](introduction/first-steps/first-client.md) "notoc"
         -   [First application](introduction/first-steps/first-application.md) "notoc"
     -   [Architecture](introduction/architecture/index.md)
         -   [Persistence layer](introduction/architecture/persistence-layer.md) "notoc"
         -   [Presentation layer](introduction/architecture/presentation-layer.md) "notoc"
     -   [Getting started](introduction/getting-started/index.md)
+        -   [Eclipse](introduction/getting-started/eclipse.md) "notoc"
         -   [Maven](introduction/getting-started/maven.md) "notoc"
         -   [Maven Spring](introduction/getting-started/maven-spring.md) "notoc"
-        -   [Eclipse](introduction/getting-started/eclipse.md) "notoc"
         -   [Debugging tools](introduction/getting-started/debugging-tools.md) "notoc"
 -   [Part II - Core Restlet](core/index.md)
     -   [Mapping HTTP headers](core/http-headers-mapping.md)
@@ -46,10 +46,10 @@ Use the following syntax ("notoc" excludes a document from the table of content)
         -   [Client resource](core/resource/client.md) "notoc"
         -   [Server resource](core/resource/server.md) "notoc"
     -   [Routing package](core/routing/index.md)
-        -   [Attributes](core/routing/attributes.md) "notoc"
         -   [Hierarchical URIs](core/routing/hierarchical-uris.md) "notoc"
         -   [Redirection](core/routing/redirection.md) "notoc"
         -   [Static files](core/routing/static-files.md) "notoc"
+        -   [Attributes](core/routing/attributes.md) "notoc"
     -   [Security package](core/security/index.md)
         -   [Authentication](core/security/authentication.md) "notoc"
         -   [Authorization](core/security/authorization.md) "notoc"
