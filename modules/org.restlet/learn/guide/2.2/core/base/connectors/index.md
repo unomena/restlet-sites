@@ -113,4 +113,4 @@ Extension | Version | Protocols | Asynchronous | Proxy | Comment
 [JavaMail](../../../extensions/javamail "JavaMail extension") | 1.4 | SMTP, SMTPS, POP, POPS | No |  No | Stable
 [JDBC](../../../extensions/jdbc "JDBC extension") | 3.0 | JDBC | No | No | Stable
 [Lucene Solr](../../../extensions/lucene "Lucene extension") | 4.6 | SOLR | No | No | Stable
-[NIO](../../../extensions/nio "NIO extension") | 2.2 | HTTP, HTTPS | No | Yes | Fully asynchronous, preview mode
+[NIO](../../../extensions/nio "NIO extension") | 2.2 | HTTP, HTTPS | Yes | Yes | Fully asynchronous, preview mode
