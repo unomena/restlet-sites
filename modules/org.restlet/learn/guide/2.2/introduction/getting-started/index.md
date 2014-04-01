@@ -9,12 +9,5 @@ such as:
 -   [Maven and Spring](maven-spring "Getting Started with Maven and Spring")
 -   [Debugging tools](debugging-tools "Debugging tools")
 
-In addition, we highly recommend that you read community tutorials provided by Restlet users in various forms:
-
--   Detailled article
--   YouTube videos
--   Blog posts
-
 Finally, there is the [Restlet in Action](http://www.amazon.com/gp/product/193518234X/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=193518234X&linkCode=as2&tag=restlet-20)
 book written by Restlet creators and published by Manning that is a highly recommended reading for a smoother Restlet learning curve.
-
