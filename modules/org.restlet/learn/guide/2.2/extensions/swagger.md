@@ -1,20 +1,15 @@
 Swagger extension
 =================
 
-Introduction
-============
+This extension provides a preview integration with Swagger including:
+* generation of Swagger descriptor in JSON
+* introspect JAX-RS API based applications
 
-This extension is an integration with Swagger.
-This integration is still in progress, it should be stabilized for release 2.2.0.
-
-The support of Swagger must be completed for 2.2.0:
-
-* generation of json descriptor
-* integration of Swagger-ui
-* parsing of json descriptor in order to set up application
-* rework initial contribution by Grzegorz - for Jax-rs applications
+Additional work is required to:
+* ship the Swagger UI
+* parse a Swagger descriptor in JSON to set up an application
+* extend the introspection to Restlet API based applications
 
 
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/swagger/package-summary.html).
-
