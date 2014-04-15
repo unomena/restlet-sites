@@ -33,7 +33,8 @@ We assume that you have a development environment set up and
 operational, and that you already have installed the Java 1.5 (or
 higher). In case you haven't downloaded the Restlet Framework yet,
 select one of the available distributions of the [Restlet Framework
-${restlet-version-minor}](http://restlet.org/download/).
+${restlet-version-minor}](http://restlet.org/download/). Make sure you 
+add org.restlet.jar in your Build path.
 
 The "hello, world" application
 ------------------------------
@@ -121,9 +122,10 @@ public static void main(String[] args) throws Exception {
 
 Once you have launched the main class, if you can open your favorite web
 browser, and gently type the following URL:
-http://localhost:8182/firstSteps/hello, the server will happily welcome
-you with a nice "hello, world". Otherwise, make sure that the classpath
-is correct and that no other program is currently using the port 8182.
+[http://localhost:8182/firstSteps/hello](http://localhost:8182/firstSteps/hello)
+, the server will happily welcome you with a nice "hello, world". Otherwise, 
+make sure that the classpath is correct and that no other program is currently 
+using the port 8182.
 
 You can find the sources of this sample application in the
 "[FirstStepsStandalone](/learn/guide/2.1#/371-restlet/version/default/part/AttachmentData/data "firstStepsStandalone")
