@@ -32,6 +32,8 @@ For additional details, please consult the
 Usage example
 =============
 
+Please consult [connector configuration documentation](../../core/base/connectors)
+
 HTTPS
 -----
 
