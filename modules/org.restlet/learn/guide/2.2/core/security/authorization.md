@@ -46,7 +46,7 @@ in your build path.
 	
 	    	Router baseRouter = new Router(getContext());
 	        
-	        //Protect the router by enforcing authentication then authorization
+	        //Protect the resource by enforcing authentication then authorization
 	        authorizer.setNext(ServerResource.class);
 	        authenticator.setNext(baseRouter);
 	    	
@@ -74,14 +74,11 @@ in your build path.
 	        //Attach verifier to check authentication and enroler to determine roles
 	        guard.setVerifier(realm.getVerifier());
 	        guard.setEnroler(realm.getEnroler());
-	
-	        //You can also create your own authentication system by creating 
-	        //classes extending SecretVerifier or LocalVerifier
 	        return guard;
 	    }
 	    
 	    private RoleAuthorizer createRoleAuthorizer() {
-	    	//Only authorize owners on roleAuth's children
+	    	//Authorize owners and forbid users on roleAuth's children
 	    	RoleAuthorizer roleAuth = new RoleAuthorizer();
 	    	roleAuth.getAuthorizedRoles().add(Role.get(this, ROLE_OWNER));
 	    	roleAuth.getForbiddenRoles().add(Role.get(this, ROLE_USER));
