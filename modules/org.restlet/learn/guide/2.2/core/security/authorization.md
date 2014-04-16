@@ -22,16 +22,19 @@ and if your authorization rules don't vary too much between resources.
 Otherwise, you might end-up with an Authorizer instance in front of each
 resource class...
 
-Here is a simple example, the resources are empty so you will get a "404 Not 
-found" error when accessing resources with authorized profile and "403 Forbidden"
-otherwise.
+Here is a simple example, you will get a String response containing the
+resource's name when accessing resources with authorized profile and 
+a "403 Forbidden" error otherwise.
 
-The code is self-sufficient so you just need to copy-paste it in a MyAPI 
-class and run it. Don't forget to add the JSE edition org.restlet.jar 
+This code is self-sufficient so you just need to copy-paste it in a 
+MyApiWithRoleAuthorization class, create the resources as shown below 
+and run it. Don't forget to add the JSE edition org.restlet.jar 
 ([download here](http://restlet.org/download/current#release=stable&edition=jse))
 in your build path.
 
-	public class MyApi extends Application {
+Main class for role authorization example:
+
+    public class MyApiWithRoleAuthorization extends Application {
 	
 	    //Define role names
 	    public static final String ROLE_USER = "user";
@@ -47,13 +50,13 @@ in your build path.
 	    	Router baseRouter = new Router(getContext());
 	        
 	        //Protect the resource by enforcing authentication then authorization
-	        authorizer.setNext(ServerResource.class);
+	        authorizer.setNext(Resource0.class);
 	        authenticator.setNext(baseRouter);
 	    	
 	    	//Protect only the private resources with authorizer
 	    	//You could use several different authorizers to authorize different roles
-	    	baseRouter.attach("/resourceTypePrivate/", authorizer);
-	    	baseRouter.attach("/resourceTypePublic/", router);
+	    	baseRouter.attach("/resourceTypePrivate", authorizer);
+	    	baseRouter.attach("/resourceTypePublic", router);
 	        return authenticator;
 	    }
 	    
@@ -70,7 +73,6 @@ in your build path.
 	        realm.getUsers().add(owner);
 	        realm.map(owner, Role.get(this, ROLE_OWNER));
 	        
-	
 	        //Attach verifier to check authentication and enroler to determine roles
 	        guard.setVerifier(realm.getVerifier());
 	        guard.setEnroler(realm.getEnroler());
@@ -88,8 +90,8 @@ in your build path.
 	    private Router createRouter() {
 	        //Attach Server Resources to given URL
 	        Router router = new Router(getContext());
-	        router.attach("resource1/", ServerResource.class);
-	        router.attach("resource2/", ServerResource.class);
+	        router.attach("/resource1/", Resource1.class);
+	        router.attach("/resource2/", Resource2.class);
 	        return router;
 	    }
 	    
@@ -97,10 +99,71 @@ in your build path.
 	        //Attach application to http://localhost:9000/v1
 	        Component c = new Component();
 	        c.getServers().add(Protocol.HTTP, 9000);
-	        c.getDefaultHost().attach("/v1", new MyApi());
+	        c.getDefaultHost().attach("/v1", new MyApiWithRoleAuthorization());
 	        c.start();
 	    }
 	}
+
+Resources classes, call them Resource1, Resource2 etc... and copy-paste
+their content from here: 
+
+    public class Resource0 extends ServerResource{
+
+        @Get
+    	public String represent() throws Exception {
+    		return this.getClass().getSimpleName() + " found !";
+    	}
+    	
+    	@Post
+    	public String add() {
+    		return this.getClass().getSimpleName() + " posted !";
+    	}
+    	
+    	@Put
+    	public String change() {
+    		return this.getClass().getSimpleName() + " changed !";
+    	}
+    	
+    	@Patch
+    	public String partiallyChange() {
+    		return this.getClass().getSimpleName() + " partially changed !";
+    	}
+    	
+    	@Delete
+    	public String destroy() {
+    		return this.getClass().getSimpleName() + " deleted!";
+    	}
+    }
+    
+Main class for method authorization example, use the last class and replace 
+its createInboundRoot and createRoleAuthorizer with the methods below:
+
+    @Override
+    public Restlet createInboundRoot() {
+        //ChallengeAuthenticator
+        ChallengeAuthenticator ca = createAuthenticator();
+        ca.setOptional(true);
+        
+        //MethodAuthorizer
+        MethodAuthorizer ma = createMethodAuthorizer();
+        ca.setNext(ma);
+        
+        //Router
+        ma.setNext(createRouter());
+        return ca;
+    }
+
+    private MethodAuthorizer createMethodAuthorizer() {
+        //Authorize GET for anonymous users and GET, POST, PUT, DELETE for 
+        //authenticated users
+    	MethodAuthorizer methodAuth = new MethodAuthorizer();
+    	methodAuth.getAnonymousMethods().add(Method.GET);
+    	methodAuth.getAuthenticatedMethods().add(Method.GET);
+    	methodAuth.getAuthenticatedMethods().add(Method.POST);
+    	methodAuth.getAuthenticatedMethods().add(Method.PUT);
+    	methodAuth.getAuthenticatedMethods().add(Method.DELETE);
+    	return methodAuth;
+    }
 
 Fine-grained authorization
 ==========================
@@ -110,25 +173,60 @@ class, or more complexly specific to resource instances, then it is
 better to handle them at the resource level manually. As an help, you
 can leverage the ServerResource\#isInRole() method.
 
-In the previous code, you can just attach Resource1ServerResource.class
-instead of ServerResource.class to "resource1/" and create 
-Resource1ServerResource with a copy-paste of the code below.
+Create a simple server as below:
 
-	public class Resource1ServerResource extends ServerResource {
+    public class ApiWithFineGrainedAuthorization extends Application {
 
-		@Get
-		public String represent() throws ResourceException {
-	        if (!isInRole(MyApi.ROLE_OWNER)) {
-	            getLogger().info("Unauthorized user");
-	            throw new ResourceException(Status.CLIENT_ERROR_FORBIDDEN);
-	        }
-	        return "Hello world !";
-		}
-	}
+        @Override
+    	public org.restlet.Restlet createInboundRoot() {
+    		Router root = new Router(getContext());
+    		root.attach("/resource1", ResourceFineGrained.class);
+    		return root;
+    	}
+    	
+    	public static void main(String[] args) throws Exception {
+    		//Attach application to http://localhost:9000/v1
+            Component c = new Component();
+            c.getServers().add(Protocol.HTTP, 9000);
+            c.getDefaultHost().attach("/v1", new MyApiWithMethodAuthorization());
+            c.start();
+    	}
+    }
+    
+With a resource like this:
 
-You will need to use the owner profile for every GET call to 
-[http://localhost:9000/v1/resourceTypePublic/resource1/](http://localhost:9000/v1/resourceTypePublic/resource1/)
-to see the API's greeting and will get a "403 Forbidden" otherwise.
+    public class ResourceFineGrained extends ServerResource {
+
+        @Get
+        public String represent() throws ResourceException {
+    		if (!getRequest().getProtocol().equals(Protocol.HTTPS)) {
+    			throw new ResourceException(new Status(426, "Upgrade required", "You should switch to HTTPS", ""));
+    		}
+            return this.getClass().getSimpleName() + " found !";
+    	}
+    	
+    	@Post
+    	public String postMe() {
+    		if (!isInRole(MyApiWithRoleAuthorization.ROLE_OWNER)) {
+    			throw new ResourceException(Status.CLIENT_ERROR_FORBIDDEN);
+    		}
+    		return this.getClass().getSimpleName() + " posted !";
+    	}
+    	
+    	@Patch
+    	public String patchMe() {
+    		if (!getClientInfo().isAuthenticated()) {
+    			throw new ResourceException(Status.CLIENT_ERROR_METHOD_NOT_ALLOWED);
+    		}
+    		return this.getClass().getSimpleName() + " patched !";
+    	}
+    }
+
+For a call to [http://localhost:9000/v1/resourceTypePublic/resource1/](http://localhost:9000/v1/resourceTypePublic/resource1/)
+you will need to use the owner profile to use POST and just authenticate to use PATCH.
+You will need to use an 
+[HTTPS endpoint](http://restlet.org/learn/guide/2.2/core/security/https) 
+to GET this resource. 
 
 Middle-grained authorization
 ============================
