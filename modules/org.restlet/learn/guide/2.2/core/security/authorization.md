@@ -10,6 +10,8 @@ We identified four approaches to authorization in a Restlet application.
 When we mentionned LDAP as a permission store, it could be replaced by a
 static file or by any sort of database.
 
+You can find the sources of the code shown [here](/learn/archives/examples/authorization/2.2/sources.zip).
+
 Coarse-grained authorization
 ============================
 
@@ -243,4 +245,3 @@ should be created and attached to the proper place in the routing graph.
 
 Therefore you wouldn't need to duplicate URI matching code or have to
 maintain URI templates in several places.
-
