@@ -46,9 +46,9 @@ launch the introspector:
        -h
               Prints this help
        -u
-              The mandatory APISpark user login
+              The mandatory APISpark userName
        -p
-              The mandatory APISpark user security token
+              The mandatory APISpark user secret key
        -s
               The optional APISpark platform URL (by default
               https://apispark.com)
