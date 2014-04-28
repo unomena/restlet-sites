@@ -4,18 +4,18 @@ APISpark extension
 Introduction
 ============
 
-This extension provides a tool to import the contract of your RF web API in 
-our platform for web APIs [APISpark](https://apispark.com/) (AS).
+This extension provides a tool to import the contract of your Restlet web API in 
+the [APISpark](https://apispark.com/) full-stack PaaS for web APIs.
 
 This will allow you to: 
- - Document an existing RF-based web API within APISpark
- - Synchronize web API changes initiated from both RF and AS sides
+ - Document an existing Restlet-based web API within APISpark
+ - Synchronize web API changes initiated from both Restlet and APISpark sides
  - Generate client SDK and server skeleton
- - Manage RF based web APIs from APISpark in proxy mode and indirect mode
-by pushing API access log data back to AS and supporting users provisioning 
-from AS
+ - Manage Restlet-based web APIs from APISpark in proxy mode and indirect mode
+by pushing API access log data back to APISpark and supporting users provisioning 
+from APISpark
  - Push server skeleton generation from AS into GitHub repository
- - Pull API definition changes from GitHub repository into AS
+ - Pull API definition changes from GitHub repository into APISpark
  - Get an embeddable API documentation served by APISpark
  - Host RF based web API in APISpark with proper containerization
 
