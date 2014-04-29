@@ -83,7 +83,7 @@
       <div class='header'>
         <div class='container'>
           <a class='brand' href="/" title='Restlet Framework'>
-            <img alt='Restlet Framework Logo' height='136' width='129' src='/images/logo-restlet-new.png' />
+            <img alt='Restlet Framework Logo' height='136' width='129' src='/images/logo-restlet.png' />
           </a>
           <ul class='nav'>
     <#list sections.section as section>
