@@ -47,7 +47,7 @@ launch the introspector:
     
 The parameters u and p are mandatory, you should use them to provide your AS 
 user login and token. You can get those [here](https://apispark.com/account/overview)
-under the tab "tokens".
+under the tab "tokens", you will need to be authenticated.
 
 Information injected in APISpark
 --------------------------------
