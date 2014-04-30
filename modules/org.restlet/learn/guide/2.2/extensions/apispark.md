@@ -56,7 +56,7 @@ user login and token. You can get those [here](https://apispark.com/account/over
 under the tab "tokens", you will need to be authenticated.
 
 You can find the parameter d in two ways. It is in the URL you will get when creating
-the definition: "https://apispark.com/apis/parameter_d/versions/1". If you didn't write
+the definition: "https://apispark.com/apis/parameter_d/versions/1/". If you didn't write
 it down, you can go to your [dashboard](https://apispark.com/dashboard), click on the 
 Web API Contract you want to update and get the same URL.
 
