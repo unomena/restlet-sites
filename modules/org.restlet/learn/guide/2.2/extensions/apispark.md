@@ -63,6 +63,8 @@ Web API Contract you want to update and get the same URL.
 Information injected in APISpark
 --------------------------------
 
-You can find an example of documentation generated via this extension 
+![](./injectedOverview.png)
+
+You can find a complete example of documentation generated via this extension 
 [here](https://apispark.com/apis/1255/versions/1/overview/). 
 <!-- we should provide a valid cell here (I created cell 1255 by hand).-->
