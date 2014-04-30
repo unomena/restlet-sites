@@ -55,10 +55,11 @@ The parameters u and p are mandatory, you should use them to provide your APISpa
 user login and token. You can get those [here](https://apispark.com/account/overview)
 under the tab "tokens", you will need to be authenticated.
 
-You can find the parameter d in two ways. It is in the URL you will get when creating
-the definition: "https://apispark.com/apis/parameter_d/versions/1/". If you didn't write
-it down, you can go to your [dashboard](https://apispark.com/dashboard), click on the 
-Web API Contract you want to update and get the same URL.
+You can find the parameter d in two ways. It will be in the response body when you
+first use the extension on your API. If you did not write it down then, you can 
+go to your [dashboard](https://apispark.com/dashboard), click on the Web API Contract 
+you want to update and get it from the URL. The URL should look like this: 
+https://apispark.com/apis/parameter_d/version/1/
 
 Information injected in APISpark
 --------------------------------
