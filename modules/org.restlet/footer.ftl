@@ -98,7 +98,7 @@ mixpanel.init("93f5221471dfd58f4d1823699fe71294",{debug:true});
       <div class='header'>
         <div class='container'>
           <a class='brand' href="/" title='Restlet Framework'>
-            <img alt='Restlet Framework Logo' height='136' width='129' src='/images/logo-restlet.png' />
+            <img alt='Restlet Framework Logo' height='136' width='129' src='/images/logo-restlet-new.png' />
           </a>
           <ul class='nav'>
     <#list sections.section as section>

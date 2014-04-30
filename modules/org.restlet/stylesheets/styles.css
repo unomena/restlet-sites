@@ -26,7 +26,7 @@ body {
 }
 
 .hero {
-	background-image: url(/images/header-bg.png);
+	background-image: url(/images/header-bg-new.png);
 	border-left: 1px solid #E1E1E1;
 	border-right: 1px solid #E1E1E1;
 	margin-bottom: 0;
@@ -73,7 +73,7 @@ body {
 }
 
 .hero.ac {
-	border-bottom: solid 10px #fec828;
+	border-bottom: solid 10px #e98c00;
 }
 
 .hero.ac.smallHeader {
