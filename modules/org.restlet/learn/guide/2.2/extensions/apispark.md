@@ -23,7 +23,7 @@ The Restlet extension for APISpark provides a code introspector that takes
 a class (your Restlet class extending the class Application) as a parameter 
 and instantiates its components to retrieve the contract of your API.
 
-You will need to [sign up to APISpark](https://apispark.com/) and 
+You will need to [sign up to APISpark](https://apispark.com/signin) and 
 launch the introspector, here is its commande line help: 
 
     SYNOPSIS
