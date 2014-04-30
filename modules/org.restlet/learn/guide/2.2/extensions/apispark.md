@@ -51,7 +51,7 @@ launch the introspector, here is its commande line help:
                   The optional id of an existing definition hosted by APISpark you
                   want to update with this new documentation.
     
-The parameters u and p are mandatory, you should use them to provide your AS 
+The parameters u and p are mandatory, you should use them to provide your APISpark 
 user login and token. You can get those [here](https://apispark.com/account/overview)
 under the tab "tokens", you will need to be authenticated.
 
