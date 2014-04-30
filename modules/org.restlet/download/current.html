@@ -96,10 +96,11 @@ ${downloadSection}
 </div>
 <!--End mc_embed_signup-->
 </#if>
-<#if showMaven?has_content>
+<div id="maven_infos">
 <#include "maven.ftl">
-<#elseif showEclipse?has_content>
+</div>
+<div id="eclipse_infos">
 <#include "eclipse.ftl">
-</#if>
+</div>
 </#noparse>
 </#global>

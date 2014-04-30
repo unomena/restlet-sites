@@ -66,37 +66,125 @@ function setDownloadButton() {
 		}
 		urlChangesLog += "/changes";
 
-		$('#download').append('<p><button class="btn btn-large btn-success" type="button">Download ' + version.fullVersionCompact + '</button></p>');
-		if (distribution.fileType == "maven") {
-			//$('#download').append('<p>Group id: ' + distribution.mavenGroupId + '</p>');
-			//$('#download').append('<p>Version: ' + version.mavenVersion + '</p>');
-		} else if (distribution.fileType == "p2") {
-			//$('#download').append('<p>Url: ' + distribution.p2Url + '</p>');			
-		} else {
+		$('#download').append('<p><input type="text" id="email" placeholder="Email"/><button id="downloadGuide" class="btn btn-large btn-success" type="button">Download Guide</button></p>');
+		$('#download').append('<p><button id="download_rf" class="btn btn-large btn-success" type="button">Download ' + version.fullVersionCompact + '</button></p>');
+		
+		if (distribution.fileType !== "maven"
+			&& distribution.fileType !== "p2") {
 			$('#download').append('<p>File size: ' + distribution.fileSize + '</p>');			
 		}
 		$('#download').append('<p>Date: ' + version.published + '</p>');
 		$('#download').append('<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
+		
+		$('#downloadGuide').click(
+				function() {
+					mixpanel.track("Shared email", {
+						"email": $("#email").val(),
+						"Email field location":"Kin Lane Guide"
+					});
+					mixpanel.alias($("#email").val());
+					mixpanel.track("Donwloaded Kin Lane Guide");
+					mixpanel.people.set({"$email": $("#email").val()});
+				}
+		);
 
 		if (distribution.fileType == "maven") {
-			$('#download button').click(
+			$('#download_rf').click(
 					function() {
-						document.location.href = "/download/current?distribution=maven&release=" + version.id + "&edition=" + edition.id;
+						$('#eclipse_infos').css('display','none');
+						$('#maven_infos').css('display','none');
+						var hrefCallback = function() {
+							//document.location.href = "/download/current?distribution=maven&release=" + version.id + "&edition=" + edition.id;
+							$('#maven_infos').css('display','block');
+						}
+						
+						// in case Mixpanel servers don't get back to us in time
+						// we use the same timeout value as the one defined in Mixpanel config
+						window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
+						
+						// fire the tracking event, if the event is done before the
+						// timeout, the previous hrefCallback call is cancelled by
+						// the call to document.location.href
+						mixpanel.track("Downloaded Restlet Framework", {
+							"Version":version.id,
+							"Release":qualifier.name,
+							"Edition":edition.middlename,
+							"Distribution":distribution.fileType
+						}, hrefCallback);
 					});
 		} else if (distribution.fileType == "p2") {
-			$('#download button').click(
+			$('#download_rf').click(
 					function() {
-						document.location.href = "/download/current?distribution=p2&release=" + version.id + "&edition=" + edition.id;
+						$('#eclipse_infos').css('display','none');
+						$('#maven_infos').css('display','none');
+						
+						var hrefCallback = function() {
+							//document.location.href = "/download/current?distribution=p2&release=" + version.id + "&edition=" + edition.id;
+							$('#eclipse_infos').css('display','block');
+							
+						}
+						
+						// in case Mixpanel servers don't get back to us in time
+						// we use the same timeout value as the one defined in Mixpanel config
+						window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
+						
+						// fire the tracking event, if the event is done before the
+						// timeout, the previous hrefCallback call is cancelled by
+						// the call to document.location.href
+						mixpanel.track("Downloaded Restlet Framework", {
+							"Version":version.id,
+							"Release":qualifier.name,
+							"Edition":edition.middlename,
+							"Distribution":"eclipse"
+						}, hrefCallback);
 					});			
 		} else if (redirectDownload) {
-			$('#download button').click(
+			$('#download_rf').click(
 					function() {
-						document.location.href = "/download/current?distribution=" + distribution.fileType + "&release=" + version.id + "&edition=" + edition.id;
+						$('#eclipse_infos').css('display','none');
+						$('#maven_infos').css('display','none');
+						var hrefCallback = function() {
+							document.location.href = "/download/current?distribution=" + distribution.fileType + "&release=" + version.id + "&edition=" + edition.id;
+						}
+						
+						// in case Mixpanel servers don't get back to us in time
+						// we use the same timeout value as the one defined in Mixpanel config
+						window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
+						
+						// fire the tracking event, if the event is done before the
+						// timeout, the previous hrefCallback call is cancelled by
+						// the call to document.location.href
+						mixpanel.track("Downloaded Restlet Framework", {
+							"Version":version.id,
+							"Release":qualifier.name,
+							"Edition":edition.middlename,
+							"Distribution":distribution.fileType
+						}, hrefCallback);
 					});			
 		} else {
-			$('#download button').click(
+			$('#download_rf').click(
 					function() {
-						document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
+						$('#eclipse_infos').css('display','none');
+						$('#maven_infos').css('display','none');
+						var hrefCallback = function() {
+							document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
+						}
+						
+						// in case Mixpanel servers don't get back to us in time
+						// we use the same timeout value as the one defined in Mixpanel config
+						var trackTimeout = window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
+						
+						// fire the tracking event, if the event is done before the
+						// timeout, we call a window.clearTimeout
+						mixpanel.track("Downloaded Restlet Framework", {
+							"Version":version.id,
+							"Release":qualifier.name,
+							"Edition":edition.middlename,
+							"Distribution":distribution.fileType
+						}, function() {
+							window.clearTimeout(trackTimeout);
+							hrefCallback();
+						});
 					});
 		}
 	}
