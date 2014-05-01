@@ -14,7 +14,7 @@ Additional work is required to:
 Sample code
 ===========
 
-A full source code is available [here](/learn/archives/examples/swagger/${restlet-version-minor}/org.restlet.example.swagger-jaxrs.zip): 
+A simpe source code is available [here](/learn/archives/examples/swagger/${restlet-version-minor}/org.restlet.example.swagger-jaxrs.zip): 
 
 One side, develop your JaxRs based application, and document it using Swagger annotations.
 
