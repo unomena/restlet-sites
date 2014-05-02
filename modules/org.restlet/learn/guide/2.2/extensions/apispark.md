@@ -72,22 +72,29 @@ Application class named MyContacts:
 You should add the following jars (provided in the lib folder of 
 [restlet framework](http://restlet.org/download/current#release=stable&edition=jse&distribution=zip 
 "download restlet framework")) 
-in the "/path/to/your/lib" folder or manually to the classpath:
+in the "/path/to/your/lib" folder or manually to the classpath.
 
+In Restlet framework lib directory:
  - org.restlet.jar (Restlet API)
+ - org.restlet.ext.apispark.jar (Restlet APISpark extension with Introspector class)
  - org.restlet.ext.jackson.jar (Restlet Jackson extension)
- - com.fasterxml.jackson.annotations.jar (Jackson library, in Restlet framework lib/com.fasterxml.jackson_2.2/)
+ - org.restlet.ext.xml (Restlet xml extension in Restlet framework lib directory)
+ - org.restlet.ext.wadl (Restlet xml extension in Restlet framework lib directory)
+
+
+In Restlet framework lib/com.fasterxml.jackson_2.2/ directory:
+ - com.fasterxml.jackson.annotations.jar 
  - com.fasterxml.jackson.core.jar
  - com.fasterxml.jackson.csv.jar
  - com.fasterxml.jackson.databind.jar
  - com.fasterxml.jackson.smile.jar
  - com.fasterxml.jackson.xml.jar
  - com.fasterxml.jackson.yaml.jar
- - org.restlet.ext.apispark.jar (Restlet APISpark extension with Introspector class)
+
+Your packaged web API:
  - org.restlet.api.jar (your packaged web API)
- 
-If you want the introspector to display suggestions on how to improve your 
-documentation, you can provide this parameter: 
+
+If you want the introspector to display logs during the process, you can provide this parameter: 
 
     -Djava.util.logging.config.file="/path/to/logging/properties/logging.properties"
 
