@@ -75,10 +75,14 @@ You should add the following jars (provided in the lib folder of
 in the "/path/to/your/lib" folder or manually to the classpath:
 
  - org.restlet.jar (Restlet API)
- - org.restlet.ext.jackson.jar (Jackson library)
- - com.fasterxml.jackson.annotations.jar
+ - org.restlet.ext.jackson.jar (Restlet Jackson extension)
+ - com.fasterxml.jackson.annotations.jar (Jackson library, in Restlet framework lib/com.fasterxml.jackson_2.2/)
  - com.fasterxml.jackson.core.jar
+ - com.fasterxml.jackson.csv.jar
  - com.fasterxml.jackson.databind.jar
+ - com.fasterxml.jackson.smile.jar
+ - com.fasterxml.jackson.xml.jar
+ - com.fasterxml.jackson.yaml.jar
  - org.restlet.ext.apispark.jar (Restlet APISpark extension with Introspector class)
  - org.restlet.api.jar (your packaged web API)
  
