@@ -97,11 +97,15 @@
 	margin-bottom: 5px;
 }
 
+.modalDialog.kinlane div.doc-desc > div.doc-content h4 {
+	font-size: 16px;
+}
+
 .modalDialog.kinlane div.doc-desc > div.doc-content > div.text {
 	margin-top: 15px;
 	padding-top: 5px;
 	padding-right: 120px;
-	font-size: 14px;
+	font-size: 13px;
 	height: 110px;
 	line-height: 140%;
 }
