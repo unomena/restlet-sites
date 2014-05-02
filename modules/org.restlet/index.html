@@ -76,7 +76,12 @@
 	    	<a href="http://apispark.com"><img src="/images/apispark-logo-new.png" alt="APISpark"/></a>
 	    </div>
 	    <div class="button">
-	    	<button class="btn btn-large btn-tryit-hp" type="button"><a href="http://apispark.com/signin/">Try It</a></button>
+	    	<button id="apispark-button" class="btn btn-large btn-tryit-hp" type="button">Try It</button>
+	    	<script type="text/javascript">
+	        	$('#apispark-button ').click(function() {
+	        		document.location.href='http://apispark.com/signin/';
+	        	});
+	        </script>
 	    </div>
     </div>
 </div>
@@ -96,7 +101,12 @@
     		<a href="/download/"><img src="/images/logo_restletframework-new.png" alt="Restlet Framework"/></a>
    		</div>
 	    <div class="button">
-	        <button class="btn btn-large btn-download-hp" type="button"><a href="/download/">Download</a></button>
+	        <button id="restlet-framework-button" class="btn btn-large btn-download-hp" type="button">Download</button>
+	        <script type="text/javascript">
+	        	$('#restlet-framework-button ').click(function() {
+	        		document.location.href='/download/';
+	        	});
+	        </script>
 	    </div>
     </div>
 </div>
