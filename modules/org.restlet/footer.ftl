@@ -50,6 +50,9 @@
       <script                type="text/javascript"     src="/javascript/tutorial.js"></script>
     </#if>
 </#if>
+      <script type="text/javascript" src="/javascript/mixpanel.js"></script>
+
+
       <script type="text/javascript">
 <#if pp.sourceFile?matches("learn\\/[0-9]\\.[0-9]$") >
         $.cookie('branch', '${pp.sourceFile?substring(6)}', {path: '/' });
@@ -74,7 +77,6 @@
 
   ga('create', 'UA-32616835-2', 'restlet.org');
   ga('send', 'pageview');
-
 </script>
    </head>
 
@@ -83,7 +85,7 @@
       <div class='header'>
         <div class='container'>
           <a class='brand' href="/" title='Restlet Framework'>
-            <img alt='Restlet Framework Logo' height='136' width='129' src='/images/logo-restlet.png' />
+            <img alt='Restlet Framework Logo' height='136' width='129' src='/images/logo-restlet-new.png' />
           </a>
           <ul class='nav'>
     <#list sections.section as section>
@@ -176,5 +178,6 @@
 <#if footer??>
     ${footer}
 </#if>
+   
    </body>
 </html>

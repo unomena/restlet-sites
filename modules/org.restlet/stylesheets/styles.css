@@ -10,6 +10,10 @@ body {
 	padding-bottom: 8px;
 }
 
+.without-bottom-margin {
+	margin-bottom: 0px;
+}
+
 .header>.container {
 	position: relative;
 }
@@ -26,7 +30,7 @@ body {
 }
 
 .hero {
-	background-image: url(/images/header-bg.png);
+	background-image: url(/images/header-bg-new.png);
 	border-left: 1px solid #E1E1E1;
 	border-right: 1px solid #E1E1E1;
 	margin-bottom: 0;
@@ -73,7 +77,7 @@ body {
 }
 
 .hero.ac {
-	border-bottom: solid 10px #fec828;
+	border-bottom: solid 10px #e98c00;
 }
 
 .hero.ac.smallHeader {
@@ -340,9 +344,48 @@ hr {
     border-width: 0 0 1px;
     margin: 20px 0 19px;
 }*/
-.apispark-logo {
-	text-align: right;
+
+
+#apispark {
+	overflow: hidden;
+}
+
+#apispark .logo {
+	float: left;
 	margin-left: 0px;
+	width: 215px
+}
+#apispark .button {
+	float: right;
+	margin-left: 0px;
+	margin-top: 20px
+}
+
+#apispark .button > a {
+	text-decoration: none;
+	color: white;
+}
+
+
+#restlet-framework {
+	overflow: hidden;
+}
+
+#restlet-framework .logo {
+	float: left;
+	margin-left: 0px;
+	width: 215px
+}
+
+#restlet-framework .button {
+	float: right;
+	margin-left: 0px;
+	margin-top: 20px
+}
+
+#restlet-framework .button > a {
+	text-decoration: none;
+	color: white;
 }
 
 .span3.download p {
@@ -576,6 +619,14 @@ div.content.footerWrapper {
 
 .book .span7 {
 	margin-left: 20px;
+}
+
+#maven_infos {
+	display: none;
+}
+
+#eclipse_infos {
+	display: none;
 }
 
 #footer {

@@ -1,4 +1,4 @@
-<#global title="Restlet Framework - RESTful web API framework for Java" />
+<#global title="Restlet - Web API platform for Java" />
 <#global headerClass="header"/>
 <#global javascript_files=["/javascript/jquery-1.9.0.min.js", "/javascript/jquery-cookie.js", "/javascript/jsclass-core.js", "/javascript/json-minified.js", "/javascript/restlet-client.js", "/javascript/restlet-feedSummary.js", "/javascript/bootstrap.min.js", "/javascript/data.js", "/javascript/distributions.js", "/javascript/combo-widget.js"] />
 <#global javascript>
@@ -7,36 +7,40 @@
 	});
 </#global>
 <#global header>
-<h3>The leading web API framework for Java</h3>
+<h3>The Leading Web API Platform for Java</h3>
 <p>
-	Do you want to blend your web services, web sites and web clients into unified web applications exposing and consuming RESTful web APIs?
+	Restlet platform offers a comprehensive solution for all your RESTful web API needs.
 </p>
 <p>
-	Leverage the open source Restlet Framework and its unique Java API available in six consistent editions: Java SE, Java EE, <a href="http://blog.restlet.com/2011/11/09/restlet-improves-support-for-osgi-with-new-edition-and-eclipse-update-site/">OSGi</a>, <a href="http://blog.restlet.com/2009/04/11/restlet-in-the-cloud-with-google-app-engine/">GAE</a>, <a href="http://blog.restlet.com/2009/05/06/restlet-available-on-android-phones/">Android</a> and <a href="http://blog.restlet.com/2008/07/25/restlet-ported-to-gwt/">GWT</a>!
+	Its open source Restlet Framework lets you code powerful and scalable custom web APIs in Java, 
+	while its APISpark PaaS lets you document, deploy and manage them.
 </p>
 </#global>
 <#global content>
-<div class='span3 left section'>
+<div class="row-fluid">
+<div class='span4 left section'>
 		<a href="/discover/" title="Discover"><img src="/images/discover.png" /></a>
 		<h2>Discover</h2>
 		<p>What are the main features of Restlet Framework? Get excited by what others said. Take the first steps to get yourself started.</p>
 </div>
-<div class='span3 center section'>
+<div class='span4 center section'>
 	<div>
 		<a href="/learn/" title="Learn"><img src="/images/learn.png" /></a>
 		<h2>Learn</h2>
 		<p>Get further with Restlet Framework by reading tutorials, Javadocs, books and additional resources. Follow the roadmap for upcoming releases.</p>
 	</div>
 </div>
-<div class='span3 right section'>
+<div class='span4 right section'>
 	<div>
 		<a href="/participate/" title="Participate"><img src="/images/participate.png" /></a>
 		<h2>Participate</h2>
 		<p>Get support and meet the team. Become a contributor by reporting issues, fixing bugs, adding new features and documentation.</p>
 	</div>
 </div>
+</div>
 <div class="clearBoth"></div>
-<div class='span3 left section'>
+<div class="row-fluid">
+<div class='span4 left section'>
     <div>
         <p>
             <a href="/discover/">Learn more</a>
@@ -44,37 +48,80 @@
         </p>
     </div>
 </div>
-<div class='span3 center section'>
+<div class='span4 center section'>
     <div>
         <p>
             <a href="/learn/">Learn more</a>
         </p>
     </div>
 </div>
-<div class='span3 right section'>
+<div class='span4 right section'>
     <div>
         <p>
             <a href="/participate/">Learn more</a>
+            <span style="float: right"><iframe src="http://ghbtns.com/github-btn.html?user=restlet&repo=restlet-framework-java&type=watch&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="87" height="20"></iframe></span>
         </p>
     </div>
 </div>
-
-<div class="clearBoth"></div>
-<hr />
-<!-- Start Download section -->
-${downloadSection}
-<!-- End Download section -->
-<div class="clearBoth"></div>
-<hr />
-<div class="span5 left section">
-    <div class="apispark-logo"><a href="http://apispark.com"><img src="/images/apispark-logo.png" alt="APISpark"/></a></div>
 </div>
-<div class="span5 right section">
-    <h4>The all-in-one platform for web APIs</h4>
+<div class="clearBoth"></div>
+<hr />
+<div class="row-fluid">
+<div class="span6 left section without-bottom-margin">
+    <h4>Full Stack PaaS for Web APIs</h4>
     <p>
-        APISpark is a cloud platform (PaaS) that offers end-to-end support for creating, hosting,
-        managing and using web APIs from a simple web browser. <a href="http://apispark.com">Learn more</a>
+        APISpark is the cloud service of the Restlet platform. Complete your Java-based web API with always 
+        up-to-date API documentation, auto-generated client SDKs, user management, firewall and usage reports.
+        <a href="https://apispark.com">Learn more</a>
     </p>
+    
+</div>
+<div class="span6 right section without-bottom-margin">
+    <h4>Open Source Web API Framework</h4>
+    <p>
+        Restlet Framework is the leading RESTful web API framework for Java. Its unique Java API is available 
+        on both client and server sides, in six consistent editions: Java SE, Java EE, 
+        <a href="http://blog.restlet.com/2009/05/06/restlet-available-on-android-phones/">Android</a>, 
+        <a href="http://blog.restlet.com/2009/04/11/restlet-in-the-cloud-with-google-app-engine/">GAE</a>, 
+        <a href="http://blog.restlet.com/2008/07/25/restlet-ported-to-gwt/">GWT</a> and 
+        <a href="http://blog.restlet.com/2011/11/09/restlet-improves-support-for-osgi-with-new-edition-and-eclipse-update-site/">OSGi</a>!
+        <a href="http://restlet.org/discover/">Learn more</a>
+    </p>
+</div>
+</div>
+<div class="clearBoth"></div>
+<div class="row-fluid">
+<div class="span6 left section">
+	<div id="apispark">
+	    <div class="logo">
+	    	<a href="http://apispark.com"><img src="/images/apispark-logo-new.png" alt="APISpark"/></a>
+	    </div>
+	    <div class="button">
+	    	<button id="apispark-button" class="btn btn-large btn-tryit-hp" type="button">Try It</button>
+	    	<script type="text/javascript">
+	        	$('#apispark-button ').click(function() {
+	        		document.location.href='http://apispark.com/signin';
+	        	});
+	        </script>
+	    </div>
+    </div>
+</div>
+<div class="span6 right section">
+	<div id="restlet-framework">
+    	<div class="logo">
+    		<a href="/download/"><img src="/images/logo_restletframework-new.png" alt="Restlet Framework"/></a>
+   		</div>
+	    <div class="button">
+	        <button id="restlet-framework-button" class="btn btn-large btn-download-hp" type="button">Download</button>
+	        <script type="text/javascript">
+	        	$('#restlet-framework-button ').click(function() {
+	        		document.location.href='/download/';
+	        	});
+	        </script>
+	    </div>
+    </div>
+</div>
 </div>
 <div class="clearBoth"></div>
 <hr />
@@ -99,7 +146,7 @@ ${downloadSection}
 <div class="clearBoth"></div>
 <hr />
 <p class="users">
-	<a href="/discover/quotes">Restlet Framework is used by:</a>
+	<a href="/discover/quotes">Restlet Platform is used by:</a>
 </p>
 <ul class="users">
 	<li><img src="/images/user-google.png" /></li>

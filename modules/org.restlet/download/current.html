@@ -11,10 +11,25 @@
 	$(document).ready(function() {
         init($("#cBranch"), $("#cEdition"), $("#cDistribution")<#if ("zip" ==  distribution) || ("exe" ==  distribution)>, true<#else>, false, true</#if>);
         //init($("#cBranch"), $("#cRelease"), $("#cEdition"), $("#cDistribution"), $("#archives"));
+
+		<!--  popup Kin Lane -->
+		$("#downloadDocKinLaneEmail").mouseleave(function() {
+			console.log("mouseleave");
+			var val = $("#downloadDocKinLaneEmail").val();
+			if (val!="") {
+				$('#downloadDocKinLane').removeAttr("disabled");
+			} else {
+				$('#downloadDocKinLane').attr("disabled", true);
+			}
+		});
+		$("#deployModal div.close-button").click(function() {
+                  $("#deployModal").hide();
+        });
 	});
 </#noparse>
 </#global>
-<#global stylesheet_files=["//cdn-images.mailchimp.com/embedcode/classic-081711.css"] />
+
+<#global stylesheet_files=["//cdn-images.mailchimp.com/embedcode/classic-081711.css","/stylesheets/modal.css"] />
 <#global stylesheet>
  #mc_embed_signup {
     background:#fff;
@@ -96,10 +111,11 @@ ${downloadSection}
 </div>
 <!--End mc_embed_signup-->
 </#if>
-<#if showMaven?has_content>
+<div id="maven_infos">
 <#include "maven.ftl">
-<#elseif showEclipse?has_content>
+</div>
+<div id="eclipse_infos">
 <#include "eclipse.ftl">
-</#if>
+</div>
 </#noparse>
 </#global>
