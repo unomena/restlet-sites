@@ -7,7 +7,7 @@ var cBranches;
 function loadBranches() {
 	cBranches.empty();
      for (var i = 0; b = branches[i]; i++) {
-    	 if("2.2" == b){
+    	 if(("2.2" == b) || ("2.3" == b)) {
         	 cBranches.append('<li id="' + b + '">' + b + '</li>');    		 
     	 }
      };
