@@ -10,6 +10,10 @@ body {
 	padding-bottom: 8px;
 }
 
+.without-bottom-margin {
+	margin-bottom: 0px;
+}
+
 .header>.container {
 	position: relative;
 }
@@ -340,6 +344,7 @@ hr {
     border-width: 0 0 1px;
     margin: 20px 0 19px;
 }*/
+
 
 #apispark {
 	overflow: hidden;
