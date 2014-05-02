@@ -66,7 +66,6 @@ function setDownloadButton() {
 		}
 		urlChangesLog += "/changes";
 
-		$('#download').append('<p><input type="text" id="email" placeholder="Email"/><button id="downloadGuide" class="btn btn-large btn-success" type="button">Download Guide</button></p>');
 		$('#download').append('<p><button id="download_rf" class="btn btn-large btn-success" type="button">Download ' + version.fullVersionCompact + '</button></p>');
 		
 		if (distribution.fileType !== "maven"
@@ -76,15 +75,33 @@ function setDownloadButton() {
 		$('#download').append('<p>Date: ' + version.published + '</p>');
 		$('#download').append('<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
 		
-		$('#downloadGuide').click(
-				function() {
+		$('#downloadDocKinLane').click(
+				function(event) {
+					var hrefCallback = function() {
+						// close popup
+						$("#downloadDocKinLaneEmail").val("");
+						$("#deployModal").hide();
+
+						// launch pdf download in a new tab
+						event.preventDefault();  //stop the browser from following
+					    window.location.href = 'http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=popup&utm_campaign=Kin%20Lane%20Guide';
+					}
+					
+					// in case Mixpanel servers don't get back to us in time
+					// we use the same timeout value as the one defined in Mixpanel config
+					window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
+					
+					// fire the tracking event, if the event is done before the
+					// timeout, the previous hrefCallback call is cancelled by
+					// the call to document.location.href
 					mixpanel.track("Shared email", {
-						"email": $("#email").val(),
+						"email": $("#downloadDocKinLaneEmail").val(),
 						"Email field location":"Kin Lane Guide"
+					}, function () {
+						mixpanel.alias($("#downloadDocKinLaneEmail").val(), mixpanel.get_distinct_id());
+						mixpanel.people.set({"$email": $("#downloadDocKinLaneEmail").val()});
+						mixpanel.track("Donwloaded Kin Lane Guide", null, hrefCallback);
 					});
-					mixpanel.alias($("#email").val());
-					mixpanel.track("Donwloaded Kin Lane Guide");
-					mixpanel.people.set({"$email": $("#email").val()});
 				}
 		);
 
@@ -94,8 +111,9 @@ function setDownloadButton() {
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
 						var hrefCallback = function() {
-							//document.location.href = "/download/current?distribution=maven&release=" + version.id + "&edition=" + edition.id;
 							$('#maven_infos').css('display','block');
+							// open Kin Lane popup
+							$("#deployModal").show();
 						}
 						
 						// in case Mixpanel servers don't get back to us in time
@@ -119,9 +137,9 @@ function setDownloadButton() {
 						$('#maven_infos').css('display','none');
 						
 						var hrefCallback = function() {
-							//document.location.href = "/download/current?distribution=p2&release=" + version.id + "&edition=" + edition.id;
 							$('#eclipse_infos').css('display','block');
-							
+							// open Kin Lane popup
+							$("#deployModal").show();
 						}
 						
 						// in case Mixpanel servers don't get back to us in time
@@ -138,36 +156,17 @@ function setDownloadButton() {
 							"Distribution":"eclipse"
 						}, hrefCallback);
 					});			
-		} else if (redirectDownload) {
-			$('#download_rf').click(
-					function() {
-						$('#eclipse_infos').css('display','none');
-						$('#maven_infos').css('display','none');
-						var hrefCallback = function() {
-							document.location.href = "/download/current?distribution=" + distribution.fileType + "&release=" + version.id + "&edition=" + edition.id;
-						}
-						
-						// in case Mixpanel servers don't get back to us in time
-						// we use the same timeout value as the one defined in Mixpanel config
-						window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
-						
-						// fire the tracking event, if the event is done before the
-						// timeout, the previous hrefCallback call is cancelled by
-						// the call to document.location.href
-						mixpanel.track("Downloaded Restlet Framework", {
-							"Version":version.id,
-							"Release":qualifier.name,
-							"Edition":edition.middlename,
-							"Distribution":distribution.fileType
-						}, hrefCallback);
-					});			
 		} else {
 			$('#download_rf').click(
-					function() {
+					function(event) {
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
 						var hrefCallback = function() {
+							// download selected resltet framework file
+							event.preventDefault();  //stop the browser from following
 							document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
+							// open Kin Lane popup
+							$("#deployModal").show();
 						}
 						
 						// in case Mixpanel servers don't get back to us in time
