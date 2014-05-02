@@ -340,9 +340,47 @@ hr {
     border-width: 0 0 1px;
     margin: 20px 0 19px;
 }*/
-.apispark-logo {
-	text-align: right;
+
+#apispark {
+	overflow: hidden;
+}
+
+#apispark .logo {
+	float: left;
 	margin-left: 0px;
+	width: 215px
+}
+#apispark .button {
+	float: right;
+	margin-left: 0px;
+	margin-top: 20px
+}
+
+#apispark .button > a {
+	text-decoration: none;
+	color: white;
+}
+
+
+#restlet-framework {
+	overflow: hidden;
+}
+
+#restlet-framework .logo {
+	float: left;
+	margin-left: 0px;
+	width: 215px
+}
+
+#restlet-framework .button {
+	float: right;
+	margin-left: 0px;
+	margin-top: 20px
+}
+
+#restlet-framework .button > a {
+	text-decoration: none;
+	color: white;
 }
 
 .span3.download p {
