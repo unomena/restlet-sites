@@ -77,31 +77,20 @@ function setDownloadButton() {
 		
 		$('#downloadDocKinLane').click(
 				function(event) {
-					var hrefCallback = function() {
-						// close popup
-						$("#downloadDocKinLaneEmail").val("");
-						$("#deployModal").hide();
-
-						// launch pdf download in a new tab
-						event.preventDefault();  //stop the browser from following
-					    window.location.href = 'http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=popup&utm_campaign=Kin%20Lane%20Guide';
-					}
-					
-					// in case Mixpanel servers don't get back to us in time
-					// we use the same timeout value as the one defined in Mixpanel config
-					window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
-					
-					// fire the tracking event, if the event is done before the
-					// timeout, the previous hrefCallback call is cancelled by
-					// the call to document.location.href
 					mixpanel.track("Shared email", {
 						"email": $("#downloadDocKinLaneEmail").val(),
 						"Email field location":"Kin Lane Guide"
-					}, function () {
-						mixpanel.alias($("#downloadDocKinLaneEmail").val(), mixpanel.get_distinct_id());
-						mixpanel.people.set({"$email": $("#downloadDocKinLaneEmail").val()});
-						mixpanel.track("Donwloaded Kin Lane Guide", null, hrefCallback);
 					});
+					mixpanel.alias($("#downloadDocKinLaneEmail").val(), mixpanel.get_distinct_id());
+					mixpanel.people.set({"$email": $("#downloadDocKinLaneEmail").val()});
+					mixpanel.track("Downloaded Kin Lane Guide");
+					
+					// close popup
+					$("#downloadDocKinLaneEmail").val("");
+					$("#deployModal").hide();
+
+					// launch pdf download in a new tab
+					window.open('http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=popup&utm_campaign=Kin%20Lane%20Guide', "_blank");
 				}
 		);
 
