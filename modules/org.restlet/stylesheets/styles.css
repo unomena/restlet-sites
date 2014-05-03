@@ -894,3 +894,7 @@ form,form>input {
 	float: right;
     width: 200px;
 }
+
+.figure {
+    text-align:center;
+}
