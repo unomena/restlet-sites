@@ -218,7 +218,7 @@
     <div class="guide navigation middle">
         <@navigationlink nodes key "up" "Up" version />
         <div class="guide navigation top">
-            <a href="/learn/guide/${version}">Top</a>
+            <a href="/learn/guide/${version}">Home</a>
         </div>
     </div>
         <@navigationlink nodes key "next" "Next" version />

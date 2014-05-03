@@ -89,7 +89,7 @@ body {
 }
 
 .hero.ac.header {
-	height: 150px;
+	height: 130px;
 }
 
 #home .hero h2 {
@@ -893,4 +893,8 @@ form,form>input {
 	display: inline-block;
 	float: right;
     width: 200px;
+}
+
+.figure {
+    text-align:center;
 }
