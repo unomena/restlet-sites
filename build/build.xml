@@ -279,6 +279,7 @@
 			<fileset dir="../modules/org.restlet/" includes="**/*" />
 		</copy>
 		<generate-guide version="2.2" />
+        <generate-guide version="2.3" />
 		<fmpp sourceRoot="${temp}/owr" outputRoot="${temp}/${restlet-org}" modes="ignore(**/.svn,**/Thumbs.db)" quiet="reallyQuiet">
 			<data expandProperties="yes">
 				labels:xml(labels.xml)
