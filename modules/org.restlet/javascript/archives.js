@@ -192,6 +192,7 @@ function refresh(distroId) {
 
 function setDownloadButton() {
 	$('#download').empty();
+	$('#newsletter').css('display','none');
 	if (distribution && "file" == distribution.type) {
 		// Update download button
 		var urlChangesLog = "/learn/";
@@ -224,16 +225,19 @@ function setDownloadButton() {
 		} else if (distribution.fileType == "p2") {
 			$('#download button').click(
 					function() {
+						$('#newsletter').css('display','block');
 						document.location.href = "/download/past?distribution=p2&release=" + version.id + "&edition=" + edition.id;
 					});			
 		} else if (redirectDownload) {
 			$('#download button').click(
 					function() {
+						$('#newsletter').css('display','block');
 						document.location.href = "/download/past?distribution=" + distribution.fileType + "&release=" + version.id + "&edition=" + edition.id;
 					});			
 		} else {
 			$('#download button').click(
 					function() {
+						$('#newsletter').css('display','block');
 						document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
 					});
 		}

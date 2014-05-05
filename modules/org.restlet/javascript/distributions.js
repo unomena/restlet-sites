@@ -99,8 +99,10 @@ function setDownloadButton() {
 					function() {
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
+						$('#newsletter').css('display','none');
 						var hrefCallback = function() {
 							$('#maven_infos').css('display','block');
+							$('#newsletter').css('display','block');
 							// open Kin Lane popup
 							$("#deployModal").show();
 						}
@@ -124,9 +126,11 @@ function setDownloadButton() {
 					function() {
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
+						$('#newsletter').css('display','none');
 						
 						var hrefCallback = function() {
 							$('#eclipse_infos').css('display','block');
+							$('#newsletter').css('display','block');
 							// open Kin Lane popup
 							$("#deployModal").show();
 						}
@@ -150,7 +154,10 @@ function setDownloadButton() {
 					function(event) {
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
+						$('#newsletter').css('display','none');
+
 						var hrefCallback = function() {
+							$('#newsletter').css('display','block');
 							// download selected resltet framework file
 							event.preventDefault();  //stop the browser from following
 							document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
