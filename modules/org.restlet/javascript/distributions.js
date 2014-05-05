@@ -77,7 +77,6 @@ function setDownloadButton() {
 		
 		$('#downloadDocKinLane').click(
 				function(event) {
-					if ($("#downloadDocKinLaneForm").checkValidity()) {
 						mixpanel.track("Shared email", {
 							"email": $("#downloadDocKinLaneEmail").val(),
 							"Email field location":"Kin Lane Guide"
@@ -93,7 +92,6 @@ function setDownloadButton() {
 						// launch pdf download in a new tab
 						window.open('http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=popup&utm_campaign=Kin%20Lane%20Guide', "_blank");
 					}
-				}
 		);
 
 		if (distribution.fileType == "maven") {

@@ -867,26 +867,11 @@ form,form>input {
 	width: 200px;
 }
 
-.guide.navigation.middle {
+.guide.navigation.up {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
     width: 450px;
-}
-
-.guide.navigation.up {
-	display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-}
-
-.guide.navigation.top {
-	display: inline-block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 200px;
-	vertical-align: top;
 }
 
 .guide.navigation.next {

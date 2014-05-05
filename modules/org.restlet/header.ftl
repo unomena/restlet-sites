@@ -95,7 +95,7 @@
 				<div class="clearBoth"></div>
 			</div>
 			<div class="doc-download">
-				<form id="downloadDocKinLaneForm"><input type="email" id="downloadDocKinLaneEmail" required placeholder="Email"/> <button id="downloadDocKinLane" disabled>Download</button></form>
+				<form id="downloadDocKinLaneForm"><input type="email" id="downloadDocKinLaneEmail" required="required" placeholder="Email"/> <input type="submit" id="downloadDocKinLane" value="Download" disabled="true">></form>
 			</div>
 			<div class="doc-footer">
 				<p>Your details will never be shared to a 3rd party. We hate spam just as much as you do.</p>
@@ -215,12 +215,7 @@
     <hr />
     <#if nodes[(version + "." + key + ".title")]?has_content>
         <@navigationlink nodes key "prev" "Previous" version/>
-    <div class="guide navigation middle">
         <@navigationlink nodes key "up" "Up" version />
-        <div class="guide navigation top">
-            <a href="/learn/guide/${version}">Home</a>
-        </div>
-    </div>
         <@navigationlink nodes key "next" "Next" version />
     </#if>
 </div>
@@ -228,14 +223,18 @@
 
 <#macro navigationlink map key property label version>
 <div class="guide navigation ${property}">
-        <#if map[version + "."  + key + "." + property]?has_content>
+    <#if map[version + "."  + key + "." + property]?has_content>
 <#local source=nodes[version + "."  + key + ".url"]>
 <#local tab=source?split("/") />
 <#local target=nodes[map[version + "."  + key + "." + property] + ".url"]>
 <div><a href="<#list tab as segment><#if segment_has_next>../</#if></#list>${target}">${label}</a></div>
 <div>${nodes[map[version + "."  + key + "." + property] + ".title"]}</div>
-        <#else>
+    <#else>
+         <#if "up" == property>
+<a href="/learn/guide/${version}">${label}</a>
+         <#else>
 &nbsp;
-        </#if>
+         </#if>
+    </#if>
 </div>
 </#macro>
