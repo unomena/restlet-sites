@@ -946,6 +946,7 @@ form,form>input {
 
 #email-submit {
 	padding-top: 8px;
+    float: left;
 }
 
 #email-submit input {
