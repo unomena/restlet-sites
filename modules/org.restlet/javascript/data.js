@@ -23,51 +23,51 @@ for (var i = 0; v = versions[i]; i++) {
 	}
 };	
 function getQualifier(id) {
-	for (var i = 0; item = qualifiers[i]; i++) {
-		if(item.id == id){
-			return item;
+	for (var i = 0; q = qualifiers[i]; i++) {
+		if(q.id == id){
+			return q;
 		}
 	};
 	return null;
 };
 function getQualifierByVersion(id) {
-	for (var i = 0; item = qualifiers[i]; i++) {
-		if(item.version == id){
-			return item;
+	for (var i = 0; q = qualifiers[i]; i++) {
+		if(q.version == id){
+			return q;
 		}
 	};
 	return null;
 };
 function getQualifierByBranch(id) {
-	for (var i = 0; item = qualifiers[i]; i++) {
-		if(item.version.indexOf(id) == 0){
-			return item;
+	for (var i = 0; q = qualifiers[i]; i++) {
+		if(q.version.indexOf(id) == 0){
+			return q;
 		}
 	};
 	return null;
 };
 function getBranch(id) {
-	for (var i = 0; item = branches[i]; i++) {
-		if(item == id){
-			return item;
+	for (var i = 0; q = branches[i]; i++) {
+		if(q == id){
+			return q;
 		}
 	};
 	return null;
 };
 function getVersion(id) {
-	for (var i = 0; item = versions[i]; i++) {
-		if(item.id == id){
-			return item;
+	for (var i = 0; q = versions[i]; i++) {
+		if(q.id == id){
+			return q;
 		}
 	};
 	return null;
 };
 function getEdition(id) {
-	for (var i = 0; item = version.editions[i]; i++) {
-		if(item.id == id){
-			for (var j = 0; item = editions[j]; j++) {
-				if (item.id == id) {
-					return item;							
+	for (var i = 0; q = version.editions[i]; i++) {
+		if(q.id == id){
+			for (var j = 0; q = editions[j]; j++) {
+				if (q.id == id) {
+					return q;							
 				}
 			}
 		}
@@ -75,9 +75,9 @@ function getEdition(id) {
 	return null;
 };
 function getDistribution(id) {
-	for (var i = 0; item = distributions[i]; i++) {
-		if ((item.version == version.id) && (item.edition == edition.id) && (item.fileType == id)) {
-			return item;
+	for (var i = 0; q = distributions[i]; i++) {
+		if ((q.version == version.id) && (q.edition == edition.id) && (q.fileType == id)) {
+			return q;
 		}
 	};
 	return null;
