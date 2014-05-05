@@ -4,6 +4,12 @@
 <#global javascript>
 	$(document).ready(function() {
         init($("#cBranch"), $("#cEdition"), $("#cDistribution"), false, true);
+        $('#apispark-button').click(function() {
+            document.location.href='http://apispark.com/signin';
+        });
+        $('#restlet-framework-button').click(function() {
+            document.location.href='/download/';
+        });
 	});
 </#global>
 <#global header>
@@ -46,7 +52,8 @@
     <div>
         <p>
             <a href="/discover/">Learn more</a>
-            <span style="float: right"><a href="https://twitter.com/restlet_org" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="small">Follow us</a></span>
+            <span style="float: right"><a href="https://twitter.com/restlet_org" class="twitter-follow-button" data-show-count="true" data-lang="en">Follow @restlet_org</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></span>
         </p>
     </div>
 </div>
@@ -61,8 +68,7 @@
     <div>
         <p>
             <a href="/participate/">Learn more</a>
-            <span style="float: right"><iframe src="http://ghbtns.com/github-btn.html?user=restlet&repo=restlet-framework-java&type=watch&count=true"
-  allowtransparency="true" frameborder="0" scrolling="0" width="87" height="20"></iframe></span>
+            <span style="float: right"><iframe src="http://ghbtns.com/github-btn.html?user=restlet&repo=restlet-framework-java&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="87" height="20"></iframe></span>
         </p>
     </div>
 </div>
@@ -97,30 +103,20 @@
 <div class="span6 left section">
 	<div id="apispark">
 	    <div class="logo">
-	    	<a href="http://apispark.com"><img src="/images/apispark-logo-new.png" alt="APISpark"/></a>
+	    	<a href="http://apispark.com"><img width="215" height="80" src="/images/apispark-logo-new.png" alt="APISpark"/></a>
 	    </div>
 	    <div class="button">
 	    	<button id="apispark-button" class="btn btn-large btn-tryit-hp" type="button">Try It</button>
-	    	<script type="text/javascript">
-	        	$('#apispark-button ').click(function() {
-	        		document.location.href='http://apispark.com/signin';
-	        	});
-	        </script>
 	    </div>
     </div>
 </div>
 <div class="span6 right section">
 	<div id="restlet-framework">
     	<div class="logo">
-    		<a href="/download/"><img src="/images/logo_restletframework-new.png" alt="Restlet Framework"/></a>
+    		<a href="/download/"><img width="215" height="80" src="/images/logo_restletframework-new.png" alt="Restlet Framework"/></a>
    		</div>
 	    <div class="button">
 	        <button id="restlet-framework-button" class="btn btn-large btn-download-hp" type="button">Download</button>
-	        <script type="text/javascript">
-	        	$('#restlet-framework-button ').click(function() {
-	        		document.location.href='/download/';
-	        	});
-	        </script>
 	    </div>
     </div>
 </div>

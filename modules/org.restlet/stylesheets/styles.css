@@ -352,7 +352,7 @@ hr {
 
 #apispark .logo {
 	float: left;
-	margin-left: 0px;
+	margin-left: 70px;
 	width: 215px
 }
 #apispark .button {
@@ -373,7 +373,7 @@ hr {
 
 #restlet-framework .logo {
 	float: left;
-	margin-left: 0px;
+	margin-left: 50px;
 	width: 215px
 }
 
@@ -539,7 +539,7 @@ div.content.footerWrapper .footer {
 	border-left: solid 1px #D2D2D2;
 	border-right: solid 1px #D2D2D2;
 	background-color: white;
-	padding: 10px 10px 0px 10px;
+	padding: 10px 15px 0px 15px;
 }
 
 div.content.footerWrapper {
@@ -867,26 +867,11 @@ form,form>input {
 	width: 200px;
 }
 
-.guide.navigation.middle {
+.guide.navigation.up {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
     width: 450px;
-}
-
-.guide.navigation.up {
-	display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-}
-
-.guide.navigation.top {
-	display: inline-block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 200px;
-	vertical-align: top;
 }
 
 .guide.navigation.next {
@@ -913,6 +898,26 @@ form,form>input {
         =   0, startColorstr =   '#2c5695', endColorstr =   '#476da7' );
   -ms-filter:
         "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#2c5695', endColorstr='#476da7')";
+}
+
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 890px;
+}
+
+.span6 {
+    width: 560px;
+}
+.span5 {
+    width: 410px;
+}
+.span3 {
+    width: 275px;
+}
+.downloadsection .right {
+    width: 250px;
 }
 
 #newsletter .notifications > h4{

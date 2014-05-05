@@ -3870,11 +3870,11 @@ input[type="submit"].btn.btn-mini {
   border-radius: 14px 14px 14px 14px;
   -moz-border-radius: 14px 14px 14px 14px;
   -webkit-border-radius: 14px 14px 14px 14px;
-  background-image: -moz-linear-gradient(top, #1d57b8, #3978d7);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1d57b8),
-		color-stop(1, #3978d7) );
+  background-image: -moz-linear-gradient(top, #2c5695, #476da7);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2c5695),
+		color-stop(1, #476da7) );
   filter: progid :   DXImageTransform.Microsoft.gradient (   GradientType
-		=   0, startColorstr =   '#1d57b8', endColorstr =   '#3978d7' );
+		=   0, startColorstr =   '#2c5695', endColorstr =   '#476da7' );
   -ms-filter:
 		"progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#1d57b8', endColorstr='#3978d7')";
 }

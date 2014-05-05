@@ -16,8 +16,8 @@
       ${metaheader!""}
       <link type="image/gif" href="/images/favicon-restlet-org.gif" rel="icon">
       <link rel="stylesheet" type="text/css"             href='/stylesheets/bootstrap.css' />
-      <link rel="stylesheet" type="text/css"             href='/stylesheets/styles.css' />
       <link rel="stylesheet" type="text/css"             href='/stylesheets/bootstrap-responsive.css' />
+      <link rel="stylesheet" type="text/css"             href='/stylesheets/styles.css' />
       <link rel="alternate"  type="application/atom+xml" href="/feeds/summary" title="${labels.summaryRestletBlog?trim}" />
       <link rel="alternate"  type="application/rss+xml"  href="http://blog.restlet.com/feed/?cat=15314" title="${labels.restletBlog?trim}" />
 <#list stylesheet_files as stylesheet_file>

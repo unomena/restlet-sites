@@ -134,7 +134,7 @@
 	background-color: #fff;
 }
 
-.modalDialog.kinlane div.doc-desc > div.doc-download button {
+.modalDialog.kinlane div.doc-desc > div.doc-download button, .modalDialog.kinlane div.doc-desc > div.doc-download input[type="submit"]  {
 	height: 40px;
 	border: solid 1px #ef9e00;
 	background-image: -moz-linear-gradient(top, #f8b800, #ef9e00);
@@ -153,6 +153,7 @@
 	-webkit-border-radius: 4px 4px 4px 4px;
 	color: #3f4348;
 	font-weight: bold;
+	width: auto;
 }
 
 .modalDialog.kinlane div.doc-desc > div.doc-download button:hover {

@@ -242,8 +242,8 @@
       Each project based on the Restlet framework needs to declare at least one
       dependency: the Restlet core module. According to your needs, you should 
       complete the list of dependencies with the required extensions and 
-      connectors. For example, assuming your project is a Web server delivering 
-      static files, you need one HTTP server connector such as Simple. Since 
+      connectors. For example, assuming your project is a Web server that generates 
+      json representations of Java Beans using the Jackson library. Since 
       your Maven client correctly references the Restlet online repository, just 
       open and edit the <i>pom.xml</i> file for your project and add the following
       lines of text into the &lt;dependencies&gt; section.
@@ -257,7 +257,7 @@
 &lt;/dependency&gt;
 &lt;dependency&gt;
    &lt;groupId&gt;org.restlet.jse&lt;/groupId&gt;
-   &lt;artifactId&gt;org.restlet.ext.simple&lt;/artifactId&gt;
+   &lt;artifactId&gt;org.restlet.ext.jackson&lt;/artifactId&gt;
    &lt;version&gt;${versionMaven}&lt;/version&gt;
 &lt;/dependency&gt;
    </pre>
