@@ -269,6 +269,26 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
         result.attach("/learn/javadocs/{branch}/{edition}/{group}/",
                 javadocsDir);
 
+        // Serve changes logs using a specific route
+        Directory changesDir = new Directory(getContext(), this.dataUri
+                + "/changes") {
+            @Override
+            public void handle(Request request, Response response) {
+                // Translate the base reference.
+                String branch = (String) request.getAttributes().get("branch");
+                String relPart = "/" + branch + "/changes";
+                Reference baseRef = request.getResourceRef().getBaseRef();
+                String strBaseRef = baseRef.getIdentifier();
+                baseRef.setIdentifier(strBaseRef.substring(0,
+                        strBaseRef.length() - relPart.length()));
+                setCookie(response, "branch", branch);
+                super.handle(request, response);
+            }
+        };
+        changesDir.setNegotiatingContent(true);
+        changesDir.setDeeplyAccessible(true);
+        result.attach("/learn/{branch}/changes", changesDir);
+
         // "download" routing
         downloadRouter = new Router(getContext());
         setDownloadRouter();
