@@ -921,7 +921,12 @@ form,form>input {
 }
 
 #newsletter .notifications > h4{
-	padding-left: 25px;
+	padding-left: 0px;
+}
+
+#newsletter .notifications ul {
+    margin: 0 0 10px 0px;
+    padding: 0;
 }
 
 .span6 > ul {
