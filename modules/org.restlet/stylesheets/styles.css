@@ -742,7 +742,7 @@ div.content.footerWrapper {
 #footerNewsLetterWrapper {
 	background-color: #ffffff;
 	padding-left: 5px;
-	padding-right: 1px;
+	padding-right: 5px;
 	padding-top: 6px;
 	padding-bottom: 4px;
 	border: solid 1px #b2c4d4;
@@ -764,7 +764,7 @@ div.content.footerWrapper {
 	margin: 0px;
 }
 
-#footerNewsLetterWrapper input[type="submit"] {
+#footerNewsLetterOkButton {
 	margin-left: 2px;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -913,4 +913,68 @@ form,form>input {
         =   0, startColorstr =   '#2c5695', endColorstr =   '#476da7' );
   -ms-filter:
         "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#2c5695', endColorstr='#476da7')";
+}
+
+#newsletter .notifications > h4{
+	padding-left: 25px;
+}
+
+.span6 > ul {
+	list-style:none;
+	margin-bottom: 0px;
+} 
+
+.span6 > ul li {
+	display:block; 
+	padding:3px 0; 
+	margin:0;
+}
+
+.span6 > ul li label input {
+	margin-top: 0px;
+}
+
+#email-submit {
+	padding-top: 8px;
+}
+
+#email-submit input {
+	padding: 10px 10px;
+	line-height: 1.2em;
+	width: 250px;
+	font-weight: bold;
+	color: #3f4348;
+	background-color: #faf3e0;
+	border: solid 1px #bbbbbb;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	margin-bottom: 0px;
+}
+
+#email-submit button {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	height: 40px;
+	width: 125px;
+	border: solid 1px #ef9e00;
+	background-image: -moz-linear-gradient(top, #f8b800, #ef9e00);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ef9e00),
+		color-stop(1, #eda840) );
+	background-image: -ms-linear-gradient(top left, #f8b800 0%, #ef9e00 100%);
+	filter: progid :   DXImageTransform.Microsoft.gradient (   GradientType
+		=   0, startColorstr =   '#f8b800', endColorstr =   '#ef9e00' );
+	-ms-filter:
+		"progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f8b800', endColorstr='#ef9e00')";
+	padding-left: 18px;
+	padding-right: 18px;
+	border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	color: #3f4348;
+}
+
+#email-submit button:hover {
+	cursor: pointer;
 }
