@@ -539,7 +539,7 @@ div.content.footerWrapper .footer {
 	border-left: solid 1px #D2D2D2;
 	border-right: solid 1px #D2D2D2;
 	background-color: white;
-	padding: 10px 20px 0px 20px;
+	padding: 10px 10px 0px 10px;
 }
 
 div.content.footerWrapper {
@@ -897,8 +897,4 @@ form,form>input {
 
 .figure {
     text-align:center;
-}
-
-.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
-    width: 880px;
 }
