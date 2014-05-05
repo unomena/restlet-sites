@@ -192,7 +192,6 @@ function refresh(distroId) {
 
 function setDownloadButton() {
 	$('#download').empty();
-	$('#newsletter').css('display','none');
 	if (distribution && "file" == distribution.type) {
 		// Update download button
 		var urlChangesLog = "/learn/";
