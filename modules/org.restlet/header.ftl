@@ -95,7 +95,7 @@
 				<div class="clearBoth"></div>
 			</div>
 			<div class="doc-download">
-				<form id="downloadDocKinLaneForm"><input type="email" id="downloadDocKinLaneEmail" required="required" placeholder="Email"/> <input type="submit" id="downloadDocKinLane" value="Download" disabled="true">></form>
+				<form id="downloadDocKinLaneForm"><input type="email" id="downloadDocKinLaneEmail" required="required" placeholder="Email"/> <input type="submit" id="downloadDocKinLane" value="Download" disabled="true"></form>
 			</div>
 			<div class="doc-footer">
 				<p>Your details will never be shared to a 3rd party. We hate spam just as much as you do.</p>
