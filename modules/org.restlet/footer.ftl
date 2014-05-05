@@ -130,8 +130,10 @@
 <!--        <div class="span2b site"><h4><a href="/download/notifications"><i class="notifications-icon"></i>${labels.notifications.submit['${language}']}</a></h4></div> -->
         <div class="span4 newsletter">
         <span id="footerNewsLetterWrapper" align="right">
+            <form id="footerNewsLetter_form">
 	        <input type="email" id="footerNewsLetterEmail" name="EMAIL" class="required email" placeholder="${labels.footer.newsletter['${language}']}"/>
-	        <button type="button" id="footerNewsLetterOkButton" class="button">OK</button>
+	        <input type="submit" id="footerNewsLetterOkButton" class="button" value="OK"></input>
+            </form>
         </span>
         </div>
         <script type="text/javascript">

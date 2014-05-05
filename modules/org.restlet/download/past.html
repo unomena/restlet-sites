@@ -10,6 +10,29 @@
 <#noparse>
     $(document).ready(function() {
         init($("#cBranch"), $("#cRelease"), $("#cEdition"), $("#cDistribution"), $("#archives")<#if ("zip" ==  distribution) || ("exe" ==  distribution)>, true<#else>, false, true</#if>);
+        $("#newsLetterOkButton").click(
+            function(event) {
+                var products = "[";
+
+                $("input:checked").each(function() {
+                    products = products + "\"" + $(this).val() + "\","
+                });
+                products = products.substring(0, products.length-1);
+                products = products + "]";
+                
+                mixpanel.track("Shared email", {
+                    "email": $("#newsLetterEmail").val(),
+                    "Email field location":"RF Download page: newsletter sign up field",
+                    "Product":products
+                }, function() {
+                    $("#newsLetterEmail").val("");
+                    $("#newsLetterEmail").attr("disabled", true);
+                    $("#newsLetterOkButton").html("&#10003;");
+                    $("#newsLetterOkButton").css("font-size","32px");
+                    $("#newsLetterOkButton").attr("disabled", true);
+                });
+            }
+        );
     });
 </#noparse>
 </#global>
@@ -66,31 +89,28 @@ twttr.conversion.trackPid('l4d6j');
 <#global content>
 <!-- Start Download section -->
 ${archivesSection}
-<div id="newsletter" style="display:none">
+<div id="newsletter">
     <div class="clearBoth"></div>
     <hr />
-    <div id="mc_embed_signup" class="notifications">
-        <!-- Begin MailChimp Signup Form -->
-        <form action="http://restlet.us4.list-manage.com/subscribe/post?u=6e9d916ca1faf05c7dc49d21e&amp;id=a8aa911b32" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <h4 class="notifications">Keep me informed about</h4>
-            <div class="mc-field-group input-group">
-                <ul>
-                    <li><input type="checkbox" value="2" name="group[9053][2]" id="mce-group[9053]-9053-1" checked="checked"><label for="mce-group[9053]-9053-1"><strong>Restlet Framework</strong> (new releases, security fixes, etc.)</label></li>
-                    <li><input type="checkbox" value="1" name="group[9053][1]" id="mce-group[9053]-9053-0" checked="checked" ><label for="mce-group[9053]-9053-0"><strong>APISpark</strong> (cloud platform based on Restlet framework)</label></li>
-                </ul>
+    <div class="notifications">
+        <h4>Keep me informed about</h4>
+        <div class="row-fluid">
+            <div class="span6">
+                    <ul>
+                        <li><label for="restlet_framework"><input type="checkbox" value="Restlet Framework" name="group[9053][2]" id="restlet_framework" checked="checked"> <strong>Restlet Framework</strong> (new releases, security fixes, etc.)</label></li>
+                        <li><label for="apispark"><input type="checkbox" value="APISpark" name="group[9053][1]" id="apispark" checked="checked" > <strong>APISpark</strong> (cloud platform based on Restlet framework)</label></li>
+                    </ul>
             </div>
-            <div id="mce-responses" class="clear">
-                <div class="response" id="mce-error-response" style="display: none"></div>
-                <div class="response" id="mce-success-response" style="display: none"></div>
+            <div class="span6">
+                <div id="email-submit">
+                    <form id="newsletter_form">
+                    <input type="email" name="EMAIL" id="newsLetterEmail" placeholder="${labels.notifications.placeholder['${language}']}">
+                    <input type="submit" id="newsLetterOkButton" name="subscribe" value="${labels.notifications.submit['${language}']}"></input>
+                    </form>
+                </div>
             </div>
-            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;">
-                <input type="text" name="b_6e9d916ca1faf05c7dc49d21e_a8aa911b32" value="">
-            </div>
-            <div class="span4 newsletter"><span id="footerNewsLetterWrapper"><input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="${labels.notifications.placeholder['${language}']}"><input type="submit" id="footerNewsLetterOkButton" value="${labels.notifications.submit['${language}']}" name="subscribe" id="mc-embedded-subscribe" class="button"></span></div>
-        </form>
+        </div>
     </div>
-    <!--End mc_embed_signup-->
 </div>
 <#noparse>
 <div id="maven_infos">

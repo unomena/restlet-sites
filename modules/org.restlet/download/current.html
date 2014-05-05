@@ -25,6 +25,29 @@
 		$("#deployModal div.close-button").click(function() {
                   $("#deployModal").hide();
         });
+        $("#newsLetterOkButton").click(
+            function(event) {
+                var products = "[";
+
+                $("input:checked").each(function() {
+                    products = products + "\"" + $(this).val() + "\","
+                });
+                products = products.substring(0, products.length-1);
+                products = products + "]";
+                
+                mixpanel.track("Shared email", {
+                    "email": $("#newsLetterEmail").val(),
+                    "Email field location":"RF Download page: newsletter sign up field",
+                    "Product":products
+                }, function() {
+                    $("#newsLetterEmail").val("");
+                    $("#newsLetterEmail").attr("disabled", true);
+                    $("#newsLetterOkButton").html("&#10003;");
+                    $("#newsLetterOkButton").css("font-size","32px");
+                    $("#newsLetterOkButton").attr("disabled", true);
+                });
+            }
+        );
 	});
 </#noparse>
 </#global>
@@ -51,7 +74,6 @@ ${downloadSection}
     <div class="clearBoth"></div>
     <hr />
     <div class="notifications">
-        <!-- Begin MailChimp Signup Form -->
         <h4>Keep me informed about</h4>
         <div class="row-fluid">
 	        <div class="span6">
@@ -62,38 +84,14 @@ ${downloadSection}
 	        </div>
 	        <div class="span6">
 	        	<div id="email-submit">
+	                <form id="newsletter_form">
 			       	<input type="email" name="EMAIL" id="newsLetterEmail" placeholder="${labels.notifications.placeholder['${language}']}">
-			       	<button type="submit" id="newsLetterOkButton" name="subscribe">${labels.notifications.submit['${language}']}</button>
+			       	<input type="submit" id="newsLetterOkButton" name="subscribe" value="${labels.notifications.submit['${language}']}"></input>
+                    </form>
 	        	</div>
 	        </div>
 	    </div>
     </div>
-    <script type="text/javascript">
-    	$("#newsLetterOkButton").click(
-    		function(event) {
-    			var products = "[";
-
-    		    $("input:checked").each(function() {
-    		    	products = products + "\"" + $(this).val() + "\","
-    		    });
-    		    products = products.substring(0, products.length-1);
-    			products = products + "]";
-    			
-    			mixpanel.track("Shared email", {
-					"email": $("#newsLetterEmail").val(),
-					"Email field location":"RF Download page: newsletter sign up field",
-					"Product":products
-				}, function() {
-					$("#newsLetterEmail").val("");
-					$("#newsLetterEmail").attr("disabled", true);
-					$("#newsLetterOkButton").html("&#10003;");
-					$("#newsLetterOkButton").css("font-size","32px");
-					$("#newsLetterOkButton").attr("disabled", true);
-				});
-    		}
-    	);
-    </script>
-    <!--End mc_embed_signup-->
 </div>
 <#noparse>
 <div id="maven_infos">
