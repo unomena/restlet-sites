@@ -101,8 +101,10 @@ function setDownloadButton() {
 						$('#maven_infos').css('display','none');
 						var hrefCallback = function() {
 							$('#maven_infos').css('display','block');
-							// open Kin Lane popup
-							$("#deployModal").show();
+							if ("true" != $.cookie("kin-lane-white-paper")) {
+								// open Kin Lane popup
+								$("#deployModal").show();								
+							}
 						}
 						
 						// in case Mixpanel servers don't get back to us in time
@@ -127,8 +129,10 @@ function setDownloadButton() {
 						
 						var hrefCallback = function() {
 							$('#eclipse_infos').css('display','block');
-							// open Kin Lane popup
-							$("#deployModal").show();
+							if ("true" != $.cookie("kin-lane-white-paper")) {
+								// open Kin Lane popup
+								$("#deployModal").show();								
+							}
 						}
 						
 						// in case Mixpanel servers don't get back to us in time
@@ -151,12 +155,14 @@ function setDownloadButton() {
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
 
-						var hrefCallback = function() {
+						var hrefCallback = function(event) {
 							// download selected resltet framework file
-							event.preventDefault();  //stop the browser from following
 							document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
 							// open Kin Lane popup
-							$("#deployModal").show();
+							if ("true" != $.cookie("kin-lane-white-paper")) {
+								// open Kin Lane popup
+								$("#deployModal").show();								
+							}
 						}
 						
 						// in case Mixpanel servers don't get back to us in time

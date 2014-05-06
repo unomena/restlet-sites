@@ -993,13 +993,10 @@ form,form>input {
 	width: 125px;
 	border: solid 1px #ef9e00;
 	background-image: -moz-linear-gradient(top, #f8b800, #ef9e00);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ef9e00),
-		color-stop(1, #eda840) );
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ef9e00), color-stop(1, #eda840) );
 	background-image: -ms-linear-gradient(top left, #f8b800 0%, #ef9e00 100%);
-	filter: progid :   DXImageTransform.Microsoft.gradient (   GradientType
-		=   0, startColorstr =   '#f8b800', endColorstr =   '#ef9e00' );
-	-ms-filter:
-		"progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f8b800', endColorstr='#ef9e00')";
+	filter: progid :DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr = '#f8b800', endColorstr = '#ef9e00' );
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f8b800', endColorstr='#ef9e00')";
 	padding-left: 18px;
 	padding-right: 18px;
 	border-radius: 4px 4px 4px 4px;
@@ -1014,4 +1011,11 @@ form,form>input {
 
 #email-submit button:disabled {
 	cursor: default;
+}
+
+.product.left {
+    float: left;
+}
+.product.right {
+    float: right;
 }
