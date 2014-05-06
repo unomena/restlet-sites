@@ -13,7 +13,7 @@ This will allow you to:
 -   Display and edit this documentation within APISpark
 -   Synchronize Web API changes initiated from Restlet
 
-In this scenario, we’ll  load a WebAPI definition into APISpark. We’ll leverage the introspector tool provided in the APISpark extension. You can find a complete example of documentation generated via this extension here.
+In this scenario, we’ll  load a WebAPI definition into APISpark. We’ll leverage the introspector tool provided in the APISpark extension. You can find a complete example of documentation generated via this extension [here](https://apispark.com/apis/1427/versions/1/overview/), the description fields cannot be retrieved from the code, they were added manually.
  
 Launch process
 ==============
