@@ -88,7 +88,11 @@ function setDownloadButton() {
 						// close popup
 						$("#downloadDocKinLaneEmail").val("");
 						$("#deployModal").hide();
-
+						
+						// Set a one year cookie dedicated to this campaign. 
+						$.cookie('kin-lane-white-paper', 'true', {
+							expires: 365
+						});
 						// launch pdf download in a new tab
 						window.open('http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=popup&utm_campaign=Kin%20Lane%20Guide', "_blank");
 					}
