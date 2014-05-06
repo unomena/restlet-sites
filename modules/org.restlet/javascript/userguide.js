@@ -1,8 +1,4 @@
 var cBranches;
-//	var myCombo = (new Dropdown("idCombo")).initialize();
-//myCombo.addSelectionListener(function(value) {
-//    (...)
-//});
 
 function loadBranches() {
 	cBranches.empty();

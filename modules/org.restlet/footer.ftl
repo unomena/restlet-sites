@@ -39,7 +39,6 @@
       <script                type="text/javascript"     src="/javascript/restlet-client.js"></script>
       <script                type="text/javascript"     src="/javascript/bootstrap.min.js"></script>
       <script                type="text/javascript"     src="/javascript/data.js"></script>
-      <script                type="text/javascript"     src="/javascript/combo-widget.js"></script>
     <#if ("javadocs" == currentSubSection!"")>
       <script                type="text/javascript"     src="/javascript/javadocs.js"></script>
     <#elseif ("guide" == currentSubSection!"")>
