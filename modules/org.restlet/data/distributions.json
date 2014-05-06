@@ -47,7 +47,6 @@
 {"id":"2.2snapshot-osgi-p2","version":"2.2snapshot", "edition":"gwt","type":"file", "fileName":"", "fileType":"p2","fileSize":"","mavenGroupId":"","p2Url":"http://p2.restlet.org/2.2"},
 {"id":"2.2snapshot-osgi-p2","version":"2.2snapshot", "edition":"gae","type":"file", "fileName":"", "fileType":"p2","fileSize":"","mavenGroupId":"","p2Url":"http://p2.restlet.org/2.2"},
 {"id":"2.2snapshot-osgi-p2","version":"2.2snapshot", "edition":"android","type":"file", "fileName":"", "fileType":"p2","fileSize":"","mavenGroupId":"","p2Url":"http://p2.restlet.org/2.2"},
-
 {"id":"2.3m2-osgi-zip","version":"2.3m2", "edition":"osgi","type":"file", "fileName":"restlet-osgi-2.3m2.zip", "fileType":"zip","fileSize":"48 Mb","mavenGroupId":"","p2Url":""},
 {"id":"2.3m2-osgi-exe","version":"2.3m2", "edition":"osgi","type":"file", "fileName":"restlet-osgi-2.3m2.exe", "fileType":"exe","fileSize":"46 Mb","mavenGroupId":"","p2Url":""},
 {"id":"2.3m2-jse-zip","version":"2.3m2", "edition":"jse","type":"file", "fileName":"restlet-jse-2.3m2.zip", "fileType":"zip","fileSize":"50 Mb","mavenGroupId":"","p2Url":""},
@@ -73,7 +72,7 @@
 {"id":"2.3m1-android-zip","version":"2.3m1", "edition":"android","type":"file", "fileName":"restlet-android-2.3m1.zip", "fileType":"zip","fileSize":"11 Mb","mavenGroupId":"","p2Url":""},
 {"id":"2.3m1-android-exe","version":"2.3m1", "edition":"android","type":"file", "fileName":"restlet-android-2.3m1.exe", "fileType":"exe","fileSize":"11 Mb","mavenGroupId":"","p2Url":""},
 {"id":"2.2.1-osgi-zip","version":"2.2.1", "edition":"osgi","type":"file", "fileName":"restlet-osgi-2.2.1.zip", "fileType":"zip","fileSize":"47 Mb","mavenGroupId":"","p2Url":""},
-{"id":"2.2.1-osgi-exe","version":"2.2.1", "edition":"osgi","type":"file", "fileName":"restlet-osgi-2.2.1.exe", "fileType":"exe","fileSize":"45 Mb","mavenGroupId":"","p2Url":""},
+{"id":"2.2.1-osgi-exe","version":"2.2.1", "edition":"osgi","type":"file", "fileName":"restlet-osgi-2.2.1.exe", "fileType":"exe","fileSize":"46 Mb","mavenGroupId":"","p2Url":""},
 {"id":"2.2.1-jse-zip","version":"2.2.1", "edition":"jse","type":"file", "fileName":"restlet-jse-2.2.1.zip", "fileType":"zip","fileSize":"49 Mb","mavenGroupId":"","p2Url":""},
 {"id":"2.2.1-jse-exe","version":"2.2.1", "edition":"jse","type":"file", "fileName":"restlet-jse-2.2.1.exe", "fileType":"exe","fileSize":"47 Mb","mavenGroupId":"","p2Url":""},
 {"id":"2.2.1-jee-zip","version":"2.2.1", "edition":"jee","type":"file", "fileName":"restlet-jee-2.2.1.zip", "fileType":"zip","fileSize":"48 Mb","mavenGroupId":"","p2Url":""},
