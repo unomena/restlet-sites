@@ -5,7 +5,24 @@
 	$(document).ready(function() {
         init($("#cBranch"), $("#cEdition"), $("#cDistribution"), false, true);
         $('#apispark-button').click(function() {
-            document.location.href='http://apispark.com/signin';
+            //document.location.href='http://apispark.com/signin';
+            var hrefCallback = function(event) {
+				// download selected resltet framework file
+				document.location.href = "http://apispark.com/signin";
+			}
+			
+			// in case Mixpanel servers don't get back to us in time
+			// we use the same timeout value as the one defined in Mixpanel config
+			var trackTimeout = window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
+			
+			// fire the tracking event, if the event is done before the
+			// timeout, we call a window.clearTimeout
+			mixpanel.track("Created an APISpark account", {
+				"Sign up source":"RF Homepage \"Try it\" button"
+			}, function() {
+				window.clearTimeout(trackTimeout);
+				hrefCallback();
+			});
         });
         $('#restlet-framework-button').click(function() {
             document.location.href='/download/';
