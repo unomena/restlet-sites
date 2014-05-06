@@ -23,6 +23,10 @@
 			}
 		});
 		$("#deployModal div.close-button").click(function() {
+		          // Set a one year cookie dedicated to this campaign. 
+                  $.cookie('kin-lane-white-paper', 'true', {
+                      expires: 365
+                  });
                   $("#deployModal").hide();
         });
         $("#newsLetterOkButton").click(
