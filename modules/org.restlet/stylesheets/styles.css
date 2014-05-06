@@ -1015,7 +1015,9 @@ form,form>input {
 
 .product.left {
     float: left;
+    padding-right: 10px;
 }
 .product.right {
     float: right;
+    padding-left: 10px;
 }
