@@ -58,7 +58,7 @@ APISpark tokens
 ---------------
 The parameters -u and -p are mandatory, they correspond to your APISpark user name and secret key. You can get those [here](https://apispark.com/account/overview) under the tab "tokens". You will need to [sign up](https://apispark.com/signin) first.
 
-![](./apisparkTokens.png)
+![](/learn/archives/images/apisparkTokens.png)
 
 Load Web API definition into APISpark (first call)
 ----------------------------------------------------
@@ -70,7 +70,7 @@ Here is the result, we get from the Introspector:
     Your Web API documentation is accessible at this URL: https://apispark.com/apis/246/versions/1
  
  
-![](./injectedOverview.png)
+![](/learn/archives/images/injectedOverview.png)
 
 Update your Web API definition (Subsequent calls )
 --------------------------------------------------
