@@ -129,13 +129,29 @@
 <!--        <div class="span2b site"><h4><a href="/download/notifications"><i class="notifications-icon"></i>${labels.notifications.submit['${language}']}</a></h4></div> -->
         <div class="span4 newsletter">
         <span id="footerNewsLetterWrapper" align="right">
-            <form id="footerNewsLetter_form">
 	        <input type="email" id="footerNewsLetterEmail" name="EMAIL" class="required email" placeholder="${labels.footer.newsletter['${language}']}"/>
-	        <input type="submit" id="footerNewsLetterOkButton" class="button" value="OK"></input>
-            </form>
+	        <button id="footerNewsLetterOkButton" class="button" disabled="true">OK</button>
         </span>
         </div>
         <script type="text/javascript">
+			$("#footerNewsLetterEmail").mouseleave(function() {
+	              var email = $("#footerNewsLetterEmail").val();
+	              var re = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
+	              var emailRegexp = new RegExp(re);
+	              
+	              if (email != "") {
+	                    if (emailRegexp.test(email)) {
+	                          $('#footerNewsLetterOkButton').removeAttr("disabled");
+	                          $("#footerNewsLetterEmail").removeClass("error");
+	                    } else {
+	                          $("#footerNewsLetterEmail").addClass("error");
+	                          $('#footerNewsLetterOkButton').attr("disabled", true);
+	                    }
+	              } else {
+	                    $("#footerNewsLetterEmail").removeClass("error");
+	                    $('#footerNewsLetterOkButton').attr("disabled", true);
+	              }
+	        });
         	$("#footerNewsLetterOkButton").click(
         		function(event) {
         			mixpanel.track("Shared email", {

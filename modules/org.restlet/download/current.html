@@ -12,25 +12,57 @@
         init($("#cBranch"), $("#cEdition"), $("#cDistribution")<#if ("zip" ==  distribution) || ("exe" ==  distribution)>, true<#else>, false, true</#if>);
         //init($("#cBranch"), $("#cRelease"), $("#cEdition"), $("#cDistribution"), $("#archives"));
 
-		<!--  popup Kin Lane -->
+		<!--  Begin popup Kin Lane -->
 		$("#downloadDocKinLaneEmail").mouseleave(function() {
-			console.log("mouseleave");
-			var val = $("#downloadDocKinLaneEmail").val();
-			if (val!="") {
-				$('#downloadDocKinLane').removeAttr("disabled");
-			} else {
-				$('#downloadDocKinLane').attr("disabled", true);
-			}
-		});
+              var email = $("#downloadDocKinLaneEmail").val();
+              var re = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
+              var emailRegexp = new RegExp(re);
+              
+              if (email != "") {
+                    if (emailRegexp.test(email)) {
+                          $('#downloadDocKinLane').removeAttr("disabled");
+                          $("#downloadDocKinLaneEmail").removeClass("error");
+                    } else {
+                          $("#downloadDocKinLaneEmail").addClass("error");
+                          $('#downloadDocKinLane').attr("disabled", true);
+                    }
+              } else {
+                    $("#downloadDocKinLaneEmail").removeClass("error");
+                    $('#downloadDocKinLane').attr("disabled", true);
+              }
+        });
 		$("#deployModal div.close-button").click(function() {
                   $("#deployModal").hide();
         });
+        <!--  End popup Kin Lane -->
+
+		$("#newsLetterEmail").mouseleave(function() {
+              var email = $("#newsLetterEmail").val();
+              var re = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
+              var emailRegexp = new RegExp(re);
+              
+              if (email != "") {
+                    if (emailRegexp.test(email)) {
+                          $('#newsLetterOkButton').removeAttr("disabled");
+                          $("#newsLetterEmail").removeClass("error");
+                    } else {
+                          $("#newsLetterEmail").addClass("error");
+                          $('#newsLetterOkButton').attr("disabled", true);
+                    }
+              } else {
+                    $("#newsLetterEmail").removeClass("error");
+                    $('#newsLetterOkButton').attr("disabled", true);
+              }
+        });
+        
         $("#newsLetterOkButton").click(
             function(event) {
                 var products = "[";
+                var prodArray = [];
 
                 $("input:checked").each(function() {
                     products = products + "\"" + $(this).val() + "\","
+                    prodArray.push($(this).val());
                 });
                 products = products.substring(0, products.length-1);
                 products = products + "]";
@@ -38,7 +70,7 @@
                 mixpanel.track("Shared email", {
                     "email": $("#newsLetterEmail").val(),
                     "Email field location":"RF Download page: newsletter sign up field",
-                    "Product":products
+                    "Product":prodArray
                 }, function() {
                     $("#newsLetterEmail").val("");
                     $("#newsLetterEmail").attr("disabled", true);
@@ -86,7 +118,7 @@ ${downloadSection}
 	        <div class="span6">
 	        	<div id="email-submit">
 			       	<input type="email" name="EMAIL" id="newsLetterEmail" placeholder="${labels.notifications.placeholder['${language}']}">
-			       	<button id="newsLetterOkButton" name="subscribe">${labels.notifications.submit['${language}']}</button>
+			       	<button id="newsLetterOkButton" name="subscribe" disabled="true">${labels.notifications.submit['${language}']}</button>
 	        	</div>
 	        </div>
 	    </div>

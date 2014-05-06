@@ -753,8 +753,7 @@ div.content.footerWrapper {
 	width: 300px;
 }
 
-#footerNewsLetterWrapper input[type="text"],#footerNewsLetterWrapper input[type="email"]
-	{
+#footerNewsLetterWrapper input[type="text"],#footerNewsLetterWrapper input[type="email"] {
 	border: solid 0px black;
 	width: 230px;
 	height: 16px;
@@ -762,6 +761,19 @@ div.content.footerWrapper {
 	color: #a7a7a7;
 	font-style: italic;
 	margin: 0px;
+}
+#footerNewsLetterWrapper input[type="text"]:focus ,#footerNewsLetterWrapper input[type="email"]:focus {
+	border-color: rgba(82, 168, 236, 0.8);
+	outline: 0;
+	outline: thin dotted \9;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+#footerNewsLetterWrapper input[type="text"] error,#footerNewsLetterWrapper input[type="email"].error{
+	border: solid 1px #FF0000;
+	color: #FF0000;
 }
 
 #footerNewsLetterOkButton {
@@ -781,6 +793,11 @@ div.content.footerWrapper {
 	font-family: Verdana;
 	font-size: 14px;
 	display: inline-block;
+	width: 45px;
+}
+
+#footerNewsLetterOkButton:disabled {
+	cursor: default;
 }
 
 #footer #copyright {
@@ -963,6 +980,11 @@ form,form>input {
 	margin-bottom: 0px;
 }
 
+#email-submit input.error{
+	border: solid 1px #FF0000;
+	color: #FF0000;
+}
+
 #email-submit button, #email-submit input[type="submit"] {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 18px;
@@ -988,4 +1010,8 @@ form,form>input {
 
 #email-submit button:hover, #email-submit input[type="submit"]:hover {
 	cursor: pointer;
+}
+
+#email-submit button:disabled {
+	cursor: default;
 }
