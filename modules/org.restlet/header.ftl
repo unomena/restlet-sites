@@ -232,7 +232,8 @@
 <div>${nodes[map[version + "."  + key + "." + property] + ".title"]}</div>
     <#else>
          <#if "up" == property>
-<a href="/learn/guide/${version}">${label}</a>
+<div><a href="/learn/guide/${version}">${label}</a></div>
+<div>Table of contents</div>
          <#else>
 &nbsp;
          </#if>
