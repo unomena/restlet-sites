@@ -42,6 +42,7 @@
 	position: absolute;
 	right: -14px;
 	top: -14px;
+	cursor: pointer;
 }
 
 .modalDialog.kinlane div.doc-title h3 {
