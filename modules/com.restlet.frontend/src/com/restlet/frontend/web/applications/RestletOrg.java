@@ -227,6 +227,10 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
         editions = new EditionsList();
         branches = new HashSet<String>();
         toBranch = new ConcurrentHashMap<String, String>();
+        qualifiersMap = new HashMap<String, Qualifier>();
+        versionsMap = new HashMap<String, Version>();
+        distributionsByVersion = new HashMap<String, DistributionsList>();
+        distributionsByVersionEdition = new HashMap<String, DistributionsList>();
     }
 
     @Override
@@ -301,27 +305,35 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
                 userGuideDirectory) {
             @Override
             protected int beforeHandle(Request request, Response response) {
-                if (request.getResourceRef().getRemainingPart()
-                        .startsWith("/2.1")
-                        || request.getResourceRef().getRemainingPart()
-                                .startsWith("/2.0")
-                        || request.getResourceRef().getRemainingPart()
-                                .startsWith("/1.1")
-                        || request.getResourceRef().getRemainingPart()
-                                .startsWith("/1.0")) {
-                    response.redirectTemporary("/learn/guide/2.2");
-                    // Set the branch cookie
-                    setCookie(response, "branch", "2.2");
-                    // Set the qualifier to branch cookie
+                // Get the branch prefix
+                String remainingPart = request.getResourceRef()
+                        .getRemainingPart();
+                if (remainingPart.startsWith("/")) {
+                    remainingPart = remainingPart.substring(1);
+                }
+                String branch = null;
+                int index = remainingPart.indexOf("/");
+                if (index != -1) {
+                    branch = remainingPart.substring(0, index);
+                } else {
+                    branch = remainingPart;
+                }
+                // we serve only documentation for some releases
+                if (branch.equals("2.1") || branch.equals("2.0")
+                        || branch.equals("1.1") || branch.equals("1.0")) {
+                    // redirect to stable branch
+                    response.redirectTemporary("/learn/guide/"
+                            + qualifiersMap.get("stable").getVersion()
+                                    .substring(0, 3));
+                    return Filter.STOP;
+                } else {
                     for (Qualifier q : qualifiers) {
-                        String branch = q.getVersion().substring(0, 3);
-                        if (branch.equals("2.2")
-                                && !"unstable".equals(q.getId())) {
+                        String b = q.getVersion().substring(0, 3);
+                        if (b.equals(branch) && !"unstable".equals(q.getId())) {
                             setCookie(response, "release", q.getId());
                         }
                     }
-
-                    return Filter.STOP;
+                    setCookie(response, "branch", branch);
                 }
                 return super.beforeHandle(request, response);
             }
@@ -689,7 +701,7 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
     }
 
     /**
-     * Shortcut method that adds a {@link CookieSetting} to the response.
+     * Shortcut method that add a {@link CookieSetting} to the response.
      * 
      * @param response
      *            The response to complete.
@@ -819,9 +831,17 @@ public class RestletOrg extends BaseApplication implements RefreshApplication {
 
         redirectBranch(router, "/learn/javadocs", "/learn/javadocs/{branch}",
                 null);
+
         // Issue #36: always route undefined user guide to 2.2, which is not the
         // stable release at this time.
-        redirect(router, "/learn/guide/stable", "/learn/guide/2.2{rr}");
+        if (qualifiersMap.get("stable") != null) {
+            redirect(router, "/learn/guide/stable", "/learn/guide/"
+                    + qualifiersMap.get("stable").getVersion().substring(0, 3)
+                    + "{rr}");
+        } else {
+            redirect(router, "/learn/guide/stable", "/learn/guide/2.2{rr}");
+        }
+
         redirectBranch(router, "/learn/guide/testing",
                 "/learn/guide/{branch}/", "testing");
         redirectBranch(router, "/learn/tutorial", "/learn/tutorial/{branch}/",

@@ -1,9 +1,9 @@
-# What's new in version ${restlet-version-minor}
+# What's new in version 2.2
 
 ## Introduction
 
 In the next sections, you will get a synthesis of the major changes done
-to the Restlet Framework in version ${restlet-version-minor}.
+to the Restlet Framework in version 2.2.
 
 For more details, you can read the [2.2 announce on our blog](http://blog.restlet.com/2014/03/26/restlet-framework-2-2-0-and-2-3-m1-released)
 as well as [the full list of changes](http://restlet.org/learn/2.2/changes).
@@ -35,14 +35,14 @@ as well as [the full list of changes](http://restlet.org/learn/2.2/changes).
  - Easier contribution as modules are now regular Eclipse projects (not PDE plugins)
  - Many bug fixes
 
-## Migration guide from version 2.1 to ${restlet-version-minor}
+## Migration guide from version 2.1 to 2.2
 
 This section intends to explain the main differences between the Restlet
 2.1 and 2.2 releases and to help you migrate your existing applications.
 Both releases are meant to be compatible at the API level, so you should
 at most observe deprecate features while upgrading.
 
-Note that if you intend to migrate directly from 1.1 to ${restlet-version-minor}, you should
+Note that if you intend to migrate directly from 1.1 to 2.2, you should
 really consider migrating first from 1.1 to 2.0. For migration instructions between 1.1 and 2.0, 
 you can check [this page](../../whats-new/2.0/migration "Migration guide from version 1.1 to 2.0").
 
@@ -53,4 +53,4 @@ Restlet JARs and dependencies
 ### Deprecated API features
 
 The next step is to look at each deprecated feature and look in the
-Javadocs at the preferred alternative in version ${restlet-version-minor}.
+Javadocs at the preferred alternative in version 2.2.
