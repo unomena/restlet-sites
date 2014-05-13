@@ -1,11 +1,14 @@
 <?xml version="1.0"?>
 
 <!-- ==============================================
-     Web build file  -  Copyright 2005-2013 Restlet
+     Web build file  -  Copyright 2005-2014 Restlet
      ============================================== -->
 
 <project name="Web" default="rebuild">
 	<import file="${forge-home}/forge-tools.xml" optional="true" />
+	<tstamp>
+		<format property="build.date" pattern="yyyyMMdd-HHmm" />
+	</tstamp>
 
 	<!-- Set global names -->
 	<property file="custom.properties" />
@@ -278,6 +281,24 @@
 		<copy todir="${temp}/owr">
 			<fileset dir="../modules/org.restlet/" includes="**/*" />
 		</copy>
+
+<!-- copy and filter javascript files
+		<copy todir="${temp}/owr">
+			<fileset dir="../modules/org.restlet/" includes="**/*.js" />
+                        <globmapper from="*.js" to="*-${build.date}.js"/>
+		</copy>
+		<copy todir="${temp}/owr">
+			<fileset dir="../modules/org.restlet/" excludes="**/*.js" />
+			<filterchain>
+				<tokenfilter>
+      					<replaceregex pattern="/javascript/(.*).js" flags="s" replace="/javascript/\1-${build.date}.js"/>
+				</tokenfilter>
+				<tokenfilter>
+      					<replaceregex pattern="(.*).js" flags="s" replace="\1-${build.date}.js"/>
+				</tokenfilter>
+			</filterchain>
+		</copy>
+-->
 		<generate-guide version="2.2" />
 		<generate-guide version="2.3" />
 		<fmpp sourceRoot="${temp}/owr" outputRoot="${temp}/${restlet-org}" modes="ignore(**/.svn,**/Thumbs.db)" quiet="reallyQuiet">
