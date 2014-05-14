@@ -112,19 +112,7 @@ public class WebComponent extends Component {
         // -----------
         // restlet.org
         // -----------
-
-        // VirtualHost host = addHost("restlet.org", port, new Restlet(
-        // getContext()) {
-        // @Override
-        // public void handle(Request request, Response response) {
-        // super.handle(request, response);
-        // response.setEntity("<html>ok</html>", MediaType.TEXT_HTML);
-        // response.getCookieSettings()
-        // .add("mp_23_mixpanel",
-        // "%7B%22distinct_id%22%3A%20%22145fa9f767cb-0f9352d36-6f103624-1fa400-145fa9f767d14c%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D");
-        // }
-        // }, properties);
-
+        // handle redirection to restlet.com site.
         VirtualHost host = addHost("restlet.org", port,
                 new Redirector(getContext(), null,
                         getFrameworkSiteRedirectionMode(properties)) {
@@ -141,6 +129,7 @@ public class WebComponent extends Component {
                     public void handle(Request request, Response response) {
                         super.handle(request, response);
                         if (!request.getCookies().isEmpty()) {
+                            // Migrate cookie from one site to the other.
                             for (Cookie cookie : request.getCookies()) {
                                 if (cookie.getName().startsWith("mp_")
                                         && cookie.getName().endsWith(
