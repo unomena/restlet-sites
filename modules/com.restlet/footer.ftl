@@ -170,21 +170,14 @@
         </script>
         <div class="clearBoth"></div>
         <div class="span2 intro below">${labels.footer.sites['${language}']}</div>
-        <div class="span2a site">
-          <h4><a href="http://restlet.com/"><img src="/images/logo-restlet-small.png" />Restlet</a></h4>
-          <ul class="sub-list">
-            <li><a href="http://restlet.com/products/">${labels.footer.restlet.product['${language}']}</a></li>
-            <li><a href="http://restlet.com/services/">${labels.footer.restlet.services['${language}']}</a></li>
-            <li><a href="http://restlet.com/about/">${labels.footer.restlet.about['${language}']}</a></li>
-          </ul>
-        </div>
         <div class="span2b site">
-          <h4><a href="http://restlet.org/"><img src="/images/logo-restlet-framework-small.png" />Restlet Framework</a></h4>
+          <h4><a href="http://restlet.org/"><img src="/images/logo-restlet-framework-small.png" />Restlet</a></h4>
           <ul class="sub-list">
-            <li><a href="http://restlet.org/discover/">${labels.footer.restletframework.discover['${language}']}</a></li>
-            <li><a href="http://restlet.org/download/">${labels.footer.restletframework.download['${language}']}</a></li>
-            <li><a href="http://restlet.org/learn/">${labels.footer.restletframework.learn['${language}']}</a></li>
-            <li><a href="http://restlet.org/participate/">${labels.footer.restletframework.participate['${language}']}</a></li>
+            <li><a href="/discover/">${labels.footer.restletframework.discover['${language}']}</a></li>
+            <li><a href="/download/">${labels.footer.restletframework.download['${language}']}</a></li>
+            <li><a href="/learn/">${labels.footer.restletframework.learn['${language}']}</a></li>
+            <li><a href="/participate/">${labels.footer.restletframework.participate['${language}']}</a></li>
+            <li><a href="/about/">${labels.footer.restlet.about['${language}']}</a></li>
           </ul>
         </div>
         <div class="span2c site">
@@ -194,10 +187,11 @@
             <li><a href="http://apispark.com/pricing">${labels.footer.apispark.pricing['${language}']}</a></li>
             <li><a href="http://apispark.com/docs/">${labels.footer.apispark.docs['${language}']}</a></li>
             <li><a href="http://apispark.com/about">${labels.footer.apispark.about['${language}']}</a></li>
+            <li><a href="http://support.apispark.com/">${labels.footer.apispark.helpdesk['${language}']}</a></li>
           </ul>
         </div>
       </div>
-      <div id="copyright">Copyright &copy; ${pp.now?string("yyyy")} Restlet - <a href="http://restlet.com/legal" title="${labels.footer.copyright.legal['${language}']}">${labels.footer.copyright.legal['${language}']}</a></div>
+      <div id="copyright">Copyright &copy; ${pp.now?string("yyyy")} Restlet - <a href="/legal" title="${labels.footer.copyright.legal['${language}']}">${labels.footer.copyright.legal['${language}']}</a></div>
     </div>
     <!-- generated ${pp.now} -->
 <#if footer??>

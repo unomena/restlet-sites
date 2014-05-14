@@ -89,7 +89,7 @@
 			<!-- <section id="faq"> <label>FAQ</label> </section> -->
 		</sections>
 	</section>
-    <section id="about">
+    <section id="about" hidden="true">
         <label>About Us</label>
         <title>About Us</title>
         <sections>

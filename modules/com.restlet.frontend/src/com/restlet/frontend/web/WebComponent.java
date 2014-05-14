@@ -124,32 +124,6 @@ public class WebComponent extends Component {
                                 properties));
                         return ref;
                     }
-
-                    @Override
-                    public void handle(Request request, Response response) {
-                        super.handle(request, response);
-                        if (!request.getCookies().isEmpty()) {
-                            // Migrate cookie from one site to the other.
-                            for (Cookie cookie : request.getCookies()) {
-                                if (cookie.getName().startsWith("mp_")
-                                        && cookie.getName().endsWith(
-                                                "_mixpanel")) {
-                                    Pattern pattern = Pattern
-                                            .compile(".*\"distinct_id\"\\s*:\\s*\"([^\"]*)\".*");
-                                    Matcher matcher = pattern.matcher(Reference
-                                            .decode(cookie.getValue()));
-                                    if (matcher.matches()) {
-                                        if (response.getLocationRef() != null) {
-                                            response.getLocationRef()
-                                                    .addQueryParameter("mpi",
-                                                            matcher.group(1));
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
                 }, properties);
         getHosts().add(host);
         // ---------------
@@ -161,13 +135,33 @@ public class WebComponent extends Component {
         // -----------------
         // maven.restlet.org
         // -----------------
-        host = addHost("maven.restlet.org", port, new MavenRestletOrg(
+        host = addHost("maven.restlet.org", port, new Redirector(getContext(),
+                null, getFrameworkSiteRedirectionMode(properties)) {
+            @Override
+            protected Reference getTargetRef(Request request, Response response) {
+                Reference ref = new Reference(request.getResourceRef());
+                ref.setHostDomain(getHostDomain("maven.restlet.com", properties));
+                return ref;
+            }
+        }, properties);
+        getHosts().add(host);
+        host = addHost("maven.restlet.com", port, new MavenRestletOrg(
                 "clap://class/config/mavenRestletOrg.properties"), properties);
         getHosts().add(host);
         // -----------------
         // p2.restlet.org
         // -----------------
-        host = addHost("p2.restlet.org", port, new P2RestletOrg(
+        host = addHost("p2.restlet.org", port, new Redirector(getContext(),
+                null, getFrameworkSiteRedirectionMode(properties)) {
+            @Override
+            protected Reference getTargetRef(Request request, Response response) {
+                Reference ref = new Reference(request.getResourceRef());
+                ref.setHostDomain(getHostDomain("p2.restlet.com", properties));
+                return ref;
+            }
+        }, properties);
+        getHosts().add(host);
+        host = addHost("p2.restlet.com", port, new P2RestletOrg(
                 "clap://class/config/p2RestletOrg.properties"), properties);
         getHosts().add(host);
 

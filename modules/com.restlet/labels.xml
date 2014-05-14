@@ -76,6 +76,10 @@
                 <en>Docs</en>
                 <fr>Docs</fr>
             </docs>
+            <helpdesk>
+                <en>Help desk</en>
+                <fr>Support</fr>
+            </helpdesk>
 		</apispark>
 		<apisparksupport>
 			<tutorial>

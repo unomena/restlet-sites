@@ -830,7 +830,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
         redirect(router, "/learn/", "/learn/tutorial");
         redirect(router, "/participate", "/participate/");
         redirect(router, "/products/references", "/participate/services");
-        redirect(router, "/products/", "/participate/services").setMatchingMode(
+        redirect(router, "/products", "/").setMatchingMode(
                 Template.MODE_STARTS_WITH);
         redirect(router, "/services", "/participate/services").setMatchingMode(
                 Template.MODE_STARTS_WITH);

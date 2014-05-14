@@ -9,27 +9,8 @@ mixpanel.init("93f5221471dfd58f4d1823699fe71294",{debug:true});
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-32616835-2', 'restlet.org');
+	  ga('create', 'UA-32616835-2', 'restlet.com');
 	  ga('send', 'pageview');
 	  
 // integration of twitter
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-
-function getParameterByName(query, name, defaultValue) {
-	var result = defaultValue;
-	if (query) {
-		name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-		var regexS = "[#\\?&]?" + name + "=([^&#]*)";
-		var regex = new RegExp(regexS);
-		var results = regex.exec(query);
-		if (results != null) {
-			result = decodeURIComponent(results[1].replace(/\+/g, " "));
-		}
-	}
-	return result;
-}
-
-var mpi = getParameterByName(window.location.search, "mpi", null);
-if (mpi) {
-  mixpanel.identify(mpi);	
-}

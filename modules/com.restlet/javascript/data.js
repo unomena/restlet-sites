@@ -146,3 +146,16 @@ function getDefaultEdition(version) {
 function getDefaultDistribution(version, edition) {
 	return 'zip';
 }
+function getParameterByName(query, name, defaultValue) {
+	var result = defaultValue;
+	if (query) {
+		name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+		var regexS = "[#\\?&]?" + name + "=([^&#]*)";
+		var regex = new RegExp(regexS);
+		var results = regex.exec(query);
+		if (results != null) {
+			result = decodeURIComponent(results[1].replace(/\+/g, " "));
+		}
+	}
+	return result;
+}
