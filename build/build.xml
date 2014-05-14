@@ -31,8 +31,6 @@
 
 	<property name="www" value="www" />
 	<property name="restlet-com" value="${www}/restlet-com" />
-	<property name="restlet-org" value="${www}/restlet-org" />
-	<!--	<property name="apispark-org" value="${www}/apispark-org" /> -->
 
 	<!-- Used to parse the unique json data base. -->
 	<script language="javascript">
@@ -46,7 +44,7 @@
     var file = null;
 
     // 1- Read the versions structure
-    file = new File("../modules/org.restlet/data/versions.json");
+    file = new File("../modules/com.restlet/data/versions.json");
     fr = new FileReader(file);
     br = new BufferedReader(fr);
     var line = null;
@@ -58,7 +56,7 @@
     var versions = eval("(" + json + ")");
 
     // 1- Read the qualifiers structure
-    file = new File("../modules/org.restlet/data/qualifiers.json");
+    file = new File("../modules/com.restlet/data/qualifiers.json");
     fr = new FileReader(file);
     br = new BufferedReader(fr);
 
@@ -279,7 +277,7 @@
 		<delete dir="${temp}/owr" />
 		<mkdir dir="${temp}/owr" />
 		<copy todir="${temp}/owr">
-			<fileset dir="../modules/org.restlet/" includes="**/*" />
+			<fileset dir="../modules/com.restlet/" includes="**/*" />
 		</copy>
 
 <!-- copy and filter javascript files
@@ -301,7 +299,7 @@
 -->
 		<generate-guide version="2.2" />
 		<generate-guide version="2.3" />
-		<fmpp sourceRoot="${temp}/owr" outputRoot="${temp}/${restlet-org}" modes="ignore(**/.svn,**/Thumbs.db)" quiet="reallyQuiet">
+		<fmpp sourceRoot="${temp}/owr" outputRoot="${temp}/${restlet-com}" modes="ignore(**/.svn,**/Thumbs.db)" quiet="reallyQuiet">
 			<data expandProperties="yes">
 				labels:xml(labels.xml)
 				hierarchy:xml(hierarchy.xml)
@@ -319,8 +317,8 @@
 			<include name="**/*" />
 			<exclude name="**/*.ftl" />
 		</fmpp>
-		<copy todir="${temp}/${restlet-org}/download/">
-			<fileset dir="../modules/org.restlet/download/" includes="*.ftl" />
+		<copy todir="${temp}/${restlet-com}/download/">
+			<fileset dir="../modules/com.restlet/download/" includes="*.ftl" />
 		</copy>
 		<delete dir="${temp}/owr" />
 		<!-- generate static files for the site : restlet.com -->
@@ -330,6 +328,7 @@
 		<copy todir="${temp}/cwr">
 			<fileset dir="../modules/com.restlet/" includes="**/*" excludes="**/*.fr" />
 		</copy>
+<!--
 		<fmpp sourceencoding="UTF-8" outputencoding="UTF-8" sourceRoot="${temp}/cwr" outputRoot="${temp}/${restlet-com}" modes="ignore(**/.svn,**/Thumbs.db), copy(javascript/*.js, **/*.css)" quiet="reallyQuiet">
 			<data expandProperties="yes">
                 hierarchy:xml(hierarchy.xml)
@@ -347,7 +346,9 @@
 			<include name="**/*" />
 			<exclude name="**/*.ftl*" />
 		</fmpp>
+-->
 		<!-- no translation to French language for the moment. -->
+<!--
 		<move todir="${temp}/${restlet-com}">
 			<fileset dir="${temp}/${restlet-com}" includes="**/*.en" />
 			<filterchain>
@@ -355,6 +356,7 @@
 			</filterchain>
 			<globmapper from="*.en" to="*" />
 		</move>
+-->
 		<delete dir="${temp}/cwr" />
 	</target>
 
@@ -388,7 +390,6 @@
 	<mkdir dir="${dist}/${dist-path}/bin" />
 	<mkdir dir="${dist}/${dist-path}/lib" />
 	<mkdir dir="${dist}/${dist-path}/${restlet-com}" />
-	<mkdir dir="${dist}/${dist-path}/${restlet-org}" />
 
 	<!-- Put everything in ${classes} into the JAR file -->
 	<jar jarfile="${dist}/${dist-path}/lib/com.restlet.frontend.jar" basedir="${classes}" includes="com/restlet/frontend/**" />
@@ -397,14 +398,6 @@
 	<copy todir="${dist}/${dist-path}/${restlet-com}">
 		<fileset dir="${temp}/${restlet-com}" />
 	</copy>
-	<copy todir="${dist}/${dist-path}/${restlet-org}">
-		<fileset dir="${temp}/${restlet-org}" />
-	</copy>
-	<!--
-    <copy todir="${dist}/${dist-path}/${apispark-org}">
-        <fileset dir="${temp}/${apispark-org}" />
-    </copy>
--->
 	<!-- Copy the config file -->
 	<copy todir="${dist}/${dist-path}/conf">
 		<fileset dir="${conf}" excludes="**/.svn,**/Thumbs.db" />

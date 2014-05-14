@@ -7,7 +7,7 @@ package com.restlet.frontend.web.resources.framework.impl;
 import org.restlet.resource.Post;
 import org.restlet.resource.ServerResource;
 
-import com.restlet.frontend.web.applications.RestletOrg;
+import com.restlet.frontend.web.applications.RestletCom;
 
 /**
  * Resource that refreshes the pages for the Restlet Web site.
@@ -19,7 +19,7 @@ public class RestletOrgRefreshResource extends ServerResource {
 
     @Post
     public String refresh() {
-        ((RestletOrg) getApplication()).refresh();
+        ((RestletCom) getApplication()).refresh();
         return "refresh done";
     }
 

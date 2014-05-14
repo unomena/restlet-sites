@@ -23,10 +23,6 @@
 			<en>Stay in touch:</en>
 			<fr>Restez en contact :</fr>
 		</intouch>
-        <notifications>
-            <en>Notify me</en>
-            <fr>Notifiez moi</fr>
-        </notifications>
 		<restlet>
 			<product>
 				<en>Products</en>
@@ -84,7 +80,7 @@
 		<apisparksupport>
 			<tutorial>
 				<en>Tutorials</en>
-				<fr>Tutoriels</fr>
+				<fr>Tutoriel</fr>
 			</tutorial>
 			<helpdesk>
 				<en>Help Desk</en>
@@ -98,16 +94,22 @@
 		<copyright>
 			<legal>
 				<en>Legal Notice</en>
-                <fr>Mentions légales</fr>
+				<fr>Mentions légales</fr>
 			</legal>
 		</copyright>
 	</footer>
-	<summaryNoeliosBlog>
-		<en>Summary of the Restlet blog</en>
-		<fr>Résumé du blog Restlet</fr>
-	</summaryNoeliosBlog>
-	<noeliosBlog>
-		<en>Restlet blog</en>
-		<fr>Blog Restlet</fr>
-	</noeliosBlog>
+	<notifications>
+		<placeholder>
+			<en>Valid email address</en>
+			<fr>Adresse mail valide</fr>
+		</placeholder>
+		<submit>
+			<en>Notify me</en>
+			<fr>Notifiez moi</fr>
+		</submit>
+	</notifications>
+	<summaryRestletBlog>Summary of the Restlet latest news
+	</summaryRestletBlog>
+	<restletBlog>Restlet latest news</restletBlog>
+	<sectionTitleError>Error</sectionTitleError>
 </labels>

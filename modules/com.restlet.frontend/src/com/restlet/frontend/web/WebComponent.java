@@ -6,10 +6,16 @@ package com.restlet.frontend.web;
 
 import java.io.IOException;
 import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import org.restlet.Application;
 import org.restlet.Component;
+import org.restlet.Request;
+import org.restlet.Response;
+import org.restlet.Restlet;
+import org.restlet.data.Cookie;
 import org.restlet.data.Protocol;
+import org.restlet.data.Reference;
 import org.restlet.representation.Representation;
 import org.restlet.resource.ClientResource;
 import org.restlet.routing.Redirector;
@@ -18,7 +24,6 @@ import org.restlet.routing.VirtualHost;
 import com.restlet.frontend.web.applications.MavenRestletOrg;
 import com.restlet.frontend.web.applications.P2RestletOrg;
 import com.restlet.frontend.web.applications.RestletCom;
-import com.restlet.frontend.web.applications.RestletOrg;
 
 /**
  * The web component managing the Restlet web servers.
@@ -82,7 +87,7 @@ public class WebComponent extends Component {
         getLogService().setLoggerName("com.noelios.web.WebComponent.www");
         // getLogService().setIdentityCheck(true);
 
-        Properties properties = getProperties("clap://class/config/webComponent.properties");
+        final Properties properties = getProperties("clap://class/config/webComponent.properties");
 
         // IP address to listen on
         String ipAddress = properties.getProperty("server.address");
@@ -104,11 +109,59 @@ public class WebComponent extends Component {
         getClients().add(Protocol.RIAP);
         getClients().add(Protocol.HTTP);
 
-        // ---------------
+        // -----------
         // restlet.org
-        // ---------------
-        VirtualHost host = addHost("restlet.org", port, new RestletOrg(
-                "clap://class/config/restletOrg.properties"), properties);
+        // -----------
+
+        // VirtualHost host = addHost("restlet.org", port, new Restlet(
+        // getContext()) {
+        // @Override
+        // public void handle(Request request, Response response) {
+        // super.handle(request, response);
+        // response.setEntity("<html>ok</html>", MediaType.TEXT_HTML);
+        // response.getCookieSettings()
+        // .add("mp_23_mixpanel",
+        // "%7B%22distinct_id%22%3A%20%22145fa9f767cb-0f9352d36-6f103624-1fa400-145fa9f767d14c%22%2C%22%24initial_referrer%22%3A%20%22%24direct%22%2C%22%24initial_referring_domain%22%3A%20%22%24direct%22%7D");
+        // }
+        // }, properties);
+
+        VirtualHost host = addHost("restlet.org", port,
+                new Redirector(getContext(), null,
+                        getFrameworkSiteRedirectionMode(properties)) {
+                    @Override
+                    protected Reference getTargetRef(Request request,
+                            Response response) {
+                        Reference ref = new Reference(request.getResourceRef());
+                        ref.setHostDomain(getHostDomain("restlet.com",
+                                properties));
+                        return ref;
+                    }
+
+                    @Override
+                    public void handle(Request request, Response response) {
+                        super.handle(request, response);
+                        if (!request.getCookies().isEmpty()) {
+                            for (Cookie cookie : request.getCookies()) {
+                                if (cookie.getName().startsWith("mp_")
+                                        && cookie.getName().endsWith(
+                                                "_mixpanel")) {
+                                    Pattern pattern = Pattern
+                                            .compile(".*\"distinct_id\"\\s*:\\s*\"([^\"]*)\".*");
+                                    Matcher matcher = pattern.matcher(Reference
+                                            .decode(cookie.getValue()));
+                                    if (matcher.matches()) {
+                                        if (response.getLocationRef() != null) {
+                                            response.getLocationRef()
+                                                    .addQueryParameter("mpi",
+                                                            matcher.group(1));
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }, properties);
         getHosts().add(host);
         // ---------------
         // restlet.com
@@ -128,13 +181,6 @@ public class WebComponent extends Component {
         host = addHost("p2.restlet.org", port, new P2RestletOrg(
                 "clap://class/config/p2RestletOrg.properties"), properties);
         getHosts().add(host);
-
-        // -----------------
-        // apispark.org
-        // -----------------
-        // host = addHost("apispark.org", port, new ApisparkOrg(
-        // "clap://class/config/apisparkOrg.properties"), properties);
-        // getHosts().add(host);
 
         // -----------------------
         // Redirect to restlet.org
@@ -203,12 +249,12 @@ public class WebComponent extends Component {
      *            The component's set of properties.
      * @return A new virtual host.
      */
-    private VirtualHost addHost(String host, int port, Application application,
+    private VirtualHost addHost(String host, int port, Restlet restlet,
             Properties properties) {
         VirtualHost result = new VirtualHost(getContext().createChildContext());
         setHostDomain(result, host, properties);
         result.setHostPort("80|" + Integer.toString(port));
-        result.attach(application);
+        result.attach(restlet);
         result.setName(host);
         getLogger().info(
                 result.getHostDomain() + " listens to port "
@@ -266,6 +312,45 @@ public class WebComponent extends Component {
     }
 
     /**
+     * Returns the redirection mode for the framework site.
+     * 
+     * @param properties
+     *            The current properties.
+     * @return The redirection mode for the framework site.
+     */
+    private int getFrameworkSiteRedirectionMode(Properties properties) {
+        String r = properties.getProperty("framework.site.redirection",
+                "MODE_CLIENT_TEMPORARY");
+
+        if ("MODE_CLIENT_FOUND".equals(r)) {
+            return Redirector.MODE_CLIENT_FOUND;
+        } else if ("MODE_CLIENT_PERMANENT".equals(r)) {
+            return Redirector.MODE_CLIENT_PERMANENT;
+        } else if ("MODE_CLIENT_SEE_OTHER".equals(r)) {
+            return Redirector.MODE_CLIENT_SEE_OTHER;
+        }
+
+        return Redirector.MODE_CLIENT_TEMPORARY;
+
+    }
+
+    /**
+     * Returns the host's domain. Could be customized by the "domain.host"
+     * property.
+     * 
+     * @param host
+     *            The {@link VirtualHost} to update.
+     * @param domain
+     *            The domain name.
+     * @param properties
+     *            The properties where to find the facultative customized domain
+     *            name.
+     */
+    private String getHostDomain(String domain, Properties properties) {
+        return properties.getProperty(domain + ".host", domain);
+    }
+
+    /**
      * Sets the host's domain. Could be customized by the "domain.host"
      * property.
      * 
@@ -279,13 +364,8 @@ public class WebComponent extends Component {
      */
     private void setHostDomain(VirtualHost host, String domain,
             Properties properties) {
-        String str = properties.getProperty(domain + ".host");
-        if (str != null) {
-            getLogger().info(domain + " swapped to " + str);
-            host.setHostDomain(str);
-        } else {
-            host.setHostDomain(domain);
-        }
+        host.setHostDomain(getHostDomain(domain, properties));
+        getLogger().info(domain + " swapped to " + host.getHostDomain());
     }
 
 }

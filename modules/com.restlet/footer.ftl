@@ -1,12 +1,7 @@
 <#if !(title?has_content)>
 <#list sections.section as section>
       <#if section.@id == currentSection>
-         <#assign title="Restlet - ${section.label['${language}']?trim}"  />
-         <#list section.sections.section as subsection>
-            <#if subsection.@id == currentSubSection>
-               <#assign title="Restlet - ${section.label['${language}']?trim} - ${subsection.label['${language}']?trim}"  />
-            </#if>
-         </#list>
+         <#assign title="Restlet Framework - ${section.label?trim}"  />
       </#if>
 </#list>
 </#if>
@@ -15,111 +10,164 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <title>${title}</title>
-      <link sizes="32x32" href="/images/favicon-restlet-com.gif" rel="icon">
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <meta name="keywords"  content="Web API, Restlet, APISpark, REST, Java, framework, toolkit, HTTP, GWT, Android, GAE, OSGi, SPDY" />
-      <link rel="alternate"  type="application/atom+xml" href="/feeds/summary" title="${labels.summaryNoeliosBlog['${language}']?trim}" />
-      <link rel="alternate"  type="application/rss+xml" href="http://blog.restlet.com/feed" title="${labels.noeliosBlog['${language}']?trim}" />
-      <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/bootstrap.css" />
-      <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/styles.css" />
-      <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/bootstrap-responsive.css" />
-      <link rel="stylesheet" type="text/css" media="print"  href="/stylesheets/main-print.css" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="keywords"  content="REST, Java, framework, toolkit, HTTP, GWT, GAE, Android, JSE, JEE, Servlet, NIO" />
+      <meta charset="utf-8" />
+      ${metaheader!""}
+      <link type="image/gif" href="/images/favicon-restlet-org.gif" rel="icon">
+      <link rel="stylesheet" type="text/css"             href='/stylesheets/bootstrap.css' />
+      <link rel="stylesheet" type="text/css"             href='/stylesheets/bootstrap-responsive.css' />
+      <link rel="stylesheet" type="text/css"             href='/stylesheets/styles.css' />
+      <link rel="alternate"  type="application/atom+xml" href="/feeds/summary" title="${labels.summaryRestletBlog?trim}" />
+      <link rel="alternate"  type="application/rss+xml"  href="http://blog.restlet.com/feed/?cat=15314" title="${labels.restletBlog?trim}" />
 <#list stylesheet_files as stylesheet_file>
       <link rel="stylesheet" type="text/css"            href="${stylesheet_file}" />
 </#list>
 <#if stylesheet??>
-      <style>
+      <style type="text/css">
       ${stylesheet}
       </style>
-</#if>
-<#if atomRepresentation??>
-   <#noparse>
-      ${atomRepresentation}
-   </#noparse>
 </#if>
 <#list javascript_files as javascript_file>
       <script                type="text/javascript"     src="${javascript_file}"></script>
 </#list>
-<#if javascript??>
-      <script type="text/javascript">
-      ${javascript}
-      </script>
+      <script                type="text/javascript"     src="/javascript/jquery-1.9.0.min.js"></script>
+      <script                type="text/javascript"     src="/javascript/jquery-cookie.js"></script>
+      <script                type="text/javascript"     src="/javascript/integration-framework.js"></script>
+<#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>
+      <script                type="text/javascript"     src="/javascript/jsclass-core.js"></script>
+      <script                type="text/javascript"     src="/javascript/json-minified.js"></script>
+      <script                type="text/javascript"     src="/javascript/restlet-client.js"></script>
+      <script                type="text/javascript"     src="/javascript/bootstrap.min.js"></script>
+      <script                type="text/javascript"     src="/javascript/data.js"></script>
+    <#if ("javadocs" == currentSubSection!"")>
+      <script                type="text/javascript"     src="/javascript/javadocs.js"></script>
+    <#elseif ("guide" == currentSubSection!"")>
+      <script                type="text/javascript"     src="/javascript/userguide.js"></script>
+    <#elseif ("tutorial" == currentSubSection!"")>
+      <script                type="text/javascript"     src="/javascript/tutorial.js"></script>
+    </#if>
 </#if>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      <script type="text/javascript">
+<#if pp.sourceFile?matches("learn\\/[0-9]\\.[0-9]$") >
+        $.cookie('branch', '${pp.sourceFile?substring(6)}', {path: '/' });
+<#elseif pp.sourceFile?matches("learn\\/[0-9]\\.[0-9]/.*$") >
+        $.cookie('branch', '${pp.sourceFile?substring(6, 9)}', {path: '/' });
+</#if>
+<#if javascript??>
+      ${javascript}
+</#if>
 
-  ga('create', 'UA-32616835-1', 'restlet.com');
-  ga('send', 'pageview');
-
-</script>
-
+<#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>
+    $(document).ready(function() {
+        init($("#cBranch"));
+    });
+</#if>
+      </script>
    </head>
-
-  <body<#if body_event_managers?has_content>${body_event_managers}</#if>>
-    <div class="globalBg">
-      <div class='topbar'>
-        <div class='header'>
-          <div class='container'>
-            <a class='brand' href="/" title='Restlet'><img alt='Restlet Logo' height='136' src='/images/logo-restlet-sas.png' width='129' /></a>
-            <ul class='nav'>
-<#list sections.section as section>
-   <#if (section.@hidden[0]!'false') != 'true'>
-              <li><a<#if section.@id == currentSection> class="active"</#if> href="/${section.@id}" title="${section.label['${language}']?trim}" id="${section.@id}">${section.label['${language}']?trim}</a></li>
-   </#if>
-</#list>
-            </ul>
-          </div>
+   <body>
+    <div class='topbar'>
+      <div class='header'>
+        <div class='container'>
+          <a class='brand' href="/" title='Restlet Framework'>
+            <img alt='Restlet Framework Logo' height='136' width='129' src='/images/logo-restlet-new.png' />
+          </a>
+          <ul class='nav'>
+    <#list sections.section as section>
+      <#if !(section.@hidden?has_content)><li><a<#if section.@id == currentSection> class='active'</#if> href="/${section.@id}/">${section.title}</a></li></#if>
+	</#list>
+          </ul>
         </div>
       </div>
-
-	  <div class="clearBoth"></div>
-      <div class='hero ac header <#if !("-"=currentSection)>${currentSection} section</#if>'>
-        <div class='container'>
+    </div>
+    <div class='hero ac <#if headerClass?has_content>${headerClass}<#else>smallHeader</#if>'>
+      <div class='container'>
+<#compress>
   <#if header?has_content>${header}
   <#elseif "error"=currentSection><h3>${errorPageTitle!"Error page"} <#noparse>(${status.code})</#noparse></h3>
   <#else>
     <#list sections.section as section>
-      <#if (section.@hidden[0]!'false') != 'true'>
-        <#if section.@id == currentSection><h3>${section.label['${language}']?trim}</h3></#if> 
+      <#if section.@id == currentSection>
+       <h3>${section.label?trim}</h3>
       </#if>
-    </#list>
+	</#list>
   </#if>
-        </div>
+</#compress>
       </div>
+    </div>
 
+<#compress>
 <#list sections.section as section>
    <#if (section.@hidden[0]!'false') != 'true' && (section.@id == currentSection) && section.sections.section?has_content>
-      <div class="content container">
-        <ul class="pages">
+    <div class="container subsections">
+      <ul class="pages">
       <#list section.sections.section as subsection>
          <#if (subsection.@hidden[0]!'false') != 'true'>
-            <#if !subsection.a?has_content>
-          <li<#if subsection.@id == currentSubSection> class="active"</#if>><a href="/${section.@id}/${subsection.@id}" title="${subsection.label['${language}']?trim}">${subsection.label['${language}']?trim}</a></li>
-            <#else>
-          <li><a title="${subsection.label['${language}']?trim}"<#list subsection.a.@@ as attr> ${attr?node_name}="${attr}"</#list>>${subsection.label['${language}']?trim}</a></li>
-            </#if>
+        <li<#if subsection.@id == currentSubSection> class="active"</#if>><a href="/${section.@id}/${subsection.@id}">${subsection.label?trim}</a></li>
          </#if>
       </#list>
-        </ul>
-      </div>
+      </ul>
+      <hr/>
+    </div>
+    <div class="clearBoth"></div>
    </#if>
 </#list>
-
+</#compress>
+    <div class='container<#if "-"=currentSection> topics</#if> content'>
+    <#if ("learn"=currentSection!"") && (("guide" == currentSubSection!""))>${editButton!""}</#if><#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>${branchSwitch!""}</#if>
       ${content}
-      <div class="content footerWrapper">
-        <div class="footer"><!-- <#if "error"!=currentSection><a href="https://github.com/restlet/restlet-sites/edit/master/modules/com.restlet/${pp.sourceFile}" title="Edit, comment this page">Edit, comment this page</a></#if> --></div>
-      </div>
+    </div>
+    <div class="content footerWrapper">
+        <div class="footer"></div>
     </div>
 
     <div id="footer">
       <div class="container">
         <div class="span2 intro below">${labels.footer.intouch['${language}']}</div>
         <div class="span2a site"><h4><a href="http://blog.restlet.com/"><i class="blog-icon"></i>${labels.footer.blog['${language}']}</a></h4></div>
-        <div class="span2b site"><h4><a href="https://twitter.com/restlet_com"><i class="follow-icon"></i>${labels.footer.twitter['${language}']}</a></h4></div>
-        <div class="span4 newsletter"><form action="http://restlet.us4.list-manage1.com/subscribe/post?u=6e9d916ca1faf05c7dc49d21e&id=a8aa911b32" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank"><input type="hidden" value="1" name="group[9053][1]" /><input type="hidden" value="2" name="group[9053][2]" /><input type="hidden" id="EMAIL" name="EMAIL" value=""/><span id="footerNewsLetterWrapper"><input type="email" name="EMAIL" required="required" placeholder="${labels.footer.newsletter['${language}']}"/><input type="submit" id="footerNewsLetterOkButton" value="OK"></span></form></div>
+        <div class="span2b site"><h4><a href="https://twitter.com/restlet_org"><i class="follow-icon"></i>${labels.footer.twitter['${language}']}</a></h4></div>
+<!--        <div class="span2b site"><h4><a href="/download/notifications"><i class="notifications-icon"></i>${labels.notifications.submit['${language}']}</a></h4></div> -->
+        <div class="span4 newsletter">
+        <span id="footerNewsLetterWrapper" align="right">
+	        <input type="email" id="footerNewsLetterEmail" name="EMAIL" class="required email" placeholder="${labels.footer.newsletter['${language}']}"/>
+	        <button id="footerNewsLetterOkButton" class="button" disabled="true">OK</button>
+        </span>
+        </div>
+        <script type="text/javascript">
+			$("#footerNewsLetterEmail").mouseleave(function() {
+	              var email = $("#footerNewsLetterEmail").val();
+	              var re = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
+	              var emailRegexp = new RegExp(re);
+	              
+	              if (email != "") {
+	                    if (emailRegexp.test(email)) {
+	                          $('#footerNewsLetterOkButton').removeAttr("disabled");
+	                          $("#footerNewsLetterEmail").removeClass("error");
+	                    } else {
+	                          $("#footerNewsLetterEmail").addClass("error");
+	                          $('#footerNewsLetterOkButton').attr("disabled", true);
+	                    }
+	              } else {
+	                    $("#footerNewsLetterEmail").removeClass("error");
+	                    $('#footerNewsLetterOkButton').attr("disabled", true);
+	              }
+	        });
+        	$("#footerNewsLetterOkButton").click(
+        		function(event) {
+        			mixpanel.track("Shared email", {
+						"email": $("#footerNewsLetterEmail").val(),
+						"Email field location":"RF footer: newsletter sign up field",
+						"Product":"Restlet Framework"
+					}, function() {
+						$("#footerNewsLetterEmail").val("");
+						$("#footerNewsLetterEmail").attr("disabled", true);
+						$("#footerNewsLetterOkButton").html("&#10003;");
+						$("#footerNewsLetterOkButton").css("font-size","24px");
+						$("#footerNewsLetterOkButton").attr("disabled", true);
+					});
+        		}
+        	);
+        </script>
         <div class="clearBoth"></div>
         <div class="span2 intro below">${labels.footer.sites['${language}']}</div>
         <div class="span2a site">
@@ -140,7 +188,7 @@
           </ul>
         </div>
         <div class="span2c site">
-          <h4><a href="http://apispark.com/"><img src="/images/logo-apispark-small.png" />APISpark</a></h4>
+          <h4><a href="http://apispark.com/"><img src="/images/logo-apispark-small.png"/>APISpark</a></h4>
           <ul class="sub-list">
             <li><a href="http://apispark.com/features">${labels.footer.apispark.features['${language}']}</a></li>
             <li><a href="http://apispark.com/pricing">${labels.footer.apispark.pricing['${language}']}</a></li>
@@ -149,8 +197,12 @@
           </ul>
         </div>
       </div>
-      <div id="copyright">Copyright &copy; ${pp.now?string("yyyy")} Restlet - <a href="/legal" title="${labels.footer.copyright.legal['${language}']}">${labels.footer.copyright.legal['${language}']}</a></div>
+      <div id="copyright">Copyright &copy; ${pp.now?string("yyyy")} Restlet - <a href="http://restlet.com/legal" title="${labels.footer.copyright.legal['${language}']}">${labels.footer.copyright.legal['${language}']}</a></div>
     </div>
     <!-- generated ${pp.now} -->
+<#if footer??>
+    ${footer}
+</#if>
+   
    </body>
 </html>

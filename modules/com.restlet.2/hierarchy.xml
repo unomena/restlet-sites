@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE menus []>
+<!-- Data file that declares the hierarchy of sections and sub sections -->
+<sections>
+	<section id="-" hidden="true">
+		<label>
+			<en>Home</en>
+			<fr>Accueil</fr>
+		</label>
+		<title>
+			<en>Realize your Web APIs !</en>
+			<fr>Réalisez vos APIs Web !</fr>
+		</title>
+	</section>
+	<section id="legal" hidden="true">
+		<label>
+			<en>Legal notice</en>
+			<fr>Mentions légales</fr>
+		</label>
+		<title>
+			<en>Legal notice</en>
+			<fr>Mentions légales</fr>
+		</title>
+	</section>
+    <section id="news" hidden="true">
+        <label>
+            <en>News</en>
+            <fr>News</fr>
+        </label>
+        <title>
+            <en>News</en>
+            <fr>News</fr>
+        </title>
+    </section>
+	<section id="products">
+		<label>
+			<en>Products</en>
+			<fr>Produits</fr>
+		</label>
+		<title>
+			<en>Our products</en>
+			<fr>Nos produits</fr>
+		</title>
+		<sections>
+			<section id="index">
+				<label>
+					<en>Overview</en>
+					<fr>Résumé</fr>
+				</label>
+				<title>
+					<en>Overview</en>
+					<fr>Résumé</fr>
+				</title>
+			</section>
+			<section id="restlet-framework">
+				<label>
+					<en>Restlet Framework</en>
+					<fr>Restlet Framework</fr>
+				</label>
+				<title>
+					<en>Restlet Framework</en>
+					<fr>Restlet Framework</fr>
+				</title>
+				<a href="http://restlet.org" target="_blank" />
+			</section>
+			<section id="apispark">
+				<label>
+					<en>APISpark</en>
+					<fr>APISpark</fr>
+				</label>
+				<title>
+					<en>APISpark</en>
+					<fr>APISpark</fr>
+				</title>
+				<a href="http://apispark.com" target="_blank" />
+			</section>
+			<section id="references">
+				<label>
+					<en>References</en>
+					<fr>Références</fr>
+				</label>
+				<title>
+					<en>Customer and user references</en>
+					<fr>Références clients et utilisateurs</fr>
+				</title>
+			</section>
+		</sections>
+	</section>
+	<section id="services">
+		<label>
+			<en>Services</en>
+			<fr>Services</fr>
+		</label>
+		<title>
+			<en>Our services</en>
+			<fr>Nos services</fr>
+		</title>
+		<sections>
+			<section id="index">
+				<label>
+					<en>Overview</en>
+					<fr>Résumé</fr>
+				</label>
+				<title>
+					<en>Overview</en>
+					<fr>Résumé</fr>
+				</title>
+			</section>
+			<section id="subscriptions">
+				<label>
+					<en>Subscriptions</en>
+					<fr>Souscriptions</fr>
+				</label>
+				<title>
+					<en>Subscriptions</en>
+					<fr>Souscriptions</fr>
+				</title>
+			</section>
+			<section id="consulting">
+				<label>
+					<en>Consulting</en>
+					<fr>Conseil</fr>
+				</label>
+				<title>
+					<en>Consulting offer</en>
+					<fr>Offre de conseil</fr>
+				</title>
+			</section>
+			<section id="references">
+				<label>
+					<en>References</en>
+					<fr>Références</fr>
+				</label>
+				<title>
+					<en>Customer references</en>
+					<fr>Références clients</fr>
+				</title>
+			</section>
+		</sections>
+	</section>
+	<section id="about">
+		<label>
+			<en>About Us</en>
+			<fr>A propos de nous</fr>
+		</label>
+		<title>
+			<en>About Restlet</en>
+			<fr>A propos de Restlet</fr>
+		</title>
+		<sections>
+			<section id="index">
+				<label>
+					<en>Introduction</en>
+					<fr>Introduction</fr>
+				</label>
+				<title>
+					<en>Introduction</en>
+					<fr>Introduction</fr>
+				</title>
+			</section>
+			<section id="team">
+				<label>
+					<en>Team</en>
+					<fr>Equipe</fr>
+				</label>
+				<title>
+					<en>Our team</en>
+					<fr>Notre équipe</fr>
+				</title>
+			</section>
+            <section id="board">
+                <label>
+                    <en>Board</en>
+                    <fr>Board</fr>
+                </label>
+                <title>
+                    <en>Our team</en>
+                    <fr>Notre équipe</fr>
+                </title>
+            </section>
+			<section id="hiring">
+				<label>
+					<en>Hiring</en>
+					<fr>Hiring</fr>
+				</label>
+				<title>
+					<en>Hiring</en>
+					<fr>Hiring</fr>
+				</title>
+			</section>
+			<section id="locations">
+				<label>
+					<en>Locations</en>
+					<fr>Coordonnées</fr>
+				</label>
+				<title>
+					<en>Our locations</en>
+					<fr>Nos coordonnées</fr>
+				</title>
+			</section>
+		</sections>
+	</section>
+	<section id="admin" hidden="true">
+		<label>
+			<en>Administration</en>
+			<fr>Administration</fr>
+		</label>
+		<title>
+			<en>Administration zone</en>
+			<fr>Zone d'administration</fr>
+		</title>
+	</section>
+	<section id="error" hidden="true">
+		<label>
+			<en>Error page</en>
+			<fr>Page d'erreur</fr>
+		</label>
+		<title>
+			<en>Error page</en>
+			<fr>Page d'erreur</fr>
+		</title>
+		<sections>
+			<section id="status-100">
+				<label>
+					<en>Informational status</en>
+					<fr>Status Informatif</fr>
+				</label>
+				<title>
+					<en>Informational status</en>
+					<fr>Status Informatif</fr>
+				</title>
+			</section>
+			<section id="status-400">
+				<label>
+					<en>Client error</en>
+					<fr>Erreur client</fr>
+				</label>
+				<title>
+					<en>Client error</en>
+					<fr>Erreur client</fr>
+				</title>
+			</section>
+			<section id="status-500">
+				<label>
+					<en>Server error</en>
+					<fr>Erreur serveur</fr>
+				</label>
+				<title>
+					<en>Server error</en>
+					<fr>Erreur serveur</fr>
+				</title>
+			</section>
+		</sections>
+	</section>
+</sections>
