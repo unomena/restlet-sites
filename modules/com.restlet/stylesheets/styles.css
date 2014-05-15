@@ -987,6 +987,11 @@ form,form>input {
 
 #newsletter {
 	position: relative;
+	clear: both;
+}
+
+#newsletter .elements {
+	position: relative;
 }
 
 #newsletter .notifications > h4 {
