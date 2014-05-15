@@ -62,7 +62,7 @@ book published by Manning.
 ## Professional support
 
 If you can't wait to get an answer or need to keep your questions confidential,
-you can also obtain private support by buying a [professional support plan](restlet.org/participate/contribute)
+you can also obtain private support by buying a [professional support plan](http://restlet.org/participate/contribute)
 from the creator of the Restlet Framework.
 
 [![](http://restlet.com/images/logos/logo100)](http://restlet.com/services/)
