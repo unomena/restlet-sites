@@ -1023,13 +1023,11 @@ form,form>input {
 
 .quick-start {
 	width: 45%;
-	height: 177px;
 	position: absolute;
 	right: 0;
 	top: 0px;
 	border-left: 2px solid #DDDDDD;
 	padding-left: 20px;
-	padding-top: 17px;
 }
 
 .quick-start h4 {
