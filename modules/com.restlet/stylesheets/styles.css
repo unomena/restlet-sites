@@ -114,7 +114,7 @@ body {
 }
 
 .container h4 {
-	color: #4D4D4D;
+    color: #4D4D4D;
 }
 
 .container .product h4 {
@@ -406,11 +406,19 @@ div.restlet-community {
 	padding-bottom: 15px;
 }
 
-h4.discover, h4.learn, h4.participate {
+a.home-middle {
+    color: #4D4D4D;
+    text-decoration: none;
+    font-size: 17.5px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+a.home-middle.discover, a.home-middle.learn, a.home-middle.participate {
 	height: 60px;
 }
 
-h4.discover:before {
+a.home-middle.discoverlink:before {
 	content: url(/images/discover-icon.png);
 	display: inline-block;
 	padding-top: 0px;
@@ -419,7 +427,7 @@ h4.discover:before {
 	line-height: 1.9em;
 }
 
-h4.learn:before {
+a.home-middle.learnlink:before {
 	content: url(/images/learn-icon.png);
 	display: inline-block;
 	padding-top: 13px;
@@ -427,7 +435,7 @@ h4.learn:before {
 	vertical-align: -50%;
 }
 
-h4.participate:before {
+a.home-middle.participatelink:before {
 	content: url(/images/participate-icon.png);
 	display: inline-block;
 	padding-top: 7px;
