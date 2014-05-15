@@ -98,13 +98,13 @@
 
 <#compress>
 <#list sections.section as section>
-   <#if (section.@hidden[0]!'false') != 'true' && (section.@id == currentSection) && section.sections.section?has_content>
+   <#if (section.@id == currentSection) && section.sections.section?has_content>
     <div class="container subsections">
       <ul class="pages">
       <#list section.sections.section as subsection>
-         <#if (subsection.@hidden[0]!'false') != 'true'>
+         
         <li<#if subsection.@id == currentSubSection> class="active"</#if>><a href="/${section.@id}/${subsection.@id}">${subsection.label?trim}</a></li>
-         </#if>
+         
       </#list>
       </ul>
       <hr/>
