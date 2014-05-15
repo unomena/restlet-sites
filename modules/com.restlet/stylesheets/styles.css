@@ -1026,10 +1026,15 @@ form,form>input {
 	height: 223px;
 	position: absolute;
 	right: 0;
-	top: 207px;
+	top: 0px;
 	border-left: 2px solid #DDDDDD;
 	padding-left: 20px;
 	padding-top: 17px;
+}
+
+.quick-start h4 {
+    margin-bottom: 10px;
+    margin-top: 0px;
 }
 
 .quick-start ul {
