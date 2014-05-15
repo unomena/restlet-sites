@@ -98,8 +98,8 @@
 				<div class="clearBoth"></div>
 			</div>
 			<div class="doc-download">
-				<input type="email" id="downloadDocKinLaneEmail" required="required" placeholder="Email"/>
-				<button id="downloadDocKinLane">Download</button>
+				<input type="email" id="campaignEmail" required="required" placeholder="Email"/>
+				<button id="campaignButton">Download</button>
 			</div>
 			<div class="doc-footer">
 				<p>Your details will never be shared to a 3rd party. We hate spam just as much as you do.</p>

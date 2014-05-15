@@ -52,7 +52,7 @@ function setDownloadButton() {
 		}
 		urlChangesLog += "/changes";
 
-		$('#download').append('<p><button id="download_rf" class="btn btn-large btn-success" type="button">Download ' + version.fullVersionCompact + '</button></p>');
+		$('#download').append('<p><button id="rfDownloadButton" class="btn btn-large btn-success" type="button">Download ' + version.fullVersionCompact + '</button></p>');
 		
 		if (distribution.fileType !== "maven"
 			&& distribution.fileType !== "p2") {
@@ -61,23 +61,23 @@ function setDownloadButton() {
 		$('#download').append('<p>Date: ' + version.published + '</p>');
 		$('#download').append('<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
 		
-		$('#downloadDocKinLane').click(
+		$('#campaignButton').click(
 				function(event) {
-	                if (checkEmail("downloadDocKinLaneEmail", "downloadDocKinLane")) {
+	                if (checkEmail("campaignEmail", "campaignButton")) {
 						mixpanel.track("Shared email", {
-							"email": $("#downloadDocKinLaneEmail").val(),
+							"email": $("#campaignEmail").val(),
 							"Email field location":"User Guide PDF"
 						});
-						mixpanel.alias($("#downloadDocKinLaneEmail").val(), mixpanel.get_distinct_id());
-						mixpanel.people.set({"$email": $("#downloadDocKinLaneEmail").val()});
+						mixpanel.alias($("#campaignEmail").val(), mixpanel.get_distinct_id());
+						mixpanel.people.set({"$email": $("#campaignEmail").val()});
 						mixpanel.track("Downloaded User Guide PDF");
 						
 						// close popup
-						$("#downloadDocKinLaneEmail").val("");
+						$("#campaignEmail").val("");
 						$("#deployModal").hide();
 						
 						// Set a one year cookie dedicated to this campaign. 
-						$.cookie('kin-lane-white-paper', 'true', {
+						$.cookie('rf-user-guide', 'true', {
 							expires: 365
 						});
 						// launch pdf download in a new tab
@@ -87,14 +87,14 @@ function setDownloadButton() {
 		);
 
 		if (distribution.fileType == "maven") {
-			$('#download_rf').click(
+			$('#rfDownloadButton').click(
 					function() {
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
 						var hrefCallback = function() {
 							$('#maven_infos').css('display','block');
-							if ("true" != $.cookie("kin-lane-white-paper")) {
-								// open Kin Lane popup
+							if ("true" != $.cookie("rf-user-guide")) {
+								// open campaign popup
 								$("#deployModal").show();								
 							}
 						}
@@ -114,15 +114,15 @@ function setDownloadButton() {
 						}, hrefCallback);
 					});
 		} else if (distribution.fileType == "p2") {
-			$('#download_rf').click(
+			$('#rfDownloadButton').click(
 					function() {
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
 						
 						var hrefCallback = function() {
 							$('#eclipse_infos').css('display','block');
-							if ("true" != $.cookie("kin-lane-white-paper")) {
-								// open Kin Lane popup
+							if ("true" != $.cookie("rf-user-guide")) {
+								// open campaign popup
 								$("#deployModal").show();								
 							}
 						}
@@ -142,17 +142,17 @@ function setDownloadButton() {
 						}, hrefCallback);
 					});			
 		} else {
-			$('#download_rf').click(
+			$('#rfDownloadButton').click(
 					function(event) {
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
 
 						var hrefCallback = function(event) {
-							// download selected resltet framework file
+							// download selected restlet framework file
 							document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
-							// open Kin Lane popup
-							if ("true" != $.cookie("kin-lane-white-paper")) {
-								// open Kin Lane popup
+							// open campaign popup
+							if ("true" != $.cookie("rf-user-guide")) {
+								// open campaign popup
 								$("#deployModal").show();								
 							}
 						}

@@ -189,7 +189,7 @@ function setDownloadButton() {
 		urlChangesLog += "/changes";
 
 		$('#download').append(
-				'<p><button class="btn btn-large btn-success" type="button">Download '
+				'<p><button id="rfDownloadButton" class="btn btn-large btn-success" type="button">Download '
 						+ version.fullVersionCompact + '</button></p>');
 		if (distribution.fileType == "maven") {
 			//$('#download').append('<p>Group id: ' + distribution.mavenGroupId + '</p>');
@@ -203,7 +203,7 @@ function setDownloadButton() {
 		$('#download').append(
 				'<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
 		if (distribution.fileType == "maven") {
-			$('#download button').click(
+			$('#rfDownloadButton').click(
 					function() {
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','block');
@@ -211,7 +211,7 @@ function setDownloadButton() {
 						//document.location.href = "/download/past?distribution=maven&release=" + version.id + "&edition=" + edition.id;
 					});
 		} else if (distribution.fileType == "p2") {
-			$('#download button').click(
+			$('#rfDownloadButton').click(
 					function() {
 						$('#eclipse_infos').css('display','block');
 						$('#maven_infos').css('display','none');
@@ -219,7 +219,7 @@ function setDownloadButton() {
 						//document.location.href = "/download/past?distribution=p2&release=" + version.id + "&edition=" + edition.id;
 					});			
 		} else if (redirectDownload) {
-			$('#download button').click(
+			$('#rfDownloadButton').click(
 					function() {
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
@@ -227,7 +227,7 @@ function setDownloadButton() {
 						document.location.href = "/download/past?distribution=" + distribution.fileType + "&release=" + version.id + "&edition=" + edition.id;
 					});			
 		} else {
-			$('#download button').click(
+			$('#rfDownloadButton').click(
 					function() {
 						$('#maven_infos').css('display','none');
 						$('#newsletter').css('display','block');

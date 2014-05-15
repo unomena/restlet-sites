@@ -61,10 +61,6 @@
 <#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>
     $(document).ready(function() {
         init($("#cBranch"));
-        mixpanel.track_links(".discover", "Clicked on Discover link");
-        mixpanel.track_links(".download", "Clicked on Download link");
-        mixpanel.track_links(".learn", "Clicked on Learn link");
-        mixpanel.track_links(".participate", "Clicked on Participate link");
     });
 </#if>
       </script>
@@ -78,7 +74,7 @@
           </a>
           <ul class='nav'>
     <#list sections.section as section>
-      <#if !(section.@hidden?has_content)><li><a<#if section.@id == currentSection> class='active ${section.@id}'<#else> class="${section.@id}"</#if> href="/${section.@id}/">${section.title}</a></li></#if>
+      <#if !(section.@hidden?has_content)><li><a<#if section.@id == currentSection> class='active ${section.@id}link'<#else> class="${section.@id}link"</#if> href="/${section.@id}/">${section.title}</a></li></#if>
 	</#list>
           </ul>
         </div>
