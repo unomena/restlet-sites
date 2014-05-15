@@ -66,11 +66,11 @@ function setDownloadButton() {
 	                if (checkEmail("downloadDocKinLaneEmail", "downloadDocKinLane")) {
 						mixpanel.track("Shared email", {
 							"email": $("#downloadDocKinLaneEmail").val(),
-							"Email field location":"Kin Lane Guide"
+							"Email field location":"User Guide PDF"
 						});
 						mixpanel.alias($("#downloadDocKinLaneEmail").val(), mixpanel.get_distinct_id());
 						mixpanel.people.set({"$email": $("#downloadDocKinLaneEmail").val()});
-						mixpanel.track("Downloaded Kin Lane Guide");
+						mixpanel.track("Downloaded User Guide PDF");
 						
 						// close popup
 						$("#downloadDocKinLaneEmail").val("");
