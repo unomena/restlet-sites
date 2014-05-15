@@ -984,7 +984,11 @@ form,form>input {
     width: 250px;
 }
 
-#newsletter .notifications > h4{
+#newsletter {
+	position: relative;
+}
+
+#newsletter .notifications > h4 {
 	padding-left: 0px;
 }
 
@@ -993,22 +997,91 @@ form,form>input {
     padding: 0;
 }
 
-.span6 > ul {
+.span6 > div > ul {
 	margin-bottom: 0px;
 } 
 
-.span6 > ul li {
+.span6 > div > ul li {
+	display:block; 
 	padding:3px 0; 
 	margin:0;
 }
 
-.span6 > ul li label input {
+.span6 > div > ul li label input {
 	margin-top: 0px;
+}
+
+.notifications {
+	width: 55%;
+}
+
+.quick-start {
+	width: 45%;
+	height: 223px;
+	position: absolute;
+	right: 0;
+	top: 207px;
+	border-left: 2px solid #DDDDDD;
+	padding-left: 20px;
+	padding-top: 17px;
+}
+
+.quick-start ul {
+	list-style:none;
+}
+
+.quick-start ul li {
+	display: inline-block;
+	padding:3px 0; 
+	margin:0;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	position: relative;
+
+}
+
+.quick-start ul li span {
+	position: absolute;
+	top: 50px;
+	left: 0;
+	color: #4D4D4D;
+}
+
+.quick-start ul li span a {
+	color: #4D4D4D;
+	text-decoration: none;
+}
+
+.quick-start ul li.tutorial {
+	background-image: url(/images/tutorial-icon.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 162px;
+	height: 132px;
+}
+
+.quick-start ul li.user-guide {
+	background-image: url(/images/user-guide-icon.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 165px;
+	height: 131px;
+}
+
+.quick-start ul li.tutorial span {
+	width: 162px;
+	margin :0 auto;
+}
+
+.quick-start ul li.user-guide span {
+	width: 165px;
+	margin :0 auto;
 }
 
 #email-submit {
 	padding-top: 8px;
-    float: right;
+    float: left;
 }
 
 #email-submit input {
