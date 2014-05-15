@@ -10,7 +10,7 @@ import org.restlet.resource.ResourceException;
 import com.restlet.frontend.objects.framework.Distribution;
 import com.restlet.frontend.objects.framework.Edition;
 import com.restlet.frontend.objects.framework.Version;
-import com.restlet.frontend.web.applications.RestletOrg;
+import com.restlet.frontend.web.applications.RestletCom;
 import com.restlet.frontend.web.resources.BaseResource;
 
 public class DownloadPastServerResource extends BaseResource {
@@ -40,8 +40,8 @@ public class DownloadPastServerResource extends BaseResource {
     }
 
     @Override
-    public RestletOrg getApplication() {
-        return (RestletOrg) super.getApplication();
+    public RestletCom getApplication() {
+        return (RestletCom) super.getApplication();
     }
 
     @Get

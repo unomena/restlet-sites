@@ -6,7 +6,7 @@
 			var listContent = "";
    			var elements = jsonRepresentation.getObject();
    			if(elements.length && elements.length>0){
-	   			listContent = "<h3>News</h3><h4 class=\"blog\"><a href=\"/news.html\">Our blog&nbsp;<img src=\"/images/icons/feed-20.png\" alt=\"Syndication feed\" style=\"margin:5px\"/></a></h4>";
+	   			listContent = "<h4 class=\"blog\"><a href=\"/news.html\">Our blog&nbsp;<img src=\"/images/icons/16/feed-icon\" alt=\"Syndication feed\" style=\"margin:5px\"/></a></h4>";
 	   			listContent += "<ul class=\"blog\">";
 	   			for (var i=0; i < elements.length; i++) {
 	   				listContent += createFeedElement(elements[i]);

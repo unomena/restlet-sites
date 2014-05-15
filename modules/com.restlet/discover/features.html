@@ -1,0 +1,276 @@
+<#global content>
+<div class="span3 left section">
+    <ul id="toc" class="toc">
+        <li class="active"><a href="">Overview</a></li>
+        <li><a href="#api">Client and Server consistent API</a></li>
+        <li><a href="#routing">Powerful routing and filtering</a></li>
+        <li><a href="#editions">Six consistent editions</a></li>
+        <li><a href="#security">Comprehensive web security</a></li>
+        <li><a href="#standards">Fully aligned with Web standards</a></li>
+        <li><a href="scalability">Blazing fast and scalable</a></li>
+    </ul>
+</div>
+
+<div class="span6 center section features">
+    <div class="span7">
+        <div class="span3 center">
+            <p>
+                <a href="#api"><strong>Client and Server consistent API</strong></a>
+            </p>
+            <p>
+                <img src="/images/client-server-api-icon.png" />
+            </p>
+        </div>
+        <div class="span3 center">
+            <p>
+                <a href="#routing"><strong>Powerful routing and filtering</strong></a>
+            </p>
+            <p>
+                <img src="/images/sorting-filtering-icon.png" />
+            </p>
+        </div>
+    </div>
+    <div>
+        <div class="span3 center">
+            <p>
+                <a href="#editions"><strong>Six consistent editions</strong></a>
+            </p>
+            <p>
+                <img src="/images/editions-icon.png" />
+            </p>
+            <p class="figure-legend">
+                Java SE / EE, GAE, OSGi<br />GWT, Android
+            </p>
+        </div>
+        <div class="span3 center">
+            <p>
+                <a href="#security"><strong>Comprehensive web security</strong></a>
+            </p>
+            <p>
+                <img src="/images/security-icon.png" />
+            </p>
+        </div>
+    </div>
+    <div>
+        <div class="span3 center">
+            <p>
+                <a href="#standards"><strong>Fully aligned with Web standards</strong></a>
+            </p>
+            <p>
+                <img src="/images/w3c-icon.png" />
+            </p>
+        </div>
+        <div class="span3 center">
+            <p>
+                <a href="#scalability"><strong>Blazing fast and scalable</strong></a>
+            </p>
+            <p>
+                <img src="/images/fast-scalable-icon.png" />
+            </p>
+        </div>
+    </div>
+
+    <a name="api"></a>
+    <h4>Native REST support</h4>
+    <ul>
+        <li>Core REST concepts have equivalent Java artifact (Resource,
+            Representation, Connector or Component for example).</li>
+        <li>Suitable for both client-side and server-side web
+            applications. The innovation is that that it uses the same API,
+            reducing the learning curve and the software footprint.</li>
+        <li>Concept of &quot;URIs as UI&quot; supported based on the URI
+            Templates standard. This results in a very flexible yet simple
+            routing with automatic extraction of URI variables into request
+            attributes.</li>
+        <li>Tunneling service lets browsers issue any HTTP method (PUT,
+            DELETE, MOVE, etc.) through a simple HTTP POST. This service is
+            transparent for Restlet applications.</li>
+        <li>Ready for the Semantic Web (Web 3.0), with full RDF reading
+            and writing support.</li>
+        <li>Client-side support for <a href="http://www.odata.org/">OData</a>
+            (Open Data Protocol) including kit generation.
+        </li>
+    </ul>
+
+    <a name="editions"></a>
+    <h4>Available editions</h4>
+    <ul>
+        <li>Restlet edition for Java SE/EE, letting you run your Restlet
+            applications on regular JVMs or in regular Servlet containers.</li>
+        <li>Restlet edition for GWT, letting you use the Restlet API from
+            within any Web browser, without plugins.</li>
+        <li>Restlet edition for GAE, letting you deploy Restlet
+            applications on Google AppEngine cloud computing platform.</li>
+        <li>Restlet edition for Android, letting you deploy Restlet
+            applications on Google Android mobile devices.</li>
+        <li>Restlet edition for OSGi environments, letting you develop
+            highly dynamic Restlet Applications, running in Equinox, Felix or
+            other OSGi containers.</li>
+    </ul>
+
+    <a name="server"></a>
+    <h4>Complete Web Server</h4>
+    <ul>
+        <li>Static file serving similar to Apache HTTP Server, with
+            metadata association based on file extensions.</li>
+        <li>Automated content negotiation based on client preferences.</li>
+        <li>Conditional requests automatically supported for resources.</li>
+        <li>Partial requests automatically supported for resources to
+            retrieve or update a range of a representation.</li>
+        <li>Remote edition of files based on PUT and DELETE methods (aka
+            mini-WebDAV mode).</li>
+        <li>Encoder and decoder service transparently compress or
+            uncompress representations exchanged.</li>
+        <li>Log service writes all accesses to your applications in a
+            standard Web log file. The log format follows the <a
+            href="http://www.w3.org/TR/WD-logfile.html"> W3C Extended Log
+                File Format</a> and is fully customizable.
+        </li>
+        <li>Powerful URI based redirection support similar to Apache
+            Rewrite module.</li>
+        <li>Extensive and flexible security with support for
+            authentication, authorization, role management, SSL certificates,
+            JAAS integration, OAuth 2.0 and more.</li>
+    </ul>
+
+    <a name="connectors"></a>
+    <h4>Available Connectors</h4>
+    <ul>
+        <li>Multiple server HTTP connectors available, based on either <a
+            href="http://jetty.mortbay.org/">Mortbay's Jetty</a> or the <a
+            href="http://www.simpleframework.org/">Simple framework</a></li>
+        <li><a href="http://tomcat.apache.org/connectors-doc/">AJP</a>
+            server connector available to let you plug behind an Apache HTTP
+            server or Microsoft IIS. It is based on Jetty's connector.</li>
+        <li>Multiple client HTTP connectors available, based on either
+            the JDK's <a
+            href="http://java.sun.com/j2se/1.5.0/docs/api/java/net/HttpURLConnection.html">
+                HttpURLConnection</a> class or on <a
+            href="http://jakarta.apache.org/commons/httpclient/">Apache HTTP
+                Client</a>.
+        </li>
+        <li>Built-in internal HTTP, SIP client and server connectors for
+            development mode and light deployments. No external dependency
+            needed.</li>
+        <li>Client SMTP, SMTPS, POP v3 and POPS v3 connectors are
+            provided based on <a href="http://java.sun.com/products/javamail/">JavaMail</a>
+            and a custom email XML format.
+        </li>
+        <li>Client JDBC connector based on the JDBC API, a custom request
+            XML format and the JDBC <a
+            href="http://java.sun.com/j2se/1.5.0/docs/api/javax/sql/rowset/WebRowSet.html">
+                WebRowSet interface</a> for XML responses.
+        </li>
+        <li>Client FILE connector supports GET, PUT and DELETE methods on
+            files and directories. In addition, it is able to return directory
+            listings.</li>
+        <li>Client CLAP connector to access to the Classloader resources.</li>
+        <li>Client RIAP connector to access to the Restlet internal
+            resources, directly inside the JVM.</li>
+        <li>Client SOLR connector to call embedded <a
+            href="http://lucene.apache.org/solr/">Apache Lucene Solr</a> search
+            and indexing engine.
+        </li>
+    </ul>
+
+    <a name="representations"></a>
+    <h4>Available Representations</h4>
+    <ul>
+        <li>Automated marshalling and unmarshalling between POJOs and
+            representations based on an extensible converter service. Leverages <a
+            href="http://xstream.codehaus.org/">XStream</a> for XML and <a
+            href="http://jackson.codehaus.org/">Jackson</a> for JSON. Also works
+            with a GWT and Java object serialization.
+        </li>
+        <li>Built-in support for XML representations (JAXB, JibX, DOM or
+            SAX based) with a simple XPath API based on JDK's built-in XPath
+            engine.</li>
+        <li>Integration with the <a href="http://freemarker.org/">FreeMarker</a>
+            and <a href="http://jakarta.apache.org/velocity/">Velocity</a>
+            template engines
+        </li>
+        <li>Integration with <a
+            href="http://jakarta.apache.org/commons/fileupload/"> Apache
+                FileUpload</a> to support multi-part forms and easily handle large file
+            uploads from browsers
+        </li>
+        <li>Transformer filter to easily apply XSLT stylesheets on XML
+            representations. It is based on JDK's built-in XSLT engine.</li>
+        <li>Extensible set of core representations based on NIO readable
+            or writable byte channels, BIO input or output byte streams, BIO
+            reader and writer character streams.</li>
+        <li>Support for Atom, RSS and JSON standards via several
+            extension including <a href="http://java.net/projects/rome/">ROME</a>
+            integration.
+        </li>
+        <li>Integration with <a href="http://lucene.apache.org/tika/">Apache
+                Lucene Tika</a> to support metadata extraction from any representation.
+        </li>
+    </ul>
+
+    <a name="configuration"></a>
+    <h4>Flexible configuration</h4>
+    <ul>
+        <li>Complete configuration possible in Java via the Restlet API</li>
+        <li>Configuration possible via Restlet XML and WADL files</li>
+        <li>Servlet adapter provided to let you deploy any Restlet
+            application in Servlet compliant containers like Tomcat, when the
+            usage of standalone HTTP connectors is not possible.</li>
+        <li>Implementation of the JAX-RS 1.0 standard API (based on
+            JSR-311).</li>
+        <li>Deployment as native services is possible and illustrated
+            using the powerful <a href="http://wrapper.tanukisoftware.org">Java
+                Service Wrapper</a>.
+        </li>
+        <li>Extensive integration with popular Spring IoC framework.</li>
+        <li>Deployment to Oracle 11g embedded JVM supported by special
+            extension.</li>
+        <li>Logging based on JULI (java.util.logging) with an
+            extensibility system, including an adapter for SLF4J.</li>
+    </ul>
+
+    <a name="security"></a>
+    <h4>Security</h4>
+    <ul>
+        <li>Supports Google SDC (Secure Data Connector) to connect to
+            intranets from public cloud applications</li>
+        <li>Supports HTTP Basic and Digest authentication</li>
+        <li>Supports Amazon S3 authentication</li>
+        <li>Supports Microsoft Shared Key and Shared Key Lite
+            authentication (client side only)</li>
+        <li>Supports OAuth 2.0 authentication</li>
+        <li>Supports HTTPS (HTTP over SSL)</li>
+        <li>Supports SMTPS (SMTP over SSL) and SMTP-STARTTLS</li>
+        <li>Supports POPS (POP over SSL)</li>
+    </ul>
+
+    <a name="scalability"></a>
+    <h4>Scalability</h4>
+    <ul>
+        <li>Fully multi-threaded design with per-request resource
+            instances to reduce thread-safety issues when developing
+            applications.</li>
+        <li>Intentional removal of Servlet-like HTTP sessions. This
+            concept, attractive as a first sight, is one of the major issue for
+            Servlet scalability and is going against the stateless exchanges
+            promoted by REST.</li>
+        <li>Supports non-blocking NIO modes to decouple the number of
+            connections from the number of threads.</li>
+        <li>Supports asynchronous request processing, decoupled from IO
+            operations. Unlike the Servlet API, the Restlet applications don't
+            have a direct control on the outputstream, they only provide output
+            representation to be written by the server connector.</li>
+    </ul>
+
+    <a name="features"></a>
+    <h4>Upcoming features</h4>
+    <p>
+        Is something important for you missing? Maybe we are already working
+        on it or are planning to do so. We suggest that you have a look at <a
+            href="/learn/roadmap"> our roadmap</a> or at our <a
+            href="https://github.com/restlet/restlet-framework-java/issues">
+            complete list of enhancement requests</a>. Feel free to create some new
+        ones if needed!
+    </p>
+</div>
+</#global> 

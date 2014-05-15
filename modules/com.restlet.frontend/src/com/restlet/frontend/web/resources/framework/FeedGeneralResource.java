@@ -23,7 +23,7 @@ import org.restlet.resource.ServerResource;
 
 import com.restlet.frontend.objects.BlogEntry;
 import com.restlet.frontend.util.Helper;
-import com.restlet.frontend.web.applications.RestletOrg;
+import com.restlet.frontend.web.applications.RestletCom;
 
 /**
  * Resource that builds a view of the restlet's blog feed aimed for the Restlet
@@ -37,7 +37,7 @@ public class FeedGeneralResource extends ServerResource {
 
     @Override
     protected void doInit() throws ResourceException {
-        RestletOrg app = (RestletOrg) getApplication();
+        RestletCom app = (RestletCom) getApplication();
         if (app.getFeedGeneral() == null || app.getFeedGeneral().isEmpty()) {
             app.refresh();
         } else {

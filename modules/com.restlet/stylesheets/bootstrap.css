@@ -3307,6 +3307,74 @@ input[type="button"].btn-block {
   background-color: #942a25 \9;
 }
 
+.btn-download-hp {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #5bb75b;
+  *background-color: #51a351;
+  background-image: -moz-linear-gradient(top, #62c462, #51a351);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
+  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
+  background-image: -o-linear-gradient(top, #62c462, #51a351);
+  background-image: linear-gradient(to bottom, #62c462, #51a351);
+  background-repeat: repeat-x;
+  border-color: #51a351 #51a351 #387038;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff51a351', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  width: 120px;
+}
+
+.btn-download-hp:hover,
+.btn-download-hp:active,
+.btn-download-hp.active,
+.btn-download-hp.disabled,
+.btn-download-hp[disabled] {
+  color: #ffffff;
+  background-color: #51a351;
+  *background-color: #499249;
+}
+
+.btn-download-hp:active,
+.btn-download-hp.active {
+  background-color: #408140 \9;
+}
+
+
+.btn-tryit-hp {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #e98c00;
+  *background-color: #f48a00;
+  background-image: -moz-linear-gradient(top, #ffa127, #f48a00);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffa127), to(#f48a00));
+  background-image: -webkit-linear-gradient(top, #ffa127, #f48a00);
+  background-image: -o-linear-gradient(top, #ffa127, #f48a00);
+  background-image: linear-gradient(to bottom, #ffa127, #f48a00);
+  background-repeat: repeat-x;
+  border-color: #f48a00 #f48a00 #a85f00;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff51a351', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  width: 120px;
+}
+
+.btn-tryit-hp:hover,
+.btn-tryit-hp:active,
+.btn-tryit-hp.active,
+.btn-tryit-hp.disabled,
+.btn-tryit-hp[disabled] {
+  color: #ffffff;
+  background-color: #f48a00;
+  *background-color: #db7c00;
+}
+
+.btn-tryit-hp:active,
+.btn-tryit-hp.active {
+  background-color: #c16d00 \9;
+}
+
+
 .btn-success {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -3804,13 +3872,13 @@ input[type="submit"].btn.btn-mini {
   border-radius: 14px 14px 14px 14px;
   -moz-border-radius: 14px 14px 14px 14px;
   -webkit-border-radius: 14px 14px 14px 14px;
-  background-image: -moz-linear-gradient(top, #e4630c, #f77e2a);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e4630c),
-		color-stop(1, #f77e2a) );
+  background-image: -moz-linear-gradient(top, #2c5695, #476da7);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2c5695),
+		color-stop(1, #476da7) );
   filter: progid :   DXImageTransform.Microsoft.gradient (   GradientType
-		=   0, startColorstr =   '#e4630c', endColorstr =   '#f77e2a' );
+		=   0, startColorstr =   '#2c5695', endColorstr =   '#476da7' );
   -ms-filter:
-		"progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#e4630c', endColorstr='#f77e2a')";
+		"progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#1d57b8', endColorstr='#3978d7')";
 }
 
 .nav > .pull-right {
