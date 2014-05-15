@@ -947,12 +947,10 @@ form,form>input {
 }
 
 .span6 > ul {
-	list-style:none;
 	margin-bottom: 0px;
 } 
 
 .span6 > ul li {
-	display:block; 
 	padding:3px 0; 
 	margin:0;
 }
