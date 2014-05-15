@@ -170,7 +170,7 @@
         </script>
         <div class="clearBoth"></div>
         <div class="span2 intro below">${labels.footer.sites['${language}']}</div>
-        <div class="span2b site">
+        <div class="span2a site">
           <h4><a href="http://restlet.org/"><img src="/images/logo-restlet-framework-small.png" />Restlet</a></h4>
           <ul class="sub-list">
             <li><a href="/discover/">${labels.footer.restletframework.discover['${language}']}</a></li>
@@ -180,7 +180,7 @@
             <li><a href="/about/">${labels.footer.restlet.about['${language}']}</a></li>
           </ul>
         </div>
-        <div class="span2c site">
+        <div class="span2b site">
           <h4><a href="http://apispark.com/"><img src="/images/logo-apispark-small.png"/>APISpark</a></h4>
           <ul class="sub-list">
             <li><a href="http://apispark.com/features">${labels.footer.apispark.features['${language}']}</a></li>
