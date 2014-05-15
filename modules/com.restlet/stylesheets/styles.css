@@ -989,6 +989,10 @@ form,form>input {
 	position: relative;
 }
 
+#newsletter .elements {
+	position: relative;
+}
+
 #newsletter .notifications > h4 {
 	padding-left: 0px;
 }
