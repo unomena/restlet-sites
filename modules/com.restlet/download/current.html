@@ -103,26 +103,46 @@ twttr.conversion.trackPid('l4d6j');
 ${downloadSection}
 <!-- End Download section -->
 <div id="newsletter">
-    <div class="clearBoth"></div>
-    <hr />
-    <div class="notifications">
-        <h4>Keep me informed about</h4>
-        <br/>
-        <div class="row-fluid">
-	        <div class="span6">
-		            <ul>
-		                <li><label for="restlet_framework"><input type="checkbox" value="Restlet Framework" name="group[9053][2]" id="restlet_framework" checked="checked"> <strong>Restlet Framework</strong> (new releases, security fixes, etc.)</label></li>
-		                <li><label for="apispark"><input type="checkbox" value="APISpark" name="group[9053][1]" id="apispark" checked="checked" > <strong>APISpark</strong> (cloud platform based on Restlet framework)</label></li>
-		            </ul>
-	        </div>
-	        <div class="span6">
-	        	<div id="email-submit">
-			       	<input type="email" name="EMAIL" id="newsLetterEmail" placeholder="${labels.notifications.placeholder['${language}']}">
-			       	<button id="newsLetterOkButton" name="subscribe" disabled="true">${labels.notifications.submit['${language}']}</button>
-	        	</div>
-	        </div>
-	    </div>
-    </div>
+	<div class="clearBoth"></div>
+	<hr />
+	<div>
+		<div class="notifications">
+			<h4>Keep me informed about</h4>
+			<br />
+			<div>
+				<div class="span6">
+					<div>
+						<ul>
+							<li><label for="restlet_framework"><input
+									type="checkbox" value="Restlet Framework" name="group[9053][2]"
+									id="restlet_framework" checked="checked"> <strong>Restlet
+										Framework</strong> (new releases, security fixes, etc.)</label>
+							</li>
+							<li><label for="apispark"><input type="checkbox"
+									value="APISpark" name="group[9053][1]" id="apispark"
+									checked="checked"> <strong>APISpark</strong> (cloud
+									platform based on Restlet framework)</label>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<div id="email-submit">
+							<input type="email" name="EMAIL" id="newsLetterEmail"
+								placeholder="Valid email address">
+							<button id="newsLetterOkButton" name="subscribe" disabled="true">Notify me</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="quick-start">
+            <h4>Quick Start Guide</h4>
+			<ul>
+				<li class="tutorial"><span>Tutorial</span></li>
+				<li class="user-guide"><span>User<br/>Guide</span></li>
+			</ul>
+		</div>
+	</div>
 </div>
 <#noparse>
 <div id="maven_infos">
