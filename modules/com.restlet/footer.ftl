@@ -33,7 +33,7 @@
 </#list>
       <script                type="text/javascript"     src="/javascript/jquery-1.9.0.min.js"></script>
       <script                type="text/javascript"     src="/javascript/jquery-cookie.js"></script>
-      <script                type="text/javascript"     src="/javascript/integration-framework.js"></script>
+      <script                type="text/javascript"     src="/javascript/common.js"></script>
 <#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>
       <script                type="text/javascript"     src="/javascript/jsclass-core.js"></script>
       <script                type="text/javascript"     src="/javascript/json-minified.js"></script>
@@ -130,44 +130,9 @@
         <div class="span4 newsletter">
         <span id="footerNewsLetterWrapper" align="right">
 	        <input type="email" id="footerNewsLetterEmail" name="EMAIL" class="required email" placeholder="${labels.footer.newsletter['${language}']}"/>
-	        <button id="footerNewsLetterOkButton" class="button" disabled="true">OK</button>
+	        <button id="footerNewsLetterOkButton" class="button">OK</button>
         </span>
         </div>
-        <script type="text/javascript">
-			$("#footerNewsLetterEmail").mouseleave(function() {
-	              var email = $("#footerNewsLetterEmail").val();
-	              var re = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
-	              var emailRegexp = new RegExp(re);
-	              
-	              if (email != "") {
-	                    if (emailRegexp.test(email)) {
-	                          $('#footerNewsLetterOkButton').removeAttr("disabled");
-	                          $("#footerNewsLetterEmail").removeClass("error");
-	                    } else {
-	                          $("#footerNewsLetterEmail").addClass("error");
-	                          $('#footerNewsLetterOkButton').attr("disabled", true);
-	                    }
-	              } else {
-	                    $("#footerNewsLetterEmail").removeClass("error");
-	                    $('#footerNewsLetterOkButton').attr("disabled", true);
-	              }
-	        });
-        	$("#footerNewsLetterOkButton").click(
-        		function(event) {
-        			mixpanel.track("Shared email", {
-						"email": $("#footerNewsLetterEmail").val(),
-						"Email field location":"RF footer: newsletter sign up field",
-						"Product":"Restlet Framework"
-					}, function() {
-						$("#footerNewsLetterEmail").val("");
-						$("#footerNewsLetterEmail").attr("disabled", true);
-						$("#footerNewsLetterOkButton").html("&#10003;");
-						$("#footerNewsLetterOkButton").css("font-size","24px");
-						$("#footerNewsLetterOkButton").attr("disabled", true);
-					});
-        		}
-        	);
-        </script>
         <div class="clearBoth"></div>
         <div class="span2 intro below">${labels.footer.sites['${language}']}</div>
         <div class="span2a site">

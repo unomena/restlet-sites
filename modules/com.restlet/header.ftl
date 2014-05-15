@@ -96,7 +96,7 @@
 			</div>
 			<div class="doc-download">
 				<input type="email" id="downloadDocKinLaneEmail" required="required" placeholder="Email"/>
-				<button id="downloadDocKinLane" disabled="true">Download</button>
+				<button id="downloadDocKinLane">Download</button>
 			</div>
 			<div class="doc-footer">
 				<p>Your details will never be shared to a 3rd party. We hate spam just as much as you do.</p>
