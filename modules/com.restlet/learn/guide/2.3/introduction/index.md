@@ -65,4 +65,4 @@ If you can't wait to get an answer or need to keep your questions confidential,
 you can also obtain private support by buying a [professional support plan](restlet.org/participate/contribute)
 from the creator of the Restlet Framework.
 
-[![](/images/restlet-115)](/services/)
+[![](/images/logos/restlet-115)](/services/)
