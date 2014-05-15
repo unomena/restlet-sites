@@ -186,7 +186,7 @@
             <li><a href="http://apispark.com/features">${labels.footer.apispark.features['${language}']}</a></li>
             <li><a href="http://apispark.com/pricing">${labels.footer.apispark.pricing['${language}']}</a></li>
             <li><a href="http://apispark.com/docs/">${labels.footer.apispark.docs['${language}']}</a></li>
-            <li><a href="http://apispark.com/about">${labels.footer.apispark.about['${language}']}</a></li>
+            <li><a href="http://apispark.com/catalog">${labels.footer.apispark.catalog['${language}']}</a></li>
             <li><a href="http://support.apispark.com/">${labels.footer.apispark.helpdesk['${language}']}</a></li>
           </ul>
         </div>

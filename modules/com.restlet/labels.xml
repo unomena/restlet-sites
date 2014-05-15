@@ -80,6 +80,10 @@
                 <en>Help desk</en>
                 <fr>Support</fr>
             </helpdesk>
+            <catalog>
+                <en>Catalog</en>
+                <fr>Catalogue</fr>
+            </catalog>
 		</apispark>
 		<apisparksupport>
 			<tutorial>
