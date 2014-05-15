@@ -86,11 +86,14 @@
 		<div class="doc-preview"></div>
 		<div class="doc-desc">
 			<div class="doc-title">
-				<h3>Free Developer Guide</h3>
+				<h3>Complete User Guide</h3>
 			</div>
 			<div class="doc-content">
-				<h4><strong>A field guide to web APIs</strong> By Kin Lane</h4>
-				<div class="text">Kin Lane, API Evangelist, has been in the technology space for over 20 years and wants to help the world understand the great value and potential that is growing in the web API market.</div>
+				<h4><strong>Download Version 2.2 of the User Guide</strong></h4>
+				<div class="text">Learn all about the Restlet Framework: its core, the
+                  different editions, its extensions, the first steps, how it can be used to build a well-
+                  structured and scalable web API...etc.<br/>
+                  <strong>Become a Restlet Framework ninja!</strong></div>
 				<div class="avatar"></div>
 				<div class="clearBoth"></div>
 			</div>

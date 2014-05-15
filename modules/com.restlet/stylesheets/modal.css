@@ -50,11 +50,11 @@
 }
 
 .modalDialog.kinlane div.doc-preview {
-	background-image: url(/images/kinlane-doc-preview.png);
+	background-image: url(/images/cover-user-guide.png);
 	background-position: center;
 	background-repeat: no-repeat;
-	width: 267px;
-	height: 328px;
+	width: 247px;
+	height: 307px;
 	float: left;
 	margin-left: 60px;
 	margin-top: 25px;
@@ -82,7 +82,7 @@
 	padding-left: 10px;
 	padding-top: 2px;
 	background-color: rgba(41, 63, 112, 0.7);
-	width: 372px;
+	width: 382px;
 	height: 161px;
 }
 
@@ -102,7 +102,7 @@
 .modalDialog.kinlane div.doc-desc > div.doc-content > div.text {
 	margin-top: 15px;
 	padding-top: 5px;
-	padding-right: 120px;
+	padding-right: 100px;
 	font-size: 13px;
 	height: 110px;
 	line-height: 140%;
@@ -117,7 +117,7 @@
 .modalDialog.kinlane div.doc-desc > div.doc-download input {
 	padding: 10px 10px;
 	line-height: 1.2em;
-	width: 250px;
+	width: 260px;
 	font-weight: bold;
 	color: #3f4348;
 	background-color: #faf3e0;
@@ -164,13 +164,13 @@
 }
 
 .modalDialog.kinlane div.avatar {
-	background-image: url(/images/kinlane-avatar.png);
+	background-image: url(/images/books-icon.png);
 	background-position: center;
 	background-repeat: no-repeat;
-	width: 134px;
-	height: 134px;
+	width: 155px;
+	height: 87px;
 	position: absolute;
-	right: -20px;
+	right: -40px;
 	bottom: 0;
 }
 
