@@ -64,4 +64,8 @@ $(document).ready(function() {
 	        }
 	    }
 	);
+	mixpanel.track_links(".discover", "Clicked on Discover link");
+    mixpanel.track_links(".download", "Clicked on Download link");
+    mixpanel.track_links(".learn", "Clicked on Learn link");
+    mixpanel.track_links(".participate", "Clicked on Participate link");
 });

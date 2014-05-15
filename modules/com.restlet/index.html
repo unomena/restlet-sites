@@ -25,8 +25,11 @@
 			});
         });
         $('#restlet-framework-button').click(function() {
-            document.location.href='/download/';
+        	mixpanel.track("Clicked on Download link", null, function() {
+        		document.location.href='/download/';
+        	});
         });
+        mixpanel.track("Visited the RF homepage");
 	});
 </#global>
 <#global header>
@@ -54,7 +57,7 @@
 <div class="span6 right section product">
 	<div id="restlet-framework">
     	<div class="logo">
-    		<a href="/download/"><img width="215" height="80" src="/images/logo_restletframework-new.png" alt="Restlet Framework"/></a>
+    		<a class="download" href="/download/"><img width="215" height="80" src="/images/logo_restletframework-new.png" alt="Restlet Framework"/></a>
    		</div>
 	    <div class="button">
 	        <button id="restlet-framework-button" class="btn btn-large btn-download-hp" type="button">Download</button>
@@ -82,7 +85,7 @@
         <a href="http://blog.restlet.com/2009/04/11/restlet-in-the-cloud-with-google-app-engine/">GAE</a>, 
         <a href="http://blog.restlet.com/2008/07/25/restlet-ported-to-gwt/">GWT</a> and 
         <a href="http://blog.restlet.com/2011/11/09/restlet-improves-support-for-osgi-with-new-edition-and-eclipse-update-site/">OSGi</a>!
-        <a href="http://restlet.org/discover/">Learn more</a>
+        <a class="discover" href="http://restlet.org/discover/">Learn more</a>
     </p>
 </div>
 </div>
@@ -113,7 +116,7 @@
 <div class='span4 left section'>
     <div>
         <p>
-            <a href="/discover/">Learn more</a>
+            <a class="discover" href="/discover/">Learn more</a>
             <span style="float: right"><a href="https://twitter.com/restlet_org" class="twitter-follow-button" data-show-count="true" data-lang="en" data-show-screen-name="false">Follow us</a></span>
         </p>
     </div>
@@ -121,14 +124,14 @@
 <div class='span4 center section'>
     <div>
         <p>
-            <a href="/learn/">Learn more</a>
+            <a class="learn" href="/learn/">Learn more</a>
         </p>
     </div>
 </div>
 <div class='span4 right section'>
     <div>
         <p>
-            <a href="/participate/">Learn more</a>
+            <a class="participate" href="/participate/">Learn more</a>
             <span style="float: right"><iframe src="http://ghbtns.com/github-btn.html?user=restlet&repo=restlet-framework-java&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="87" height="20"></iframe></span>
         </p>
     </div>

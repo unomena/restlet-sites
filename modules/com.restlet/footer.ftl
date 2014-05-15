@@ -61,6 +61,10 @@
 <#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>
     $(document).ready(function() {
         init($("#cBranch"));
+        mixpanel.track_links(".discover", "Clicked on Discover link");
+        mixpanel.track_links(".download", "Clicked on Download link");
+        mixpanel.track_links(".learn", "Clicked on Learn link");
+        mixpanel.track_links(".participate", "Clicked on Participate link");
     });
 </#if>
       </script>
@@ -74,7 +78,7 @@
           </a>
           <ul class='nav'>
     <#list sections.section as section>
-      <#if !(section.@hidden?has_content)><li><a<#if section.@id == currentSection> class='active'</#if> href="/${section.@id}/">${section.title}</a></li></#if>
+      <#if !(section.@hidden?has_content)><li><a<#if section.@id == currentSection> class='active ${section.@id}'<#else> class="${section.@id}"</#if> href="/${section.@id}/">${section.title}</a></li></#if>
 	</#list>
           </ul>
         </div>
@@ -138,10 +142,10 @@
         <div class="span2a site">
           <h4><a href="http://restlet.org/"><img src="/images/logo-restlet-framework-small.png" />Restlet</a></h4>
           <ul class="sub-list">
-            <li><a href="/discover/">${labels.footer.restletframework.discover['${language}']}</a></li>
-            <li><a href="/download/">${labels.footer.restletframework.download['${language}']}</a></li>
-            <li><a href="/learn/">${labels.footer.restletframework.learn['${language}']}</a></li>
-            <li><a href="/participate/">${labels.footer.restletframework.participate['${language}']}</a></li>
+            <li><a class="discover" href="/discover/">${labels.footer.restletframework.discover['${language}']}</a></li>
+            <li><a class="download" href="/download/">${labels.footer.restletframework.download['${language}']}</a></li>
+            <li><a class="learn" href="/learn/">${labels.footer.restletframework.learn['${language}']}</a></li>
+            <li><a class="participate" href="/participate/">${labels.footer.restletframework.participate['${language}']}</a></li>
             <li><a href="/about/">${labels.footer.restlet.about['${language}']}</a></li>
           </ul>
         </div>
