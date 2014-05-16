@@ -6,14 +6,11 @@ package com.restlet.frontend.web;
 
 import java.io.IOException;
 import java.util.Properties;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.restlet.Component;
 import org.restlet.Request;
 import org.restlet.Response;
 import org.restlet.Restlet;
-import org.restlet.data.Cookie;
 import org.restlet.data.Protocol;
 import org.restlet.data.Reference;
 import org.restlet.representation.Representation;
@@ -113,18 +110,16 @@ public class WebComponent extends Component {
         // restlet.org
         // -----------
         // handle redirection to restlet.com site.
-        VirtualHost host = addHost("restlet.org", port,
-                new Redirector(getContext(), null,
-                        getFrameworkSiteRedirectionMode(properties)) {
-                    @Override
-                    protected Reference getTargetRef(Request request,
-                            Response response) {
-                        Reference ref = new Reference(request.getResourceRef());
-                        ref.setHostDomain(getHostDomain("restlet.com",
-                                properties));
-                        return ref;
-                    }
-                }, properties);
+        VirtualHost host = addHost("restlet.org", port, new Redirector(
+                getContext().createChildContext(), null,
+                getFrameworkSiteRedirectionMode(properties)) {
+            @Override
+            protected Reference getTargetRef(Request request, Response response) {
+                Reference ref = new Reference(request.getResourceRef());
+                ref.setHostDomain(getHostDomain("restlet.com", properties));
+                return ref;
+            }
+        }, properties);
         getHosts().add(host);
         // ---------------
         // restlet.com
@@ -135,8 +130,9 @@ public class WebComponent extends Component {
         // -----------------
         // maven.restlet.org
         // -----------------
-        host = addHost("maven.restlet.org", port, new Redirector(getContext(),
-                null, getFrameworkSiteRedirectionMode(properties)) {
+        host = addHost("maven.restlet.org", port, new Redirector(getContext()
+                .createChildContext(), null,
+                getFrameworkSiteRedirectionMode(properties)) {
             @Override
             protected Reference getTargetRef(Request request, Response response) {
                 Reference ref = new Reference(request.getResourceRef());
@@ -151,8 +147,9 @@ public class WebComponent extends Component {
         // -----------------
         // p2.restlet.org
         // -----------------
-        host = addHost("p2.restlet.org", port, new Redirector(getContext(),
-                null, getFrameworkSiteRedirectionMode(properties)) {
+        host = addHost("p2.restlet.org", port, new Redirector(getContext()
+                .createChildContext(), null,
+                getFrameworkSiteRedirectionMode(properties)) {
             @Override
             protected Reference getTargetRef(Request request, Response response) {
                 Reference ref = new Reference(request.getResourceRef());
