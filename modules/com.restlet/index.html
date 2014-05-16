@@ -17,9 +17,7 @@
 			
 			// fire the tracking event, if the event is done before the
 			// timeout, we call a window.clearTimeout
-			mixpanel.track("Created an APISpark account", {
-				"Sign up source":"RF Homepage \"Try it\" button"
-			}, function() {
+			mixpanel.track("Clicking the AS Try it button", null, function() {
 				window.clearTimeout(trackTimeout);
 				hrefCallback();
 			});
