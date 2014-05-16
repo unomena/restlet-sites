@@ -14,7 +14,7 @@ Description
 
 To run this example, you need the Restlet libraries. Download a ${restlet-version-minor}
 version from
-[restlet.org/downloads/](http://restlet.org/download/).
+[restlet.com/download/](http://restlet.com/download/).
 (For a general Restlet example take a look at [the first steps
 examples](../introduction/first-steps/ "First steps")).
 

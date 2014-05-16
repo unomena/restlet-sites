@@ -33,7 +33,7 @@ We assume that you have a development environment set up and
 operational, and that you already have installed the Java 1.5 (or
 higher). In case you haven't downloaded the Restlet Framework yet,
 select one of the available distributions of the [Restlet Framework
-${restlet-version-minor}](http://restlet.org/download/). Make sure you 
+${restlet-version-minor}](http://restlet.com/download/). Make sure you 
 add org.restlet.jar in your Build path.
 
 The "hello, world" application

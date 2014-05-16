@@ -67,7 +67,7 @@ embedded Jetty server.
       <repositories>
         <repository>
           <id>restlet</id>
-          <url>http://maven.restlet.org/</url>
+          <url>http://maven.restlet.com/</url>
         </repository>
       </repositories>
 

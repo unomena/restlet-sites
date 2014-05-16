@@ -14,7 +14,7 @@ Description
 
 To run this example, you need the Restlet libraries. Download a ${restlet-version-minor}
 version from
-[restlet.org/downloads/](http://restlet.org/download/).
+[restlet.com/downloads/](http://restlet.com/download/).
 (For a general Restlet example take a look at [the first steps
 examples](../introduction/first-steps/ "First steps")).
 
@@ -195,7 +195,7 @@ You could use this subclass also in the example above:
             // if you use this kind, you don't need to attach the Application again.
 
 Comments are welcome to the [Restlet mailing
-list](http://restlet.org/community/lists)
+list](http://restlet.com/community/lists)
 or directly to Stephan.Koops\<AT\>web.de !
 
 This extension is the result of a (german) [master

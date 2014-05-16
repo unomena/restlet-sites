@@ -77,7 +77,7 @@
    <pre class="java:nocontrols:nogutter">
 // Outputting the content of a Web page
 Client client = new Client(Protocol.HTTP);
-client.get("http://restlet.org").getEntity().write(System.out);
+client.get("http://restlet.com").getEntity().write(System.out);
    </pre>
 
    <p>
@@ -91,7 +91,7 @@ client.get("http://restlet.org").getEntity().write(System.out);
 
    <pre class="java:nocontrols:nogutter">
 // Prepare the request
-Request request = new Request(Method.GET, "http://restlet.org");
+Request request = new Request(Method.GET, "http://restlet.com");
 request.setReferrerRef("http://www.mysite.org");
 
 // Handle it using an HTTP client connector
@@ -630,7 +630,7 @@ router.attach("/users/{user}/orders/{order}", order);
       Servlet API but we didn't justify the REST part in our Restlet name! If
       you haven't done so already, I recommend that you learn more about the
       REST architecture style and the best practices to follow when applying
-      it to a Web application. There is a related <a href="/about/faq#04">FAQ entry</a>
+      it to a Web application. There is a related <a href="/discover/faq#04">FAQ entry</a>
       that will give you some starting pointers and we also maintain a <a
       href="http://search.onrest.org">REST search engine</a> (based on
       Google) that can be useful. If you have some experience with a

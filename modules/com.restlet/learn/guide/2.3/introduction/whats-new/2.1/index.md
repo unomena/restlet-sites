@@ -6,13 +6,13 @@ In the next sections, you will get a synthesis of the major changes done
 to the Restlet Framework in version 2.1.
 
 For more details, you can read the [2.1 announce on our blog](http://blog.restlet.com/2012/09/27/restlet-framework-2-1-0-released-5/)
-as well as [the full list of changes](http://restlet.org/learn/2.1/changes).
+as well as [the full list of changes](http://restlet.com/learn/2.1/changes).
 
 ## Better documentation
 
 ### Restlet in Action book
 
-Finished writing the [Restlet in Action](http://restlet.org/documentation/books) 
+Finished writing the [Restlet in Action](http://restlet.com/documentation/books) 
 book, published by Manning. We made sure that the printed version was
 available at the same time as the 2.1.0 release.
 

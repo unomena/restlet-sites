@@ -15,7 +15,7 @@ Restlet Framework is mature and scalable, based on a small core and many optiona
 
 ## Complete Web server
 
-Contrary to the Servlet API, the Restlet API gives you extensive control on the URI mapping and on the virtual hosts configuration. It includes a powerful Directory class to server static files in a way similar to Apache Web Server. For example, our Restlet.org web site is directly powered by Restlet Framework on a regular JVM!
+Contrary to the Servlet API, the Restlet API gives you extensive control on the URI mapping and on the virtual hosts configuration. It includes a powerful Directory class to server static files in a way similar to Apache Web Server. For example, our Restlet.com web site is directly powered by Restlet Framework on a regular JVM!
 
 Here is a more complete list of features provided by the internal Web server:
 - Static file serving similar to Apache HTTP Server, with metadata association based on file extensions.
@@ -104,6 +104,6 @@ Restlet was an attempt to build a better Servlet API, aligned with the true Web 
 Is something important for you missing? Maybe we are already working on
 it or are planning to do so.
 
-We suggest that you have a look at [our public roadmap](http://restlet.org/learn/roadmap) or at our [issue tracker on GitHub](https://github.com/restlet/restlet-framework-java/issues).
+We suggest that you have a look at [our public roadmap](http://restlet.com/learn/roadmap) or at our [issue tracker on GitHub](https://github.com/restlet/restlet-framework-java/issues).
 
 Feel free to create some new ones if needed!

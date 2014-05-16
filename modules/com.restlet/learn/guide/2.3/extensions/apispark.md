@@ -26,7 +26,7 @@ Configuration
 -------------
 
 You must add the following jars (provided in 
-[restlet framework](http://restlet.org/download/current#release=stable&edition=jse&distribution=zip 
+[restlet framework](http://restlet.com/download/current#release=stable&edition=jse&distribution=zip 
 "download restlet framework")) 
 in the "/path/to/your/lib" folder or manually to the classpath.
 

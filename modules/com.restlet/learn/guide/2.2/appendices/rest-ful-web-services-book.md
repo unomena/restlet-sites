@@ -5,7 +5,7 @@ Introduction
 ============
 
 [This
-book](http://restlet.org/documentation/books#restful-web-services)
+book](http://restlet.com/documentation/books#restful-web-services)
 is the first one dedicated to REST. It is authored by Leonard Richardson
 and Sam Ruby and published by O'Reilly.
 

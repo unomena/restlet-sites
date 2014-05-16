@@ -6,7 +6,7 @@ In the next sections, you will get a synthesis of the major changes done
 to the Restlet Framework in version ${restlet-version-minor}.
 
 For more details, you can read the [2.2 announce on our blog](http://blog.restlet.com/2014/03/26/restlet-framework-2-2-0-and-2-3-m1-released)
-as well as [the full list of changes](http://restlet.org/learn/2.2/changes).
+as well as [the full list of changes](http://restlet.com/learn/2.2/changes).
 
 ## Main changes
 

@@ -136,7 +136,7 @@
         <div class="clearBoth"></div>
         <div class="span2 intro below">${labels.footer.sites['${language}']}</div>
         <div class="span2a site">
-          <h4><a href="http://restlet.org/"><img src="/images/logo-restlet-framework-small.png" />Restlet</a></h4>
+          <h4><a href="http://restlet.com/"><img src="/images/logo-restlet-framework-small.png" />Restlet</a></h4>
           <ul class="sub-list">
             <li><a class="discover" href="/discover/">${labels.footer.restletframework.discover['${language}']}</a></li>
             <li><a class="download" href="/download/">${labels.footer.restletframework.download['${language}']}</a></li>

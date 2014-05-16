@@ -15,5 +15,5 @@ to the Restlet Framework.
 ## References
 
 For more details, you can read the [2.0 announce on our blog](http://blog.restlet.com/2010/07/19/restlet-framework-2-0-0-released/)
-as well as [the full list of changes](http://restlet.org/learn/2.0/changes).
+as well as [the full list of changes](http://restlet.com/learn/2.0/changes).
 

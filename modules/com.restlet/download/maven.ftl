@@ -6,7 +6,7 @@
 
    <p>
       The Maven repository for Restlet is accessible from
-      <a href="http://maven.restlet.org">http://maven.restlet.org</a> and
+      <a href="http://maven.restlet.com">http://maven.restlet.com</a> and
       contains all Restlet JARs and third party dependencies that aren't
       available in the main public Maven repository. It is automatically
       refreshed once a day if the build succeeds.
@@ -29,7 +29,7 @@
 &lt;repository&gt;
    &lt;id&gt;maven-restlet&lt;/id&gt;
    &lt;name&gt;Restlet Framework repository&lt;/name&gt;
-   &lt;url&gt;http://maven.restlet.org&lt;/url&gt;
+   &lt;url&gt;http://maven.restlet.com&lt;/url&gt;
 &lt;/repository&gt;
    </pre>
          </li>
@@ -45,7 +45,7 @@
      &lt;repository&gt;
         &lt;id&gt;maven-restlet&lt;/id&gt;
         &lt;name&gt;Restlet Framework repository&lt;/name&gt;
-        &lt;url&gt;http://maven.restlet.org&lt;/url&gt;
+        &lt;url&gt;http://maven.restlet.com&lt;/url&gt;
      &lt;/repository&gt;
   &lt;/repositories&gt;
 &lt;/profile&gt;

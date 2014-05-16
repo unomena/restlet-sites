@@ -31,7 +31,7 @@ a "403 Forbidden" error otherwise.
 This code is self-sufficient so you just need to copy-paste it in a 
 MyApiWithRoleAuthorization class, create the resources as shown below 
 and run it. Don't forget to add the JSE edition org.restlet.jar 
-([download here](http://restlet.org/download/current#release=stable&edition=jse))
+([download here](http://restlet.com/download/current#release=stable&edition=jse))
 in your build path.
 
 Main class for role authorization example:
@@ -227,7 +227,7 @@ With a resource like this:
 For a call to [http://localhost:9000/v1/resourceTypePublic/resource1/](http://localhost:9000/v1/resourceTypePublic/resource1/)
 you will need to use the owner profile to use POST and just authenticate to use PATCH.
 You will need to use an 
-[HTTPS endpoint](http://restlet.org/learn/guide/${restlet-version-minor}/core/security/https) 
+[HTTPS endpoint](http://restlet.com/learn/guide/${restlet-version-minor}/core/security/https) 
 to GET this resource. 
 
 Middle-grained authorization

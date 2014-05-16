@@ -3,7 +3,7 @@
 ## User guide overview
 
 This is the official User Guide for version ${restlet-version-minor} of the Restlet Framework
-([http://restlet.org](http://restlet.org/)).
+([http://restlet.com](http://restlet.com/)).
 
 This document is edited in a collaborative way via this
 [GitHub repository](https://github.com/restlet/restlet-sites/tree/master/modules/org.restlet/learn/guide/${restlet-version-minor})
@@ -21,7 +21,7 @@ to the project, by filing a bug or enhancement reports, by submitting
 documentation or code improvements or by helping other users or
 developers in the mailing lists. Every contribution is valuable to the
 community and we give credit back to our team by listing all the
-contributors on [our team page](http://restlet.org/participate/team).
+contributors on [our team page](http://restlet.com/participate/team).
 
 Let's get started and again: welcome to the Restlet Team !
 
@@ -51,18 +51,18 @@ available and kept synchronized with an automated porting process.
 ## Community support
 
 If you can't find an answer to your question in this document, please
-use our [discussion lists](http://restlet.org/participate/)
-and read the [recommended books](http://restlet.org/learn/books).
+use our [discussion lists](http://restlet.com/participate/)
+and read the [recommended books](http://restlet.com/learn/books).
 
 We especially recommend our [Restlet in Action](http://www.amazon.com/gp/product/193518234X/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=193518234X&linkCode=as2&tag=restlet-20)
 book published by Manning.
 
-[![](http://restlet.org/images/books/restlet-in-action-150)](http://www.amazon.com/gp/product/193518234X/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=193518234X&linkCode=as2&tag=restlet-20)
+[![](http://restlet.com/images/books/restlet-in-action-150)](http://www.amazon.com/gp/product/193518234X/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=193518234X&linkCode=as2&tag=restlet-20)
 
 ## Professional support
 
 If you can't wait to get an answer or need to keep your questions confidential,
-you can also obtain private support by buying a [professional support plan](http://restlet.org/participate/contribute)
+you can also obtain private support by buying a [professional support plan](http://restlet.com/participate/contribute)
 from the creator of the Restlet Framework.
 
 [![](/images/logos/restlet-115)](/services/)

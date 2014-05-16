@@ -20,7 +20,7 @@ output it in the JVM console:
 
 ~~~~ {.brush: .java}
 // Outputting the content of a Web page  
-new ClientResource("http://restlet.org").get().write(System.out);  
+new ClientResource("http://restlet.com").get().write(System.out);  
 ~~~~
 
 If you are running your client behind a proxy, please [check this
@@ -33,7 +33,7 @@ referrer URI:
 
 ~~~~ {.brush: .java}
 // Create the client resource  
-ClientResource resource = new ClientResource("http://restlet.org");  
+ClientResource resource = new ClientResource("http://restlet.com");  
  
 // Customize the referrer property  
 resource.setReferrerRef("http://www.mysite.org");  
