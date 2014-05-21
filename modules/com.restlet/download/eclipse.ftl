@@ -1,7 +1,7 @@
 <div class="clearBoth"></div>
 <hr />
 
-   <h3>Eclipse update site</h3>
+   <h3><a name="#eclipse"></a>Eclipse update site</h3>
 
    <h4>Introduction</h4>
 

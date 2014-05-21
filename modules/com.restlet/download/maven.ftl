@@ -1,6 +1,6 @@
 <div class="clearBoth"></div>
 <hr />
-   <h3>Maven configuration</h3>
+   <h3><a name="#maven"></a>Maven configuration</h3>
 
    <p>
       The Maven repository for Restlet is accessible from
