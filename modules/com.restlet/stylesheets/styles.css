@@ -1162,3 +1162,7 @@ span.float-right {
     margin-left: 10px;
     margin-bottom: 1px;
 }
+
+code {
+	color: #333333;
+}

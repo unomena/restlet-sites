@@ -1,8 +1,6 @@
 <div class="clearBoth"></div>
 <hr />
-   <h3>Maven repository</h3>
-
-   <h4>Introduction</h4>
+   <h3>Maven configuration</h3>
 
    <p>
       The Maven repository for Restlet is accessible from
@@ -12,76 +10,55 @@
       refreshed once a day if the build succeeds.
    </p>
 
-   <h4>Recommended configuration</h4>
+   <h4>Sample POM</h4>
 
    <p>
-      Here are some instructions about how to configure Maven client to work with the
-      online Maven repository.
+      Each Restlet Framework project needs at least one dependency: the 
+      Restlet core module and we assume that you use Jackson for JSON support. 
+      You also need to configure your Maven client so it points to Restlet 
+      online repository. Just open and edit the pom.xml file for your project 
+      and add the following lines of text into the <code>&lt;dependencies&gt;</code> section.
    </p>
-
    <div>
-      <ol>
-         <li>
-            Declare the repository for your project or for a
-            parent project by updating the <i>pom.xml</i> file and adding
-            the following code to the &lt;repositories&gt; section:
-   <pre class="xml:nocontrols:nogutter">
+	   <pre class="xml:nocontrols:nogutter">
+&lt;dependency&gt;
+   &lt;groupId&gt;org.restlet.jse&lt;/groupId&gt;
+   &lt;artifactId&gt;org.restlet&lt;/artifactId&gt;
+   &lt;version&gt;2.2.1&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+   &lt;groupId&gt;org.restlet.jse&lt;/groupId&gt;
+   &lt;artifactId&gt;org.restlet.ext.jackson&lt;/artifactId&gt;
+   &lt;version&gt;2.2.1&lt;/version&gt;
+&lt;/dependency&gt;
 &lt;repository&gt;
    &lt;id&gt;maven-restlet&lt;/id&gt;
-   &lt;name&gt;Restlet Framework repository&lt;/name&gt;
+   &lt;name&gt;Restlet repository&lt;/name&gt;
    &lt;url&gt;http://maven.restlet.com&lt;/url&gt;
 &lt;/repository&gt;
-   </pre>
-         </li>
-         <li>
-            As an alternative, you can also declare the repository for all of your
-            projects. Go to the directory on the local computer where you just install Maven.
-            Open and edit <i>conf/settings.xml</i> file. Add to the
-            &lt;profiles&gt; section the following code:
-   <pre class="xml:nocontrols:nogutter">
-&lt;profile&gt;
-  &lt;id&gt;restlet&lt;/id&gt;
-  &lt;repositories&gt;
-     &lt;repository&gt;
-        &lt;id&gt;maven-restlet&lt;/id&gt;
-        &lt;name&gt;Restlet Framework repository&lt;/name&gt;
-        &lt;url&gt;http://maven.restlet.com&lt;/url&gt;
-     &lt;/repository&gt;
-  &lt;/repositories&gt;
-&lt;/profile&gt;
-   </pre>
-            Just after the &lt;/profiles&gt; add the following:
-   <pre class="xml:nocontrols:nogutter">
-&lt;activeProfiles&gt;
-    &lt;activeProfile&gt;restlet&lt;/activeProfile&gt;
-&lt;/activeProfiles&gt;
-   </pre>
-         </li>
-      </ol>
+	   </pre>
    </div>
 
    <h4>Available artifacts</h4>
 
-   <div>
-      The following table lists the available artifacts and their group and 
-      artifact ids. With the introduction of <a href="/learn/guide/2.2/editions/" title="Restlet Framework editions">Restlet Framework editions</a> 
-      , it is necessary to make a distinction between
-      an extension for a given edition and the same extension for another extension 
-      simply because the code of the extension may change between each edition.
-   </div>
-   <div>
-      This distinction is reflected in the group id of each artifacts which 
-      contains a reference to an edition. They are all set on the same pattern: 
-      "org.restlet.&lt;edition&gt;" where "&lt;edition&gt;" is three-letters 
-      code of an edition among: jse (Java SE edition), jee (Java EE edition), 
-      gae (Google App Engine edition), android (Android edition) and 
-      gwt (google Web Toolkit edition).
-   </div>
-   <div>
-        Please find below 
-      <a href="/learn/guide/2.2/extensions/editions-matrix" title="Extensions per edition.">the list of extensions</a>  
-       available for the release and edition that you selected. 
-   </div>
+   <p>
+      According to your needs, you might have to complete the list of dependencies. 
+      The table table lists available artifacts and their group and artifact ids.
+   </p>
+   
+   <p>
+      As Restlet Framework supports multiple editions, it is necessary to make a 
+      distinction between an extension for a given edition and the same extension 
+      for another one. This is reflected in the group id of each artifact. They 
+      folllow the same pattern: <code>org.restlet.&lt;edition&gt;</code> 
+      where <code>&lt;edition&gt;</code> is three-letters 
+      code of an edition among: jse (Java SE edition), jee (Java EE edition), gae 
+      (Google App Engine edition), android (Android edition) and gwt (google Web Toolkit edition).
+   </p>
+   
+   <p>
+        Please find below the list of extensions available for the release and edition that you selected.
+   </p>
 
    <div style="margin-top: 15px;margin-bottom: 10px; text-align:left">
       <table class="classic" style="display:inline" cellspacing="2" cellpadding="3">
@@ -236,28 +213,36 @@
       </table>
    </div>
 
-   <h4>Sample dependencies declaration</h4>
+   <h4>Alternative repository configuration</h4>
 
    <p>
-      Each project based on the Restlet framework needs to declare at least one
-      dependency: the Restlet core module. According to your needs, you should 
-      complete the list of dependencies with the required extensions and 
-      connectors. For example, assuming your project is a Web server that generates 
-      json representations of Java Beans using the Jackson library. Since 
-      your Maven client correctly references the Restlet online repository, just 
-      open and edit the <i>pom.xml</i> file for your project and add the following
-      lines of text into the &lt;dependencies&gt; section.
+      Sometimes its more convenient to declare the same repository for all of your projects. 
+      To do so, just go to your Maven installation directory. Open and edit <code>conf/settings.xml</code> 
+      file and add to the <code>&lt;profiles&gt;</code> section the following code:
    </p>
-
+	
+   <div>
    <pre class="xml:nocontrols:nogutter">
-&lt;dependency&gt;
-   &lt;groupId&gt;org.restlet.jse&lt;/groupId&gt;
-   &lt;artifactId&gt;org.restlet&lt;/artifactId&gt;
-   &lt;version&gt;${versionMaven}&lt;/version&gt;
-&lt;/dependency&gt;
-&lt;dependency&gt;
-   &lt;groupId&gt;org.restlet.jse&lt;/groupId&gt;
-   &lt;artifactId&gt;org.restlet.ext.jackson&lt;/artifactId&gt;
-   &lt;version&gt;${versionMaven}&lt;/version&gt;
-&lt;/dependency&gt;
+&lt;profile&gt;
+  &lt;id&gt;restlet&lt;/id&gt;
+  &lt;repositories&gt;
+     &lt;repository&gt;
+        &lt;id&gt;maven-restlet&lt;/id&gt;
+        &lt;name&gt;Restlet Framework repository&lt;/name&gt;
+        &lt;url&gt;http://maven.restlet.com&lt;/url&gt;
+     &lt;/repository&gt;
+  &lt;/repositories&gt;
+&lt;/profile&gt;
    </pre>
+   </div>
+   
+   <p>
+      Just after the <code>&lt;/profiles&gt;</code> add the following:
+   </p>
+   <div>
+   <pre class="xml:nocontrols:nogutter">
+&lt;activeProfiles&gt;
+    &lt;activeProfile&gt;restlet&lt;/activeProfile&gt;
+&lt;/activeProfiles&gt;
+   </pre>
+   </div>
