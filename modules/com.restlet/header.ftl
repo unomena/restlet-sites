@@ -113,7 +113,9 @@
 	<div>
 		<div class="video-close-button"></div>
 		<div class="video-content">
-			<iframe width="640" height="360" src="//www.youtube-nocookie.com/embed/j1wgaFJ0750?rel=0" frameborder="0" allowfullscreen></iframe>
+			<iframe id="ytplayer" width="640" height="360" 
+				src="//www.youtube-nocookie.com/embed/j1wgaFJ0750?rel=0&enablejsapi=1&origin=http://restlet.com" 
+				frameborder="0" allowfullscreen></iframe>
 		</div>
 	</div>
 </div>

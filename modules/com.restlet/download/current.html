@@ -9,14 +9,41 @@
 <#global javascript>
 <#noparse>
 	$(document).ready(function() {
+		// function to add trigerred events on show, hide jQuery function
+		(function ($) {
+	      $.each(['show', 'hide'], function (i, ev) {
+	        var el = $.fn[ev];
+	        $.fn[ev] = function () {
+	          this.trigger(ev);
+	          return el.apply(this, arguments);
+	        };
+	      });
+	    })(jQuery);
+	    
         init($("#cBranch"), $("#cEdition"), $("#cDistribution")<#if ("zip" ==  distribution) || ("exe" ==  distribution)>, true<#else>, false, true</#if>);
         //init($("#cBranch"), $("#cRelease"), $("#cEdition"), $("#cDistribution"), $("#archives"));
+		
+		//Snag the URL of the iframe so we can use it later
+		var video_url = $('#ytplayer').attr('src');
 
+		// custom handler on show event for #videoPopup
+		$('#videoPopup').on('show', function(){
+			$('#ytplayer').attr('src', video_url);
+		});			
+		
+		// custom handler on hide event for #videoPopup
+		$('#videoPopup').on('hide', function(){
+			$('#ytplayer').attr('src', '');
+		});
+		
+		// close the modal popup when clicking on the cross buntton
 		$("#deployModal div.close-button").click(function() {
-		          $("#deployModal").hide();
+			$("#deployModal").hide();
         });
+        
+        // close the video popup and stop the video
 		$("#videoPopup div.video-close-button").click(function() {
-		          $("#videoPopup").hide();
+			$("#videoPopup").hide();
         });
         
         $("#newsLetterOkButton").click(
