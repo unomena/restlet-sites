@@ -86,20 +86,20 @@
 		<div class="doc-preview"></div>
 		<div class="doc-desc">
 			<div class="doc-title">
-				<h3>Complete User Guide</h3>
+				<h3>Learn Restlet Basics in 5 Minutes</h3>
 			</div>
 			<div class="doc-content">
-				<h4><strong>Download Version 2.2 of the User Guide</strong></h4>
-				<div class="text">Learn all about the Restlet Framework: its core, the
-                  different editions, its extensions, the first steps, how it can be used to build a well-
-                  structured and scalable web API...etc.<br/>
-                  <strong>Become a Restlet Framework ninja!</strong></div>
+				<div class="text">Learn the basic of the <strong>Restlet Framework</strong>
+				in just 5 minutes. This video covers installation, first steps and general best
+				practices<br>
+				Watch it and start building you API!
+				</div>
 				<div class="avatar"></div>
 				<div class="clearBoth"></div>
 			</div>
 			<div class="doc-download">
 				<input type="email" id="campaignEmail" required="required" placeholder="Email"/>
-				<button id="campaignButton">Download</button>
+				<button id="campaignButton">Watch video</button>
 			</div>
 			<div class="doc-footer">
 				<p>Your details will never be shared to a 3rd party. We hate spam just as much as you do.</p>
@@ -108,7 +108,15 @@
 		</div>
 		<div class="clearBoth"></div>
 	</div>
-</div>   
+</div>
+<div id="videoPopup" class="modalDialog video">
+	<div>
+		<div class="video-close-button"></div>
+		<div class="video-content">
+			<iframe width="640" height="360" src="//www.youtube-nocookie.com/embed/j1wgaFJ0750?rel=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
 </#global>
 <#global archivesSection>
 <div class="downloadsection">

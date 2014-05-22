@@ -66,23 +66,25 @@ function setDownloadButton() {
 	                if (checkEmail("campaignEmail", "campaignButton")) {
 						mixpanel.track("Shared email", {
 							"email": $("#campaignEmail").val(),
-							"Email field location":"User Guide PDF"
+							"Email field location":"5min Demo Video"
 						});
 						mixpanel.alias($("#campaignEmail").val(), mixpanel.get_distinct_id());
 						mixpanel.people.set({"$email": $("#campaignEmail").val()});
-						mixpanel.track("Downloaded User Guide PDF");
+						mixpanel.track("Watched 5min Demo Video");
 						
 						// close popup
 						$("#campaignEmail").val("");
 						$("#deployModal").hide();
 						
+						// open the video popup
+						window.setTimeout($("#videoPopup").show(),1000);
+						
 						// Set a one year cookie dedicated to this campaign. 
-						$.cookie('rf-user-guide', 'true', {
+						$.cookie('rf-basics-video', 'true', {
 							expires: 365
 						});
-						// launch pdf download in a new tab
-						window.open('/learn/archives/misc/2.2/rf-user-guide-2-2.pdf', "_blank");
 					}
+					
 				}
 		);
 
@@ -93,7 +95,7 @@ function setDownloadButton() {
 						$('#maven_infos').css('display','none');
 						var hrefCallback = function() {
 							$('#maven_infos').css('display','block');
-							if ("true" != $.cookie("rf-user-guide")) {
+							if ("true" != $.cookie("rf-basics-video")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
@@ -122,7 +124,7 @@ function setDownloadButton() {
 						
 						var hrefCallback = function() {
 							$('#eclipse_infos').css('display','block');
-							if ("true" != $.cookie("rf-user-guide")) {
+							if ("true" != $.cookie("rf-basics-video")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
@@ -153,7 +155,7 @@ function setDownloadButton() {
 							// download selected restlet framework file
 							document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
 							// open campaign popup
-							if ("true" != $.cookie("rf-user-guide")) {
+							if ("true" != $.cookie("rf-basics-video")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
