@@ -86,13 +86,12 @@
 		<div class="doc-preview"></div>
 		<div class="doc-desc">
 			<div class="doc-title">
-				<h3>Learn Restlet Basics in 5 Minutes</h3>
+				<h3>3 Minutes Quick Start Video</h3>
 			</div>
 			<div class="doc-content">
-				<div class="text">Learn the basic of the <strong>Restlet Framework</strong>
-				in just 5 minutes. This video covers installation, first steps and general best
-				practices<br>
-				Watch it and start building you API!
+				<div class="text">Learn how to set up Restlet Framework in just 3 minutes. 
+				This video covers installation, first steps and testing.<br>
+				Watch it and start building your API!
 				</div>
 				<div class="avatar"></div>
 				<div class="clearBoth"></div>
@@ -114,7 +113,7 @@
 		<div class="video-close-button"></div>
 		<div class="video-content">
 			<iframe id="ytplayer" width="640" height="360" 
-				src="//www.youtube-nocookie.com/embed/j1wgaFJ0750?rel=0&enablejsapi=1&origin=http://restlet.com" 
+				src="//www.youtube.com/embed/xDLpgCWIfug?rel=0&enablejsapi=1&origin=http://restlet.com" 
 				frameborder="0" allowfullscreen></iframe>
 		</div>
 	</div>

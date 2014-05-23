@@ -23,12 +23,14 @@
         init($("#cBranch"), $("#cEdition"), $("#cDistribution")<#if ("zip" ==  distribution) || ("exe" ==  distribution)>, true<#else>, false, true</#if>);
         //init($("#cBranch"), $("#cRelease"), $("#cEdition"), $("#cDistribution"), $("#archives"));
 		
-		//Snag the URL of the iframe so we can use it later
+		//Get the URL of the Youtube iframe so we can use it later
 		var video_url = $('#ytplayer').attr('src');
 
 		// custom handler on show event for #videoPopup
 		$('#videoPopup').on('show', function(){
-			$('#ytplayer').attr('src', video_url);
+			if ($('#ytplayer').attr('src') === '') {
+				$('#ytplayer').attr('src', video_url);
+			}
 		});			
 		
 		// custom handler on hide event for #videoPopup
