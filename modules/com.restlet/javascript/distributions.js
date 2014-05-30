@@ -63,28 +63,25 @@ function setDownloadButton() {
 		
 		$('#campaignButton').click(
 				function(event) {
-	                if (checkEmail("campaignEmail", "campaignButton")) {
-						mixpanel.track("Shared email", {
-							"email": $("#campaignEmail").val(),
-							"Email field location":"5min Demo Video"
-						});
-						mixpanel.alias($("#campaignEmail").val(), mixpanel.get_distinct_id());
-						mixpanel.people.set({"$email": $("#campaignEmail").val()});
-						mixpanel.track("Watched 5min Demo Video");
-						
-						// close popup
-						$("#campaignEmail").val("");
-						$("#deployModal").hide();
-						
-						// open the video popup
-						window.setTimeout($("#videoPopup").show(),1000);
-						
-						// Set a one year cookie dedicated to this campaign. 
-						$.cookie('rf-basics-video', 'true', {
-							expires: 365
-						});
-					}
+					mixpanel.track("Shared email", {
+						"email": $("#campaignEmail").val(),
+						"Email field location":"RF and AS Stickers"
+					});
+//					mixpanel.alias($("#campaignEmail").val(), mixpanel.get_distinct_id());
+//					mixpanel.people.set({"$email": $("#campaignEmail").val()});
+					mixpanel.track("Ordered RF and AS stickers");
 					
+					// close popup
+					$("#campaignEmail").val("");
+					$("#deployModal").hide();
+					
+					// open the Instapage landing page
+					window.open("http://pages.restlet.org/order-stickers");
+					
+					// Set a one year cookie dedicated to this campaign. 
+					$.cookie('stickers-campaign', 'true', {
+						expires: 365
+					});
 				}
 		);
 
@@ -95,7 +92,7 @@ function setDownloadButton() {
 						$('#maven_infos').css('display','none');
 						var hrefCallback = function() {
 							$('#maven_infos').css('display','block');
-							if ("true" != $.cookie("rf-basics-video")) {
+							if ("true" != $.cookie("stickers-campaign")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
@@ -124,7 +121,7 @@ function setDownloadButton() {
 						
 						var hrefCallback = function() {
 							$('#eclipse_infos').css('display','block');
-							if ("true" != $.cookie("rf-basics-video")) {
+							if ("true" != $.cookie("stickers-campaign")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
@@ -155,7 +152,7 @@ function setDownloadButton() {
 							// download selected restlet framework file
 							document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
 							// open campaign popup
-							if ("true" != $.cookie("rf-basics-video")) {
+							if ("true" != $.cookie("stickers-campaign")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}

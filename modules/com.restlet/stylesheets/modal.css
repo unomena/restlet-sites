@@ -14,8 +14,8 @@
 }
 
 .modalDialog.kinlane > div {
-	width: 800px;
-	height: 377px;
+	width: 770px;
+	height: 337px;
 	/*min-height: 200px;*/
 	margin-left: auto;
 	margin-right: auto;
@@ -103,14 +103,14 @@
 }
 
 .modalDialog.kinlane div.doc-preview {
-	background-image: url(/images/3minutes_demo_video.png);
+	background-image: url(/images/stickers-campaign.png);
 	background-position: center;
 	background-repeat: no-repeat;
-	width: 382px;
-	height: 294px;
+	width: 344px;
+	height: 260px;
 	float: left;
-	margin-top: 65px;
-	padding-left: 35px;
+	margin-top: 57px;
+	padding-left: 40px;
 }
 
 .modalDialog.kinlane div.doc-desc {
@@ -123,7 +123,7 @@
 .modalDialog.kinlane div.doc-desc > div.doc-title {
 	position: relative;
 	top: -15px;
-	left: -373px;
+	left: -333px;
 	width: 600px;
 }
 .modalDialog.kinlane div.doc-desc > div.doc-title > h3 {
@@ -140,7 +140,7 @@
 	padding-top: 2px;
 	background-color: rgba(41, 63, 112, 0.7);
 	width: 335px;
-	height: 130px;
+	height: 120px;
 }
 
 .modalDialog.kinlane div.doc-desc > div.doc-content h4,
@@ -157,11 +157,19 @@
 }
 
 .modalDialog.kinlane div.doc-desc > div.doc-content > div.text {
-	margin-top: 15px;
+	margin-top: 5px;
 	padding-top: 5px;
-	font-size: 14px;
+	font-size: 16px;
 	height: 110px;
-	line-height: 170%;
+	line-height: 180%;
+}
+
+.modalDialog.kinlane div.doc-desc > div.doc-content > div.text > p {
+	margin-top: 5px;
+	padding-top: 5px;
+	font-size: 16px;
+	line-height: 180%;
+	color: #fff;
 }
 
 .modalDialog.kinlane div.doc-desc > div h4 strong {
@@ -208,27 +216,31 @@
 		=   0, startColorstr =   '#f8b800', endColorstr =   '#ef9e00' );
 	-ms-filter:
 		"progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f8b800', endColorstr='#ef9e00')";
-	padding-left: 14px;
-	padding-right: 14px;
+	padding-left: 20px;
+	padding-right: 20px;
 	margin-bottom: 10px;
 	border-radius: 4px 4px 4px 4px;
 	-moz-border-radius: 4px 4px 4px 4px;
 	-webkit-border-radius: 4px 4px 4px 4px;
 	color: #3f4348;
+	font-size: 24px;
 	font-weight: bold;
 	width: auto;
 }
 
 .modalDialog.kinlane div.avatar {
-	width: 155px;
+	background-image: url(/images/white_arrow_small.png);
+	background-position: center;
+	background-repeat: no-repeat;	width: 155px;
 	height: 87px;
 	position: absolute;
-	right: -40px;
-	bottom: 0;
+	right: 138px;
+	bottom: -28px;
 }
 
 .modalDialog.kinlane div.doc-desc > div.doc-footer {
 	width: 205px;
+	visibility: hidden;
 }
 
 .modalDialog.kinlane div.doc-desc > div.doc-footer p {
