@@ -827,6 +827,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
         redirect(router, "/learn", "/learn/");
         redirect(router, "/learn/tutorial/", "/learn/tutorial");
         redirect(router, "/learn/guide/", "/learn/guide");
+        redirect(router, "/learn/history", "/discover/history");
         redirect(router, "/learn/", "/learn/tutorial");
         redirect(router, "/participate", "/participate/");
         redirect(router, "/products/references", "/participate/services");
