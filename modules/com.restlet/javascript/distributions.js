@@ -63,25 +63,27 @@ function setDownloadButton() {
 		
 		$('#campaignButton').click(
 				function(event) {
-					mixpanel.track("Shared email", {
-						"email": $("#campaignEmail").val(),
-						"Email field location":"RF and AS Stickers"
-					});
-//					mixpanel.alias($("#campaignEmail").val(), mixpanel.get_distinct_id());
-//					mixpanel.people.set({"$email": $("#campaignEmail").val()});
-					mixpanel.track("Ordered RF and AS stickers");
-					
-					// close popup
-					$("#campaignEmail").val("");
-					$("#deployModal").hide();
-					
-					// open the Instapage landing page
-					window.open("http://pages.restlet.org/order-stickers");
-					
-					// Set a one year cookie dedicated to this campaign. 
-					$.cookie('stickers-campaign', 'true', {
-						expires: 365
-					});
+					if (checkEmail("campaignEmail", "campaignButton")) {
+						mixpanel.track("Shared email", {
+							"email": $("#campaignEmail").val(),
+							"Email field location":"Kin Lane Guide"
+						});
+						mixpanel.alias($("#campaignEmail").val(), mixpanel.get_distinct_id());
+						mixpanel.people.set({"$email": $("#campaignEmail").val()});
+						mixpanel.track("Downloaded Kin Lane Guide");
+						
+						// close popup
+						$("#campaignEmail").val("");
+						$("#deployModal").hide();
+						
+						// Set a one year cookie dedicated to this campaign. 
+						$.cookie('kin-lane-white-paper-v2', 'true', {
+							expires: 365
+						});
+						
+						// launch pdf download in a new tab
+						window.open('http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=popup&utm_campaign=Kin%20Lane%20Guide', "_blank");
+					}
 				}
 		);
 
@@ -92,7 +94,7 @@ function setDownloadButton() {
 						$('#maven_infos').css('display','none');
 						var hrefCallback = function() {
 							$('#maven_infos').css('display','block');
-							if ("true" != $.cookie("stickers-campaign")) {
+							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
@@ -121,7 +123,7 @@ function setDownloadButton() {
 						
 						var hrefCallback = function() {
 							$('#eclipse_infos').css('display','block');
-							if ("true" != $.cookie("stickers-campaign")) {
+							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
@@ -152,7 +154,7 @@ function setDownloadButton() {
 							// download selected restlet framework file
 							document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
 							// open campaign popup
-							if ("true" != $.cookie("stickers-campaign")) {
+							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
