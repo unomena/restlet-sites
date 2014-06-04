@@ -56,12 +56,12 @@ function loadMavenSnippet() {
 	$('#maven-snippet').append('    &lt;dependency&gt;\n');
 	$('#maven-snippet').append('        &lt;groupId&gt;org.restlet.jse&lt;/groupId&gt;\n');
 	$('#maven-snippet').append('        &lt;artifactId&gt;org.restlet&lt;/artifactId&gt;\n');
-	$('#maven-snippet').append('        &lt;version&gt;' + version.mavenVersion + '&lt;/version&gt;\n');
+	$('#maven-snippet').append('        &lt;version&gt;&#36;{restlet-version}&lt;/version&gt;\n');
 	$('#maven-snippet').append('    &lt;/dependency&gt;\n');
 	$('#maven-snippet').append('    &lt;dependency&gt;\n');
 	$('#maven-snippet').append('        &lt;groupId&gt;org.restlet.jse&lt;/groupId&gt;\n');
 	$('#maven-snippet').append('        &lt;artifactId&gt;org.restlet.ext.jackson&lt;/artifactId&gt;\n');
-	$('#maven-snippet').append('        &lt;version&gt;' + version.mavenVersion + '&lt;/version&gt;\n');
+	$('#maven-snippet').append('        &lt;version&gt;&#36;{restlet-version}&lt;/version&gt;\n');
 	$('#maven-snippet').append('    &lt;/dependency&gt;\n');
 	$('#maven-snippet').append('&lt;/dependencies&gt;\n');	
 }

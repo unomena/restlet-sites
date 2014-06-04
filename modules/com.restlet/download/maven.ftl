@@ -35,12 +35,12 @@
     &lt;dependency&gt;
         &lt;groupId&gt;org.restlet.jse&lt;/groupId&gt;
         &lt;artifactId&gt;org.restlet&lt;/artifactId&gt;
-        &lt;version&gt;${version}&lt;/version&gt;
+        &lt;version&gt;&#36;{restlet-version}&lt;/version&gt;
     &lt;/dependency&gt;
     &lt;dependency&gt;
         &lt;groupId&gt;org.restlet.jse&lt;/groupId&gt;
         &lt;artifactId&gt;org.restlet.ext.jackson&lt;/artifactId&gt;
-        &lt;version&gt;${version}&lt;/version&gt;
+        &lt;version&gt;&#36;{restlet-version}&lt;/version&gt;
     &lt;/dependency&gt;
 &lt;/dependencies&gt;
 	   </pre>
