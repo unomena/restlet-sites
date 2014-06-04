@@ -40,6 +40,32 @@ function loadDistributions() {
 	});
 };
 
+function loadMavenSnippet() {
+	$('#maven-snippet').empty();
+	$('#maven-snippet').append('&lt;repositories&gt;\n');
+	$('#maven-snippet').append('    &lt;repository&gt;\n');
+	$('#maven-snippet').append('        &lt;id&gt;maven-restlet&lt;/id&gt;\n');
+	$('#maven-snippet').append('        &lt;name&gt;Restlet repository&lt;/name&gt;\n');
+	$('#maven-snippet').append('        &lt;url&gt;http://maven.restlet.com&lt;/url&gt;\n');
+	$('#maven-snippet').append('    &lt;/repository&gt;\n');
+	$('#maven-snippet').append('&lt;/repositories&gt;\n');
+	$('#maven-snippet').append('&lt;properties&gt;\n');
+	$('#maven-snippet').append('    &lt;restlet-version&gt;' + version.mavenVersion + '&lt;/restlet-version&gt;\n');
+	$('#maven-snippet').append('&lt;/properties&gt;\n');
+	$('#maven-snippet').append('&lt;dependencies&gt;\n');
+	$('#maven-snippet').append('    &lt;dependency&gt;\n');
+	$('#maven-snippet').append('        &lt;groupId&gt;org.restlet.jse&lt;/groupId&gt;\n');
+	$('#maven-snippet').append('        &lt;artifactId&gt;org.restlet&lt;/artifactId&gt;\n');
+	$('#maven-snippet').append('        &lt;version&gt;' + version.mavenVersion + '&lt;/version&gt;\n');
+	$('#maven-snippet').append('    &lt;/dependency&gt;\n');
+	$('#maven-snippet').append('    &lt;dependency&gt;\n');
+	$('#maven-snippet').append('        &lt;groupId&gt;org.restlet.jse&lt;/groupId&gt;\n');
+	$('#maven-snippet').append('        &lt;artifactId&gt;org.restlet.ext.jackson&lt;/artifactId&gt;\n');
+	$('#maven-snippet').append('        &lt;version&gt;' + version.mavenVersion + '&lt;/version&gt;\n');
+	$('#maven-snippet').append('    &lt;/dependency&gt;\n');
+	$('#maven-snippet').append('&lt;/dependencies&gt;\n');	
+}
+
 function setDownloadButton() {
 	$('#download').empty();
 	if (distribution && "file" == distribution.type) {
@@ -90,6 +116,7 @@ function setDownloadButton() {
 		if (distribution.fileType == "maven") {
 			$('#rfDownloadButton').click(
 					function() {
+						loadMavenSnippet();
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
 						var hrefCallback = function() {
@@ -118,6 +145,7 @@ function setDownloadButton() {
 		} else if (distribution.fileType == "p2") {
 			$('#rfDownloadButton').click(
 					function() {
+						loadMavenSnippet();
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
 						
@@ -147,6 +175,7 @@ function setDownloadButton() {
 		} else {
 			$('#rfDownloadButton').click(
 					function(event) {
+						loadMavenSnippet();
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
 

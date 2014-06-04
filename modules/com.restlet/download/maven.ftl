@@ -20,22 +20,29 @@
       and add the following lines of text into the <code>&lt;dependencies&gt;</code> section.
    </p>
    <div>
-	   <pre class="xml:nocontrols:nogutter">
-&lt;dependency&gt;
-   &lt;groupId&gt;org.restlet.jse&lt;/groupId&gt;
-   &lt;artifactId&gt;org.restlet&lt;/artifactId&gt;
-   &lt;version&gt;2.2.1&lt;/version&gt;
-&lt;/dependency&gt;
-&lt;dependency&gt;
-   &lt;groupId&gt;org.restlet.jse&lt;/groupId&gt;
-   &lt;artifactId&gt;org.restlet.ext.jackson&lt;/artifactId&gt;
-   &lt;version&gt;2.2.1&lt;/version&gt;
-&lt;/dependency&gt;
-&lt;repository&gt;
-   &lt;id&gt;maven-restlet&lt;/id&gt;
-   &lt;name&gt;Restlet repository&lt;/name&gt;
-   &lt;url&gt;http://maven.restlet.com&lt;/url&gt;
-&lt;/repository&gt;
+	   <pre class="xml:nocontrols:nogutter" id="maven-snippet">
+&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;maven-restlet&lt;/id&gt;
+        &lt;name&gt;Restlet repository&lt;/name&gt;
+        &lt;url&gt;http://maven.restlet.com&lt;/url&gt;
+    &lt;/repository&gt;
+&lt;/repositories&gt;
+&lt;properties&gt;
+    &lt;restlet-version&gt;${version}&lt;/restlet-version&gt;
+&lt;/properties&gt;
+&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.restlet.jse&lt;/groupId&gt;
+        &lt;artifactId&gt;org.restlet&lt;/artifactId&gt;
+        &lt;version&gt;${version}&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.restlet.jse&lt;/groupId&gt;
+        &lt;artifactId&gt;org.restlet.ext.jackson&lt;/artifactId&gt;
+        &lt;version&gt;${version}&lt;/version&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
 	   </pre>
    </div>
 
