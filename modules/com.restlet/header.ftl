@@ -198,7 +198,7 @@
 <div class='center editButton'>
         <div class="control-group">
             <div class="controls">
-                    <div class="btn no-radius"><strong><a href="https://github.com/restlet/restlet-sites/edit/master/modules/org.restlet/${pp.sourceFile?replace("html", "md")}" title="Edit this page">Edit</a></strong></div>
+                    <div class="btn no-radius"><strong><a href="https://github.com/restlet/restlet-sites/edit/master/modules/com.restlet/${pp.sourceFile?replace("html", "md")}" title="Edit this page">Edit</a></strong></div>
             </div>
         </div>
 </div>
