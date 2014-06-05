@@ -14,10 +14,10 @@
 
    <p>
       Each Restlet Framework project needs at least one dependency: the 
-      Restlet core module and we assume that you use Jackson for JSON support. 
-      You also need to configure your Maven client so it points to Restlet 
-      online repository. Just open and edit the pom.xml file for your project 
-      and add the following lines of text into the <code>&lt;dependencies&gt;</code> section.
+      Restlet core module and we assume that you will use Jackson for JSON support. 
+      You also need to configure your Maven client to point to the dedicated Restlet 
+      repository. Just open and edit the pom.xml file for your project 
+      and add the following lines of text:
    </p>
    <div>
 	   <pre class="xml:nocontrols:nogutter" id="maven-snippet">
