@@ -1233,16 +1233,25 @@ span.float-right {
 }
 
 .right-sidebar .newsletter .newsletter-header {
-
+	position: relative;
 }
 
-.right-sidebar .newsletter .newsletter-header:before {
-	content: url(/images/newsletter-header-icon.png);
+.right-sidebar .newsletter .newsletter-header div:first-child {
+	background-image: url(/images/newsletter-header-icon.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 40px;
+	height: 34px;
+	float: left;
 	display: inline-block;
-	padding-top: 0px;
+	padding-top: 10px;
 	padding-right: 3px;
-	vertical-align: -50%;
-	line-height: 2.1em;
+}
+
+.right-sidebar .newsletter .newsletter-header div:last-child {
+	position: absolute;
+	left: 50px;
+	top: 0;
 }
 
 .right-sidebar .tutorials {
