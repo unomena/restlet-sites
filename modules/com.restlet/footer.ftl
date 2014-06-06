@@ -107,7 +107,6 @@
          
       </#list>
       </ul>
-      <hr/>
     </div>
     <div class="clearBoth"></div>
    </#if>

@@ -125,7 +125,6 @@ function setDownloadButton() {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
-							document.getElementById('maven_infos').scrollIntoView();
 						}
 						
 						// in case Mixpanel servers don't get back to us in time
@@ -155,7 +154,6 @@ function setDownloadButton() {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
-							document.getElementById('eclipse_infos').scrollIntoView();
 						}
 						
 						// in case Mixpanel servers don't get back to us in time

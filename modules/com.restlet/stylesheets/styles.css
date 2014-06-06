@@ -1102,12 +1102,12 @@ form,form>input {
 }
 
 #email-submit input {
-	padding: 10px 10px;
+	padding: 7px 7px;
 	line-height: 1.2em;
-	width: 250px;
+	width: 150px;
 	font-weight: bold;
 	color: #3f4348;
-	background-color: #faf3e0;
+	/*background-color: #faf3e0;*/
 	border: solid 1px #bbbbbb;
 	border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -1122,9 +1122,9 @@ form,form>input {
 
 #email-submit button, #email-submit input[type="submit"] {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: normal;
-	height: 40px;
+	height: 35px;
 	width: 125px;
 	border: solid 1px #ef9e00;
 	background-image: -moz-linear-gradient(top, #f8b800, #ef9e00);
@@ -1165,4 +1165,143 @@ span.float-right {
 
 code {
 	color: #333333;
+}
+
+.downloadsection {
+	background-color: #dae1ef;
+	background-image: url(/images/downloads-right-background.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+
+.downloadsection .span3 {
+	padding-top: 5px;
+	margin-bottom: 0;
+}
+
+.downloadsection .form-horizontal .control-group {
+	margin-bottom: 10px;
+}
+
+
+.downloadsection .form-horizontal .control-label {
+	color: #333;
+	font-weight: bold;
+}
+
+.downloadsection .download-description-list {
+	width: 220px;
+	text-align: left;
+	color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.downloadsection .download-description-list ul {
+	color: #fff;
+	list-style: none;
+	padding-left: 5px;
+	/*margin-top: 2px;*/
+}
+
+.downloadsection .download-description-list ul li {
+	color: #fff;
+	padding-bottom: 2px;
+}
+
+.downloadsection .download-description-list ul li:before {
+	content: url(/images/downloads-bullet.png);
+	display: inline-block;
+	padding-top: 0px;
+	padding-right: 3px;
+	vertical-align: -50%;
+	line-height: 1.1em;
+}
+
+.elements {
+	/*border: solid 1px black;*/
+}
+
+.left-description {
+	width: 60%;
+	float: left;
+}
+
+.right-sidebar {
+	width: 35%;
+	float: right;
+}
+
+.right-sidebar .newsletter,
+.right-sidebar .tutorials,
+.right-sidebar .user-guide {
+	width: 100%;
+	background-color: #eeeeee;
+	margin-bottom: 5px;
+	margin-left: -30px;
+	padding: 15px;
+}
+
+.right-sidebar .newsletter .newsletter-header {
+	position: relative;
+}
+
+.right-sidebar .newsletter .newsletter-header div:first-child {
+	background-image: url(/images/newsletter-header-icon.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 40px;
+	height: 34px;
+	float: left;
+	display: inline-block;
+	padding-top: 10px;
+	padding-right: 3px;
+}
+
+.right-sidebar .newsletter .newsletter-header div:last-child {
+	position: absolute;
+	left: 50px;
+	top: 0;
+}
+
+.right-sidebar .tutorials {
+	position: relative;
+}
+
+.right-sidebar .tutorials > div:first-child {
+	background-image: url(/images/tutorial-icon.png);
+	width: 71px;
+	height: 60px;
+	display: inline-block;
+}
+
+.right-sidebar .tutorials > div:last-child {
+	display: inline-block;
+	position: absolute;
+	left: 175px;
+	top: 35px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.right-sidebar .user-guide {
+	position: relative;
+}
+
+.right-sidebar .user-guide > div:first-child {
+	background-image: url(/images/user-guide-icon.png);
+	width: 125px;
+	height: 59px;
+	display: inline-block;
+}
+
+.right-sidebar .user-guide > div:last-child {
+	display: inline-block;
+	position: absolute;
+	left: 175px;
+	top: 35px;
+	font-weight: bold;
+	font-size: 16px;
 }
