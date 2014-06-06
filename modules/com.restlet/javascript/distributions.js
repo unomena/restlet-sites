@@ -119,6 +119,7 @@ function setDownloadButton() {
 						loadMavenSnippet();
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
+						$('#firststeps_infos').css('display','none');
 						var hrefCallback = function() {
 							$('#maven_infos').css('display','block');
 							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
@@ -147,6 +148,7 @@ function setDownloadButton() {
 						loadMavenSnippet();
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
+						$('#firststeps_infos').css('display','none');
 						
 						var hrefCallback = function() {
 							$('#eclipse_infos').css('display','block');
@@ -176,6 +178,7 @@ function setDownloadButton() {
 						loadMavenSnippet();
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
+						$('#firststeps_infos').css('display','block');
 
 						var hrefCallback = function(event) {
 							// download selected restlet framework file
