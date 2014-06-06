@@ -12,11 +12,7 @@
         $("#newsLetterOkButton").click(
             function(event) {
                 if (checkEmail("newsLetterEmail", "newsLetterOkButton")) {
-                    var prodArray = [];
-    
-                    $("input:checked").each(function() {
-                        prodArray.push($(this).val());
-                    });
+                    var prodArray = ["Restlet Framework","APISpark"];
                     
                     mixpanel.track("Shared email", {
                         "email": $("#newsLetterEmail").val(),
@@ -113,12 +109,12 @@ ${archivesSection}
             <div class="clearBoth"></div>
           </div>
           <div class="tutorials">
-            <div></div>
-            <div>Tutorial</div>
+            <div><a href="/learn/tutorial/"><img src="/images/tutorial-icon.png"/></a></div>
+            <div><a href="/learn/tutorial/">Tutorial</a></div>
           </div>
           <div class="user-guide">
-            <div></div>
-            <div>User guide</div>
+            <div><a href="/learn/guide/"><img src="/images/user-guide-icon.png"/></a></div>
+            <div><a href="/learn/guide/">User guide</a></div>
           </div>
         </div>
     	<div class="clearBoth"></div>

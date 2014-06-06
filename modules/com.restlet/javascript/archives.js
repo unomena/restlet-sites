@@ -217,17 +217,14 @@ function setDownloadButton() {
 		$('#download').append(
 				'<p><button id="rfDownloadButton" class="btn btn-large btn-success" type="button">Download '
 						+ version.fullVersionCompact + '</button></p>');
-		if (distribution.fileType == "maven") {
-			//$('#download').append('<p>Group id: ' + distribution.mavenGroupId + '</p>');
-			//$('#download').append('<p>Version: ' + version.mavenVersion + '</p>');
-		} else if (distribution.fileType == "p2") {
-			//$('#download').append('<p>Url: ' + distribution.p2Url + '</p>');			
-		} else {
-			$('#download').append('<p>File size: ' + distribution.fileSize + '</p>');			
+
+		$('#download').append('<p><a href="' + urlChangesLog + '">What\'s new?</a></p>');
+		$('#download').append('<p>' + version.published + ' release</p>');
+		
+		if ($.cookie('branch') === "1.2") {
+			$.cookie('branch', '2.0', {path : '/'});
 		}
-		$('#download').append('<p>Date: ' + version.published + '</p>');
-		$('#download').append(
-				'<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
+
 		if (distribution.fileType == "maven") {
 			$('#rfDownloadButton').click(
 					function() {

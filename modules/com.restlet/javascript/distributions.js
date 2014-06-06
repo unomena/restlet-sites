@@ -77,15 +77,14 @@ function setDownloadButton() {
 			urlChangesLog += version.minorVersion;
 		}
 		urlChangesLog += "/changes";
+		
+		// Update the cookie branch with the branch value
+		$.cookie('branch', version.minorVersion, {path : '/'});
 
 		$('#download').append('<p><button id="rfDownloadButton" class="btn btn-large btn-success" type="button">Download ' + version.fullVersionCompact + '</button></p>');
 		
-		if (distribution.fileType !== "maven"
-			&& distribution.fileType !== "p2") {
-			$('#download').append('<p>File size: ' + distribution.fileSize + '</p>');			
-		}
-		$('#download').append('<p>Date: ' + version.published + '</p>');
-		$('#download').append('<p><a href="' + urlChangesLog + '">What\'s new</a></p>');
+		$('#download').append('<p><a href="' + urlChangesLog + '">What\'s new?</a></p>');
+		$('#download').append('<p>' + version.published + ' release</p>');
 		
 		$('#campaignButton').click(
 				function(event) {
@@ -117,10 +116,13 @@ function setDownloadButton() {
 			$('#rfDownloadButton').click(
 					function() {
 						loadMavenSnippet();
+						
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
 						$('#firststeps_infos').css('display','none');
+						
 						var hrefCallback = function() {
+							$('#newsletter').css('display','block');
 							$('#maven_infos').css('display','block');
 							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
 								// open campaign popup
@@ -151,6 +153,7 @@ function setDownloadButton() {
 						$('#firststeps_infos').css('display','none');
 						
 						var hrefCallback = function() {
+							$('#newsletter').css('display','block');
 							$('#eclipse_infos').css('display','block');
 							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
 								// open campaign popup
@@ -179,6 +182,7 @@ function setDownloadButton() {
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
 						$('#firststeps_infos').css('display','block');
+						$('#newsletter').css('display','block');
 
 						var hrefCallback = function(event) {
 							// download selected restlet framework file
