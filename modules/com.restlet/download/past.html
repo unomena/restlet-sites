@@ -91,14 +91,20 @@ ${archivesSection}
 			</ul>
 		</div-->
         <div class="left-description">
-          <h3>Maven configuration</h3>
-          <p>text</p>
-          <h4>Sample POM</h4>
-          <p>text</p>
+			<div id="firststeps_infos">
+				<#include "/discover/firststeps.ftl">
+			</div>
+			<#noparse>
+			<div id="maven_infos"><#include "maven.ftl"></div>
+			<div id="eclipse_infos"><#include "eclipse.ftl"></div>
+			</#noparse> 
         </div>
         <div class="right-sidebar">
           <div class="newsletter">
-            <div class="newsletter-header">Subscribe below to receive exciting Restlet news</div>
+          	<div class="newsletter-header">
+          		<div></div>
+          		<div>Subscribe below to receive exciting Restlet news</div>
+          	</div>
             <div id="email-submit">
               <input type="email" name="EMAIL" id="newsLetterEmail"
                    placeholder="Enter your email">
@@ -108,7 +114,7 @@ ${archivesSection}
           </div>
           <div class="tutorials">
             <div></div>
-            <div>Tutorials</div>
+            <div>Tutorial</div>
           </div>
           <div class="user-guide">
             <div></div>
@@ -118,7 +124,4 @@ ${archivesSection}
     	<div class="clearBoth"></div>
 	</div>
 </div>
-<#noparse>
-<div id="maven_infos"><#include "maven.ftl"></div>
-<div id="eclipse_infos"><#include "eclipse.ftl"></div>
-</#noparse> </#global>
+</#global>
