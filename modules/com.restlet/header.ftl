@@ -25,12 +25,6 @@
 
 <#global downloadSection>
 <div class="downloadsection">
-    <div class='span3 left section'>
-        <div>
-            <img src="/images/download.png" />
-            <h2>Download</h2>
-        </div>
-    </div>
     <div class='span3 center section'>
         <form class="form-horizontal">
             <div class="control-group">
@@ -77,6 +71,16 @@
     <div id="download" class='span3 right section download'>
                             <!-- download link -->
     </div>
+    <div class="span3 right section download download-description-list">
+      <ul>
+        <li>Open Source</li>
+        <li>RESTful</li>
+        <li>Client &amp; Server</li>
+        <li>Scalable</li>
+        <li>Secure</li>
+      </ul>
+    </div>
+  <div class="clearBoth"></div>
 </div>
 
 <!-- Popup panel -->
