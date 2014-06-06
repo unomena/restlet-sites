@@ -75,7 +75,7 @@
       <ul>
         <li>Open Source</li>
         <li>RESTful</li>
-        <li>Client &amp; server</li>
+        <li>Client &amp; Server</li>
         <li>Scalable</li>
         <li>Secure</li>
       </ul>
