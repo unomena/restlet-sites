@@ -13,7 +13,7 @@ Below is an overview of the architecture, including all processing layers, from 
 Class diagram
 -------------
 
-Here is a tentative class design:
+Here is a class diagram:
 
 ![](hierarchy.png)
 
@@ -114,19 +114,19 @@ Extensions can be updated via the MetadataService.
             return null;
         }
 
-        @Get("xml")
+        @Get("xml?deep")
         public Representation toXml() {
             // ...
             return null;
         }
 
-        @Post("xml")
+        @Post("xml:xml")
         public Representation accept(Document entity) {
             // ...
             return null;
         }
 
-        @Put("atom")
+        @Put("atom|json")
         public void storeAtom(Feed feed) {
             // ...
         }
