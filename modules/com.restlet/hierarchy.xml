@@ -62,8 +62,11 @@
 			<section id="roadmap">
 				<label>Road Map</label>
 			</section>
-			<section id="history">
+			<!-- section id="history">
 				<label>History</label>
+			</section -->
+			<section id="resources">
+				<label>Resources</label>
 			</section>
 		</sections>
 	</section>
