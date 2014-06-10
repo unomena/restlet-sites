@@ -1358,12 +1358,6 @@ code {
 	color: #4a69ac;
 }
 
-.resources p {
-	color: #4a69ac;
-	font-size: 14px;
-	margin-bottom: 20px;
-}
-
 .btn-download-resources, .btn-download-resources:hover {
 	padding-top: 6px;
 	padding-bottom: 6px;
