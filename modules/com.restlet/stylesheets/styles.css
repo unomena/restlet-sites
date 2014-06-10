@@ -1109,7 +1109,7 @@ form,form>input {
 #email-submit input {
 	padding: 7px 7px;
 	line-height: 1.2em;
-	width: 150px;
+	width: 165px;
 	font-weight: bold;
 	color: #3f4348;
 	/*background-color: #faf3e0;*/
@@ -1127,7 +1127,7 @@ form,form>input {
 
 #email-submit button, #email-submit input[type="submit"] {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 16px;
+	font-size: 15px;
 	font-weight: bold;
 	height: 35px;
 	width: 125px;
@@ -1324,4 +1324,56 @@ code {
 	text-decoration: none;
 	color: black;
 	font-size: 18px;
+}
+
+#rfDownloadButton {
+	text-shadow: none;
+	border: solid 1px #8eb274;
+	background-color: #77cb38;
+	background-image: none;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 15px;
+	font-weight: bold;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#rfDownloadButton em.download-icon {
+	vertical-align:middle;
+    margin-top:0;
+    margin-bottom:0;
+    margin-right: 8px;
+    display:inline-block;
+    width:21px;
+    height:22px;
+    background-image: url(/images/download-button-icon.png);     
+}
+
+.resource > div:first-child {
+	padding-top: 10px;
+}
+
+.resources h3 {
+	color: #4a69ac;
+}
+
+.resources p {
+	color: #4a69ac;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.btn-download-resources, .btn-download-resources:hover {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	color: #fff;
+	border: solid 1px #db9435;
+	background-repeat: no-repeat;
+	background-position: 0;
+	background-color: transparent;
+	background-image: -moz-linear-gradient(top, #f7a500, #f58800);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f7a500), color-stop(1, #f58800) );
+	filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#f7a500', endColorstr='#f58800')";
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f7a500', endColorstr='#f58800')";
 }
