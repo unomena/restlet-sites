@@ -52,7 +52,7 @@ function setDownloadButton() {
 		}
 		urlChangesLog += "/changes";
 
-		$('#download').append('<p><button id="rfDownloadButton" class="btn btn-large btn-success" type="button">Download ' + version.fullVersionCompact + '</button></p>');
+		$('#download').append('<p><button id="rfDownloadButton" class="btn btn-large btn-success" type="button"><em class="download-icon"></em>Download ' + version.fullVersionCompact + '</button></p>');
 		
 		if (distribution.fileType !== "maven"
 			&& distribution.fileType !== "p2") {
