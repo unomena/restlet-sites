@@ -1350,8 +1350,21 @@ code {
     background-image: url(/images/download-button-icon.png);     
 }
 
+.resource {
+	display: table;
+	padding-bottom: 10px;
+}
+
 .resource > div:first-child {
+	text-align: center;
 	padding-top: 10px;
+}
+.resource > div {
+	float: none;
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .resources h3 {

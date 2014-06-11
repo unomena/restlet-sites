@@ -1,4 +1,93 @@
+<#global javascript>
+<#noparse>
+	$(document).ready(function() {
+		// function to add trigerred events on show, hide jQuery function
+		(function ($) {
+			$.each(['show', 'hide'], function (i, ev) {
+				var el = $.fn[ev];
+				$.fn[ev] = function () {
+					this.trigger(ev);
+					return el.apply(this, arguments);
+				};
+			});
+		})(jQuery);
+	    
+		//Snag the URL of the iframe so we can use it later
+		var video_url = $('#ytplayer').attr('src');
+  
+		// custom handler on show event for #videoPopup
+		$('#videoPopup').on('show', function(){
+			$('#ytplayer').attr('src', video_url);
+		});			
+		
+		// custom handler on hide event for #videoPopup
+		$('#videoPopup').on('hide', function(){
+			$('#ytplayer').attr('src', '');
+		});
+
+		$("#videoPopup div.video-close-button").click(function() {
+			$("#videoPopup").hide();
+		});
+        
+        $("#watch-video-btn").click(
+            function(event) {
+                // open the video popup
+				window.setTimeout($("#videoPopup").show(),1000);
+            }
+        );
+        
+        $("#kin-lane-guide-btn").click(
+            function(event) {
+            	// open Kin Lane's guide
+                window.open('http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=popup&utm_campaign=Kin%20Lane%20Guide', "_blank");
+            }
+        );
+
+        $("#paas-guide-btn").click(
+            function(event) {
+                // open PaaS guide
+				alert('No David Linthicum Report URL for now');
+            }
+        );
+
+        $("#road-guide-btn").click(
+            function(event) {
+                // open the ROA/D guide
+				window.open('http://blog.rest-let.com/wp-content/uploads/2014/06/ROAD-Designing-a-RESTful-web-API1.pdf', "_blank");
+            }
+        );
+
+        $("#user-guide-btn").click(
+            function(event) {
+                // launch pdf download in a new tab
+ 				window.open('/learn/archives/misc/2.2/rf-user-guide-2-2.pdf', "_blank");
+            }
+        );
+
+        $("#stickers-campaign-btn").click(
+            function(event) {
+                // open the Instapage landing page
+				window.open("http://pages.restlet.org/order-stickers");
+            }
+        );
+	});
+</#noparse>
+</#global>
+
+<#global stylesheet_files=["/stylesheets/modal.css"] />
+
 <#global content>
+<div id="videoPopup" class="modalDialog video">
+	<div>
+		<div class="video-close-button"></div>
+		<div class="video-content">
+			<iframe id="ytplayer" width="640" height="360" 
+				src="//www.youtube.com/embed/xDLpgCWIfug?rel=0&enablejsapi=1&origin=http://restlet.com" 
+				frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
+
 <div class="resources">
 	<div class="resource">
 		<div class="span2 left section">
@@ -7,19 +96,31 @@
 		<div class="span7">
 			<h4>Watch our 3min Restlet Framework demo</h4>
 			<p>Learn how to set up Restlet Framework in just 3 minutes. This video covers installation, first steps and testing. Watch it and start building you API!</p>
-			<div><button class="btn btn-download-resources">Watch Video</button></div>
+			<div><button id="watch-video-btn" class="btn btn-download-resources">Watch Video</button></div>
 		</div>
 		<div class="clearBoth"></div>
 	</div>
 
 	<div class="resource">
-		<div class="span2 left section">
+		<div class="span2 section">
+			<img src="/images/learn/user-guide.png"/>
+		</div>
+		<div class="span7">
+			<h4>Restlet Framework - User Guide 2.2</h4>
+			<p>Learn all about the Restlet Framework: its core, the different editions, its extensions, the first steps, how it can be used to build a well-structured and scalable web API... etc. Become a Restlet Framework ninja!</p>
+			<div><button id="user-guide-btn" class="btn btn-download-resources">Download Report</button></div>
+		</div>
+		<div class="clearBoth"></div>
+	</div>
+
+	<div class="resource">
+		<div class="span2 section">
 			<img src="/images/learn/web-apis-kin-lane.png"/>
 		</div>
 		<div class="span7">
 			<h4>A Field Guide to Web APIs by Kin Lane</h4>
 			<p>A comprehensive guide to web APIs, explained by Kin Lane, the API Evangelist. He has been in the technology space for over 20 years and wants to help the world understand the great value and potential that is growing in the web API market.</p>
-			<div><button class="btn btn-download-resources">Download Guide</button></div>
+			<div><button id="kin-lane-guide-btn" class="btn btn-download-resources">Download Guide</button></div>
 		</div>
 		<div class="clearBoth"></div>
 	</div>
@@ -31,7 +132,7 @@
 		<div class="span7">
 			<h4>PaaS Market Moves Beyond Deployment and Scaling</h4>
 			<p>Through this report, David Linthicum, a cloud analyst, explains why enterprises must understand how APIs and PaaS can work together to build and deploy better enterprise applications more quickly and with much more reuse.</p>
-			<div><button class="btn btn-download-resources">Download Report</button></div>
+			<div><button id="paas-guide-btn" class="btn btn-download-resources">Download Report</button></div>
 		</div>
 		<div class="clearBoth"></div>
 	</div>
@@ -43,19 +144,7 @@
 		<div class="span7">
 			<h4>ROA/D - Designing a RESTful web API</h4>
 			<p>Learn how to design a web API following the REST principles with our Resource-Oriented Analysis & Design (ROA/D) guidelines.</p>
-			<div><button class="btn btn-download-resources">Download Report</button></div>
-		</div>
-		<div class="clearBoth"></div>
-	</div>
-
-<div class="resource">
-		<div class="span2 left section">
-			<img src="/images/learn/road-designing-restful-webapi.png"/>
-		</div>
-		<div class="span7">
-			<h4>Restlet Framework - User Guide 2.2</h4>
-			<p>Learn all about the Restlet Framework: its core, the different editions, its extensions, the first steps, how it can be used to build a well-structured and scalable web API... etc. Become a Restlet Framework ninja!</p>
-			<div><button class="btn btn-download-resources">Download Report</button></div>
+			<div><button id="road-guide-btn" class="btn btn-download-resources">Download Report</button></div>
 		</div>
 		<div class="clearBoth"></div>
 	</div>
@@ -67,7 +156,7 @@
 		<div class="span7">
 			<h4>Restlet Framework and APISPark stickers</h4>
 			<p>Want some free swag? Order Restlet stickers completely free of charge!</p>
-			<div><button class="btn btn-download-resources">Order Stickers</button></div>
+			<div><button id="stickers-campaign-btn" class="btn btn-download-resources">Order Stickers</button></div>
 		</div>
 		<div class="clearBoth"></div>
 	</div>
