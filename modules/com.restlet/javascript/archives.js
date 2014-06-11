@@ -318,11 +318,36 @@ function setDownloadButton() {
 			$('#rfDownloadButton').click(
 					function() {
 						loadMavenSnippet();
-						$('#firststeps_infos').css('display','block');
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
+						$('#firststeps_infos').css('display','block');
 						$('#newsletter').css('display','block');
-						document.location.href = "/download/past?distribution=" + distribution.fileType + "&release=" + version.id + "&edition=" + edition.id;
+
+						var hrefCallback = function(event) {
+							// download selected restlet framework file
+							document.location.href = "/download/past?distribution=" + distribution.fileType + "&release=" + version.id + "&edition=" + edition.id;
+							// open campaign popup
+							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
+								// open campaign popup
+								$("#deployModal").show();								
+							}
+						}
+						
+						// in case Mixpanel servers don't get back to us in time
+						// we use the same timeout value as the one defined in Mixpanel config
+						var trackTimeout = window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
+						
+						// fire the tracking event, if the event is done before the
+						// timeout, we call a window.clearTimeout
+						mixpanel.track("Downloaded Restlet Framework", {
+							"Version":version.id,
+							"Release":version.fullVersionCompact,
+							"Edition":edition.middlename,
+							"Distribution":distribution.fileType
+						}, function() {
+							window.clearTimeout(trackTimeout);
+							hrefCallback();
+						});
 					});			
 		} else {
 			$('#rfDownloadButton').click(
