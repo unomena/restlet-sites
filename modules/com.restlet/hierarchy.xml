@@ -59,6 +59,9 @@
 			<section id="javadocs">
 				<label>Javadocs</label>
 			</section>
+			<section id="resources">
+				<label>Resources</label>
+			</section>
 			<section id="books">
 				<label>Books</label>
 			</section>
@@ -68,9 +71,6 @@
 			<!-- section id="history">
 				<label>History</label>
 			</section -->
-			<section id="resources">
-				<label>Resources</label>
-			</section>
 		</sections>
 	</section>
 	<section id="participate">
