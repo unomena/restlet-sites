@@ -1274,6 +1274,7 @@ code {
 	position: absolute;
 	left: 50px;
 	top: 0;
+	font-size: 14px;
 }
 
 .right-sidebar .tutorials {
