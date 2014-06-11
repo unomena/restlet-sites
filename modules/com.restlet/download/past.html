@@ -9,6 +9,13 @@
 <#noparse>
     $(document).ready(function() {
         init($("#cBranch"), $("#cRelease"), $("#cEdition"), $("#cDistribution"), $("#archives")<#if ("zip" ==  distribution) || ("exe" ==  distribution)>, true<#else>, false, true</#if>);
+
+		// close the modal popup when clicking on the cross buntton
+		$("#deployModal div.close-button").click(function() {
+			$("#deployModal").hide();
+        });
+        
+        
         $("#newsLetterOkButton").click(
             function(event) {
                 if (checkEmail("newsLetterEmail", "newsLetterOkButton")) {
@@ -44,9 +51,11 @@
 	<img height="1" width="1" style="display: none;" alt=""
 		src="https://analytics.twitter.com/i/adsct?txn_id=l4d6j&p_id=Twitter" />
 </noscript>
-</#if> </#noparse> </#global> <#global content>
+</#if> </#noparse> </#global> 
+<#global content>
 <!-- Start Download section -->
 ${archivesSection}
+${campaignPopupSection}
 <div id="newsletter">
 	<div class="clearBoth"></div>
 	<div class="elements">

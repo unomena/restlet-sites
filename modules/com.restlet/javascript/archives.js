@@ -225,25 +225,94 @@ function setDownloadButton() {
 			$.cookie('branch', '2.0', {path : '/'});
 		}
 
+		$('#campaignButton').click(
+				function(event) {
+					if (checkEmail("campaignEmail", "campaignButton")) {
+						mixpanel.track("Shared email", {
+							"email": $("#campaignEmail").val(),
+							"Email field location":"Kin Lane Guide"
+						});
+						mixpanel.alias($("#campaignEmail").val(), mixpanel.get_distinct_id());
+						mixpanel.people.set({"$email": $("#campaignEmail").val()});
+						mixpanel.track("Downloaded Kin Lane Guide");
+						
+						// close popup
+						$("#campaignEmail").val("");
+						$("#deployModal").hide();
+						
+						// Set a one year cookie dedicated to this campaign. 
+						$.cookie('kin-lane-white-paper-v2', 'true', {
+							expires: 365
+						});
+						
+						// launch pdf download in a new tab
+						window.open('http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=popup&utm_campaign=Kin%20Lane%20Guide', "_blank");
+					}
+				}
+		);
+		
 		if (distribution.fileType == "maven") {
 			$('#rfDownloadButton').click(
 					function() {
 						loadMavenSnippet();
-						$('#firststeps_infos').css('display','none');
+
 						$('#eclipse_infos').css('display','none');
-						$('#maven_infos').css('display','block');
-						$('#newsletter').css('display','block');
-						//document.location.href = "/download/past?distribution=maven&release=" + version.id + "&edition=" + edition.id;
+						$('#maven_infos').css('display','none');
+						$('#firststeps_infos').css('display','none');
+						
+						var hrefCallback = function() {
+							$('#newsletter').css('display','block');
+							$('#maven_infos').css('display','block');
+							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
+								// open campaign popup
+								$("#deployModal").show();								
+							}
+						}
+						
+						// in case Mixpanel servers don't get back to us in time
+						// we use the same timeout value as the one defined in Mixpanel config
+						window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
+						
+						// fire the tracking event, if the event is done before the
+						// timeout, the previous hrefCallback call is cancelled by
+						// the call to document.location.href
+						mixpanel.track("Downloaded Restlet Framework", {
+							"Version":version.id,
+							"Release":version.fullVersionCompact,
+							"Edition":edition.middlename,
+							"Distribution":distribution.fileType
+						}, hrefCallback);
 					});
 		} else if (distribution.fileType == "p2") {
 			$('#rfDownloadButton').click(
 					function() {
 						loadMavenSnippet();
-						$('#firststeps_infos').css('display','none');
-						$('#eclipse_infos').css('display','block');
+						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
-						$('#newsletter').css('display','block');
-						//document.location.href = "/download/past?distribution=p2&release=" + version.id + "&edition=" + edition.id;
+						$('#firststeps_infos').css('display','none');
+						
+						var hrefCallback = function() {
+							$('#newsletter').css('display','block');
+							$('#eclipse_infos').css('display','block');
+							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
+								// open campaign popup
+								$("#deployModal").show();								
+							}
+						}
+						
+						// in case Mixpanel servers don't get back to us in time
+						// we use the same timeout value as the one defined in Mixpanel config
+						window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
+						
+						// fire the tracking event, if the event is done before the
+						// timeout, the previous hrefCallback call is cancelled by
+						// the call to document.location.href
+						mixpanel.track("Downloaded Restlet Framework", {
+							"Version":version.id,
+							"Release":version.fullVersionCompact,
+							"Edition":edition.middlename,
+							"Distribution":"eclipse"
+						}, hrefCallback);
 					});			
 		} else if (redirectDownload) {
 			$('#rfDownloadButton').click(
@@ -259,11 +328,36 @@ function setDownloadButton() {
 			$('#rfDownloadButton').click(
 					function() {
 						loadMavenSnippet();
-						$('#firststeps_infos').css('display','block');
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
+						$('#firststeps_infos').css('display','block');
 						$('#newsletter').css('display','block');
-						document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
+
+						var hrefCallback = function(event) {
+							// download selected restlet framework file
+							document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
+							// open campaign popup
+							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
+								// open campaign popup
+								$("#deployModal").show();								
+							}
+						}
+						
+						// in case Mixpanel servers don't get back to us in time
+						// we use the same timeout value as the one defined in Mixpanel config
+						var trackTimeout = window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
+						
+						// fire the tracking event, if the event is done before the
+						// timeout, we call a window.clearTimeout
+						mixpanel.track("Downloaded Restlet Framework", {
+							"Version":version.id,
+							"Release":version.fullVersionCompact,
+							"Edition":edition.middlename,
+							"Distribution":distribution.fileType
+						}, function() {
+							window.clearTimeout(trackTimeout);
+							hrefCallback();
+						});
 					});
 		}
 	}
