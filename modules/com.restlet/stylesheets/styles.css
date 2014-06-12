@@ -1360,6 +1360,11 @@ code {
 	text-align: center;
 	padding-top: 10px;
 }
+
+.resource > div:first-child > img {
+	cursor: pointer;
+}
+
 .resource > div {
 	float: none;
 	display: table-cell;
