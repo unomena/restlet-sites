@@ -185,13 +185,13 @@ function setDownloadButton() {
 						$('#newsletter').css('display','block');
 
 						var hrefCallback = function(event) {
-							// download selected restlet framework file
-							document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
 							// open campaign popup
 							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
+							// download selected restlet framework file
+							document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
 						}
 						
 						// in case Mixpanel servers don't get back to us in time
