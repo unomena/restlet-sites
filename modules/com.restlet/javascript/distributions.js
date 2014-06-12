@@ -190,8 +190,11 @@ function setDownloadButton() {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
-							// download selected restlet framework file
-							document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
+							// download selected restlet framework file, we delay the download from 500ms
+							// in order to all background images are downloaded (safari/chrome bug)
+							window.setTimeout(function () {
+									document.location.href = "/download/" + version.minorVersion + "/" + distribution.fileName;
+								}, 500);
 						}
 						
 						// in case Mixpanel servers don't get back to us in time
