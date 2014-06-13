@@ -1363,6 +1363,7 @@ code {
 
 .resource > div:first-child > img {
 	cursor: pointer;
+	width: 140px;
 }
 
 .resource > div {
@@ -1387,6 +1388,7 @@ code {
 	background-color: transparent;
 	background-image: -moz-linear-gradient(top, #f7a500, #f58800);
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f7a500), color-stop(1, #f58800) );
+	background: -ms-linear-gradient(top, #f7a500 0%,#f58800 100%); /* IE10+ */
 	filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#f7a500', endColorstr='#f58800')";
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f7a500', endColorstr='#f58800')";
 }
