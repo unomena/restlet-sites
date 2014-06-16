@@ -68,7 +68,7 @@ You can use the following pom.xml to get the dependencies required for the Intro
 
 
 You must add the following jars (provided in 
-[restlet framework](http://restlet.org/download/current#release=stable&edition=jse&distribution=zip 
+[restlet framework](http://restlet.com/download/current#release=stable&edition=jse&distribution=zip 
 "download restlet framework")) 
 in the "/path/to/your/lib" folder or manually to the classpath.
 
@@ -118,9 +118,6 @@ Update your Web API definition (Subsequent calls )
 --------------------------------------------------
  
 
-Web API definition
-------------------
-
 You need to add a parameter -d giving the id of the definition, hosted on APISpark, that you want to update. You can find the parameter -d in two ways. 
 
 -   It will be in the response body when you first use the extension on your API. 
@@ -130,11 +127,7 @@ You need to add a parameter -d giving the id of the definition, hosted on APISpa
 Debug the Web API introspection
 -------------------------------
 
-If you want the introspector to display suggestions on how to improve your documentation, you can provide this parameter to the java command line:
-
-    -Djava.util.logging.config.file="/path/to/logging/properties/logging.properties"
-
-<!-- + EXAMPLE : properties file and logs-->
+If you want the introspector to display information about the web API definition, you can add the -v parameter to the command line. It will switch the application to a verbose mode.
  
 More about the Introspector Tool
 --------------------------------
@@ -174,9 +167,5 @@ Here is its commande line help:
         -l
               The optional name of the description language of the definition
               you want to upload. Possible value: swagger
-    LOGGING
-       You can get a detailled log of the process using the JDK's API. See
-       the official documentation:
-       http://docs.oracle.com/javase/7/docs/technotes/guides/logging/overview.html
-       Here is the name of the used Logger:
-       org.restlet.ext.apispark.Introspector
+        -v
+              The optional parameter switching the process to a verbose mode
