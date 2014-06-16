@@ -9,24 +9,66 @@ the [APISpark](https://apispark.com/) full-stack PaaS for Web APIs.
 
 This will allow you to: 
 
--   Introspect your Restlet-based Web API to retrieve documentation
+-   Introspect your Restlet-based Web API or parse a Swagger definition to retrieve documentation
 -   Display and edit this documentation within APISpark
--   Synchronize Web API changes initiated from Restlet
+-   Synchronize Web API changes initiated from Restlet or Swagger
 
 In this scenario, we’ll  load a WebAPI definition into APISpark. We’ll leverage the introspector tool provided in the APISpark extension. You can find a complete example of documentation generated via this extension [here](https://apispark.com/apis/1427/versions/1/overview/), the description fields cannot be retrieved from the code, they were added manually.
  
 Launch process
 ==============
 
-In this example, we’ll document a Web API whose Application class is MyContacts
+In a first example, we will document a Web API whose Application class is MyContacts
 
     java -cp "/path/to/your/lib/*" org.restlet.ext.apispark.Introspector -u 55955e02-0e99-47f8 -p 6f3ee88e-8405-44c8 org.restlet.api.MyContacts
+    
+Then we will document an API based on its Swagger definition
+
+    java -cp "/path/to/your/lib/*" org.restlet.ext.apispark.Introspector -u 55955e02-0e99-47f8 -p 6f3ee88e-8405-44c8 -l swagger http://petstore.swagger.wordnik.com/api/api-docs
     
 Configuration
 -------------
 
+#### Using maven
+
+You can use the following pom.xml to get the dependencies required for the Introspector. The full project, containing the extension, the pom and the readme is available [here](../../../archives/misc/2.3/org.restlet.ext.apispark.zip). Follow the instructions in the readme and use the extension from your favorite IDE.
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+        <modelVersion>4.0.0</modelVersion>
+        <repositories>
+            <repository>
+                <id>maven-restlet</id>
+                <name>Restlet repository</name>
+                <url>http://maven.restlet.com</url>
+            </repository>
+        </repositories>
+    
+        <artifactId>org.restlet.ext.apispark</artifactId>
+        <groupId>org.restlet.jse</groupId>
+        <name>Restlet Extension - APISpark</name>
+        <description>Integration with APISpark cloud platform, by Restlet.</description>
+        <version>2.3-M2</version>
+    
+        <dependencies>
+            <dependency>
+                <groupId>org.restlet.jse</groupId>
+                <artifactId>org.restlet</artifactId>
+                <version>2.3-M2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.restlet.jse</groupId>
+                <artifactId>org.restlet.ext.jackson</artifactId>
+                <version>2.3-M2</version>
+            </dependency>
+        </dependencies>
+    </project>
+
+#### Manually
+
+
 You must add the following jars (provided in 
-[restlet framework](http://restlet.com/download/current#release=stable&edition=jse&distribution=zip 
+[restlet framework](http://restlet.org/download/current#release=stable&edition=jse&distribution=zip 
 "download restlet framework")) 
 in the "/path/to/your/lib" folder or manually to the classpath.
 
@@ -104,10 +146,12 @@ Here is its commande line help:
 
     SYNOPSIS
        org.restlet.ext.apispark.Introspector [options] APPLICATION
+       org.restlet.ext.apispark.Introspector -l swagger [options] SWAGGER
+       DEFINITION URL/PATH
     DESCRIPTION
        Publish to the APISpark platform the description of your Web API,
        represented by APPLICATION, the full canonical name of your Restlet
-       application class.
+       application class or by the swagger definition available on the  URL/PATH.
        If the whole process is successfull, it displays the url of the
        corresponding documentation.
     OPTIONS
@@ -126,3 +170,13 @@ Here is its commande line help:
        -d
               The optional id of an existing definition hosted by APISpark you
               want to update with this new documentation.
+              
+        -l
+              The optional name of the description language of the definition
+              you want to upload. Possible value: swagger
+    LOGGING
+       You can get a detailled log of the process using the JDK's API. See
+       the official documentation:
+       http://docs.oracle.com/javase/7/docs/technotes/guides/logging/overview.html
+       Here is the name of the used Logger:
+       org.restlet.ext.apispark.Introspector
