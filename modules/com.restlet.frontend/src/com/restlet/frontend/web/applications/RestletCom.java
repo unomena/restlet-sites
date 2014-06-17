@@ -27,6 +27,7 @@ import org.restlet.data.Form;
 import org.restlet.data.LocalReference;
 import org.restlet.data.MediaType;
 import org.restlet.data.Reference;
+import org.restlet.data.Status;
 import org.restlet.engine.Engine;
 import org.restlet.engine.application.Encoder;
 import org.restlet.ext.atom.Entry;
@@ -51,6 +52,8 @@ import com.restlet.frontend.objects.framework.Qualifier;
 import com.restlet.frontend.objects.framework.QualifiersList;
 import com.restlet.frontend.objects.framework.Version;
 import com.restlet.frontend.objects.framework.VersionsList;
+import com.restlet.frontend.web.firewall.FirewallFilter;
+import com.restlet.frontend.web.firewall.SimultaneousCallsFilter;
 import com.restlet.frontend.web.resources.framework.DistributionsResource;
 import com.restlet.frontend.web.resources.framework.DownloadCurrentServerResource;
 import com.restlet.frontend.web.resources.framework.DownloadPastServerResource;
@@ -235,7 +238,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 
     @Override
     public Restlet createInboundRoot() {
-        Engine.setLogLevel(Level.FINEST);
+        Engine.setLogLevel(Level.INFO);
         // Create a root router
         Router result = new Router(getContext());
 
@@ -301,7 +304,8 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
                 + "/learn/guide");
         userGuideDirectory.setNegotiatingContent(true);
         userGuideDirectory.setDeeplyAccessible(true);
-        result.attach("/learn/guide", new Filter(getContext(),
+
+        Filter guideFilter = new Filter(getContext(),
                 userGuideDirectory) {
             @Override
             protected int beforeHandle(Request request, Response response) {
@@ -337,7 +341,48 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
                 }
                 return super.beforeHandle(request, response);
             }
-        });
+        };
+
+        SimultaneousCallsFilter simultaneousCallsFilter = new SimultaneousCallsFilter(
+                0, 2, guideFilter);
+
+        FirewallFilter firewallFilter = new FirewallFilter(0, 3, 10, true,
+                simultaneousCallsFilter);
+
+        FirewallFilter firewallBlackListFilter = new FirewallFilter(0, 4, 10,
+                false, firewallFilter) {
+
+            private List<String> blackList;
+
+            @Override
+            protected int permited(boolean isAuthenticated, Request request,
+                    Response response) {
+                if (blackList == null) {
+                    blackList = new ArrayList<String>();
+                }
+                if (blackList.contains(request.getClientInfo().getAddress())) {
+                    response.setStatus(Status.valueOf(429), "blacklisted");
+                    return SKIP;
+                }
+                return CONTINUE;
+            }
+
+            @Override
+            protected int notPermited(boolean isAuthenticated, Request request,
+                    Response response) {
+                if (blackList == null) {
+                    blackList = new ArrayList<String>();
+                }
+                if (!blackList.contains(request.getClientInfo().getAddress())) {
+                    blackList.add(request.getClientInfo().getAddress());
+                }
+                response.setStatus(Status.valueOf(429), "blacklisted");
+                return SKIP;
+            }
+        };
+
+        result.attach("/learn/guide", firewallBlackListFilter);
+
         result.attach("/download", downloadRouter);
         result.attach("/feeds/summary", FeedSummaryResource.class);
         result.attach("/feeds/general", FeedGeneralResource.class);
