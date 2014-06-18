@@ -27,7 +27,6 @@ import org.restlet.data.Form;
 import org.restlet.data.LocalReference;
 import org.restlet.data.MediaType;
 import org.restlet.data.Reference;
-import org.restlet.data.Status;
 import org.restlet.engine.Engine;
 import org.restlet.engine.application.Encoder;
 import org.restlet.ext.atom.Entry;
@@ -53,7 +52,9 @@ import com.restlet.frontend.objects.framework.QualifiersList;
 import com.restlet.frontend.objects.framework.Version;
 import com.restlet.frontend.objects.framework.VersionsList;
 import com.restlet.frontend.web.firewall.FirewallFilter;
-import com.restlet.frontend.web.firewall.SimultaneousCallsFilter;
+import com.restlet.frontend.web.firewall.definer.TimeDefiner;
+import com.restlet.frontend.web.firewall.handler.ThresholdHandler;
+import com.restlet.frontend.web.firewall.user.UserType;
 import com.restlet.frontend.web.resources.framework.DistributionsResource;
 import com.restlet.frontend.web.resources.framework.DownloadCurrentServerResource;
 import com.restlet.frontend.web.resources.framework.DownloadPastServerResource;
@@ -343,45 +344,28 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
             }
         };
 
-        SimultaneousCallsFilter simultaneousCallsFilter = new SimultaneousCallsFilter(
-                0, 2, guideFilter);
+        FirewallFilter firewallFilter = new FirewallFilter(guideFilter);
 
-        FirewallFilter firewallFilter = new FirewallFilter(0, 3, 10, true,
-                simultaneousCallsFilter);
+        TimeDefiner periodDefiner1 = TimeDefiner.createPeriodDefiner(10);
+        firewallFilter.addDefiner(periodDefiner1);
 
-        FirewallFilter firewallBlackListFilter = new FirewallFilter(0, 4, 10,
-                false, firewallFilter) {
+        ThresholdHandler th1 = ThresholdHandler.createRateLimitationHandler(2,
+                UserType.ANONYMOUS);
+        periodDefiner1.addHandler(th1);
 
-            private List<String> blackList;
+        ThresholdHandler th2 = ThresholdHandler.createAlertHandler(3,
+                UserType.ANONYMOUS);
+        periodDefiner1.addHandler(th2);
 
-            @Override
-            protected int permited(boolean isAuthenticated, Request request,
-                    Response response) {
-                if (blackList == null) {
-                    blackList = new ArrayList<String>();
-                }
-                if (blackList.contains(request.getClientInfo().getAddress())) {
-                    response.setStatus(Status.valueOf(429), "blacklisted");
-                    return SKIP;
-                }
-                return CONTINUE;
-            }
+        TimeDefiner simultaneousDefiner1 = TimeDefiner
+                .createSimultaneousDefiner();
+        firewallFilter.addDefiner(simultaneousDefiner1);
 
-            @Override
-            protected int notPermited(boolean isAuthenticated, Request request,
-                    Response response) {
-                if (blackList == null) {
-                    blackList = new ArrayList<String>();
-                }
-                if (!blackList.contains(request.getClientInfo().getAddress())) {
-                    blackList.add(request.getClientInfo().getAddress());
-                }
-                response.setStatus(Status.valueOf(429), "blacklisted");
-                return SKIP;
-            }
-        };
+        ThresholdHandler th3 = ThresholdHandler.createAlertHandler(2,
+                UserType.ANONYMOUS);
+        simultaneousDefiner1.addHandler(th3);
 
-        result.attach("/learn/guide", firewallBlackListFilter);
+        result.attach("/learn/guide", firewallFilter);
 
         result.attach("/download", downloadRouter);
         result.attach("/feeds/summary", FeedSummaryResource.class);

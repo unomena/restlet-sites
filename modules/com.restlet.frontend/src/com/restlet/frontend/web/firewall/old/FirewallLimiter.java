@@ -1,4 +1,4 @@
-package com.restlet.frontend.web.firewall;
+package com.restlet.frontend.web.firewall.old;
 
 import java.util.HashMap;
 import java.util.Map;
