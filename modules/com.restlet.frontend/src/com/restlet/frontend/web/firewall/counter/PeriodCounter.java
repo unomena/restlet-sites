@@ -2,31 +2,30 @@ package com.restlet.frontend.web.firewall.counter;
 
 import java.util.concurrent.TimeUnit;
 
-import com.google.common.base.Stopwatch;
+import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
 
 public class PeriodCounter extends TrafficCounter {
 
     private int period;
 
-    private Stopwatch stopwatch;
-
     public PeriodCounter(int period) {
+        super();
         this.period = period;
-        this.stopwatch = Stopwatch.createStarted();
+        initializeCache();
     }
 
-    @Override
-    public synchronized int increase() {
-        if (stopwatch.elapsed(TimeUnit.SECONDS) > period) {
-            stopwatch.reset();
-            stopwatch.start();
-            consumed = 0;
-        }
-        return consumed++;
-    }
+    private void initializeCache() {
 
-    @Override
-    public synchronized void decrease() {
+        CacheLoader<String, UserPeriodCounter> loader = new CacheLoader<String, UserPeriodCounter>() {
+            public UserPeriodCounter load(String key) {
+                return new UserPeriodCounter(period);
+            }
+        };
+
+        cache = CacheBuilder.newBuilder()
+                .expireAfterAccess(2 * period, TimeUnit.SECONDS).build(loader);
+
     }
 
 }

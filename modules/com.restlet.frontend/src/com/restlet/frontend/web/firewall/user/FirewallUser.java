@@ -3,6 +3,8 @@ package com.restlet.frontend.web.firewall.user;
 import org.restlet.Request;
 import org.restlet.security.User;
 
+import com.restlet.frontend.web.firewall.type.UserType;
+
 public class FirewallUser {
 
     private UserType type;

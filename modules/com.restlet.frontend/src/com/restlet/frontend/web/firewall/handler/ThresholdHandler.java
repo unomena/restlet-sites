@@ -3,29 +3,31 @@ package com.restlet.frontend.web.firewall.handler;
 import org.restlet.Request;
 import org.restlet.Response;
 
+import com.restlet.frontend.web.firewall.counter.CounterFeedback;
+import com.restlet.frontend.web.firewall.type.HandlerType;
+import com.restlet.frontend.web.firewall.type.UserType;
 import com.restlet.frontend.web.firewall.user.FirewallUser;
-import com.restlet.frontend.web.firewall.user.UserType;
 
 public abstract class ThresholdHandler {
 
     protected int limit;
 
-    protected UserType userType;
+    protected HandlerType handlerType;
 
-    public int beforeHandle(Request request, Response response, int consumed,
-            FirewallUser user) {
-        if (consumed < limit) {
-            return permited(request, response, user);
+    public int beforeHandle(Request request, Response response,
+            FirewallUser user, CounterFeedback counterFeedback) {
+        if (counterFeedback.getConsumed() < limit) {
+            return permited(request, response, user, counterFeedback);
         } else {
-            return notPermited(request, response, user);
+            return notPermited(request, response, user, counterFeedback);
         }
     }
 
     protected abstract int permited(Request request, Response response,
-            FirewallUser user);
+            FirewallUser user, CounterFeedback counterFeedback);
 
     protected abstract int notPermited(Request request, Response response,
-            FirewallUser user);
+            FirewallUser user, CounterFeedback counterFeedback);
 
     public int getLimit() {
         return limit;
@@ -35,12 +37,12 @@ public abstract class ThresholdHandler {
         this.limit = limit;
     }
 
-    public UserType getUserType() {
-        return userType;
+    public HandlerType getHandlerType() {
+        return handlerType;
     }
 
-    public void setUserType(UserType userType) {
-        this.userType = userType;
+    public void setHandlerType(HandlerType handlerType) {
+        this.handlerType = handlerType;
     }
     
     /**
@@ -48,12 +50,12 @@ public abstract class ThresholdHandler {
      */
     
     public static ThresholdHandler createRateLimitationHandler(int limit,
-            UserType userType) {
-        return new RateLimitationHandler(limit, userType);
+            HandlerType handlerType) {
+        return new RateLimitationHandler(limit, handlerType);
     }
 
     public static ThresholdHandler createAlertHandler(int limit,
-            UserType userType) {
-        return new AlertHandler(limit, userType);
+            HandlerType handlerType) {
+        return new AlertHandler(limit, handlerType);
     }
 }

@@ -52,9 +52,8 @@ import com.restlet.frontend.objects.framework.QualifiersList;
 import com.restlet.frontend.objects.framework.Version;
 import com.restlet.frontend.objects.framework.VersionsList;
 import com.restlet.frontend.web.firewall.FirewallFilter;
-import com.restlet.frontend.web.firewall.definer.TimeDefiner;
-import com.restlet.frontend.web.firewall.handler.ThresholdHandler;
-import com.restlet.frontend.web.firewall.user.UserType;
+import com.restlet.frontend.web.firewall.counter.TrafficCounter;
+import com.restlet.frontend.web.firewall.type.HandlerType;
 import com.restlet.frontend.web.resources.framework.DistributionsResource;
 import com.restlet.frontend.web.resources.framework.DownloadCurrentServerResource;
 import com.restlet.frontend.web.resources.framework.DownloadPastServerResource;
@@ -344,26 +343,19 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
             }
         };
 
+        // Create a firewall filter
         FirewallFilter firewallFilter = new FirewallFilter(guideFilter);
 
-        TimeDefiner periodDefiner1 = TimeDefiner.createPeriodDefiner(10);
-        firewallFilter.addDefiner(periodDefiner1);
+        TrafficCounter periodDefiner1 = firewallFilter.addPeriodCounter(10);
 
-        ThresholdHandler th1 = ThresholdHandler.createRateLimitationHandler(2,
-                UserType.ANONYMOUS);
-        periodDefiner1.addHandler(th1);
+        periodDefiner1.addRateLimitationHandler(2, HandlerType.ANONYMOUS);
 
-        ThresholdHandler th2 = ThresholdHandler.createAlertHandler(3,
-                UserType.ANONYMOUS);
-        periodDefiner1.addHandler(th2);
+        periodDefiner1.addAlertHandler(3, HandlerType.ANONYMOUS);
 
-        TimeDefiner simultaneousDefiner1 = TimeDefiner
-                .createSimultaneousDefiner();
-        firewallFilter.addDefiner(simultaneousDefiner1);
+        TrafficCounter simultaneousDefiner1 = firewallFilter
+                .addSimultaneousCounter();
 
-        ThresholdHandler th3 = ThresholdHandler.createAlertHandler(2,
-                UserType.ANONYMOUS);
-        simultaneousDefiner1.addHandler(th3);
+        simultaneousDefiner1.addAlertHandler(2, HandlerType.ANONYMOUS);
 
         result.attach("/learn/guide", firewallFilter);
 

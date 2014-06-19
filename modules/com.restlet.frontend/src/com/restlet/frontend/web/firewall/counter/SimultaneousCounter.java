@@ -1,17 +1,27 @@
 package com.restlet.frontend.web.firewall.counter;
 
+import java.util.concurrent.TimeUnit;
+
+import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
+
 public class SimultaneousCounter extends TrafficCounter {
 
-    @Override
-    public synchronized int increase() {
-        System.out.println("Simultaneous : " + (consumed + 1));
-        return consumed++;
+    public SimultaneousCounter() {
+        initializeCache();
     }
 
-    @Override
-    public synchronized void decrease() {
-        consumed--;
-        System.out.println("Simultaneous : " + consumed);
+    private void initializeCache() {
+
+        CacheLoader<String, UserSimultaneousCounter> loader = new CacheLoader<String, UserSimultaneousCounter>() {
+            public UserSimultaneousCounter load(String key) {
+                return new UserSimultaneousCounter();
+            }
+        };
+
+        cache = CacheBuilder.newBuilder()
+                .expireAfterAccess(10, TimeUnit.SECONDS).build(loader);
+
     }
 
 }
