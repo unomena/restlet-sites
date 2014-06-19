@@ -6,8 +6,7 @@ Restlet Framework is mature and scalable, based on a small core and many optiona
 
 ## Web API support
 
-- Core REST and HTTP concepts have equivalent Java artifacts (Resource,
-  Representation, Connector or Component classes for example).
+- Core REST and HTTP concepts have equivalent Java artifacts (Resource, Representation, Connector or Component classes for example).
 - Suitable for both client-side and server-side web applications. The innovation is that that it uses the same Java API, reducing the learning curve and the software footprint.
 - Concept of "URIs as UI" supported based on the URI Templates standard. This results in a very flexible yet simple routing with automatic extraction of URI variables into request attributes.
 - Tunnelling service lets browsers issue any HTTP method (PUT, DELETE, PATCH, etc.) through a simple HTTP POST. This service is transparent for Restlet applications.
