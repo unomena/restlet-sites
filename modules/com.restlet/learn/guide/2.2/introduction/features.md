@@ -18,6 +18,7 @@ Restlet Framework is mature and scalable, based on a small core and many optiona
 Contrary to the Servlet API, the Restlet API gives you extensive control on the URI mapping and on the virtual hosts configuration. It includes a powerful Directory class to server static files in a way similar to Apache Web Server. For example, our Restlet.org web site is directly powered by Restlet Framework on a regular JVM!
 
 Here is a more complete list of features provided by the internal Web server:
+
 - Static file serving similar to Apache HTTP Server, with metadata association based on file extensions.
 - Transparent content negotiation based on client preferences.
 - Conditional requests automatically supported for resources.
@@ -34,6 +35,7 @@ By staying open to all presentation environments and technologies (AngularJS, An
 ## Multiple editions
 
 REST principles have no limit, they can be applied everywhere the Web is and even in places where there is no Internet but needs for communication or effective decoupling. Currently, the Restlet Framework is available in several editions:
+
 - Edition for Java SE, to run your Restlet applications in regular JVMs.
 - Edition for Java EE, to run your Restlet applications in Servlet containers.
 - Edition for GAE, to run your Restlet applications in Google App Engine cloud platform.
