@@ -53,120 +53,26 @@
             
         );
         
-        $(".kin-lane-guide-btn").click(
-            function(event) {
-            	var hrefCallback = function(event) {
-	            	// open Kin Lane's guide
-	                window.open('http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=Kin%20Lane%20GuideRP', "_blank");
-				}
-				
-				// in case Mixpanel servers don't get back to us in time
-				// we use the same timeout value as the one defined in Mixpanel config
-				var trackTimeout = window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
-				
-				// fire the tracking event, if the event is done before the
-				// timeout, we call a window.clearTimeout
-				mixpanel.track("Downloaded Resource", {
-					"Resource Name":"Kin Lane Guide",
-					"Resource Location":"Resources page"
-				}, function() {
-					window.clearTimeout(trackTimeout);
-					hrefCallback();
-				});
-             }
-        );
-
-        $(".paas-guide-btn").click(
-            function(event) {
-            	var hrefCallback = function(event) {
-   	                // open PaaS guide
-					window.open('http://restlet.files.wordpress.com/2014/05/gigaom-research-paas-market-moves-beyond-deployment-and-scaling.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=David%20Linthicum%20ReportRP', "_blank");
-				}
-				
-				// in case Mixpanel servers don't get back to us in time
-				// we use the same timeout value as the one defined in Mixpanel config
-				var trackTimeout = window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
-				
-				// fire the tracking event, if the event is done before the
-				// timeout, we call a window.clearTimeout
-				mixpanel.track("Downloaded Resource", {
-					"Resource Name":"David Linthicum Report",
-					"Resource Location":"Resources page"
-				}, function() {
-					window.clearTimeout(trackTimeout);
-					hrefCallback();
-				});
-            }
-        );
-
-        $(".road-guide-btn").click(
-            function(event) {
-            	var hrefCallback = function(event) {
-	                // open the ROA/D guide
-					window.open('http://blog.restlet.com/wp-content/uploads/2014/06/ROAD-Designing-a-RESTful-web-API1.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=ROAD%20GuideRP', "_blank");
-				}
-				
-				// in case Mixpanel servers don't get back to us in time
-				// we use the same timeout value as the one defined in Mixpanel config
-				var trackTimeout = window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
-				
-				// fire the tracking event, if the event is done before the
-				// timeout, we call a window.clearTimeout
-				mixpanel.track("Downloaded Resource", {
-					"Resource Name":"ROAD Guide",
-					"Resource Location":"Resources page"
-				}, function() {
-					window.clearTimeout(trackTimeout);
-					hrefCallback();
-				});
-            }
-        );
-
-        $(".user-guide-btn").click(
-            function(event) {
-            	var hrefCallback = function(event) {
-	                // launch pdf download in a new tab
-	 				window.open('/learn/archives/misc/2.2/rf-user-guide-2-2.pdf', "_blank");
-				}
-				
-				// in case Mixpanel servers don't get back to us in time
-				// we use the same timeout value as the one defined in Mixpanel config
-				var trackTimeout = window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
-				
-				// fire the tracking event, if the event is done before the
-				// timeout, we call a window.clearTimeout
-				mixpanel.track("Downloaded Resource", {
+ 		mixpanel.track_links(".userguidelink", "Downloaded Resource", {
 					"Resource Name":"User Guide 2.2",
 					"Resource Location":"Resources page"
-				}, function() {
-					window.clearTimeout(trackTimeout);
-					hrefCallback();
 				});
-            }
-        );
-
-        $(".stickers-campaign-btn").click(
-            function(event) {
-            	var hrefCallback = function(event) {
-	                // open the Instapage landing page
-					window.open("http://pages.restlet.org/order-stickers?utm_source=restlet-site&utm_medium=resources&utm_campaign=StickersRP");
-				}
-				
-				// in case Mixpanel servers don't get back to us in time
-				// we use the same timeout value as the one defined in Mixpanel config
-				var trackTimeout = window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
-				
-				// fire the tracking event, if the event is done before the
-				// timeout, we call a window.clearTimeout
-				mixpanel.track("Downloaded Resource", {
+ 		mixpanel.track_links(".kinlaneguidelink", "Downloaded Resource", {
+					"Resource Name":"Kin Lane Guide",
+					"Resource Location":"Resources page"
+				});
+ 		mixpanel.track_links(".paasguidelink", "Downloaded Resource", {
+					"Resource Name":"David Linthicum Report",
+					"Resource Location":"Resources page"
+				});
+ 		mixpanel.track_links(".roadguidelink", "Downloaded Resource", {
+					"Resource Name":"ROAD Guide",
+					"Resource Location":"Resources page"
+				});
+ 		mixpanel.track_links(".stickerscampaignlink", "Downloaded Resource", {
 					"Resource Name":"Restlet Stickers",
 					"Resource Location":"Resources page"
-				}, function() {
-					window.clearTimeout(trackTimeout);
-					hrefCallback();
 				});
-            }
-        );
 	});
 </#noparse>
 </#global>
@@ -200,60 +106,76 @@
 
 	<div class="resource">
 		<div class="span2 section">
-			<img class="user-guide-btn" src="/images/learn/user-guide.png"/>
+			<a class="userguidelink" href="/learn/archives/misc/2.2/rf-user-guide-2-2.pdf" target="_blank"><img src="/images/learn/user-guide.png"/></a>
 		</div>
 		<div class="span7">
 			<h4>Restlet Framework 2.2 - User Guide</h4>
 			<p>Learn all about the Restlet Framework: the first steps, the different editions, its core and extensions, how it can be used to build a well-structured and scalable web API. Become a Restlet Framework ninja!</p>
-			<div><button class="btn btn-download-resources user-guide-btn">Download PDF</button></div>
+			<div><a class="btn btn-download-resources userguidelink" href="/learn/archives/misc/2.2/rf-user-guide-2-2.pdf" target="_blank">Download PDF</a></div>
 		</div>
 		<div class="clearBoth"></div>
 	</div>
 
 	<div class="resource">
 		<div class="span2 section">
-			<img class="kin-lane-guide-btn" src="/images/learn/web-apis-kin-lane.png"/>
+			<a class="kinlaneguidelink" href="http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=Kin%20Lane%20GuideRP" target="_blank">
+				<img src="/images/learn/web-apis-kin-lane.png"/>
+			</a>
 		</div>
 		<div class="span7">
 			<h4>Kin Lane's Field Guide to Web APIs</h4>
 			<p>A comprehensive guide to web APIs, explained by Kin Lane, the API Evangelist. He has been in the technology space for over 20 years and wants to help the world understand the great value and potential that is growing in the web API market.</p>
-			<div><button class="btn btn-download-resources kin-lane-guide-btn">Download PDF</button></div>
+			<div>
+				<a class="btn btn-download-resources kinlaneguidelink" href="http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=Kin%20Lane%20GuideRP" target="_blank">Download PDF</a>
+			</div>
 		</div>
 		<div class="clearBoth"></div>
 	</div>
 
 	<div class="resource">
 		<div class="span2 left section">
-			<img class="paas-guide-btn" src="/images/learn/paas-market-moves-david-linthicum.png"/>
+			<a class="paasguidelink" href="http://restlet.files.wordpress.com/2014/05/gigaom-research-paas-market-moves-beyond-deployment-and-scaling.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=David%20Linthicum%20ReportRP" target="_blank">
+				<img src="/images/learn/paas-market-moves-david-linthicum.png"/>
+			</a>
 		</div>
 		<div class="span7">
 			<h4>PaaS Market Moves Beyond Deployment and Scaling</h4>
 			<p>Through this report, David Linthicum, a cloud analyst, explains why enterprises must understand how APIs and PaaS can work together to build and deploy better enterprise applications more quickly and with much more reuse.</p>
-			<div><button class="btn btn-download-resources paas-guide-btn">Download PDF</button></div>
+			<div>
+				<a class="btn btn-download-resources paasguidelink" href="http://restlet.files.wordpress.com/2014/05/gigaom-research-paas-market-moves-beyond-deployment-and-scaling.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=David%20Linthicum%20ReportRP" target="_blank">Download PDF</a>
+			</div>
 		</div>
 		<div class="clearBoth"></div>
 	</div>
 
 	<div class="resource">
 		<div class="span2 left section">
-			<img class="road-guide-btn" src="/images/learn/road-designing-restful-webapi.png"/>
+			<a class="roadguidelink" href="http://blog.restlet.com/wp-content/uploads/2014/06/ROAD-Designing-a-RESTful-web-API1.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=ROAD%20GuideRP" target="_blank">
+				<img src="/images/learn/road-designing-restful-webapi.png"/>
+			</a>
 		</div>
 		<div class="span7">
 			<h4>Designing a RESTful web API with ROA/D</h4>
 			<p>Learn how to design a web API following the REST principles with our Resource-Oriented Analysis & Design (ROA/D) guidelines.</p>
-			<div><button class="btn btn-download-resources road-guide-btn">Download PDF</button></div>
+			<div>
+				<a class="btn btn-download-resources roadguidelink" href="http://blog.restlet.com/wp-content/uploads/2014/06/ROAD-Designing-a-RESTful-web-API1.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=ROAD%20GuideRP" target="_blank">Download PDF</a>
+			</div>
 		</div>
 		<div class="clearBoth"></div>
 	</div>
 
 	<div class="resource">
 		<div class="span2 left section">
-			<img class="stickers-campaign-btn" src="/images/stickers-campaign.png"/>
+			<a class="stickerscampaignlink" href="http://pages.restlet.org/order-stickers?utm_source=restlet-site&utm_medium=resources&utm_campaign=StickersRP" target="_blank">
+				<img src="/images/stickers-campaign.png"/>
+			</a>
 		</div>
 		<div class="span7">
 			<h4>Restlet stickers</h4>
 			<p>Want some free swag? Order Restlet Framework and APISpark stickers, completely free of charge!</p>
-			<div><button class="btn btn-download-resources stickers-campaign-btn">Order Stickers</button></div>
+			<div>
+				<a class="btn btn-download-resources stickerscampaignlink" href="http://pages.restlet.org/order-stickers?utm_source=restlet-site&utm_medium=resources&utm_campaign=StickersRP" target="_blank">Order Stickers</a>
+			</div>
 		</div>
 		<div class="clearBoth"></div>
 	</div>

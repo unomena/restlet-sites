@@ -1392,3 +1392,24 @@ code {
 	filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#f7a500', endColorstr='#f58800')";
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f7a500', endColorstr='#f58800')";
 }
+
+.userguidelink {
+	text-decoration: none;
+}
+
+.kinlaneguidelink {
+	text-decoration: none;
+}
+
+.paasguidelink {
+	text-decoration: none;
+}
+
+.roadguidelink {
+	text-decoration: none;
+}
+
+.stickerscampaignlink {
+	text-decoration: none;
+}
+
