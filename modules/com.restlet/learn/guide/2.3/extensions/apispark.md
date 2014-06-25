@@ -29,7 +29,7 @@ Then we will document an API based on its Swagger definition
 Configuration
 -------------
 
-#### Using maven
+### Using maven
 
 You can use the following pom.xml to get the dependencies required for the Introspector. The full project, containing the extension, the pom and the readme is available [here](../../../archives/misc/2.3/org.restlet.ext.apispark.zip). Follow the instructions in the readme and use the extension from your favorite IDE.
 
@@ -64,7 +64,7 @@ You can use the following pom.xml to get the dependencies required for the Intro
         </dependencies>
     </project>
 
-#### Manually
+### Manually
 
 
 You must add the following jars (provided in 
