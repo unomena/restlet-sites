@@ -278,6 +278,11 @@
 		<mkdir dir="${temp}/owr" />
 		<copy todir="${temp}/owr">
 			<fileset dir="../modules/com.restlet/" includes="**/*" />
+			<filterchain>
+			    <replacetokens>
+			      <token key="apispark" value="${apispark.domain}"/>
+			    </replacetokens>
+			  </filterchain>
 		</copy>
 
 <!-- copy and filter javascript files
