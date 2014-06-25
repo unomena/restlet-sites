@@ -277,12 +277,15 @@
 		<delete dir="${temp}/owr" />
 		<mkdir dir="${temp}/owr" />
 		<copy todir="${temp}/owr">
-			<fileset dir="../modules/com.restlet/" includes="**/*" />
+			<fileset dir="../modules/com.restlet/" includes="**/*.ftl,**/*.html" />
 			<filterchain>
 			    <replacetokens>
 			      <token key="apispark" value="${apispark.domain}"/>
 			    </replacetokens>
 			  </filterchain>
+		</copy>
+		<copy todir="${temp}/owr">
+			<fileset dir="../modules/com.restlet/" excludes="**/*.ftl,**/*.html" />
 		</copy>
 
 <!-- copy and filter javascript files
