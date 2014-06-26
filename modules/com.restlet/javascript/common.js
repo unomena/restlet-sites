@@ -46,6 +46,15 @@ function checkEmail(field, button) {
 	  return false;        	  
 } 
 
+function getMixpanelIdFromCookie() {
+	var mp_cookie = $.cookie(document.cookie.match("mp_.*_mixpanel")[0]);
+	if (mp_cookie === undefined) {
+		return undefined;
+	} else {
+		return JSON.parse(mp_cookie).distinct_id;
+	}
+}
+
 $(document).ready(function() {
 	$("#footerNewsLetterOkButton").click(
 	    function(event) {
@@ -68,4 +77,8 @@ $(document).ready(function() {
     mixpanel.track_links(".downloadlink", "Clicked on Download link");
     mixpanel.track_links(".learnlink", "Clicked on Learn link");
     mixpanel.track_links(".participatelink", "Clicked on Participate link");
+    
+    $(".apisparklink").click(function() {
+    	this.href = this.href.concat("?mpi=").concat(getMixpanelIdFromCookie());
+    });
 });
