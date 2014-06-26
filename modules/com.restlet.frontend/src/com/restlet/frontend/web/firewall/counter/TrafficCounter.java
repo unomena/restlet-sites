@@ -7,7 +7,7 @@ import org.restlet.Request;
 import org.restlet.Response;
 import org.restlet.routing.Filter;
 
-import com.restlet.frontend.web.firewall.counter.countingpolicy.CountingPolicy;
+import com.restlet.frontend.web.firewall.counter.countingPolicy.CountingPolicy;
 import com.restlet.frontend.web.firewall.handler.RateLimitationHandler;
 import com.restlet.frontend.web.firewall.handler.ThresholdHandler;
 import com.restlet.frontend.web.firewall.handler.TrafficOverrider;
@@ -20,6 +20,8 @@ public abstract class TrafficCounter {
     private List<ThresholdHandler> handlers;
 
     private List<TrafficOverrider> trafficOverriders;
+
+    private boolean enough;
 
     public TrafficCounter(CountingPolicy countingPolicy) {
         handlers = new ArrayList<ThresholdHandler>();
@@ -44,12 +46,8 @@ public abstract class TrafficCounter {
         this.countingPolicy = countingPolicy;
     }
 
-    public int countAndAction(Request request, Response response) {
-
-        String counterValue = determineCounterValue(request);
-        if (counterValue == null) {
-            return countingPolicy.onDetermineCounterValueFail();
-        }
+    public int countAndAction(Request request, Response response,
+            String counterValue) {
 
         CounterFeedback counterFeedback = increaseCounter(counterValue);
 
@@ -73,7 +71,7 @@ public abstract class TrafficCounter {
 
     protected abstract CounterFeedback increaseCounter(String counterValue);
 
-    protected String determineCounterValue(Request request) {
+    public String determineCounterValue(Request request) {
         return this.countingPolicy.determineCounterValue(request);
     }
 
@@ -88,6 +86,14 @@ public abstract class TrafficCounter {
                 insertHandler(handler, posAvg, posMax);
             }
         }
+    }
+
+    public boolean isEnough() {
+        return enough;
+    }
+
+    public void setEnough(boolean enough) {
+        this.enough = enough;
     }
 
     /**

@@ -10,15 +10,10 @@ import org.restlet.routing.Filter;
 
 import com.restlet.frontend.web.firewall.counter.OnPeriodInMemoryTrafficCounter;
 import com.restlet.frontend.web.firewall.counter.TrafficCounter;
-import com.restlet.frontend.web.firewall.counter.countingpolicy.IPCountingPolicy;
+import com.restlet.frontend.web.firewall.counter.countingPolicy.IPCountingPolicy;
+import com.restlet.frontend.web.firewall.counter.countingPolicy.UserCountingPolicy;
 
 public class FirewallFilter extends Filter {
-
-    public final static int COUNTER_VALIDATE = 0;
-
-    public final static int COUNTER_CONTINUE = 1;
-
-    public final static int COUNTER_STOP = 2;
 
     private List<TrafficCounter> trafficCounters;
 
@@ -33,14 +28,19 @@ public class FirewallFilter extends Filter {
     @Override
     protected int beforeHandle(Request request, Response response) {
 
-        int responseCode = Filter.CONTINUE;
-        for (TrafficCounter timeDefiner : trafficCounters) {
-            int code = timeDefiner.countAndAction(request, response);
-            if (code == Filter.STOP || code == Filter.SKIP) {
+        for (TrafficCounter trafficCounter : trafficCounters) {
+            String counterValue = trafficCounter.determineCounterValue(request);
+            if (counterValue == null) {
+                continue;
+            }
+            int code = trafficCounter.countAndAction(request, response,
+                    counterValue);
+            if (code != Filter.CONTINUE || trafficCounter.isEnough()) {
                 return code;
             }
         }
-        return responseCode;
+
+        return Filter.CONTINUE;
     }
 
     @Override
@@ -51,12 +51,12 @@ public class FirewallFilter extends Filter {
         // }
     }
 
-    public void addCounter(TrafficCounter definer) {
+    public void addCounter(TrafficCounter counter) {
 
         if (trafficCounters == null) {
             trafficCounters = new ArrayList<TrafficCounter>();
         }
-        trafficCounters.add(definer);
+        trafficCounters.add(counter);
     }
 
     /**
@@ -64,10 +64,17 @@ public class FirewallFilter extends Filter {
      */
 
     public TrafficCounter addPeriodInMemoryIPCounter(int period) {
-        TrafficCounter timeCounter = new OnPeriodInMemoryTrafficCounter(period,
+        TrafficCounter trafficCounter = new OnPeriodInMemoryTrafficCounter(period,
                 new IPCountingPolicy());
-        this.addCounter(timeCounter);
-        return timeCounter;
+        this.addCounter(trafficCounter);
+        return trafficCounter;
+    }
+
+    public TrafficCounter addPeriodInMemoryUserCounter(int period) {
+        TrafficCounter trafficCounter = new OnPeriodInMemoryTrafficCounter(
+                period, new UserCountingPolicy());
+        this.addCounter(trafficCounter);
+        return trafficCounter;
     }
 
 }

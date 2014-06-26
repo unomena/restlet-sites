@@ -5,8 +5,8 @@ import java.util.concurrent.TimeUnit;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
-import com.restlet.frontend.web.firewall.counter.countingpolicy.CountingPolicy;
-import com.restlet.frontend.web.firewall.counter.individualcounter.IndividualOnPeriodTrafficCounter;
+import com.restlet.frontend.web.firewall.counter.countingPolicy.CountingPolicy;
+import com.restlet.frontend.web.firewall.counter.individualCounter.IndividualOnPeriodTrafficCounter;
 import com.restlet.frontend.web.firewall.old.counter.CounterFeedback;
 
 public abstract class OnPeriodTrafficCounter extends TrafficCounter {

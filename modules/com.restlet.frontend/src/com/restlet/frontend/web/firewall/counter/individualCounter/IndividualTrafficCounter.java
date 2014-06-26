@@ -1,4 +1,4 @@
-package com.restlet.frontend.web.firewall.counter.individualcounter;
+package com.restlet.frontend.web.firewall.counter.individualCounter;
 
 import com.restlet.frontend.web.firewall.old.counter.CounterFeedback;
 

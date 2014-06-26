@@ -1,4 +1,4 @@
-package com.restlet.frontend.web.firewall.counter.individualcounter;
+package com.restlet.frontend.web.firewall.counter.individualCounter;
 
 import java.util.concurrent.TimeUnit;
 
