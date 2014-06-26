@@ -2,35 +2,21 @@ package com.restlet.frontend.web.firewall.handler;
 
 import org.restlet.Request;
 import org.restlet.Response;
-import org.restlet.data.Status;
-import org.restlet.routing.Filter;
 
-import com.restlet.frontend.web.firewall.counter.CounterFeedback;
-import com.restlet.frontend.web.firewall.type.HandlerType;
-import com.restlet.frontend.web.firewall.user.FirewallUser;
+import com.restlet.frontend.web.firewall.old.counter.CounterFeedback;
 
 public class AlertHandler extends ThresholdHandler {
 
-    public AlertHandler(int limit, HandlerType handlerType) {
-        this.limit = limit;
-        this.handlerType = handlerType;
+    public AlertHandler(int limit) {
+        super(limit);
+        // TODO Auto-generated constructor stub
     }
 
     @Override
-    protected int permited(Request request, Response response,
-            FirewallUser user, CounterFeedback counterFeedback) {
-        System.out.println("not alert");
-        return Filter.CONTINUE;
-    }
-
-    @Override
-    protected int notPermited(Request request, Response response,
-            FirewallUser user, CounterFeedback counterFeedback) {
-        System.out.println("alert");
-        response.setStatus(Status.valueOf(429),
-                "Too many requests for " + user.getIdentifier()
-                + ": rate limitation.");
-        return Filter.SKIP;
+    public int thresholdActivated(Request request, Response response,
+            String identifier, CounterFeedback counterFeedback) {
+        // TODO Auto-generated method stub
+        return 0;
     }
 
 }

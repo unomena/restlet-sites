@@ -1,4 +1,4 @@
-package com.restlet.frontend.web.firewall.type;
+package com.restlet.frontend.web.firewall.old.type;
 
 public interface FirewallType {
 

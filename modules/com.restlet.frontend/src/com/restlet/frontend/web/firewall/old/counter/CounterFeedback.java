@@ -1,10 +1,12 @@
-package com.restlet.frontend.web.firewall.counter;
+package com.restlet.frontend.web.firewall.old.counter;
 
 public class CounterFeedback {
 
     private int consumed;
     
     private long elapsed;
+
+    private long reset;
 
     public int getConsumed() {
         return consumed;
@@ -20,6 +22,14 @@ public class CounterFeedback {
 
     public void setElapsed(long elapsed) {
         this.elapsed = elapsed;
+    }
+
+    public long getReset() {
+        return reset;
+    }
+
+    public void setReset(long reset) {
+        this.reset = reset;
     }
 
 }

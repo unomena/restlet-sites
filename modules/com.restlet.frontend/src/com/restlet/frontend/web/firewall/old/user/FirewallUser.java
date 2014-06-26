@@ -1,9 +1,9 @@
-package com.restlet.frontend.web.firewall.user;
+package com.restlet.frontend.web.firewall.old.user;
 
 import org.restlet.Request;
 import org.restlet.security.User;
 
-import com.restlet.frontend.web.firewall.type.UserType;
+import com.restlet.frontend.web.firewall.old.type.UserType;
 
 public class FirewallUser {
 

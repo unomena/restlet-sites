@@ -8,12 +8,17 @@ import org.restlet.Response;
 import org.restlet.Restlet;
 import org.restlet.routing.Filter;
 
-import com.restlet.frontend.web.firewall.counter.PeriodCounter;
-import com.restlet.frontend.web.firewall.counter.SimultaneousCounter;
+import com.restlet.frontend.web.firewall.counter.OnPeriodInMemoryTrafficCounter;
 import com.restlet.frontend.web.firewall.counter.TrafficCounter;
-import com.restlet.frontend.web.firewall.type.HandlerType;
+import com.restlet.frontend.web.firewall.counter.countingpolicy.IPCountingPolicy;
 
 public class FirewallFilter extends Filter {
+
+    public final static int COUNTER_VALIDATE = 0;
+
+    public final static int COUNTER_CONTINUE = 1;
+
+    public final static int COUNTER_STOP = 2;
 
     private List<TrafficCounter> trafficCounters;
 
@@ -30,9 +35,9 @@ public class FirewallFilter extends Filter {
 
         int responseCode = Filter.CONTINUE;
         for (TrafficCounter timeDefiner : trafficCounters) {
-            int code = timeDefiner.beforeHandle(request, response);
-            if (code > responseCode) {
-                responseCode = code;
+            int code = timeDefiner.countAndAction(request, response);
+            if (code == Filter.STOP || code == Filter.SKIP) {
+                return code;
             }
         }
         return responseCode;
@@ -40,9 +45,10 @@ public class FirewallFilter extends Filter {
 
     @Override
     protected void afterHandle(Request request, Response response) {
-        for (TrafficCounter timeDefiner : trafficCounters) {
-            timeDefiner.afterHandle(request, response);
-        }
+        // TODO
+        // for (TrafficCounter timeDefiner : trafficCounters) {
+        // timeDefiner.afterHandle(request, response);
+        // }
     }
 
     public void addCounter(TrafficCounter definer) {
@@ -57,47 +63,11 @@ public class FirewallFilter extends Filter {
      * TrafficCounter creators
      */
 
-    public TrafficCounter addPeriodCounter(int period) {
-        TrafficCounter timeCounter = new PeriodCounter(period);
+    public TrafficCounter addPeriodInMemoryIPCounter(int period) {
+        TrafficCounter timeCounter = new OnPeriodInMemoryTrafficCounter(period,
+                new IPCountingPolicy());
         this.addCounter(timeCounter);
         return timeCounter;
     }
 
-    public TrafficCounter addSimultaneousCounter() {
-        TrafficCounter timeCounter = new SimultaneousCounter();
-        this.addCounter(timeCounter);
-        return timeCounter;
-    }
-
-    /**
-     * Structure creator (TrafficCounter + ThresholdHandler)
-     */
-
-    public TrafficCounter addPeriodRateLimitationHandler(int period, int limit,
-            HandlerType handlerType) {
-        TrafficCounter trafficCounter = this.addPeriodCounter(period);
-        trafficCounter.addRateLimitationHandler(limit, handlerType);
-        return trafficCounter;
-    }
-
-    public TrafficCounter addPeriodAlertHandler(int period, int limit,
-            HandlerType handlerType) {
-        TrafficCounter trafficCounter = this.addPeriodCounter(period);
-        trafficCounter.addAlertHandler(limit, handlerType);
-        return trafficCounter;
-    }
-
-    public TrafficCounter addSimultaneousRateLimitationHandler(int limit,
-            HandlerType handlerType) {
-        TrafficCounter trafficCounter = this.addSimultaneousCounter();
-        trafficCounter.addRateLimitationHandler(limit, handlerType);
-        return trafficCounter;
-    }
-
-    public TrafficCounter addSimultaneousAlertHandler(int limit,
-            HandlerType handlerType) {
-        TrafficCounter trafficCounter = this.addSimultaneousCounter();
-        trafficCounter.addAlertHandler(limit, handlerType);
-        return trafficCounter;
-    }
 }

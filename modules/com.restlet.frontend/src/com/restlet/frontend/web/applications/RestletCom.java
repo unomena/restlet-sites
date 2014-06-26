@@ -53,7 +53,6 @@ import com.restlet.frontend.objects.framework.Version;
 import com.restlet.frontend.objects.framework.VersionsList;
 import com.restlet.frontend.web.firewall.FirewallFilter;
 import com.restlet.frontend.web.firewall.counter.TrafficCounter;
-import com.restlet.frontend.web.firewall.type.HandlerType;
 import com.restlet.frontend.web.resources.framework.DistributionsResource;
 import com.restlet.frontend.web.resources.framework.DownloadCurrentServerResource;
 import com.restlet.frontend.web.resources.framework.DownloadPastServerResource;
@@ -346,16 +345,8 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
         // Create a firewall filter
         FirewallFilter firewallFilter = new FirewallFilter(guideFilter);
 
-        TrafficCounter periodDefiner1 = firewallFilter.addPeriodCounter(10);
-
-        periodDefiner1.addRateLimitationHandler(2, HandlerType.ANONYMOUS);
-
-        periodDefiner1.addAlertHandler(3, HandlerType.ANONYMOUS);
-
-        TrafficCounter simultaneousDefiner1 = firewallFilter
-                .addSimultaneousCounter();
-
-        simultaneousDefiner1.addAlertHandler(2, HandlerType.ANONYMOUS);
+        TrafficCounter counter = firewallFilter.addPeriodInMemoryIPCounter(10);
+        counter.createRateLimitationHandler(5);
 
         result.attach("/learn/guide", firewallFilter);
 

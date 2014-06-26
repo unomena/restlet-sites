@@ -1,4 +1,4 @@
-package com.restlet.frontend.web.firewall.counter;
+package com.restlet.frontend.web.firewall.old.counter;
 
 
 public class UserSimultaneousCounter extends UserTrafficCounter {
