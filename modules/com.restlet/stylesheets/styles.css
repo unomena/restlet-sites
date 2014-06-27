@@ -356,7 +356,7 @@ hr {
 
 #apispark .logo {
 	float: left;
-	margin-left: 25px;
+	margin-left: 5px;
 	width: 215px
 }
 #apispark .button {
@@ -369,6 +369,9 @@ hr {
 #apispark .button > a {
 	text-decoration: none;
 	color: white;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 20px;
 }
 
 
