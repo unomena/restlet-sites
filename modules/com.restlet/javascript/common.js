@@ -46,7 +46,43 @@ function checkEmail(field, button) {
 	  return false;        	  
 } 
 
+function getMixpanelIdFromCookie() {
+	var mp_cookie = $.cookie(document.cookie.match("mp_.*_mixpanel")[0]);
+	if (mp_cookie === undefined) {
+		return undefined;
+	} else {
+		return JSON.parse(mp_cookie).distinct_id;
+	}
+}
+
+//javascript function to get the mpi parameters containing the mixpanel distinct_id
+function getParameterByName(query, name, defaultValue) {
+	var result = defaultValue;
+	if (query) {
+		name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+		var regexS = "[#\\?&]?" + name + "=([^&#]*)";
+		var regex = new RegExp(regexS);
+		var results = regex.exec(query);
+		if (results != null) {
+			result = decodeURIComponent(results[1].replace(/\+/g, " "));
+		}
+	}
+	return result;
+}
+
+function hasMixpanelCookie() {
+	return document.cookie.match("mp_.*_mixpanel");
+}
+
 $(document).ready(function() {
+  	if (!hasMixpanelCookie()) {
+	  	var mpi = getParameterByName(window.location.search, "mpi", null);
+	  	
+		if (mpi) {
+			mixpanel.identify(mpi);
+		}
+	}
+
 	$("#footerNewsLetterOkButton").click(
 	    function(event) {
 	        if (checkEmail("footerNewsLetterEmail","footerNewsLetterOkButton")) {
@@ -68,4 +104,8 @@ $(document).ready(function() {
     mixpanel.track_links(".downloadlink", "Clicked on Download link");
     mixpanel.track_links(".learnlink", "Clicked on Learn link");
     mixpanel.track_links(".participatelink", "Clicked on Participate link");
+    
+    $(".apisparklink").click(function() {
+    	this.href = this.href.concat("?mpi=").concat(getMixpanelIdFromCookie());
+    });
 });

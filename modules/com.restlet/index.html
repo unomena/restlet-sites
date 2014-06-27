@@ -4,30 +4,15 @@
 <#global javascript>
 	$(document).ready(function() {
         init($("#cBranch"), $("#cEdition"), $("#cDistribution"), false, true);
-        $('#apispark-button').click(function() {
-            //document.location.href='http://apispark.com';
-            var hrefCallback = function(event) {
-				// download selected resltet framework file
-				document.location.href = "http://apispark.com/signin";
-			}
-			
-			// in case Mixpanel servers don't get back to us in time
-			// we use the same timeout value as the one defined in Mixpanel config
-			var trackTimeout = window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
-			
-			// fire the tracking event, if the event is done before the
-			// timeout, we call a window.clearTimeout
-			mixpanel.track("Clicking the AS Try it button", null, function() {
-				window.clearTimeout(trackTimeout);
-				hrefCallback();
-			});
-        });
+
+        mixpanel.track("Visited the RF homepage");
+        mixpanel.track_links(".btn-tryit-hp", "Clicking the AS Try it button");
+        
         $('#restlet-framework-button').click(function() {
         	mixpanel.track("Clicked on Download link", null, function() {
         		document.location.href='/download/';
         	});
         });
-        mixpanel.track("Visited the RF homepage");
 	});
 </#global>
 <#global header>
@@ -45,10 +30,10 @@
 <div class="span6 left section product">
 	<div id="apispark">
 	    <div class="logo">
-	    	<a href="http://@apispark@"><img width="215" height="80" src="/images/apispark-logo-new.png" alt="APISpark"/></a>
+	    	<a href="http://@apispark@" class="apisparklink"><img width="215" height="80" src="/images/apispark-logo-new.png" alt="APISpark"/></a>
 	    </div>
 	    <div class="button">
-	    	<button id="apispark-button" class="btn btn-large btn-tryit-hp" type="button">Try It</button>
+	    	<a href="http://@apispark@/signin" class="btn btn-large btn-tryit-hp apisparklink">Try It</a>
 	    </div>
     </div>
 </div>
@@ -70,7 +55,7 @@
     <p>
         APISpark is the cloud service of the Restlet platform. Complete your Java-based web API with always 
         up-to-date API documentation, auto-generated client SDKs, user management, firewall and usage reports.
-        <a href="https://apispark.com">Learn more</a>
+        <a href="https://@apispark@" class="apisparklink">Learn more</a>
     </p>
     
 </div>
