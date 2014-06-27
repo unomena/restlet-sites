@@ -55,7 +55,34 @@ function getMixpanelIdFromCookie() {
 	}
 }
 
+//javascript function to get the mpi parameters containing the mixpanel distinct_id
+function getParameterByName(query, name, defaultValue) {
+	var result = defaultValue;
+	if (query) {
+		name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+		var regexS = "[#\\?&]?" + name + "=([^&#]*)";
+		var regex = new RegExp(regexS);
+		var results = regex.exec(query);
+		if (results != null) {
+			result = decodeURIComponent(results[1].replace(/\+/g, " "));
+		}
+	}
+	return result;
+}
+
+function hasMixpanelCookie() {
+	return document.cookie.match("mp_.*_mixpanel");
+}
+
 $(document).ready(function() {
+  	if (!hasMixpanelCookie()) {
+	  	var mpi = getParameterByName(window.location.search, "mpi", null);
+	  	
+		if (mpi) {
+			mixpanel.identify(mpi);
+		}
+	}
+
 	$("#footerNewsLetterOkButton").click(
 	    function(event) {
 	        if (checkEmail("footerNewsLetterEmail","footerNewsLetterOkButton")) {

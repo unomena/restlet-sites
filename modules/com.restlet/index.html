@@ -4,7 +4,7 @@
 <#global javascript>
 	$(document).ready(function() {
         init($("#cBranch"), $("#cEdition"), $("#cDistribution"), false, true);
-        
+        mixpanel.track("Visited the RF homepage");
         mixpanel.track_links(".btn-tryit-hp", "Clicking the AS Try it button");
         
         $('#restlet-framework-button').click(function() {
@@ -12,8 +12,6 @@
         		document.location.href='/download/';
         	});
         });
-        
-        mixpanel.track("Visited the RF homepage");
 	});
 </#global>
 <#global header>
