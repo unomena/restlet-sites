@@ -282,7 +282,13 @@
 			    <replacetokens>
 			      <token key="apispark" value="${apispark.domain}"/>
 			    </replacetokens>
-			  </filterchain>
+			    <replacetokens>
+			      <token key="google-site-verification" value="${google.site.verification}"/>
+			    </replacetokens>
+			    <replacetokens>
+			      <token key="google-site-verification-token" value="${google.site.verification.token}"/>
+			    </replacetokens>
+			</filterchain>
 		</copy>
 		<copy todir="${temp}/owr">
 			<fileset dir="../modules/com.restlet/" excludes="**/*.ftl,**/*.html" />
