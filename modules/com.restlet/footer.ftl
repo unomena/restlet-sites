@@ -161,6 +161,5 @@
 <#if footer??>
     ${footer}
 </#if>
-   
    </body>
 </html>
