@@ -1,4 +1,5 @@
-<div class="clearBoth"></div>
+<div class="right-sidebar"></div>
+
    <h3><a name="#maven"></a>Maven configuration</h3>
 
    <p>
@@ -18,7 +19,6 @@
       repository. Just open and edit the pom.xml file for your project 
       and add the following lines of text:
    </p>
-   <div>
 	   <pre class="xml:nocontrols:nogutter" id="maven-snippet">
 &lt;repositories&gt;
     &lt;repository&gt;
@@ -43,7 +43,6 @@
     &lt;/dependency&gt;
 &lt;/dependencies&gt;
 	   </pre>
-   </div>
 
    <h4>Available artifacts</h4>
 
@@ -66,8 +65,7 @@
         Please find below the list of extensions available for the release and edition that you selected.
    </p>
 
-   <div style="margin-top: 15px;margin-bottom: 10px; text-align:left">
-      <table class="classic" style="display:inline" cellspacing="2" cellpadding="3">
+      <table class="classic" style="display:inline margin-top: 15px;margin-bottom: 10px; text-align:left" cellspacing="2" cellpadding="3">
          <tr>
             <th>artifactId</th>
             <th>Description</th>
@@ -217,7 +215,6 @@
             <td>Test module.</td>
          </tr>
       </table>
-   </div>
 
    <h4>Alternative repository configuration</h4>
 
@@ -227,7 +224,6 @@
       file and add to the <code>&lt;profiles&gt;</code> section the following code:
    </p>
 	
-   <div>
    <pre class="xml:nocontrols:nogutter">
 &lt;profile&gt;
   &lt;id&gt;restlet&lt;/id&gt;
@@ -240,15 +236,12 @@
   &lt;/repositories&gt;
 &lt;/profile&gt;
    </pre>
-   </div>
    
    <p>
       Just after the <code>&lt;/profiles&gt;</code> add the following:
    </p>
-   <div>
    <pre class="xml:nocontrols:nogutter">
 &lt;activeProfiles&gt;
     &lt;activeProfile&gt;restlet&lt;/activeProfile&gt;
 &lt;/activeProfiles&gt;
    </pre>
-   </div>
