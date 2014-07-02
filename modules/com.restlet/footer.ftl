@@ -13,6 +13,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="keywords"  content="REST, Java, framework, toolkit, HTTP, GWT, GAE, Android, JSE, JEE, Servlet, NIO" />
       <meta charset="utf-8" />
+      <#if indexPage??>
+      <!-- Google WebMaster Tools metatag-->
+      <meta name="@google-site-verification@" content="@google-site-verification-token@" />
+      </#if>
+      
       ${metaheader!""}
       <link type="image/gif" href="/images/favicon-restlet-org.gif" rel="icon">
       <link rel="stylesheet" type="text/css"             href='/stylesheets/bootstrap.css' />
