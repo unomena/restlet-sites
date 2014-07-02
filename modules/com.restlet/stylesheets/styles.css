@@ -1001,9 +1001,8 @@ form,form>input {
 }
 
 #newsletter {
-	position: relative;
 	clear: both;
-	display: none;
+	float: left;
 }
 
 #newsletter .elements {
@@ -1238,13 +1237,18 @@ code {
 }
 
 .left-description {
-	width: 60%;
-	float: left;
+	width: 100%;
+	display: none;
+}
+
+#maven-snippet {
+	margin-top: 90px;
 }
 
 .right-sidebar {
 	width: 35%;
 	float: right;
+	padding-left: 45px;
 }
 
 .right-sidebar .newsletter,

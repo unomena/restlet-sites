@@ -1,3 +1,5 @@
+   <div class="right-sidebar"></div>
+   
    <h3><a name="#firstSteps"></a>First Steps</h3>
    <h5><a name="toc"></a>Table of contents</h5>
 
