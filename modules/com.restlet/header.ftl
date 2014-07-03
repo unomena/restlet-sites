@@ -35,17 +35,13 @@
 				<div class="text">Fill in the form below and receive free Restlet stickers in your mailbox!</div>
 			</div>
 			<div class="doc-download">
-				<form class="order-form validate-form" action="" method="post">
-					<fieldset>
-						<div class="row"><input type="text" placeholder="Name" class="required"></div>
-						<div class="row"><input type="email" placeholder="Email Address" class="required-email"></div>
-						<div class="row"><textarea cols="5" rows="5" placeholder="Mailing Address" class="required"></textarea></div>
-						<div class="row">
-							<input type="submit" value="Order Stickers">
-							<p>Your details will never be shared to a 3rd party. We hate spam just as much as you do.</p>
-						</div>
-					</fieldset>
-				</form>
+				<div class="row"><input type="text" id="campaignName" placeholder="Name" class="required"></div>
+				<div class="row"><input type="email" id="campaignEmail" placeholder="Email Address" class="required-email"></div>
+				<div class="row"><textarea cols="5" rows="5" id="campaignAddress" placeholder="Mailing Address" class="required"></textarea></div>
+				<div class="row">
+					<button id="campaignButton">Order Stickers</button>
+					<p>Your details will never be shared to a 3rd party. We hate spam just as much as you do.</p>
+				</div>
 			</div>
 			<div class="doc-footer">
 				<p></p>

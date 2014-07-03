@@ -40,11 +40,26 @@ function checkEmail(field, button) {
         	  // emailButton.attr("disabled", true);
           }
     } else {
-    	emailField.removeClass("error");
+    	emailField.addClass("error");
     	//emailButton.attr("disabled", true);
     }
 	  return false;        	  
 } 
+
+function checkFieldEmpty(field, button) {
+    var myField = $("#" + field);
+    var myButton = $("#" + button);
+        
+    if (myField.val().length && myField.val() !== myField.prop('defaultValue')) {
+		myField.removeAttr("disabled");
+		myField.removeClass("error");
+		return true;
+    } else {
+    	myField.addClass("error");
+    	//emailButton.attr("disabled", true);
+    }
+	return false;        	  
+}
 
 function getMixpanelIdFromCookie() {
 	var mp_cookie = $.cookie(document.cookie.match("mp_.*_mixpanel")[0]);

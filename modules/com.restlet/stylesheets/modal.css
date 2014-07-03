@@ -72,8 +72,8 @@
 	padding-right:2px;
 	padding-bottom:7px;
 	position: relative;
-	left: 21px;
-	width: 341px;
+	left: 7px;
+	width: 362px;
 }
 .modalDialog.kinlane div.doc-desc > div.doc-content > div.text{
 	font: 18px/26px Arial, Helvetica, sans-serif;
@@ -88,35 +88,38 @@
 	margin: 0;
 	overflow: hidden;
 }
-.modalDialog.kinlane div.doc-desc .order-form .row{overflow: hidden;}
-.modalDialog.kinlane div.doc-desc .order-form input[type="text"],
-.modalDialog.kinlane div.doc-desc .order-form input[type="email"]{
-	width:328px;
+.modalDialog.kinlane div.doc-desc .row{
+	overflow: hidden;
+}
+
+.modalDialog.kinlane div.doc-desc input[type="text"],
+.modalDialog.kinlane div.doc-desc input[type="email"]{
+	width:350px;
 	height:15px;
 	border:1px solid #7d7d7d;
 	background:#fcfaf4;
 	color:#000;
 	font:12px/15px Arial, Helvetica, sans-serif;
 	padding:5px 13px;
-	margin:0 0 4px;
+	margin:0 0 4px 0px;
 }
-.modalDialog.kinlane div.doc-desc .order-form textarea{
-	width:328px !important;
+.modalDialog.kinlane div.doc-desc textarea{
+	width:350px !important;
 	height:52px !important;
 	border:1px solid #7d7d7d;
 	resize:none;
 	background:#fcfaf4;
-	margin:0 0 13px;
+	margin:0 0 13px 0px;
 	color:#000;
 	padding:5px 13px;
 	font:12px/15px Arial, Helvetica, sans-serif;
 	overflow: auto;
 }
-.modalDialog.kinlane div.doc-desc .order-form .row.error input[type="text"],
-.modalDialog.kinlane div.doc-desc .order-form .row.error input[type="email"],
-.modalDialog.kinlane div.doc-desc .order-form .row.error textarea{
+.modalDialog.kinlane div.doc-desc .row .error {
 	border:1px solid #f03307;
+	color: #f03307;
 }
+
 .modalDialog.kinlane ::-webkit-input-placeholder {color: #000;}
 .modalDialog.kinlane :-moz-placeholder {color: #000;}
 .modalDialog.kinlane ::-moz-placeholder {
@@ -124,12 +127,12 @@
 	opacity: 1;
 }
 .modalDialog.kinlane :-ms-input-placeholder {color: #000;}
-.modalDialog.kinlane div.doc-desc .order-form .row{
+.modalDialog.kinlane div.doc-desc .row{
 	overflow:hidden;
 	font:11px/13px Arial, Helvetica, sans-serif;
 	margin-left: 0px;
 }
-.modalDialog.kinlane div.doc-desc .order-form .row input[type="submit"]{
+.modalDialog.kinlane div.doc-desc .row button{
 	border-radius:5px;
 	background:#efa10f;
 	color:#fff;
@@ -140,16 +143,16 @@
 	float:left;
 	font-weight:bold;
 	padding:3px 10px 5px;
-	margin:0 9px 10px 22px;
+	margin:0 9px 10px 12px;
 	cursor:pointer;
 }
-.modalDialog.kinlane div.doc-desc .order-form .row input[type="submit"]:hover{background: #fc6;}
-.modalDialog.kinlane div.doc-desc .order-form .text-hidden{
+.modalDialog.kinlane div.doc-desc .row button:hover{background: #fc6;}
+.modalDialog.kinlane div.doc-desc .text-hidden{
 	display: block;
 	color:#605e5e;
 	font:9px/12px Arial, Helvetica, sans-serif;
 }
-.modalDialog.kinlane div.doc-desc .order-form .row p{ 
+.modalDialog.kinlane div.doc-desc .row p{ 
 	margin:0;
 	color: #000;
 	font-size: 9px;
