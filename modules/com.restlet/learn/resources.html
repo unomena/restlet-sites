@@ -73,11 +73,12 @@
 					if (checkEmail("campaignEmail", "campaignButton") 
 							&& checkFieldEmpty("campaignName", "campaignButton") 
 							&& checkFieldEmpty("campaignAddress", "campaignButton")) {
-						mixpanel.track("Shared email", {
-							"email": $("#campaignEmail").val(),
-							"name": $("#campaignName").val(),
-							"mailing address": $("#campaignAddress").val(),
-							"Email field location":"RF and AS Stickers"
+						mixpanel.track("Downloaded Resource", {
+							"Resource Name":"Restlet Stickers",
+							"Resource Location":"Resources page",
+							"Email": $("#campaignEmail").val(),
+							"Name": $("#campaignName").val(),
+							"Mailing Address": $("#campaignAddress").val()
 						});
 						
 						// close popup

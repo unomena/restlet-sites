@@ -395,6 +395,7 @@ hr {
 #restlet-framework .button > a {
 	text-decoration: none;
 	color: white;
+	width: 115px;
 }
 
 div.restlet-community {
