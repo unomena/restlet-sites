@@ -288,6 +288,9 @@
 			    <replacetokens>
 			      <token key="google-site-verification-token" value="${google.site.verification.token}"/>
 			    </replacetokens>
+			    <replacetokens>
+			      <token key="google-plus-link" value="${google.plus.link}"/>
+			    </replacetokens>
 			</filterchain>
 		</copy>
 		<copy todir="${temp}/owr">
