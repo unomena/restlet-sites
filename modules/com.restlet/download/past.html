@@ -96,38 +96,26 @@ ${campaignPopupSection}
 				<li class="user-guide"><span><a href="/learn/guide">User<br/>Guide</a></span></li>
 			</ul>
 		</div-->
+        <div id="newsletter">
+	<div class="clearBoth"></div>
+	<div class="elements">
         <div class="left-description">
 			<div id="firststeps_infos">
-				<#include "/discover/firststeps.ftl">
+			<#include "/discover/firststeps.ftl">
 			</div>
 			<#noparse>
-			<div id="maven_infos"><#include "maven.ftl"></div>
-			<div id="eclipse_infos"><#include "eclipse.ftl"></div>
-			</#noparse> 
+			<div id="maven_infos">
+			<#include "maven.ftl">
+			</div>
+			<div id="eclipse_infos">
+			<#include "eclipse.ftl">
+			</div>
+			</#noparse>
         </div>
-        <div class="right-sidebar">
-          <div class="newsletter">
-          	<div class="newsletter-header">
-          		<div></div>
-          		<div>Subscribe below to receive exciting Restlet news</div>
-          	</div>
-            <div id="email-submit">
-              <input type="email" name="EMAIL" id="newsLetterEmail"
-                   placeholder="Enter your email">
-              <button id="newsLetterOkButton" name="subscribe">Notify me</button>
-            </div>
-            <div class="clearBoth"></div>
-          </div>
-          <div class="tutorials">
-            <div><a href="/learn/tutorial/"><img src="/images/tutorial-icon.png"/></a></div>
-            <div><a href="/learn/tutorial/">Tutorial</a></div>
-          </div>
-          <div class="user-guide">
-            <div><a href="/learn/guide/"><img src="/images/user-guide-icon.png"/></a></div>
-            <div><a href="/learn/guide/">User guide</a></div>
-          </div>
-        </div>
+        
     	<div class="clearBoth"></div>
 	</div>
+</div>
+</div>
 </div>
 </#global>

@@ -202,6 +202,13 @@ function loadMavenSnippet() {
 	$('#maven-snippet').append('&lt;/dependencies&gt;\n');	
 }
 
+function fillRightSidebar(classname){
+	var id = classname;
+	id += " .right-sidebar";
+	$(id).empty();
+	$(id).append('<div class="newsletter"><div class="newsletter-header"><div></div><div>Subscribe below to receive exciting Restlet news</div></div><div id="email-submit"><input type="email" name="EMAIL" id="newsLetterEmail" placeholder="Enter your email"><button id="newsLetterOkButton" name="subscribe">Notify me</button></div><div class="clearBoth"></div></div><div class="tutorials"><div><a href="/learn/tutorial/"><img src="/images/tutorial-icon.png"/></a></div><div><a href="/learn/tutorial/">Tutorial</a></div></div><div class="user-guide"><div><a href="/learn/guide/"><img src="/images/user-guide-icon.png"/></a></div><div><a href="/learn/guide/">User guide</a></div></div>\n');
+}
+
 function setDownloadButton() {
 	$('#download').empty();
 	if (distribution && "file" == distribution.type) {
@@ -261,8 +268,9 @@ function setDownloadButton() {
 						$('#firststeps_infos').css('display','none');
 						
 						var hrefCallback = function() {
-							$('#newsletter').css('display','block');
+							$('.left-description').css('display','block');
 							$('#maven_infos').css('display','block');
+							fillRightSidebar('#maven_infos');
 							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
 								// open campaign popup
 								$("#deployModal").show();								
@@ -292,8 +300,9 @@ function setDownloadButton() {
 						$('#firststeps_infos').css('display','none');
 						
 						var hrefCallback = function() {
-							$('#newsletter').css('display','block');
+							$('.left-description').css('display','block');
 							$('#eclipse_infos').css('display','block');
+							fillRightSidebar('#eclipse_infos');
 							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
 								// open campaign popup
 								$("#deployModal").show();								
@@ -320,8 +329,9 @@ function setDownloadButton() {
 						loadMavenSnippet();
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
+						$('.left-description').css('display','block');
+						fillRightSidebar('#firststeps_infos');
 						$('#firststeps_infos').css('display','block');
-						$('#newsletter').css('display','block');
 
 						var hrefCallback = function(event) {
 							// open campaign popup
