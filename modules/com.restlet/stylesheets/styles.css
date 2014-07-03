@@ -1243,13 +1243,13 @@ code {
 }
 
 #maven-snippet {
-	margin-right: 380px;
+	margin-right: 360px;
 }
 
 .right-sidebar {
 	width: 35%;
 	float: right;
-	padding-left: 65px;
+	padding-left: 45px;
 }
 
 .right-sidebar .newsletter,
