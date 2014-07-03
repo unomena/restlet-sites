@@ -28,6 +28,9 @@
 		$("#videoPopup div.video-close-button").click(function() {
 			$("#videoPopup").hide();
 		});
+		$("#deployModal div.close-button").click(function() {
+			$("#deployModal").hide();
+		});
         
         $(".watch-video-btn").click(
             function(event) {
@@ -53,6 +56,39 @@
             
         );
         
+        $('.stickerscampaignlink').click(
+			function(event) {
+				// open campaign popup
+				$("#deployModal").show();
+				
+				// we stop the event propagation
+				if (event.preventDefault) {
+				  event.preventDefault();
+				}
+				event.returnValue = false;								
+			});
+
+		$('#campaignButton').click(
+				function(event) {
+					if (checkEmail("campaignEmail", "campaignButton") 
+							&& checkFieldEmpty("campaignName", "campaignButton") 
+							&& checkFieldEmpty("campaignAddress", "campaignButton")) {
+						mixpanel.track("Shared email", {
+							"email": $("#campaignEmail").val(),
+							"name": $("#campaignName").val(),
+							"mailing address": $("#campaignAddress").val(),
+							"Email field location":"RF and AS Stickers"
+						});
+						
+						// close popup
+						$("#campaignName").val("");
+						$("#campaignEmail").val("");
+						$("#campaignAddress").val("");
+						$("#deployModal").hide();
+					}
+				}
+		);
+
  		mixpanel.track_links(".userguidelink", "Downloaded Resource", {
 					"Resource Name":"User Guide 2.2",
 					"Resource Location":"Resources page"
@@ -69,15 +105,11 @@
 					"Resource Name":"ROAD Guide",
 					"Resource Location":"Resources page"
 				});
- 		mixpanel.track_links(".stickerscampaignlink", "Downloaded Resource", {
-					"Resource Name":"Restlet Stickers",
-					"Resource Location":"Resources page"
-				});
 	});
 </#noparse>
 </#global>
 
-<#global stylesheet_files=["/stylesheets/modal.css"] />
+<#global stylesheet_files=["/stylesheets/modal.css","/stylesheets/modal-video.css"] />
 
 <#global content>
 <div id="videoPopup" class="modalDialog video">
@@ -90,6 +122,9 @@
 		</div>
 	</div>
 </div>
+<#if campaignPopupSection??>
+	${campaignPopupSection}
+</#if>
 
 <div class="resources">
 	<div class="resource">
@@ -166,7 +201,7 @@
 
 	<div class="resource">
 		<div class="span2 left section">
-			<a class="stickerscampaignlink" href="http://pages.restlet.org/order-stickers?utm_source=restlet-site&utm_medium=resources&utm_campaign=StickersRP" target="_blank">
+			<a class="stickerscampaignlink" href="">
 				<img src="/images/stickers-campaign.png"/>
 			</a>
 		</div>
@@ -174,7 +209,7 @@
 			<h4>Restlet stickers</h4>
 			<p>Want some free swag? Order Restlet Framework and APISpark stickers, completely free of charge!</p>
 			<div>
-				<a class="btn btn-download-resources stickerscampaignlink" href="http://pages.restlet.org/order-stickers?utm_source=restlet-site&utm_medium=resources&utm_campaign=StickersRP" target="_blank">Order Stickers</a>
+				<a href="" class="btn btn-download-resources stickerscampaignlink">Order Stickers</a>
 			</div>
 		</div>
 		<div class="clearBoth"></div>

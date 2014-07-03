@@ -234,26 +234,29 @@ function setDownloadButton() {
 
 		$('#campaignButton').click(
 				function(event) {
-					if (checkEmail("campaignEmail", "campaignButton")) {
+					if (checkEmail("campaignEmail", "campaignButton") 
+							&& checkFieldEmpty("campaignName", "campaignButton") 
+							&& checkFieldEmpty("campaignAddress", "campaignButton")) {
 						mixpanel.track("Shared email", {
 							"email": $("#campaignEmail").val(),
-							"Email field location":"Kin Lane Guide"
+							"name": $("#campaignName").val(),
+							"mailing address": $("#campaignAddress").val(),
+							"Email field location":"RF and AS Stickers"
 						});
 						mixpanel.alias($("#campaignEmail").val(), mixpanel.get_distinct_id());
 						mixpanel.people.set({"$email": $("#campaignEmail").val()});
-						mixpanel.track("Downloaded Kin Lane Guide");
+						mixpanel.track("Ordered RF and AS stickers");
 						
 						// close popup
+						$("#campaignName").val("");
 						$("#campaignEmail").val("");
+						$("#campaignAddress").val("");
 						$("#deployModal").hide();
 						
 						// Set a one year cookie dedicated to this campaign. 
-						$.cookie('kin-lane-white-paper-v2', 'true', {
+						$.cookie('stickers-campaign-v2', 'true', {
 							expires: 365
 						});
-						
-						// launch pdf download in a new tab
-						window.open('http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=popup&utm_campaign=Kin%20Lane%20Guide', "_blank");
 					}
 				}
 		);
@@ -271,7 +274,8 @@ function setDownloadButton() {
 							$('.left-description').css('display','block');
 							$('#maven_infos').css('display','block');
 							fillRightSidebar('#maven_infos');
-							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
+
+							if ("true" != $.cookie("stickers-campaign-v2")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
@@ -303,7 +307,8 @@ function setDownloadButton() {
 							$('.left-description').css('display','block');
 							$('#eclipse_infos').css('display','block');
 							fillRightSidebar('#eclipse_infos');
-							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
+
+							if ("true" != $.cookie("stickers-campaign-v2")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
@@ -335,7 +340,7 @@ function setDownloadButton() {
 
 						var hrefCallback = function(event) {
 							// open campaign popup
-							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
+							if ("true" != $.cookie("stickers-campaign-v2")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
@@ -369,12 +374,12 @@ function setDownloadButton() {
 						loadMavenSnippet();
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
+						fillRightSidebar('#firststeps_infos');
 						$('#firststeps_infos').css('display','block');
-						$('#newsletter').css('display','block');
-
+						
 						var hrefCallback = function(event) {
 							// open campaign popup
-							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
+							if ("true" != $.cookie("stickers-campaign-v2")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
