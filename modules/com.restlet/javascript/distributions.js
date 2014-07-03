@@ -66,6 +66,13 @@ function loadMavenSnippet() {
 	$('#maven-snippet').append('&lt;/dependencies&gt;\n');	
 }
 
+function fillRightSidebar(classname){
+	var id = classname;
+	id += " .right-sidebar";
+	$(id).empty();
+	$(id).append('<div class="newsletter"><div class="newsletter-header"><div></div><div>Subscribe below to receive exciting Restlet news</div></div><div id="email-submit"><input type="email" name="EMAIL" id="newsLetterEmail" placeholder="Enter your email"><button id="newsLetterOkButton" name="subscribe">Notify me</button></div><div class="clearBoth"></div></div><div class="tutorials"><div><a href="/learn/tutorial/"><img src="/images/tutorial-icon.png"/></a></div><div><a href="/learn/tutorial/">Tutorial</a></div></div><div class="user-guide"><div><a href="/learn/guide/"><img src="/images/user-guide-icon.png"/></a></div><div><a href="/learn/guide/">User guide</a></div></div>\n');
+}
+
 function setDownloadButton() {
 	$('#download').empty();
 	if (distribution && "file" == distribution.type) {
@@ -88,26 +95,29 @@ function setDownloadButton() {
 		
 		$('#campaignButton').click(
 				function(event) {
-					if (checkEmail("campaignEmail", "campaignButton")) {
+					if (checkEmail("campaignEmail", "campaignButton") 
+							&& checkFieldEmpty("campaignName", "campaignButton") 
+							&& checkFieldEmpty("campaignAddress", "campaignButton")) {
 						mixpanel.track("Shared email", {
 							"email": $("#campaignEmail").val(),
-							"Email field location":"Kin Lane Guide"
+							"Name": $("#campaignName").val(),
+							"Mailing Address": $("#campaignAddress").val(),
+							"Email field location":"RF and AS Stickers"
 						});
 						mixpanel.alias($("#campaignEmail").val(), mixpanel.get_distinct_id());
 						mixpanel.people.set({"$email": $("#campaignEmail").val()});
-						mixpanel.track("Downloaded Kin Lane Guide");
+						mixpanel.track("Ordered RF and AS stickers");
 						
 						// close popup
+						$("#campaignName").val("");
 						$("#campaignEmail").val("");
+						$("#campaignAddress").val("");
 						$("#deployModal").hide();
 						
 						// Set a one year cookie dedicated to this campaign. 
-						$.cookie('kin-lane-white-paper-v2', 'true', {
+						$.cookie('stickers-campaign-v2', 'true', {
 							expires: 365
 						});
-						
-						// launch pdf download in a new tab
-						window.open('http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=popup&utm_campaign=Kin%20Lane%20Guide', "_blank");
 					}
 				}
 		);
@@ -122,9 +132,11 @@ function setDownloadButton() {
 						$('#firststeps_infos').css('display','none');
 						
 						var hrefCallback = function() {
-							$('#newsletter').css('display','block');
+							$('.left-description').css('display','block');
 							$('#maven_infos').css('display','block');
-							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
+							fillRightSidebar('#maven_infos');
+
+							if ("true" != $.cookie("stickers-campaign-v2")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
@@ -153,9 +165,11 @@ function setDownloadButton() {
 						$('#firststeps_infos').css('display','none');
 						
 						var hrefCallback = function() {
-							$('#newsletter').css('display','block');
+							$('.left-description').css('display','block');
 							$('#eclipse_infos').css('display','block');
-							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
+							fillRightSidebar('#eclipse_infos');
+
+							if ("true" != $.cookie("stickers-campaign-v2")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
@@ -181,12 +195,13 @@ function setDownloadButton() {
 						loadMavenSnippet();
 						$('#eclipse_infos').css('display','none');
 						$('#maven_infos').css('display','none');
+						$('.left-description').css('display','block');
+						fillRightSidebar('#firststeps_infos');
 						$('#firststeps_infos').css('display','block');
-						$('#newsletter').css('display','block');
 
 						var hrefCallback = function(event) {
 							// open campaign popup
-							if ("true" != $.cookie("kin-lane-white-paper-v2")) {
+							if ("true" != $.cookie("stickers-campaign-v2")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}

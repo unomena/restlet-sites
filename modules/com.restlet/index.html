@@ -1,33 +1,15 @@
 <#global title="Restlet - REST Framework for Java &amp; PaaS for Web APIs" />
+
 <#global headerClass="header"/>
+<#global indexPage="index"/>
+
 <#global javascript_files=["/javascript/jquery-1.9.0.min.js", "/javascript/jquery-cookie.js", "/javascript/jsclass-core.js", "/javascript/json-minified.js", "/javascript/restlet-client.js", "/javascript/restlet-feedSummary.js", "/javascript/bootstrap.min.js", "/javascript/data.js", "/javascript/distributions.js"] />
 <#global javascript>
 	$(document).ready(function() {
         init($("#cBranch"), $("#cEdition"), $("#cDistribution"), false, true);
-        $('#apispark-button').click(function() {
-            //document.location.href='http://apispark.com/signin';
-            var hrefCallback = function(event) {
-				// download selected resltet framework file
-				document.location.href = "http://apispark.com/signin";
-			}
-			
-			// in case Mixpanel servers don't get back to us in time
-			// we use the same timeout value as the one defined in Mixpanel config
-			var trackTimeout = window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
-			
-			// fire the tracking event, if the event is done before the
-			// timeout, we call a window.clearTimeout
-			mixpanel.track("Clicking the AS Try it button", null, function() {
-				window.clearTimeout(trackTimeout);
-				hrefCallback();
-			});
-        });
-        $('#restlet-framework-button').click(function() {
-        	mixpanel.track("Clicked on Download link", null, function() {
-        		document.location.href='/download/';
-        	});
-        });
+
         mixpanel.track("Visited the RF homepage");
+        mixpanel.track_links(".btn-tryit-hp", "Clicking the AS Try it button");
 	});
 </#global>
 <#global header>
@@ -45,10 +27,10 @@
 <div class="span6 left section product">
 	<div id="apispark">
 	    <div class="logo">
-	    	<a href="http://apispark.com"><img width="215" height="80" src="/images/apispark-logo-new.png" alt="APISpark"/></a>
+	    	<a href="http://@apispark@" class="apisparklink"><img width="215" height="80" src="/images/apispark-logo-new.png" alt="APISpark"/></a>
 	    </div>
 	    <div class="button">
-	    	<button id="apispark-button" class="btn btn-large btn-tryit-hp" type="button">Try It</button>
+	    	<a href="http://@apispark@" class="btn btn-large btn-tryit-hp apisparklink">Try It</a>
 	    </div>
     </div>
 </div>
@@ -58,7 +40,7 @@
     		<a class="downloadlink" href="/download/"><img width="215" height="80" src="/images/logo_restletframework-new.png" alt="Restlet Framework"/></a>
    		</div>
 	    <div class="button">
-	        <button id="restlet-framework-button" class="btn btn-large btn-download-hp" type="button">Download</button>
+	        <a class="btn btn-large btn-download-hp downloadlink" href="/download/">Download</a>
 	    </div>
     </div>
 </div>
@@ -70,7 +52,7 @@
     <p>
         APISpark is the cloud service of the Restlet platform. Complete your Java-based web API with always 
         up-to-date API documentation, auto-generated client SDKs, user management, firewall and usage reports.
-        <a href="https://apispark.com">Learn more</a>
+        <a href="https://@apispark@" class="apisparklink">Learn more</a>
     </p>
     
 </div>

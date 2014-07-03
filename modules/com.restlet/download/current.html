@@ -45,15 +45,14 @@
 <#global stylesheet_files=["/stylesheets/modal.css"] />
 <#global footer>
 <#noparse>
-<#if (showNewsletter?has_content)>
-<script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
-<script type="text/javascript">
-twttr.conversion.trackPid('l4d6j');
-</script>
-<noscript>
-<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l4d6j&p_id=Twitter" />
-</noscript>
-</#if>
+	<script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	twttr.conversion.trackPid('l4k9t');
+	</script>
+	<noscript>
+	<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l4k9t&p_id=Twitter" />
+	<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l4k9t&p_id=Twitter" />
+	</noscript>
 </#noparse>
 </#global>
 <#global content>
@@ -77,28 +76,7 @@ ${campaignPopupSection}
 			</div>
 			</#noparse>
         </div>
-        <div class="right-sidebar">
-          <div class="newsletter">
-            <div class="newsletter-header">
-              <div></div>
-              <div>Subscribe below to receive exciting Restlet news</div>
-            </div>
-            <div id="email-submit">
-              <input type="email" name="EMAIL" id="newsLetterEmail"
-                   placeholder="Enter your email">
-              <button id="newsLetterOkButton" name="subscribe">Notify me</button>
-            </div>
-            <div class="clearBoth"></div>
-          </div>
-          <div class="tutorials">
-            <div><a href="/learn/tutorial/"><img src="/images/tutorial-icon.png"/></a></div>
-            <div><a href="/learn/tutorial/">Tutorial</a></div>
-          </div>
-          <div class="user-guide">
-            <div><a href="/learn/guide/"><img src="/images/user-guide-icon.png"/></a></div>
-            <div><a href="/learn/guide/">User guide</a></div>
-          </div>
-        </div>
+        
     	<div class="clearBoth"></div>
 	</div>
 </div>

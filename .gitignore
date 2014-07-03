@@ -7,3 +7,9 @@
 
 /modules/com.restlet/images/Thumbs.db
 Thumbs.db
+/config
+/data
+/build/custom.properties
+/build/dist/
+/build/temp/
+

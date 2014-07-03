@@ -13,6 +13,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="keywords"  content="REST, Java, framework, toolkit, HTTP, GWT, GAE, Android, JSE, JEE, Servlet, NIO" />
       <meta charset="utf-8" />
+      <#if indexPage??>
+      <!-- Google WebMaster Tools metatag-->
+      <meta name="@google-site-verification@" content="@google-site-verification-token@" />
+      </#if>
+      
       ${metaheader!""}
       <link type="image/gif" href="/images/favicon-restlet-org.gif" rel="icon">
       <link rel="stylesheet" type="text/css"             href='/stylesheets/bootstrap.css' />
@@ -145,13 +150,13 @@
           </ul>
         </div>
         <div class="span2b site">
-          <h4><a href="http://apispark.com/"><img src="/images/logo-apispark-small.png"/>APISpark</a></h4>
+          <h4><a href="http://@apispark@/" class="apisparklink"><img src="/images/logo-apispark-small.png"/>APISpark</a></h4>
           <ul class="sub-list">
-            <li><a href="http://@apispark@/features">${labels.footer.apispark.features['${language}']}</a></li>
-            <li><a href="http://@apispark@/pricing">${labels.footer.apispark.pricing['${language}']}</a></li>
-            <li><a href="http://@apispark@/docs/">${labels.footer.apispark.docs['${language}']}</a></li>
-            <li><a href="http://@apispark@/catalog">${labels.footer.apispark.catalog['${language}']}</a></li>
-            <li><a href="http://support.apispark.com/">${labels.footer.apispark.helpdesk['${language}']}</a></li>
+            <li><a href="http://@apispark@/features" class="apisparklink">${labels.footer.apispark.features['${language}']}</a></li>
+            <li><a href="http://@apispark@/pricing" class="apisparklink">${labels.footer.apispark.pricing['${language}']}</a></li>
+            <li><a href="http://@apispark@/docs/" class="apisparklink">${labels.footer.apispark.docs['${language}']}</a></li>
+            <li><a href="http://@apispark@/catalog" class="apisparklink">${labels.footer.apispark.catalog['${language}']}</a></li>
+            <li><a href="http://support.apispark.com/" class="apisparklink">${labels.footer.apispark.helpdesk['${language}']}</a></li>
           </ul>
         </div>
       </div>
@@ -161,6 +166,5 @@
 <#if footer??>
     ${footer}
 </#if>
-   
    </body>
 </html>

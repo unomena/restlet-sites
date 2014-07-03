@@ -25,28 +25,28 @@
 
 <#global campaignPopupSection>
 <!-- Popup panel -->
-<div id="deployModal" class="modalDialog kinlane">
+<div class="modalDialog kinlane" id="deployModal">
 	<div>
-    	<div class="close-button"></div>
-        <div class="doc-preview"></div>
-        <div class="doc-desc">
-        	<div class="doc-title">
-                <h3>Free Developer Guide</h3>
-            </div>
-            <div class="doc-content">
-                <h4><strong>A field guide to web APIs</strong> By Kin Lane</h4>
-                <div class="text">Kin Lane, API Evangelist, has been in the technology space for over 20 years and wants to help the world understand the great value and potential that is growing in the web API market.</div>
-                <div class="avatar"></div>
-                <div class="clearBoth"></div>
-            </div>
-            <div class="doc-download">
-                <input type="email" id="campaignEmail" required="required" placeholder="Email"/>
-                <button id="campaignButton">Download</button>
-            </div>
-            <div class="doc-footer">
-                <p>Your details will never be shared to a 3rd party. We hate spam just as much as you do.</p>
-            </div>
-            <div class="clearBoth"></div>
+		<strong class="title">Order Your Free Restlet Stickers!</strong>
+		<div class="close-button"></div>
+		<div class="doc-preview"></div>
+		<div class="doc-desc">
+			<div class="doc-content">
+				<div class="text">Fill in the form below and receive free Restlet stickers in your mailbox!</div>
+			</div>
+			<div class="doc-download">
+				<div class="row"><input type="text" id="campaignName" placeholder="Name" class="required"></div>
+				<div class="row"><input type="email" id="campaignEmail" placeholder="Email Address" class="required-email"></div>
+				<div class="row"><textarea cols="5" rows="5" id="campaignAddress" placeholder="Mailing Address (please include Street, City, Postcode & Country)" class="required"></textarea></div>
+				<div class="row">
+					<button id="campaignButton">Order Stickers</button>
+					<p>Your details will never be shared to a 3rd party. We hate spam just as much as you do.</p>
+				</div>
+			</div>
+			<div class="doc-footer">
+				<p></p>
+			</div>
+			<div class="clearBoth"></div>
 		</div>
 		<div class="clearBoth"></div>
 	</div>
