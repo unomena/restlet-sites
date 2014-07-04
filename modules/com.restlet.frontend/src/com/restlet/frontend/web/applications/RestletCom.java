@@ -162,7 +162,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
     private String login;
 
     /** Password for admin protected pages. */
-    private String password;
+    private char[] password;
 
     /** List of current editions. */
     private QualifiersList qualifiers;
@@ -174,7 +174,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
     private String siteLogin;
 
     /** Password for global site authentication. */
-    private String sitePassword;
+    private char[] sitePassword;
 
     private Map<String, String> toBranch;
 
@@ -199,17 +199,22 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 
         this.setStatusService(new RefreshStatusService(true, this));
 
-        this.dataUri = getProperties().getProperty("data.uri");
-        this.wwwUri = getProperties().getProperty("www.uri");
-        this.login = getProperties().getProperty("admin.login");
-        this.password = getProperties().getProperty("admin.password");
-        this.siteLogin = getProperties().getProperty("site.login");
-        this.sitePassword = getProperties().getProperty("site.password");
+        this.dataUri = getProperty("data.uri");
+        this.wwwUri = getProperty("www.uri");
+        this.login = getProperty("admin.login");
+        
+        String str = getProperty("admin.password");
+        if (str != null) {
+            this.password = str.toCharArray();
+        }
+        this.siteLogin = getProperty("site.login");
+        str = getProperty("site.password");
+        if (str != null) {
+            sitePassword = str.toCharArray();
+        }
 
-        this.feedGeneralAtomUri = getProperties().getProperty(
-                "feed.restlet.general.atom");
-        this.feedReleasesAtomUri = getProperties().getProperty(
-                "feed.restlet.releases.atom");
+        this.feedGeneralAtomUri = getProperty("feed.restlet.general.atom");
+        this.feedReleasesAtomUri = getProperty("feed.restlet.releases.atom");
 
         // Turn off extension tunnelling because of redirections.
         this.getTunnelService().setExtensionsTunnel(false);
@@ -355,7 +360,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
         ChallengeAuthenticator guard = new ChallengeAuthenticator(getContext(),
                 ChallengeScheme.HTTP_BASIC, "Admin section");
         MapVerifier verifier = new MapVerifier();
-        verifier.getLocalSecrets().put(this.login, this.password.toCharArray());
+        verifier.getLocalSecrets().put(this.login, this.password);
         guard.setVerifier(verifier);
         Router adminRouter = new Router(getContext());
         adminRouter.attach("/refresh", RestletOrgRefreshResource.class);
@@ -365,13 +370,13 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
         Encoder encoder = new Encoder(getContext(), false, true,
                 getEncoderService());
 
-        if (siteLogin != null && !siteLogin.isEmpty() && sitePassword != null
-                && !sitePassword.isEmpty()) {
+        if (siteLogin != null && sitePassword != null) {
             ChallengeAuthenticator ca = new ChallengeAuthenticator(
                     getContext(), ChallengeScheme.HTTP_BASIC, "realm");
             MapVerifier mv = new MapVerifier();
-            mv.getLocalSecrets().put(siteLogin, sitePassword.toCharArray());
-            ca.setVerifier(verifier);
+            mv.getLocalSecrets().put(siteLogin, sitePassword);
+            mv.getLocalSecrets().put(login, password);
+            ca.setVerifier(mv);
             ca.setNext(result);
             encoder.setNext(ca);
         } else {

@@ -31,7 +31,7 @@ public class MavenRestletOrg extends BaseApplication {
     public MavenRestletOrg(String propertiesFileReference) throws IOException {
         super(propertiesFileReference);
 
-        this.dataUri = getProperties().getProperty("data.uri");
+        this.dataUri = getProperty("data.uri");
 
         MediaType mediaType = new MediaType("application/sha1",
                 "Secured hash algorithm");

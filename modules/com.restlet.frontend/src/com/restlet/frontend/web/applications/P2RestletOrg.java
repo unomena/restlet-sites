@@ -29,7 +29,7 @@ public class P2RestletOrg extends BaseApplication {
     public P2RestletOrg(String propertiesFileReference) throws IOException {
         super(propertiesFileReference);
 
-        this.dataUri = getProperties().getProperty("data.uri");
+        this.dataUri = getProperty("data.uri");
     }
 
     @Override

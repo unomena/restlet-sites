@@ -43,12 +43,18 @@ public class BaseApplication extends Application {
     }
 
     /**
-     * Returns the application's properties.
+     * Returns the value of the given property, or null. Empty values are set to
+     * null.
      * 
-     * @return The application's properties.
+     * @param property
+     *            The property.
      */
-    public Properties getProperties() {
-        return this.properties;
+    public String getProperty(String property) {
+        String str = this.properties.getProperty(property);
+        if (str != null && !str.isEmpty()) {
+            return str;
+        }
+        return null;
     }
 
 }
