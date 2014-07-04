@@ -41,6 +41,8 @@ import org.restlet.routing.Template;
 import org.restlet.routing.TemplateRoute;
 import org.restlet.security.ChallengeAuthenticator;
 import org.restlet.security.MapVerifier;
+import org.restlet.security.SecretVerifier;
+import org.restlet.security.Verifier;
 import org.restlet.util.Series;
 
 import com.restlet.frontend.objects.framework.Distribution;
@@ -158,10 +160,17 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
     /** Freemarker configuration object */
     private Configuration fmc;
 
-    /** Login for protected pages. */
+    /** Login for global site authentication. */
+    private String siteLogin;
+
+    /** Password for global site authentication. */
+    private String sitePassword;
+    
+    
+    /** Login for admin protected pages. */
     private String login;
 
-    /** Password for protected pages. */
+    /** Password for admin protected pages. */
     private String password;
 
     /** List of current editions. */
@@ -197,6 +206,9 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
         this.wwwUri = getProperties().getProperty("www.uri");
         this.login = getProperties().getProperty("admin.login");
         this.password = getProperties().getProperty("admin.password");
+        this.siteLogin = getProperties().getProperty("site.login");
+        this.sitePassword = getProperties().getProperty("site.password");
+        
 
         this.feedGeneralAtomUri = getProperties().getProperty(
                 "feed.restlet.general.atom");
@@ -353,11 +365,29 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
         adminRouter.attach("/refresh", RestletOrgRefreshResource.class);
         guard.setNext(adminRouter);
         result.attach("/admin", guard);
-
+        
         Encoder encoder = new Encoder(getContext(), false, true,
                 getEncoderService());
-        encoder.setNext(result);
-
+        
+        if (siteLogin != null && !siteLogin.isEmpty() && sitePassword != null && !sitePassword.isEmpty()) {
+	        ChallengeAuthenticator ca = new ChallengeAuthenticator(getContext(), ChallengeScheme.HTTP_BASIC, "realm");
+	        ca.setVerifier(new SecretVerifier() {
+				
+				@Override
+				public int verify(String arg0, char[] arg1) {
+					if (arg0.equals(siteLogin) && compare(arg1, sitePassword.toCharArray())) {
+						return Verifier.RESULT_VALID;
+					}
+					return Verifier.RESULT_INVALID;
+				}
+			});
+			ca.setNext(result);
+	        encoder.setNext(ca);
+        } else {
+        	encoder.setNext(result);
+        }
+       
+        
         return encoder;
     }
 
