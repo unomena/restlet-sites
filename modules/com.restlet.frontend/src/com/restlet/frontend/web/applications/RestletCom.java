@@ -41,8 +41,6 @@ import org.restlet.routing.Template;
 import org.restlet.routing.TemplateRoute;
 import org.restlet.security.ChallengeAuthenticator;
 import org.restlet.security.MapVerifier;
-import org.restlet.security.SecretVerifier;
-import org.restlet.security.Verifier;
 import org.restlet.util.Series;
 
 import com.restlet.frontend.objects.framework.Distribution;
@@ -160,13 +158,6 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
     /** Freemarker configuration object */
     private Configuration fmc;
 
-    /** Login for global site authentication. */
-    private String siteLogin;
-
-    /** Password for global site authentication. */
-    private String sitePassword;
-    
-    
     /** Login for admin protected pages. */
     private String login;
 
@@ -178,6 +169,12 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 
     /** List of current qualifiers. */
     private Map<String, Qualifier> qualifiersMap;
+
+    /** Login for global site authentication. */
+    private String siteLogin;
+
+    /** Password for global site authentication. */
+    private String sitePassword;
 
     private Map<String, String> toBranch;
 
@@ -208,7 +205,6 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
         this.password = getProperties().getProperty("admin.password");
         this.siteLogin = getProperties().getProperty("site.login");
         this.sitePassword = getProperties().getProperty("site.password");
-        
 
         this.feedGeneralAtomUri = getProperties().getProperty(
                 "feed.restlet.general.atom");
@@ -365,29 +361,23 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
         adminRouter.attach("/refresh", RestletOrgRefreshResource.class);
         guard.setNext(adminRouter);
         result.attach("/admin", guard);
-        
+
         Encoder encoder = new Encoder(getContext(), false, true,
                 getEncoderService());
-        
-        if (siteLogin != null && !siteLogin.isEmpty() && sitePassword != null && !sitePassword.isEmpty()) {
-	        ChallengeAuthenticator ca = new ChallengeAuthenticator(getContext(), ChallengeScheme.HTTP_BASIC, "realm");
-	        ca.setVerifier(new SecretVerifier() {
-				
-				@Override
-				public int verify(String arg0, char[] arg1) {
-					if (arg0.equals(siteLogin) && compare(arg1, sitePassword.toCharArray())) {
-						return Verifier.RESULT_VALID;
-					}
-					return Verifier.RESULT_INVALID;
-				}
-			});
-			ca.setNext(result);
-	        encoder.setNext(ca);
+
+        if (siteLogin != null && !siteLogin.isEmpty() && sitePassword != null
+                && !sitePassword.isEmpty()) {
+            ChallengeAuthenticator ca = new ChallengeAuthenticator(
+                    getContext(), ChallengeScheme.HTTP_BASIC, "realm");
+            MapVerifier mv = new MapVerifier();
+            mv.getLocalSecrets().put(siteLogin, sitePassword.toCharArray());
+            ca.setVerifier(verifier);
+            ca.setNext(result);
+            encoder.setNext(ca);
         } else {
-        	encoder.setNext(result);
+            encoder.setNext(result);
         }
-       
-        
+
         return encoder;
     }
 
@@ -872,7 +862,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 
         redirect(router, "/learn/tutorial/1.2/", "/learn/tutorial/2.0");
         redirect(router, "/learn/guide/1.2/", "/learn/guide/2.0");
-        
+
         redirectBranch(router, "/learn/javadocs", "/learn/javadocs/{branch}",
                 null);
 
