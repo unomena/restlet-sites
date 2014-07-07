@@ -3,7 +3,7 @@ package com.restlet.frontend.web.firewall.counter.individualCounter;
 import java.util.concurrent.TimeUnit;
 
 import com.google.common.base.Stopwatch;
-import com.restlet.frontend.web.firewall.old.counter.CounterFeedback;
+import com.restlet.frontend.web.firewall.counter.CounterFeedback;
 
 public class IndividualOnPeriodInMemoryTrafficCounter extends
         IndividualOnPeriodTrafficCounter {
@@ -16,7 +16,7 @@ public class IndividualOnPeriodInMemoryTrafficCounter extends
     }
 
     @Override
-    public CounterFeedback increase() {
+    public synchronized CounterFeedback increase() {
         if (stopwatch.elapsed(TimeUnit.SECONDS) > period) {
             stopwatch.reset();
             stopwatch.start();
@@ -32,7 +32,7 @@ public class IndividualOnPeriodInMemoryTrafficCounter extends
     }
 
     @Override
-    public void decrease() {
+    public synchronized void decrease() {
     }
 
 }

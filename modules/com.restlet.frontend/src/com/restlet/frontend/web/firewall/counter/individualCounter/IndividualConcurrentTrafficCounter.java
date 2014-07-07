@@ -1,20 +1,21 @@
 package com.restlet.frontend.web.firewall.counter.individualCounter;
 
-import com.restlet.frontend.web.firewall.old.counter.CounterFeedback;
+import com.restlet.frontend.web.firewall.counter.CounterFeedback;
 
 public class IndividualConcurrentTrafficCounter extends
         IndividualTrafficCounter {
 
     @Override
-    public CounterFeedback increase() {
-        // TODO Auto-generated method stub
-        return null;
+    public synchronized CounterFeedback increase() {
+        consumed++;
+        CounterFeedback counterFeedback = new CounterFeedback();
+        counterFeedback.setConsumed(consumed);
+        return counterFeedback;
     }
 
     @Override
-    public void decrease() {
-        // TODO Auto-generated method stub
-
+    public synchronized void decrease() {
+        consumed--;
     }
 
 }

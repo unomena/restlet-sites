@@ -6,8 +6,13 @@ public class IPCountingPolicy implements CountingPolicy {
 
     @Override
     public String determineCounterValue(Request request) {
-        // TODO : and if getAddress null ?
-        return request.getClientInfo().getAddress();
+        return request.getResourceRef().getQueryAsForm()
+                .getFirstValue("firewall");
+    }
+
+    @Override
+    public String determineCounterGroup(String counterValue) {
+        return null;
     }
 
 }

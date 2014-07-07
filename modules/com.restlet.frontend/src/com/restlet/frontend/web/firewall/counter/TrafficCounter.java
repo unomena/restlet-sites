@@ -11,7 +11,6 @@ import com.restlet.frontend.web.firewall.counter.countingPolicy.CountingPolicy;
 import com.restlet.frontend.web.firewall.handler.RateLimitationHandler;
 import com.restlet.frontend.web.firewall.handler.ThresholdHandler;
 import com.restlet.frontend.web.firewall.handler.TrafficOverrider;
-import com.restlet.frontend.web.firewall.old.counter.CounterFeedback;
 
 public abstract class TrafficCounter {
 
@@ -39,7 +38,7 @@ public abstract class TrafficCounter {
             handlers = new ArrayList<ThresholdHandler>();
         }
 
-        insertHandler(handler, 0, handlers.size());
+        handlers.add(handler);
     }
 
     public void setCountingPolicy(CountingPolicy countingPolicy) {
@@ -50,16 +49,19 @@ public abstract class TrafficCounter {
             String counterValue) {
 
         CounterFeedback counterFeedback = increaseCounter(counterValue);
+        counterFeedback.setGroup(determineCounterGroup(counterValue));
+        counterFeedback.setCounterValue(counterValue);
 
         for (TrafficOverrider trafficOverrider : trafficOverriders) {
-            trafficOverrider.overrideTraffic(request, response,
-                    counterValue, counterFeedback);
+            trafficOverrider
+                    .overrideTraffic(request, response, counterFeedback);
         }
 
         for (ThresholdHandler handler : handlers) {
-            if (handler.getLimit() < counterFeedback.getConsumed()) {
+            if (handler.getLimit(counterFeedback.getGroup()) < counterFeedback
+                    .getConsumed()) {
                 int handlerResponse = handler.thresholdActivated(request,
-                        response, counterValue, counterFeedback);
+                        response, counterFeedback);
                 if (handlerResponse != Filter.CONTINUE) {
                     return handlerResponse;
                 }
@@ -69,23 +71,20 @@ public abstract class TrafficCounter {
         return Filter.CONTINUE;
     }
 
+    public void decrease(String counterValue) {
+        decreaseCounter(counterValue);
+    }
+
     protected abstract CounterFeedback increaseCounter(String counterValue);
+    
+    protected abstract void decreaseCounter(String counterValue);
+
+    private String determineCounterGroup(String counterValue) {
+        return countingPolicy.determineCounterGroup(counterValue);
+    }
 
     public String determineCounterValue(Request request) {
         return this.countingPolicy.determineCounterValue(request);
-    }
-
-    private void insertHandler(ThresholdHandler handler, int posMin, int posMax) {
-        if (posMax - posMin == 0) {
-            handlers.add(posMin, handler);
-        } else {
-            int posAvg = (posMax - posMin) / 2;
-            if (handler.getLimit() > handlers.get(posAvg).getLimit()) {
-                insertHandler(handler, posMin, posAvg);
-            } else {
-                insertHandler(handler, posAvg, posMax);
-            }
-        }
     }
 
     public boolean isEnough() {

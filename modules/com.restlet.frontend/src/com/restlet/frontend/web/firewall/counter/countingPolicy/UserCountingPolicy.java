@@ -11,7 +11,17 @@ public class UserCountingPolicy implements CountingPolicy {
             return request.getClientInfo().getUser().getIdentifier();
         }
 
-        return null;
+        return "anonymous";
+    }
+
+    @Override
+    public String determineCounterGroup(String counterValue) {
+
+        if (!"anonymous".equals(counterValue)) {
+            return "user";
+        }
+
+        return "anonymous";
     }
 
 }

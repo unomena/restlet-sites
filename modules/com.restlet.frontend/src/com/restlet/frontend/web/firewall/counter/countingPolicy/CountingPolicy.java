@@ -6,4 +6,6 @@ public interface CountingPolicy {
 
     public String determineCounterValue(Request request);
 
+    public String determineCounterGroup(String counterValue);
+
 }

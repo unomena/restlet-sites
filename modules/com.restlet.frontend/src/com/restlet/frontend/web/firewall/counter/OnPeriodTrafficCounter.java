@@ -7,7 +7,6 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.restlet.frontend.web.firewall.counter.countingPolicy.CountingPolicy;
 import com.restlet.frontend.web.firewall.counter.individualCounter.IndividualOnPeriodTrafficCounter;
-import com.restlet.frontend.web.firewall.old.counter.CounterFeedback;
 
 public abstract class OnPeriodTrafficCounter extends TrafficCounter {
 
@@ -23,11 +22,9 @@ public abstract class OnPeriodTrafficCounter extends TrafficCounter {
 
     private void initializeCache() {
 
-        final IndividualOnPeriodTrafficCounter individualTrafficCounter = initializeIndividualTrafficCounter();
-
         CacheLoader<String, IndividualOnPeriodTrafficCounter> loader = new CacheLoader<String, IndividualOnPeriodTrafficCounter>() {
             public IndividualOnPeriodTrafficCounter load(String key) {
-                return individualTrafficCounter;
+                return initializeIndividualTrafficCounter();
             }
         };
 
@@ -43,6 +40,11 @@ public abstract class OnPeriodTrafficCounter extends TrafficCounter {
         IndividualOnPeriodTrafficCounter individualCounter = cache
                 .getUnchecked(counterValue);
         return individualCounter.increase();
+    }
+
+    @Override
+    protected void decreaseCounter(String counterValue) {
+
     }
 
     protected int getPeriod() {

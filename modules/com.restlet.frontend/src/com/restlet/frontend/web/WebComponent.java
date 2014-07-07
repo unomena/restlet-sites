@@ -81,6 +81,7 @@ public class WebComponent extends Component {
      */
     public WebComponent() throws Exception {
         super();
+
         getLogService().setLoggerName("com.noelios.web.WebComponent.www");
         // getLogService().setIdentityCheck(true);
 
