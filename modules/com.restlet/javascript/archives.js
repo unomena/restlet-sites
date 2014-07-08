@@ -240,7 +240,7 @@ function setDownloadButton() {
 						mixpanel.track("Shared email", {
 							"email": $("#campaignEmail").val(),
 							"Name": $("#campaignName").val(),
-							"Mailing address": $("#campaignAddress").val(),
+							"Mailing Address": $("#campaignAddress").val(),
 							"Email field location":"RF and AS Stickers"
 						});
 						mixpanel.alias($("#campaignEmail").val(), mixpanel.get_distinct_id());
