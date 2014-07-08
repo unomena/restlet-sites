@@ -23,7 +23,7 @@ You must add the following jar (provided in the "lib" directory of
 
 - org.restlet.ext.swagger
 
-Make your application class, extend org.restlet.ext.swagger.SwaggerApplication instead of org.restlet.Application.
+Make your application class extend org.restlet.ext.swagger.SwaggerApplication instead of org.restlet.Application.
 
 By default, the Swagger documentation will be available on the path "/api-docs" of your API. If you want to change this path, you can specify it manually in the method _createInboundRoot_: 
 
