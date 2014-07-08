@@ -7,7 +7,7 @@ Introduction
 This extension provides a preview integration with Swagger including:
 - generation of Swagger descriptor in JSON
 - introspect JAX-RS API based applications
-- Restlet API based applications
+- introspect Restlet API based applications
 
 Additional work is required to:
 - parse a Swagger descriptor in JSON to set up an application
