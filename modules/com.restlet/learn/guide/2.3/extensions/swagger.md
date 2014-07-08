@@ -46,7 +46,7 @@ Swagger-UI
 
 To display the Swagger-UI of your API, go on the page http://petstore.swagger.wordnik.com, enter the URL of your Swagger definition and click on explore.
 
-![swagger-ui](/learn/archives/images/swaggerExtensionSwaggerUI.png)
+![swagger-ui](/modules/com.restlet/learn/archives/images/swaggerExtensionSwaggerUI.png)
 
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/swagger/package-summary.html).
