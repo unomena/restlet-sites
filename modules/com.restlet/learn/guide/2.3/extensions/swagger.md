@@ -41,6 +41,39 @@ public Restlet createInboundRoot() {
 
 Here, you specify that the Swagger definition will be provided on the path "/docs".
 
+Customization
+=============
+
+If you want to add information to your Swagger definition, to get them from files or any other customization, you can easily change the behavior of the Restlet providing the definition in the SwaggerApplication class by overriding the method _getwaggerSpecificationRestlet()_. Here is how to proceed, for this example, we will get the Swagger definition from files:
+
+```java
+
+@Override
+    public SwaggerSpecificationRestlet getSwaggerSpecificationRestlet(
+            Context context) {
+        return new SwaggerSpecificationRestlet(getContext()) {
+            @Override
+            public Representation getApiDeclaration(String category) {
+                JacksonRepresentation<ApiDeclaration> result = new JacksonRepresentation<ApiDeclaration>(
+                        new FileRepresentation("/path/to/my/repo/" + category,
+                                MediaType.APPLICATION_JSON),
+                        ApiDeclaration.class);
+                return result;
+            }
+
+            @Override
+            public Representation getResourceListing() {
+                JacksonRepresentation<ApiDeclaration> result = new JacksonRepresentation<ApiDeclaration>(
+                        new FileRepresentation("/path/to/my/repo/api-docs",
+                                MediaType.APPLICATION_JSON),
+                        ApiDeclaration.class);
+                return result;
+            }
+        };
+    }
+
+```
+
 Swagger-UI
 ==========
 
