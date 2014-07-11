@@ -5,9 +5,9 @@ Introduction
 ============
 
 This extension provides a preview integration with Swagger including:
-- generation of Swagger descriptor in JSON
-- introspect JAX-RS API based applications
-- introspect Restlet API based applications
+- automated generation of Swagger descriptor in JSON
+- introspection of JAX-RS API based applications
+- introspection of Restlet API based applications
 
 Additional work is required to:
 - parse a Swagger descriptor in JSON to set up an application
@@ -17,11 +17,15 @@ In this scenario, we will add Swagger support to a Restlet based API then displa
 Usage
 =====
 
-You must add the following jar (provided in the "lib" directory of
-[restlet framework](http://restlet.com/download/current#release=stable&edition=jse&distribution=zip 
-"download restlet framework")) to your classpath: 
+### Dependencies
 
-- org.restlet.ext.swagger
+Add org.restlet.ext.swagger.jar (provided in the "lib" directory of
+[restlet framework](http://restlet.com/download/current#release=stable&edition=jse&distribution=zip 
+"download restlet framework")) to your classpath.
+ 
+Make sure you are using the version 2.3 of Restlet and java 1.7.
+
+### Configuration
 
 Make your application class extend org.restlet.ext.swagger.SwaggerApplication instead of org.restlet.Application.
 
@@ -44,7 +48,9 @@ Here, you specify that the Swagger definition will be provided on the path "/doc
 Customization
 =============
 
-If you want to add information to your Swagger definition, to get them from files or any other customization, you can easily change the behavior of the Restlet providing the definition in the SwaggerApplication class by overriding the method _getwaggerSpecificationRestlet()_. Here is how to proceed, for this example, we will get the Swagger definition from files:
+If you want to display a definition edited manually, the SwaggerApplication can get it directly from files. To do that, you just have to override the method _getSwaggerSpecificationRestlet()_ of class SwaggerApplication and make it return a custom Restlet. 
+
+See sample implementation below: 
 
 ```java
 
@@ -79,7 +85,9 @@ Swagger-UI
 
 To display the Swagger-UI of your API, go on the page http://petstore.swagger.wordnik.com, enter the URL of your Swagger definition and click on explore.
 
-![swagger-ui](/modules/com.restlet/learn/archives/images/swaggerExtensionSwaggerUI.png)
+![swagger-ui](/learn/archives/images/swaggerExtensionSwaggerUI.png)
+
+You can also clone/fork the [project](https://github.com/wordnik/swagger-ui) and embed it.
 
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/swagger/package-summary.html).
