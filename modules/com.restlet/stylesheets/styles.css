@@ -31,8 +31,6 @@ body {
 
 .hero {
 	background-image: url(/images/header-bg-new.png);
-	border-left: 1px solid #E1E1E1;
-	border-right: 1px solid #E1E1E1;
 	margin-bottom: 0;
 	margin-left: auto;
 	margin-right: auto;
