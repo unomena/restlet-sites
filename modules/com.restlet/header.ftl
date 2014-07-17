@@ -1,5 +1,5 @@
-<#global javascript_files      = [] />
-<#global stylesheet_files      = [] />
+<#global javascript_files=[] />
+<#global stylesheet_files=[] />
 <#global sections              = hierarchy.sections />
 <#global labels                = labels.labels />
 <#if pp.sourceDirectory?contains("error")>
@@ -25,32 +25,34 @@
 
 <#global campaignPopupSection>
 <!-- Popup panel -->
-<div class="modalDialog kinlane" id="deployModal">
-	<div>
-		<strong class="title">Order Your Free Restlet Stickers!</strong>
-		<div class="close-button"></div>
-		<div class="doc-preview"></div>
-		<div class="doc-desc">
-			<div class="doc-content">
-				<div class="text">Fill in the form below and receive free Restlet stickers in your mailbox!</div>
-			</div>
-			<div class="doc-download">
-				<div class="row"><input type="text" id="campaignName" placeholder="Name" class="required"></div>
-				<div class="row"><input type="email" id="campaignEmail" placeholder="Email Address" class="required-email"></div>
-				<div class="row"><textarea cols="5" rows="5" id="campaignAddress" placeholder="Mailing Address (please include Street, City, Postcode & Country)" class="required"></textarea></div>
-				<div class="row">
-					<button id="campaignButton">Order Stickers</button>
-					<p>Your details will never be shared to a 3rd party. We hate spam just as much as you do.</p>
+    <div class="modalDialog kinlane" id="deployModal">
+		<div>
+			<div class="close-button"></div>
+			<div class="doc-preview"></div>
+			<div class="doc-desc">
+				<strong class="title">Get 40% off Restlet book</strong>
+				<div class="doc-content">
+					<div class="text-holder">
+						<strong class="subhead"><span id="beginning">Restlet in Action</span> by Jerome Louvel, Thierry Boileau &amp; Thierry Templier.</strong>
+						<p>Enter your email below and receive a special promo code to purchase the book or e-book with 40% off! <strong>Code limited to the first 100 participants.</strong></p>
+					</div>
+				</div>	
+				<div class="doc-download">
+					<div class="row"><input type="email" id="campaignEmail" placeholder="Email" class="required-email"/>
+						<div class="row button">
+							<button id="campaignButton">Get Code</button>
+						</div>
+					</div>
+					<span class="txt-info">Your details will never be shared to a 3rd party. We hate spam just as much as you do.</span>
 				</div>
-			</div>
-			<div class="doc-footer">
-				<p></p>
+				<div class="doc-footer">
+					<p></p>
+				</div>
+				<div class="clearBoth"></div>
 			</div>
 			<div class="clearBoth"></div>
 		</div>
-		<div class="clearBoth"></div>
 	</div>
-</div>
 </#global>
 
 <#global downloadSection>

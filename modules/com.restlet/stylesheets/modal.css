@@ -19,20 +19,21 @@
 	clear: both;
 }
 .modalDialog.kinlane > div {
-	background-image: url(../images/kinlane-background-min.png);
-	background-repeat:no-repeat;
-	background-color:#3f65a4;
-	box-shadow: 0 0 17px 7px rgba(50, 50, 50, 0.75);
+	min-width: 320px;
+	max-width:802px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 200px;
-	width:802px;
-	height: 372px;
-	padding:33px 37px 0;
+	position: relative;
+	padding:33px 19px 0px;
 	box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
-	position: relative;
+	font:17px/28px Arial, Helvetica, sans-serif;
+	box-shadow: 0 0 25px 0 rgba(50, 50, 50, 0.75);
+	-webkit-box-shadow: 0 0 25px 0 rgba(50, 50, 50, 0.75);
+	background:#a1afd3 url(../images/bg.jpg) no-repeat 50% 0;
+	background-size: auto 100%;
 }
 .modalDialog.kinlane div.close-button {
 	background-image: url(../images/kinlane-close-button.png);
@@ -46,34 +47,33 @@
 	width: 28px;
 }
 .modalDialog.kinlane .title{
-	color:#fff;
-	text-transform: capitalize;
-	font:bold 40px/43px Arial, Helvetica, sans-serif;
+	color: #535049;
+	font:bold 31px/33px Arial, Helvetica, sans-serif;
 	display: block;
 	margin:0 0 11px;
+	text-align: left;
 }
 .modalDialog.kinlane div.doc-preview{
 	width:305px;
-	height:245px;
-	background-image: url(../images/stickers-campaign.png);
+	height:320px;
+	background-image: url(../images/img.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	float: left;
 	margin-left: 15px;
 	margin-top: 5px;
+	margin-bottom: 25px;
 }
 .modalDialog.kinlane div.doc-desc > div.doc-content {
-	background-color: rgba(41, 63, 112, 0.7);
-	color: #fff;
-	height: inherit;
-	margin-bottom: 10px;
-	padding-left: 13px;
-	padding-top: 2px;
-	padding-right:2px;
-	padding-bottom:7px;
+	background:rgba(186,206,246,0.6);
+	color: #535049;
+	height: 160px;
 	position: relative;
-	left: 7px;
-	width: 362px;
+	width: 390px;
+	margin:0 3px 9px 0;
+	padding:13px 14px 1px;
+	overflow:hidden;	
+	margin-top: 20px;
 }
 .modalDialog.kinlane div.doc-desc > div.doc-content > div.text{
 	font: 18px/26px Arial, Helvetica, sans-serif;
@@ -103,6 +103,24 @@
 	padding:5px 13px;
 	margin:0 0 4px 0px;
 }
+
+.modalDialog.kinlane div.doc-desc input[type="email"]{
+	width:280px;
+	float:left;
+	height:43px;
+	outline:none;
+	color:#3f4348;
+	font-size:16px;
+	line-height:20px;
+	border-radius:3px;
+	background: #faf4e0;
+	padding:10px 16px 11px;
+	border:solid 1px #797f90;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
 .modalDialog.kinlane div.doc-desc textarea{
 	width:350px !important;
 	height:52px !important;
@@ -130,20 +148,22 @@
 .modalDialog.kinlane div.doc-desc .row{
 	overflow:hidden;
 	font:11px/13px Arial, Helvetica, sans-serif;
-	margin-left: 0px;
+	margin: 0 0 0;
+	text-align: left;
+	color: #535049;
 }
 .modalDialog.kinlane div.doc-desc .row button{
 	border-radius:5px;
 	background:#efa10f;
-	color:#fff;
+	color:#3f4348;
 	font-size:20px;
 	line-height:30px;
-	height:36px;
+	height:43px;
+	width: 128px;
 	border:none;
 	float:left;
-	font-weight:bold;
+	font: bold 16px/28px Arial, Helvetica, sans-serif;
 	padding:3px 10px 5px;
-	margin:0 9px 10px 12px;
 	cursor:pointer;
 }
 .modalDialog.kinlane div.doc-desc .row button:hover{background: #fc6;}
@@ -160,12 +180,44 @@
 	padding-top: 2px;
 }
 .doc-desc{
-	width: 400px;
+	width: 440px;
 	float: right;
-	padding: 15px 0 0;
+	padding: 0 0 0;
 }
 .doc-desc form fieldset{
 	border:none;
 	margin:0;
 	padding:0;
+}
+
+#beginning {
+	font-size: 21px;
+}
+
+.subhead {
+	text-align: left;
+	margin-bottom: 12px;
+	display: block;
+}
+
+.text-holder p {
+	font: 17px/28px Arial, Helvetica, sans-serif;
+	color: #535049;
+	text-align: left;
+}
+
+.doc-download {
+	margin-right: 20px;
+}
+
+.row.button {
+	width: 130px;
+	float: right;
+}
+
+.txt-info {
+	display:block;
+	color:#000;
+	font-size:11px;
+	line-height:15px;
 }
