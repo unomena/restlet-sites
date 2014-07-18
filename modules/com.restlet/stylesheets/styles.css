@@ -31,8 +31,6 @@ body {
 
 .hero {
 	background-image: url(/images/header-bg-new.png);
-	border-left: 1px solid #E1E1E1;
-	border-right: 1px solid #E1E1E1;
 	margin-bottom: 0;
 	margin-left: auto;
 	margin-right: auto;
@@ -140,7 +138,7 @@ a {
 }
 
 .container > .span7 {
-	width: 650px;
+	width: 670px;
 }
 
 .span3.center {
@@ -405,8 +403,8 @@ hr {
 
 div.restlet-community {
 	background-image: url(/images/restlet-background.png);
-	margin-left: -15px;
-	margin-right: -15px;
+	margin-left: -35px;
+	margin-right: -35px;
 	padding-left: 15px;
 	padding-right: 15px;
 	margin-top: 30px;
@@ -597,7 +595,7 @@ div.content.footerWrapper .footer {
 	margin-left: auto;
 	margin-right: auto;
 	padding: 15px 10px;
-	width: 900px;
+	width: 898px;
 	font-size: 9px;
 }
 
@@ -958,7 +956,7 @@ form,form>input {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    width: 450px;
+    width: 400px;
 }
 
 .guide.navigation.next {
@@ -969,6 +967,10 @@ form,form>input {
 
 .figure {
     text-align:center;
+}
+
+.span2.left.section {
+	margin-left: 0px !important;
 }
 
 .nav > li > a.active {
@@ -1181,7 +1183,7 @@ code {
 .downloadsection {
 	background-color: #dae1ef;
 	background-image: url(/images/downloads-right-background.png);
-	background-size: 299px 185px;
+	background-size: 340px 185px;
 	background-position: right top;
 	background-repeat: no-repeat;
 	margin-bottom: 20px;
@@ -1190,6 +1192,8 @@ code {
 	padding-left: 20px;
 	padding-right: 10px;
 	height: 153px;
+	width: 888px;
+	margin-left: -34px
 }
 
 .downloadsection .span3 {
