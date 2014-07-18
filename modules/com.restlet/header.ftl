@@ -40,7 +40,17 @@
 				<div class="doc-download">
 					<div class="row"><input type="email" id="campaignEmail" placeholder="Email" class="required-email"/>
 						<div class="row button">
-							<button id="campaignButton">Get Code</button>
+							<button id="campaignButton" onclick="change()">Get Code</button>
+							<script type="text/javascript">
+								function change() {
+									if (checkEmail("campaignEmail", "campaignButton")) {
+										var button = document.getElementById("campaignButton");
+										button.style.background='#77cb38';
+										button.style.lineHeight='16px';
+										button.innerHTML = "Code:\nRESTLET40";
+									}
+								}
+							</script>
 						</div>
 					</div>
 					<span class="txt-info">Your details will never be shared to a 3rd party. We hate spam just as much as you do.</span>
