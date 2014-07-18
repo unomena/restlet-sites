@@ -95,27 +95,26 @@ function setDownloadButton() {
 		
 		$('#campaignButton').click(
 				function(event) {
-					if (checkEmail("campaignEmail", "campaignButton") 
-							&& checkFieldEmpty("campaignName", "campaignButton") 
-							&& checkFieldEmpty("campaignAddress", "campaignButton")) {
+					if (checkEmail("campaignEmail", "campaignButton")) {
+						this.style.background='#77cb38';
+						this.style.lineHeight='16px';
+						this.innerHTML = "Code:\nRESTLET40";
+						
 						mixpanel.track("Shared email", {
 							"email": $("#campaignEmail").val(),
-							"Name": $("#campaignName").val(),
-							"Mailing Address": $("#campaignAddress").val(),
-							"Email field location":"RF and AS Stickers"
+							"Email field location":"Restlet book code promo"
 						});
 						mixpanel.alias($("#campaignEmail").val(), mixpanel.get_distinct_id());
 						mixpanel.people.set({"$email": $("#campaignEmail").val()});
-						mixpanel.track("Ordered RF and AS stickers");
 						
 						// close popup
-						$("#campaignName").val("");
+						/*
 						$("#campaignEmail").val("");
-						$("#campaignAddress").val("");
 						$("#deployModal").hide();
+						*/
 						
 						// Set a one year cookie dedicated to this campaign. 
-						$.cookie('stickers-campaign-v2', 'true', {
+						$.cookie('restlet-in-action-campaign', 'true', {
 							expires: 365
 						});
 					}
@@ -136,7 +135,7 @@ function setDownloadButton() {
 							$('#maven_infos').css('display','block');
 							fillRightSidebar('#maven_infos');
 
-							if ("true" != $.cookie("stickers-campaign-v2")) {
+							if ("true" != $.cookie("restlet-in-action-campaign")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
@@ -169,7 +168,7 @@ function setDownloadButton() {
 							$('#eclipse_infos').css('display','block');
 							fillRightSidebar('#eclipse_infos');
 
-							if ("true" != $.cookie("stickers-campaign-v2")) {
+							if ("true" != $.cookie("restlet-in-action-campaign")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
@@ -201,7 +200,7 @@ function setDownloadButton() {
 
 						var hrefCallback = function(event) {
 							// open campaign popup
-							if ("true" != $.cookie("stickers-campaign-v2")) {
+							if ("true" != $.cookie("restlet-in-action-campaign")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}

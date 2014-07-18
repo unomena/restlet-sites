@@ -12,6 +12,10 @@
 
 		// close the modal popup when clicking on the cross buntton
 		$("#deployModal div.close-button").click(function() {
+			$("#campaignEmail").val("");
+			$("#campaignButton").css("background","#efa10f");
+			$("#campaignButton").css("line-height","30px");
+			$("#campaignButton").html("Get Code");
 			$("#deployModal").hide();
         });
         

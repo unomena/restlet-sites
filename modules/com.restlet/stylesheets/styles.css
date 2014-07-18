@@ -1138,7 +1138,7 @@ form,form>input {
 	font-size: 15px;
 	font-weight: bold;
 	height: 35px;
-	width: 125px;
+	width: 110px;
 	border: solid 1px #ef9e00;
 	background-image: -moz-linear-gradient(top, #f8b800, #ef9e00);
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ef9e00), color-stop(1, #eda840) );
