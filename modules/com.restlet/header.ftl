@@ -33,7 +33,7 @@
 				<strong class="title">Get 40% off Restlet book</strong>
 				<div class="doc-content">
 					<div class="text-holder">
-						<strong class="subhead"><span id="beginning">Restlet in Action</span> by Jerome Louvel, Thierry Boileau &amp; Thierry Templier.</strong>
+						<strong class="subhead"><span id="beginning">Restlet in Action</span> by Jerome Louvel, Thierry Templier &amp; Thierry Boileau.</strong>
 						<p>Enter your email below and receive a special promo code to purchase the book or e-book with 40% off! <strong>Code limited to the first 100 participants.</strong></p>
 					</div>
 				</div>	
