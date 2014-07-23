@@ -98,6 +98,7 @@ function setDownloadButton() {
 					if (checkEmail("campaignEmail", "campaignButton")) {
 						this.style.background='#77cb38';
 						this.style.lineHeight='16px';
+						this.disabled=true;
 						this.innerHTML = "Code:\nRESTLET40";
 						
 						mixpanel.track("Shared email", {
