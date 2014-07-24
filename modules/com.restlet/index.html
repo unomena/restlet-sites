@@ -1,7 +1,14 @@
 <#global title="Restlet - REST Framework for Java &amp; PaaS for Web APIs" />
 
+<#global metaheader>
+      <!-- Google WebMaster Tools metatag-->
+      <meta name="${ant["google.site.verification"]!""}" content="${ant["google.site.verification.token"]!""}" />
+</#global>
+<#global googlelinkVerification>
+            <!-- Google+ link verification -->
+            <div class="span2b site"><a href="${ant["google.plus.link"]!""}" rel="publisher" /></div>
+</#global>
 <#global headerClass="header"/>
-<#global indexPage="index"/>
 
 <#global javascript_files=["/javascript/jquery-1.9.0.min.js", "/javascript/jquery-cookie.js", "/javascript/jsclass-core.js", "/javascript/json-minified.js", "/javascript/restlet-client.js", "/javascript/restlet-feedSummary.js", "/javascript/bootstrap.min.js", "/javascript/data.js", "/javascript/distributions.js"] />
 <#global javascript>
@@ -27,10 +34,10 @@
 <div class="span6 left section product">
 	<div id="apispark">
 	    <div class="logo">
-	    	<a href="http://@apispark@" class="apisparklink"><img width="215" height="80" src="/images/apispark-logo-new.png" alt="APISpark"/></a>
+	    	<a href="${ant["apispark.root.url"]!""}" class="apisparklink"><img width="215" height="80" src="/images/apispark-logo-new.png" alt="APISpark"/></a>
 	    </div>
 	    <div class="button">
-	    	<a href="http://@apispark@" class="btn btn-large btn-tryit-hp apisparklink">Try It</a>
+	    	<a href="${ant["apispark.root.url"]!""}" class="btn btn-large btn-tryit-hp apisparklink">Try It</a>
 	    </div>
     </div>
 </div>
@@ -52,7 +59,7 @@
     <p>
         APISpark is the cloud service of the Restlet platform. Complete your Java-based web API with always 
         up-to-date API documentation, auto-generated client SDKs, user management, firewall and usage reports.
-        <a href="https://@apispark@" class="apisparklink">Learn more</a>
+        <a href="${ant["apispark.root.url"]!""}" class="apisparklink">Learn more</a>
     </p>
     
 </div>

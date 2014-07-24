@@ -32,6 +32,8 @@
 	<property name="www" value="www" />
 	<property name="restlet-com" value="${www}/restlet-com" />
 
+    <property file="${tmpl}/config/config.${envt}.properties" />
+	
 	<!-- Used to parse the unique json data base. -->
 	<script language="javascript">
 		<![CDATA[
@@ -278,20 +280,6 @@
 		<mkdir dir="${temp}/owr" />
 		<copy todir="${temp}/owr">
 			<fileset dir="../modules/com.restlet/" includes="**/*.ftl,**/*.html" />
-			<filterchain>
-			    <replacetokens>
-			      <token key="apispark" value="${apispark.domain}"/>
-			    </replacetokens>
-			    <replacetokens>
-			      <token key="google-site-verification" value="${google.site.verification}"/>
-			    </replacetokens>
-			    <replacetokens>
-			      <token key="google-site-verification-token" value="${google.site.verification.token}"/>
-			    </replacetokens>
-			    <replacetokens>
-			      <token key="google-plus-link" value="${google.plus.link}"/>
-			    </replacetokens>
-			</filterchain>
 		</copy>
 		<copy todir="${temp}/owr">
 			<fileset dir="../modules/com.restlet/" excludes="**/*.ftl,**/*.html" />

@@ -12,12 +12,7 @@
       <title>${title}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="keywords"  content="REST, Java, framework, toolkit, HTTP, GWT, GAE, Android, JSE, JEE, Servlet, NIO" />
-      <meta charset="utf-8" />
-      <#if indexPage??>
-      <!-- Google WebMaster Tools metatag-->
-      <meta name="@google-site-verification@" content="@google-site-verification-token@" />
-      </#if>
-      
+      <meta charset="utf-8" />      
       ${metaheader!""}
       <link type="image/gif" href="/images/favicon-restlet-org.gif" rel="icon">
       <link rel="stylesheet" type="text/css"             href='/stylesheets/bootstrap.css' />
@@ -130,11 +125,7 @@
         <div class="span2 intro below">${labels.footer.intouch['${language}']}</div>
         <div class="span2a site"><h4><a href="http://blog.restlet.com/"><i class="blog-icon"></i>${labels.footer.blog['${language}']}</a></h4></div>
         <div class="span2b site"><h4><a href="https://twitter.com/restlet_org"><i class="follow-icon"></i>${labels.footer.twitter['${language}']}</a></h4></div>
-		<#if indexPage??>
-			<!-- Google+ link verification -->
-			<div class="span2b site"><a href="@google-plus-link@" rel="publisher" /></div>
-		</#if>
-
+		${googlelinkVerification!""}
 <!--        <div class="span2b site"><h4><a href="/download/notifications"><i class="notifications-icon"></i>${labels.notifications.submit['${language}']}</a></h4></div> -->
         <div class="span4 newsletter">
         <span id="footerNewsLetterWrapper" align="right">
@@ -155,12 +146,12 @@
           </ul>
         </div>
         <div class="span2b site">
-          <h4><a href="http://@apispark@/" class="apisparklink"><img src="/images/logo-apispark-small.png"/>APISpark</a></h4>
+          <h4><a href="${ant["apispark.root.url"]!""}/" class="apisparklink"><img src="/images/logo-apispark-small.png"/>APISpark</a></h4>
           <ul class="sub-list">
-            <li><a href="http://@apispark@/features" class="apisparklink">${labels.footer.apispark.features['${language}']}</a></li>
-            <li><a href="http://@apispark@/pricing" class="apisparklink">${labels.footer.apispark.pricing['${language}']}</a></li>
-            <li><a href="http://@apispark@/docs/" class="apisparklink">${labels.footer.apispark.docs['${language}']}</a></li>
-            <li><a href="http://@apispark@/catalog" class="apisparklink">${labels.footer.apispark.catalog['${language}']}</a></li>
+            <li><a href="${ant["apispark.root.url"]!""}/features" class="apisparklink">${labels.footer.apispark.features['${language}']}</a></li>
+            <li><a href="${ant["apispark.root.url"]!""}/pricing" class="apisparklink">${labels.footer.apispark.pricing['${language}']}</a></li>
+            <li><a href="${ant["apispark.root.url"]!""}/docs/" class="apisparklink">${labels.footer.apispark.docs['${language}']}</a></li>
+            <li><a href="${ant["apispark.root.url"]!""}/catalog" class="apisparklink">${labels.footer.apispark.catalog['${language}']}</a></li>
             <li><a href="http://support.apispark.com/" class="apisparklink">${labels.footer.apispark.helpdesk['${language}']}</a></li>
           </ul>
         </div>
