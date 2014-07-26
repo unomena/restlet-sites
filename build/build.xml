@@ -201,7 +201,7 @@
 			<!-- parse the files according to this version properties -->
 			<replace dir="${temp}/owr/learn/tutorial/@{version}" replacefilterfile="${temp}/model.tutorial.@{version}.properties" />
 			<!-- shift templates according to the current version -->
-			<copy file="${tmpl}/md/userguide.tmpl" tofile="${temp}/toc/tutorial.@{version}.tmpl">
+			<copy file="${tmpl}/md/tutorial.tmpl" tofile="${temp}/toc/tutorial.@{version}.tmpl">
 				<filterchain>
 					<replacestring from="@version@" to="@{version}" />
 				</filterchain>
@@ -369,9 +369,6 @@
 			<exclude name="**/*.ftl" />
 		</fmpp>
 
-
-
-
 		<generate-tutorial version="1.0" />
 		<generate-tutorial version="1.1" />
 		<generate-tutorial version="2.0" />
@@ -396,12 +393,6 @@
 			<include name="**/*" />
 			<exclude name="**/*.ftl" />
 		</fmpp>
-
-
-
-
-
-
 
 		<copy todir="${temp}/${restlet-com}/download/">
 			<fileset dir="../modules/com.restlet/download/" includes="*.ftl" />
