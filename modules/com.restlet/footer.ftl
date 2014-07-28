@@ -89,9 +89,9 @@
     <#list sections.section as section>
       <#if section.@id == currentSection>
        <h3>${section.label?trim} <span id="search"><div class="search-div">
-       <script>
+<script>
   (function() {
-    var cx = '003179985452155369789:any5hjk8wii';
+    var cx = '016469542826868296053:rw5bzl7ddg8';
     var gcse = document.createElement('script');
     gcse.type = 'text/javascript';
     gcse.async = true;

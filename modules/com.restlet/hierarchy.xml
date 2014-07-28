@@ -4,6 +4,9 @@
 	<section id="-" hidden="true">
 		<label>RESTful web framework for Java</label>
 	</section>
+	<section id="search-results" hidden="true">
+		<label>Search results</label>
+	</section>
     <section id="legal" hidden="true">
         <label>Legal terms</label>
     </section>
