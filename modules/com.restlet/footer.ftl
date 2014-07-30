@@ -66,6 +66,9 @@
       </script>
    </head>
    <body>
+   <!--[if IE 8]><div id="IE8"><div id="IE9"><div id="IE10"><![endif]-->
+   <!--[if IE 9]><div id="IE9"><div id="IE10"><![endif]-->
+   <!--[if IE 10]><div id="IE10"><![endif]-->
     <div class='topbar'>
       <div class='header'>
         <div class='container'>
@@ -176,5 +179,8 @@
 <#if footer??>
     ${footer}
 </#if>
+	<!--[if IE 8]></div></div></div><![endif]-->
+	<!--[if IE 9]></div></div><![endif]-->
+	<!--[if IE 10]></div><![endif]-->
    </body>
 </html>
