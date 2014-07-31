@@ -5,6 +5,35 @@
 //var libxmljs = require("libxmljs");
 // [enddef]
 
+function checkBrowser() {
+	var ua = navigator.userAgent,
+    index,
+    navigateur,
+    version;
+	if((index = ua.indexOf('Firefox'))>=0) {
+		navigateur = 'Firefox';
+		version = ua.match(/Firefox\/([0-9]+(?:\.[0-9]+)*)/)[1];
+	} else if((index = ua.indexOf('MSIE'))>=0) {
+		navigateur = 'Internet Explorer';
+		version = ua.match(/MSIE ([0-9]+(?:\.[0-9]+)*)/)[1];
+	} else if((index = ua.indexOf('Chrome'))>=0) {
+		navigateur = 'Google Chrome';
+		version = ua.match(/Chrome\/([0-9]+(?:\.[0-9]+)*)/)[1];
+	} else if((index = ua.indexOf('Opera'))>=0) {
+		navigateur = 'Opera';
+		version = ua.match(/Version\/([0-9]+(?:\.[0-9]+)*)/)[1] || ua.match(/Opera\/([0-9]+(?:\.[0-9]+)*)/)[1];
+	} else if((index = ua.indexOf('Safari'))>=0) {
+		navigateur = 'Safari';
+		version = ua.match(/Version\/([0-9]+(?:\.[0-9]+)*)/)[1] || ua.match(/Safari\/([0-9]+(?:\.[0-9]+)*)/)[1];
+	}
+	
+	if (navigateur == "Internet Explorer" && version <= 8) {
+		return HTMLDocument
+	} else {
+		return Document
+	}
+}
+
 var Context = new JS.Class({
 	initialize: function() {
 		this.clientDispatcher = null;
@@ -1572,10 +1601,11 @@ var Representation = new JS.Class(RepresentationInfo, {
 		return this.xml;
 	},
 	write: function(content) {
+		var doc = checkBrowser();
 		if (typeof content=="string") {
 			this.text = content;
         // [ifndef nodejs]
-		} else if (content instanceof Document) {
+		} else if (content instanceof doc) {
 		// [enddef]
 		// [ifdef nodejs] uncomment
 		//} else if (content instanceof libxmljs.Document) {
@@ -1649,7 +1679,8 @@ var DomRepresentation = new JS.Class(Representation, {
 			this.representation = content;
 		} else if (typeof content == "object") {
 	        // [ifndef nodejs]
-			if (content instanceof Document) {
+			var doc = checkBrowser();
+			if (content instanceof doc) {
 			// [enddef]
 			// [ifdef nodejs] uncomment
 			//if (content instanceof libxmljs.Document) {

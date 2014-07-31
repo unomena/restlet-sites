@@ -540,9 +540,13 @@ h4.quotes {
 	position: relative;
 }
 
+#IE8 .quoteBoxLeft {
+	left: -8px;
+}
+
 .container div.quotes.span8 .quoteBoxLeft {
-	position: absolute;
 	left: 2px;
+	position: absolute;
 	top: 30px;
 	background-repeat: no-repeat;
 	background-image: url(/images/quote-left.png);
@@ -762,6 +766,7 @@ firststeps_infos {
 	{
 	height: 36px;
 	vertical-align: middle;
+	width: 150px;
 	display: inline-block;
 }
 
@@ -971,6 +976,11 @@ form,form>input {
 
 .span2.left.section {
 	margin-left: 0px !important;
+}
+
+.resources > .resource > .span2.left.section > a > img {
+	max-height: 190px;
+	width: 150px;
 }
 
 .nav > li > a.active {
@@ -1194,6 +1204,19 @@ code {
 	height: 153px;
 	width: 888px;
 	margin-left: -34px
+}
+
+#IE8 .downloadsection {
+	height: 147px;
+}
+
+#IE8 .download-description-list {
+	margin-left: 30px;
+}
+
+#IE8 #cBranch-bt, #IE8 #cRelease-bt, #IE8 #cEdition-bt, #IE8 #cDistribution-bt {
+	width: 180px;
+	text-align: left;
 }
 
 .downloadsection .span3 {
@@ -1481,4 +1504,8 @@ input.gsc-search-button-v2 {
 
 .container>h3 {
 	width: 870px;
+}
+
+.gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
+	padding-left: 0px !important;
 }
