@@ -26,7 +26,7 @@
             function(event) {
                 if (checkEmail("newsLetterEmail", "newsLetterOkButton")) {
 	                var prodArray = ["Restlet Framework","APISpark"];
-	
+
 	                mixpanel.track("Shared email", {
 	                    "email": $("#newsLetterEmail").val(),
 	                    "Email field location":"RF Download page: newsletter sign up field",
