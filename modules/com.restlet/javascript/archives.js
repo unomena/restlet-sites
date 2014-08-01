@@ -249,10 +249,10 @@ function setDownloadButton() {
 						
 						// close popup
 						/*
-						$("#campaignEmail").val("");
 						$("#deployModal").hide();
 						*/
 						
+						$("#campaignEmail").val("");
 						// Set a one year cookie dedicated to this campaign. 
 						$.cookie('restlet-in-action-campaign', 'true', {
 							expires: 365
