@@ -1,12 +1,16 @@
 <#global title="Restlet - REST Framework for Java &amp; PaaS for Web APIs" />
 
 <#global metaheader>
-      <!-- Google WebMaster Tools metatag-->
-      <meta name="${ant["google.site.verification"]!""}" content="${ant["google.site.verification.token"]!""}" />
+	<#if ant["google.site.verification"]?has_content && ant["google.site.verification.token"]?has_content>
+      	<!-- Google WebMaster Tools metatag-->
+      	<meta name="${ant["google.site.verification"]!""}" content="${ant["google.site.verification.token"]!""}" />
+    </#if>
 </#global>
 <#global googlelinkVerification>
+	<#if ant["google.plus.link"]?has_content>
             <!-- Google+ link verification -->
             <div class="span2b site"><a href="${ant["google.plus.link"]!""}" rel="publisher" /></div>
+	</#if>
 </#global>
 <#global headerClass="header"/>
 
