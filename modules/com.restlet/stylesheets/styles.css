@@ -1219,6 +1219,10 @@ code {
 	text-align: left;
 }
 
+#IE9 #footer > div.container > a > div.span2a.site{
+	display: none;
+}
+
 .downloadsection .span3 {
 	padding-top: 5px;
 	margin-bottom: 0;
@@ -1227,7 +1231,6 @@ code {
 .downloadsection .form-horizontal .control-group {
 	margin-bottom: 10px;
 }
-
 
 .downloadsection .form-horizontal .control-label {
 	color: #333;
