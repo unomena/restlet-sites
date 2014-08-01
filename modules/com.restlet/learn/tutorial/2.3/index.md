@@ -1,3 +1,5 @@
+\<\#global title="Restlet - Learn - Books" \/\>
+
 # Restlet 2.3 - Tutorial
 
 ## <a name="toc">Table of contents</a>
