@@ -24,10 +24,14 @@ else
 	esac	
 fi
 
-cd $1
-
-#Find html files and convert them with pandoc
-FILES=`find -name '*.html'`
+if [ -d "$1" ];
+then
+	cd $1
+	#Find html files and convert them with pandoc
+	FILES=`find -name '*.html'`
+else
+	FILES=$1
+fi
 
 for FILE in $FILES
 do
@@ -36,8 +40,13 @@ do
 	rm $FILE
 done
 
-#Find converted markdown files and perform some modifications
-MDFILES=`find -name '*.md'`
+if [ -d "$1" ]
+then
+	#Find converted markdown files and perform some modifications
+	MDFILES=`find -name '*.md'`
+else
+	MDFILES=`echo $FILES | sed -e "s/.html/.md/"`
+fi
 
 for MDFILE in $MDFILES
 do

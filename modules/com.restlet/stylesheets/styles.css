@@ -595,7 +595,8 @@ div.content.footerWrapper .footer {
 	border-bottom: 1px solid #D3D2D2;
 	border-left: 1px solid #D3D2D2;
 	border-right: 1px solid #D3D2D2;
-	height: 15px;
+/*	height: 15px; */
+	height: auto;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 15px 10px;
