@@ -202,6 +202,14 @@
 			</ant>
 			<!-- parse the files according to this version properties -->
 			<replace dir="${temp}/owr/learn/tutorial/@{version}" replacefilterfile="${temp}/model.tutorial.@{version}.properties" />
+
+			<mkdir dir="${temp}/toc" />
+			<exec executable="sh" osfamily="unix">
+				<arg value="${tmpl}/md/getTitle.sh" />
+				<arg value="${temp}/owr/learn/tutorial/@{version}/index.md" />
+				<arg value="${temp}/toc/toc.tutorial.@{version}.properties" />
+			</exec>
+			
 			<!-- shift templates according to the current version -->
 			<copy file="${tmpl}/md/tutorial.tmpl" tofile="${temp}/toc/tutorial.@{version}.tmpl"> 
 				<filterchain>
@@ -215,9 +223,9 @@
 				<arg value="${temp}/toc/tutorial.@{version}.tmpl" />
 			</exec>
 			<!-- complete properties with this version''s set of properties, before we cope with the wwhole page decoration -->
-			<!-- <concat append="true" destfile="${temp}/toc/toc.properties">
-				<filelist files="${temp}/toc/toc.tutorial.@{version}.properties,${temp}/toc/tocnav.tutorial.@{version}.properties" />
-			</concat> -->
+			<concat append="true" destfile="${temp}/toc/toc.properties">
+				<filelist files="${temp}/toc/toc.tutorial.@{version}.properties" />
+			</concat>
 		</sequential>
 	</macrodef>
 
@@ -336,33 +344,14 @@
 			</filterchain>
 		</copy>
 -->
-		<generate-guide version="2.2" />
-		<generate-guide version="2.3" />
-		<fmpp sourceRoot="${temp}/owr" outputRoot="${temp}/${restlet-com}" modes="ignore(**/.svn,**/Thumbs.db)" quiet="reallyQuiet">
-			<data expandProperties="yes">
-				labels:xml(labels.xml)
-				hierarchy:xml(hierarchy.xml)
-				restletDistributions: text(data/distributions.json)
-				restletVersions: text(data/versions.json)
-				restletQualifiers: text(data/qualifiers.json)
-				restletEditions: text(data/editions.json)
-				restletContributors: slicedText(data/contributors.txt)
-				language: en
-				ant: antProperties()
-                nodes: properties(${temp}/toc/toc.properties)
-			</data>
-			<borders>
-				<![CDATA[border('<#include "/header.ftl"/>', '<#include "/footer.ftl"/>', **/*.html)]]></borders>
-			<include name="**/*" />
-			<exclude name="**/*.ftl" />
-		</fmpp>
-
 		<generate-tutorial version="1.0" />
 		<generate-tutorial version="1.1" />
 		<generate-tutorial version="2.0" />
 		<generate-tutorial version="2.1" />
 		<generate-tutorial version="2.2" />
 		<generate-tutorial version="2.3" />
+		<generate-guide version="2.2" />
+		<generate-guide version="2.3" />
 		<fmpp sourceRoot="${temp}/owr" outputRoot="${temp}/${restlet-com}" modes="ignore(**/.svn,**/Thumbs.db)" quiet="reallyQuiet">
 			<data expandProperties="yes">
 				labels:xml(labels.xml)
@@ -386,7 +375,6 @@
 			<fileset dir="../modules/com.restlet/download/" includes="*.ftl" />
 		</copy>
 		<delete dir="${temp}/owr" />
-
 
 		<!-- generate static files for the site : restlet.com -->
 		<delete dir="${temp}/cwr" />
