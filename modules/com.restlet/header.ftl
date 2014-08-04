@@ -27,28 +27,26 @@
 <!-- Popup panel -->
     <div class="modalDialog kinlane" id="deployModal">
 		<div>
-			<div class="close-button"></div>
-			<div class="doc-preview"></div>
-			<div class="doc-desc">
-				<strong class="title">Get 40% off Restlet book</strong>
-				<div class="doc-content">
-					<div class="text-holder">
-						<strong class="subhead"><span id="beginning">Restlet in Action</span> by Jerome Louvel, Thierry Templier &amp; Thierry Boileau.</strong>
-						<p>Enter your email below and receive a special promo code to purchase the book or e-book with 40% off! <strong>Code limited to the first 100 participants.</strong></p>
-					</div>
-				</div>	
-				<div class="doc-download">
-					<div class="row"><input type="email" id="campaignEmail" placeholder="Email" class="required-email"/>
-						<div class="row button">
-							<button id="campaignButton">Get Code</button>
-						</div>
-					</div>
-					<span class="txt-info">Your details will never be shared to a 3rd party. We hate spam just as much as you do.</span>
-				</div>
-				<div class="doc-footer">
-					<p></p>
-				</div>
-				<div class="clearBoth"></div>
+    		<div class="close-button"></div>
+        	<div class="doc-preview"></div>
+        	<div class="doc-desc">
+        		<div class="doc-title">
+                	<h3>Free Developer Guide</h3>
+            	</div>
+            	<div class="doc-content">
+                	<h4><strong>A field guide to web APIs</strong> By Kin Lane</h4>
+                	<div class="text">Kin Lane, API Evangelist, has been in the technology space for over 20 years and wants to help the world understand the great value and potential that is growing in the web API market.</div>
+                	<div class="avatar"></div>
+                	<div class="clearBoth"></div>
+            	</div>
+            	<div class="doc-download">
+                	<input type="email" id="campaignEmail" required="required" placeholder="Email"/>
+                	<button id="campaignButton">Download</button>
+            	</div>
+            	<div class="doc-footer">
+                	<p>Your details will never be shared to a 3rd party. We hate spam just as much as you do.</p>
+            	</div>
+            	<div class="clearBoth"></div>
 			</div>
 			<div class="clearBoth"></div>
 		</div>
