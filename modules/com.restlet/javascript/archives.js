@@ -235,28 +235,25 @@ function setDownloadButton() {
 		$('#campaignButton').click(
 				function(event) {
 					if (checkEmail("campaignEmail", "campaignButton")) {
-						this.style.background='#77cb38';
-						this.style.lineHeight='16px';
-						this.disabled=true;
-						this.innerHTML = "Code:\nRESTLET40";
-						
 						mixpanel.track("Shared email", {
 							"email": $("#campaignEmail").val(),
-							"Email field location":"RF and AS Stickers"
+							"Email field location":"Kin Lane Guide"
 						});
 						mixpanel.alias($("#campaignEmail").val(), mixpanel.get_distinct_id());
 						mixpanel.people.set({"$email": $("#campaignEmail").val()});
+						mixpanel.track("Downloaded Kin Lane Guide");
 						
 						// close popup
-						/*
-						$("#deployModal").hide();
-						*/
-						
 						$("#campaignEmail").val("");
+						$("#deployModal").hide();
+						
 						// Set a one year cookie dedicated to this campaign. 
-						$.cookie('restlet-in-action-campaign', 'true', {
+						$.cookie('kin-lane-white-paper-v3', 'true', {
 							expires: 365
 						});
+						
+						// launch pdf download in a new tab
+						window.open('http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=popup&utm_campaign=Kin%20Lane%20Guide', "_blank");
 					}
 				}
 		);
@@ -275,7 +272,7 @@ function setDownloadButton() {
 							$('#maven_infos').css('display','block');
 							fillRightSidebar('#maven_infos');
 
-							if ("true" != $.cookie("restlet-in-action-campaign")) {
+							if ("true" != $.cookie("kin-lane-white-paper-v3")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
@@ -308,7 +305,7 @@ function setDownloadButton() {
 							$('#eclipse_infos').css('display','block');
 							fillRightSidebar('#eclipse_infos');
 
-							if ("true" != $.cookie("restlet-in-action-campaign")) {
+							if ("true" != $.cookie("kin-lane-white-paper-v3")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
@@ -340,7 +337,7 @@ function setDownloadButton() {
 
 						var hrefCallback = function(event) {
 							// open campaign popup
-							if ("true" != $.cookie("restlet-in-action-campaign")) {
+							if ("true" != $.cookie("kin-lane-white-paper-v3")) {
 								// open campaign popup
 								$("#deployModal").show();								
 							}
