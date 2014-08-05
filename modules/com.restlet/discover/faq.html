@@ -1,4 +1,9 @@
 <#global title="Restlet - Discover - FAQ" />
+<#global metaheader>
+<#noparse>
+<meta name="description" content="Discover Restlet Framework - Frequently Asked Questions." />
+</#noparse>
+</#global>
 <#global content>
 <div class="span3 left section">
     <ul id="toc" class="toc">
@@ -209,17 +214,17 @@
       Again, it is always hard to make fair comparisons, especially when you are from one
       side and when you don't have an intimate knowledge of the other side. Our general
       feeling is that django was not built with REST principles at its core. The project
-      hasn't reach the final 1.0 version yet, but so far there doesn't appear to be any
+      hasn't reached the final 1.0 version yet, but so far there doesn't appear to be any
       specific REST support even though, as a generic Web framework django can perfectly
       be used to build RESTful applications.
    </p>
 
    <p>
-      For example, django doesn't support URI templates natively, you need to manually
+      For example, django doesn't support URI templates natively; you need to manually
       convert them to Regex expressions. Also, if you want to enable HTTP caching or
       authentication, you have to manually set the "Last-modified" or "WWW-Authenticate"
       headers. Like many similar frameworks, it is assumed that you are using a RDBMS to
-      persist your resources which is not the only solution nor the best.
+      persist your resources which is neither the only solution nor the best.
    </p>
 
    <p>
@@ -243,7 +248,7 @@
    </p>
    
    <p>      
-      On the other hand, the JAX-RS API (draft state only) is result of the ongoing work 
+      On the other hand, the JAX-RS API (draft state only) is the result of the ongoing work 
       of an Expert Group also known as the JSR-311 EG. This effort was initiated and is led 
       by Sun Microsystems, based on an earlier prototype that was part of 
       <a href="http://developers.sun.com/docs/web/swdp/r1/tutorial/doc/p33.html">
