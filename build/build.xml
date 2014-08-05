@@ -229,46 +229,6 @@
 		</sequential>
 	</macrodef>
 
-	<macrodef name="generate-firststep" description="Generate the source code for the first step page.">
-		<attribute name="version" />
-		<sequential>
-			<!-- generate version related properties -->
-			<ant antfile="${tmpl}/config/generate-config.xml" target="generate-config" inheritAll="false">
-				<property name="restlet.version" value="@{version}" />
-				<property name="tmpl" value="${tmpl}" />
-				<property name="temp" value="${temp}" />
-				<property name="file.model" value="${temp}/model.tutorial.properties" />
-			</ant>
-			<!-- parse the files according to this version properties -->
-			<replace dir="${temp}/owr/discover/" replacefilterfile="${temp}/model.firststep.properties" />
-
-			<mkdir dir="${temp}/toc" />
-			<exec executable="sh" osfamily="unix">
-				<arg value="${tmpl}/md/getTitle.sh" />
-				<arg value="${temp}/owr/discover/firststeps.md" />
-				<arg value="${temp}/toc/toc.firststep.properties" />
-			</exec>
-			
-			<!-- shift templates according to the current version -->
-			<copy file="${tmpl}/md/tutorial.tmpl" tofile="${temp}/toc/firststep.tmpl"> 
-				<filterchain>
-					<replacestring from="@version@" to="@{version}" />
-				</filterchain>
-			</copy>
-			<!-- cope with marked down files and add decoration -->
-			<exec executable="sh" osfamily="unix">
-				<arg value="${tmpl}/md/unixtohtml.sh" />
-				<arg value="${temp}/owr/discover/" />
-				<arg value="${temp}/toc/firststep.tmpl" />
-			</exec>
-			<!-- complete properties with this version''s set of properties, before we cope with the wwhole page decoration -->
-			<concat append="true" destfile="${temp}/toc/toc.properties">
-				<filelist files="${temp}/toc/toc.tutorial.@{version}.properties" />
-			</concat>
-		</sequential>
-	</macrodef>
-
-
 	<!-- ===================== -->
 	<!-- ===  Ant Targets  === -->
 	<!-- ===================== -->
