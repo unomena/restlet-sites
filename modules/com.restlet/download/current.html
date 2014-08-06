@@ -11,7 +11,7 @@
 <#global javascript>
 <#noparse>
 	$(document).ready(function() {
-        init($("#cBranch"), $("#cEdition"), $("#cDistribution")<#if ("zip" ==  distribution) || ("exe" ==  distribution)>, true<#else>, false, true</#if>);
+        init($("#cBranch"), $("#cEdition"), $("#cDistribution")<#if ("zip" ==  distribution) || ("exe" ==  distribution)>, true<#else>, true, true</#if>);
         //init($("#cBranch"), $("#cRelease"), $("#cEdition"), $("#cDistribution"), $("#archives"));
 		
 		// close the modal popup when clicking on the cross buntton
