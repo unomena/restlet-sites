@@ -235,14 +235,18 @@ function setDownloadButton() {
 		$('#campaignButton').click(
 				function(event) {
 					if (checkEmail("campaignEmail", "campaignButton")) {
-						mixpanel.track("Shared email", {
-							"email": $("#campaignEmail").val(),
-							"Email field location":"Kin Lane Guide"
-						});
-						mixpanel.alias($("#campaignEmail").val(), mixpanel.get_distinct_id());
-						mixpanel.people.set({"$email": $("#campaignEmail").val()});
-						mixpanel.track("Downloaded Kin Lane Guide");
-						
+						try {
+							mixpanel.track("Shared email", {
+								"email": $("#campaignEmail").val(),
+								"Email field location":"Kin Lane Guide"
+							});
+							mixpanel.alias($("#campaignEmail").val(), mixpanel.get_distinct_id());
+							mixpanel.people.set({"$email": $("#campaignEmail").val()});
+							mixpanel.track("Downloaded Kin Lane Guide");
+						} catch(err) {
+							//nothing to do
+						}
+							
 						// close popup
 						$("#campaignEmail").val("");
 						$("#deployModal").hide();
@@ -278,19 +282,23 @@ function setDownloadButton() {
 							}
 						}
 						
-						// in case Mixpanel servers don't get back to us in time
-						// we use the same timeout value as the one defined in Mixpanel config
-						window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
-						
-						// fire the tracking event, if the event is done before the
-						// timeout, the previous hrefCallback call is cancelled by
-						// the call to document.location.href
-						mixpanel.track("Downloaded Restlet Framework", {
-							"Version":version.id,
-							"Release":version.fullVersionCompact,
-							"Edition":edition.middlename,
-							"Distribution":distribution.fileType
-						}, hrefCallback);
+						try {
+							// in case Mixpanel servers don't get back to us in time
+							// we use the same timeout value as the one defined in Mixpanel config
+							window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
+							
+							// fire the tracking event, if the event is done before the
+							// timeout, the previous hrefCallback call is cancelled by
+							// the call to document.location.href
+							mixpanel.track("Downloaded Restlet Framework", {
+								"Version":version.id,
+								"Release":version.fullVersionCompact,
+								"Edition":edition.middlename,
+								"Distribution":distribution.fileType
+							}, hrefCallback);
+						} catch(err) {
+							hrefCallback();
+						}
 					});
 		} else if (distribution.fileType == "p2") {
 			$('#rfDownloadButton').click(
@@ -311,19 +319,23 @@ function setDownloadButton() {
 							}
 						}
 						
-						// in case Mixpanel servers don't get back to us in time
-						// we use the same timeout value as the one defined in Mixpanel config
-						window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
-						
-						// fire the tracking event, if the event is done before the
-						// timeout, the previous hrefCallback call is cancelled by
-						// the call to document.location.href
-						mixpanel.track("Downloaded Restlet Framework", {
-							"Version":version.id,
-							"Release":version.fullVersionCompact,
-							"Edition":edition.middlename,
-							"Distribution":"eclipse"
-						}, hrefCallback);
+						try {
+							// in case Mixpanel servers don't get back to us in time
+							// we use the same timeout value as the one defined in Mixpanel config
+							window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
+							
+							// fire the tracking event, if the event is done before the
+							// timeout, the previous hrefCallback call is cancelled by
+							// the call to document.location.href
+							mixpanel.track("Downloaded Restlet Framework", {
+								"Version":version.id,
+								"Release":version.fullVersionCompact,
+								"Edition":edition.middlename,
+								"Distribution":"eclipse"
+							}, hrefCallback);
+						} catch(err) {
+							hrefCallback();
+						}
 					});			
 		} else if (redirectDownload) {
 			$('#rfDownloadButton').click(
@@ -349,21 +361,25 @@ function setDownloadButton() {
 								}, 500);
 						}
 						
-						// in case Mixpanel servers don't get back to us in time
-						// we use the same timeout value as the one defined in Mixpanel config
-						var trackTimeout = window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
-						
-						// fire the tracking event, if the event is done before the
-						// timeout, we call a window.clearTimeout
-						mixpanel.track("Downloaded Restlet Framework", {
-							"Version":version.id,
-							"Release":version.fullVersionCompact,
-							"Edition":edition.middlename,
-							"Distribution":distribution.fileType
-						}, function() {
-							window.clearTimeout(trackTimeout);
+						try {
+							// in case Mixpanel servers don't get back to us in time
+							// we use the same timeout value as the one defined in Mixpanel config
+							var trackTimeout = window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
+							
+							// fire the tracking event, if the event is done before the
+							// timeout, we call a window.clearTimeout
+							mixpanel.track("Downloaded Restlet Framework", {
+								"Version":version.id,
+								"Release":version.fullVersionCompact,
+								"Edition":edition.middlename,
+								"Distribution":distribution.fileType
+							}, function() {
+								window.clearTimeout(trackTimeout);
+								hrefCallback();
+							});
+						} catch(err) {
 							hrefCallback();
-						});
+						}
 					});			
 		} else {
 			$('#rfDownloadButton').click(
@@ -387,21 +403,25 @@ function setDownloadButton() {
 								}, 500);
 						}
 						
-						// in case Mixpanel servers don't get back to us in time
-						// we use the same timeout value as the one defined in Mixpanel config
-						var trackTimeout = window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
-						
-						// fire the tracking event, if the event is done before the
-						// timeout, we call a window.clearTimeout
-						mixpanel.track("Downloaded Restlet Framework", {
-							"Version":version.id,
-							"Release":version.fullVersionCompact,
-							"Edition":edition.middlename,
-							"Distribution":distribution.fileType
-						}, function() {
-							window.clearTimeout(trackTimeout);
+						try {
+							// in case Mixpanel servers don't get back to us in time
+							// we use the same timeout value as the one defined in Mixpanel config
+							var trackTimeout = window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
+							
+							// fire the tracking event, if the event is done before the
+							// timeout, we call a window.clearTimeout
+							mixpanel.track("Downloaded Restlet Framework", {
+								"Version":version.id,
+								"Release":version.fullVersionCompact,
+								"Edition":edition.middlename,
+								"Distribution":distribution.fileType
+							}, function() {
+								window.clearTimeout(trackTimeout);
+								hrefCallback();
+							});
+						} catch(err) {
 							hrefCallback();
-						});
+						}
 					});
 		}
 	}

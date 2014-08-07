@@ -27,22 +27,29 @@
             function(event) {
                 if (checkEmail("newsLetterEmail", "newsLetterOkButton")) {
 	                var prodArray = ["Restlet Framework","APISpark"];
-
-	                mixpanel.track("Shared email", {
-	                    "email": $("#newsLetterEmail").val(),
-	                    "Email field location":"RF Download page: newsletter sign up field",
-	                    "Product":prodArray
-	                }, function() {
-	                    $("#newsLetterEmail").val("");
-	                    $("#newsLetterEmail").attr("disabled", true);
-	                    $("#newsLetterOkButton").html("&#10003;");
-	                    $("#newsLetterOkButton").css("font-size","32px");
-	                    $("#newsLetterOkButton").attr("disabled", true);
-	                });
+					try {
+		                mixpanel.track("Shared email", {
+		                    "email": $("#newsLetterEmail").val(),
+		                    "Email field location":"RF Download page: newsletter sign up field",
+		                    "Product":prodArray
+		                }, function() {
+		                    $("#newsLetterEmail").val("");
+		                    $("#newsLetterEmail").attr("disabled", true);
+		                    $("#newsLetterOkButton").html("&#10003;");
+		                    $("#newsLetterOkButton").css("font-size","32px");
+		                    $("#newsLetterOkButton").attr("disabled", true);
+		                });
+		            } catch(err) {
+		            	
+		            }
                 }
             }
         );
-        mixpanel.track("Visited the RF Download page");
+        try {
+        	mixpanel.track("Visited the RF Download page");
+        } catch(err) {
+        	//nothing to do
+        }
 	});
 </#noparse>
 </#global>
