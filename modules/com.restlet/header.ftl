@@ -215,6 +215,16 @@
 </div>
 </#global>
 
+
+<#macro singlefiletitle sourcedirectory filepath>
+<#local key = (sourcedirectory + filepath)?replace("/", ".")?replace(".html", "")?replace(".ftl", "") />
+<#if labels[(key + ".title")]?has_content>labels[(key + ".title")]
+<#else>
+<#local tab=key?split(".") />
+Restlet Framework<#list tab as segment> - ${segment?cap_first}</#list>
+</#if>
+</#macro>
+
 <#macro navigationtitle sourcedirectory filepath version>
 <#local key = (sourcedirectory?substring(16) + filepath?substring(0, (filepath?length) -5) + ".md")?replace("/", ".") />
 <#if nodes[(version + "."  + key + ".title")]?has_content>${nodes[(version + "."  + key + ".title")]}</#if>

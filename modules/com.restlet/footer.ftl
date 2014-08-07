@@ -1,4 +1,4 @@
-<#if !(title?has_content)>
+<#if !(title??)>
 <#list sections.section as section>
       <#if section.@id == currentSection>
          <#assign title="Restlet Framework - ${section.label?trim}"  />

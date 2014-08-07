@@ -229,6 +229,21 @@
 		</sequential>
 	</macrodef>
 
+    <macrodef name="generate-file" description="Generate the source code for a specific file.">
+        <attribute name="source" />
+        <attribute name="target" />
+        <attribute name="raw" />
+        <sequential>
+	            <!-- cope with marked down file and add decoration -->
+	            <exec executable="sh" osfamily="unix">
+	                <arg value="${tmpl}/md/unixtohtml.sh" />
+	                <arg value="${temp}/owr/@{source}" />
+	                <arg value="${temp}/owr/@{target}" />
+	            	<arg value="${tmpl}/md/singlefile-@{raw}.tmpl" />
+	            </exec>
+	        </sequential>
+	    </macrodef>
+
 	<!-- ===================== -->
 	<!-- ===  Ant Targets  === -->
 	<!-- ===================== -->
@@ -291,58 +306,13 @@
 	</target>
 
 	<target name="generate-templates" description="Generate template-based files.">
-		<!-- generate static files for the site : apispark.org -->
-		<!--
-        <delete dir="${temp}/apispark" />
-        <mkdir dir="${temp}/apispark" /> -->
-		<!-- do not template sample files. -->
-		<!--
-		<copy todir="${temp}/apispark">
-            <fileset dir="../modules/org.apispark/" includes="**/*"  excludes="tutorials/files/*"/>
-        </copy>
-        <fmpp sourceencoding="UTF-8" outputencoding="UTF-8" sourceRoot="${temp}/apispark" outputRoot="${temp}/${apispark-org}" modes="ignore(**/.svn,**/Thumbs.db), copy(javascript/*.js, **/*.css)" quiet="reallyQuiet">
-            <data expandProperties="yes">
-                hierarchy:xml(hierarchy.xml)
-                labels:xml(labels.xml)
-                language: en
-                header: ""
-            </data>
-            <borders><![CDATA[border('<#include "/header.ftl"/>', '<#include "/footer.ftl"/>', **/*.html*)]]></borders>
-            <include name="**/*" />
-            <exclude name="**/*.ftl" />
-        </fmpp>
-	    <copy todir="${temp}/apispark">
-	        <fileset dir="../modules/org.apispark/" includes="tutorials/files/*"/>
-	    </copy>
-		<delete dir="${temp}/apispark" />
--->
-		<!-- generate static files for the site : restlet.org, user guide generated with pandoc -->
+		<!-- generate static files for the site : restlet.com, user guide generated with pandoc -->
 		<delete dir="${temp}/owr" />
 		<mkdir dir="${temp}/owr" />
 		<copy todir="${temp}/owr">
-			<fileset dir="../modules/com.restlet/" includes="**/*.ftl,**/*.html" />
-		</copy>
-		<copy todir="${temp}/owr">
-			<fileset dir="../modules/com.restlet/" excludes="**/*.ftl,**/*.html" />
+			<fileset dir="../modules/com.restlet/" />
 		</copy>
 
-<!-- copy and filter javascript files
-		<copy todir="${temp}/owr">
-			<fileset dir="../modules/org.restlet/" includes="**/*.js" />
-                        <globmapper from="*.js" to="*-${build.date}.js"/>
-		</copy>
-		<copy todir="${temp}/owr">
-			<fileset dir="../modules/org.restlet/" excludes="**/*.js" />
-			<filterchain>
-				<tokenfilter>
-      					<replaceregex pattern="/javascript/(.*).js" flags="s" replace="/javascript/\1-${build.date}.js"/>
-				</tokenfilter>
-				<tokenfilter>
-      					<replaceregex pattern="(.*).js" flags="s" replace="\1-${build.date}.js"/>
-				</tokenfilter>
-			</filterchain>
-		</copy>
--->
 		<generate-tutorial version="1.0" />
 		<generate-tutorial version="1.1" />
 		<generate-tutorial version="2.0" />
@@ -351,6 +321,13 @@
 		<generate-tutorial version="2.3" />
 		<generate-guide version="2.2" />
 		<generate-guide version="2.3" />
+	    <!-- NB : les titres sont générés à partir des noms de fichier... -->
+		<!-- Cas général -->
+		<generate-file source="discover/todelete.md" target="discover/todelete.html" raw="decorate" />
+		<!-- Cas très particulier que first steps...-->
+	    <!-- ce n'est pas qu'une page Web, mais aussi un template qu'on peut insérer depuis download/current -->
+        <generate-file source="discover/firststeps.md" target="discover/firststeps.ftl" raw="raw" />
+
 		<fmpp sourceRoot="${temp}/owr" outputRoot="${temp}/${restlet-com}" modes="ignore(**/.svn,**/Thumbs.db)" quiet="reallyQuiet">
 			<data expandProperties="yes">
 				labels:xml(labels.xml)
@@ -374,44 +351,6 @@
 			<fileset dir="../modules/com.restlet/download/" includes="*.ftl" />
 		</copy>
 		<delete dir="${temp}/owr" />
-
-		<!-- generate static files for the site : restlet.com -->
-		<delete dir="${temp}/cwr" />
-		<mkdir dir="${temp}/cwr" />
-		<!-- no translation to French language for the moment. -->
-		<copy todir="${temp}/cwr">
-			<fileset dir="../modules/com.restlet/" includes="**/*" excludes="**/*.fr" />
-		</copy>
-<!--
-		<fmpp sourceencoding="UTF-8" outputencoding="UTF-8" sourceRoot="${temp}/cwr" outputRoot="${temp}/${restlet-com}" modes="ignore(**/.svn,**/Thumbs.db), copy(javascript/*.js, **/*.css)" quiet="reallyQuiet">
-			<data expandProperties="yes">
-                hierarchy:xml(hierarchy.xml)
-                messages:xml(messages.xml)
-                labels:xml(labels.xml)
-                language: en
-                header: ""
-            </data>
-			<localData>
-                layer()
-                case(**/*.fr*, {language: fr})
-            </localData>
-			<borders>
-				<![CDATA[border('<#include "/header.ftl"/>', '<#include "/footer.ftl"/>', **/*.html*)]]></borders>
-			<include name="**/*" />
-			<exclude name="**/*.ftl*" />
-		</fmpp>
--->
-		<!-- no translation to French language for the moment. -->
-<!--
-		<move todir="${temp}/${restlet-com}">
-			<fileset dir="${temp}/${restlet-com}" includes="**/*.en" />
-			<filterchain>
-				<replacestring from=".js.en" to=".js" />
-			</filterchain>
-			<globmapper from="*.en" to="*" />
-		</move>
--->
-		<delete dir="${temp}/cwr" />
 	</target>
 
 
