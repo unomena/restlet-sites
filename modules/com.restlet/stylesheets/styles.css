@@ -1000,6 +1000,10 @@ form,form>input {
         "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#2c5695', endColorstr='#476da7')";
 }
 
+html[data-useragent*='Trident/'] .nav > li > a.active {
+  background-color: #476da7;
+}
+
 .container,
 .navbar-static-top .container,
 .navbar-fixed-top .container,

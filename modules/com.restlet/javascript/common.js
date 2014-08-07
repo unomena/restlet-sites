@@ -15,6 +15,10 @@ mixpanel.init("${ant["mixpanel.token"]!""}",{debug:true});
 // integration of twitter
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
+// donne la version du navigateur
+var doc = document.documentElement;
+doc.setAttribute('data-useragent', navigator.userAgent);
+
 /**
  * Check the email field, return true if everything is fine, false otherwise.
  * @param field 
