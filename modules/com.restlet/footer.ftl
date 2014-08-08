@@ -12,7 +12,13 @@
       <title>${title}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="keywords"  content="REST, Java, framework, toolkit, HTTP, GWT, GAE, Android, JSE, JEE, Servlet, NIO" />
-      <meta charset="utf-8" />      
+      <meta charset="utf-8" /> 
+      <#if ("learn"=currentSection!"") && ("guide" == currentSubSection!"")>
+      <meta name="description" content="Restlet Framework Guide - Learn More about Coding Powerful and Scalable Custom Web APIs in Java." />
+	  </#if>
+	  <#if ("learn"=currentSection!"") && ("tutorial" == currentSubSection!"")>
+      <meta name="description" content="Restlet Framework Tutorial - Learn More about Coding Powerful and Scalable Custom Web APIs in Java." />
+	  </#if>     
       ${metaheader!""}
       <link type="image/gif" href="/images/favicon-restlet-org.gif" rel="icon">
       <link rel="stylesheet" type="text/css"             href='/stylesheets/bootstrap.css' />
@@ -66,9 +72,8 @@
       </script>
    </head>
    <body>
-   <!--[if IE 8]><div id="IE8"><div id="IE9"><div id="IE10"><![endif]-->
-   <!--[if IE 9]><div id="IE9"><div id="IE10"><![endif]-->
-   <!--[if IE 10]><div id="IE10"><![endif]-->
+   <!--[if IE 8]><div id="IE8"><div id="IE9"><![endif]-->
+   <!--[if IE 9]><div id="IE9"><![endif]-->
     <div class='topbar'>
       <div class='header'>
         <div class='container'>
@@ -197,8 +202,7 @@
 <#if footer??>
     ${footer}
 </#if>
-	<!--[if IE 8]></div></div></div><![endif]-->
-	<!--[if IE 9]></div></div><![endif]-->
-	<!--[if IE 10]></div><![endif]-->
+	<!--[if IE 8]></div></div><![endif]-->
+	<!--[if IE 9]></div><![endif]-->
    </body>
 </html>

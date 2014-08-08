@@ -49,7 +49,7 @@ Restlet was an attempt to build a better Servlet API, aligned with the true Web 
 
 ## Available Connectors
 
-- Multiple server HTTP connectors available, based on either [Eclipse Jetty](http://www.eclipse.org/jetty/) or the [Simple framework (http://www.simpleframework.org/).
+- Multiple server HTTP connectors available, based on either [Eclipse Jetty](http://www.eclipse.org/jetty/) or the [Simple framework](http://www.simpleframework.org/).
 - [AJP](http://tomcat.apache.org/connectors-doc/) server connector available to let you plug behind an Apache HTTP server or Microsoft IIS. It is based on Jetty's connector.
 - Multiple client HTTP connectors available, based on either [Apache HTTP Client](http://jakarta.apache.org/commons/httpclient/) or on an NIO-based extension (preview).
 - Compact internal HTTP client and server for development and light deployments based on HTTPUrlConnection class. No external dependency needed.
@@ -67,7 +67,7 @@ Restlet was an attempt to build a better Servlet API, aligned with the true Web 
   based) with a simple XPath API based on JDK's built-in XPath engine.
 - Integration with the [FreeMarker template engine](http://freemarker.org/)
 - Integration with the [Velocity template engine](http://velocity.apache.org/)
-- Integration with [Apache FileUpload] http://jakarta.apache.org/commons/fileupload/) to support multi-part forms and easily handle large file uploads from browsers
+- Integration with [Apache FileUpload](http://jakarta.apache.org/commons/fileupload/) to support multi-part forms and easily handle large file uploads from browsers
   to support multi-part forms and easily handle large file uploads from browsers
 - Transformer filter to easily apply XSLT stylesheets on XML representations. It is based on JDK's built-in XSLT engine.
 - Extensible set of core representations based on NIO readable or writable channels, BIO input or output streams.
