@@ -26,19 +26,20 @@
                 if (checkEmail("newsLetterEmail", "newsLetterOkButton")) {
                     var prodArray = ["Restlet Framework","APISpark"];
                     try {
-	                    mixpanel.track("Shared email", {
-	                        "email": $("#newsLetterEmail").val(),
-	                        "Email field location":"RF Download page: newsletter sign up field",
-	                        "Product":prodArray
-	                    }, function() {
+                    	var callback = function() {
 	                        $("#newsLetterEmail").val("");
 	                        $("#newsLetterEmail").attr("disabled", true);
 	                        $("#newsLetterOkButton").html("&#10003;");
 	                        $("#newsLetterOkButton").css("font-size","32px");
 	                        $("#newsLetterOkButton").attr("disabled", true);
-	                    });
+	                    }
+	                    mixpanel.track("Shared email", {
+	                        "email": $("#newsLetterEmail").val(),
+	                        "Email field location":"RF Download page: newsletter sign up field",
+	                        "Product":prodArray
+	                    }, callback());
 	                } catch(err){
-	                	
+	                	callback();
 	                }
                 }
             }

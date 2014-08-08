@@ -110,19 +110,20 @@ $(document).ready(function() {
 	    function(event) {
 	        if (checkEmail("footerNewsLetterEmail","footerNewsLetterOkButton")) {
 	            try {
-		        	mixpanel.track("Shared email", {
-		                "email": $("#footerNewsLetterEmail").val(),
-		                "Email field location":"RF footer: newsletter sign up field",
-		                "Product":"Restlet Framework"
-		            }, function() {
+	            	callback = function() {
 		                $("#footerNewsLetterEmail").val("");
 		                $("#footerNewsLetterEmail").attr("disabled", true);
 		                $("#footerNewsLetterOkButton").html("&#10003;");
 		                $("#footerNewsLetterOkButton").css("font-size","24px");
 		                $("#footerNewsLetterOkButton").attr("disabled", true);
-		            });
+		            }
+		        	mixpanel.track("Shared email", {
+		                "email": $("#footerNewsLetterEmail").val(),
+		                "Email field location":"RF footer: newsletter sign up field",
+		                "Product":"Restlet Framework"
+		            }, callback());
 	            } catch (err) {
-	            	
+	            	callback();
 	            }
 	        }
 	    }
