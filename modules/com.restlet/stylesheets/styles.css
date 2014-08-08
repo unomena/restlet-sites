@@ -352,6 +352,28 @@ hr {
     margin: 20px 0 19px;
 }*/
 
+.about-locations {
+	position: relative;
+}
+
+.about-locations .figure {
+	float: right;
+}
+
+.about-hiring>h4 a {
+	float: right;
+}
+
+.about-member img {
+	float: right;
+	margin-left: 10px;
+}
+
+.set-float-size {
+	clear: both;
+	height: 0;
+	width: 100%;
+}
 
 #apispark {
 	overflow: hidden;
