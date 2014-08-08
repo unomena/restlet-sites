@@ -13,12 +13,52 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="keywords"  content="REST, Java, framework, toolkit, HTTP, GWT, GAE, Android, JSE, JEE, Servlet, NIO" />
       <meta charset="utf-8" /> 
-      <#if ("learn"=currentSection!"") && ("guide" == currentSubSection!"")>
-      <meta name="description" content="Restlet Framework Guide - Learn More about Coding Powerful and Scalable Custom Web APIs in Java." />
+      <#if ("learn"=currentSection!"")>
+      	<#if ("guide" == currentSubSection!"")>
+      		<meta name="description" content="Restlet Framework Guide - Learn More about Coding Powerful and Scalable Custom Web APIs in Java." />
+	  	</#if>
+	  	<#if ("tutorial" == currentSubSection!"")>
+      		<meta name="description" content="Restlet Framework Tutorial - Learn More about Coding Powerful and Scalable Custom Web APIs in Java." />
+	  	</#if>
 	  </#if>
-	  <#if ("learn"=currentSection!"") && ("tutorial" == currentSubSection!"")>
-      <meta name="description" content="Restlet Framework Tutorial - Learn More about Coding Powerful and Scalable Custom Web APIs in Java." />
-	  </#if>     
+	  <#if ("discover"=currentSection!"")>
+      	<#if ("features" == currentSubSection!"")>
+      		<meta name="description" content="Discover Restlet Framework. Client and Server Consistent API, Powerful Routing and Filtering, Comprehensive Web Security, more." />
+	  	</#if>
+	  	<#if ("firststeps" == currentSubSection!"")>
+      		<meta name="description" content="Discover Restlet Framework - Taste the Simplicity of the Restlet Framework in less than 12 minutes." />
+	  	</#if>
+	  </#if>
+	  <#if ("participate"=currentSection!"")>
+      	<#if ("governance" == currentSubSection!"")>
+      		<meta name="description" content="Governance Policy for the Restlet Framework." />
+	  	</#if>
+	  	<#if ("services" == currentSubSection!"")>
+      		<meta name="description" content="Restlet Services - Professional Services, Restlet Framework Plans, APISpark Plans, Consulting, Latest References." />
+	  	</#if>
+	  </#if>
+	  <#if ("download"=currentSection!"")>
+      	<#if ("legal" == currentSubSection!"")>
+      		<meta name="description" content="Restlet Licenses and trademarks - Resltlet is an Open Source Project That is Distributed Under Several Licenses at the Same Time." />
+	  	</#if>
+	  	<#if ("faq" == currentSubSection!"")>
+      		<meta name="description" content="Download Restlet Framework - Frequently Asked Questions." />
+	  	</#if>
+	  </#if>
+	  <#if ("about"=currentSection!"")>
+      	<#if ("index" == currentSubSection!"")>
+      		<meta name="description" content="RESTFul Web APIs Serving Customers All Over the World." />
+	  	</#if>
+	  	<#if ("team" == currentSubSection!"")>
+      		<meta name="description" content="Restlet Team - Our company is composed of highly experiences engineers pioneers of web APIs, book authors and conference speakers." />
+	  	</#if>
+	  	<#if ("board" == currentSubSection!"")>
+      		<meta name="description" content="Restlet Board - Composed of Highly Experienced Entrepreneurs and Investors, Pioneers of Professional Open Source, Cloud Computing and PaaS, both in Europe and North America." />
+	  	</#if>
+	  	<#if ("hiring" == currentSubSection!"")>
+      		<meta name="description" content="Search Restlet job opening and find out more about Restlet." />
+	  	</#if>
+	  </#if>	  
       ${metaheader!""}
       <link type="image/gif" href="/images/favicon-restlet-org.gif" rel="icon">
       <link rel="stylesheet" type="text/css"             href='/stylesheets/bootstrap.css' />
