@@ -328,6 +328,10 @@
 		<generate-file source="about/index.md" target="about/index.html" raw="decorate" />
 		<generate-file source="about/locations.md" target="about/locations.html" raw="decorate" />
 		<generate-file source="about/team.md" target="about/team.html" raw="decorate" />
+		<generate-file source="legal.md" target="legal.html" raw="decorate" />
+		<generate-file source="participate/governance.md" target="participate/governance.html" raw="decorate" />
+		<generate-file source="participate/services.md" target="participate/services.html" raw="decorate" />
+		<generate-file source="download/faq.md" target="download/faq.html" raw="decorate" />
 		<!-- Cas très particulier que first steps...-->
 	    <!-- ce n'est pas qu'une page Web, mais aussi un template qu'on peut insérer depuis download/current -->
         <generate-file source="discover/firststeps.md" target="discover/firststeps.ftl" raw="raw" />
