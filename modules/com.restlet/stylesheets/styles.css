@@ -375,6 +375,11 @@ hr {
 	width: 100%;
 }
 
+.content > h5 > a {
+	text-decoration: none;
+	color: #333333;
+}
+
 #apispark {
 	overflow: hidden;
 }

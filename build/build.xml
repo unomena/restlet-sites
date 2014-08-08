@@ -234,15 +234,15 @@
         <attribute name="target" />
         <attribute name="raw" />
         <sequential>
-	            <!-- cope with marked down file and add decoration -->
-	            <exec executable="sh" osfamily="unix">
-	                <arg value="${tmpl}/md/unixtohtml.sh" />
-	                <arg value="${temp}/owr/@{source}" />
-	                <arg value="${temp}/owr/@{target}" />
-	            	<arg value="${tmpl}/md/singlefile-@{raw}.tmpl" />
-	            </exec>
-	        </sequential>
-	    </macrodef>
+	        <!-- cope with marked down file and add decoration -->
+	        <exec executable="sh" osfamily="unix">
+	            <arg value="${tmpl}/md/unixtohtml.sh" />
+	            <arg value="${temp}/owr/@{source}" />
+	            <arg value="${temp}/owr/@{target}" />
+	          	<arg value="${tmpl}/md/singlefile-@{raw}.tmpl" />
+	        </exec>
+	    </sequential>
+	</macrodef>
 
 	<!-- ===================== -->
 	<!-- ===  Ant Targets  === -->
@@ -334,8 +334,7 @@
 		<generate-file source="download/faq.md" target="download/faq.html" raw="decorate" />
 		<!-- Cas très particulier que first steps...-->
 	    <!-- ce n'est pas qu'une page Web, mais aussi un template qu'on peut insérer depuis download/current -->
-        <generate-file source="discover/firststeps.md" target="discover/firststeps.ftl" raw="raw" />
-        <generate-file source="discover/firststeps.md" target="discover/firststeps.ftl" raw="decorate" />
+		<generate-file source="discover/firststeps.md" target="discover/firststeps.ftl" raw="raw" />
 
 		<fmpp sourceRoot="${temp}/owr" outputRoot="${temp}/${restlet-com}" modes="ignore(**/.svn,**/Thumbs.db)" quiet="reallyQuiet">
 			<data expandProperties="yes">
