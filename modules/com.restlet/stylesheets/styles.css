@@ -1502,7 +1502,7 @@ code {
 .search-div .text {
 	margin-bottom: 0px !important;
 	width: 200px;
-	border-radius: 100px;
+	border-radius: 6px;
 	padding: 3px 8px;
 }
 
