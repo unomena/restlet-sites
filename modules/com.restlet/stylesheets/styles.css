@@ -1486,31 +1486,17 @@ code {
 	text-decoration: none;
 }
 
-/*Search bar and google element*/
+/*Search bar*/
 
 #search{
     width: 267px;
     float: right;
     /*opacity: 0.5;*/
 }
-/*
-#search:hover {
-    opacity: 1;
-}
-
-#search! > input:focus {
-    opacity: 1;
-}
-
-*/
 
 .search-div {
 	position: relative;
 	float: right;
-}
-
-#searchform {
-	opacity: 0.5;
 }
 
 .search-div .text {
@@ -1520,13 +1506,13 @@ code {
 	padding: 3px 8px;
 }
 
-#searchform:hover {
+/* #searchform:hover {
 	opacity: 1;
 }
 
 #searchform:focus {
 	opacity: 1;
-}
+} */
 
 .search-div #searchsubmit {
 	position: absolute;

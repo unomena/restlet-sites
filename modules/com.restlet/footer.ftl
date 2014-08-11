@@ -137,9 +137,9 @@
     <#list sections.section as section>
       <#if section.@id == currentSection>
        <h3>${section.label?trim} <span id="search">
-       		<form method="get" id="searchform" action="http://restlet.com">
+       		<form method="get" id="searchform" action="http://restlet.com/search-results">
        			<div class="search-div">
-					<input class="text" type="text" value name"s" id="s">
+					<input class="text" type="text" value name="q" id="q">
 					<input class="submit" type="submit" id="searchsubmit" value="OK">
        			</div>
        		</form>
@@ -150,6 +150,7 @@
 </#compress>
       </div>
     </div>
+
 
 <#compress>
 <#list sections.section as section>
