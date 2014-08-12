@@ -1,6 +1,9 @@
 package com.restlet.frontend.web.firewall.counter;
 
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+
+import org.restlet.Context;
 
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
@@ -38,6 +41,12 @@ public class ConcurrentTrafficCounter extends TrafficCounter {
 
     @Override
     protected void decreaseCounter(String counterValue) {
+
+        Context.getCurrentLogger().log(
+                Level.FINE,
+                "Counter " + this.getClass()
+                + " decreased. User : " + counterValue);
+
         IndividualConcurrentTrafficCounter counter = cache
                 .getUnchecked(counterValue);
         counter.decrease();

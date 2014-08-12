@@ -1,6 +1,9 @@
 package com.restlet.frontend.web.firewall.counter.individualCounter;
 
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+
+import org.restlet.Context;
 
 import com.google.common.base.Stopwatch;
 import com.restlet.frontend.web.firewall.counter.CounterFeedback;
@@ -18,6 +21,7 @@ public class IndividualOnPeriodInMemoryTrafficCounter extends
     @Override
     public synchronized CounterFeedback increase() {
         if (stopwatch.elapsed(TimeUnit.SECONDS) > period) {
+            Context.getCurrentLogger().log(Level.FINE, "Period reinitialized.");
             stopwatch.reset();
             stopwatch.start();
             consumed = 0;

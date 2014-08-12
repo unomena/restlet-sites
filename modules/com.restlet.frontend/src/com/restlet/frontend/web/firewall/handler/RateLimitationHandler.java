@@ -1,5 +1,8 @@
 package com.restlet.frontend.web.firewall.handler;
 
+import java.util.logging.Level;
+
+import org.restlet.Context;
 import org.restlet.Request;
 import org.restlet.Response;
 import org.restlet.data.Status;
@@ -24,14 +27,18 @@ public class RateLimitationHandler extends ThresholdHandler implements
                 .getGroup())) {
             setHeaders(response, counterFeedback);
         }
-
     }
 
     @Override
     public int thresholdActivated(Request request, Response response,
             CounterFeedback counterFeedback) {
-        response.setStatus(Status.valueOf(403), "Too many requests for "
-                + counterFeedback.getCounterValue() + ": rate limitation.");
+        
+        Context.getCurrentLogger().log(Level.FINE,
+                "User " + counterFeedback.getCounterValue() + " rate limited.");
+                
+        response.setStatus(Status.CLIENT_ERROR_FORBIDDEN,
+                "Too many requests for " + counterFeedback.getCounterValue()
+                        + ": rate limitation.");
         return Filter.SKIP;
     }
 

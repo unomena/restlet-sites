@@ -3,9 +3,11 @@ package com.restlet.frontend.web.firewall;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.restlet.Context;
 import org.restlet.Request;
 import org.restlet.Response;
 import org.restlet.Restlet;
+import org.restlet.data.Status;
 import org.restlet.routing.Filter;
 
 import com.restlet.frontend.web.firewall.counter.ConcurrentTrafficCounter;
@@ -13,13 +15,22 @@ import com.restlet.frontend.web.firewall.counter.OnPeriodInMemoryTrafficCounter;
 import com.restlet.frontend.web.firewall.counter.TrafficCounter;
 import com.restlet.frontend.web.firewall.counter.countingPolicy.IPCountingPolicy;
 import com.restlet.frontend.web.firewall.counter.countingPolicy.UserCountingPolicy;
+import com.restlet.frontend.web.firewall.lister.FirewallLister;
 
 public class FirewallFilter extends Filter {
 
     private List<TrafficCounter> trafficCounters;
 
+    private FirewallLister lister;
+
     public FirewallFilter(Restlet next) {
         this.setNext(next);
+        setContext(new Context("org.restlet.ext.firewall"));
+    }
+
+    public FirewallFilter(Restlet next, FirewallLister lister) {
+        this(next);
+        this.lister = lister;
     }
 
     public FirewallFilter() {
@@ -29,7 +40,15 @@ public class FirewallFilter extends Filter {
     @Override
     protected int beforeHandle(Request request, Response response) {
 
-        int returnedValue = -1;
+        int returnedValue = Filter.SKIP;
+
+        if (lister != null) {
+            if (lister.isListed(request.getClientInfo().getAddress())) {
+                response.setStatus(Status.CLIENT_ERROR_FORBIDDEN);
+                return Filter.STOP;
+            }
+            request.getAttributes().put("firewallLister", lister);
+        }
 
         for (TrafficCounter trafficCounter : trafficCounters) {
 
@@ -48,18 +67,13 @@ public class FirewallFilter extends Filter {
             returnedValue = code;
         }
 
-        if (returnedValue == -1) {
-            // TODO By default behaviour
-            return Filter.SKIP;
-        }
-
         return returnedValue;
     }
 
     @Override
     protected void afterHandle(Request request, Response response) {
 
-         for (TrafficCounter trafficCounter : trafficCounters) {
+        for (TrafficCounter trafficCounter : trafficCounters) {
 
             String counterValue = trafficCounter.determineCounterValue(request);
             if (counterValue == null) {
@@ -67,7 +81,7 @@ public class FirewallFilter extends Filter {
             }
 
             trafficCounter.decrease(counterValue);
-         }
+        }
     }
 
     public void addCounter(TrafficCounter counter) {

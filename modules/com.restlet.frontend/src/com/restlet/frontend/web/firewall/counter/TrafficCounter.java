@@ -2,12 +2,15 @@ package com.restlet.frontend.web.firewall.counter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 
+import org.restlet.Context;
 import org.restlet.Request;
 import org.restlet.Response;
 import org.restlet.routing.Filter;
 
 import com.restlet.frontend.web.firewall.counter.countingPolicy.CountingPolicy;
+import com.restlet.frontend.web.firewall.handler.BlockingHandler;
 import com.restlet.frontend.web.firewall.handler.RateLimitationHandler;
 import com.restlet.frontend.web.firewall.handler.ThresholdHandler;
 import com.restlet.frontend.web.firewall.handler.TrafficOverrider;
@@ -51,6 +54,12 @@ public abstract class TrafficCounter {
         CounterFeedback counterFeedback = increaseCounter(counterValue);
         counterFeedback.setGroup(determineCounterGroup(counterValue));
         counterFeedback.setCounterValue(counterValue);
+
+        Context.getCurrentLogger().log(
+                Level.FINE,
+                "Counter " + this.getClass()
+                + " incremented. User : " + counterValue + ". Group : "
+                + counterFeedback.getGroup());
 
         for (TrafficOverrider trafficOverrider : trafficOverriders) {
             trafficOverrider
@@ -101,6 +110,12 @@ public abstract class TrafficCounter {
 
     public ThresholdHandler createRateLimitationHandler(int limit) {
         ThresholdHandler handler = new RateLimitationHandler(limit);
+        this.addHandler(handler);
+        return handler;
+    }
+
+    public ThresholdHandler createBlockingHandler(int limit) {
+        ThresholdHandler handler = new BlockingHandler(limit);
         this.addHandler(handler);
         return handler;
     }

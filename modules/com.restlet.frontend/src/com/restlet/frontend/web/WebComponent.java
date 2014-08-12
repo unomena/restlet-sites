@@ -106,6 +106,7 @@ public class WebComponent extends Component {
         getClients().add(Protocol.FILE);
         getClients().add(Protocol.RIAP);
         getClients().add(Protocol.HTTP);
+        // getLogService().setLogPropertiesRef("clap:///logging.properties");
 
         // -----------
         // restlet.org

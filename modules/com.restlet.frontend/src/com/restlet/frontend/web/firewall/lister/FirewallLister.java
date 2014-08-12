@@ -4,18 +4,10 @@ import java.util.List;
 
 public abstract class FirewallLister {
 
-    private boolean blacklist;
-
     public abstract List<String> getList();
 
-    public abstract void addToList(String ip);
+    public abstract boolean isListed(String ip);
 
-    public boolean isBlacklist() {
-        return blacklist;
-    }
-
-    public void setBlacklist(boolean blacklist) {
-        this.blacklist = blacklist;
-    }
+    public abstract void addToList(String... ips);
 
 }

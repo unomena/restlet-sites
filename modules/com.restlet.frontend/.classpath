@@ -13,5 +13,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/org.restlet"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/com.google"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/com.fasterxml.jackson"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/javax.mail"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

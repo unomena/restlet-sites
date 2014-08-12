@@ -53,7 +53,9 @@ import com.restlet.frontend.objects.framework.Version;
 import com.restlet.frontend.objects.framework.VersionsList;
 import com.restlet.frontend.web.firewall.FirewallFilter;
 import com.restlet.frontend.web.firewall.counter.TrafficCounter;
-import com.restlet.frontend.web.firewall.handler.BlockingHandler;
+import com.restlet.frontend.web.firewall.handler.AlertHandler;
+import com.restlet.frontend.web.firewall.lister.FirewallLister;
+import com.restlet.frontend.web.firewall.lister.InMemoryLister;
 import com.restlet.frontend.web.resources.framework.DistributionsResource;
 import com.restlet.frontend.web.resources.framework.DownloadCurrentServerResource;
 import com.restlet.frontend.web.resources.framework.DownloadPastServerResource;
@@ -238,7 +240,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 
     @Override
     public Restlet createInboundRoot() {
-        Engine.setLogLevel(Level.INFO);
+        Engine.setLogLevel(Level.FINE);
         // Create a root router
         Router result = new Router(getContext());
 
@@ -344,19 +346,30 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
         };
 
         // Create a firewall filter
-        FirewallFilter firewallFilter = new FirewallFilter(guideFilter);
+        FirewallLister lister = new InMemoryLister();
+        FirewallFilter firewallFilter = new FirewallFilter(guideFilter, lister);
 
         TrafficCounter periodCounter = firewallFilter
-                .addPeriodInMemoryIPCounter(10);
+                .addPeriodInMemoryIPCounter(20);
+        periodCounter.addHandler(new AlertHandler(6, "gblondeau@restlet.com",
+                "fvugouspxpfdxskx", "smtp.gmail.com",
+                new String[] { "gblondeau@restlet.com" }));
         periodCounter.createRateLimitationHandler(5);
-
-        TrafficCounter concurrentCounter = firewallFilter
-                .addConcurrentIPTrafficCounter();
-        concurrentCounter.addHandler(new BlockingHandler(1));
 
         result.attach("/learn/guide", firewallFilter);
 
-        result.attach("/download", downloadRouter);
+        FirewallFilter downloadFirewallFilter = new FirewallFilter(
+                downloadRouter);
+
+        TrafficCounter firewallPeriodCounter = downloadFirewallFilter
+                .addPeriodInMemoryIPCounter(60);
+        firewallPeriodCounter.createRateLimitationHandler(5);
+
+        TrafficCounter firewallConcurrentCounter = downloadFirewallFilter
+                .addConcurrentIPTrafficCounter();
+        firewallConcurrentCounter.createBlockingHandler(2);
+
+        result.attach("/download", downloadFirewallFilter);
         result.attach("/feeds/summary", FeedSummaryResource.class);
         result.attach("/feeds/general", FeedGeneralResource.class);
         result.attach("/feeds/releases", FeedReleasesResource.class);
@@ -860,7 +873,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 
         redirect(router, "/learn/tutorial/1.2/", "/learn/tutorial/2.0");
         redirect(router, "/learn/guide/1.2/", "/learn/guide/2.0");
-        
+
         redirectBranch(router, "/learn/javadocs", "/learn/javadocs/{branch}",
                 null);
 
