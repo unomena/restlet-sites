@@ -1,5 +1,3 @@
-<div class="right-sidebar"></div>
-
    <h3><a name="#eclipse"></a>Eclipse update site</h3>
 
    <h4>Introduction</h4>

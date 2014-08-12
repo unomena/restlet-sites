@@ -98,32 +98,45 @@ $(document).ready(function() {
 	  	var mpi = getParameterByName(window.location.search, "mpi", null);
 	  	
 		if (mpi) {
-			mixpanel.identify(mpi);
+			try {
+				mixpanel.identify(mpi);
+			} catch(err) {
+				//nothing to do
+			}
 		}
 	}
 
 	$("#footerNewsLetterOkButton").click(
 	    function(event) {
 	        if (checkEmail("footerNewsLetterEmail","footerNewsLetterOkButton")) {
-	            mixpanel.track("Shared email", {
-	                "email": $("#footerNewsLetterEmail").val(),
-	                "Email field location":"RF footer: newsletter sign up field",
-	                "Product":"Restlet Framework"
-	            }, function() {
-	                $("#footerNewsLetterEmail").val("");
-	                $("#footerNewsLetterEmail").attr("disabled", true);
-	                $("#footerNewsLetterOkButton").html("&#10003;");
-	                $("#footerNewsLetterOkButton").css("font-size","24px");
-	                $("#footerNewsLetterOkButton").attr("disabled", true);
-	            });
+	            try {
+	            	callback = function() {
+		                $("#footerNewsLetterEmail").val("");
+		                $("#footerNewsLetterEmail").attr("disabled", true);
+		                $("#footerNewsLetterOkButton").html("&#10003;");
+		                $("#footerNewsLetterOkButton").css("font-size","24px");
+		                $("#footerNewsLetterOkButton").attr("disabled", true);
+		            }
+		        	mixpanel.track("Shared email", {
+		                "email": $("#footerNewsLetterEmail").val(),
+		                "Email field location":"RF footer: newsletter sign up field",
+		                "Product":"Restlet Framework"
+		            }, callback());
+	            } catch (err) {
+	            	callback();
+	            }
 	        }
 	    }
 	);
-	mixpanel.track_links(".discoverlink", "Clicked on Discover link");
-    mixpanel.track_links(".downloadlink", "Clicked on Download link");
-    mixpanel.track_links(".learnlink", "Clicked on Learn link");
-    mixpanel.track_links(".participatelink", "Clicked on Participate link");
-    
+	try {
+		mixpanel.track_links(".discoverlink", "Clicked on Discover link");
+	    mixpanel.track_links(".downloadlink", "Clicked on Download link");
+	    mixpanel.track_links(".learnlink", "Clicked on Learn link");
+	    mixpanel.track_links(".participatelink", "Clicked on Participate link");
+	} catch(err) {
+		//nothing to do
+	}
+	    
     $(".apisparklink").click(function() {
     	this.href = this.href.concat("?mpi=").concat(getMixpanelIdFromCookie());
     });
