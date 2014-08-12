@@ -60,7 +60,7 @@ body {
 	margin-bottom: 15px;
 	font-weight: bold;
 	line-height: 34px;
-	width: 650px
+	/*width: 650px*/
 }
 
 .hero p {
@@ -1486,61 +1486,44 @@ code {
 	text-decoration: none;
 }
 
-/*Search bar and google element*/
+/*Search bar*/
 
 #search{
     width: 267px;
     float: right;
     /*opacity: 0.5;*/
 }
-/*
-#search:hover {
-    opacity: 1;
+
+.search-div {
+	position: relative;
+	float: right;
 }
 
-#search! > input:focus {
-    opacity: 1;
+.search-div .text {
+	margin-bottom: 0px !important;
+	width: 200px;
+	border-radius: 6px;
+	padding: 3px 8px;
 }
 
-active {
-    opacity: 1;
-}
-*/
-
-form.gsc-search-box {
-    margin-bottom: -10px !important;
+/* #searchform:hover {
+	opacity: 1;
 }
 
-table.gsc-search-box td.gsc-input {
-    padding-top: 6px;
-}
+#searchform:focus {
+	opacity: 1;
+} */
 
-.gsc-search-box-tools .gsc-search-box .gsc-input {
-    margin-bottom: 17px !important;
-}
-
-.cse .gsc-control-cse, .gsc-control-cse {
-    background-color: transparent !important;
-    border: none !important;
-    padding: 0px !important;
-}
-
-input.gsc-search-button-v2 {
-    margin-top: 4px !important;
-}
-
-.gsc-thumbnail-inside {
-    height: 20px !important;
-}
-
-.gs-webResult.gs-result {
-    height: 100px !important;
-}
-
-.container>h3 {
-	width: 870px;
-}
-
-.gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {
-	padding-left: 0px !important;
+.search-div #searchsubmit {
+	position: absolute;
+	right: 10px;
+	top: 13px;
+	display: block;
+	cursor: pointer;
+	text-indent: -13337px;
+	font-size: 0px;
+	height: 12px;
+	width: 12px;
+	border: none;
+	background: url("../images/search-btn.jpg") no-repeat center center;
 }

@@ -136,27 +136,21 @@
   <#else>
     <#list sections.section as section>
       <#if section.@id == currentSection>
-       <h3>${section.label?trim} <span id="search"><div class="search-div">
-<script>
-  (function() {
-    var cx = '003179985452155369789:any5hjk8wii';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:searchbox-only></gcse:searchbox-only>
-       </div></span></h3>
+       <h3>${section.label?trim} <span id="search">
+       		<form method="get" id="searchform" action="http://restlet.com/search-results">
+       			<div class="search-div">
+					<input class="text" type="text" value name="q" id="q">
+					<input class="submit" type="submit" id="searchsubmit" value="OK">
+       			</div>
+       		</form>
+       	</span></h3>
       </#if>
 	</#list>
   </#if>
 </#compress>
       </div>
     </div>
+
 
 <#compress>
 <#list sections.section as section>
