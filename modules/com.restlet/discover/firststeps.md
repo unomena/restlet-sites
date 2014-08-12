@@ -1,6 +1,6 @@
 # First Steps
 
-## <a name="toc">Table of contents</a>
+## Table of contents
 
 This page should allow you to taste the simplicity of the Restlet
 Framework in less than 10 minutes. It explains how to create a Resource
@@ -12,7 +12,7 @@ that says "hello, world".
 4.  [Run as a standalone Java application](#part04)
 5.  [Conclusion](#conclusion)
 
-#### What do I need?
+## <a name="part01">What do I need?</a>
 
 We assume that you have a development environment set up and
 operational, and that you already have installed the JRE 1.5 (or
@@ -20,7 +20,7 @@ higher). In case you haven't downloaded Restlet yet, select one of the
 available distributions of the latest release of the [Restlet
 framework](/download/ "Restlet framework").
 
-#### The "hello, world" application.
+## <a name="part02">The "hello, world" application.</a>
 
 Let's start with the core of a REST application: the Resource. Here is
 the code of the single resource defined by the sample application.
@@ -72,7 +72,7 @@ public class FirstStepsApplication extends Application {
    
 ~~~~
 
-#### Run in a Servlet container
+## <a name="part03">Run in a Servlet container.</a>
 
 As you are probably more familiar with Servlets, we propose you to run
 the Restlet application inside your favorite Servlet container. Create a
@@ -124,7 +124,7 @@ web browser, and gently type the following URL: "http://\<your server
 name\>:\<its port number\>/firstStepsServlet". The server will happily
 welcome you with a nice "hello, world".
 
-#### Run as a standalone Java application
+## <a name="part04">Run as a standalone Java application.</a>
 
 A Restlet application cannot only run inside a Servlet container, but
 can also be run as a standalone Java application using a couple of JARs:
@@ -168,6 +168,6 @@ program is currently using the port 8182.
 We hope you that enjoyed these simple steps and we now encourage you to
 [move on to the Learn section](/learn/) for more advanced examples.
 
-### <a name="notes">Notes</a>
+### Notes
 
 -   Thanks to Didier Girard for suggesting this page.

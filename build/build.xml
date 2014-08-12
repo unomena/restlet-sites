@@ -234,15 +234,15 @@
         <attribute name="target" />
         <attribute name="raw" />
         <sequential>
-	            <!-- cope with marked down file and add decoration -->
-	            <exec executable="sh" osfamily="unix">
-	                <arg value="${tmpl}/md/unixtohtml.sh" />
-	                <arg value="${temp}/owr/@{source}" />
-	                <arg value="${temp}/owr/@{target}" />
-	            	<arg value="${tmpl}/md/singlefile-@{raw}.tmpl" />
-	            </exec>
-	        </sequential>
-	    </macrodef>
+	        <!-- cope with marked down file and add decoration -->
+	        <exec executable="sh" osfamily="unix">
+	            <arg value="${tmpl}/md/unixtohtml.sh" />
+	            <arg value="${temp}/owr/@{source}" />
+	            <arg value="${temp}/owr/@{target}" />
+	          	<arg value="${tmpl}/md/singlefile-@{raw}.tmpl" />
+	        </exec>
+	    </sequential>
+	</macrodef>
 
 	<!-- ===================== -->
 	<!-- ===  Ant Targets  === -->
@@ -323,10 +323,18 @@
 		<generate-guide version="2.3" />
 	    <!-- NB : les titres sont générés à partir des noms de fichier... -->
 		<!-- Cas général -->
-		<generate-file source="discover/todelete.md" target="discover/todelete.html" raw="decorate" />
+		<generate-file source="about/board.md" target="about/board.html" raw="decorate" />
+		<generate-file source="about/hiring.md" target="about/hiring.html" raw="decorate" />
+		<generate-file source="about/index.md" target="about/index.html" raw="decorate" />
+		<generate-file source="about/locations.md" target="about/locations.html" raw="decorate" />
+		<generate-file source="about/team.md" target="about/team.html" raw="decorate" />
+		<generate-file source="legal.md" target="legal.html" raw="decorate" />
+		<generate-file source="participate/governance.md" target="participate/governance.html" raw="decorate" />
+		<generate-file source="participate/services.md" target="participate/services.html" raw="decorate" />
+		<generate-file source="download/faq.md" target="download/faq.html" raw="decorate" />
 		<!-- Cas très particulier que first steps...-->
 	    <!-- ce n'est pas qu'une page Web, mais aussi un template qu'on peut insérer depuis download/current -->
-        <generate-file source="discover/firststeps.md" target="discover/firststeps.ftl" raw="raw" />
+		<generate-file source="discover/firststeps.md" target="discover/firststeps.ftl" raw="raw" />
 
 		<fmpp sourceRoot="${temp}/owr" outputRoot="${temp}/${restlet-com}" modes="ignore(**/.svn,**/Thumbs.db)" quiet="reallyQuiet">
 			<data expandProperties="yes">

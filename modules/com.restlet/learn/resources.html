@@ -41,17 +41,21 @@
 				
 				// in case Mixpanel servers don't get back to us in time
 				// we use the same timeout value as the one defined in Mixpanel config
-				var trackTimeout = window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
-				
-				// fire the tracking event, if the event is done before the
-				// timeout, we call a window.clearTimeout
-				mixpanel.track("Downloaded Resource", {
-					"Resource Name":"3mn demo video",
-					"Resource Location":"Resources page"
-				}, function() {
-					window.clearTimeout(trackTimeout);
+				try {
+					var trackTimeout = window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
+					
+					// fire the tracking event, if the event is done before the
+					// timeout, we call a window.clearTimeout
+					mixpanel.track("Downloaded Resource", {
+						"Resource Name":"3mn demo video",
+						"Resource Location":"Resources page"
+					}, function() {
+						window.clearTimeout(trackTimeout);
+						hrefCallback();
+					});
+				} catch(err) {
 					hrefCallback();
-				});
+				}
             }
             
         );
@@ -73,13 +77,18 @@
 					if (checkEmail("campaignEmail", "campaignButton") 
 							&& checkFieldEmpty("campaignName", "campaignButton") 
 							&& checkFieldEmpty("campaignAddress", "campaignButton")) {
-						mixpanel.track("Downloaded Resource", {
-							"Resource Name":"Restlet Stickers",
-							"Resource Location":"Resources page",
-							"Email": $("#campaignEmail").val(),
-							"Name": $("#campaignName").val(),
-							"Mailing Address": $("#campaignAddress").val()
-						});
+						
+						try {
+							mixpanel.track("Downloaded Resource", {
+								"Resource Name":"Restlet Stickers",
+								"Resource Location":"Resources page",
+								"Email": $("#campaignEmail").val(),
+								"Name": $("#campaignName").val(),
+								"Mailing Address": $("#campaignAddress").val()
+							});
+						} catch(err) {
+							//nothing to do
+						}
 						
 						// close popup
 						$("#campaignName").val("");
@@ -90,22 +99,26 @@
 				}
 		);
 
- 		mixpanel.track_links(".userguidelink", "Downloaded Resource", {
-					"Resource Name":"User Guide 2.2",
-					"Resource Location":"Resources page"
-				});
- 		mixpanel.track_links(".kinlaneguidelink", "Downloaded Resource", {
-					"Resource Name":"Kin Lane Guide",
-					"Resource Location":"Resources page"
-				});
- 		mixpanel.track_links(".paasguidelink", "Downloaded Resource", {
-					"Resource Name":"David Linthicum Report",
-					"Resource Location":"Resources page"
-				});
- 		mixpanel.track_links(".roadguidelink", "Downloaded Resource", {
-					"Resource Name":"ROAD Guide",
-					"Resource Location":"Resources page"
-				});
+		try {
+	 		mixpanel.track_links(".userguidelink", "Downloaded Resource", {
+						"Resource Name":"User Guide 2.2",
+						"Resource Location":"Resources page"
+					});
+	 		mixpanel.track_links(".kinlaneguidelink", "Downloaded Resource", {
+						"Resource Name":"Kin Lane Guide",
+						"Resource Location":"Resources page"
+					});
+	 		mixpanel.track_links(".paasguidelink", "Downloaded Resource", {
+						"Resource Name":"David Linthicum Report",
+						"Resource Location":"Resources page"
+					});
+	 		mixpanel.track_links(".roadguidelink", "Downloaded Resource", {
+						"Resource Name":"ROAD Guide",
+						"Resource Location":"Resources page"
+					});
+		} catch(err) {
+			//nothing to do
+		}
 	});
 </#noparse>
 </#global>

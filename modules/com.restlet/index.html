@@ -19,9 +19,13 @@
 <#global javascript>
 	$(document).ready(function() {
         init($("#cBranch"), $("#cEdition"), $("#cDistribution"), false, true);
-
-        mixpanel.track("Visited the RF homepage");
-        mixpanel.track_links(".btn-tryit-hp", "Clicking the AS Try it button");
+		
+		try {
+	        mixpanel.track("Visited the RF homepage");
+	        mixpanel.track_links(".btn-tryit-hp", "Clicking the AS Try it button");
+	    } catch(err) {
+	    	//nothing to do
+	    }
 	});
 </#global>
 <#global header>

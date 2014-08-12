@@ -1,5 +1,3 @@
-<div class="right-sidebar"></div>
-
    <h3><a name="#maven"></a>Maven configuration</h3>
 
    <p>
