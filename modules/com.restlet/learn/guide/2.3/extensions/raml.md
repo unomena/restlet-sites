@@ -18,14 +18,14 @@ Usage
 Add org.restlet.ext.raml.jar (provided in the "lib" directory of
 [restlet framework](http://restlet.com/download/current#release=testing&edition=jse&distribution=zip 
 "download restlet framework")) to your classpath.
- 
+
 Make sure you are using the version 2.3 of Restlet and java 1.7.
 
 ### Configuration
 
 Make your application class extend org.restlet.ext.raml.RamlApplication instead of org.restlet.Application.
 
-By default, the RAML documentation will be available on the path "/raml" of your API. If you want to change this path, you can specify it manually in the method _createInboundRoot_: 
+By default, the RAML documentation will be available on the path "/raml" of your API. If you want to change this path, you can specify it manually in the method _createInboundRoot_:
 
 ```java
 public Restlet createInboundRoot() {
@@ -44,11 +44,11 @@ Here, you specify that the RAML definition will be provided on the path "/docs".
 Customization
 =============
 
-If you want to display a definition edited manually, the RamlApplication can get it directly from files. To do that, you just have to override the method _getRamlSpecificationRestlet()_ of class RamlApplication and make it return a custom Restlet. 
+If you want to display a definition edited manually, the RamlApplication can get it directly from files. To do that, you just have to override the method _getRamlSpecificationRestlet()_ of class RamlApplication and make it return a custom Restlet.
 
 I am using RAML java parser to get the definition from a file. You can get it [here](https://github.com/raml-org/raml-java-parser).
 
-See sample implementation below: 
+See sample implementation below:
 
 ```java
 
