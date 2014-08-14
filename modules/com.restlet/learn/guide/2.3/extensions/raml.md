@@ -5,6 +5,7 @@ Introduction
 ============
 
 This extension provides a preview integration with [RAML](http://raml.org/) including: 
+
 - automated generation of RAML descriptor in YAML 
 - introspection of Restlet API based applications 
 

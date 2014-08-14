@@ -5,6 +5,7 @@ Introduction
 ============
 
 This extension provides a preview integration with [Swagger](https://helloreverb.com/developers/swagger) including: 
+
 - automated generation of Swagger descriptor in JSON 
 - introspection of JAX-RS API based applications 
 - introspection of Restlet API based applications 
