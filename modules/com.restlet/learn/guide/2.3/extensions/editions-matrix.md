@@ -44,6 +44,7 @@ Extensions|[Android](../editions/android "Android")|[GAE](../editions/gae "GAE")
 [org.restlet.ext.odata](./odata "odata")|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|&nbsp;|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|Integration with OData services.
 [org.restlet.ext.openid](./openid "openid")|&nbsp;|![](/images/icons/8/puce.png)|&nbsp;|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|Support for OpenID authentication.
 [org.restlet.ext.osgi](./osgi "osgi")|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|![](/images/icons/8/puce.png)|Support for the OSGi specification.
+[org.restlet.ext.raml](./raml "raml")|&nbsp;|![](/images/icons/8/puce.png)|&nbsp;|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|Integration with RAML.
 [org.restlet.ext.rdf](./rdf "rdf")|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|&nbsp;|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|Support for the RDF parsing and generation.
 [org.restlet.ext.rome](./rome "rome")|&nbsp;|![](/images/icons/8/puce.png)|&nbsp;|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|Support for syndicated representations via the ROME library.
 [org.restlet.ext.sdc](./sdc "sdc")|&nbsp;|&nbsp;|&nbsp;|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|Integration with Google Secure Data Connector on the cloud side.
@@ -52,7 +53,7 @@ Extensions|[Android](../editions/android "Android")|[GAE](../editions/gae "GAE")
 [org.restlet.ext.sip](./sip "sip")|![](/images/icons/8/puce.png)|&nbsp;|&nbsp;|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|Support for Session Initiation Protocol (SIP).
 [org.restlet.ext.slf4j](./slf4j "slf4j")|&nbsp;|&nbsp;|&nbsp;|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|Support for the SLF4J logging bridge.
 [org.restlet.ext.spring](./spring "spring")|&nbsp;|![](/images/icons/8/puce.png)|&nbsp;|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|Integration with Spring Framework.
-[org.restlet.ext.swagger](./swagger "swagger")|&nbsp;|![](/images/icons/8/puce.png)|&nbsp;|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|Integration with Simple framework.
+[org.restlet.ext.swagger](./swagger "swagger")|&nbsp;|![](/images/icons/8/puce.png)|&nbsp;|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|Integration with Swagger.
 [org.restlet.ext.thymeleaf](./thymeleaf "thymeleaf")|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|&nbsp;|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|Integration with Thymeleaf.
 [org.restlet.ext.velocity](./velocity "velocity")|&nbsp;|![](/images/icons/8/puce.png)|&nbsp;|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|Integration with Apache Velocity.
 [org.restlet.ext.wadl](./wadl "wadl")|&nbsp;|![](/images/icons/8/puce.png)|&nbsp;|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|![](/images/icons/8/puce.png)|Support for the WADL specification.

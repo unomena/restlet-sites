@@ -4,8 +4,7 @@ Swagger extension
 Introduction
 ============
 
-This extension provides a preview integration with Swagger including:
-
+This extension provides a preview integration with [Swagger](https://helloreverb.com/developers/swagger) including:
 - automated generation of Swagger descriptor in JSON
 - introspection of JAX-RS API based applications
 - introspection of Restlet API based applications
@@ -22,7 +21,7 @@ Usage
 ### Dependencies
 
 Add org.restlet.ext.swagger.jar (provided in the "lib" directory of
-[restlet framework](http://restlet.com/download/current#release=stable&edition=jse&distribution=zip 
+[restlet framework](http://restlet.com/download/current#release=testing&edition=jse&distribution=zip 
 "download restlet framework")) to your classpath.
  
 Make sure you are using the version 2.3 of Restlet and java 1.7.
