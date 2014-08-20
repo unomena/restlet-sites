@@ -124,6 +124,7 @@ Use the following syntax ("notoc" excludes a document from the table of content)
         -   [Tutorial](extensions/odata/tutorial.md) "notoc"
     -   [OpenID](extensions/openid.md)
     -   [OSGi](extensions/osgi.md)
+    -   [RAML](extensions/raml.md)
     -   [RDF](extensions/rdf.md)
     -   [ROME](extensions/rome.md)
     -   [SDC](extensions/sdc.md)
