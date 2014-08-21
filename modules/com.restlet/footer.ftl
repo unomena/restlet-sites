@@ -74,12 +74,12 @@
       ${stylesheet}
       </style>
 </#if>
-<#list javascript_files as javascript_file>
-      <script                type="text/javascript"     src="${javascript_file}"></script>
-</#list>
       <script                type="text/javascript"     src="/javascript/jquery-1.9.0.min.js"></script>
       <script                type="text/javascript"     src="/javascript/jquery-cookie.js"></script>
       <script                type="text/javascript"     src="/javascript/common.js"></script>
+<#list javascript_files as javascript_file>
+      <script                type="text/javascript"     src="${javascript_file}"></script>
+</#list>
 <#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>
       <script                type="text/javascript"     src="/javascript/jsclass-core.js"></script>
       <script                type="text/javascript"     src="/javascript/json-minified.js"></script>
