@@ -90,7 +90,7 @@ $(document).ready(function() {
 			$.cookie('fill-email-campaign', 'true', {
 				expires: 365
 			});
-			
+
 			if (modalNumber == 0) {
 				window.setTimeout($("#videoPopup").show(),1000);
 			} else {				
