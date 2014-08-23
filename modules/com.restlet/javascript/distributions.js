@@ -88,7 +88,7 @@ function setDownloadButton() {
 		// Update the cookie branch with the branch value
 		$.cookie('branch', version.minorVersion, {path : '/'});
 
-		$('#download').append('<p><button id="rfDownloadButton" class="btn btn-large btn-success" type="button"><em class="download-icon"></em>Download ' + version.fullVersionCompact + '</button></p>');
+		$('#download').append('<p><button id="rfDownloadButton" class="btn btn-large btn-success" type="button" onClick="ga(\'send\', \'event\', { eventCategory: \'Download\', eventAction: \'Click\', eventLabel: \'Framework\', eventValue: 0});"><em class="download-icon"></em>Download ' + version.fullVersionCompact + '</button></p>');
 		
 		$('#download').append('<p><a href="' + urlChangesLog + '">What\'s new?</a></p>');
 		$('#download').append('<p>' + version.published + ' release</p>');
