@@ -1,4 +1,4 @@
-<div class="modalDialog kinlane" id="deployKinModal">
+<div class="modalDialog kinlane kin" id="deployKinModal">
 	<div>
     	<div class="close-button"></div>
        	<div class="doc-preview"></div>
@@ -13,8 +13,8 @@
                	<div class="clearBoth"></div>
            	</div>
            	<div class="doc-download">
-               	<input type="email" id="campaignEmail" required="required" placeholder="Email"/>
-               	<button id="campaignButton">Download</button>
+               	<input type="email" id="campaignKinEmail" required="required" placeholder="Email"/>
+               	<button id="campaignKinButton">Download</button>
            	</div>
            	<div class="doc-footer">
                	<p>Your details will never be shared to a 3rd party. We hate spam just as much as you do.</p>
@@ -25,7 +25,7 @@
 	</div>
 </div>
 
-<div id="deployUserGuideModal" class="modalDialog kinlane">
+<div id="deployUserGuideModal" class="modalDialog kinlane guide">
 	<div>
 		<div class="close-button"></div>
 		<div class="doc-preview"></div>
@@ -43,8 +43,8 @@
 				<div class="clearBoth"></div>
 			</div>
 			<div class="doc-download">
-				<input type="email" id="downloadDocKinLaneEmail" required="required" placeholder="Email"/>
-				<button id="downloadDocKinLane" disabled="true">Download</button>
+				<input type="email" id="campaignGuideEmail" required="required" placeholder="Email"/>
+				<button id="campaignGuideButton">Download</button>
 			</div>
 			<div class="doc-footer">
 				<p>Your details will never be shared to a 3rd party. We hate spam just as much as you do.</p>
@@ -55,7 +55,7 @@
 	</div>
 </div>  
 
-<div id="deployVideoModal" class="modalDialog kinlane">
+<div id="deployVideoModal" class="modalDialog kinlane vid">
 	<div>
 		<div class="close-button"></div>
 		<div class="doc-preview"></div>
@@ -72,8 +72,8 @@
 				<div class="clearBoth"></div>
 			</div>
 			<div class="doc-download">
-				<input type="email" id="campaignEmail" required="required" placeholder="Email"/>
-				<button id="campaignButton">Watch video</button>
+				<input type="email" id="campaignVideoEmail" required="required" placeholder="Email"/>
+				<button id="campaignVideoButton">Watch video</button>
 			</div>
 			<div class="doc-footer">
 				<p>Your details will never be shared to a 3rd party. We hate spam just as much as you do.</p>
@@ -84,28 +84,26 @@
 	</div>
 </div>
 
-<div id="deployPaasModal" class="modalDialog kinlane">
+<div class="modalDialog kinlane stickers" id="deployStickersModal">
 	<div>
+		<strong class="title">Order Your Free Restlet Stickers!</strong>
 		<div class="close-button"></div>
 		<div class="doc-preview"></div>
 		<div class="doc-desc">
-			<div class="doc-title">
-				<h3>PaaS Market Moves Beyond Deployment and Scaling</h3>
-			</div>
 			<div class="doc-content">
-				<div class="text">Through this report, David Linthicum, a cloud analyst, 
-				explains why enterprises must understand how APIs and PaaS can work together 
-				to build and deploy better enterprise applications more quickly and with much more reuse.
-				</div>
-				<div class="avatar"></div>
-				<div class="clearBoth"></div>
+				<div class="text">Fill in the form below and receive free Restlet stickers in your mailbox!</div>
 			</div>
 			<div class="doc-download">
-				<input type="email" id="campaignEmail" required="required" placeholder="Email"/>
-				<button id="campaignButton">Watch video</button>
+				<div class="row"><input type="text" id="campaignName" placeholder="Name" class="required"></div>
+				<div class="row"><input type="email" id="campaignStickersEmail" placeholder="Email Address" class="required-email"></div>
+				<div class="row"><textarea cols="5" rows="5" id="campaignAddress" placeholder="Mailing Address" class="required"></textarea></div>
+				<div class="row">
+					<button id="campaignStickersButton">Order Stickers</button>
+					<p>Your details will never be shared to a 3rd party. We hate spam just as much as you do.</p>
+				</div>
 			</div>
 			<div class="doc-footer">
-				<p>Your details will never be shared to a 3rd party. We hate spam just as much as you do.</p>
+				<p></p>
 			</div>
 			<div class="clearBoth"></div>
 		</div>

@@ -256,6 +256,11 @@ function setDownloadButton() {
 							expires: 365
 						});
 						
+						// Set a cookie for the popus in ressources
+						$.cookie('fill-email-campaign', 'true', {
+							expires: 365
+						});
+						
 						// launch pdf download in a new tab
 						window.open('http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=popup&utm_campaign=Kin%20Lane%20Guide', "_blank");
 					}

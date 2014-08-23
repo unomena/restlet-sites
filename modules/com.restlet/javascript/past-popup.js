@@ -9,16 +9,28 @@ $(document).ready(function() {
     $('.btn-download-resources').click(
 		function(event) {
 			// open campaign popup
-			if(event.currentTarget.classList[2] == 'watch-video-btn') {				
-				$("#deployVideoModal").show();
+			if(event.currentTarget.classList[2] == 'watch-video-btn') {
+				if ($.cookie('fill-email-campaign') != 'true') {
+					$("#deployVideoModal").show();
+				}
 			} else if(event.currentTarget.classList[2] == 'userguidelink') {
-				$("#deployUserGuideModal").show();
+				if ($.cookie('fill-email-campaign') != 'true') {
+					$("#deployUserGuideModal").show();
+				} else {
+					printDoc(0);
+				}
 			} else if(event.currentTarget.classList[2] == 'kinlaneguidelink') {
-				$("#deployKinModal").show();
+				if ($.cookie('fill-email-campaign') != 'true') {
+					$("#deployKinModal").show();
+				} else {
+					printDoc(1);
+				}
 			} else if(event.currentTarget.classList[2] == 'paasguidelink') {
 				//$("#deployPaasModal").show();
+				printDoc(2);
 			} else if(event.currentTarget.classList[2] == 'roadguidelink') {
 				//$("#deployRoadGuideModal").show();
+				printDoc(3);
 			} else if(event.currentTarget.classList[2] == 'stickerscampaignlink') {
 				$("#deployStickersModal").show();
 			}
@@ -31,59 +43,88 @@ $(document).ready(function() {
 		}
 	);
 
-	$('#campaignButton').click(
+	$('#campaignKinButton').click(
 		function(event) {
-			if(event.currentTarget.classList[2] == 'watch-video-btn') {				
-				generalModal(0);
-			} else if(event.currentTarget.classList[2] == 'userguidelink') {
-				generalModal(1);
-			} else if(event.currentTarget.classList[2] == 'kinlaneguidelink') {
-				generalModal(2);
-			} else if(event.currentTarget.classList[2] == 'paasguidelink') {
-				//paasModal();
-			} else if(event.currentTarget.classList[2] == 'roadguidelink') {
-				//roadGuideModal();
-			} else if(event.currentTarget.classList[2] == 'stickerscampaignlink') {
-				stickersModal();
-			}
+			generalModal('Kin');
 		}
 	);
+	
+	$('#campaignGuideButton').click(
+		function(event) {
+			generalModal('Guide');
+		}
+	);
+	
+	$('#campaignVideoButton').click(
+		function(event) {
+			generalModal('Video');
+		}
+	);
+	
+	$('#campaignStickersButton').click(
+		function(event) {
+			stickersModal();
+		}
+	);
+	
+	
+	function printDoc(docNumber){
+		var docLocation = "";
+		if (docNumber == 0) {
+			docLocation = "http://restlet.com/learn/archives/misc/2.2/rf-user-guide-2-2.pdf";
+		} else if (docNumber == 1) {
+			docLocation = "http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=popup&utm_campaign=Kin%20Lane%20Guide";
+		} else if (docNumber == 2) {
+			docLocation = "http://restlet.files.wordpress.com/2014/05/gigaom-research-paas-market-moves-beyond-deployment-and-scaling.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=David%20Linthicum%20ReportRP";
+		} else if (docNumber == 3) {
+			docLocation = "http://blog.restlet.com/wp-content/uploads/2014/06/ROAD-Designing-a-RESTful-web-API1.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=ROAD%20GuideRP";
+		}
+		window.open(docLocation, "_blank");
+	}
 	
 	function generalModal(modalNumber){
 		var emailField = "";
 		var mixEvent = "";
 		var docLocation = "";
 		var modName = "";
-		if (modalNumber == 1) {
+		var button = "";
+		var email = "";
+		if (modalNumber == 'Video') {
 			emailField = "3min Demo Video";
 			mixEvent = "Watched 3min Demo Video";
 			modName = "#deployVideoModal";
-		} else if (modalNumber == 1) {
+			button = "campaignVideoButton";
+			email = "campaignVideoEmail";
+		} else if (modalNumber == 'Guide') {
 			emailField = "User Guide PDF";
 			mixEvent = "Downloaded UserGuide PDF";
 			docLocation = "http://restlet.com/learn/archives/misc/2.2/rf-user-guide-2-2.pdf";
 			modName = "#deployUserGuideModal";
-		} else if (modalNumber == 2) {
+			button = "campaignGuideButton";
+			email = "campaignGuideEmail";
+		} else if (modalNumber == 'Kin') {
 			emailField = "Kin Lane Guide";
 			mixEvent = "Downloaded Kin Lane Guide";
 			docLocation = "http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=popup&utm_campaign=Kin%20Lane%20Guide";
 			modName = "#deployKinModal";
+			button = "campaignKinButton";
+			email = "campaignKinEmail";
 		}
-		if (checkEmail("campaignEmail", "campaignButton")) {
+		if (checkEmail(email, button)) {
 			try {
 				mixpanel.track("Shared email", {
-					"email": $("#campaignEmail").val(),
+					"email": $("#" + email).val(),
 					"Email field location": emailField
 				});
-				mixpanel.alias($("#campaignEmail").val(), mixpanel.get_distinct_id());
-				mixpanel.people.set({"$email": $("#campaignEmail").val()});
+				mixpanel.alias($("#" + email).val(), mixpanel.get_distinct_id());
+				mixpanel.people.set({"$email": $("#" + email).val()});
 				mixpanel.track(mixEvent);
 			} catch(err) {
 				//nothing to do
 			}
 				
 			// close popup
-			$("#campaignEmail").val("");
+			$("#" + email).val("");
 			$(modName).hide();
 			
 			// Set a one year cookie dedicated to all campaigns (unless stickers). 
@@ -101,15 +142,15 @@ $(document).ready(function() {
 	}
 	
 	function stickersModal() {
-		if (checkEmail("campaignEmail", "campaignButton") 
-				&& checkFieldEmpty("campaignName", "campaignButton") 
-				&& checkFieldEmpty("campaignAddress", "campaignButton")) {
+		if (checkEmail("campaignStickersEmail", "campaignStickersButton") 
+				&& checkFieldEmpty("campaignName", "campaignStickersButton") 
+				&& checkFieldEmpty("campaignAddress", "campaignStickersButton")) {
 			
 			try {
 				mixpanel.track("Downloaded Resource", {
 					"Resource Name":"Restlet Stickers",
 					"Resource Location":"Resources page",
-					"Email": $("#campaignEmail").val(),
+					"Email": $("#campaignStickersEmail").val(),
 					"Name": $("#campaignName").val(),
 					"Mailing Address": $("#campaignAddress").val()
 				});
@@ -119,7 +160,7 @@ $(document).ready(function() {
 			
 			// close popup
 			$("#campaignName").val("");
-			$("#campaignEmail").val("");
+			$("#campaignStickersEmail").val("");
 			$("#campaignAddress").val("");
 			$("#deployStickersModal").hide();
 		}
