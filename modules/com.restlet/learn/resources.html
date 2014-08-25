@@ -1,3 +1,4 @@
+<#global javascript_files=["/javascript/past-popup.js"] />
 <#global javascript>
 <#noparse>
 	$(document).ready(function() {
@@ -29,7 +30,10 @@
 			$("#videoPopup").hide();
 		});
 		$("#deployModal div.close-button").click(function() {
-			$("#deployModal").hide();
+			$("#deployVideoModal").hide();
+			$("#deployUserGuideModal").hide();
+			$("#deployKinModal").hide();
+			$("#deployStickersModal").hide();
 		});
         
         $(".watch-video-btn").click(
@@ -59,71 +63,11 @@
             }
             
         );
-        
-        $('.stickerscampaignlink').click(
-			function(event) {
-				// open campaign popup
-				$("#deployModal").show();
-				
-				// we stop the event propagation
-				if (event.preventDefault) {
-				  event.preventDefault();
-				}
-				event.returnValue = false;								
-			});
-
-		$('#campaignButton').click(
-				function(event) {
-					if (checkEmail("campaignEmail", "campaignButton") 
-							&& checkFieldEmpty("campaignName", "campaignButton") 
-							&& checkFieldEmpty("campaignAddress", "campaignButton")) {
-						
-						try {
-							mixpanel.track("Downloaded Resource", {
-								"Resource Name":"Restlet Stickers",
-								"Resource Location":"Resources page",
-								"Email": $("#campaignEmail").val(),
-								"Name": $("#campaignName").val(),
-								"Mailing Address": $("#campaignAddress").val()
-							});
-						} catch(err) {
-							//nothing to do
-						}
-						
-						// close popup
-						$("#campaignName").val("");
-						$("#campaignEmail").val("");
-						$("#campaignAddress").val("");
-						$("#deployModal").hide();
-					}
-				}
-		);
-
-		try {
-	 		mixpanel.track_links(".userguidelink", "Downloaded Resource", {
-						"Resource Name":"User Guide 2.2",
-						"Resource Location":"Resources page"
-					});
-	 		mixpanel.track_links(".kinlaneguidelink", "Downloaded Resource", {
-						"Resource Name":"Kin Lane Guide",
-						"Resource Location":"Resources page"
-					});
-	 		mixpanel.track_links(".paasguidelink", "Downloaded Resource", {
-						"Resource Name":"David Linthicum Report",
-						"Resource Location":"Resources page"
-					});
-	 		mixpanel.track_links(".roadguidelink", "Downloaded Resource", {
-						"Resource Name":"ROAD Guide",
-						"Resource Location":"Resources page"
-					});
-		} catch(err) {
-			//nothing to do
-		}
 	});
 </#noparse>
 </#global>
 
-<#global stylesheet_files=["/stylesheets/modal.css","/stylesheets/modal-video.css"] />
+<#global stylesheet_files=["/stylesheets/modalKin.css","/stylesheets/modalStickers.css","/stylesheets/modalGuide.css","/stylesheets/modalVideo.css","/stylesheets/modal-video.css"] />
 
 <#global content>
 <div id="videoPopup" class="modalDialog video">
@@ -136,9 +80,8 @@
 		</div>
 	</div>
 </div>
-<#if campaignPopupSection??>
-	${campaignPopupSection}
-</#if>
+
+<#include "past-popup.ftl">
 
 <div class="resources">
 	<div class="resource">
