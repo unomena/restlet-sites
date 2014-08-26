@@ -25,45 +25,6 @@
 		$('#videoPopup').on('hide', function(){
 			$('#ytplayer').attr('src', '');
 		});
-
-		$("#videoPopup div.video-close-button").click(function() {
-			$("#videoPopup").hide();
-		});
-		$("#deployModal div.close-button").click(function() {
-			$("#deployVideoModal").hide();
-			$("#deployUserGuideModal").hide();
-			$("#deployKinModal").hide();
-			$("#deployStickersModal").hide();
-		});
-        
-        $(".watch-video-btn").click(
-            function(event) {
-            	var hrefCallback = function(event) {
-    	            // open the video popup
-					window.setTimeout($("#videoPopup").show(),1000);
-				}
-				
-				// in case Mixpanel servers don't get back to us in time
-				// we use the same timeout value as the one defined in Mixpanel config
-				try {
-					var trackTimeout = window.setTimeout(hrefCallback, mixpanel.get_config('track_links_timeout'));
-					
-					// fire the tracking event, if the event is done before the
-					// timeout, we call a window.clearTimeout
-					mixpanel.track("Downloaded Resource", {
-						"Resource Name":"3mn demo video",
-						"Resource Location":"Resources page"
-					}, function() {
-						window.clearTimeout(trackTimeout);
-						hrefCallback();
-					});
-				} catch(err) {
-					hrefCallback();
-				}
-            }
-            
-        );
-	});
 </#noparse>
 </#global>
 
@@ -86,39 +47,43 @@
 <div class="resources">
 	<div class="resource">
 		<div class="span2 left section">
-			<img class="watch-video-btn" src="/images/3minutes_demo_video.png"/>
+			<span class="btn-download-resources watch-video-btn" target="_blank" style="cursor: pointer">
+				<img src="/images/3minutes_demo_video.png"/>
+			</span>
 		</div>
 		<div class="span7">
 			<h4>3min Restlet Framework demo</h4>
 			<p>Learn how to set up Restlet Framework in just 3 minutes. This video covers installation, first steps and testing. Watch it and start building you API!</p>
-			<div><button class="btn btn-download-resources watch-video-btn">Watch Video</button></div>
+			<div><button class="btn watch-video-btn btn-download-resources">Watch Video</button></div>
 		</div>
 		<div class="clearBoth"></div>
 	</div>
 
 	<div class="resource">
 		<div class="span2 section">
-			<a class="userguidelink" href="/learn/archives/misc/2.2/rf-user-guide-2-2.pdf" target="_blank"><img src="/images/learn/user-guide.png"/></a>
+			<span class="btn-download-resources userguidelink" target="_blank" style="cursor: pointer">
+				<img src="/images/learn/user-guide.png"/>
+			</span>
 		</div>
 		<div class="span7">
 			<h4>Restlet Framework 2.2 - User Guide</h4>
 			<p>Learn all about the Restlet Framework: the first steps, the different editions, its core and extensions, how it can be used to build a well-structured and scalable web API. Become a Restlet Framework ninja!</p>
-			<div><a class="btn btn-download-resources userguidelink" href="/learn/archives/misc/2.2/rf-user-guide-2-2.pdf" target="_blank">Download PDF</a></div>
+			<div><a class="btn userguidelink btn-download-resources" href="/learn/archives/misc/2.2/rf-user-guide-2-2.pdf" target="_blank">Download PDF</a></div>
 		</div>
 		<div class="clearBoth"></div>
 	</div>
 
 	<div class="resource">
 		<div class="span2 section">
-			<a class="kinlaneguidelink" href="http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=Kin%20Lane%20GuideRP" target="_blank">
+			<span class="btn-download-resources kinlaneguidelink" target="_blank" style="cursor: pointer">
 				<img src="/images/learn/web-apis-kin-lane.png"/>
-			</a>
+			</span>
 		</div>
 		<div class="span7">
 			<h4>Kin Lane's Field Guide to Web APIs</h4>
 			<p>A comprehensive guide to web APIs, explained by Kin Lane, the API Evangelist. He has been in the technology space for over 20 years and wants to help the world understand the great value and potential that is growing in the web API market.</p>
 			<div>
-				<a class="btn btn-download-resources kinlaneguidelink" href="http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=Kin%20Lane%20GuideRP" target="_blank">Download PDF</a>
+				<a class="btn kinlaneguidelink btn-download-resources" href="http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=Kin%20Lane%20GuideRP" target="_blank">Download PDF</a>
 			</div>
 		</div>
 		<div class="clearBoth"></div>
@@ -134,7 +99,7 @@
 			<h4>PaaS Market Moves Beyond Deployment and Scaling</h4>
 			<p>Through this report, David Linthicum, a cloud analyst, explains why enterprises must understand how APIs and PaaS can work together to build and deploy better enterprise applications more quickly and with much more reuse.</p>
 			<div>
-				<a class="btn btn-download-resources paasguidelink" href="http://restlet.files.wordpress.com/2014/05/gigaom-research-paas-market-moves-beyond-deployment-and-scaling.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=David%20Linthicum%20ReportRP" target="_blank">Download PDF</a>
+				<a class="btn paasguidelink btn-download-resources" href="http://restlet.files.wordpress.com/2014/05/gigaom-research-paas-market-moves-beyond-deployment-and-scaling.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=David%20Linthicum%20ReportRP" target="_blank">Download PDF</a>
 			</div>
 		</div>
 		<div class="clearBoth"></div>
@@ -150,7 +115,7 @@
 			<h4>Designing a RESTful web API with ROA/D</h4>
 			<p>Learn how to design a web API following the REST principles with our Resource-Oriented Analysis & Design (ROA/D) guidelines.</p>
 			<div>
-				<a class="btn btn-download-resources roadguidelink" href="http://blog.restlet.com/wp-content/uploads/2014/06/ROAD-Designing-a-RESTful-web-API1.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=ROAD%20GuideRP" target="_blank">Download PDF</a>
+				<a class="btn roadguidelink btn-download-resources" href="http://blog.restlet.com/wp-content/uploads/2014/06/ROAD-Designing-a-RESTful-web-API1.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=ROAD%20GuideRP" target="_blank">Download PDF</a>
 			</div>
 		</div>
 		<div class="clearBoth"></div>
@@ -158,15 +123,15 @@
 
 	<div class="resource">
 		<div class="span2 left section">
-			<a class="stickerscampaignlink" href="">
+			<span class="btn-download-resources stickerscampaignlink" style="cursor: pointer">
 				<img src="/images/stickers-campaign.png"/>
-			</a>
+			</span>
 		</div>
 		<div class="span7">
 			<h4>Restlet stickers</h4>
 			<p>Want some free swag? Order Restlet Framework and APISpark stickers, completely free of charge!</p>
 			<div>
-				<a href="" class="btn btn-download-resources stickerscampaignlink">Order Stickers</a>
+				<a href="" class="btn stickerscampaignlink btn-download-resources">Order Stickers</a>
 			</div>
 		</div>
 		<div class="clearBoth"></div>
