@@ -198,7 +198,7 @@
       <div class="container">
         <div class="span2 intro below">${labels.footer.intouch['${language}']}</div>
         <div class="span2a site"><h4><a href="http://blog.restlet.com/"><i class="blog-icon"></i>${labels.footer.blog['${language}']}</a></h4></div>
-        <div class="span2b site"><h4><a href="https://twitter.com/restlet_org"><i class="follow-icon"></i>${labels.footer.twitter['${language}']}</a></h4></div>
+        <div class="span2b site"><h4><a href="https://twitter.com/restlet"><i class="follow-icon"></i>${labels.footer.twitter['${language}']}</a></h4></div>
 		${googlelinkVerification!""}
 <!--        <div class="span2b site"><h4><a href="/download/notifications"><i class="notifications-icon"></i>${labels.notifications.submit['${language}']}</a></h4></div> -->
         <div class="span4 newsletter">

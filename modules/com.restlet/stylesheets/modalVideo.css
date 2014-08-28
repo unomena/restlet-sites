@@ -13,6 +13,11 @@
     z-index:101;
 }
 
+div.span2.section > span {
+	border: none !important;
+	background-image: none !important;
+}
+
 .modalDialog.kinlane.vid > div {
 	width: 800px;
 	height: 377px;
