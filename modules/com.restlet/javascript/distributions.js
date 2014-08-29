@@ -6,6 +6,9 @@ var redirectDownload = false;
 var campaignEmail = "campaignKinEmail";
 var campaignButton = "campaignKinButton";
 var deployModal = "deployKinModal";
+var emailFieldLocation = "Kin Lane Guide";
+var eventName = "Downloaded Kin Lane Guide";
+var downloadPopupCookie = "kin-lane-white-paper-v3";
 
 $(document).ready(function() {
 	
@@ -115,11 +118,11 @@ function setDownloadButton() {
 						try {
 							mixpanel.track("Shared email", {
 								"email": $("#" + campaignEmail).val(),
-								"Email field location":"Kin Lane Guide"
+								"Email field location":emailFieldLocation
 							});
 							mixpanel.alias($("#" + campaignEmail).val(), mixpanel.get_distinct_id());
 							mixpanel.people.set({"$email": $("#" + campaignEmail).val()});
-							mixpanel.track("Downloaded Kin Lane Guide");
+							mixpanel.track(eventName);
 						} catch(err) {
 							//nothing to do
 						}
@@ -129,7 +132,7 @@ function setDownloadButton() {
 						$("#" + deployModal).hide();
 
 						// Set a one year cookie dedicated to this campaign. 
-						$.cookie('kin-lane-white-paper-v3', 'true', {
+						$.cookie(downloadPopupCookie, 'true', {
 							expires: 365
 						});
 						
