@@ -3,6 +3,22 @@ var cEditions;
 var cTypesDistribution;
 var handleFragment = false;
 var redirectDownload = false;
+var campaignEmail = "campaignKinEmail";
+var campaignButton = "campaignKinButton";
+var deployModal = "deployKinModal";
+
+$(document).ready(function() {
+	
+	// close the modal popup when clicking on the cross buntton
+	$("#" + deployModal + " div.close-button").click(function() {
+		$("#" + campaignEmail).val("");
+		$("#" + campaignButton).css("background","#efa10f");
+		$("#" + campaignButton).css("line-height","30px");
+		$("#" + campaignButton).html("Get Code");
+		$("#" + deployModal).hide();
+    });
+	
+});
 
 function loadQualifiers() {
 	cQualifiers.empty();
@@ -93,24 +109,24 @@ function setDownloadButton() {
 		$('#download').append('<p><a href="' + urlChangesLog + '">What\'s new?</a></p>');
 		$('#download').append('<p>' + version.published + ' release</p>');
 		
-		$('#campaignButton').click(
+		$('#' + campaignButton).click(
 				function(event) {
-					if (checkEmail("campaignEmail", "campaignButton")) {
+					if (checkEmail(campaignEmail, campaignButton)) {
 						try {
 							mixpanel.track("Shared email", {
-								"email": $("#campaignEmail").val(),
+								"email": $("#" + campaignEmail).val(),
 								"Email field location":"Kin Lane Guide"
 							});
-							mixpanel.alias($("#campaignEmail").val(), mixpanel.get_distinct_id());
-							mixpanel.people.set({"$email": $("#campaignEmail").val()});
+							mixpanel.alias($("#" + campaignEmail).val(), mixpanel.get_distinct_id());
+							mixpanel.people.set({"$email": $("#" + campaignEmail).val()});
 							mixpanel.track("Downloaded Kin Lane Guide");
 						} catch(err) {
 							//nothing to do
 						}
 
 						// close popup
-						$("#campaignEmail").val("");
-						$("#deployModal").hide();
+						$("#" + campaignEmail).val("");
+						$("#" + deployModal).hide();
 
 						// Set a one year cookie dedicated to this campaign. 
 						$.cookie('kin-lane-white-paper-v3', 'true', {
@@ -144,7 +160,7 @@ function setDownloadButton() {
 
 							if ("true" != $.cookie("kin-lane-white-paper-v3")) {
 								// open campaign popup
-								$("#deployModal").show();								
+								$("#" + deployModal).show();								
 							}
 						}
 						
@@ -181,7 +197,7 @@ function setDownloadButton() {
 
 							if ("true" != $.cookie("kin-lane-white-paper-v3")) {
 								// open campaign popup
-								$("#deployModal").show();								
+								$("#" + deployModal).show();								
 							}
 						}
 						
@@ -217,7 +233,7 @@ function setDownloadButton() {
 							// open campaign popup
 							if ("true" != $.cookie("kin-lane-white-paper-v3")) {
 								// open campaign popup
-								$("#deployModal").show();								
+								$("#" + deployModal).show();								
 							}
 							// download selected restlet framework file, we delay the download from 500ms
 							// in order to all background images are downloaded (safari/chrome bug)

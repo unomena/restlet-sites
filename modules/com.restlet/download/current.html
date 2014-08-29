@@ -13,15 +13,6 @@
 	$(document).ready(function() {
         init($("#cBranch"), $("#cEdition"), $("#cDistribution")<#if ("zip" ==  distribution) || ("exe" ==  distribution)>, true<#else>, true, true</#if>);
         //init($("#cBranch"), $("#cRelease"), $("#cEdition"), $("#cDistribution"), $("#archives"));
-		
-		// close the modal popup when clicking on the cross buntton
-		$("#deployModal div.close-button").click(function() {
-			$("#campaignEmail").val("");
-			$("#campaignButton").css("background","#efa10f");
-			$("#campaignButton").css("line-height","30px");
-			$("#campaignButton").html("Get Code");
-			$("#deployModal").hide();
-        });
         
         $("#newsLetterOkButton").click(
             function(event) {
@@ -55,7 +46,6 @@
 </#noparse>
 </#global>
 
-<#global stylesheet_files=["/stylesheets/modal.css"] />
 <#global footer>
 <#noparse>
 	<script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
@@ -71,7 +61,10 @@
 <#global content>
 <!-- Start Download section -->
 ${downloadSection}
-${campaignPopupSection}
+
+<!-- Popup panel -->
+<#include "popup.ftl">
+
 <!-- End Download section -->
 <div id="newsletter">
 	<div class="clearBoth"></div>
