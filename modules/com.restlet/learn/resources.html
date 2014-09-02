@@ -1,4 +1,3 @@
-<#global javascript_files=["/javascript/past-popup.js"] />
 <#global javascript>
 <#noparse>
 	$(document).ready(function() {
@@ -25,10 +24,9 @@
 		$('#videoPopup').on('hide', function(){
 			$('#ytplayer').attr('src', '');
 		});
+	});
 </#noparse>
 </#global>
-
-<#global stylesheet_files=["/stylesheets/modalKin.css","/stylesheets/modalStickers.css","/stylesheets/modalGuide.css","/stylesheets/modalVideo.css","/stylesheets/modal-video.css"] />
 
 <#global content>
 <div id="videoPopup" class="modalDialog video">
