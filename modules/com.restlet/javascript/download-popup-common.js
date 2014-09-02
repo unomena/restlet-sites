@@ -12,7 +12,6 @@ $(document).ready(function() {
 		$("#" + campaignEmail).val("");
 		$("#" + campaignButton).css("background","#efa10f");
 		$("#" + campaignButton).css("line-height","30px");
-		$("#" + campaignButton).html("Get Code");
 		$("#" + deployModal).hide();
     });	
 });
@@ -42,9 +41,11 @@ var mixpanelGeneralCall = function(event) {
 			expires: 365
 		});
 		
-		// Set a cookie for the popus in ressources
+		// Set a cookie for the popups in resources
+		// we don't want to show the download popups one more time.
 		$.cookie('fill-email-campaign', 'true', {
-			expires: 365
+			expires: 365,
+			path : '/'
 		});
 		
 		// launch pdf download in a new tab
@@ -112,7 +113,9 @@ function setDownloadButton() {
 		}
 
 		$('#' + campaignButton).click(
-			mixpanelGeneralCall(event)
+			function(event) {
+				mixpanelGeneralCall(event);
+			}
 		);
 		
 		if (distribution.fileType == "maven") {
