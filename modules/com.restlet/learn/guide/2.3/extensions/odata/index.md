@@ -4,7 +4,7 @@ OData extension
 Topics covered
 ==============
 
--   Accessing the OGDI  data in Java with Restlet
+-   Accessing OData V1.0 in Java with Restlet
 -   Handling queries
 
 References
