@@ -16,7 +16,7 @@ the company. Jérôme was also a member of the expert group that defined
 the standard JAX-RS API, contributor to the [RESTful Web
 Services](http://www.amazon.com/gp/redirect.html?ie=UTF8&location=http%3A%2F%2Fwww.amazon.com%2FRestful-Web-Services-Leonard-Richardson%2Fdp%2F0596529260%3Fie%3DUTF8%26s%3Dbooks%26qid%3D1173381194%26sr%3D8-1&tag=restlet-20&linkCode=ur2&camp=1789&creative=9325)
 book published by O'Reilly and co-author of the [Restlet in
-Action](http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217)
+Action](http://www.manning.com/louvel/)
 book published by Manning.
 
 [LinkedIn profile](http://www.linkedin.com/in/jlouvel)
@@ -85,7 +85,7 @@ He is in charge of the DevOps process, technically coordinating
 development, quality assurance and operations efforts on APISpark PaaS.
 He is deeply involved in Restlet Framework open source core as well, and
 a co-author of the [Restlet in
-Action](http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217)
+Action](http://www.manning.com/louvel/)
 book published by Manning.
 
 [LinkedIn
@@ -110,7 +110,7 @@ He joined the company as an R&D architect in 2011, initiating the
 development of APISpark PaaS and porting Restlet Framework to
 JavaScript. Thierry is also co-author of several books on JavaScript,
 Spring as well as the [Restlet in
-Action](http://www.manning.com/affiliate/idevaffiliate.php?id=1121_217)
+Action](http://www.manning.com/louvel/)
 book published by Manning.
 
 [LinkedIn

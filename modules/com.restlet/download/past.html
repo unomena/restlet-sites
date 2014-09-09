@@ -5,21 +5,11 @@
 <meta name="description" content="Download Restlet Framework - Previous Versions" />
 </#noparse>
 </#global>
-<#global javascript_files=["/javascript/jquery-1.9.0.min.js", "/javascript/jquery-cookie.js", "/javascript/jsclass-core.js", "/javascript/json-minified.js", "/javascript/restlet-client.js", "/javascript/restlet-feedSummary.js", "/javascript/bootstrap.min.js", "/javascript/data.js", "/javascript/archives.js"] />
+<#global javascript_files=["/javascript/jquery-1.9.0.min.js", "/javascript/jquery-cookie.js", "/javascript/jsclass-core.js", "/javascript/json-minified.js", "/javascript/restlet-client.js", "/javascript/restlet-feedSummary.js", "/javascript/bootstrap.min.js", "/javascript/data.js", "/javascript/archives.js", "/javascript/download-popup-common.js"] />
 <#global javascript>
 <#noparse>
     $(document).ready(function() {
-        init($("#cBranch"), $("#cRelease"), $("#cEdition"), $("#cDistribution"), $("#archives")<#if ("zip" ==  distribution) || ("exe" ==  distribution)>, true<#else>, false, true</#if>);
-
-		// close the modal popup when clicking on the cross buntton
-		$("#deployModal div.close-button").click(function() {
-			$("#campaignEmail").val("");
-			$("#campaignButton").css("background","#efa10f");
-			$("#campaignButton").css("line-height","30px");
-			$("#campaignButton").html("Get Code");
-			$("#deployModal").hide();
-        });
-        
+        init($("#cBranch"), $("#cRelease"), $("#cEdition"), $("#cDistribution"), $("#archives")<#if ("zip" ==  distribution) || ("exe" ==  distribution)>, true<#else>, false, true</#if>);    
         
        $("#newsLetterOkButton").click(
             function(event) {
@@ -47,7 +37,6 @@
     });
 </#noparse>
 </#global>
-<#global stylesheet_files=["/stylesheets/modal.css"] />
 
 <#global footer>
 <#noparse>
@@ -65,7 +54,10 @@
 <#global content>
 <!-- Start Download section -->
 ${archivesSection}
-${campaignPopupSection}
+
+<!-- Popup panel -->
+<#include "popup.ftl">
+
 <div id="newsletter">
 	<div class="clearBoth"></div>
 	<div class="elements">

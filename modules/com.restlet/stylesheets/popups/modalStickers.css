@@ -13,13 +13,18 @@
     z-index:101;
 }
 
+div.span2.section > span {
+	border: none !important;
+	background-image: none !important;
+}
+
 .modalDialog.kinlane.stickers > div:after{
 	content: '';
 	display: block;
 	clear: both;
 }
 .modalDialog.kinlane.stickers > div {
-	background-image: url(../images/kinlane-background-min.png);
+	background-image: url(/images/kinlane-background-min.png);
 	background-repeat:no-repeat;
 	background-color:#3f65a4;
 	box-shadow: 0 0 17px 7px rgba(50, 50, 50, 0.75);
@@ -35,7 +40,7 @@
 	position: relative;
 }
 .modalDialog.kinlane.stickers div.close-button {
-	background-image: url(../images/kinlane-close-button.png);
+	background-image: url(/images/kinlane-close-button.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	cursor: pointer;
@@ -55,7 +60,7 @@
 .modalDialog.kinlane.stickers div.doc-preview{
 	width:305px;
 	height:245px;
-	background-image: url(../images/stickers-campaign.png);
+	background-image: url(/images/stickers-campaign.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	float: left;

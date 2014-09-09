@@ -1,4 +1,10 @@
 $(document).ready(function() {
+	
+	$("#videoPopup div.video-close-button").click(function() {
+		$("#videoPopup").hide();
+	});
+
+	// hide all the popups
 	$(".kinlane div.close-button").click(function() {
 		$("#deployVideoModal").hide();
 		$("#deployUserGuideModal").hide();
@@ -6,106 +12,86 @@ $(document).ready(function() {
 		$("#deployStickersModal").hide();
 	});
     
-    $('.btn-download-resources').click(
-		function(event) {
-			// open campaign popup
-			if(event.currentTarget.classList[2] == 'watch-video-btn') {
-				if ($.cookie('fill-email-campaign') != 'true') {
-					$("#deployVideoModal").show();
-				}
-			} else if(event.currentTarget.classList[2] == 'userguidelink') {
-				if ($.cookie('fill-email-campaign') != 'true') {
-					$("#deployUserGuideModal").show();
-				} else {
-					printDoc(0);
-				}
-			} else if(event.currentTarget.classList[2] == 'kinlaneguidelink') {
-				if ($.cookie('fill-email-campaign') != 'true') {
-					$("#deployKinModal").show();
-				} else {
-					printDoc(1);
-				}
-			} else if(event.currentTarget.classList[2] == 'paasguidelink') {
-				//$("#deployPaasModal").show();
-				printDoc(2);
-			} else if(event.currentTarget.classList[2] == 'roadguidelink') {
-				//$("#deployRoadGuideModal").show();
-				printDoc(3);
-			} else if(event.currentTarget.classList[2] == 'stickerscampaignlink') {
-				$("#deployStickersModal").show();
+    $('.btn-download-resources').click(function(event) {
+		//if the button clicked is the video button
+		if(event.currentTarget.classList.contains('watch-video-btn')) {
+			// if the user haven't fill a popup before
+			if ($.cookie('fill-email-campaign') != 'true') {
+				// show the popup
+				$("#deployVideoModal").show();
+			} else {
+				// display the document
+				printDoc("video");
 			}
-			
-			// we stop the event propagation
-			if (event.preventDefault) {
-			  event.preventDefault();
+		} else if(event.currentTarget.classList.contains('userguidelink')) {
+			if ($.cookie('fill-email-campaign') != 'true') {
+				$("#deployUserGuideModal").show();
+			} else {
+				printDoc("guide");
 			}
-			event.returnValue = false;								
+		} else if(event.currentTarget.classList.contains('kinlaneguidelink')) {
+			if ($.cookie('fill-email-campaign') != 'true') {
+				$("#deployKinModal").show();
+			} else {
+				printDoc("guide");
+			}
+		} else if(event.currentTarget.classList.contains('paasguidelink')) {
+			//$("#deployPaasModal").show();
+			printDoc("paas");
+		} else if(event.currentTarget.classList.contains('roadguidelink')) {
+			//$("#deployRoadGuideModal").show();
+			printDoc("road");
+		} else if(event.currentTarget.classList.contains('stickerscampaignlink')) {
+			// display the popup everytime because it is the actual resource
+			$("#deployStickersModal").show();
 		}
-	);
-
-	$('#campaignKinButton').click(
-		function(event) {
-			generalModal('Kin');
+		
+		// we stop the event propagation
+		if (event.preventDefault) {
+		  event.preventDefault();
 		}
-	);
-	
-	$('#campaignGuideButton').click(
-		function(event) {
-			generalModal('Guide');
-		}
-	);
-	
-	$('#campaignVideoButton').click(
-		function(event) {
-			generalModal('Video');
-		}
-	);
-	
-	$('#campaignStickersButton').click(
-		function(event) {
-			stickersModal();
-		}
-	);
-	
-	
-	function printDoc(docNumber){
-		var docLocation = "";
-		if (docNumber == 0) {
-			docLocation = "http://restlet.com/learn/archives/misc/2.2/rf-user-guide-2-2.pdf";
-		} else if (docNumber == 1) {
-			docLocation = "http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=popup&utm_campaign=Kin%20Lane%20Guide";
-		} else if (docNumber == 2) {
-			docLocation = "http://restlet.files.wordpress.com/2014/05/gigaom-research-paas-market-moves-beyond-deployment-and-scaling.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=David%20Linthicum%20ReportRP";
-		} else if (docNumber == 3) {
-			docLocation = "http://blog.restlet.com/wp-content/uploads/2014/06/ROAD-Designing-a-RESTful-web-API1.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=ROAD%20GuideRP";
-		}
-		window.open(docLocation, "_blank");
-	}
-	
+		event.returnValue = false;								
+	});
+    
+    $('#campaignKinButton').click(function() {
+		generalModal('kin');
+	});
+    
+    $('#campaignVideoButton').click(function() {
+		generalModal('video');
+	});
+    
+    $('#campaignGuideButton').click(function() {
+		generalModal('guide');
+	});
+    
+    $('#campaignStickersButton').click(function() {
+		stickersModal();
+	});
+    
 	function generalModal(modalNumber){
 		var emailField = "";
 		var mixEvent = "";
-		var docLocation = "";
 		var modName = "";
 		var button = "";
 		var email = "";
-		if (modalNumber == 'Video') {
+
+		if (modalNumber == 'video') {
+			// set mixpanel informations for the video
 			emailField = "3min Demo Video";
 			mixEvent = "Watched 3min Demo Video";
 			modName = "#deployVideoModal";
 			button = "campaignVideoButton";
 			email = "campaignVideoEmail";
-		} else if (modalNumber == 'Guide') {
+		} else if (modalNumber == 'guide') {
 			emailField = "User Guide PDF";
 			mixEvent = "Downloaded UserGuide PDF";
-			docLocation = "http://restlet.com/learn/archives/misc/2.2/rf-user-guide-2-2.pdf";
 			modName = "#deployUserGuideModal";
 			button = "campaignGuideButton";
 			email = "campaignGuideEmail";
-		} else if (modalNumber == 'Kin') {
+		} else if (modalNumber == 'kin') {
 			emailField = "Kin Lane Guide";
 			mixEvent = "Downloaded Kin Lane Guide";
-			docLocation = "http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=popup&utm_campaign=Kin%20Lane%20Guide";
 			modName = "#deployKinModal";
 			button = "campaignKinButton";
 			email = "campaignKinEmail";
@@ -132,19 +118,33 @@ $(document).ready(function() {
 				expires: 365
 			});
 
-			if (modalNumber == 0) {
-				window.setTimeout($("#videoPopup").show(),1000);
-			} else {				
-				// launch pdf download in a new tab
-				window.open(docLocation, "_blank");
+			// call the function to open document
+			printDoc(modalNumber);
+		}
+	}
+	
+	function printDoc(docInfo){
+		var docLocation = "";
+		if (docInfo == "video") {
+			window.setTimeout($("#videoPopup").show(),1000);
+		} else {
+			if (docInfo == "guide") {
+				docLocation = "http://restlet.com/learn/archives/misc/2.2/rf-user-guide-2-2.pdf";
+			} else if (docInfo == "kin") {
+				docLocation = "http://restlet.files.wordpress.com/2013/12/gigaom-research-a-field-guide-to-web-apis.pdf?utm_source=restlet-site&utm_medium=popup&utm_campaign=Kin%20Lane%20Guide";
+			} else if (docInfo == "paas") {
+				docLocation = "http://restlet.files.wordpress.com/2014/05/gigaom-research-paas-market-moves-beyond-deployment-and-scaling.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=David%20Linthicum%20ReportRP";
+			} else if (docInfo == "road") {
+				docLocation = "http://blog.restlet.com/wp-content/uploads/2014/06/ROAD-Designing-a-RESTful-web-API1.pdf?utm_source=restlet-site&utm_medium=resources&utm_campaign=ROAD%20GuideRP";
 			}
+			window.open(docLocation, "_blank");
 		}
 	}
 	
 	function stickersModal() {
-		if (checkEmail("campaignStickersEmail", "campaignStickersButton") 
-				&& checkFieldEmpty("campaignName", "campaignStickersButton") 
-				&& checkFieldEmpty("campaignAddress", "campaignStickersButton")) {
+		if (checkEmail("campaignStickersEmail", "campaignButton") 
+				&& checkFieldEmpty("campaignName", "campaignButton") 
+				&& checkFieldEmpty("campaignAddress", "campaignButton")) {
 			
 			try {
 				mixpanel.track("Downloaded Resource", {

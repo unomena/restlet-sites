@@ -683,42 +683,12 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
                 }
             }
 
-            cr = new ClientResource(this.feedReleasesAtomUri);
-            rep = cr.get(MediaType.APPLICATION_ATOM);
-            Feed restletReleasesFeed = null;
-            if (rep != null && rep.isAvailable()) {
-                try {
-                    restletReleasesFeed = new Feed(rep);
-                } catch (IOException e) {
-                    getLogger().warning(
-                            "Cannot parse the releases feed." + e.getMessage());
-                }
-            }
-
-            // Aggregate the two feeds : avoid doublons, and take only one entry
-            // from release feed.
-            if (restletFeed != null && restletReleasesFeed != null) {
-                ArrayList<Entry> digestEntries = new ArrayList<Entry>();
-                boolean rrEmpty = restletReleasesFeed.getEntries().isEmpty();
-                String rrFirstId = rrEmpty ? null : restletReleasesFeed
-                        .getEntries().get(0).getId();
-                for (Entry nEntry : restletFeed.getEntries()) {
-                    boolean found = false;
-                    if (!rrEmpty && !nEntry.getId().equals(rrFirstId)) {
-                        for (Entry rrEntry : restletReleasesFeed.getEntries()) {
-                            if (nEntry.getId().equals(rrEntry.getId())) {
-                                found = true;
-                                break;
-                            }
-                        }
-                    }
-                    if (!found) {
-                        digestEntries.add(nEntry);
-                    }
-                }
-                setFeedSummary(digestEntries);
-                setFeedGeneral(restletFeed.getEntries());
-                setFeedReleases(restletReleasesFeed.getEntries());
+            if (restletFeed != null) {
+            	ArrayList<Entry> digestEntries = new ArrayList<Entry>();
+            	for (Entry nEntry : restletFeed.getEntries()) {
+            		digestEntries.add(nEntry);
+            	}
+            	setFeedSummary(digestEntries);
             }
         } catch (Exception e) {
             e.printStackTrace();
