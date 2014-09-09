@@ -184,3 +184,24 @@ and playing the drums.
 [LinkedIn profile](http://fr.linkedin.com/pub/david-roussel/1b/16/891)
 
 </div>
+
+<div class="about-member">
+<br>
+
+# Pascal Guilcher, Full Stack Web Engineer![Photo Pascal Guilcher](/images/photos/pascal-guilcher-100)
+
+
+Pascal is an engineer in computer science and management, graduate of 
+[Polytech'Nantes](http://web.polytech.univ-nantes.fr/1386083719124/1/fiche___pagelibre/&RH=POLYTECH_FR1) and
+[Université de Nantes](http://www.univ-nantes.fr/).
+As an emerging web technologies driven developer, he acquired a broad experience in web-based development, 
+mainly with AJAX interfaces and Java-based frameworks.
+
+He joined the company as an R&D engineer in 2014 and works with everything from front-end to server-side 
+technologies and data stores. As a passionate developer, he seeks to build exciting world-class products.
+
+In his spare time, Pascal enjoys spending time with his family and engaging in night coding sessions.
+
+[LinkedIn profile](http://fr.linkedin.com/pub/pascal-guilcher/2/3b1/955)
+
+</div>
