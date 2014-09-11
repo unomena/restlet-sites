@@ -34,44 +34,44 @@ Different factories to create a Firewall rule.
 
 * Create a periodic rate limiter.
 
-  * With a default limit (for non authenticated users or for users without a role)
+  * With a default limit (for non authenticated users or for users without a role)  
 
 
-	// Create a map which will associate roles with limits.
+	// Create a map which will associate roles with limits.  
 	Map&lt;String, Integer&gt; limitsPerRole = new HashMap&lt;String, Integer&gt;();
 
-	// Associate the role "owner" to a limit of 100 requests.
+	// Associate the role "owner" to a limit of 100 requests.  
 	limitsPerRole.put("owner", 100);
 
-	// Associate the role "user" to a limit of 10 requests.
+	// Associate the role "user" to a limit of 10 requests.  
 	limitsPerRole.put("user", 10);
 
-	// Create a period rate limitation rule with a period of 60 seconds, the defined limits per role and a default limit of 5 requests.
+	// Create a period rate limitation rule with a period of 60 seconds, the defined limits per role and a default limit of 5 requests.  
 	firewallFilter.addOnPeriodRateLimit(60, limitsPerRole, 5);
 
   
-  * Without a default limit (set by default at O)
+  * Without a default limit (set by default at O)  
 
-	// Create a period rate limitation rule with a period of 60 seconds, the defined limits per role (defined in the example above).
+	// Create a period rate limitation rule with a period of 60 seconds, the defined limits per role (defined in the example above).  
 	firewallFilter.addOnPeriodRateLimit(60, limitsPerRole, 5);
 
 * Create a concurrent rate limiter.
 
-  * With a default limit (for non authenticated users or for users without a role)
+  * With a default limit (for non authenticated users or for users without a role)  
 
-	// Create a map which will associate roles with limits.
+	// Create a map which will associate roles with limits.  
 	Map&lt;String, Integer&gt; limitsPerRole = new HashMap&lt;String, Integer&gt;();
 
-	// Associate the role "owner" to a limit of 10 requests.
+	// Associate the role "owner" to a limit of 10 requests.  
 	limitsPerRole.put("owner", 10);
 
-	// Associate the role "user" to a limit of 5 requests.
+	// Associate the role "user" to a limit of 5 requests.  
 	limitsPerRole.put("user", 5);
 	
-	// Create a period rate limitation rule the defined limits per role and a default limit of 2 requests.
+	// Create a period rate limitation rule the defined limits per role and a default limit of 2 requests.  
 	firewallFilter.addConcurrentRateLimit(limitsPerRole, 2);
 
-  * Without a default limit (set by default at O)
+  * Without a default limit (set by default at O)  
 
-	// Create a period rate limitation rule the defined limits per role.
+	// Create a period rate limitation rule the defined limits per role.  
 	firewallFilter.addConcurrentRateLimit(limitsPerRole);
