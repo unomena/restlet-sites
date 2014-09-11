@@ -94,8 +94,8 @@ Use the following syntax ("notoc" excludes a document from the table of content)
 -   [Part IV - Restlet Extensions](extensions/index.md)
     -   [Editions matrix](extensions/editions-matrix.md)
     -   [APISpark](extensions/apispark/index.md)
-		- [Introspector](extensions/apispark/introspector.md)
-		- [Firewall](extensions/apispark/firewall.md)
+		- [Introspector](extensions/apispark/introspector.md) "notoc"
+		- [Firewall](extensions/apispark/firewall.md) "notoc"
     -   [Atom](extensions/atom.md)
     -   [Crypto](extensions/crypto.md)
     -   [E4](extensions/e4.md)
