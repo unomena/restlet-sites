@@ -1,5 +1,5 @@
-APISpark extension
-==============
+APISpark extension Introspector
+===============================
 
 Introduction
 ============

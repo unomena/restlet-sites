@@ -21,7 +21,9 @@ You must add the following jars (provided in
 
 To use the firewall, first create an instance of FirewallFilter
 
+~~~~{.java}
 	FirewallFilter firewallFilter = new FirewallFilter();
+~~~~
 
 Then, on your firewall you can add multiple rules. For now, these rules are rate limiters.
 There are two kinds of rate limiters : 
