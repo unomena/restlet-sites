@@ -83,3 +83,49 @@ Different factories to create a Firewall rule.
 	// Create a period rate limitation rule the defined limits per role.  
 	firewallFilter.addConcurrentRateLimit(limitsPerRole);
 ~~~~
+
+## Go further
+
+It is also possible to customize the use of the Rate Limitation rules.
+
+A Rate limitation rule is associated to several objects :   
+
+* A CountingPolicy which gives an identifier to the request. Here are the existing Counting Policies (it's also possible to implement your own CountingPolicy):  
+    * IpAddressCountingPolicy : The identifier is the IP Address of the client.  
+    * UserCountingPolicy : The identifier is the identifier of the client (given by the ChallengeAuthenticator).  
+
+* A (or several) ThresholdHandler which make a action when a limit is reached.   
+  * A ThresholdHandler owns a LimitPolicy. This LimitPolicy associates an identifier (defined in the CountingPolicy) to a limit. Here are the existing Limit Policies (it's also possible to implement your own LimitPolicy):
+    * RoleLimitPolicy : Associates the role of the client to a limit.
+    * UniqueLimitPolicy : Attributes the same Limit Policy for all requests.
+  * There are also different implementation of ThresholdHandler : 
+    * BlockingHandler : Returns a 429 response (Too many requests) when the limit is reached. 
+    * RateLimitationHandler : Returns a 429 response (Too many requests) when the limit is reached and adds some "Rate Limitation headers" :
+
+~~~~
+	X-RateLimit-Limit : 500 #Number of requests authorized for a period
+    X-RateLimit-Remaining : 289 #Number of remaining requests authorized for the current period
+    X-RateLimit-Reset : 123456789 #When the period will reset
+~~~~
+
+### Example 
+
+* Create a Rate Limiter which counts 
+    * IP Addresses
+    * On a 1 minute period
+    * With a unique limit : 10 calls
+    * With a RateLimitationHandler (to return the "Rate limitationHeaders")
+
+~~~~{.java}
+	// Create the Firewall Filter
+	FirewallFilter firewallFiler = new FirewallFilter();
+	
+	// Add a periodic rule with a period of 1 minute (60 seconds) and a IPCountingPolicy (to count the clients IP addresses) 
+	FirewallCounterRule rule = new PeriodicFirewallCounterRule(60, new IpCountingPolicy());
+
+	// Attach an RateLimitationHandler (with a UniqueLimitPolicy) to the FirewallRule
+	rule.addHandler(new RateLimitationHandler(new UniqueLimitPolicy(10);
+
+	// Attach the rule to the FirewallFilter
+	firewallFilter.addCounter(rule);
+~~~~
