@@ -36,7 +36,7 @@ Different factories to create a Firewall rule.
 
   * With a default limit (for non authenticated users or for users without a role)  
 
-
+~~~~{.java}
 	// Create a map which will associate roles with limits.  
 	Map&lt;String, Integer&gt; limitsPerRole = new HashMap&lt;String, Integer&gt;();
 
@@ -48,17 +48,20 @@ Different factories to create a Firewall rule.
 
 	// Create a period rate limitation rule with a period of 60 seconds, the defined limits per role and a default limit of 5 requests.  
 	firewallFilter.addOnPeriodRateLimit(60, limitsPerRole, 5);
-
+~~~~
   
   * Without a default limit (set by default at O)  
 
+~~~~{.java}
 	// Create a period rate limitation rule with a period of 60 seconds, the defined limits per role (defined in the example above).  
 	firewallFilter.addOnPeriodRateLimit(60, limitsPerRole, 5);
+~~~~
 
 * Create a concurrent rate limiter.
 
   * With a default limit (for non authenticated users or for users without a role)  
 
+~~~~{.java}
 	// Create a map which will associate roles with limits.  
 	Map&lt;String, Integer&gt; limitsPerRole = new HashMap&lt;String, Integer&gt;();
 
@@ -70,8 +73,11 @@ Different factories to create a Firewall rule.
 	
 	// Create a period rate limitation rule the defined limits per role and a default limit of 2 requests.  
 	firewallFilter.addConcurrentRateLimit(limitsPerRole, 2);
+~~~~
 
   * Without a default limit (set by default at O)  
 
+~~~~{.java}
 	// Create a period rate limitation rule the defined limits per role.  
 	firewallFilter.addConcurrentRateLimit(limitsPerRole);
+~~~~
