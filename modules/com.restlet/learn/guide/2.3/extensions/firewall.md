@@ -36,6 +36,7 @@ Different factories to create a Firewall rule.
 
   * With a default limit (for non authenticated users or for users without a role)
 
+
 	// Create a map which will associate roles with limits.
 	Map&lt;String, Integer&gt; limitsPerRole = new HashMap&lt;String, Integer&gt;();
 
@@ -44,9 +45,10 @@ Different factories to create a Firewall rule.
 
 	// Associate the role "user" to a limit of 10 requests.
 	limitsPerRole.put("user", 10);
-	
+
 	// Create a period rate limitation rule with a period of 60 seconds, the defined limits per role and a default limit of 5 requests.
 	firewallFilter.addOnPeriodRateLimit(60, limitsPerRole, 5);
+
   
   * Without a default limit (set by default at O)
 
