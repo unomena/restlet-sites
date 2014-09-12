@@ -189,7 +189,7 @@ OPTIONS
         The mandatory APISpark user name.
     -p, --password
         The mandatory APISpark user secret key.
-    -c, --canonical-name
+    -c, --component
         The optional full canonical name of your Restlet Component class.
         This allows to collect some other data, such as the endpoint.
     -d, --definition
