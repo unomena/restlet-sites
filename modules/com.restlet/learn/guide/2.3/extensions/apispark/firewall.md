@@ -8,38 +8,14 @@ This module integrated in the [APISpark extension](/apispark.md) provides a Rate
 
 ### Using Maven
 
+Add the following dependency in your pom.xml : 
+
 ~~~~{.java}
-
-	<project
-		xsi:schemaLocation="http://maven.apache.org/POM/1.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-		<modelVersion>4.0.0</modelVersion>
-		<groupId>org.restlet.tutorial.webapi</groupId>
-		<artifactId>RFReferenceWebAPI</artifactId>
-		<packaging>jar</packaging>
-		<version>1.0-SNAPSHOT</version>
-		<name>RFReferenceWebAPI</name>
-		<url>http://maven.apache.org</url>
-		<repositories>
-			<repository>
-				<id>maven-restlet</id>
-				<name>Public online Restlet repository</name>
-				<url>http://maven.restlet.com</url>
-			</repository>
-		</repositories>
-		<dependencies>
-			<dependency>
-				<groupId>org.restlet.jse</groupId>
-				<artifactId>org.restlet</artifactId>
-				<version>2.3-SNAPSHOT</version>
-			</dependency>
-			<dependency>
-				<groupId>org.restlet.jse</groupId>
-				<artifactId>org.restlet.ext.apispark</artifactId>
-				<version>2.3-SNAPSHOT</version>
-			</dependency>
-		</dependencies>
-	</project>
-
+	<dependency>
+		<groupId>org.restlet.jse</groupId>
+		<artifactId>org.restlet.ext.apispark</artifactId>
+		<version>2.3-SNAPSHOT</version>
+	</dependency>
 ~~~~
 
 ### Manually 
@@ -47,7 +23,6 @@ This module integrated in the [APISpark extension](/apispark.md) provides a Rate
 You must add the following jars (provided in 
 [Restlet Framework](http://restlet.com/download/current#release=unstable&edition=jse&distribution=zip) in the "/path/to/your/lib" folder or manually to the classpath.
 
-*   org.restlet.jar (Restlet API)
 * 	org.restlet.ext.apispark.jar (Restlet APISpark extension with firewall)
 *	com.google.guava_16.0
 *	javax.ws.rs_2.0
