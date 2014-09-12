@@ -7,13 +7,13 @@ Introduction
 The Introspector tool is made to import the contract of your Web API in 
 the [APISpark](https://apispark.com/) full-stack PaaS for Web APIs.
 
-This will allow you to: 
+It will allow you to: 
 
--   Introspect your Restlet-based or JAX-RS compliant Web API or parse a Swagger definition to retrieve documentation
--   Display and edit this documentation within APISpark
+-   Introspect your Restlet-based or JAX-RS Web API or parse a Swagger definition to retrieve its description
+-   Display and edit this description within APISpark
 -   Synchronize Web API changes initiated from your API's code or Swagger
 
-In these scenarios we'll leverage the Introspector tool by loading a Web API definition into APISpark with the three types of inputs available. You can find a complete example of documentation generated via this tool [here](https://apispark.com/apis/1427/versions/1/overview/), the description fields cannot be retrieved from the Restlet Framework code currently, they were added manually.
+In these scenarios we'll leverage the Introspector tool by loading a Web API definition into APISpark with the three types of inputs available. You can find a complete example of documentation generated via this tool [here](https://apispark.com/apis/1427/versions/1/overview/), the description fields cannot be retrieved from the Restlet Framework code currently, they were added manually in APISpark.
  
 Launch process
 ==============
@@ -21,29 +21,28 @@ Launch process
 In a first example, we will document a Restlet-based Web API. Users have to point the Introspector to the class extending org.restlet.Application. Here, the Application class in our code is org.restlet.api.MyContacts.
 
 ~~~~{.sh}
-    java -cp "/path/to/your/lib/*" org.restlet.ext.apispark.Introspector -u 55955e02-0e99-47f8 -p 6f3ee88e-8405-44c8 org.restlet.api.MyContacts
+java -cp "/path/to/your/lib/*" org.restlet.ext.apispark.Introspector -u 55955e02-0e99-47f8 -p 6f3ee88e-8405-44c8 org.restlet.api.MyContacts
 ~~~~
     
-Then we will document an API based on its Swagger definition
+Then we will document an API based on its Swagger definition.
 
 ~~~~{.sh}
-    java -cp "/path/to/your/lib/*" org.restlet.ext.apispark.Introspector -u 55955e02-0e99-47f8 -p 6f3ee88e-8405-44c8 -l swagger http://petstore.swagger.wordnik.com/api/api-docs
+java -cp "/path/to/your/lib/*" org.restlet.ext.apispark.Introspector -u 55955e02-0e99-47f8 -p 6f3ee88e-8405-44c8 -l swagger http://petstore.swagger.wordnik.com/api/api-docs
 ~~~~
 
-And finish with a JAX-RS API
+And finish with a JAX-RS API.
 
 ~~~~{.sh}
-    java -cp "/path/to/your/lib/*" org.restlet.ext.apispark.Introspector -u 55955e02-0e99-47f8 -p 6f3ee88e-8405-44c8 org.jaxrs.api.MyContacts
+java -cp "/path/to/your/lib/*" org.restlet.ext.apispark.Introspector -u 55955e02-0e99-47f8 -p 6f3ee88e-8405-44c8 org.jaxrs.api.MyContacts
 ~~~~
 
-__Note:__ For the JAX-RS introspection to work, users have to point the Introspector to a class extending javax.ws.rs.core.Application and listing the annotated classes as follows:
+__Note:__ For the JAX-RS introspection to work, users have to point the Introspector to a class extending javax.ws.rs.core.Application and listing all the JAX-RS annotated classes as follows:
 
 ~~~~{.java}
 package org.coenraets.directory;
 
 import java.util.HashSet;
 import java.util.Set;
-
 import javax.ws.rs.core.Application;
 
 public class MyContacts extends Application {
@@ -53,10 +52,10 @@ public class MyContacts extends Application {
         classes.add(EmployeeResource.class);
         return classes;
     }
-
 }
 ~~~~
 
+Whether you use this class to run your Web API or not, you must create it to run the Introspector.
     
 Configuration
 -------------
@@ -66,36 +65,36 @@ Configuration
 You can use the following pom.xml to get the dependencies required for the Introspector. The full project, containing the extension, the pom and the readme is available [here](../../../archives/misc/2.3/org.restlet.ext.apispark.zip). Follow the instructions in the readme and use the extension from your favorite IDE.
 
 ~~~~{.xml}
-    <?xml version="1.0" encoding="UTF-8"?>
-    <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-        <modelVersion>4.0.0</modelVersion>
-        <repositories>
-            <repository>
-                <id>maven-restlet</id>
-                <name>Restlet repository</name>
-                <url>http://maven.restlet.com</url>
-            </repository>
-        </repositories>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <repositories>
+        <repository>
+            <id>maven-restlet</id>
+            <name>Restlet repository</name>
+            <url>http://maven.restlet.com</url>
+        </repository>
+    </repositories>
     
-        <artifactId>org.restlet.ext.apispark</artifactId>
-        <groupId>org.restlet.jse</groupId>
-        <name>Restlet Extension - APISpark</name>
-        <description>Integration with APISpark cloud platform, by Restlet.</description>
-        <version>2.3-M2</version>
-    
-        <dependencies>
-            <dependency>
-                <groupId>org.restlet.jse</groupId>
-                <artifactId>org.restlet</artifactId>
-                <version>2.3-M2</version>
-            </dependency>
-            <dependency>
-                <groupId>org.restlet.jse</groupId>
-                <artifactId>org.restlet.ext.jackson</artifactId>
-                <version>2.3-M2</version>
-            </dependency>
-        </dependencies>
-    </project>
+    <artifactId>org.restlet.ext.apispark</artifactId>
+    <groupId>org.restlet.jse</groupId>
+    <name>Restlet Extension - APISpark</name>
+    <description>Integration with APISpark cloud platform, by Restlet.</description>
+    <version>2.3-M2</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.restlet.jse</groupId>
+            <artifactId>org.restlet</artifactId>
+            <version>2.3-M2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.restlet.jse</groupId>
+            <artifactId>org.restlet.ext.jackson</artifactId>
+            <version>2.3-M2</version>
+        </dependency>
+    </dependencies>
+</project>
 ~~~~
 
 ### Manually
@@ -127,7 +126,7 @@ In Restlet framework lib/com.fasterxml.jackson_2.2/ directory:
 
 Your packaged Web API:
 
--   org.restlet.api.jar (your packaged Web API)
+-   org.restlet.api.jar org.jaxrs.api.jar (your packaged Web API)
 
 
 APISpark tokens
@@ -143,9 +142,9 @@ Here is the result, we get from the Introspector:
 
 
 ~~~~
-    Process successfully achieved.
-    Your Web API contract's id is: 246
-    Your Web API documentation is accessible at this URL: https://apispark.com/apis/246/versions/1
+Process successfully achieved.
+Your Web API contract's id is: 246
+Your Web API documentation is accessible at this URL: https://apispark.com/apis/246/versions/1
 ~~~~
  
 ![injected overview](/learn/archives/images/injectedOverview.png)
@@ -173,37 +172,32 @@ The Restlet extension for APISpark provides a source code introspector that take
 Here is its commande line help:
 
 ~~~~
-
-    SYNOPSIS
-       org.restlet.ext.apispark.Introspector [options] APPLICATION
-       org.restlet.ext.apispark.Introspector -l swagger [options] SWAGGER
-       DEFINITION URL/PATH
-    DESCRIPTION
-       Publish to the APISpark platform the description of your Web API,
-       represented by APPLICATION, the full canonical name of your Restlet or JAX-RS
-       application class or by the swagger definition available on the  URL/PATH.
-       If the whole process is successfull, it displays the url of the
-       corresponding documentation.
-    OPTIONS
-       -h
-              Prints this help.
-       -u
-              The mandatory APISpark user name.
-       -p
-              The mandatory APISpark user secret key.
-       -s
-              The optional APISpark platform URL (by default
-              https://apispark.com).
-       -c
-              The optional full canonical name of your Restlet Component class.
-              This allows to collect some other data, such as the endpoint.
-       -d
-              The optional id of an existing definition hosted by APISpark you
-              want to update with this new documentation.
-              
-        -l
-              The optional name of the description language of the definition
-              you want to upload. Possible value: swagger
-        -v
-              The optional parameter switching the process to a verbose mode
+SYNOPSIS
+    org.restlet.ext.apispark.Introspector [options] APPLICATION
+    org.restlet.ext.apispark.Introspector -l swagger [options] SWAGGER
+    DEFINITION URL/PATH
+DESCRIPTION
+    Publish to the APISpark platform the description of your Web API,
+    represented by APPLICATION, the full canonical name of your Restlet or JAX-RS
+    application class or by the swagger definition available on the  URL/PATH.
+    If the whole process is successfull, it displays the url of the
+    corresponding documentation.
+OPTIONS
+    -h, --help
+        Prints this help.
+    -u, --username
+        The mandatory APISpark user name.
+    -p, --password
+        The mandatory APISpark user secret key.
+    -c, --component
+        The optional full canonical name of your Restlet Component class.
+        This allows to collect some other data, such as the endpoint.
+    -d, --definition
+        The optional id of an existing definition hosted by APISpark you
+        want to update with this new documentation.
+    -l, --language
+        The optional name of the description language of the definition
+        you want to upload. Possible value: swagger
+    -v, --verbose
+        The optional parameter switching the process to a verbose mode
 ~~~~
