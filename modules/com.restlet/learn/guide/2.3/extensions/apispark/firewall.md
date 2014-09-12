@@ -2,11 +2,45 @@
 
 ## Introduction
 
-This module integrated in the [APISpark extension](/apispark.md) provides a tool to 
+This module integrated in the [APISpark extension](/apispark.md) provides a Rate Limiter for your Restlet Web API.
 
 ## Configuration
 
 ### Using Maven
+
+~~~~{.java}
+
+	<project
+		xsi:schemaLocation="http://maven.apache.org/POM/1.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+		<modelVersion>4.0.0</modelVersion>
+		<groupId>org.restlet.tutorial.webapi</groupId>
+		<artifactId>RFReferenceWebAPI</artifactId>
+		<packaging>jar</packaging>
+		<version>1.0-SNAPSHOT</version>
+		<name>RFReferenceWebAPI</name>
+		<url>http://maven.apache.org</url>
+		<repositories>
+			<repository>
+				<id>maven-restlet</id>
+				<name>Public online Restlet repository</name>
+				<url>http://maven.restlet.com</url>
+			</repository>
+		</repositories>
+		<dependencies>
+			<dependency>
+				<groupId>org.restlet.jse</groupId>
+				<artifactId>org.restlet</artifactId>
+				<version>2.3-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>org.restlet.jse</groupId>
+				<artifactId>org.restlet.ext.apispark</artifactId>
+				<version>2.3-SNAPSHOT</version>
+			</dependency>
+		</dependencies>
+	</project>
+
+~~~~
 
 ### Manually 
 
@@ -15,7 +49,8 @@ You must add the following jars (provided in
 
 *   org.restlet.jar (Restlet API)
 * 	org.restlet.ext.apispark.jar (Restlet APISpark extension with firewall)
-
+*	com.google.guava_16.0
+*	javax.ws.rs_2.0
 
 ## Usage example
 
@@ -26,7 +61,8 @@ To use the firewall, first create an instance of FirewallFilter
 ~~~~
 
 Then, on your firewall you can add multiple rules. For now, these rules are rate limiters.
-There are two kinds of rate limiters : 
+There are two kinds of rate limiters :   
+
 * Concurrent rate limiter : Limits the number of concurrent requests.
 * Periodic rate limiter : Limits the number of requests on a given period.
 
@@ -40,7 +76,7 @@ Different factories to create a Firewall rule.
 
 ~~~~{.java}
 	// Create a map which will associate roles with limits.  
-	Map&lt;String, Integer&gt; limitsPerRole = new HashMap&lt;String, Integer&gt;();
+	Map<String, Integer> limitsPerRole = new HashMap<String, Integer>();
 
 	// Associate the role "owner" to a limit of 100 requests.  
 	limitsPerRole.put("owner", 100);
@@ -65,7 +101,7 @@ Different factories to create a Firewall rule.
 
 ~~~~{.java}
 	// Create a map which will associate roles with limits.  
-	Map&lt;String, Integer&gt; limitsPerRole = new HashMap&lt;String, Integer&gt;();
+	Map<String, Integer> limitsPerRole = new HashMap<String, Integer>();
 
 	// Associate the role "owner" to a limit of 10 requests.  
 	limitsPerRole.put("owner", 10);
@@ -103,9 +139,9 @@ A Rate limitation rule is associated to several objects :
     * RateLimitationHandler : Returns a 429 response (Too many requests) when the limit is reached and adds some "Rate Limitation headers" :
 
 ~~~~
-	X-RateLimit-Limit : 500 #Number of requests authorized for a period
-    X-RateLimit-Remaining : 289 #Number of remaining requests authorized for the current period
-    X-RateLimit-Reset : 123456789 #When the period will reset
+	X-RateLimit-Limit : 500 # Number of requests authorized for a period
+    X-RateLimit-Remaining : 289 # Number of remaining requests authorized for the current period
+    X-RateLimit-Reset : 123456789 # When the period will reset
 ~~~~
 
 ### Example 
