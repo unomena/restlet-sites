@@ -21,7 +21,7 @@
 	<property name="javadocs" value="${temp}/javadocs" />
 	<property name="classes" value="${temp}/classes" />
 	<property name="bin" location="bin" />
-	<property name="conf" value="${bin}/conf" />
+	<property name="config" value="${bin}/config" />
 	<property name="dist" location="dist" />
 	<property name="dist-path" value="web-${version-compact}" />
 	<property name="tmpl" location="tmpl" />
@@ -398,7 +398,7 @@
 
 	<!-- STAGE target -->
 	<target name="stage" description="Stage the packaging step.">
-		<mkdir dir="${dist}/${dist-path}/conf" />
+		<mkdir dir="${dist}/${dist-path}/config" />
 		<mkdir dir="${dist}/${dist-path}/bin" />
 		<mkdir dir="${dist}/${dist-path}/lib" />
 		<mkdir dir="${dist}/${dist-path}/${restlet-com}" />
@@ -411,8 +411,9 @@
 			<fileset dir="${temp}/${restlet-com}" />
 		</copy>
 		<!-- Copy the config file -->
-		<copy todir="${dist}/${dist-path}/conf">
-			<fileset dir="${conf}" excludes="**/.svn,**/Thumbs.db" />
+		<copy todir="${dist}/${dist-path}/config">
+			<fileset dir="${config}" excludes="**/.svn,**/Thumbs.db" />
+			<fileset dir="${src}/config" excludes="**/.svn,**/Thumbs.db" />
 		</copy>
 		<copy todir="${dist}/${dist-path}/bin">
 			<fileset dir="${bin}" excludes="**/.svn,**/Thumbs.db, conf/" />
