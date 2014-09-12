@@ -36,7 +36,7 @@ And finish with a JAX-RS API.
 java -cp "/path/to/your/lib/*" org.restlet.ext.apispark.Introspector -u 55955e02-0e99-47f8 -p 6f3ee88e-8405-44c8 org.jaxrs.api.MyContacts
 ~~~~
 
-__Note:__ For the JAX-RS introspection to work, users have to point the Introspector to a class extending javax.ws.rs.core.Application and listing the annotated classes as follows:
+__Note:__ For the JAX-RS introspection to work, users have to point the Introspector to a class extending javax.ws.rs.core.Application and listing all the JAX-RS annotated classes as follows:
 
 ~~~~{.java}
 package org.coenraets.directory;
@@ -55,6 +55,7 @@ public class MyContacts extends Application {
 }
 ~~~~
 
+Whether you use this class to run your Web API or not, you must create it to run the Introspector.
     
 Configuration
 -------------
