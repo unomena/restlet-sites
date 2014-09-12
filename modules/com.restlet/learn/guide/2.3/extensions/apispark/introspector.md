@@ -183,25 +183,21 @@ DESCRIPTION
     If the whole process is successfull, it displays the url of the
     corresponding documentation.
 OPTIONS
-    -h
+    -h, --help
         Prints this help.
-    -u
+    -u, --username
         The mandatory APISpark user name.
-    -p
+    -p, --password
         The mandatory APISpark user secret key.
-    -s
-        The optional APISpark platform URL (by default
-        https://apispark.com).
-    -c
+    -c, --canonical-name
         The optional full canonical name of your Restlet Component class.
         This allows to collect some other data, such as the endpoint.
-    -d
+    -d, --definition
         The optional id of an existing definition hosted by APISpark you
         want to update with this new documentation.
-            
-    -l
+    -l, --language
         The optional name of the description language of the definition
         you want to upload. Possible value: swagger
-    -v
+    -v, --verbose
         The optional parameter switching the process to a verbose mode
 ~~~~
