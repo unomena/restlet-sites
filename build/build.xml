@@ -17,6 +17,7 @@
 
 	<!-- Set global paths -->
 	<property name="temp" location="temp" />
+	<property name="tools" location="tools" />
 	<property name="javadocs" value="${temp}/javadocs" />
 	<property name="classes" value="${temp}/classes" />
 	<property name="bin" location="bin" />
@@ -32,8 +33,28 @@
 	<property name="www" value="www" />
 	<property name="restlet-com" value="${www}/restlet-com" />
 
-    <property file="${tmpl}/config/config.${envt}.properties" />
+    <!-- Create the time stamp -->
+     <tstamp />
+     <!-- Set the property that will enable the Javadoc target -->
+     <condition property="do-javadoc">
+         <istrue value="${javadoc}" />
+     </condition>
+     <!-- Set the property that will enable the Package target -->
+     <condition property="do-package">
+         <istrue value="${package}" />
+     </condition>
+     <!-- Set the property that will enable the Integrate target -->
+     <condition property="do-integrate">
+         <istrue value="${integrate}" />
+     </condition>
 	
+	<property file="${tmpl}/config/config.${envt}.properties" />
+
+	<!-- Current year -->
+	<tstamp>
+		<format property="current-year" pattern="yyyy" />
+	</tstamp>
+
 	<!-- Used to parse the unique json data base. -->
 	<script language="javascript">
 		<![CDATA[
@@ -204,13 +225,13 @@
 
 			<mkdir dir="${temp}/toc" />
 			<exec executable="sh" osfamily="unix">
-				<arg value="${tmpl}/md/getTitle.sh" />
+				<arg value="${tools}/get-title.sh" />
 				<arg value="${temp}/owr/learn/tutorial/@{version}/index.md" />
 				<arg value="${temp}/toc/toc.tutorial.@{version}.properties" />
 			</exec>
-			
+
 			<!-- shift templates according to the current version -->
-			<copy file="${tmpl}/md/tutorial.tmpl" tofile="${temp}/toc/tutorial.@{version}.tmpl"> 
+			<copy file="${tmpl}/md/tutorial.tmpl" tofile="${temp}/toc/tutorial.@{version}.tmpl">
 				<filterchain>
 					<replacestring from="@version@" to="@{version}" />
 				</filterchain>
@@ -228,19 +249,19 @@
 		</sequential>
 	</macrodef>
 
-    <macrodef name="generate-file" description="Generate the source code for a specific file.">
-        <attribute name="source" />
-        <attribute name="target" />
-        <attribute name="raw" />
-        <sequential>
-	        <!-- cope with marked down file and add decoration -->
-	        <exec executable="sh" osfamily="unix">
-	            <arg value="${tmpl}/md/unixtohtml.sh" />
-	            <arg value="${temp}/owr/@{source}" />
-	            <arg value="${temp}/owr/@{target}" />
-	          	<arg value="${tmpl}/md/singlefile-@{raw}.tmpl" />
-	        </exec>
-	    </sequential>
+	<macrodef name="generate-file" description="Generate the source code for a specific file.">
+		<attribute name="source" />
+		<attribute name="target" />
+		<attribute name="raw" />
+		<sequential>
+			<!-- cope with marked down file and add decoration -->
+			<exec executable="sh" osfamily="unix">
+				<arg value="${tmpl}/md/unixtohtml.sh" />
+				<arg value="${temp}/owr/@{source}" />
+				<arg value="${temp}/owr/@{target}" />
+				<arg value="${tmpl}/md/singlefile-@{raw}.tmpl" />
+			</exec>
+		</sequential>
 	</macrodef>
 
 	<!-- ===================== -->
@@ -248,25 +269,8 @@
 	<!-- ===================== -->
 
 	<!-- GENERAL targets -->
-	<target name="build" depends="init, generate, verify, integrate, stage, package" description="Full build." />
-	<target name="rebuild" depends="init, clean, generate, verify, integrate, stage, package" description="Full build from scratch." />
-
-	<target name="init">
-		<!-- Create the time stamp -->
-		<tstamp />
-		<!-- Set the property that will enable the Javadoc target -->
-		<condition property="do-javadoc">
-			<istrue value="${javadoc}" />
-		</condition>
-		<!-- Set the property that will enable the Package target -->
-		<condition property="do-package">
-			<istrue value="${package}" />
-		</condition>
-		<!-- Set the property that will enable the Integrate target -->
-		<condition property="do-integrate">
-			<istrue value="${integrate}" />
-		</condition>
-	</target>
+	<target name="build" depends="generate, verify, integrate, stage, package" description="Full build." />
+	<target name="rebuild" depends="clean, generate, verify, integrate, stage, package" description="Full build from scratch." />
 
 	<!-- CLEAN target -->
 	<target name="clean" depends="clean-temp, clean-dist" description="Clean the staging area." />
@@ -312,16 +316,19 @@
 			<fileset dir="../modules/com.restlet/" />
 		</copy>
 
+	    <!-- manually convert markdown pages : tutorial -->
 		<generate-tutorial version="1.0" />
 		<generate-tutorial version="1.1" />
 		<generate-tutorial version="2.0" />
 		<generate-tutorial version="2.1" />
 		<generate-tutorial version="2.2" />
 		<generate-tutorial version="2.3" />
+		<!-- manually convert markdown pages : user guide -->
 		<generate-guide version="2.2" />
 		<generate-guide version="2.3" />
-	    <!-- NB : les titres sont générés à partir des noms de fichier... -->
-		<!-- Cas général -->
+		
+	    <!-- manually convert markdown pages : any other cases -->
+		<!-- NB : titles are generated based on file names... -->
 		<generate-file source="about/board.md" target="about/board.html" raw="decorate" />
 		<generate-file source="about/hiring.md" target="about/hiring.html" raw="decorate" />
 		<generate-file source="about/index.md" target="about/index.html" raw="decorate" />
@@ -331,8 +338,8 @@
 		<generate-file source="participate/governance.md" target="participate/governance.html" raw="decorate" />
 		<generate-file source="participate/services.md" target="participate/services.html" raw="decorate" />
 		<generate-file source="download/faq.md" target="download/faq.html" raw="decorate" />
-		<!-- Cas très particulier que first steps...-->
-	    <!-- ce n'est pas qu'une page Web, mais aussi un template qu'on peut insérer depuis download/current -->
+		<!-- very specific case: "first steps"... -->
+		<!-- this is a Web page, but also a template that can be inserted from "/download/current" or "/download/past" -->
 		<generate-file source="discover/firststeps.md" target="discover/firststeps.ftl" raw="raw" />
 
 		<replaceregexp match="javadocs://(.\..)/(.*)" replace="http://restlet.org/learn/javadocs/\1/\2" byline="true">
@@ -367,79 +374,69 @@
 		<delete dir="${temp}/owr" />
 	</target>
 
-
 	<target name="generate-javadocs" if="do-javadoc" description="Generate the Javadocs.">
 		<delete dir="${javadocs}" verbose="false" quiet="true" includeEmptyDirs="true" />
 
 		<javadoc packagenames="com.restlet.*" sourcepath="${src}" destdir="${javadocs}" classpathref="main.path" author="true" version="true" use="true" windowtitle="Restlet Web server ${version-full}" doctitle="Restlet Web server ${version-full}" overview="${tmpl}/javadocs/overview.html" stylesheetfile="${tmpl}/javadocs/stylesheet.css" verbose="false">
-			<bottom>
-				<![CDATA[<i>Copyright &#169; 2005-2013 Restlet. All Rights Reserved.</i>]]>
-         </bottom>
-		<tag name="associates" scope="all" description="Design stereotype: " enabled="false" />
-		<tag name="clientCardinality" scope="all" description="Design stereotype: " enabled="false" />
-		<tag name="label" scope="all" description="Design stereotype: " enabled="false" />
-		<tag name="stereotype" scope="all" description="Design stereotype: " enabled="false" />
-		<tag name="supplierCardinality" scope="all" description="Design stereotype: " enabled="false" />
+            <bottom><![CDATA[<i>Copyright &#169; 2005-${current-year} Restlet. All Rights Reserved.</i>]]></bottom>
+			<tag name="associates" scope="all" description="Design stereotype: " enabled="false" />
+			<tag name="clientCardinality" scope="all" description="Design stereotype: " enabled="false" />
+			<tag name="label" scope="all" description="Design stereotype: " enabled="false" />
+			<tag name="stereotype" scope="all" description="Design stereotype: " enabled="false" />
+			<tag name="supplierCardinality" scope="all" description="Design stereotype: " enabled="false" />
 
-		<link href="http://docs.oracle.com/javase/6/docs/api/" />
-		<link href="http://www.restlet.org/documentation/${testing.restlet-version-minor}/api/" />
-	</javadoc>
-</target>
+			<link href="http://docs.oracle.com/javase/6/docs/api/" />
+			<link href="http://restlet.com/documentation/${testing.restlet-version-minor}/api/" />
+		</javadoc>
+	</target>
 
-<!-- VERIFY target -->
-<target name="verify" description="Verify build." />
+	<!-- VERIFY target -->
+	<target name="verify" description="Verify build." />
 
-<!-- INTEGRATE target -->
-<target name="integrate" if="do-integrate" description="Dependencies with other projects." />
+	<!-- INTEGRATE target -->
+	<target name="integrate" if="do-integrate" description="Dependencies with other projects." />
 
-<!-- STAGE target -->
-<target name="stage" description="Stage the packaging step.">
-	<mkdir dir="${dist}/${dist-path}/conf" />
-	<mkdir dir="${dist}/${dist-path}/bin" />
-	<mkdir dir="${dist}/${dist-path}/lib" />
-	<mkdir dir="${dist}/${dist-path}/${restlet-com}" />
+	<!-- STAGE target -->
+	<target name="stage" description="Stage the packaging step.">
+		<mkdir dir="${dist}/${dist-path}/conf" />
+		<mkdir dir="${dist}/${dist-path}/bin" />
+		<mkdir dir="${dist}/${dist-path}/lib" />
+		<mkdir dir="${dist}/${dist-path}/${restlet-com}" />
 
-	<!-- Put everything in ${classes} into the JAR file -->
-	<jar jarfile="${dist}/${dist-path}/lib/com.restlet.frontend.jar" basedir="${classes}" includes="com/restlet/frontend/**" />
+		<!-- Put everything in ${classes} into the JAR file -->
+		<jar jarfile="${dist}/${dist-path}/lib/com.restlet.frontend.jar" basedir="${classes}" includes="com/restlet/frontend/**" />
 
-	<!-- Copy the Web directories -->
-	<copy todir="${dist}/${dist-path}/${restlet-com}">
-		<fileset dir="${temp}/${restlet-com}" />
-	</copy>
-	<!-- Copy the config file -->
-	<copy todir="${dist}/${dist-path}/conf">
-		<fileset dir="${conf}" excludes="**/.svn,**/Thumbs.db" />
-	</copy>
-	<copy todir="${dist}/${dist-path}/bin">
-		<fileset dir="${bin}" excludes="**/.svn,**/Thumbs.db, conf/" />
-	</copy>
-	<chmod file="${dist}/${dist-path}/bin/linux/wrapper" perm="ug+x" />
+		<!-- Copy the Web directories -->
+		<copy todir="${dist}/${dist-path}/${restlet-com}">
+			<fileset dir="${temp}/${restlet-com}" />
+		</copy>
+		<!-- Copy the config file -->
+		<copy todir="${dist}/${dist-path}/conf">
+			<fileset dir="${conf}" excludes="**/.svn,**/Thumbs.db" />
+		</copy>
+		<copy todir="${dist}/${dist-path}/bin">
+			<fileset dir="${bin}" excludes="**/.svn,**/Thumbs.db, conf/" />
+		</copy>
+		<chmod file="${dist}/${dist-path}/bin/linux/wrapper" perm="ug+x" />
 
-	<!-- Copy the librairies file -->
-	<copy todir="${dist}/${dist-path}/lib" flatten="true">
-		<fileset dir="../librairies">
-			<include name="**/*.jar" />
-			<exclude name="*tanuki*/**" />
-		</fileset>
-	</copy>
-	<copy todir="${dist}/${dist-path}/lib/wrapper" flatten="true">
-		<fileset dir="../librairies">
-			<include name="*tanuki*/*wrapper*" />
-		</fileset>
-	</copy>
-</target>
+		<!-- Copy the librairies file -->
+		<copy todir="${dist}/${dist-path}/lib" flatten="true">
+			<fileset dir="../librairies">
+				<include name="**/*.jar" />
+				<exclude name="*tanuki*/**" />
+			</fileset>
+		</copy>
+		<copy todir="${dist}/${dist-path}/lib/wrapper" flatten="true">
+			<fileset dir="../librairies">
+				<include name="*tanuki*/*wrapper*" />
+			</fileset>
+		</copy>
+	</target>
 
-<!-- PACKAGE target -->
-<target name="package" if="do-package" description="Generate the distribution.">
-	<zip destfile="${dist}/${dist-path}.zip" basedir="${dist}" includes="${dist-path}/**/*" />
-</target>
+	<!-- PACKAGE target -->
+	<target name="package" if="do-package" description="Generate the distribution.">
+		<zip destfile="${dist}/${dist-path}.zip" basedir="${dist}" includes="${dist-path}/**/*" />
+	</target>
 
-<!-- allows to refresh the working copy of the web project when some updates have been made (static files, web application, etc).-->
-<target name="refresh" description="Refresh the working copy of the web project." depends="init">
-	<wc-update project-code="${project-code}" project-type="${project-type}" project-minor-version="${project-minor-version}" project-release-number="${project-release-number}" />
-	<ant target="generate" />
-	<ant target="integrate" />
-	<ant target="stage" />
-</target>
 
 </project>
