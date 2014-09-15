@@ -13,7 +13,7 @@ It will allow you to:
 -   Display and edit this description within APISpark
 -   Synchronize Web API changes initiated from your API's code or Swagger
 
-In these scenarios we'll leverage the Introspector tool by loading a Web API definition into APISpark with the three types of inputs available. You can find a complete example of documentation generated via this tool [here](https://apispark.com/apis/3218/versions/1/overview/), the description fields weren't retrieved from the Restlet Framework code, they were added manually in APISpark.
+In these scenarios we'll leverage the Introspector tool by loading a Web API definition into APISpark with the three types of inputs available. You can find a complete example of documentation generated via this tool [here](https://apispark.com/apis/1427/versions/1/overview/), the description fields weren't retrieved from the Restlet Framework code, they were added manually in APISpark.
  
 Launch process
 ==============
