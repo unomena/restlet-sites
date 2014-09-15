@@ -13,7 +13,7 @@ It will allow you to:
 -   Display and edit this description within APISpark
 -   Synchronize Web API changes initiated from your API's code or Swagger
 
-In these scenarios we'll leverage the Introspector tool by loading a Web API definition into APISpark with the three types of inputs available. You can find a complete example of documentation generated via this tool [here](https://apispark.com/apis/1427/versions/1/overview/), the description fields cannot be retrieved from the Restlet Framework code currently, they were added manually in APISpark.
+In these scenarios we'll leverage the Introspector tool by loading a Web API definition into APISpark with the three types of inputs available. You can find a complete example of documentation generated via this tool [here](https://apispark.com/apis/3218/versions/1/overview/), the description fields weren't retrieved from the Restlet Framework code, they were added manually in APISpark.
  
 Launch process
 ==============
@@ -101,20 +101,19 @@ You can use the following pom.xml to get the dependencies required for the Intro
 
 
 You must add the following jars (provided in 
-[restlet framework](http://restlet.com/download/current#release=stable&edition=jse&distribution=zip 
+[Restlet Framework](http://restlet.com/download/current#release=stable&edition=jse&distribution=zip 
 "download restlet framework")) 
 in the "/path/to/your/lib" folder or manually to the classpath.
 
-In Restlet framework lib directory:
+In Restlet Framework lib directory:
 
 -   org.restlet.jar (Restlet API)
 -   org.restlet.ext.apispark.jar (Restlet APISpark extension with Introspector class)
 -   org.restlet.ext.jackson.jar (Restlet Jackson extension)
--   org.restlet.ext.xml (Restlet xml extension in Restlet framework lib directory)
--   org.restlet.ext.wadl (Restlet xml extension in Restlet framework lib directory)
+-   org.restlet.ext.xml (Restlet XML extension in Restlet framework lib directory)
 
 
-In Restlet framework lib/com.fasterxml.jackson_2.2/ directory:
+In Restlet Framework lib/com.fasterxml.jackson_2.2/ directory:
 
 -   com.fasterxml.jackson.annotations.jar
 -   com.fasterxml.jackson.core.jar

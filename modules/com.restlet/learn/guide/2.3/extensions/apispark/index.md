@@ -1,9 +1,8 @@
 APISpark extension
 ==================
 
-The APISpark extension provides several tools : 
+The APISpark extension provides several tools that can we used either in standalone mode within Restlet Framework or integrated with the APISpark PaaS to enable additional features.
 
-* An [introspector](introspector.md) which is a tool to import the contract of your Restlet or JAX-RS Web API in 
-the [APISpark](https://apispark.com/) full-stack PaaS for Web APIs.
+* [Introspector](introspector.md) , a tool to extract the web API definition of your Restlet API or JAX-RS API application and import it in [APISpark](https://apispark.com/) to provide documentation and tooling.
 
 * [Firewall](firewall.md), a service that adds rate limitation to your web API.
