@@ -43,11 +43,7 @@ There are two kinds of rate limiters :
 
 There are different factories to create a Firewall rule (located in class FirewallUtils).
 
-* Create a periodic rate limiter.
-
-  * With users identified by their identifier (after authentication) and with a limit depending on their role.
-	
-    * With a default limit (for non authenticated users or for users without a role)  
+* Create a periodic rate limiter, with users identified by their identifier (after authentication), a limit depending on their role and a default limit (for non authenticated users or for users without a role)  
 
 ~~~~{.java}
 	// Create a map which will associate roles with limits.  
@@ -62,26 +58,22 @@ There are different factories to create a Firewall rule (located in class Firewa
 	// Create a periodic rate limitation rule with a period of 60 seconds, the defined limits per role and a default limit of 5 requests.  
 	FirewallUtils.addRolesPeriodicCounter(firewallFilter, 60, limitsPerRole, 5);
 ~~~~  
-  
-    * Without a default limit (set by default at O)  
 
+* Create a periodic rate limiter, with users identified by their identifier (after authentication), a limit depending on their role and without a default limit (set by default at O) 
+   
 ~~~~{.java}
 	// Create a period rate limitation rule with a period of 60 seconds, the defined limits per role (defined in the example above).  
 	FirewallUtils.addRolesPeriodicCounter(firewallFilter, 60, limitsPerRole, 5);
 ~~~~
-
-  * With users identified by their IP address. Same limit for all.
-	
+  
+* Create a periodic rate limiter, with users identified by their IP address. Same limit for all.  
+    
 ~~~~{.java}
 	// Create a periodic rate limitation rule with a period of 60 seconds and a limit of 10 calls per IP address.
 	FirewallUtils.addIpAddressesPeriodicCounter(firewallFilter, 60, 10)
-~~~~
+~~~~  
 
-* Create a concurrent rate limiter.
-
-  * With users identified by their identifier (after authentication) and with a limit depending on their role.
-
-    * With a default limit (for non authenticated users or for users without a role)  
+* Create a concurrent rate limiter, with users identified by their identifier (after authentication) and with a limit depending on their role and a default limit (for non authenticated users or for users without a role)  
 
 ~~~~{.java}
 	// Create a map which will associate roles with limits.  
@@ -97,14 +89,14 @@ There are different factories to create a Firewall rule (located in class Firewa
 	FirewallUtils.addRolesConcurrencyCounter(firewallFilter, limitsPerRole, 2);
 ~~~~
 
-    * Without a default limit (set by default at O)  
+* Create a concurrent rate limiter, with users identified by their identifier (after authentication) and with a limit depending on their role and without a default limit (set by default at O)  
 
 ~~~~{.java}
 	// Create a period rate limitation rule the defined limits per role.  
 	FirewallUtils.addRolesConcurrencyCounter(firewallFilter, limitsPerRole);
 ~~~~
 
-  * With users identified by their IP address. Same limit for all.
+* Create a concurrent rate limiter, with users identified by their IP address. Same limit for all.
 	
 ~~~~{.java}
 	// Create a concurrent rate limitation rule with a limit of 10 calls per IP address.
