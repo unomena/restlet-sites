@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This module integrated in the [APISpark extension](/apispark.md) provides a Rate Limiter for your Restlet Web API.
+This service integrated in the [APISpark extension](../) adds rate limitation to your web API.
 
 ## Configuration
 
@@ -41,13 +41,13 @@ There are two kinds of rate limiters :
 * Concurrent rate limiter : Limits the number of concurrent requests.
 * Periodic rate limiter : Limits the number of requests on a given period.
 
-These rate limiters count the number of requests made by identified users. So, to be efficient, the FirewallFilter need to be placed behind a ChallengeAuthenticator.
-
-Different factories to create a Firewall rule.
+There are different factories to create a Firewall rule (located in class FirewallUtils).
 
 * Create a periodic rate limiter.
 
-  * With a default limit (for non authenticated users or for users without a role)  
+	* With users identified by their identifier (after authentication) and with a limit depending on their role.
+	
+  		* With a default limit (for non authenticated users or for users without a role)  
 
 ~~~~{.java}
 	// Create a map which will associate roles with limits.  
@@ -59,20 +59,29 @@ Different factories to create a Firewall rule.
 	// Associate the role "user" to a limit of 10 requests.  
 	limitsPerRole.put("user", 10);
 
-	// Create a period rate limitation rule with a period of 60 seconds, the defined limits per role and a default limit of 5 requests.  
-	firewallFilter.addOnPeriodRateLimit(60, limitsPerRole, 5);
+	// Create a periodic rate limitation rule with a period of 60 seconds, the defined limits per role and a default limit of 5 requests.  
+	FirewallUtils.addRolesPeriodicCounter(firewallFilter, 60, limitsPerRole, 5);
 ~~~~
   
-  * Without a default limit (set by default at O)  
+  		* Without a default limit (set by default at O)  
 
 ~~~~{.java}
 	// Create a period rate limitation rule with a period of 60 seconds, the defined limits per role (defined in the example above).  
-	firewallFilter.addOnPeriodRateLimit(60, limitsPerRole, 5);
+	FirewallUtils.addRolesPeriodicCounter(firewallFilter, 60, limitsPerRole, 5);
+~~~~
+
+	* With users identified by their IP address. Same limit for all.
+	
+~~~~{.java}
+	// Create a periodic rate limitation rule with a period of 60 seconds and a limit of 10 calls per IP address.
+	FirewallUtils.addIpAddressesPeriodicCounter(firewallFilter, 60, 10)
 ~~~~
 
 * Create a concurrent rate limiter.
 
-  * With a default limit (for non authenticated users or for users without a role)  
+	* With users identified by their identifier (after authentication) and with a limit depending on their role.
+
+  		* With a default limit (for non authenticated users or for users without a role)  
 
 ~~~~{.java}
 	// Create a map which will associate roles with limits.  
@@ -85,14 +94,21 @@ Different factories to create a Firewall rule.
 	limitsPerRole.put("user", 5);
 	
 	// Create a period rate limitation rule the defined limits per role and a default limit of 2 requests.  
-	firewallFilter.addConcurrentRateLimit(limitsPerRole, 2);
+	FirewallUtils.addRolesConcurrencyCounter(firewallFilter, limitsPerRole, 2);
 ~~~~
 
-  * Without a default limit (set by default at O)  
+  		* Without a default limit (set by default at O)  
 
 ~~~~{.java}
 	// Create a period rate limitation rule the defined limits per role.  
-	firewallFilter.addConcurrentRateLimit(limitsPerRole);
+	FirewallUtils.addRolesConcurrencyCounter(firewallFilter, limitsPerRole);
+~~~~
+
+	* With users identified by their IP address. Same limit for all.
+	
+~~~~{.java}
+	// Create a concurrent rate limitation rule with a limit of 10 calls per IP address.
+	FirewallUtils.addIpAddressesConcurrentCounter(firewallFilter, 10)
 ~~~~
 
 ## Go further
@@ -135,7 +151,7 @@ A Rate limitation rule is associated to several objects :
 	FirewallCounterRule rule = new PeriodicFirewallCounterRule(60, new IpCountingPolicy());
 
 	// Attach an RateLimitationHandler (with a UniqueLimitPolicy) to the FirewallRule
-	rule.addHandler(new RateLimitationHandler(new UniqueLimitPolicy(10);
+	rule.addHandler(new RateLimitationHandler(new UniqueLimitPolicy(10));
 
 	// Attach the rule to the FirewallFilter
 	firewallFilter.addCounter(rule);
