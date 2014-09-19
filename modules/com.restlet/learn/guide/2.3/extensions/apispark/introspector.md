@@ -172,31 +172,50 @@ Here is its commande line help:
 
 ~~~~
 SYNOPSIS
-    org.restlet.ext.apispark.Introspector [options] APPLICATION
-    org.restlet.ext.apispark.Introspector -l swagger [options] SWAGGER
-    DEFINITION URL/PATH
+       org.restlet.ext.apispark.Introspector [options] [--language swagger SWAGGER DEFINITION URL/PATH | APPLICATION]
+       org.restlet.ext.apispark.Introspector --create [options] [--language swagger SWAGGER DEFINITION URL/PATH |
+       APPLICATION]
+       org.restlet.ext.apispark.Introspector --newVersion --descriptor descriptorId [options] [--language swagger
+       SWAGGER DEFINITION URL/PATH | APPLICATION]
+       org.restlet.ext.apispark.Introspector --updateStrategy strategy --descriptor descriptorId --version versionId
+       [options] [--language swagger SWAGGER DEFINITION URL/PATH | APPLICATION]
 DESCRIPTION
-    Publish to the APISpark platform the description of your Web API,
-    represented by APPLICATION, the full canonical name of your Restlet or JAX-RS
-    application class or by the swagger definition available on the  URL/PATH.
-    If the whole process is successfull, it displays the url of the
-    corresponding documentation.
+       Publish to the APISpark platform the description of your Web API, represented by APPLICATION, the full name of
+       your Restlet or JAX-RS application class or by the swagger definition available on the  URL/PATH
+       If the whole process is successfull, it displays the url of the corresponding documentation.
 OPTIONS
-    -h, --help
-        Prints this help.
-    -u, --username
-        The mandatory APISpark user name.
-    -p, --password
-        The mandatory APISpark user secret key.
-    -c, --component
-        The optional full canonical name of your Restlet Component class.
-        This allows to collect some other data, such as the endpoint.
-    -d, --definition
-        The optional id of an existing definition hosted by APISpark you
-        want to update with this new documentation.
-    -l, --language
-        The optional name of the description language of the definition
-        you want to upload. Possible value: swagger
-    -v, --verbose
-        The optional parameter switching the process to a verbose mode
+       -h, --help
+              Prints this help.
+       -u, --username username
+              The mandatory APISpark user name.
+       -p, --password password
+              The mandatory APISpark user secret key.
+       -c, --component commponent class
+              The optional full name of your Restlet Component class. This allows to collect some other data, such as
+              the endpoint.
+       -C, --create
+              Creates a new descriptor from introspection. Is set to true if neither newVersion nor updateStrategy
+              are specified.
+       -n, --newVersion
+              Creates a new version of the descriptor identified by descriptor
+       -d, --descriptor descriptorId
+              The optional identifier of an existing descriptor hosted by APISpark you want to update with this new
+              documentation. Required if updateStrategy or newVersion are specified.
+       -U, --updateStrategy strategy
+              Updates the descriptor version specified by descriptor and version with given strategy. If no strategy is
+              specified, add strategy is selected by default. 
+               Strategies available:
+               add:
+              new objects will be added to the APISpark's descriptor, primitive fields of existing objects will be
+              updated. Nothing will be deleted.
+               reset: deletes all the information in the descriptor
+              on APISpark's and fills it again with introspected definition.
+       -v, --version versionId
+              The version of the descriptor to be updated. Required if updateStrategy is specified.
+       -l, --language languageName
+              The optional name of the description language of the definition you want to upload. Possible value:
+              swagger
+       -v, --verbose
+              The optional parameter switching the process to a verbose mode
+
 ~~~~
