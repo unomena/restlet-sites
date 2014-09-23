@@ -239,8 +239,3 @@ Used to bind the service, when the activity starts.
             }
         }
 
-Here is the Eclipse project of the sample application (including
-dependencies jars):
-[androidRestlet](/learn/guide/2.1#/277-restlet/version/default/part/AttachmentData/data "androidRestlet")
-(application/zip, 623.6 kB)
-
