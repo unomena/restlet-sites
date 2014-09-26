@@ -1527,3 +1527,10 @@ code {
 	border: none;
 	background: url("../images/search-btn.jpg") no-repeat center center;
 }
+
+blockquote p {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 25px;
+    margin-bottom: 0;
+}
