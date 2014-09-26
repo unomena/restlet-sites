@@ -139,9 +139,6 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 
 	/** The download router. */
 	private Router downloadRouter;
-	
-	/** The root router. */
-	private Router rootRouter;
 
 	/** List of current editions. */
 	private EditionsList editions;
@@ -176,6 +173,12 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 	/** List of current qualifiers. */
 	private Map<String, Qualifier> qualifiersMap;
 
+	/** The URI of the redirections properties file. */
+	private String redirectionsPropertiesFileReference;
+
+	/** The root router. */
+	private Router rootRouter;
+
 	/** Login for global site authentication. */
 	private String siteLogin;
 
@@ -193,9 +196,6 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 	/** The Web files root directory URI. */
 	private String wwwUri;
 
-	/** The URI of the redirections properties file. */
-	private String redirectionsPropertiesFileReference;
-
 	/**
 	 * Constructor.
 	 * 
@@ -206,10 +206,10 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 	public RestletCom(String propertiesFileReference) throws IOException {
 		super(propertiesFileReference);
 
-		this.redirectionsPropertiesFileReference = getProperty("redirections.uri");
-		if (this.redirectionsPropertiesFileReference == null) {
-			this.redirectionsPropertiesFileReference = "clap://class/config/redirections.properties";
-		}
+		// By default, check the classpath.
+		this.redirectionsPropertiesFileReference = getProperty(
+				"redirections.uri",
+				"clap://class/config/redirections.properties");
 
 		this.setStatusService(new RefreshStatusService(true, this));
 
@@ -290,124 +290,6 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 		return encoder;
 	}
 
-	private void updateRootRouter() {
-		rootRouter.getRoutes().clear();
-		// Set up redirections.
-		setRedirections(rootRouter);
-
-		// Serve documentation
-		Directory directory = new Directory(getContext(), this.wwwUri);
-		directory.setNegotiatingContent(true);
-		directory.setDeeplyAccessible(true);
-		rootRouter.attachDefault(new CacheFilter(getContext(), directory));
-
-		// Serve javadocs using a specific route
-		Directory javadocsDir = new Directory(getContext(), this.dataUri
-				+ "/javadocs") {
-			@Override
-			public void handle(Request request, Response response) {
-				// Translate the base reference.
-				String branch = (String) request.getAttributes().get("branch");
-				String edition = (String) request.getAttributes()
-						.get("edition");
-				String group = (String) request.getAttributes().get("group");
-				String relPart = "/" + branch + "/" + edition + "/" + group
-						+ "/";
-				Reference baseRef = request.getResourceRef().getBaseRef();
-				String strBaseRef = baseRef.getIdentifier();
-				baseRef.setIdentifier(strBaseRef.substring(0,
-						strBaseRef.length() - relPart.length()));
-				setCookie(response, "branch", branch);
-				super.handle(request, response);
-			}
-		};
-		javadocsDir.setNegotiatingContent(true);
-		javadocsDir.setDeeplyAccessible(true);
-		rootRouter.attach("/learn/javadocs/{branch}/{edition}/{group}/",
-				javadocsDir);
-
-		// Serve changes logs using a specific route
-		Directory changesDir = new Directory(getContext(), this.dataUri
-				+ "/changes") {
-			@Override
-			public void handle(Request request, Response response) {
-				// Translate the base reference.
-				String branch = (String) request.getAttributes().get("branch");
-				String relPart = "/" + branch + "/changes";
-				Reference baseRef = request.getResourceRef().getBaseRef();
-				String strBaseRef = baseRef.getIdentifier();
-				baseRef.setIdentifier(strBaseRef.substring(0,
-						strBaseRef.length() - relPart.length()));
-				setCookie(response, "branch", branch);
-				super.handle(request, response);
-			}
-		};
-		changesDir.setNegotiatingContent(true);
-		changesDir.setDeeplyAccessible(true);
-		rootRouter.attach("/learn/{branch}/changes", changesDir);
-
-		// "download" routing
-		downloadRouter = new Router(getContext());
-		setDownloadRouter();
-
-		Directory userGuideDirectory = new Directory(getContext(), this.wwwUri
-				+ "/learn/guide");
-		userGuideDirectory.setNegotiatingContent(true);
-		userGuideDirectory.setDeeplyAccessible(true);
-		rootRouter.attach("/learn/guide", new Filter(getContext(),
-				userGuideDirectory) {
-			@Override
-			protected int beforeHandle(Request request, Response response) {
-				// Get the branch prefix
-				String remainingPart = request.getResourceRef()
-						.getRemainingPart();
-				if (remainingPart.startsWith("/")) {
-					remainingPart = remainingPart.substring(1);
-				}
-				String branch = null;
-				int index = remainingPart.indexOf("/");
-				if (index != -1) {
-					branch = remainingPart.substring(0, index);
-				} else {
-					branch = remainingPart;
-				}
-				// we serve only documentation for some releases
-				if (branch.equals("2.1") || branch.equals("2.0")
-						|| branch.equals("1.1") || branch.equals("1.0")) {
-					// redirect to stable branch
-					response.redirectTemporary("/learn/guide/"
-							+ qualifiersMap.get("stable").getVersion()
-									.substring(0, 3));
-					return Filter.STOP;
-				} else {
-					for (Qualifier q : qualifiers) {
-						String b = q.getVersion().substring(0, 3);
-						if (b.equals(branch) && !"unstable".equals(q.getId())) {
-							setCookie(response, "release", q.getId());
-						}
-					}
-					setCookie(response, "branch", branch);
-				}
-				return super.beforeHandle(request, response);
-			}
-		});
-		rootRouter.attach("/download", downloadRouter);
-		rootRouter.attach("/feeds/summary", FeedSummaryResource.class);
-		rootRouter.attach("/feeds/general", FeedGeneralResource.class);
-		rootRouter.attach("/feeds/releases", FeedReleasesResource.class);
-
-		// Guarding access to sensitive services
-		ChallengeAuthenticator guard = new ChallengeAuthenticator(getContext(),
-				ChallengeScheme.HTTP_BASIC, "Admin section");
-		MapVerifier verifier = new MapVerifier();
-		verifier.getLocalSecrets().put(this.login, this.password);
-		guard.setVerifier(verifier);
-		Router adminRouter = new Router(getContext());
-		adminRouter.attach("/refresh", RestletComRefreshResource.class);
-		guard.setNext(adminRouter);
-		rootRouter.attach("/admin", guard);
-	}
-
 	public String getDataUri() {
 		return this.dataUri;
 	}
@@ -481,7 +363,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 		if (id != null) {
 			for (Edition e : editions) {
 				if (id.equals(e.getId())) {
-					// check also this edition exists for the given version
+					// check also if this edition exists for the given version
 					for (Distribution d : dl) {
 						if (d.getEdition().equals(e.getId())) {
 							result = e;
@@ -538,26 +420,6 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 
 	public String getWwwUri() {
 		return this.wwwUri;
-	}
-
-	/**
-	 * Helps to define redirections assuming that the router defines route by
-	 * using the {@link Template.MODE_STARTS_WITH} mode.
-	 * 
-	 * @param router
-	 *            The router where to define the redirection.
-	 * @param from
-	 *            The source template.
-	 * @param to
-	 *            The target template.
-	 * @return The defined route.
-	 */
-	private TemplateRoute redirect(Router router, String from, String to) {
-		TemplateRoute route = router.redirectPermanent(from, to);
-		if (to.contains("{rr}")) {
-			route.setMatchingMode(Template.MODE_STARTS_WITH);
-		}
-		return route;
 	}
 
 	/**
@@ -783,55 +645,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 	 *            The router to complete.
 	 */
 	private void setRedirections(Router router) {
-		ClientResource resource = new ClientResource(
-				this.redirectionsPropertiesFileReference);
-		try {
-			Representation rep = resource.get();
-			BufferedReader br = new BufferedReader(new InputStreamReader(
-					rep.getStream()));
-			String line = null;
-			while ((line = br.readLine()) != null) {
-				line = line.trim();
-				if (line.isEmpty() || line.startsWith("#")) {
-					continue;
-				}
-				StringBuilder source = new StringBuilder();
-				StringBuilder target = new StringBuilder();
-				StringBuilder current = source;
-				boolean bSource = true;
-				boolean bTarget = false;
-				boolean bStartsWith = false;
-				for (int i = 0; i < line.length(); i++) {
-					char c = line.charAt(i);
-					if (Character.isWhitespace(c)) {
-						if (bSource) {
-							bSource = false;
-						} else if (bTarget) {
-							break;
-						}
-					} else if (!bSource && !bTarget) {
-						bTarget = true;
-						current = target;
-					} else if (c == '*' && bSource) {
-						bStartsWith = true;
-					} else {
-						current.append(c);
-					}
-				}
-				if (source.length() > 0 && target.length() > 0) {
-					if (!bStartsWith) {
-						redirect(router, source.toString(), target.toString());
-					} else {
-						redirect(router, source.toString(), target.toString())
-								.setMatchingMode(Template.MODE_STARTS_WITH);
-					}
-				}
-			}
-			br.close();
-		} catch (Throwable t) {
-
-		}
-
+		readRedirections(router, redirectionsPropertiesFileReference);
 		redirectBranch(router, "/learn/javadocs", "/learn/javadocs/{branch}",
 				null);
 
@@ -852,6 +666,125 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 		redirectBranch(router, "/learn/guide", "/learn/guide/{branch}/", null);
 
 		redirect(router, "/learn/2.0/tutorial", "/learn/tutorial/2.0");
+	}
+
+	/**
+	 * Sets up the redirections.
+	 * 
+	 * @param router
+	 *            The router to complete.
+	 * @param redirectionsFileUri
+	 *            The URI of the redirections file.
+	 */
+	private void readRedirections(Router router, String redirectionsFileUri) {
+		ClientResource resource = new ClientResource(redirectionsFileUri);
+		try {
+			Representation rep = resource.get();
+			BufferedReader br = new BufferedReader(new InputStreamReader(
+					rep.getStream()));
+			String line = null;
+			int currentMode = Redirector.MODE_CLIENT_SEE_OTHER;
+			while ((line = br.readLine()) != null) {
+				line = line.trim();
+				if (line.isEmpty() || line.startsWith("#")) {
+					continue;
+				}
+				StringBuilder source = new StringBuilder();
+				StringBuilder target = new StringBuilder();
+				StringBuilder current = source;
+				boolean bSource = true;
+				boolean bTarget = false;
+				boolean bStartsWith = false;
+				for (int i = 0; i < line.length(); i++) {
+					char c = line.charAt(i);
+					if (Character.isWhitespace(c)) {
+						if (bSource) {
+							bSource = false;
+						} else if (bTarget) {
+							break;
+						}
+					} else if (c == '*' && bSource) {
+						bStartsWith = true;
+					} else if (!bSource && !bTarget) {
+						bTarget = true;
+						current = target;
+						current.append(c);
+					} else {
+						current.append(c);
+					}
+				}
+				if (source.length() > 0 && target.length() > 0) {
+					if ("setMode".equals(source.toString())) {
+						// UPdate the current redirection mode
+						String strMode = target.toString();
+						if ("CLIENT_PERMANENT".equals(strMode)) {
+							currentMode = Redirector.MODE_CLIENT_PERMANENT;
+						} else if ("CLIENT_FOUND".equals(strMode)) {
+							currentMode = Redirector.MODE_CLIENT_FOUND;
+						} else if ("CLIENT_SEE_OTHER".equals(strMode)) {
+							currentMode = Redirector.MODE_CLIENT_SEE_OTHER;
+						} else if ("CLIENT_TEMPORARY".equals(strMode)) {
+							currentMode = Redirector.MODE_CLIENT_TEMPORARY;
+						} else if ("REVERSE_PROXY".equals(strMode)) {
+							currentMode = Redirector.MODE_SERVER_OUTBOUND;
+						}
+					} else {
+						if (!bStartsWith) {
+							redirect(router, source.toString(),
+									target.toString(), currentMode);
+						} else {
+							redirect(router, source.toString(),
+									target.toString(), currentMode)
+									.setMatchingMode(Template.MODE_STARTS_WITH);
+						}
+					}
+				}
+			}
+			br.close();
+		} catch (Throwable t) {
+
+		}
+	}
+
+	/**
+	 * Helps to define redirections assuming that the router defines route by
+	 * using the {@link Template.MODE_STARTS_WITH} mode. Redirection is made by
+	 * default using the {@link Redirector#MODE_CLIENT_PERMANENT} mode.
+	 * 
+	 * @param router
+	 *            The router where to define the redirection.
+	 * @param from
+	 *            The source template.
+	 * @param to
+	 *            The target template.
+	 * @return The defined route.
+	 */
+	private TemplateRoute redirect(Router router, String from, String to) {
+		return redirect(router, from, to, Redirector.MODE_CLIENT_PERMANENT);
+	}
+
+	/**
+	 * Helps to define redirections assuming that the router defines route by
+	 * using the {@link Template.MODE_STARTS_WITH} mode.
+	 * 
+	 * @param router
+	 *            The router where to define the redirection.
+	 * @param from
+	 *            The source template.
+	 * @param to
+	 *            The target template.
+	 * @param mode
+	 *            The redirection mode (cf {@link Redirector}.
+	 * @return The defined route.
+	 */
+	private TemplateRoute redirect(Router router, String from, String to,
+			int mode) {
+		TemplateRoute route = router.attach(from, new Redirector(getContext(),
+				to, mode));
+		if (to.contains("{rr}")) {
+			route.setMatchingMode(Template.MODE_STARTS_WITH);
+		}
+		return route;
 	}
 
 	@Override
@@ -880,6 +813,124 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 		setCookie(response, "edition", edition.getId());
 		setCookie(response, "release", version.getQualifier());
 		setCookie(response, "version", version.getId());
+	}
+
+	private void updateRootRouter() {
+		rootRouter.getRoutes().clear();
+		// Set up redirections.
+		setRedirections(rootRouter);
+
+		// Serve documentation
+		Directory directory = new Directory(getContext(), this.wwwUri);
+		directory.setNegotiatingContent(true);
+		directory.setDeeplyAccessible(true);
+		rootRouter.attachDefault(new CacheFilter(getContext(), directory));
+
+		// Serve javadocs using a specific route
+		Directory javadocsDir = new Directory(getContext(), this.dataUri
+				+ "/javadocs") {
+			@Override
+			public void handle(Request request, Response response) {
+				// Translate the base reference.
+				String branch = (String) request.getAttributes().get("branch");
+				String edition = (String) request.getAttributes()
+						.get("edition");
+				String group = (String) request.getAttributes().get("group");
+				String relPart = "/" + branch + "/" + edition + "/" + group
+						+ "/";
+				Reference baseRef = request.getResourceRef().getBaseRef();
+				String strBaseRef = baseRef.getIdentifier();
+				baseRef.setIdentifier(strBaseRef.substring(0,
+						strBaseRef.length() - relPart.length()));
+				setCookie(response, "branch", branch);
+				super.handle(request, response);
+			}
+		};
+		javadocsDir.setNegotiatingContent(true);
+		javadocsDir.setDeeplyAccessible(true);
+		rootRouter.attach("/learn/javadocs/{branch}/{edition}/{group}/",
+				javadocsDir);
+
+		// Serve changes logs using a specific route
+		Directory changesDir = new Directory(getContext(), this.dataUri
+				+ "/changes") {
+			@Override
+			public void handle(Request request, Response response) {
+				// Translate the base reference.
+				String branch = (String) request.getAttributes().get("branch");
+				String relPart = "/" + branch + "/changes";
+				Reference baseRef = request.getResourceRef().getBaseRef();
+				String strBaseRef = baseRef.getIdentifier();
+				baseRef.setIdentifier(strBaseRef.substring(0,
+						strBaseRef.length() - relPart.length()));
+				setCookie(response, "branch", branch);
+				super.handle(request, response);
+			}
+		};
+		changesDir.setNegotiatingContent(true);
+		changesDir.setDeeplyAccessible(true);
+		rootRouter.attach("/learn/{branch}/changes", changesDir);
+
+		// "download" routing
+		downloadRouter = new Router(getContext());
+		setDownloadRouter();
+
+		Directory userGuideDirectory = new Directory(getContext(), this.wwwUri
+				+ "/learn/guide");
+		userGuideDirectory.setNegotiatingContent(true);
+		userGuideDirectory.setDeeplyAccessible(true);
+		rootRouter.attach("/learn/guide", new Filter(getContext(),
+				userGuideDirectory) {
+			@Override
+			protected int beforeHandle(Request request, Response response) {
+				// Get the branch prefix
+				String remainingPart = request.getResourceRef()
+						.getRemainingPart();
+				if (remainingPart.startsWith("/")) {
+					remainingPart = remainingPart.substring(1);
+				}
+				String branch = null;
+				int index = remainingPart.indexOf("/");
+				if (index != -1) {
+					branch = remainingPart.substring(0, index);
+				} else {
+					branch = remainingPart;
+				}
+				// we serve only documentation for some releases
+				if (branch.equals("2.1") || branch.equals("2.0")
+						|| branch.equals("1.1") || branch.equals("1.0")) {
+					// redirect to stable branch
+					response.redirectTemporary("/learn/guide/"
+							+ qualifiersMap.get("stable").getVersion()
+									.substring(0, 3));
+					return Filter.STOP;
+				} else {
+					for (Qualifier q : qualifiers) {
+						String b = q.getVersion().substring(0, 3);
+						if (b.equals(branch) && !"unstable".equals(q.getId())) {
+							setCookie(response, "release", q.getId());
+						}
+					}
+					setCookie(response, "branch", branch);
+				}
+				return super.beforeHandle(request, response);
+			}
+		});
+		rootRouter.attach("/download", downloadRouter);
+		rootRouter.attach("/feeds/summary", FeedSummaryResource.class);
+		rootRouter.attach("/feeds/general", FeedGeneralResource.class);
+		rootRouter.attach("/feeds/releases", FeedReleasesResource.class);
+
+		// Guarding access to sensitive services
+		ChallengeAuthenticator guard = new ChallengeAuthenticator(getContext(),
+				ChallengeScheme.HTTP_BASIC, "Admin section");
+		MapVerifier verifier = new MapVerifier();
+		verifier.getLocalSecrets().put(this.login, this.password);
+		guard.setVerifier(verifier);
+		Router adminRouter = new Router(getContext());
+		adminRouter.attach("/refresh", RestletComRefreshResource.class);
+		guard.setNext(adminRouter);
+		rootRouter.attach("/admin", guard);
 	}
 
 	/**
