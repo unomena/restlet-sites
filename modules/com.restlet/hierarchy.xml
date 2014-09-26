@@ -56,6 +56,9 @@
 			<section id="tutorial">
 				<label>Tutorial</label>
 			</section>
+			<!-- section id="reference-web-api">
+				<label>Reference Web API</label>
+			</section -->
 			<section id="guide">
 				<label>User guide</label>
 			</section>
