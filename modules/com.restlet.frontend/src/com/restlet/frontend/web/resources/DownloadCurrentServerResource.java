@@ -1,4 +1,4 @@
-package com.restlet.frontend.web.resources.framework;
+package com.restlet.frontend.web.resources;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,9 +11,8 @@ import com.restlet.frontend.objects.framework.Distribution;
 import com.restlet.frontend.objects.framework.Edition;
 import com.restlet.frontend.objects.framework.Version;
 import com.restlet.frontend.web.applications.RestletCom;
-import com.restlet.frontend.web.resources.BaseResource;
 
-public class DownloadPastServerResource extends BaseResource {
+public class DownloadCurrentServerResource extends BaseResource {
 
     /** The current distribution */
     private Distribution distribution;
@@ -73,6 +72,6 @@ public class DownloadPastServerResource extends BaseResource {
             model.put("showEclipse", Boolean.TRUE);
         }
 
-        return getHTMLTemplateRepresentation("download/past.html", model);
+        return getHTMLTemplateRepresentation("download/current.html", model);
     }
 }

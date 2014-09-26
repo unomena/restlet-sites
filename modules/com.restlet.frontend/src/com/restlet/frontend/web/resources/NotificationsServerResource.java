@@ -1,4 +1,4 @@
-package com.restlet.frontend.web.resources.framework;
+package com.restlet.frontend.web.resources;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,8 +6,6 @@ import java.util.Map;
 import org.restlet.data.Reference;
 import org.restlet.representation.Representation;
 import org.restlet.resource.Get;
-
-import com.restlet.frontend.web.resources.BaseResource;
 
 public class NotificationsServerResource extends BaseResource {
 

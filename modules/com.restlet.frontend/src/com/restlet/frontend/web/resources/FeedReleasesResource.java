@@ -2,7 +2,7 @@
  * Copyright 2005-2013 Restlet. All rights reserved.
  */
 
-package com.restlet.frontend.web.resources.framework;
+package com.restlet.frontend.web.resources;
 
 import java.io.IOException;
 import java.text.DateFormat;
@@ -29,7 +29,7 @@ import com.restlet.frontend.web.applications.RestletCom;
  * Resource that builds a view of the Restlet's blog feed aimed for the Restlet
  * Web site.
  */
-public class FeedSummaryResource extends ServerResource {
+public class FeedReleasesResource extends ServerResource {
 
     private DateFormat format = new SimpleDateFormat("dd MMM yyyy", Locale.US);
 
@@ -38,10 +38,10 @@ public class FeedSummaryResource extends ServerResource {
     @Override
     protected void doInit() throws ResourceException {
         RestletCom app = (RestletCom) getApplication();
-        if (app.getFeedSummary() == null || app.getFeedSummary().isEmpty()) {
+        if (app.getFeedReleases() == null || app.getFeedReleases().isEmpty()) {
             app.refresh();
         } else {
-            entries = app.getFeedSummary();
+            entries = app.getFeedReleases();
         }
 
         setExisting(entries != null);
@@ -58,11 +58,9 @@ public class FeedSummaryResource extends ServerResource {
     public ArrayList<BlogEntry> toJson() {
         ArrayList<BlogEntry> result = new ArrayList<BlogEntry>();
 
-        int limit = 5;
-        for (int i = 0; limit > 0 && i < entries.size(); i++) {
-            BlogEntry be = Helper.toBlogEntry(entries.get(i), format);
+        for (Entry entry : entries) {
+            BlogEntry be = Helper.toBlogEntry(entry, format);
             if (be != null) {
-                limit--;
                 result.add(be);
             }
         }
@@ -73,6 +71,7 @@ public class FeedSummaryResource extends ServerResource {
     @Override
     public Representation toRepresentation(Object source, Variant target)
             throws IOException {
+        // Set representation's expiration date.
         Representation rep = super.toRepresentation(source, target);
         if (getStatus().isSuccess() && rep != null && rep.isAvailable()) {
             Calendar cal = new GregorianCalendar();

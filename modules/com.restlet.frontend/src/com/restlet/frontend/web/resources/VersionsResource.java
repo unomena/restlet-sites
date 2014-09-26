@@ -1,4 +1,4 @@
-package com.restlet.frontend.web.resources.framework;
+package com.restlet.frontend.web.resources;
 
 import org.restlet.resource.Get;
 

@@ -2,7 +2,7 @@
  * Copyright 2005-2013 Restlet. All rights reserved.
  */
 
-package com.restlet.frontend.web.resources.company;
+package com.restlet.frontend.web.resources;
 
 import java.io.IOException;
 import java.text.DateFormat;
@@ -29,7 +29,7 @@ import com.restlet.frontend.web.applications.RestletCom;
  * Resource that builds a view of the Restlet's blog feed aimed for the Restlet
  * Web site.
  */
-public class FeedGeneralResource extends ServerResource {
+public class FeedSummaryResource extends ServerResource {
 
     private DateFormat format = new SimpleDateFormat("dd MMM yyyy", Locale.US);
 
@@ -38,10 +38,10 @@ public class FeedGeneralResource extends ServerResource {
     @Override
     protected void doInit() throws ResourceException {
         RestletCom app = (RestletCom) getApplication();
-        if (app.getFeedGeneral() == null || app.getFeedGeneral().isEmpty()) {
+        if (app.getFeedSummary() == null || app.getFeedSummary().isEmpty()) {
             app.refresh();
         } else {
-            entries = app.getFeedGeneral();
+            entries = app.getFeedSummary();
         }
 
         setExisting(entries != null);
@@ -58,9 +58,11 @@ public class FeedGeneralResource extends ServerResource {
     public ArrayList<BlogEntry> toJson() {
         ArrayList<BlogEntry> result = new ArrayList<BlogEntry>();
 
-        for (Entry entry : entries) {
-            BlogEntry be = Helper.toBlogEntry(entry, format);
+        int limit = 5;
+        for (int i = 0; limit > 0 && i < entries.size(); i++) {
+            BlogEntry be = Helper.toBlogEntry(entries.get(i), format);
             if (be != null) {
+                limit--;
                 result.add(be);
             }
         }

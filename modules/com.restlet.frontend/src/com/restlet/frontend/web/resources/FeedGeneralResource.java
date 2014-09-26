@@ -2,7 +2,7 @@
  * Copyright 2005-2013 Restlet. All rights reserved.
  */
 
-package com.restlet.frontend.web.resources.company;
+package com.restlet.frontend.web.resources;
 
 import java.io.IOException;
 import java.text.DateFormat;
@@ -29,7 +29,7 @@ import com.restlet.frontend.web.applications.RestletCom;
  * Resource that builds a view of the Restlet's blog feed aimed for the Restlet
  * Web site.
  */
-public class FeedReleasesResource extends ServerResource {
+public class FeedGeneralResource extends ServerResource {
 
     private DateFormat format = new SimpleDateFormat("dd MMM yyyy", Locale.US);
 
@@ -38,10 +38,10 @@ public class FeedReleasesResource extends ServerResource {
     @Override
     protected void doInit() throws ResourceException {
         RestletCom app = (RestletCom) getApplication();
-        if (app.getFeedReleases() == null || app.getFeedReleases().isEmpty()) {
+        if (app.getFeedGeneral() == null || app.getFeedGeneral().isEmpty()) {
             app.refresh();
         } else {
-            entries = app.getFeedReleases();
+            entries = app.getFeedGeneral();
         }
 
         setExisting(entries != null);

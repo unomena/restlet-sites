@@ -2,7 +2,7 @@
  * Copyright 2005-2013 Restlet. All rights reserved.
  */
 
-package com.restlet.frontend.web.resources.company;
+package com.restlet.frontend.web.resources;
 
 import java.io.IOException;
 import java.util.ArrayList;
