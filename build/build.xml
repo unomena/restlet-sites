@@ -338,6 +338,7 @@
 		<generate-file source="participate/governance.md" target="participate/governance.html" raw="decorate" />
 		<generate-file source="participate/services.md" target="participate/services.html" raw="decorate" />
 		<generate-file source="download/faq.md" target="download/faq.html" raw="decorate" />
+		<generate-file source="learn/reference-web-api.md" target="learn/reference-web-api.html" raw="decorate" />
 		<!-- very specific case: "first steps"... -->
 		<!-- this is a Web page, but also a template that can be inserted from "/download/current" or "/download/past" -->
 		<generate-file source="discover/firststeps.md" target="discover/firststeps.ftl" raw="raw" />
