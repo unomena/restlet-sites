@@ -129,7 +129,7 @@ public class NavigationBook {
                     e1.printStackTrace();
                 }
 
-                // Migrer le fichier de même id que le doc
+                // Migrer le fichier de meme id que le doc
                 if (file != null) {
                     File to = null;
                     if (dirname != null) {
