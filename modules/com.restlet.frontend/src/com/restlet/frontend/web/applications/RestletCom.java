@@ -268,7 +268,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 		Engine.setLogLevel(Level.FINEST);
 		// Create a root router
 		rootRouter = new Router(getContext());
-
+		rootRouter.setDefaultMatchingMode(Router.MODE_FIRST_MATCH);
 		updateRootRouter();
 
 		Encoder encoder = new Encoder(getContext(), false, true,
