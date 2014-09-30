@@ -685,6 +685,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 			String line = null;
 			int currentMode = Redirector.MODE_CLIENT_SEE_OTHER;
 			while ((line = br.readLine()) != null) {
+				getLogger().fine("add redirection instruction: " + line);
 				line = line.trim();
 				if (line.isEmpty() || line.startsWith("#")) {
 					continue;
