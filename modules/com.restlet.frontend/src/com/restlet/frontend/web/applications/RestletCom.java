@@ -846,7 +846,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 		};
 		javadocsDir.setNegotiatingContent(true);
 		javadocsDir.setDeeplyAccessible(true);
-		rootRouter.attach("/learn/javadocs/{branch}/{edition}/{group}/",
+		rootRouter.attach("/tech-doc/restlet-framework/javadocs/{branch}/{edition}/{group}/",
 				javadocsDir);
 
 		// Serve changes logs using a specific route
@@ -867,17 +867,17 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 		};
 		changesDir.setNegotiatingContent(true);
 		changesDir.setDeeplyAccessible(true);
-		rootRouter.attach("/learn/{branch}/changes", changesDir);
+		rootRouter.attach("/tech-doc/restlet-framework/{branch}/changes", changesDir);
 
 		// "download" routing
 		downloadRouter = new Router(getContext());
 		setDownloadRouter();
 
 		Directory userGuideDirectory = new Directory(getContext(), this.wwwUri
-				+ "/learn/guide");
+				+ "/tech-doc/restlet-framework");
 		userGuideDirectory.setNegotiatingContent(true);
 		userGuideDirectory.setDeeplyAccessible(true);
-		rootRouter.attach("/learn/guide", new Filter(getContext(),
+		rootRouter.attach("/tech-doc/restlet-framework", new Filter(getContext(),
 				userGuideDirectory) {
 			@Override
 			protected int beforeHandle(Request request, Response response) {
