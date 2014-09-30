@@ -818,14 +818,11 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 
 	private void updateRootRouter() {
 		rootRouter.getRoutes().clear();
-		// Set up redirections.
-		setRedirections(rootRouter);
-
 		// Serve documentation
 		Directory directory = new Directory(getContext(), this.wwwUri);
 		directory.setNegotiatingContent(true);
 		directory.setDeeplyAccessible(true);
-		rootRouter.attachDefault(new CacheFilter(getContext(), directory));
+		//rootRouter.attachDefault(new CacheFilter(getContext(), directory));
 
 		// Serve javadocs using a specific route
 		Directory javadocsDir = new Directory(getContext(), this.dataUri
@@ -932,6 +929,9 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 		adminRouter.attach("/refresh", RestletComRefreshResource.class);
 		guard.setNext(adminRouter);
 		rootRouter.attach("/admin", guard);
+		
+		// Set up redirections.
+		setRedirections(rootRouter);
 	}
 
 	/**
