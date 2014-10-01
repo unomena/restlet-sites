@@ -136,9 +136,6 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 
 	private Map<String, DistributionsList> distributionsByVersionEdition;
 
-	/** The download router. */
-	private Router downloadRouter;
-
 	/** List of current editions. */
 	private EditionsList editions;
 
@@ -618,36 +615,6 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 				new CookieSetting(0, name, value, "/", null));
 	}
 
-	/**
-	 * Refreshes the download router according to the list of current versions,
-	 * branches, etc.
-	 */
-	private void setDownloadRouter() {
-		downloadRouter.getRoutes().clear();
-		// redirect stable, testing, unstable uris to the "current" page.
-		for (Qualifier qualifier : qualifiers) {
-			wrapCookie(
-					redirect(downloadRouter, "/" + qualifier.getId(),
-							"/download/current"), "qualifier",
-					qualifier.getId());
-		}
-		// Serve Web pages
-		downloadRouter.attach("/current", DownloadCurrentServerResource.class);
-		downloadRouter.attach("/past", DownloadPastServerResource.class);
-		downloadRouter.getRoutes().add(
-				new StartsWithRoute(downloadRouter, new Directory(getContext(),
-						this.wwwUri + "/download"), "\\/[a-zA-Z]+"));
-		// Redirect "branches" uris (ie "/download/2.x"), to the "past" url.
-		for (String branch : branches) {
-			wrapCookie(
-					redirect(downloadRouter, "/" + branch, "/download/past"),
-					"branch", branch);
-		}
-		// Serve archives
-		downloadRouter.attachDefault(new Directory(getContext(), this.dataUri
-				+ "/archive/restlet"));
-	}
-
 	public void setFeedGeneral(List<Entry> feedGeneral) {
 		this.feedGeneral = feedGeneral;
 	}
@@ -851,11 +818,32 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 	private void updateRootRouter() {
 		rootRouter.getRoutes().clear();
 
-		// Set up routes and redirections.
-		readRouter(rootRouter, routerPropertiesFileReference);
-
 		// "download" routing
-		downloadRouter = new Router(getContext());
+		Router downloadRouter = new Router(getContext());
+		downloadRouter.getRoutes().clear();
+		// redirect stable, testing, unstable uris to the "current" page.
+		for (Qualifier qualifier : qualifiers) {
+			wrapCookie(
+					redirect(downloadRouter, "/" + qualifier.getId(),
+							"/download/current"), "qualifier",
+					qualifier.getId());
+		}
+		// Serve Web pages
+		downloadRouter.attach("/current", DownloadCurrentServerResource.class);
+		downloadRouter.attach("/past", DownloadPastServerResource.class);
+		downloadRouter.getRoutes().add(
+				new StartsWithRoute(downloadRouter, new Directory(getContext(),
+						this.wwwUri + "/download"), "\\/[a-zA-Z]+"));
+		// Redirect "branches" uris (ie "/download/2.x"), to the "past" url.
+		for (String branch : branches) {
+			wrapCookie(
+					redirect(downloadRouter, "/" + branch, "/download/past"),
+					"branch", branch);
+		}
+		// Serve archives
+		downloadRouter.attachDefault(new Directory(getContext(), this.dataUri
+				+ "/archive/restlet"));
+
 		rootRouter.attach("/download", downloadRouter);
 		rootRouter.attach("/feeds/summary", FeedSummaryResource.class);
 		rootRouter.attach("/feeds/general", FeedGeneralResource.class);
@@ -872,7 +860,8 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 		guard.setNext(adminRouter);
 		rootRouter.attach("/admin", guard);
 
-		setDownloadRouter();
+		// Set up routes and redirections.
+		readRouter(rootRouter, routerPropertiesFileReference);
 	}
 
 	/**
