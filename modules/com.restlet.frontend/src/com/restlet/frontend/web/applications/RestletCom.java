@@ -576,7 +576,6 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 				}
 			}
 			updateRootRouter();
-			setDownloadRouter();
 
 			// Get the feed
 			cr = new ClientResource(this.feedGeneralAtomUri);
@@ -857,7 +856,6 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 
 		// "download" routing
 		downloadRouter = new Router(getContext());
-		setDownloadRouter();
 		rootRouter.attach("/download", downloadRouter);
 		rootRouter.attach("/feeds/summary", FeedSummaryResource.class);
 		rootRouter.attach("/feeds/general", FeedGeneralResource.class);
@@ -873,6 +871,8 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 		adminRouter.attach("/refresh", RestletComRefreshResource.class);
 		guard.setNext(adminRouter);
 		rootRouter.attach("/admin", guard);
+
+		setDownloadRouter();
 	}
 
 	/**
