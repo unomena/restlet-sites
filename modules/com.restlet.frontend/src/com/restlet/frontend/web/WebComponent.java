@@ -84,7 +84,7 @@ public class WebComponent extends Component {
 		getLogService().setLoggerName("com.noelios.web.WebComponent.www");
 		// getLogService().setIdentityCheck(true);
 
-		final Properties properties = getProperties("clap://class/config/webComponent.properties");
+		final Properties properties = getProperties("clap://class/webComponent.properties");
 
 		// IP address to listen on
 		String ipAddress = properties.getProperty("server.address");
@@ -125,7 +125,7 @@ public class WebComponent extends Component {
 		// restlet.com
 		// ---------------
 		host = addHost("restlet.com", port, new RestletCom(
-				"clap://class/config/restletCom.properties"), properties);
+				"clap://class/restletCom.properties"), properties);
 		getHosts().add(host);
 		// -----------------
 		// maven.restlet.org
@@ -142,7 +142,7 @@ public class WebComponent extends Component {
 		}, properties);
 		getHosts().add(host);
 		host = addHost("maven.restlet.com", port, new MavenRestletOrg(
-				"clap://class/config/mavenRestletOrg.properties"), properties);
+				"clap://class/mavenRestletOrg.properties"), properties);
 		getHosts().add(host);
 		// -----------------
 		// p2.restlet.org
@@ -159,7 +159,7 @@ public class WebComponent extends Component {
 		}, properties);
 		getHosts().add(host);
 		host = addHost("p2.restlet.com", port, new P2RestletOrg(
-				"clap://class/config/p2RestletOrg.properties"), properties);
+				"clap://class/p2RestletOrg.properties"), properties);
 		getHosts().add(host);
 
 		// -----------------------

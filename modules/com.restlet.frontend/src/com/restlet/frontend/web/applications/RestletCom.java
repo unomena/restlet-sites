@@ -64,7 +64,6 @@ import com.restlet.frontend.web.resources.FeedSummaryResource;
 import com.restlet.frontend.web.resources.QualifiersResource;
 import com.restlet.frontend.web.resources.RestletComRefreshResource;
 import com.restlet.frontend.web.resources.VersionsResource;
-import com.restlet.frontend.web.services.CacheFilter;
 import com.restlet.frontend.web.services.RefreshStatusService;
 
 import freemarker.template.Configuration;
@@ -173,8 +172,8 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 	/** List of current qualifiers. */
 	private Map<String, Qualifier> qualifiersMap;
 
-	/** The URI of the redirections properties file. */
-	private String redirectionsPropertiesFileReference;
+	/** The URI of the router properties file. */
+	private String routerPropertiesFileReference;
 
 	/** The root router. */
 	private Router rootRouter;
@@ -207,9 +206,8 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 		super(propertiesFileReference);
 
 		// By default, check the classpath.
-		this.redirectionsPropertiesFileReference = getProperty(
-				"redirections.uri",
-				"clap://class/config/redirections.properties");
+		this.routerPropertiesFileReference = getProperty("router.uri",
+				"clap://class/router.properties");
 
 		this.setStatusService(new RefreshStatusService(true, this));
 
@@ -480,29 +478,54 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 			cr.accept(MediaType.APPLICATION_JSON);
 			synchronized (editions) {
 				editions.clear();
-				editions.addAll(cr.wrap(EditionsResource.class).list());
+				try {
+					editions.addAll(cr.wrap(EditionsResource.class).list());
+				} catch (Exception e) {
+					getLogger().warning(
+							"Cannot get the list of editions: "
+									+ cr.getReference());
+				}
+
 			}
 
 			cr = new ClientResource(this.wwwUri + "/data/versions.json");
 			cr.accept(MediaType.APPLICATION_JSON);
 			synchronized (versions) {
 				versions.clear();
-				versions.addAll(cr.wrap(VersionsResource.class).list());
+				try {
+					versions.addAll(cr.wrap(VersionsResource.class).list());
+				} catch (Exception e) {
+					getLogger().warning(
+							"Cannot get the list of versions: "
+									+ cr.getReference());
+				}
 			}
 
 			cr = new ClientResource(this.wwwUri + "/data/distributions.json");
 			cr.accept(MediaType.APPLICATION_JSON);
 			synchronized (distributions) {
 				distributions.clear();
-				distributions.addAll(cr.wrap(DistributionsResource.class)
-						.list());
+				try {
+					distributions.addAll(cr.wrap(DistributionsResource.class)
+							.list());
+				} catch (Exception e) {
+					getLogger().warning(
+							"Cannot get the list of distributions: "
+									+ cr.getReference());
+				}
 			}
 
 			cr = new ClientResource(this.wwwUri + "/data/qualifiers.json");
 			cr.accept(MediaType.APPLICATION_JSON);
 			synchronized (qualifiers) {
 				qualifiers.clear();
-				qualifiers.addAll(cr.wrap(QualifiersResource.class).list());
+				try {
+					qualifiers.addAll(cr.wrap(QualifiersResource.class).list());
+				} catch (Exception e) {
+					getLogger().warning(
+							"Cannot get the list of qualifiers: "
+									+ cr.getReference());
+				}
 			}
 			for (Version version : versions) {
 				for (Edition ve : version.getEditions()) {
@@ -645,7 +668,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 	 *            The router to complete.
 	 */
 	private void setRedirections(Router router) {
-		readRedirections(router, redirectionsPropertiesFileReference);
+
 		redirectBranch(router, "/learn/javadocs", "/learn/javadocs/{branch}",
 				null);
 
@@ -676,7 +699,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 	 * @param redirectionsFileUri
 	 *            The URI of the redirections file.
 	 */
-	private void readRedirections(Router router, String redirectionsFileUri) {
+	private void readRouter(Router router, String redirectionsFileUri) {
 		ClientResource resource = new ClientResource(redirectionsFileUri);
 		try {
 			Representation rep = resource.get();
@@ -685,7 +708,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 			String line = null;
 			int currentMode = Redirector.MODE_CLIENT_SEE_OTHER;
 			while ((line = br.readLine()) != null) {
-				getLogger().fine("add redirection instruction: " + line);
+				getLogger().fine("add router instruction: " + line);
 				line = line.trim();
 				if (line.isEmpty() || line.startsWith("#")) {
 					continue;
@@ -716,7 +739,7 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 				}
 				if (source.length() > 0 && target.length() > 0) {
 					if ("setMode".equals(source.toString())) {
-						// UPdate the current redirection mode
+						// Update the current redirection mode
 						String strMode = target.toString();
 						if ("CLIENT_PERMANENT".equals(strMode)) {
 							currentMode = Redirector.MODE_CLIENT_PERMANENT;
@@ -728,15 +751,25 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 							currentMode = Redirector.MODE_CLIENT_TEMPORARY;
 						} else if ("REVERSE_PROXY".equals(strMode)) {
 							currentMode = Redirector.MODE_SERVER_OUTBOUND;
+						} else if ("ROUTER".equals(strMode)) {
+							currentMode = -1;
 						}
 					} else {
-						if (!bStartsWith) {
-							redirect(router, source.toString(),
-									target.toString(), currentMode);
+						if (currentMode == -1) {
+							Directory dir = new Directory(getContext(),
+									"file://" + target.toString());
+							rootRouter.attach(source.toString(), dir);
+							getLogger().fine("  attach directory: from " + dir.getRootRef() + " to " + source.toString());
 						} else {
-							redirect(router, source.toString(),
-									target.toString(), currentMode)
-									.setMatchingMode(Template.MODE_STARTS_WITH);
+							if (!bStartsWith) {
+								redirect(router, source.toString(),
+										target.toString(), currentMode);
+							} else {
+								redirect(router, source.toString(),
+										target.toString(), currentMode)
+										.setMatchingMode(
+												Template.MODE_STARTS_WITH);
+							}
 						}
 					}
 				}
@@ -818,102 +851,13 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 
 	private void updateRootRouter() {
 		rootRouter.getRoutes().clear();
-		// Serve documentation
-		Directory directory = new Directory(getContext(), this.wwwUri);
-		directory.setNegotiatingContent(true);
-		directory.setDeeplyAccessible(true);
-		//rootRouter.attachDefault(new CacheFilter(getContext(), directory));
 
-		// Serve javadocs using a specific route
-		Directory javadocsDir = new Directory(getContext(), this.dataUri
-				+ "/javadocs") {
-			@Override
-			public void handle(Request request, Response response) {
-				// Translate the base reference.
-				String branch = (String) request.getAttributes().get("branch");
-				String edition = (String) request.getAttributes()
-						.get("edition");
-				String group = (String) request.getAttributes().get("group");
-				String relPart = "/" + branch + "/" + edition + "/" + group
-						+ "/";
-				Reference baseRef = request.getResourceRef().getBaseRef();
-				String strBaseRef = baseRef.getIdentifier();
-				baseRef.setIdentifier(strBaseRef.substring(0,
-						strBaseRef.length() - relPart.length()));
-				setCookie(response, "branch", branch);
-				super.handle(request, response);
-			}
-		};
-		javadocsDir.setNegotiatingContent(true);
-		javadocsDir.setDeeplyAccessible(true);
-		rootRouter.attach("/tech-doc/restlet-framework/javadocs/{branch}/{edition}/{group}/",
-				javadocsDir);
-
-		// Serve changes logs using a specific route
-		Directory changesDir = new Directory(getContext(), this.dataUri
-				+ "/changes") {
-			@Override
-			public void handle(Request request, Response response) {
-				// Translate the base reference.
-				String branch = (String) request.getAttributes().get("branch");
-				String relPart = "/" + branch + "/changes";
-				Reference baseRef = request.getResourceRef().getBaseRef();
-				String strBaseRef = baseRef.getIdentifier();
-				baseRef.setIdentifier(strBaseRef.substring(0,
-						strBaseRef.length() - relPart.length()));
-				setCookie(response, "branch", branch);
-				super.handle(request, response);
-			}
-		};
-		changesDir.setNegotiatingContent(true);
-		changesDir.setDeeplyAccessible(true);
-		rootRouter.attach("/tech-doc/restlet-framework/{branch}/changes", changesDir);
+		// Set up routes and redirections.
+		readRouter(rootRouter, routerPropertiesFileReference);
 
 		// "download" routing
 		downloadRouter = new Router(getContext());
 		setDownloadRouter();
-
-		Directory userGuideDirectory = new Directory(getContext(), this.wwwUri
-				+ "/tech-doc/restlet-framework");
-		userGuideDirectory.setNegotiatingContent(true);
-		userGuideDirectory.setDeeplyAccessible(true);
-		rootRouter.attach("/tech-doc/restlet-framework", new Filter(getContext(),
-				userGuideDirectory) {
-			@Override
-			protected int beforeHandle(Request request, Response response) {
-				// Get the branch prefix
-				String remainingPart = request.getResourceRef()
-						.getRemainingPart();
-				if (remainingPart.startsWith("/")) {
-					remainingPart = remainingPart.substring(1);
-				}
-				String branch = null;
-				int index = remainingPart.indexOf("/");
-				if (index != -1) {
-					branch = remainingPart.substring(0, index);
-				} else {
-					branch = remainingPart;
-				}
-				// we serve only documentation for some releases
-				if (branch.equals("2.1") || branch.equals("2.0")
-						|| branch.equals("1.1") || branch.equals("1.0")) {
-					// redirect to stable branch
-					response.redirectTemporary("/learn/guide/"
-							+ qualifiersMap.get("stable").getVersion()
-									.substring(0, 3));
-					return Filter.STOP;
-				} else {
-					for (Qualifier q : qualifiers) {
-						String b = q.getVersion().substring(0, 3);
-						if (b.equals(branch) && !"unstable".equals(q.getId())) {
-							setCookie(response, "release", q.getId());
-						}
-					}
-					setCookie(response, "branch", branch);
-				}
-				return super.beforeHandle(request, response);
-			}
-		});
 		rootRouter.attach("/download", downloadRouter);
 		rootRouter.attach("/feeds/summary", FeedSummaryResource.class);
 		rootRouter.attach("/feeds/general", FeedGeneralResource.class);
@@ -929,9 +873,6 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 		adminRouter.attach("/refresh", RestletComRefreshResource.class);
 		guard.setNext(adminRouter);
 		rootRouter.attach("/admin", guard);
-		
-		// Set up redirections.
-		setRedirections(rootRouter);
 	}
 
 	/**
