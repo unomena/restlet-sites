@@ -1,2 +1,2 @@
-Restlet resources:
-* [documentation syntax](syntax.md)
+Guidelines:
+* [documentation syntax](guidelinessyntax.md)

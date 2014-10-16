@@ -7,6 +7,7 @@
 
 /modules/com.restlet/images/Thumbs.db
 Thumbs.db
+.DS_Store
 /config
 /data
 /build/custom.properties
