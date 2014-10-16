@@ -1,2 +1,2 @@
 Guidelines:
-* [documentation syntax](guidelinessyntax.md)
+* [documentation syntax](guidelines/syntax.md)
