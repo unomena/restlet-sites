@@ -29,10 +29,10 @@ Here is a list of the different step-by-step tutorials we have at your disposal:
 
 ##Create an account
 
-The signup process of APISpark is straightforward. 
+The signup process of APISpark is straightforward.
 
 1. Click on the **Sign in** button and select your favorite social provider.
-An account is automatically from the information transferred by the social network provider you selected. 
+An account is automatically from the information transferred by the social network provider you selected.
 
 2. To view your APISpark account details, jump to the **Account** page (see Account Page).
 

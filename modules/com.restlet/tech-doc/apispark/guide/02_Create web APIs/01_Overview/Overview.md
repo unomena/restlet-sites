@@ -1,1 +1,0 @@
-APISpark allows you to create, deploy, host and manage your own WebAPIs by providing an online Integrated Development Environment (Web IDE) and a hosting service. It lets you define web APIs based on the concepts of REST. These APIs may access data stored locally (an EntityStore or a FileStore) or remotely (via a Wrapper).
