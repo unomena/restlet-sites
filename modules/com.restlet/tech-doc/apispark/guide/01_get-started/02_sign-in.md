@@ -1,7 +1,7 @@
 #Sign up process
 The signup process of APISpark is straightforward.
 Click on the sign in button and select your favorite social provider.
-An account is automatically from the information transferred by the social network provider you selected. To view your APISpark account details, jump to the Account page TODO (see Account Page).
+An account is automatically from the information transferred by the social network provider you selected. To view your APISpark account details, jump to the Account page (more details below).
 
 1. Click on the Sign in button on top right of [https://apispark.com/](APISpark) welcome page.
 

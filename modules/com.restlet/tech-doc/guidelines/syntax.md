@@ -195,6 +195,11 @@ modifié. Il a été popularisé dans les années 1960 grâce à la vente de feu
 Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son
 inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
 
+### Custom position
+
+<!-- TODO center -->
+Code for images that need to be centered (rather than left-aligned)
+
 Others
 ======
 
