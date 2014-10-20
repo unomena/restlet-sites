@@ -1,0 +1,1 @@
+APISpark allwos you to serve and store files based on existing [AWS S3](http://aws.amazon.com/fr/s3/) buckets through a custom web API using APISpark and its AWS S3 file store wrapper.

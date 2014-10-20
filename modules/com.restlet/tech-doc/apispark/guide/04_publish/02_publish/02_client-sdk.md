@@ -1,4 +1,4 @@
-APISpark provides your API with client SDKs (Software Development Kit) which you can find in the **Downloads** tab.
+APISpark can generate custom client SDKs (Software Development Kit) for different environments such as Java, Android, GWT and JavaScript (AJAX or Node.js). You can find them in the **Downloads** tab.
 
 1. Select the appropriate API.
 2. Click on the **Downloads** tab.

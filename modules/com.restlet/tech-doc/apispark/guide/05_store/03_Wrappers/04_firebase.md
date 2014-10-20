@@ -1,0 +1,1 @@
+APISpark allows you to create web APIs that give access to existing data stored in a [Firebase](https://www.firebase.com/) backend. Firebase is a popular Backend as a Service (BaaS) provider that powers real time HTML 5 applications.
