@@ -85,7 +85,7 @@ With paragraphs and images (use tabulation).
 
 3. third
 
-## Caractères spéciaux
+## Special characters
 
 Inside some block, you need to escape specials characters with a backslash **'\\'**:
 - Symboles : \\ \` \*  \_
@@ -98,7 +98,7 @@ Postproduction
 ===========
 
 <!-- .note -->
-> ma note
+> my note
 
 Links
 =====
