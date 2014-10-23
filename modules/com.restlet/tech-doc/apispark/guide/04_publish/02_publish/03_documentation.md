@@ -57,10 +57,10 @@ You can import a web API’s contract to APISpark using its Swagger definition b
 	![Import definition](images/10.jpg "Import definition")
 
 
->**Note:** If you import several definitions you may have conflicts, multiple resources on the same path or multiple representations with the same name. The import wizard will display a message in an orange panel and you will be free to solve the conflicts by yourself.
+ >**Note:** If you import several definitions you may have conflicts, multiple resources on the same path or multiple representations with the same name. The import wizard will display a message in an orange panel and you will be free to solve the conflicts by yourself.
 
 ![Import definition](images/11.jpg "Import definition")
 
->**Note:** If you close the panel, you can still find the traces in the Messages tab, in the Traces section of the left pane.
+ >**Note:** If you close the panel, you can still find the traces in the Messages tab, in the Traces section of the left pane.
 
 ![Import definition](images/12.jpg "Import definition")

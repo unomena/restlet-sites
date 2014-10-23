@@ -27,9 +27,9 @@ Your **Account** page displays information on three different tabs:
 
   ![My account tab](images/05.jpg "My account tab")
 
-- The **Information** section gives you information about your profile and the social network accounts you use to connect to APISpark;  
-- The **Tokens** section gives you information about the token linked to your account. A token is created as you create your APISpark account. This token is your APISpark account identifier. You will not need this token to sign in to APISpark as you will enter your social network username and password.  
-- The **Access Log** section displays the last access logs to your account.
+ * The **Information** section gives you information about your profile and the social network accounts you use to connect to APISpark;  
+ * The **Tokens** section gives you information about the token linked to your account. A token is created as you create your APISpark account. This token is your APISpark account identifier. You will not need this token to sign in to APISpark as you will enter your social network username and password.  
+ * The **Access Log** section displays the last access logs to your account.
 
 ##My plan
 

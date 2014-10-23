@@ -2,10 +2,10 @@
 1. Open your APISpark **Dashboard** and click on the **+ Web API** button.
 ![+web API](images/05.jpg "+web API")
 2. In the **Create a Web API** window:
- - Select **Full Stack** in the **Type** drop-down menu.
- - Enter the **Name** of your API.
- - Your domain name is automatically suggested in the **Domain** field according to the name you entered. If the domain address is not available, a red cross displays on the right of the domain address. You need to find another domain address. If the domain name is available, a green tick displays on the right of the domain address.
- - Enter a **Description** of your API.
+ * Select **Full Stack** in the **Type** drop-down menu.
+ * Enter the **Name** of your API.
+ * Your domain name is automatically suggested in the **Domain** field according to the name you entered. If the domain address is not available, a red cross displays on the right of the domain address. You need to find another domain address. If the domain name is available, a green tick displays on the right of the domain address.
+ * Enter a **Description** of your API.
 ![Create a web API](images/06.jpg "Create a web API")
 3. Click on the Create button. A message informs you that your API has just been created.
 #Import an Existing Data Store
@@ -17,12 +17,12 @@ You can expose existing data by creating a Data Store and exporting a custom API
 ![export custom API](images/07.jpg "Export custom API")
 3. The **Create an API** window displays:
   ![Create a web API](images/08.jpg "Create a web API")
-  - Select **Full Stack** in the **Type** drop-down menu.
-  - Enter the name of your API in the **Name** field.
-  - Your domain name is automatically suggested in the **Domain** field according to the name you entered. If the domain address is not available, a red cross displays on the right of the domain address. You need to find another domain address. If the domain name is available, a green tick displays on the right of the domain address.
-  - Enter a description of your API in the **Description** field.
+  * Select **Full Stack** in the **Type** drop-down menu.
+  * Enter the name of your API in the **Name** field.
+  * Your domain name is automatically suggested in the **Domain** field according to the name you entered. If the domain address is not available, a red cross displays on the right of the domain address. You need to find another domain address. If the domain name is available, a green tick displays on the right of the domain address.
+  * Enter a description of your API in the **Description** field.
 
-  > **Note:** You are creating a new Web API and importing your Entity store with its resources (deselect the Add resources automatically checkbox if you do not want to add the entity store resources).
+  	> **Note:** You are creating a new Web API and importing your Entity store with its resources (deselect the Add resources automatically checkbox if you do not want to add the entity store resources).
 
 4. Click on the **Create** button. A message informs you that your API has just been created.
 ##via the Import Ressources feature

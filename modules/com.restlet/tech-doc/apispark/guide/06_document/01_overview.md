@@ -10,9 +10,9 @@ An APISpark Descriptor can be automatically translated to Swagger or RAML format
 APISpark Descriptors feature saves substantial time.   
 Here are some of the benefits of using APISpark Descriptors:  
 
-- Your documentation is automatically generated.  
-- You are provided with client SDKs and server skeletons which avoids you repetitive and non qualitative work that often leads to bugs.  
-- You are also provided with analytics, firewall and user management features which are included  
+* Your documentation is automatically generated.  
+* You are provided with client SDKs and server skeletons which avoids you repetitive and non qualitative work that often leads to bugs.  
+* You are also provided with analytics, firewall and user management features which are included  
 
 
 #Operational description

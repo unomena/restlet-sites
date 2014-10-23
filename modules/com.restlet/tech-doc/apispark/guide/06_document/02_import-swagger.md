@@ -6,15 +6,15 @@ APISpark dynamically generates the Swagger description of web APIs and provides 
 
 #Get the Swagger definition of your API
 
-Select the web API you want to get the Swagger definition of.
+1. Select the web API you want to get the Swagger definition of.
 
-Open the **Settings** tab and click on the **Information** section, then on the **API commons** tab in the center pane.
+2. Open the **Settings** tab and click on the **Information** section, then on the **API commons** tab in the center pane.
 
-![API Commons](images/06.jpg "API Commons")
+	![API Commons](images/06.jpg "API Commons")
 
-The Swagger definition of your API is hosted on the address specified by the  **Swagger URL** field.
+	The Swagger definition of your API is hosted on the address specified by the  **Swagger URL** field.
 
-![API Commons](images/07.jpg "API Commons")
+	![API Commons](images/07.jpg "API Commons")
 
 #Check out its Swagger UI
 
@@ -25,22 +25,23 @@ On the same tab as previously, you can either download a local version of Swagge
 #Import existing Swagger definitions
 
 You can import a web API’s contract to APISpark using its Swagger definition just by providing the URL on which it is available to APISpark.
-From an existing API page, click on the actions button on the top right to open the drop-down menu, then select the **Import definition** action.
 
-![API Commons](images/09.jpg "API Commons")
+1. From an existing API page, click on the actions button on the top right to open the drop-down menu, then select the **Import definition** action.
 
-You will have access to a form which you can fill in to import the representations and resources of a Swagger definition into your API.
+	![API Commons](images/09.jpg "API Commons")
 
-![API Commons](images/10.jpg "API Commons")
+2. You will have access to a form which you can fill in to import the representations and resources of a Swagger definition into your API.
 
-After you click on the **Import** button, the representations and resources of the Swagger definition you provided the link to will be imported in your **Overview** tab.
+	![API Commons](images/10.jpg "API Commons")
 
-![API Commons](images/11.jpg "API Commons")
+	After you click on the **Import** button, the representations and resources of the Swagger definition you provided the link to will be imported in your **Overview** tab.
 
-If you import several definitions you may have conflicts, multiple resources on the same path or multiple representations with the same name. The import wizard will display a message in an orange panel and you will be free to solve the conflicts by yourself. 
+	![API Commons](images/11.jpg "API Commons")
 
-![API Commons](images/12.jpg "API Commons")
+	If you import several definitions you may have conflicts, multiple resources on the same path or multiple representations with the same name. The import wizard will display a message in an orange panel and you will be free to solve the conflicts by yourself. 
 
-If you close the panel, you can still find the traces in the Messages section, in the Traces tab in the left pane.
+	![API Commons](images/12.jpg "API Commons")
 
-![API Commons](images/13.jpg "API Commons")
+	If you close the panel, you can still find the traces in the **Messages** section, in the **Traces** tab in the left pane.
+
+	![API Commons](images/13.jpg "API Commons")

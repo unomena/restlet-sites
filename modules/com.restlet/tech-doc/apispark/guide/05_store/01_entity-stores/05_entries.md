@@ -8,4 +8,4 @@ You can add entries manually in your Entities.
 
 4. Enter the data in the Add an entity window.
 
-> **Note:** You need to redeploy your Entity Store to update your Browser.
+ > **Note:** You need to redeploy your Entity Store to update your Browser.

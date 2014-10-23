@@ -3,10 +3,9 @@ As a member of the API core team (as an API team provider), you are given API cr
 #Find credentials to invoke an API
 1. From your **Dashboard**, open the appropriate API.
 2. In the **Endpoints** section of the **Overview** tab, select the appropriate endpoint. The credentials display in the right part of the screen.
-> **Note:** To invoke an API, you will need to copy the **Endpoint URI**, **Login** and **Password**.
-> 
+	> **Note:** To invoke an API, you will need to copy the **Endpoint URI**, **Login** and **Password**.
 
-![credentials](images/02.jpg "credentials")
+	![credentials](images/02.jpg "credentials")
 
 #Invoke a Web API with POSTMAN
 Using a Web API does not impose any particular programming language. It can even be done from a web browser. However, to test your API we recommend the use of tools such as the Chrome extension POSTMAN and DHC that provide a graphical user interface to perform HTTP calls.

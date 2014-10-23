@@ -1,0 +1,1 @@
+Restlet Studio has a special integration with Google Chrome.
