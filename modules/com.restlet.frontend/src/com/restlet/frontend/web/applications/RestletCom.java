@@ -34,6 +34,7 @@ import org.restlet.ext.atom.Feed;
 import org.restlet.representation.Representation;
 import org.restlet.resource.ClientResource;
 import org.restlet.resource.Directory;
+import org.restlet.routing.Extractor;
 import org.restlet.routing.Filter;
 import org.restlet.routing.Redirector;
 import org.restlet.routing.Router;
@@ -769,6 +770,15 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
         redirect(router, "/downloads/snapshot", "/download/unstable");
         redirect(router, "/download", "/download/");
         redirect(router, "/download/", "/download/current");
+        
+        // Redirections for the conf cards
+        Redirector apisparkRedirector = new Redirector(getContext(), "http://apispark.com");
+        router.attach("/apispark", apisparkRedirector);
+        
+	    /*Redirector studioRedirector = new Redirector(getContext(), "???");
+	    router.attach("/studio", studioRedirector);*/
+        
+        redirect(router, "/framework", "/discover/features");
 
         // Maintain some old links
         redirect(router, "/a", "/");
