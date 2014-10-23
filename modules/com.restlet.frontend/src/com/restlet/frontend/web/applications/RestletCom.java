@@ -775,8 +775,8 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
         Redirector apisparkRedirector = new Redirector(getContext(), "http://apispark.com");
         router.attach("/apispark", apisparkRedirector);
         
-	    /*Redirector studioRedirector = new Redirector(getContext(), "???");
-	    router.attach("/studio", studioRedirector);*/
+	    Redirector studioRedirector = new Redirector(getContext(), "http://studio.restlet.com");
+	    router.attach("/studio", studioRedirector);
         
         redirect(router, "/framework", "/discover/features");
 
@@ -953,3 +953,4 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
         return route;
     }
 }
+
