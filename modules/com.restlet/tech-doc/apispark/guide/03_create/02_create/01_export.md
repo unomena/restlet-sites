@@ -5,9 +5,9 @@ APISpark allows you to create two types of Data Stores: Entity Stores (data) and
 In this example, we create an Entity Store.
 
 1. Open your APISpark **Dashboard** and click on the **+ Entity Store** button.
-![+Entity Store](images/01.jpg "+Entity Store")
+	![+Entity Store](images/01.jpg "+Entity Store")
 2. In the **Create an Entity Store** window, select the appropriate Entity Store type (here **Full Stack**).
-![Create an Entity Store](images/02.jpg "Create an Entity Store")
+	![Create an Entity Store](images/02.jpg "Create an Entity Store")
 3. Enter a **Name** and a **Description** and click on the **Create** button.
 4. Click on the **+ Entity** button and give it a name (here “Employee”).
 5. To add properties manually, click on the **Add a Property** link and add as many properties as needed. In this window you can add a data type, cardinality and default value.
