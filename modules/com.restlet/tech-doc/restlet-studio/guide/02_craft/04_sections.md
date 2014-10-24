@@ -1,1 +1,1 @@
-In Restlet Studio, sections can be defined to group resources and representations, very much like packages for Java classes.
+In Restlet Studio, sections can be defined to group resources and representations, very much like packages for Java classes. Sections will allow you to organize the different items of your API.
