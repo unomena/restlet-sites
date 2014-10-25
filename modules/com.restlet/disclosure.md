@@ -1,4 +1,4 @@
-# Responsible Disclosure Policy
+# Responsible Disclosure Policy v0.2 (draft)
 
 Restlet Responsible Disclosure Policy 
 
@@ -10,12 +10,12 @@ We require that all researchers:
 * Make every effort to avoid privacy violations, degradation of user experience, disruption to production systems, and destruction of data during security testing;
 * Perform research only within the scope set out below; 
 * Use the identified communication channels to report vulnerability information to us; and
-* Keep information about any vulnerabilities you’ve discovered confidential between yourself and Restlet until we’ve had 90 days to resolve the issue.
+* Keep information about any vulnerabilities you’ve discovered confidential between yourself and Restlet until we’ve had at least 90 days to resolve the issue.
 
 If you follow these guidelines when reporting an issue to us, we commit to:
 * Not pursue or support any legal action related to your research;
-* Work with you to understand and resolve the issue quickly (including an initial confirmation of your report within 72 hours of submission); 
-* Recognize your contribution on our Security Researcher Hall of Fame, if you are the first to report the issue and we make a code or configuration change based on the issue.
+* Work with you to understand and resolve the issue quickly (including an initial confirmation of your report within 72 hours of submission);
+* Recognize your contribution on our Security Researcher Hall of Fame and consider a financial reward, if you are the first to report the issue and we make a code or configuration change based on the issue.
 
 **Scope**  
 * https://apispark.com/
