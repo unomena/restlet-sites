@@ -20,7 +20,7 @@ If you follow these guidelines when reporting an issue to us, we commit to:
 **Scope**  
 * https://apispark.com/
 * https://apispark.net/
-* https://restlet.com/
+* http://restlet.com/
 * APISpark, Restlet Framework
 
 **Out of scope**  
