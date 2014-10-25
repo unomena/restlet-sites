@@ -19,10 +19,14 @@ If you follow these guidelines when reporting an issue to us, we commit to:
 
 ## Scope
 
+Web sites:
 * https://apispark.com/
 * https://apispark.net/
-* http://restlet.com/
-* APISpark, Restlet Framework
+* http://restlet.com/ 
+
+Products:
+* Restlet APISpark
+* Restlet Framework
 
 ## Out of scope  
 Any services hosted by 3rd party providers and services are excluded from scope.
