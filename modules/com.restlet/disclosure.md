@@ -1,6 +1,4 @@
-# Responsible Disclosure Policy v0.2 (draft)
-
-Restlet Responsible Disclosure Policy 
+# Restlet Responsible Disclosure Policy v0.2 (draft)
 
 We take the security of our systems seriously, and we value the security community. The responsible disclosure of security vulnerabilities helps us ensure the security and privacy of our users.
 
