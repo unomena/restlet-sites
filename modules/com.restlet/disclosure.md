@@ -1,8 +1,10 @@
-# Restlet Responsible Disclosure Policy v0.2 (draft)
+# Restlet Responsible Disclosure Policy
+
+## Version 0.2 (draft)
 
 We take the security of our systems seriously, and we value the security community. The responsible disclosure of security vulnerabilities helps us ensure the security and privacy of our users.
 
-**Guidelines**  
+## Guidelines
 
 We require that all researchers:
 * Make every effort to avoid privacy violations, degradation of user experience, disruption to production systems, and destruction of data during security testing;
@@ -15,13 +17,14 @@ If you follow these guidelines when reporting an issue to us, we commit to:
 * Work with you to understand and resolve the issue quickly (including an initial confirmation of your report within 72 hours of submission);
 * Recognize your contribution on our Security Researcher Hall of Fame and consider a financial reward, if you are the first to report the issue and we make a code or configuration change based on the issue.
 
-**Scope**  
+## Scope
+
 * https://apispark.com/
 * https://apispark.net/
 * http://restlet.com/
 * APISpark, Restlet Framework
 
-**Out of scope**  
+## Out of scope  
 Any services hosted by 3rd party providers and services are excluded from scope.
 
 In the interest of the safety of our users, staff, the Internet at large and you as a security researcher, the following test types are excluded from scope: 
@@ -35,7 +38,8 @@ Things we do not want to receive:
 * Personally identifiable information (PII) 
 * Credit card holder data
 
-**How to report a security vulnerability?**  
+## How to report a security vulnerability?  
+
 If you believe you’ve found a security vulnerability in one of our products or platforms please send it to us by emailing contact@restlet.com. Please include the following details with your report:
 
 * Description of the location and potential impact of the vulnerability;
