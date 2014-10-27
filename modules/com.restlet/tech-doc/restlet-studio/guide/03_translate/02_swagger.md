@@ -4,7 +4,7 @@ Restlet Studio dynamically generates the Swagger description of web APIs. You ca
 
 #View the Swagger definition of your API
 
-You can design your API without knowing Swagger syntax. But if you wish to see what your API looks like in Swagger format, Restlet Studio provides you with a **Swagger** tab. 
+You can design your API without knowing Swagger syntax. But if you wish to see what your API looks like in Swagger format, Restlet Studio provides you with a **Swagger** tab in Read-only mode. 
 
 1. Design your API in the **Web API** tab.
 2. Click on the **Swagger** tab. You can copy and paste its content or just visualize it.

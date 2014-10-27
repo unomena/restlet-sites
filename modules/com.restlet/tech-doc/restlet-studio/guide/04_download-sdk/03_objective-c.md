@@ -1,6 +1,6 @@
-You are provided with client SDKs (Software Development Kit) and server skeletons which avoids you repetitive and non qualitative work that often leads to bugs.  
+Restlet Studio provides you with client SDKs (Software Development Kit) and server skeletons which avoids you repetitive and non qualitative work that often leads to bugs.  
 
-Restlet Studio provides you with the Objective-C SDK for your web API. You can export your Objective-C SDK from the **Clients SDKs** menu.
+Restlet Studio allows you to get an Objective-C SDK for your web API.
 
 #Get the Objective-C SDK for your API 
 

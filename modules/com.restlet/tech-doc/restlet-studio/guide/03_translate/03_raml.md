@@ -1,4 +1,3 @@
-
 RAML (RESTful API Modeling Language) is a YAML-based, simple and succinct language that describes RESTful APIs. It is built on broadly-used standards such as YAML and JSON.
 
 Restlet Studio dynamically generates the RAML description of web APIs. You can  view your API RAML definition in the **RAML** tab and also export this definition.

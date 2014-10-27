@@ -1,6 +1,6 @@
-You are provided with client SDKs (Software Development Kit) and server skeletons which avoids you repetitive and non qualitative work that often leads to bugs.  
+Restlet Studio provides you with client SDKs (Software Development Kit) and server skeletons which avoids you repetitive and non qualitative work that often leads to bugs.  
 
-Restlet Studio provides you with the Android SDK for your web API. You can export your Android SDK from the **Clients SDKs** menu.
+Restlet Studio allows you to get an Android SDK for your web API.
 
 #Get the Android SDK for your API 
 

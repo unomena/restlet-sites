@@ -2,7 +2,7 @@ Restlet Studio provides you with the server code for your API. Your server skele
 
 Restlet Framework is a lightweight, comprehensive, open source RESTful web API framework for the Java platform.
 
-To download your Java server skeleton:
+#Download Restlet Java server skeleton
 
 1. Click on the **Server skeletons** menu and select **Generate Java (Restlet)**.
 

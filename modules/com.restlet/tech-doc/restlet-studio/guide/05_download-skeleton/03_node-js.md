@@ -2,7 +2,7 @@ Restlet Studio provides you with the server code for your API. Your server skele
 
 Node.js is a platform built on Chrome's JavaScript runtime to easily build fast, scalable network applications.
 
-To download your Node.js server skeleton:
+#Download your Node.js server skeleton
 
 1. Click on the **Server skeletons** menu and select **Generate Node.js**.
 

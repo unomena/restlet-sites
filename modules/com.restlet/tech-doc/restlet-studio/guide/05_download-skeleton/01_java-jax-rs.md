@@ -2,7 +2,7 @@ Restlet Studio provides you with the server code for your API. Your server skele
 
 JAX-RS (Java API for RESTful Web Services) is a Java programing interface that allows you to create web services with a REST architecture.
 
-To download your Java server skeleton:
+#Download Java JAX-RS server skeleton
 
 1. Click on the **Server skeletons** menu and select **Generate Java (JAX-RS)**.
 

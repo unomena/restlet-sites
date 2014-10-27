@@ -1,9 +1,17 @@
-An API endpoint is the address or URI (Uniform Resource Identifier) where the service can be accessed by a client application. The same web service can have multiple endpoints, for example in order to make it available using different protocols.  
+An API Endpoint is the address or URI (Uniform Resource Identifier) where the service can be accessed by a client application. The same web service can have multiple Endpoints, for example in order to make it available using different protocols (HTTP or HTTPS).  
+
 Here is a URI example: `https://departmentapi.apispark.net/v2`  
-On Restlet Studio console, you can find the different endpoints of your API in the **Endpoints** section.
 
-In the **Endpoints** section, click on the appropriate Endpoint. The endpoint details display in the center panel.
+On Restlet Studio console, you can find the different Endpoints of your API in the **Endpoints** section.
 
-![Endpoints section](images/02.jpg "Endpoints section")
+#Add an endpoint
 
-To add new endpoints, click on the **Add** button of the **Endpoints** section.
+1. In the **Endpoints** section, click on the appropriate Endpoint. The Endpoint details display in the central panel.
+
+	![Endpoints section](images/02.jpg "Endpoints section")
+
+2. Click on the **Add** button of the **Endpoints** section.
+
+	![Add an Endpoint](images/07.jpg "Add an Endpoint")
+
+3. Fill in the **Add an endpoint** window and click on the **Add** button. The new Endpoint displays in the **Endpoints** section.
