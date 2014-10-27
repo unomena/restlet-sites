@@ -1,0 +1,342 @@
+toc:
+- dir: 01_get-started
+  id: get-started
+  items:
+  - file: 01_overview.md
+    id: overview
+    link_url: /01_get-started/01_overview.md
+    title: Overview
+    url: /get-started/overview
+  - file: 02_sign-in.md
+    id: sign-in
+    link_url: /01_get-started/02_sign-in.md
+    title: Sign-in to API Spark
+    url: /get-started/sign-in
+  - file: 03_discover-console.md
+    id: discover-console
+    link_url: /01_get-started/03_discover-console.md
+    title: Discover the console
+    url: /get-started/discover-console
+  - file: 04_interactive-tutorials.md
+    id: interactive-tutorials
+    link_url: /01_get-started/04_interactive-tutorials.md
+    title: Use interactive tutorials
+    url: /get-started/interactive-tutorials
+  - file: 05_subscribe.md
+    id: subscribe
+    link_url: /01_get-started/05_subscribe.md
+    title: Subscribe to a plan
+    url: /get-started/subscribe
+  long-title: Get started with APISpark
+  title: Get started
+- dir: 02_explore
+  id: explore
+  items:
+  - file: 01_overview.md
+    id: overview
+    link_url: /02_explore/01_overview.md
+    title: Overview
+    url: /explore/overview
+  - file: 02_cell-lifecycle.md
+    id: cell-lifecycle
+    link_url: /02_explore/02_cell-lifecycle.md
+    title: Cell Lifecycle
+    url: /explore/cell-lifecycle
+  - file: 03_cell-deployment.md
+    id: cell-deployment
+    link_url: /02_explore/03_cell-deployment.md
+    title: Cell Deployment
+    url: /explore/cell-deployment
+  - file: 04_versioning.md
+    id: versioning
+    link_url: /02_explore/04_versioning.md
+    title: Versioning
+    url: /explore/versioning
+  - file: 05_revisions.md
+    id: revisions
+    link_url: /02_explore/05_revisions.md
+    title: Revisions
+    url: /explore/revisions
+  - file: 06_team-work.md
+    id: team-work
+    link_url: /02_explore/06_team-work.md
+    title: Team work
+    url: /explore/team-work
+  long-title: Explore APISpark concepts and basics
+  title: Explore APISpark concepts
+- dir: 03_create
+  id: create
+  items:
+  - file: 01_overview.md
+    id: overview
+    link_url: /03_create/01_overview.md
+    title: Overview
+    url: /create/overview
+  - dir: 02_create
+    id: create
+    items:
+    - file: 01_export.md
+      id: export
+      link_url: /03_create/02_create/01_export.md
+      title: Export an API from a Data Store
+      url: /create/create/export
+    - file: 02_create.md
+      id: create
+      link_url: /03_create/02_create/02_create.md
+      title: Create a web API and import a Data Store
+      url: /create/create/create
+    title: Create a web API
+  - dir: 03_edit
+    id: edit
+    items:
+    - file: 01_general.md
+      id: general
+      link_url: /03_create/03_edit/01_general.md
+      title: General information
+      url: /create/edit/general
+    - file: 02_endpoints.md
+      id: endpoints
+      link_url: /03_create/03_edit/02_endpoints.md
+      title: Endpoints
+      url: /create/edit/endpoints
+    - file: 03_resources.md
+      id: resources
+      link_url: /03_create/03_edit/03_resources.md
+      title: Resources
+      url: /create/edit/resources
+    - file: 04_representations.md
+      id: representations
+      link_url: /03_create/03_edit/04_representations.md
+      title: Representations
+      url: /create/edit/representations
+    title: Edit a local web API
+  - dir: 04_test
+    id: test
+    items:
+    - file: 01_deploy.md
+      id: deploy
+      link_url: /03_create/04_test/01_deploy.md
+      title: Deploy
+      url: /create/test/deploy
+    - file: 02_invoke.md
+      id: invoke
+      link_url: /03_create/04_test/02_invoke.md
+      title: Invoke
+      url: /create/test/invoke
+    - file: 03_debug.md
+      id: debug
+      link_url: /03_create/04_test/03_debug.md
+      title: Debug
+      url: /create/test/debug
+    title: Test a web API
+  long-title: Create complete web APIs
+  title: Create web APIs
+- dir: 04_publish
+  id: publish
+  items:
+  - dir: 01_secure
+    id: secure
+    items:
+    - file: 01_user-groups.md
+      id: user-groups
+      link_url: /04_publish/01_secure/01_user-groups.md
+      title: User groups
+      url: /publish/secure/user-groups
+    - file: 02_private-access.md
+      id: private-access
+      link_url: /04_publish/01_secure/02_private-access.md
+      title: Private access
+      url: /publish/secure/private-access
+    - file: 03_public-access.md
+      id: public-access
+      link_url: /04_publish/01_secure/03_public-access.md
+      title: Public access
+      url: /publish/secure/public-access
+    - file: 04_rate-limitation.md
+      id: rate-limitation
+      link_url: /04_publish/01_secure/04_rate-limitation.md
+      title: Rate limitation
+      url: /publish/secure/rate-limitation
+    title: Secure a web API
+  - dir: 02_publish
+    id: publish
+    items:
+    - file: 01_invocation.md
+      id: invocation
+      link_url: /04_publish/02_publish/01_invocation.md
+      title: Invocation by users
+      url: /publish/publish/invocation
+    - file: 02_client-sdk.md
+      id: client-sdk
+      link_url: /04_publish/02_publish/02_client-sdk.md
+      title: Client SDKs
+      url: /publish/publish/client-sdk
+    - file: 03_documentation.md
+      id: documentation
+      link_url: /04_publish/02_publish/03_documentation.md
+      title: Documentation
+      url: /publish/publish/documentation
+    title: Publish a web API
+  - dir: 03_manage
+    id: manage
+    items:
+    - file: 01_analytics.md
+      id: analytics
+      link_url: /04_publish/03_manage/01_analytics.md
+      title: Analytics
+      url: /publish/manage/analytics
+    - file: 02_community-management.md
+      id: community-management
+      link_url: /04_publish/03_manage/02_community-management.md
+      title: Community management
+      url: /publish/manage/community-management
+    title: Manage a web API
+  long-title: Secure, publish and manage web APIs
+  title: Publish and consume
+- dir: 05_store
+  id: store
+  items:
+  - dir: 01_entity-stores
+    id: entity-stores
+    items:
+    - file: 01_overview.md
+      id: overview
+      link_url: /05_store/01_entity-stores/01_overview.md
+      title: Overview
+      url: /store/entity-stores/overview
+    - file: 02_create-entity.md
+      id: create-entity
+      link_url: /05_store/01_entity-stores/02_create-entity.md
+      long-title: Create an Entity Store
+      title: Create Entity Store
+      url: /store/entity-stores/create-entity
+    - file: 03_entities.md
+      id: entities
+      link_url: /05_store/01_entity-stores/03_entities.md
+      title: Add Entities
+      url: /store/entity-stores/entities
+    - file: 04_properties.md
+      id: properties
+      link_url: /05_store/01_entity-stores/04_properties.md
+      title: Add Properties
+      url: /store/entity-stores/properties
+    - file: 05_entries.md
+      id: entries
+      link_url: /05_store/01_entity-stores/05_entries.md
+      title: Add entries
+      url: /store/entity-stores/entries
+    - file: 06_relations.md
+      id: relations
+      link_url: /05_store/01_entity-stores/06_relations.md
+      title: Create relations
+      url: /store/entity-stores/relations
+    - file: 07_sql-schema.md
+      id: sql-schema
+      link_url: /05_store/01_entity-stores/07_sql-schema.md
+      long-title: Import a SQL Schema
+      title: Import SQL Schema
+      url: /store/entity-stores/sql-schema
+    title: Entity Stores
+  - dir: 02_file-stores
+    id: file-stores
+    items:
+    - file: 01_overview.md
+      id: overview
+      link_url: /05_store/02_file-stores/01_overview.md
+      title: Overview
+      url: /store/file-stores/overview
+    - file: 02_create-file.md
+      id: create-file
+      link_url: /05_store/02_file-stores/02_create-file.md
+      title: Create a file
+      url: /store/file-stores/create-file
+    - file: 03_add-folders.md
+      id: add-folders
+      link_url: /05_store/02_file-stores/03_add-folders.md
+      title: Add folders
+      url: /store/file-stores/add-folders
+    - file: 04_upload-files.md
+      id: upload-files
+      link_url: /05_store/02_file-stores/04_upload-files.md
+      title: Upload files
+      url: /store/file-stores/upload-files
+    title: File Stores
+  - dir: 03_wrappers
+    id: wrappers
+    items:
+    - file: 01_gspreadsheet.md
+      id: gspreadsheet
+      link_url: /05_store/03_wrappers/01_gspreadsheet.md
+      title: Google Spreadsheet
+      url: /store/wrappers/gspreadsheet
+    - file: 02_sql-database.md
+      id: sql-database
+      link_url: /05_store/03_wrappers/02_sql-database.md
+      title: SQL database
+      url: /store/wrappers/sql-database
+    - file: 03_parse.md
+      id: parse
+      link_url: /05_store/03_wrappers/03_parse.md
+      title: Parse
+      url: /store/wrappers/parse
+    - file: 04_firebase.md
+      id: firebase
+      link_url: /05_store/03_wrappers/04_firebase.md
+      title: Firebase
+      url: /store/wrappers/firebase
+    - file: 05_amazon.md
+      id: amazon
+      link_url: /05_store/03_wrappers/05_amazon.md
+      long-title: Amazon SW3 wrapper
+      title: Amazon
+      url: /store/wrappers/amazon
+    long-title: Wrappers (externally stored data)
+    title: Wrappers
+  long-title: Store data for APIs in APISpark Data Stores
+  title: Store data
+- dir: 06_document
+  id: document
+  items:
+  - file: 01_overview.md
+    id: overview
+    link_url: /06_document/01_overview.md
+    title: Overview
+    url: /document/overview
+  - file: 02_import-swagger.md
+    id: import-swagger
+    link_url: /06_document/02_import-swagger.md
+    long-title: Import a Swagger definition
+    title: Import Swagger definition
+    url: /document/import-swagger
+  - file: 03_introspect-restlet-framework.md
+    id: introspect-restlet-framework
+    link_url: /06_document/03_introspect-restlet-framework.md
+    long-title: Introspect a Restlet Framework code
+    title: Introspect Restlet Framework code
+    url: /document/introspect-restlet-framework
+  - file: 04_introspect-jaxrs.md
+    id: introspect-jaxrs
+    link_url: /06_document/04_introspect-jaxrs.md
+    long-title: Introspect a JAX-RS code
+    title: Introspect JAX-RS code
+    url: /document/introspect-jaxrs
+  - file: 05_edit-descriptor.md
+    id: edit-descriptor
+    link_url: /06_document/05_edit-descriptor.md
+    long-title: Edit a Descriptor
+    title: Edit Descriptor
+    url: /document/edit-descriptor
+  long-title: Document existing web APIs through APISpark Descriptors
+  title: Document web APIs
+- dir: 07_manage
+  id: manage
+  items:
+  - file: 01_connectors.md
+    id: connectors
+    link_url: /07_manage/01_connectors.md
+    long-title: Connectors
+    title: Connectors
+    url: /manage/connectors
+  long-title: Manage existing web APIs with APISpark Connectors
+  title: Manage web APIs
+

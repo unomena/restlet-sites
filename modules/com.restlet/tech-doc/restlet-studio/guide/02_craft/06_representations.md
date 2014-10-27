@@ -1,4 +1,4 @@
-Essentially, an API is a collection of URIs, HTTP calls to those URIs and some representations of resources. Restlet Studio offers 3 different representation types: XML, JSON or YAML.
+Essentially, an API is a collection of URIs, HTTP calls to those URIs and some representations of resources. Restlet Studio offers several representation variants such as XML, JSON or YAML.
   
 On Restlet Studio, you can find the representations of your API endpoint resource in the **Representations** section.
 
@@ -29,3 +29,14 @@ On Restlet Studio, you can find the representations of your API endpoint resourc
 	![Properties](images/05.jpg "Properties")
 
 2. Select the appropriate property in the central panel and change the elements you need to modify.
+
+#Add a variant
+
+1. Click on the appropriate Representation in the **Representations** section. 
+2. Click on the + button on the right of the Representation.
+
+	![+](images/16.jpg "+")
+
+3. In the **Add a variant** window, select the variant type you want to add.
+
+	![Add a variant](images/17.jpg "Add a variant")

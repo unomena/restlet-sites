@@ -5,7 +5,7 @@ On Restlet Studio console, you can find the Resources of your API endpoint in th
 ![Resources section](images/03.jpg "Resources section")
   
 Here is a Resource example: `https://employeedirectory.apispark.net/v2/employees`  
-For each Resource, the possible request methods (POST, GET, PUT, PATCH and DELETE) are displayed underneath.
+For each Resource, the possible request methods (POST, GET, PUT, PATCH, DELETE, etc.) are displayed underneath.
 
 #Add a Resource
 
