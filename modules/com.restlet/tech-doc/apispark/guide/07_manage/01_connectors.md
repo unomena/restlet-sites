@@ -3,8 +3,8 @@
 
 An API connector is composed of:
 
- * an API configuration controlled by APISpark Console
- * a Remote Agent running that retrieves the configuration from APISpark, manages the actual/raw API and sends back usage data to APISpark
+ *   an API configuration controlled by APISpark Console
+ *   a Remote Agent running that retrieves the configuration from APISpark, manages the actual/raw API and sends back usage data to APISpark
 the actual “raw” API that is hosted by our customer and provides the actual service
 
 The first section is actually giving read-only information (including the “Usage mode” and “IP address”) about the Remote Agent

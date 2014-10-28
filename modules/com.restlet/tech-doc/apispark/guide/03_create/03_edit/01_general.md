@@ -1,4 +1,5 @@
 #Author & license
+
 In APISpark, you can find information about author and license.
 
 In the **Settings tab**, select **Information** in the **General** section. Click on the **Overview** tab.
@@ -6,6 +7,7 @@ In the **Settings tab**, select **Information** in the **General** section. Clic
 ![Endpoints section](images/01.jpg "Endpoints section")
 
 #Sharing an API design - API Commons
+
 Once your web API has been designed, implemented and deployed, you can share it in the commons and participate in the effort for better API patterns. By sharing your design copyright free, you will enable other API providers to reuse it and set standards for APIs, facilitating the work of API users, plus you will take a stance as the provider of the API. The [API Commons](Sharing an API design - API Commons) initiative is just aimed at providing a service for this purpose.
 
 ![Endpoints section](images/02.jpg "Endpoints section")

@@ -2,6 +2,7 @@ A revision stands for a minor version (e.g. version v1; revision v1.1). Revision
 For each revision deployed, the following information is available: creation date (automatically generated - it cannot be updated), author, version (cell to which the revision is attached).
 
 To restore a revision:  
+
 1. Open the appropriate API.  
 2. Click on the **Settings** tab.  
 3. In the **General** section, select **Revision History**.  

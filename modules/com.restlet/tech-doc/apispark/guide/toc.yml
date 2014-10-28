@@ -236,6 +236,12 @@ toc:
       long-title: Import a SQL Schema
       title: Import SQL Schema
       url: /store/entity-stores/sql-schema
+    - file: 08_query-parameters.md
+      id: query-parameters
+      link_url: /05_store/01_entity-stores/08_query-parameters.md
+      long-title: Query Entity Stores through web APIs
+      title: Query Entity Stores
+      url: /store/entity-stores/query-parameters
     title: Entity Stores
   - dir: 02_file-stores
     id: file-stores

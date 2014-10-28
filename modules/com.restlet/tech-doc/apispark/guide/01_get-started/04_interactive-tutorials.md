@@ -17,5 +17,4 @@ APISpark provides you interactive tutorials to guide you through your discovery 
 
 4. Click on the white cross on top right of your screen to close the interactive tutorials panel.
 
-
 	![close interactive tutorials panel](images/21.jpg "close interactive tutorials panel")

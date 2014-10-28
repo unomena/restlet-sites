@@ -6,4 +6,4 @@ APISpark can generate custom client SDKs (Software Development Kit) for differen
 4. Select the **Type** you need (Java, iOs, JavaScript, GWT or Android).
 5. Click on the **Download** button.
 
-![Download button](images/01.jpg "Download button")
+	![Download button](images/01.jpg "Download button")
