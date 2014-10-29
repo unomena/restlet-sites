@@ -1,8 +1,7 @@
-## Entity store deployment
+# Entity store deployment
 
+To deploy an entity store, simply click on the **Deploy** button. Messages will inform you of the progress and completion of the procedure.
 
-4. Click on the **Deploy** button to deploy your Entity Store. Wait until a message informs you that it has been deployed successfully.
+**Warning**: if the entity store is in draft mode and has only one version, all data will be erased if the store is deployed.
 
- > **Note:** If you add entities, you need to (re)deploy your Entity Store to display them in the **Browser** tab.
-
-> **Note:** You need to redeploy your Entity Store to update your Browser.
+> **Note:** If you add entities, you need to (re)deploy your Entity Store to display them in the **Browser** tab.

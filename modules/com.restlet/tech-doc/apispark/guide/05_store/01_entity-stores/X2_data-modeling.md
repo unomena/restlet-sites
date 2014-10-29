@@ -1,9 +1,23 @@
 
 # Introduction
 
-The Entity Store is APISpark's structured data store. Like all other cell types, Entity Stores are created and opened via the Dashboard.  
+The Entity Store is APISpark's structured data store.  
 
 An Entity Store provides the necessary tools to design a data model from the ground up. We'll look at the Entity Store's data modelling features in the following sections.
+
+
+# Create an Entity Store
+
+Like all other cell types, Entity Stores are created and opened via the Dashboard. To create an Entity Store, go to the **Dashboard** and click on the **+ Entity Store** button.
+
+  ![+Entity Stores](images/01.jpg "+Entity Stores")
+
+In the **Create an Entity Store** window, select **Full Stack** in order to create an Entity Store hosted by APISpark.
+
+  ![Full Stack](images/02.jpg "Full Stack")
+
+Enter a **Name** (required) and a **Description** (optional) and click on the **Create** button.
+
 
 
 
@@ -94,3 +108,5 @@ The minimum cardinality and maximum cardinalities of the property.
 These values are used to determine if a property should be store as a list.
 
 Furthermore, the cardinality constraints are enforced on real data at runtime.
+
+By default, both min and max occurs are set to 1.
