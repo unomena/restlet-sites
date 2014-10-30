@@ -1,1 +1,0 @@
-APISpark allows you to create web APIs that give access to existing data stored in an SQL data source.

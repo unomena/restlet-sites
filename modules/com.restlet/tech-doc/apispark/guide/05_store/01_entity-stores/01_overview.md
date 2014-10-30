@@ -1,13 +1,19 @@
-APISpark proposes 2 types of Data Stores: 
+# Introduction to the APISpark Data Stores
 
-* local Data Stores for which data is hosted / backuped and operated by APISpark teams and 
-* wrapped stores for which data are hosted externally (SQL Wrapper, Google spread Sheet Wrapper)...
+APISpark features two types of Data Stores: the Entity Store and the File Store.
 
-We distinguish 2 types of local Data Stores: 
+The Entity Store is used to store structured data while the File Store provides storage for static files.
 
-* Entity Stores (structured data)
-* File Stores (static files)
+Both of these Data Store types have a set different implementations to chose from. The main distinction is that there are *local* implementations that are hosted on the APISpark platform, and *wrapper* implementations that use or wrap third party storage components such as Google Spreadsheets.
 
+## Entity Stores
 
-An Entity Store allows you to store structured data (equivalent to a database). You start by creating Entities and you can express relations between Entities.
+All the Entity Stores share common concepts and a common user interface (with a few minor differences).
 
+An Entity Store is made up of *entities*, which are types of objects, and their associated *properties*, which store values.
+
+## File Stores
+
+All the APISpark File Stores also share common concepts and a common user interface (with a few minor differences).
+
+A file store is made up of *folders*, similar to those you would find in a filesystem.

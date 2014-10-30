@@ -1,1 +1,0 @@
-APISpark allows you to create web APIs that give access to existing data stored in a [Parse](https://parse.com/) backend. Parse is a popular Backend as a Service (BaaS) provider that powers connected mobile applications.

@@ -1,4 +1,3 @@
-
 # Introduction
 
 The Entity Store is APISpark's structured data store.  
@@ -10,11 +9,11 @@ An Entity Store provides the necessary tools to design a data model from the gro
 
 Like all other cell types, Entity Stores are created and opened via the Dashboard. To create an Entity Store, go to the **Dashboard** and click on the **+ Entity Store** button.
 
-  ![+Entity Stores](images/01.jpg "+Entity Stores")
+	![+Entity Stores](images/01.jpg "+Entity Stores")
 
 In the **Create an Entity Store** window, select **Full Stack** in order to create an Entity Store hosted by APISpark.
 
-  ![Full Stack](images/02.jpg "Full Stack")
+	![Full Stack](images/02.jpg "Full Stack")
 
 Enter a **Name** (required) and a **Description** (optional) and click on the **Create** button.
 
@@ -32,7 +31,7 @@ An Entity Store is composed of entities, which represent types of objects and th
 1. In the **Entities** section, click on the **Add** button.
 2. Give the new entity a name (required) and a description (optional).
 
-  ![Add Entity](images/03.jpg "Add Entity")
+	![Add Entity](images/03.jpg "Add Entity")
 
 ## Entity configuration
 
