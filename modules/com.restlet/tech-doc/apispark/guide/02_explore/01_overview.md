@@ -2,10 +2,10 @@ APISpark relies on the concept of cell. A cell is a basic software package that 
 
   ![Cell concept](images/01.jpg "Cell concept")
 
- * DataStores  
+ * Data Stores  
 Two types of **Datastores** can be created. Entity Stores for structured data (equivalent to a database) and File Stores for static files (text documents, images, videos or style sheets).
  
- * WebAPIs  
+ * Web APIs  
 A **Full Stack Web API** is an API (available web business once deployed via HTTP and exposing data).
 
   ![Cell concept](images/02.jpg "Cell concept")

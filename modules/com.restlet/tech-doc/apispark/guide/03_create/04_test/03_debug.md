@@ -1,1 +1,0 @@
-In the **Messages** tab, you can get details about APISpark web API edition processes (upload, deployment, generation, etc.). You can also get details about the various invocations of your web APIs in the **Latest API calls** section.
