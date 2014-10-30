@@ -5,12 +5,14 @@ toc:
   - file: 01_overview.md
     id: overview
     link_url: /01_get-started/01_overview.md
+    long-title: Overview
     title: Overview
     url: /get-started/overview
   - file: 02_sign-in.md
     id: sign-in
     link_url: /01_get-started/02_sign-in.md
-    title: Sign-in to API Spark
+    long-title: Sign-in to APISpark
+    title: Sign-in to APISpark
     url: /get-started/sign-in
   - file: 03_discover-console.md
     id: discover-console
@@ -20,11 +22,13 @@ toc:
   - file: 04_interactive-tutorials.md
     id: interactive-tutorials
     link_url: /01_get-started/04_interactive-tutorials.md
+    long-title: Use interactive tutorials
     title: Use interactive tutorials
     url: /get-started/interactive-tutorials
   - file: 05_subscribe.md
     id: subscribe
     link_url: /01_get-started/05_subscribe.md
+    long-title: Subscribe to a plan
     title: Subscribe to a plan
     url: /get-started/subscribe
   long-title: Get started with APISpark
@@ -72,63 +76,35 @@ toc:
     link_url: /03_create/01_overview.md
     title: Overview
     url: /create/overview
-  - dir: 02_create
-    id: create
-    items:
-    - file: 01_export.md
-      id: export
-      link_url: /03_create/02_create/01_export.md
-      title: Export an API from a Data Store
-      url: /create/create/export
-    - file: 02_create.md
-      id: create
-      link_url: /03_create/02_create/02_create.md
-      title: Create a web API and import a Data Store
-      url: /create/create/create
-    title: Create a web API
-  - dir: 03_edit
+  - dir: 02_edit
     id: edit
     items:
     - file: 01_general.md
       id: general
-      link_url: /03_create/03_edit/01_general.md
+      link_url: /03_create/02_edit/01_general.md
       title: General information
       url: /create/edit/general
     - file: 02_endpoints.md
       id: endpoints
-      link_url: /03_create/03_edit/02_endpoints.md
+      link_url: /03_create/02_edit/02_endpoints.md
       title: Endpoints
       url: /create/edit/endpoints
     - file: 03_resources.md
       id: resources
-      link_url: /03_create/03_edit/03_resources.md
+      link_url: /03_create/02_edit/03_resources.md
       title: Resources
       url: /create/edit/resources
     - file: 04_representations.md
       id: representations
-      link_url: /03_create/03_edit/04_representations.md
+      link_url: /03_create/02_edit/04_representations.md
       title: Representations
       url: /create/edit/representations
     title: Edit a local web API
-  - dir: 04_test
+  - file: 03_test.md
     id: test
-    items:
-    - file: 01_deploy.md
-      id: deploy
-      link_url: /03_create/04_test/01_deploy.md
-      title: Deploy
-      url: /create/test/deploy
-    - file: 02_invoke.md
-      id: invoke
-      link_url: /03_create/04_test/02_invoke.md
-      title: Invoke
-      url: /create/test/invoke
-    - file: 03_debug.md
-      id: debug
-      link_url: /03_create/04_test/03_debug.md
-      title: Debug
-      url: /create/test/debug
+    link_url: /03_create/03_test.md
     title: Test a web API
+    url: /create/test
   long-title: Create complete web APIs
   title: Create web APIs
 - dir: 04_publish
@@ -142,19 +118,16 @@ toc:
       link_url: /04_publish/01_secure/01_user-groups.md
       title: User groups
       url: /publish/secure/user-groups
-    - file: 02_private-access.md
-      id: private-access
-      link_url: /04_publish/01_secure/02_private-access.md
-      title: Private access
-      url: /publish/secure/private-access
-    - file: 03_public-access.md
-      id: public-access
-      link_url: /04_publish/01_secure/03_public-access.md
-      title: Public access
-      url: /publish/secure/public-access
-    - file: 04_rate-limitation.md
+    - file: 02_public-and-private-apis.md
+      id: public-and-private-apis
+      link_url: /04_publish/01_secure/02_public-and-private-apis.md
+      long-title: Public and private APIs
+      title: Public and private APIs
+      url: /publish/secure/public-and-private-apis
+    - file: 03_rate-limitation.md
       id: rate-limitation
-      link_url: /04_publish/01_secure/04_rate-limitation.md
+      link_url: /04_publish/01_secure/03_rate-limitation.md
+      long-title: Rate limitation
       title: Rate limitation
       url: /publish/secure/rate-limitation
     title: Secure a web API
