@@ -95,12 +95,6 @@ Currently, association and aggregation relations have the same semantics: they r
 
 The particularity of the “composition” relation is that if entity A is “composed” by entity B, then deleting a data entry of type A will result in the deletion of the data entries of type B that compose it.
 
-
-### Default value (optional)
-
-A property’s default value is assigned if a null value is provided upon entity creation.
-
-
 ### Min occurs and Max occurs
 
 The minimum cardinality and maximum cardinalities of the property.
@@ -110,3 +104,7 @@ These values are used to determine if a property should be store as a list.
 Furthermore, the cardinality constraints are enforced on real data at runtime.
 
 By default, both min and max occurs are set to 1.
+
+### Default value (optional)
+
+A property’s default value is assigned if a null value is provided upon entity creation.
