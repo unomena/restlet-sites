@@ -3,7 +3,7 @@
 
 APISpark features two types of File Store implementations: *local* and *wrapper*.
 
-In this section we'll cover the full stack File Store (local), with which static files can be stored on the APISpark platform.
+In this section we will cover the full stack File Store (local), with which static files can be stored on the APISpark platform.
 
 # Create a File Store
 
@@ -17,19 +17,18 @@ In the **Create a File Store** window, select **Full Stack** in order to choose 
 
 Enter a **Name** and an optional **Description** and click on the **Create** button.
 
-# Creating folders
+# Create folders
 
-To create a new folder, click on the **Add** button from the File Store **Overview**.
+To create a new folder, click on the **Add** button from the File Store **Overview** tab.
 
   ![Add](images/03.jpg "Add")
 
-# File Store deployment
+# Deploy a File Store
 
 To deploy a File Store, click on the **Deploy** button. Messages will inform you of the progress and completion of the process.
 
 
-
-# Uploading files
+# Upload files
 
 The data browser is a useful tool that lets you directly modify the contents of folder in a File Store.
 

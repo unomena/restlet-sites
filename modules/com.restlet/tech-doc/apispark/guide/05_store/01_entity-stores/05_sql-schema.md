@@ -2,4 +2,4 @@ If you need your API to get data from your existing SQL database, your firewall 
 
 ![Exposing SQL data](images/08.jpg "Exposing SQL data")
 
-For more information, jump to our [Import a SQL schema](apispark/guide/tutorials/technical-tuto/import-sql-schema "Import a SQL schema tutorial") tutorial!
+For more information, jump to our [Import a SQL schema](apispark/tutorials/technical-tuto/import-sql-schema "Import a SQL schema tutorial") tutorial!

@@ -20,7 +20,7 @@ If a Published data store is imported by a Published web API, then the data stor
 
 #### Deprecated
 
-The Deprecated state is used to specify that a cell won't be supported in the near future, and should no longer be used.
+The Deprecated state is used to specify that a cell will not be supported in the near future, and should no longer be used.
 
 A Deprecated cell cannot undergo structural modifications or be deleted as this could break clients or other cells using it.
 

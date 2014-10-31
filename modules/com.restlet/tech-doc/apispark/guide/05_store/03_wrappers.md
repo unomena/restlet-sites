@@ -1,3 +1,5 @@
+APISpark makes available different types of wrappers (external File Stores):
+
 #Google Spreadsheet
 
 APISpark allows you to create web APIs that give access to existing data stored in Google Spreadsheets. Google Spreadsheet is a popular collaborative data editing tool within the Google Docs suite.

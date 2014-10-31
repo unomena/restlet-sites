@@ -9,16 +9,13 @@ An Entity Store provides the necessary tools to design a data model from the gro
 
 Like all other cell types, Entity Stores are created and opened via the Dashboard. To create an Entity Store, go to the **Dashboard** and click on the **+ Entity Store** button.
 
-	![+Entity Stores](images/01.jpg "+Entity Stores")
+![+Entity Stores](images/01.jpg "+Entity Stores")
 
 In the **Create an Entity Store** window, select **Full Stack** in order to create an Entity Store hosted by APISpark.
 
-	![Full Stack](images/02.jpg "Full Stack")
+![Full Stack](images/02.jpg "Full Stack")
 
 Enter a **Name** (required) and a **Description** (optional) and click on the **Create** button.
-
-
-
 
 # Data modeling
 
@@ -46,7 +43,7 @@ The entity's name and description can be updated from this screen.
 
 ### Primary key policy
 
-A propery called *id* is automatically added to every new entity. This property serves as the entity's primary key.
+A property called *id* is automatically added to every new entity. This property serves as the entity's primary key.
 
 The Entity Store supports two different primary key policies.
 
@@ -74,7 +71,7 @@ The property's name.
 
 ### Type
 
-The property's type. There are two main categories of types: primitive and complex. All possible types for a property are listed in the type pop-down menu.
+The property's type. There are two main categories of types: primitive and complex. All possible types for a property are listed in the **Datatype** drop-down menu.
 
 #### Primitive types
 
@@ -96,9 +93,9 @@ The particularity of the “composition” relation is that if entity A is “co
 
 ### Min occurs and Max occurs
 
-The minimum cardinality and maximum cardinalities of the property.
+These fields contain the minimum and maximum cardinalities of the property.
 
-These values are used to determine if a property should be store as a list.
+These values are used to determine if a property should be stored as a list.
 
 Furthermore, the cardinality constraints are enforced on real data at runtime.
 
