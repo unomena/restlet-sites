@@ -1,7 +1,7 @@
 #Roles
 
 We can distinguish two teams among APISpark stakeholders: the APISpark provider team and the APISpark user team. APISpark providers can also invoke cells as users if they are part of a user group.
-APISpark lets you define how members of provider teams interact one with another. Provider team members can add members and grant roles to members. Giving a member either of the Manager, Developer, Operator or User roles will determine that member’s rights on the cell chosen in the web console. Roles and rights are defined at the cell level. 
+APISpark lets you define how members of provider teams interact one with another. Provider team members can add members and grant roles to members. Giving a member either of the Manager, Developer, Operator or User roles will determine that member’s rights on the cell chosen in the web console. Roles and rights are defined at the cell level.
 
 By default, APISpark proposes 6 roles. Each functional role gives specific permissions on cells in the APISpark console.
 
@@ -25,9 +25,8 @@ By default, APISpark proposes 6 roles. Each functional role gives specific permi
  * **Guest:** a guest can consult public information about a WebAPI.
 If the cell is public, the person with this role can view the cell overview and ask to become a member (needs an APISpark account first). If the cell is private, he should not even know it exists. A guest has no ability to switch to another role.
 
-#Permissions
+# How to add a member to a cell
 
-For cell versions, permissions can be defined as methods. The supported permissions per cell type are: Put, Post, Delete and Get.
+![Add member](images/addMemberToCell.jpg "Add member")
 
-A web API version can be set to “public”, meaning authenticated APISpark users will be able to view the cell without being a member, and will be attributed Guest role on the cell.
-
+You can search for members, **TODO** ...
