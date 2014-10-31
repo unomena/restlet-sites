@@ -153,8 +153,8 @@ toc:
     - file: 01_invocation.md
       id: invocation
       link_url: /04_publish/02_publish/01_invocation.md
-      long-title: Invocation by users
-      title: Invocation by users
+      long-title: Invoke an API
+      title: Invoke an API
       url: /publish/publish/invocation
     - file: 02_client-sdk.md
       id: client-sdk
