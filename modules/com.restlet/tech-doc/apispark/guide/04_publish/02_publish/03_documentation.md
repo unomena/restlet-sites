@@ -1,30 +1,29 @@
 Three levels of documentations are available through APISpark:
 
-#via the Web API overview
+#Make your API documentation public
 
 All APISpark users and visitors can have access to the overview page of your API as a documentation. You need to turn your API into a public one.
 
 1. Open an API.
-2. Select All versions in the version drop-down menu.
-3. In the Settings tab, click on Information in the General section.
-4. Select the Public checkbox.
+2. In the main **Overview** tab, click on the second level **Overview** tab in the central panel.
+	![Public documentation](images/13.jpg "Public documentation")
+3. Select the **Public documentation** checkbox.
 
-#produce an HTML documentation
+#Host your API documentation
 
 You can download the HTML documentation of your API as an HTML or PDF file and host it by yourself.
 
 ![html documentation](images/02.jpg "html documentation")
 
 1. Open an API.
-2. Click the actions arrow and select **Generate downloads**.
+2. Click the action button and select **Generate downloads**.
 
 	![Generate downloads](images/03.jpg "Generate downloads")
+3. Click on the **Downloads** tab.
+4. Click on **HTML (single page)** in the **Documentations** section.
+5. Click on the **Download** button to generate the HTML documentation.
 
-3. Click on the Downloads tab.
-4. Click on HTML (single page) in the Documentations section.
-5. Click on the Download button to generate the HTML documentation.
-
-#check out the Swagger definition
+#Use your API Swagger definition
 
 APISpark produces a Swagger definition of APIs automatically. You can communicate the URL of this swagger documentation, but also visualize it directly on APISpark via the Swagger User Interface.
 
@@ -49,7 +48,7 @@ Underneath **Swagger**, you will find the address in which the Swagger definitio
 
 ![Swagger UI](images/06.jpg "Swagger UI")
 
-Still in the **API Commons** tab, you can download a local version of Swagger UI with the **Download Swagger UI** link. You can also open it on APISpark with the **Open Swagger UI** link. 
+Still in the **API Commons** tab, you can download a local version of Swagger UI with the **Download Swagger UI** link. You can also open it on APISpark with the **Open Swagger UI** link.
 
 ![Swagger](images/07.jpg "Swagger")
 
@@ -57,7 +56,7 @@ Still in the **API Commons** tab, you can download a local version of Swagger UI
 
 You can import a web API’s contract to APISpark using its Swagger definition by providing the URL on which it is available to APISpark.
 
-1. From an existing API page, click on the actions arrow on top right of your screen and select **Import definition**. 
+1. From an existing API page, click on the actions arrow on top right of your screen and select **Import definition**.
 
 	![Import definition](images/08.jpg "Import definition")
 
