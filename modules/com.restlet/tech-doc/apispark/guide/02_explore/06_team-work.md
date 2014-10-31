@@ -1,32 +1,48 @@
-#Roles
 
-We can distinguish two teams among APISpark stakeholders: the APISpark provider team and the APISpark user team. APISpark providers can also invoke cells as users if they are part of a user group.
-APISpark lets you define how members of provider teams interact one with another. Provider team members can add members and grant roles to members. Giving a member either of the Manager, Developer, Operator or User roles will determine that member’s rights on the cell chosen in the web console. Roles and rights are defined at the cell level.
+# Introduction
 
-By default, APISpark proposes 6 roles. Each functional role gives specific permissions on cells in the APISpark console.
+APISpark is built to support team-based collaboration on API projects.
+
+Collaboration in APISpark is based on the capacity to share a cell with other APISpark users, and to attribute specific roles to collaborators based on the functions they carry out.
+
+# Cell Roles
+
+A member can have one of five roles on a cell.
+
+For team-based collaboration, members should be given either of the roles Owner, Manager, Operator, or Developer.
+
+User is a special role designed for web API members who are consumers of your API. For more information about managing your API consumption, please visit the [User Groups](/publish/secure/user-groups "User Groups") page.
+
+Depending on the role given to a member, he will have different permissions in the APISpark console.
 
 ![team work](images/07.jpg "team work")
 
-##APISpark provider team
+## Team roles
 
- * **Owner:** an owner owns the cell and has full rights on it. An owner can switch between all roles. Each cell has a unique owner (and thus all cell versions have the same owner) that cannot be changed. An owner has specific permissions like copying the cell, deleting it, adding new version, etc.
+ * **Owner:** a cell's Owner has full rights on it. Each cell has a unique owner, who is also the owner of every version of the cell. The Owner's role cannot be modified.
 
- * **Manager:** a manager has near-full rights on the cell (but cannot delete it). A manager can switch between 2 roles (Manager or User).
+ * **Manager:** a manager has all but a few rights on a cell. For instance, a manager can't delete a cell, as this operation is reserved to the Owner.
 
- * **Operator:** an operator has runtime management rights as well as rights on lifecycle aspects of the cell and community management.
+ * **Operator:** an operator has the rights to manage runtime aspects of a cell, to manage a cell's lifecycle, and to manage the community of cell members.
 
- * **Developer:** a developer has rights to design time and development aspects of the cell. A developer can switch between 2 roles (Developer or User).
+ * **Developer:** a developer has rights to the design-time and development aspects of a cell.
 
 
-##APISpark user team
+## Consumer roles
 
- * **User:** a user can consult basic information about a Web API and be given runtime access rights. A user has no ability to switch to another role.
+ * **User:** a user can consult basic information about a Web API and be given runtime access rights by being added to a member group.
 
- * **Guest:** a guest can consult public information about a WebAPI.
-If the cell is public, the person with this role can view the cell overview and ask to become a member (needs an APISpark account first). If the cell is private, he should not even know it exists. A guest has no ability to switch to another role.
 
-# How to add a member to a cell
+# Managing cell members
+
+To manage the members of a cell, navigate to the cell's **Members** tab.
+
+From here, you can add and delete members, and attribute roles to members.
 
 ![Add member](images/addMemberToCell.jpg "Add member")
 
 You can search for members, **TODO** ...
+
+# Switch role perspective
+
+Coming soon.
