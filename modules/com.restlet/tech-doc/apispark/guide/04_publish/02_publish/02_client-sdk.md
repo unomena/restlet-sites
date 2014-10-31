@@ -36,11 +36,6 @@ To download a client SDK for a web API:
 1. Select the appropriate API.
 2. Click on the **Downloads** tab.
 3. Select the language you need (Java or JavaScript) in the **Client kits** section.
-<<<<<<< HEAD
-4. Select the **Type** you need (Java, iOs, JavaScript, ...) in the drop-down menu.
-5. Click on the **Download** button.
-=======
 4. Click on the **Download** button.
->>>>>>> origin/proxy-mode
 
 	![Download button](images/01.jpg "Download button")
