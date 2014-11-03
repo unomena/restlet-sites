@@ -205,9 +205,16 @@ Others
 
 ### Horizontal lines
 
+
+### Insert comments that will not display to end-users
+
+<!---This is my comment
+-->
+
 ****
 
 Needs
 ======
 
 colors ??
+
