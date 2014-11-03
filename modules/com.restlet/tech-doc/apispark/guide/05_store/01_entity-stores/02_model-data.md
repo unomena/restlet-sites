@@ -2,7 +2,7 @@
 
 The Entity Store is APISpark's structured data store.  
 
-An Entity Store provides the necessary tools to design a data model from the ground up. We'll look at the Entity Store's data modelling features in the following sections.
+An Entity Store provides the necessary tools to design a data model from the ground up. We will look at the Entity Store's data modeling features in the following sections.
 
 
 # Create an Entity Store
@@ -34,10 +34,9 @@ An Entity Store is composed of entities, which represent types of objects and th
 
 Entities are listed in the **Entities** section on the left of the **Overview**.
 
-Selecting an entity from the list opens the overview. The overview displays configuration information for the entity, and lists the entity's properties.
+Selecting an entity from the list opens the Overview. The Overview displays configuration information for the entity, and lists the entity's properties.
 
 ![new Entity](images/04.jpg "new Entity")
-
 
 The entity's name and description can be updated from this screen.
 

@@ -139,12 +139,12 @@ toc:
       long-title: Public and private APIs
       title: Public and private APIs
       url: /publish/secure/public-and-private-apis
-    - file: 03_rate-limitation.md
-      id: rate-limitation
-      link_url: /04_publish/01_secure/03_rate-limitation.md
-      long-title: Rate limitation
-      title: Rate limitation
-      url: /publish/secure/rate-limitation
+    - file: 03_firewall-settings.md
+      id: firewall-settings
+      link_url: /04_publish/01_secure/03_firewall-settings.md
+      long-title: Firewall settings
+      title: Firewall settings
+      url: /publish/secure/firewall-settings
     long-title: Secure a web API
     title: Secure a web API
   - dir: 02_publish

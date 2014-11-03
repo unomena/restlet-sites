@@ -16,7 +16,7 @@ The Published state is used to specify that a cell is in a stable state and is a
 
 A Published cell cannot undergo structural modifications or be deleted as this could break clients or other cells using it.
 
-If a Published data store is imported by a Published web API, then the data store cannot be reverted to Draft state while the API remains Published.
+If a Published Data Store is imported by a Published web API, then the Data Store cannot be reverted to Draft state while the API remains Published.
 
 #### Deprecated
 
@@ -24,11 +24,11 @@ The Deprecated state is used to specify that a cell will not be supported in the
 
 A Deprecated cell cannot undergo structural modifications or be deleted as this could break clients or other cells using it.
 
-If a Deprecated data store is imported by a Published web API, it cannot be reverted to Draft state while the API remains Published.
+If a Deprecated Data Store is imported by a Published web API, it cannot be reverted to Draft state while the API remains Published.
 
 #### Archived
 
-TODO: what is an archived cell ?
+Archived state is only used for storage of cells that are no longer used. If you do not wish to delete your cell, you can archive it.
 
 #### Deleted
 
