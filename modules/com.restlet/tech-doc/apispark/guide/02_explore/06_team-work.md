@@ -39,9 +39,11 @@ To manage the members of a cell, navigate to the cell's **Members** tab.
 
 From here, you can add and delete members, and attribute roles to members.
 
+When adding a member, you can search for the right person based on his or her name or email address.
+
 ![Add member](images/addMemberToCell.jpg "Add member")
 
-You can search for members, **TODO** ...
+
 
 # Switch role perspective
 
