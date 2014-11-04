@@ -1,105 +1,60 @@
-APISpark allows you to create, deploy, host and manage your own WebAPIs by providing an online Integrated Development Environment (Web IDE) and a hosting service. It lets you define web APIs based on the concepts of REST. These APIs may access data stored locally (an EntityStore or a FileStore) or remotely (via a Wrapper).
 
-If you have no data yet to surface, we suggest you start by creating local data on APISpark and then surface them.
+APISpark supports two major types of cells: Data Stores and Web APIs. Data stores serve to store structured data and static files, while Web APIs are RESTful interfaces that expose resources over the Web.
 
-#Create Local Data on APISpark
+These two types of cells are built to work together, and APISpark provides tools that facilitate exposing Data Stores to the Web through web APIs.
 
-As an API needs resources, we want to create a local Data Store where the API will find the necessary resources. If you already have an existing data source, you can directly create your API and import your existing Data Store (see Create an API and import a Data Store).
+In this section we look at different ways to automatically create a web API from existing Data Stores.
 
-APISpark allows you to create two types of Data Stores: Entity Stores (data) and File Stores (documents). For more information, see Local Data Stores.
-In this example, we create an Entity Store.
+# Export a Web API from a Data Store
 
-1. Open your APISpark **Dashboard** and click on the **+ Entity Store** button.
+You can automatically export a web API from a Data Store. If you don't already have a Data Store, checkout the [Data Modeling](apispark/guide/store/entity-stores/model-data "Data Modeling") page to see how to build an Entity Store or the [File Store](apispark/guide/store/file-stores "File Store") page to see how to build a File Store.
 
-  ![+Entity Store](images/01.jpg "+Entity Store")
+The API export  process" can be launched from the Data Store **Overview**. Click on the action arrow and select **Export custom API**.
 
-2. In the **Create an Entity Store** window, select the appropriate Entity Store type (here **Full Stack**).
+  ![export custom API](images/exportfromstore.png "export custom API")
 
-  ![Create an Entity Store](images/02.jpg "Create an Entity Store")
+In the **Create a Web API** dialog, give your API a **Name**, **Domain**, and **Description** (optional).
 
-3. Enter a **Name** and a **Description** and click on the **Create** button.
-4. Click on the **+ Entity** button and give it a name (here “Employee”).
-5. To add properties manually, click on the **Add a Property** link and add as many properties as needed. In this window you can add a data type, cardinality and default value.
-6. Click on the **Deploy** button to deploy your Entity Store. Wait until a message informs you that it has been deployed successfully.
-7. To add an entity, click on the **Browser** tab and click on the **Add** button.
-8. Fill in the different fields and click on **Add**.
+The window will notify you of the availability of the the domain name.
 
-> **Note:** If you add entities, you need to re-deploy your Entity Store to display them in the browser.
+  ![Create a web API](images/exportapi.png "Create a web API")
 
+  > **Note:** When checked, **Add resources automatically** will create web API resources and representations that map towards the entities in your Entity Store. This is the recommended behaviour.
 
-#Create a Web API from a Data Store
+# Import a data store into an existing web API
 
+As a complement to the Export API feature, APISpark lets you import one or more Data Stores into an existing web API.
 
-1. From your Entity Store, click on the action arrow and select **Export custom API**.
+This had the added benefit of allowing you to import multiple Data Stores of potentially different types into a single Web API.  
 
-  ![export custom API](images/03.jpg "export custom API")
+## Create a web API
 
-2. In the **Create a Web API** window:
+If you already have an API in which to import a data store
 
- * Enter the **Name** for your API.
- * Your domain name is automatically suggested in the **Domain** field according to the name you entered. If the domain address is not available, a red cross displays on the right of the domain address. You need to find another domain address. If the domain name is available, a green tick displays on the right of the domain address.
- * Enter a **Description** of your API.
-
-  ![Create a web API](images/04.jpg "Create a web API")
-
-3. Click on the **Create** button. A message informs you that your API has just been created.
-
-  > **Note:** Your API is created and your entity store is imported into your API. Your Entity store’s resources are added automatically.
-
-4. Click on the **Deploy** button to deploy your API.
-
-#Create a Web API
-
-1. Open your APISpark **Dashboard** and click on the **+ Web API** button.
+If you haven't already done so, create a web API from the **Dashboard** by click on the **+ Web API** button.
 
   ![+web API](images/05.jpg "+web API")
 
-2. In the **Create a Web API** window:
- * Select **Full Stack** in the **Type** drop-down menu.
- * Enter the **Name** of your API.
- * Your domain name is automatically suggested in the **Domain** field according to the name you entered. If the domain address is not available, a red cross displays on the right of the domain address. You need to find another domain address. If the domain name is available, a green tick displays on the right of the domain address.
- * Enter a **Description** of your API.
+Select **Full Stack** from the **Type** drop-down menu. Give your API a **Name**, **Domain**, and **Description** (optional).
+The window will notify you of the availability of the the domain name.
 
-  ![Create a web API](images/06.jpg "Create a web API")
-
-3. Click on the Create button. A message informs you that your API has just been created.
-
-#Import an Existing Data Store
-
-##via the Export custom API feature
-
-You can expose existing data by creating a Data Store and exporting a custom API.
-
-1. From the **Dashboard**, open your Data Store.
-2. Click on the Action drop-down menu and select **Export custom API**.
-
-  ![export custom API](images/07.jpg "Export custom API")
-
-3. The **Create an API** window displays:
-
-    ![Create a web API](images/08.jpg "Create a web API")
-
-  * Select **Full Stack** in the **Type** drop-down menu.
-  * Enter the name of your API in the **Name** field.
-  * Your domain name is automatically suggested in the **Domain** field according to the name you entered. If the domain address is not available, a red cross displays on the right of the domain address. You need to find another domain address. If the domain name is available, a green tick displays on the right of the domain address.
-  * Enter a description of your API in the **Description** field.
-
-    > **Note:** You are creating a new Web API and importing your Entity store with its resources (deselect the Add resources automatically checkbox if you do not want to add the entity store resources).
-
-4. Click on the **Create** button. A message informs you that your API has just been created.
+  ![Create a web API](images/createapi.png "Create a web API")
 
 
-##via the Import Ressources feature
+## Import a Data Store
 
-You can also expose data by creating an API first and importing one or several data stores. If you need to import several data stores, we advise you to follow this process.
+To import a Data Store into an API, navigate to the API's **Overview**. Click on the **Settings** tab. Click on the **Add** button next to **Imports** in the left panel.
 
-1. From your **Dashboard**, create a web API (or open an existing one)
-2. Click on the **Settings** tab.
-3. Click on the **+ Import** button.
+  ![+Import](images/import.png "+Import")
 
-  ![+Import](images/09.jpg "+Import")
+Select the **Type** of cell you want to import, select the **Cell** itself and the **Version** you want to import.
 
-4. In the **Overview** Section, select the **Type** of resource, the **Cell** and the **Version** you need to add.
-5. Click on the **Add** button.
-6. Click on the **Add resources** button to import the cell content.
-7. Click on the **Overview** tab to check if the resources display.
+### Generate resources and representations
+
+Once you've imported a Data Store into a Web API, you can automatically generate resources and representations that map to the entities in the imported Data Store.
+
+Select an import from the left panel of the API's **Settings** tab, and click on the **Add** button to generate new resources and representations.
+
+![Generate Resources](images/generateResources.png "Generate Resources")
+
+If you update your Data Store, you can update the API's corresponding resources and representations by clicking on the **Update** button in the same window.
