@@ -133,12 +133,12 @@ toc:
       long-title: User groups
       title: User groups
       url: /publish/secure/user-groups
-    - file: 02_public-and-private-apis.md
-      id: public-and-private-apis
-      link_url: /04_publish/01_secure/02_public-and-private-apis.md
-      long-title: Public and private APIs
-      title: Public and private APIs
-      url: /publish/secure/public-and-private-apis
+    - file: 02_runtime-permissions.md
+      id: runtime-permissions
+      link_url: /04_publish/01_secure/02_runtime-permissions.md
+      long-title: Runtime permissions
+      title: Runtime permissions
+      url: /publish/secure/runtime-permissions
     - file: 03_firewall-settings.md
       id: firewall-settings
       link_url: /04_publish/01_secure/03_firewall-settings.md
