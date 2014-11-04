@@ -2,12 +2,7 @@ Three levels of documentations are available through APISpark:
 
 #Make your API documentation public
 
-All APISpark users and visitors can have access to the overview page of your API as a documentation. You need to turn your API into a public one.
-
-1. Open an API.
-2. In the main **Overview** tab, click on the second level **Overview** tab in the central panel.
-	![Public documentation](images/13.jpg "Public documentation")
-3. Select the **Public documentation** checkbox.
+All APISpark users and visitors can have access to the overview page of your API as a documentation. You need to turn your API into a public one (see [Runtime permissions page](apispark/guide/publish/secure/runtime-permissions "Runtime permissions page"))
 
 #Host your API documentation
 
