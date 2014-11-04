@@ -5,8 +5,6 @@ APISpark provides a highly flexible system for controlling runtime access to you
 
 Runtime access means controlling which of your API's methods can be invoked by which the API's consumers. You can decide to put in place very simple rules, for example by giving all your API's consumers the same access rights, or you can fine tune access to your APIs for different groups that you can define. You can also configure your API methods to be open to anyone without authentication.
 
-
-
 Runtime access permissions to APISpark APIs are defined by assigning method access rights to member groups.
 
 You have the choice to build the member groups that correspond to your needs. For example, you might create a group to which you will give read-only rights on your API, and another to which you will give read-write access.

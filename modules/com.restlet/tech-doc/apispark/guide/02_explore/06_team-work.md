@@ -48,18 +48,11 @@ To add a member to a cell:
 4. Select the appropriate account and click on the **Add** button.
 5. Select a role for your member in the drop-down menu (Manager, Operator, Developer or User).
 
-<<<<<<< HEAD
 [TODO update image]
 ![Add member](images/addMemberToCell.jpg "Add member")
 
 >**Note:** To add a member, s/he must have signed in to APISpark before.
 
-When adding a member, you can search for the right person based on his or her name or email address.
-
-![Add member](images/addMemberToCell.jpg "Add member")
-
-
->>>>>>> origin/proxy-mode
 
 <!---# Switch role perspective
 
