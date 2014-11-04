@@ -11,7 +11,7 @@ Runtime access permissions to APISpark APIs are defined by assigning method acce
 
 You have the choice to build the member groups that correspond to your needs. For example, you might create a group to which you will give read-only rights on your API, and another to which you will give read-write access.
 
-Alternatively, you might create groups for specific categories of users, depending for example on the rate limitation you wish to apply (see the [Rate Limitation](apispark/guide/secure/rate-limitation "Rate limitation") page on how to configure rate limitations).
+Alternatively, you might create groups for specific categories of users, depending for example on the rate limitation you wish to apply (see the [Firewall settings](apispark/guide/secure/firewall-settings "Firewall settings") page on how to configure rate limitations).
 
 When you create a new web API, two default groups will be created: **testers** and **consumers**. As the API creator, you will automatically be added to the **testers** group so that you can invoke and test your API. The **consumers** group is designed for the consumers of your API.
 

@@ -23,5 +23,5 @@ This diagram shows you the different response statuses and the proportion for ea
 #HTTP methods
 This diagram shows you the different HTTP methods used for your API calls and the proportion for each method.
 
-<!---#Data storage
+<!---#Data storage coming soon or not
 -->
