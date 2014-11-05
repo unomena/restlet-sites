@@ -1,73 +1,95 @@
-Three levels of documentations are available through APISpark:
 
-#Make your API documentation public
+An important part of running a web API is documenting it so that consumers of your API can invoke it with ease.
 
-All APISpark users and visitors can have access to the overview page of your API as a documentation. You need to turn your API into a public one (see [Runtime permissions page](apispark/guide/publish/secure/runtime-permissions "Runtime permissions page"))
+APISpark is very flexible in this regard and provides three different ways to document you APIs that are hosted on APISpark.
 
-#Host your API documentation
+APISpark will also provide automatic documentation for existing APIs that are not hosted by APISpark. In this case, please visit the section called [Document existing web APIs through APISpark Descriptors](apispark/guide/document/overview "Document existing web APIs through APISpark Descriptors").
 
-You can download the HTML documentation of your API as an HTML or PDF file and host it by yourself.
+# Make your API documentation public
 
-![html documentation](images/02.jpg "html documentation")
+If you want users to access your API documentation without authentication, you can make it public. Once made public, you can share the link to your API's **Overview** page or other public pages such as the **API Commons** tab.
 
-1. Open an API.
-2. Click the action button and select **Generate downloads**.
+To make your API documentation public:
 
-	![Generate downloads](images/03.jpg "Generate downloads")
-3. Click on the **Downloads** tab.
-4. Click on **HTML (single page)** in the **Documentations** section.
-5. Click on the **Download** button to generate the HTML documentation.
+1. Open your API **Overview** page.
+2. In the central panel, click on the **Overview** tab.
+3. Select the **Public documentation** checkbox.
 
-#Use your API Swagger definition
+	![Public documentation](images/publicdocumentation.jpg "Public documentation")
 
-APISpark produces a Swagger definition of APIs automatically. You can communicate the URL of this swagger documentation, but also visualize it directly on APISpark via the Swagger User Interface.
 
-##Introduction
 
-Swagger is an API description language that comes with a number of tools including Swagger UI and Swagger Code Generator. Swagger UI provides a nice HTML presentation of your API’s contract and allows you to test your API by calling it. Swagger Code Generator generates client kits for your API in eight languages.
+# Download your API's documentation
 
-APISpark dynamically generates the Swagger description of web APIs and provides the Swagger UI and Code Generator capabilities as a service. You can also import an existing Swagger description into APISpark to update a web API contract.
+APISpark provides a way for you to download documentation for web APIs. This way you can, for example, host the documentation on your own website. Documentation is provided for download in a number of different formats.
 
-##Get the Swagger definition of your API
+## Add new documentation for download
 
-1. Select the web API you want to get the Swagger definition of.
-2. Open the **Settings** tab and click **Information** in the **General** section, then on the **API Commons** tab on the right part of your screen.
+In order to be able to download documentation for your API, you need to first define the documentation you want to make available.
 
-	![API Commons](images/04.jpg "API Commons")
+To do this, navigate to an API's **Overview**, open the **Downloads** tab, and click on the **Add** button next to the **Documentation** section in the left panel.
 
-Underneath **Swagger**, you will find the address in which the Swagger definition of your API is hosted.
+You will be prompted to select a **Name** and **Type** (format) for your new downloadable documentation.
 
-![code](images/05.jpg "code")
+![Add documentation](images/adddocumentation.png "Add documentation")
 
-##Check out its Swagger UI
+Once the desired types of documentation have been added to the **Documentation** section, you will need to generate the downloads for your API.
 
-![Swagger UI](images/06.jpg "Swagger UI")
+To generate the downloads for an API, open the API's **Overview**, click on the pop-down action button and select **Generate downloads**.
+
+![Generate downloads](images/generatedownloads.png "Generate downloads")
+
+Your documentation can now be downloaded from the **Documentation** section by selecting a type of documentation from the list and clicking on the **Download** button.
+
+# Your API's Swagger definition
+
+**Swagger** is an API description language that comes with a number of tools including Swagger UI and Swagger Code Generator. Swagger UI provides a nice HTML presentation of your API’s contract and allows you to test your API by calling it. The Swagger Code Generator generates client kits for your API in eight languages.
+
+APISpark *automatically* produces a Swagger definition for APIs it hosts. You can share the Swagger definition's URL with your users, download the Swagger definition itselft, and you can even view the definition directly on APISpark via the Swagger User Interface.
+
+
+## Obtain your API's Swagger definition
+
+To access your API's automatically generated Swagger definition, open the API's **Overview** and open the **General information** tab from the left panel.
+
+Open the **API Commons** panel.
+
+![API Commons](images/getswagger.png "API Commons")
+
+Click on one of the **Swagger** URLs to open the corresponding Swagger definition. Note that multiple versions of Swagger are supported.
+
+The **Swagger 1.2** definition for the Contacts API looks like this:
+
+```json
+{  
+   "apis":[  
+      {  
+         "path":"/contacts"
+      }
+   ],
+   "apiVersion":"1.1.0",
+   "info":{  
+      "contact":"jmichaux@restlet.com",
+      "description":"My Contacts API.",
+      "title":"Contacts API"
+   },
+   "swaggerVersion":"1.2"
+}
+```
+
+## Check out your API's Swagger UI
+
+The **Swagger UI** is a useful tool for visualizing an API's documentation and performing simple tests.
+
+APISpark lets you directly view your API's Swagger UI from its **General information** tab in the **API Commons** panel.
+
+To view you **API's Swagger UI**, click on **Open Swagger UI**.
+
+![Swagger UI](images/openswaggerui.png "Swagger UI")
+
+Your API's **Swagger UI** will open in a new web page. 
+
 
 Still in the **API Commons** tab, you can download a local version of Swagger UI with the **Download Swagger UI** link. You can also open it on APISpark with the **Open Swagger UI** link.
 
 ![Swagger](images/07.jpg "Swagger")
-
-##Import existing Swagger definitions
-
-You can import a web API’s contract to APISpark using its Swagger definition by providing the URL on which it is available to APISpark.
-
-1. From an existing API page, click on the actions arrow on top right of your screen and select **Import definition**.
-
-	![Import definition](images/08.jpg "Import definition")
-
-2. In the **Import a Web API definition** window, fill in the different fields to import the representations and resources of a Swagger definition into your API.
-
-	![Import definition](images/09.jpg "Import definition")
-
-3. Click on the **Import** button. The representations and resources of the Swagger definition you provided the link to are imported in your **Overview** tab.
-
-	![Import definition](images/10.jpg "Import definition")
-
-
- >**Note:** If you import several definitions you may have conflicts, multiple resources on the same path or multiple representations with the same name. The import wizard will display a message in an orange panel and you will be free to solve the conflicts by yourself.
-
-![Import definition](images/11.jpg "Import definition")
-
- >**Note:** If you close the panel, you can still find the traces in the Messages tab, in the Traces section of the left pane.
-
-![Import definition](images/12.jpg "Import definition")

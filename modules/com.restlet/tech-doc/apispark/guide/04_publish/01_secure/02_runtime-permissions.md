@@ -33,16 +33,8 @@ To configure a method's runtime access to *anyone*, in either method-level or de
 
 # Make your API documentation public
 
-If you want users to access your API documentation without authentication, you can make it public. Once made public, you can communicate the link of your API **Overview** page or the different links available in the **API Commons** tab (RAML, Swagger formats, etc.).
+An API's **Overview** page contains rich documentation for consumers of the API, including **Endpoints**, **Resources**, and **Representations**.
 
-![API Commons](images/10.jpg "API Commons")
+In combination with opening your API to *anyone*, you might want to make a part of your API's **Overview** publicly accessible, even to users that don't have an APISpark account.
 
-
-To make your API documentation public:
-
-1. Open your API **Overview** page.
-2. In the central panel, click on the **Overview** tab .
-
-  ![Public documentation](images/09.jpg "Public documentation")
-
-3. Select the **Public documentation** checkbox.
+To see how to make your API public, please visit the [Documentation page](apispark/guide/publish/publish/documentation "Documentation").
