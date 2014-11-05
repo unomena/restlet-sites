@@ -1,11 +1,11 @@
 
-# Accessing an API
+# Access an API
 
 APISpark web APIs are either *public* or *private*. This affects the way you access the Web API's documentation, including access tokens, but does not have an affect on invoking the API at runtime.
 
 ## Access a private API
 
-In order to browse a private web API's documentation and get your access tokens, you need to be a member of the API. To see how to create web API members, please visit the [User Groups](publish/secure/user-groups "User groups") page.
+In order to browse a private web API's documentation and get your access tokens, you need to be a member of the API. To see how to create web API members, please visit the [User Groups](apispark/guide/publish/secure/user-groups "User groups") page.
 
 Navigate to the API's overview. If you are a member of the API, it will appear in your **Dashboard**.
 
@@ -15,10 +15,10 @@ Select an Endpoint in the left panel. The central panel displays your access tok
 
 ## Access a public API
 
-Public web APIs can be browsed by anyone, without authentication. To see how to configure a public web API, please visit the [Public and private APIs](/publish/secure/public-and-private-apis "Public and private APIs") page.
+Public web APIs can be browsed by anyone, without authentication. To see how to configure a public web API, please visit the [Public and private APIs](apispark/guide/publish/secure/public-and-private-apis "Public and private APIs") page.
 
 
-A public API is not necessarily open to anyone at runtime. This is configured from the [User Groups](publish/secure/user-groups "User groups") page.
+A public API is not necessarily open to anyone at runtime. This is configured from the [User Groups](apispark/guide/publish/secure/user-groups "User groups") page.
 
 ## Basic authentication access tokens
 
@@ -30,7 +30,7 @@ In order to invoke an API, you must belong to one of the API's consumer groups w
 
 However, some APIs are open to anyone without authentication.
 
-To see how to configure a web API's runtime permissions, including opening an API to *anyone*, please visit the [User Groups](publish/secure/user-groups "User groups") page.
+To see how to configure a web API's runtime permissions, including opening an API to *anyone*, please visit the [User Groups](apispark/guide/publish/secure/user-groups "User groups") page.
 
 ## Making HTTP calls
 
@@ -99,7 +99,7 @@ In this request, we sort a collection of messages by their creation date in asce
 
 ### Paginate
 
-In case you have many entries stored in a collection, you may not want to read them all at once when invoking the API. The `$page` and `$size` query parameters let you specify the size of a page, and which page numbere to load.
+In case you have many entries stored in a collection, you may not want to read them all at once when invoking the API. The `$page` and `$size` query parameters let you specify the size of a page, and which page number to load.
 
 #### Example
 
@@ -115,11 +115,11 @@ If the load strategy is specified, the `$depth` parameter indicates at which dep
 
 #### Examples
 
-**Data model**: An Organisation has Employees which each have an Address.
+**Data model**: An Organization has Employees which each have an Address.
 
 ###### Reference strategy
 
-`GET https://myapi.apsipark.net/v1/organisations/?$strategy=reference`
+`GET https://myapi.apsipark.net/v1/organizations/?$strategy=reference`
 
 In this request, the `$strategy` is set to *reference*, therefore the list of Organizations is loaded along with all the values of primitive type properties (e.g. name). Employees are only loaded by reference.  
 
@@ -148,9 +148,9 @@ In this request, the `$strategy` is set to *reference*, therefore the list of Or
 
 ###### Load strategy
 
-`GET https://myapi.apsipark.net/v1/organisations/?$strategy=load`
+`GET https://myapi.apsipark.net/v1/organizations/?$strategy=load`
 
-In this request, in which the `$depth` parameter is set to its default value 1, Organisations are loaded along with the first level of related data, therefore the values of primitive type fields of Employees are also loaded.
+In this request, in which the `$depth` parameter is set to its default value 1, Organizations are loaded along with the first level of related data, therefore the values of primitive type fields of Employees are also loaded.
 
 ```json
 {
@@ -183,7 +183,7 @@ In this request, in which the `$depth` parameter is set to its default value 1, 
 
 ###### Load strategy, depth set to 2
 
-`GET https://myapi.apsipark.net/v1/organisations/?$strategy=load&$depth=2`
+`GET https://myapi.apsipark.net/v1/organizations/?$strategy=load&$depth=2`
 
 In this request, in which the `$depth` parameter is set to 2, Organizations are loaded along with the first level of related data (Employees) along with the third level of related data (Employee Addresses).
 

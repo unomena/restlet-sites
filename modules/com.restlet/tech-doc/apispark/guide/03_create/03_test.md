@@ -1,21 +1,11 @@
-#Deploy a Web API
-Click on the **Deploy** button. Wait until a message informs you whether the API has been successfully deployed.
+# Requirements
 
-![Deploy](images/10.jpg "Deploy")
+In order to test and debug a web API, certain number of requirements must be met.
 
-> **Note:** Once you have deployed your API, users can invoke it via a web browser or via tools such as Chrome extension POSTMAN .
+1. The API must be deployed. Please visit the [Cell deployment](apispark/guide/explore/cell-deployment "Cell deployment") page if you don't know how to deploy an API.
+2. You need access credentials if the API if not open to *anyone*. Please visit the [Invocation](apispark/guide/publish/publish/invocation "Invocation") page if you don't know how to obtain and view your API access credentials.
 
-As a member of the API core team (as an API team provider), you are given API credentials (login / access token). These credentials are accessible from APISpark. You can invoke an API from any web browser or you can use tools such as Chrome extension POSTMAN to obtain a more visual representation of your API (see Invoke a WebAPI with POSTMAN).
-
-#Find credentials to invoke an API
-
-1. From your **Dashboard**, open the appropriate API.
-2. In the **Endpoints** section of the **Overview** tab, select the appropriate endpoint. The credentials display in the right part of the screen.
-  > **Note:** To invoke an API, you will need to copy the **Endpoint URI**, **Login** and **Password**.
-
-  ![credentials](images/11.jpg "credentials")
-
-#Invoke a Web API with POSTMAN
+# Invoke a Web API with POSTMAN
 
 Using a Web API does not impose any particular programming language. It can even be done from a web browser. However, to test your API we recommend the use of tools such as the Chrome extension POSTMAN and DHC that provide a graphical user interface to perform HTTP calls.
 
@@ -26,4 +16,24 @@ Using a Web API does not impose any particular programming language. It can even
 
   ![POSTMAN](images/12.jpg "POSTMAN")
 
-  In the **Messages** tab, you can get details about APISpark web API edition processes (upload, deployment, generation, etc.). You can also get details about the various invocations of your web APIs in the **Latest API calls** section.
+# Check your messages
+
+The web API's **Messages** tab displays messages pertaining to different aspects of you API's life.
+
+This is a great place to go to when testing your API.
+
+![Messages](images/messages.png "Messages")
+
+## Messages
+
+The **Messages** section in the left panel contains general messages pertaining to APISpark internal process such as version creation, and deployment.
+
+## Traces
+
+The **Traces** section contains detailed log messages pertaining to processes such as deployment.
+
+If one such process were to result in a error, the **Traces** section can provide usefull information as to why the process failed.
+
+## Latest API calls
+
+The **Latest API calls** section lists the latest HTTP calls made to a deployed web API.
