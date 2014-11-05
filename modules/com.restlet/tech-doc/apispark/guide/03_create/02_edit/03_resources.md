@@ -1,10 +1,24 @@
-Each resource has its own address or URI (Uniform Resource Identifier). Resources should be named by nouns as opposed to verbs or actions. In other words, a URI should refer to a resource that is a thing instead of referring to an action: nouns have properties as verbs do not.  
 
-On APISpark console, you can find the resources of your API endpoint in the **Overview** tab. Click on the appropriate endpoint. The resources linked display in the **Resources** section.  
-Here is a resource example: `https://employeedirectory.apispark.net/v2/employees`  
+# Resources
 
-For each resource, the possible request methods (POST, GET, PUT and DELETE) are displayed underneath.  
-A **Search** field allows you to find back your resources faster.  
-To change the resource path, click on the appropriate resource in the **Resources** section and enter a new path in the **Relative path** field.
+A web API has a set of **Resources**. Each resource has its own **Path** which is relative to the API's **Endpoints**.
+
+To edit a Web API's **Resources**, navigate to the Web API's **Overview**. The API's resources are listed in the **Resources** section in the left panel.
 
 ![Resources section](images/05.jpg "Resources section")
+
+The **Search** field can be used to easily filter resources by name.  
+
+To modify the relative path of a resource, click on the appropriate resource in the **Resources** section and enter a new path in the **Relative path** field.
+
+> **Note**: you will need to redeploy your API for any changes to take effect.
+
+# Resource methods
+
+Every web API **Resource** has a list of associated **Methods**. The methods are HTTP methods, the most commonly used of which are GET, PUT, POST, and DELETE.
+
+To edit a Web API's resource **Methods**, select a **Resource** from the left panel.
+
+For each resource, the possible request methods (POST, GET, PUT and DELETE) are displayed underneath.
+
+> **Note**: you will need to redeploy your API for any changes to take effect.

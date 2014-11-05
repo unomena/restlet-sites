@@ -1,9 +1,9 @@
 
 # Endpoint basics
 
-An **Endpoint** is the entry point for accessing a web API.
+An **Endpoint** is the entry point for accessing a web API, to which all the API's resources are attached.
 
-An **Endpoint** consists of an address or URI (Uniform Resource Identifier)
+An **Endpoint** has a **URI** (Uniform Resource Identifier), a **Protocol**, a **Domain**, a **Version**, and **Authentication** credentials.
 
 A single API can have multiple endpoints, for example to respect different naming conventions or to support different protocols such as HTTP or HTTPS.
 

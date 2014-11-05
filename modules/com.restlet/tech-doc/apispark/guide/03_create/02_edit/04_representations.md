@@ -1,9 +1,24 @@
-Essentially, an API is a collection of URIs, HTTP calls to those URIs and some representations of resources. APISpark offers 3 different representation types: XML, JSON or YAML.  
-On APISpark console, you can find the representations of your API endpoint resource in the **Overview** tab.  
-Click on the appropriate endpoint and the appropriate resource in the **Representations** section. The representations available for the resource selected display in the **Representations** section.
 
-![Representations section](images/06.jpg "Representations section")
+# Representations
 
-To modify representation properties, click on the appropriate representation in the **Representations** section, select the appropriate property on the right hand side of the screen and change the elements you need to modify.
+A web API has a set of **Representations** that are used as input and output types for the API's resource methods.
 
-![Resources section](images/07.jpg "Resources section")
+A **Representation** has a **Name** and a **Description** (optional), and is composed of **Properties** which hold values.
+
+To edit a Web API's **Representations**, navigate to the Web API's **Overview**. The API's representations are listed in the **Representations** section in the left panel.
+
+Once you have select a **Representation**, you can view its properties.
+
+Representation properties have a **Name**, **Datatype**, and cardinality (**Min occurs** and **Max occurs**).
+
+![Representations](images/representations.png "Representations")
+
+# Variants
+
+A **Representation** has one or more **Variants** which determine  how the representation is formatted, serialized, and deserialized.
+
+By default, APISpark supports 3 different types of representation variants: XML, JSON or YAML.  
+
+To view a representation's **Variants**, select the representation from the **Representations** section in the left panel.
+
+![Variants](images/variants.png "Variants")
