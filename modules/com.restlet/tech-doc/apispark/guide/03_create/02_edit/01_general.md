@@ -4,7 +4,7 @@ From the **Overview** of a web API, the **General information** panel can be acc
 
 The **General information** panel provides an **Overview** tab concerning the general state of the web API, as well as tabs dedicated to the API's **User agreement**, **Privacy policy**, and shared use via **API Commons**.
 
-![General information](images/01.jpg "General information")
+![General information](images/generalinformation.png "General information")
 
 # Share an API design on API Commons
 
@@ -20,6 +20,6 @@ To obtain your automatically generated API manifest, navigate to the **API Commo
 
 From this panel you will find URLs that will take you to definition documents in different formats, including the API Commons manifest.
 
-![API Commons tab](images/03.jpg "API Commons tab")
+![API Commons tab](images/apicommons.png "API Commons tab")
 
 Please then navigate the API Common's [Add an API](http://apicommons.org/add-apis.html) page for instructions on how to upload your API Commons manifest file.
