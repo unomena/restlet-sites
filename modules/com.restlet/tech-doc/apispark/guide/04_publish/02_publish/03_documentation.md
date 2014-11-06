@@ -87,9 +87,14 @@ To view you **API's Swagger UI**, click on **Open Swagger UI**.
 
 ![Swagger UI](images/openswaggerui.png "Swagger UI")
 
-Your API's **Swagger UI** will open in a new web page. 
+Your API's **Swagger UI** will open in a new web page.
 
+## Download your API's Swagger UI
 
-Still in the **API Commons** tab, you can download a local version of Swagger UI with the **Download Swagger UI** link. You can also open it on APISpark with the **Open Swagger UI** link.
+From an API's **API Commons** panel, you can download a version of its Swagger UI.
+
+To download your Swagger UI, click on the **Download Swagger UI**.
+
+The screenshot below is an example of what the Swagger UI looks like.  
 
 ![Swagger](images/07.jpg "Swagger")
