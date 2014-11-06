@@ -1,14 +1,22 @@
-APISpark platform allows you to document and manage existing APIs but also to create and host brand APIs exposing local or remote data.
 
-Once signed in, APISpark Dashboard lets you interact with different types of cells:
+Welcome to the APISpark User Guide.
 
- * for API Management: Descriptors & Connectors
- * for API Hosting: Full Web API, local data stores (APISpark File Store and Entity Store) and external data stores (see APISpark Wrappers).
+![Sign in](images/apispark-logo-v1.png "Sign in")
 
-To help you start with APISpark, we advise you to launch an
+APISpark is *the* platform for those who want to
+- **create** new web API's
+- **document** existing APIs
+- **consume** APIs.
+
+This documentation covers all of these topics in detail in order to help you leverage REST APIs to deliver value to your customers and expand your products.  
+
+To help you start with APISpark, we recommend that you to launch an
 [interactive tutorial](apispark/guide/get-started/interactive-tutorials "interactive tutorial") or to go through one of our
 [step-by-step tutorials](apispark/tutorials "step-by-step tutorials").
 
+When you're ready, you can browse through the different sections of this User Guide and find the information you need. Simply click on one of the topics in the menu on the left, or start by [signing in](apispark/guide/get-started/sign-in "Sign in").
+
+<!--
 Here is a list of the different step-by-step tutorials we have at your disposal:
 
  * Full stack API solution for site/app/data publishers
@@ -24,5 +32,7 @@ Here is a list of the different step-by-step tutorials we have at your disposal:
   * Document an existing Restlet Web API
   * Document an existing JAX-RS Web API
   * Manage an existing WebAPI from its Swagger documentation
+-->
 
-Last update: November, 4th 2014
+
+Last update: November 6th 2014
