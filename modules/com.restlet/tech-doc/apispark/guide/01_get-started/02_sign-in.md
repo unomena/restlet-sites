@@ -1,46 +1,41 @@
-#Sign up process
 
-The signup process of APISpark is straightforward.
-Click on the sign in button and select your favorite social provider.
-An account is automatically from the information transferred by the social network provider you selected. To view your APISpark account details, jump to the Account page (more details below).
+# Sign Up to APISpark
 
-1. Click on the Sign in button on top right of [https://apispark.com/](APISpark) welcome page.
+APISpark's sign up process is straightforward. It relies on social login to make signing up as simple as possible for you.
 
-	![Sign in](images/01.jpg "Sign in")
+To sign up, click on the **Sign in** button from the [welcome page](https://apispark.com/ "Welcome page")  and pick a social provider to identify yourself with. Your account will automatically be created for you.
 
-2. Select a social network (github socail coding, Google, Windows Live, Yahoo, Facebook, Linked in, StackExchange or WordPress) for which you already have an account (or create an account on one of these networks before you go further).
+![Sign in](images/01.jpg "Sign in")
 
-	![Sign in](images/02.jpg "Sign in")
+Several social login providers are supported, including **GitHub**, **Google**, **Windows Live**, **Yahoo**, and **Facebook**. You can create an account for free with any of these providers if you don't already own one.
 
-3. Enter your username and password (if you are not already logged in).
+![Sign in](images/sociallogin.png "Sign in")
 
-#Account page
+If you are not already logged-in to your chosen provider, you will be asked to enter your username and password.
 
-The Account page gives you information about your APISpark account.
+# The Account page
 
-1. Sign in to APISpark (if you are not already).
-2. Click on your username on top right of your screen and select **My account**. The **Account** page displays.
+All your APISpark account details are available on the **Account** page.
 
-	![My account](images/03.jpg "My account")
+To navigate to the **Account** page, make sure you are signed in, then click on your username on top right of your screen and select **My account**.
 
-Your **Account** page displays information on three different tabs:
+![My account](images/03.jpg "My account")
 
-  ![tabs](images/04.jpg "tabs")
+The **Account** page has two main tabs: **My account** and **My plan**.
 
-##My account
+## My account
 
-![My account tab](images/05.jpg "My account tab")
+![My account tab](images/myaccount.jpg "My account tab")
 
- * The **Information** section gives you information about your profile and the social network accounts you use to connect to APISpark;  
- * The **Tokens** section gives you information about the token linked to your account. A token is created as you create your APISpark account. This token is your APISpark account identifier. You will not need this token to sign in to APISpark as you will enter your social network username and password.  
- * The **Access Log** section displays the last access logs to your account.
+ * The **Information** section provides information about your profile and the social network account you use to connect to APISpark  
+ * The **Tokens** section lists the tokens linked to your account.
+You won't need to use these tokens for now. You can simply sign in to APISpark with your social provider account.  
+ * The **Access Log** section logs your account activity.
 
-##My plan
+## My plan
 
-![My plan tab](images/06.jpg "My plan tab")
+![My plan tab](images/myplan.png "My plan tab")
 
-From this tab, you can choose the plan you want to subscribe to and pay by entering your credit cards details and address.
+From this tab, you can select the plan that best suits you. You may upgrade or downgrade your plan according to your needs.
 
-##Billing
-
-![Billing tab](images/07.jpg "Billing tab")
+The **My plan** tab also provides management of you **Payment Method**.
