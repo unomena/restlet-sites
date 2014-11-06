@@ -1,4 +1,5 @@
-APISpark provides you interactive tutorials to guide you through your discovery of the platform. You can launch interactive tutorials at any time by clicking the interactive tutorial logo on top right of your screen. 
+
+The APISpark interactive tutorials to are designed to accompany you while you discover the platform. You can start an interactive tutorial at any time by clicking on the interactive tutorial logo at the upper right of your screen. 
 
 ![interactive tutorial logo](images/17.jpg "interactive tutorial logo")
 
