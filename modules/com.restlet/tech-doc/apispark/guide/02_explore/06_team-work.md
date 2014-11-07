@@ -45,11 +45,13 @@ To add a member to a cell:
 1. From the web API **Overview** page, click on the **Members** tab.
 2. In the **Members** section, click on the **Add** button.
 3. In the window that displays, enter the name or email address of the member you want to add. From the information entered, APISpark will suggest the different accounts created by the member (GitHub, Google Mail, etc.).
+
+  ![Add member](images/addMemberToCell.jpg "Add member")
+
 4. Select the appropriate account and click on the **Add** button.
 5. Select a role for your member in the drop-down menu (Manager, Operator, Developer or User).
 
-[TODO update image]
-![Add member](images/addMemberToCell.jpg "Add member")
+
 
 >**Note:** To add a member, s/he must have signed in to APISpark before.
 
