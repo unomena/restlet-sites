@@ -25,4 +25,4 @@ Here is a list of the different step-by-step tutorials we have at your disposal:
   * Document an existing JAX-RS Web API
   * Manage an existing WebAPI from its Swagger documentation
 
-Last update: November, 4th 2014
+Last update: November, 7th 2014

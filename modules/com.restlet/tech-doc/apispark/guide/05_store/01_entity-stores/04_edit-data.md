@@ -23,3 +23,5 @@ Take for example a Film entity with a high cardinality property called alternati
 Adding alternative titles via the data browser would be done as follows:
 
   ![Add list](images/databrowser.png "Add list")
+
+# Back up and restore data
