@@ -1,14 +1,16 @@
 
-# Create a Descriptor
+# Create and edit a Descriptor
 
-1. From APISpark **Dashboard**, click on the **+Web API** button.
+The Descriptor is a type of web API cell.
 
-  ![+Web API](images/03.jpg "+Web API")
+To create a Descriptor, go to the **Dashboard** and click on the **+Web API** button.
 
-2. In the **Create a web API** window, select the **Descriptor Type** and give a **Name** to your Descriptor.
+In the **Create a web API** window, select **Descriptor** from the **Type** pop-down menu. You will be prompted to give your Descriptor a **Name** and a **Description** (optional).
 
-  ![+Web API](images/04.jpg "+Web API")
+![Create a descriptor](images/createadescriptor.png "Create a descriptor")
 
-  Your API Descriptor displays.
+A **Descriptor** is composed of **Endpoints**, **Resources**, and **Representations**.
 
-  ![+Web API](images/05.jpg "+Web API")
+You can edit your Descriptor manually in order to define the structure of an API. From this structure, you will be able to generate documentation and client-side and server-side code from the Descriptor's **Downloads** tab.  
+
+![+Web API](images/mydescriptordownloads.png "+Web API")
