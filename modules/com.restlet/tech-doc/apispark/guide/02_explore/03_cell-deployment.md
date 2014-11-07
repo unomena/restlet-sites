@@ -11,18 +11,11 @@ Cells can be deployed from the draft, published and deprecated states, and can b
 
 <!-- TODO center -->![cell deployment](images/04.jpg "cell deployment")
 
-The deployment process is composed of several steps. Each step is documented by a message in the **Messages** tab.
+The deployment process is composed of several steps, which are displayed in the deployment information window.
 
-1. Your cell model is checked.  
-2. Code is generated  and compiled for your cell.  
-3. Your cell is actually deployed on the APISpark infrastructure.
+![cell deployment process](images/deploymentmessages.png "cell deployment process")
 
-Once you have clicked on the **Deploy** button, you can follow the different steps of the process in the information window that displays.
 
-![cell deployment process](images/05.jpg "cell deployment process")
-
-You can also check the deployment process of your cells in the **Messages** page: from your **Dashboard**, open the appropriate cell and click on the **Messages** tab. Events are listed in the **Traces** section.
+Each step of the deployment process is also documented by a message in the **Messages** tab. The events are listed in the **Traces** section.
 
 ![traces](images/06.jpg "traces")
-
-<a href="www.google.com">google</a>
