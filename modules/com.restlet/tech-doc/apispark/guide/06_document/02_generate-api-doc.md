@@ -32,10 +32,10 @@ You can import a web API’s contract to APISpark using its Swagger definition b
 
 For more information jump to our [Document an existing Restlet web API](apispark/tutorials/api-for-vendors/document-restlet-api "Document an existing Restlet web API") tutorial.
 
-After introspecting your Restlet Framework code, you can work on your [Descriptor](apispark/guide/document/edit-descriptor "Descriptor").
+After introspecting your Restlet Framework code, you can work on your [Descriptor](technical-resources/apispark/guide/document/edit-descriptor "Descriptor").
 
 # Introspect a JAX-RS code
 
 For more information jump to our [Document an existing JAX-RS web API](apispark/tutorials/api-for-vendors/document-jax-rs-api "Document an existing JAX-RS web API") tutorial.
 
-After introspecting your JAX-RS code, you can work on your [Descriptor](apispark/guide/document/edit-descriptor "Descriptor").
+After introspecting your JAX-RS code, you can work on your [Descriptor](technical-resources/apispark/guide/document/edit-descriptor "Descriptor").

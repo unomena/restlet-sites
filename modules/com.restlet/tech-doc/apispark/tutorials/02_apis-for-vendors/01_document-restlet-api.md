@@ -168,4 +168,4 @@ Here is its command line help:
       -v, --verbose
       The optional parameter switching the process to a verbose mode
 
-After introspecting your Restlet Framework code, you can work on your [Descriptor](apispark/guide/document/edit-descriptor "Descriptor").
+After introspecting your Restlet Framework code, you can work on your [Descriptor](technical-resources/apispark/guide/document/edit-descriptor "Descriptor").

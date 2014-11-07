@@ -6,7 +6,7 @@ Once signed in, APISpark Dashboard lets you interact with different types of cel
  * for API Hosting: Full Web API, local data stores (APISpark File Store and Entity Store) and external data stores (see APISpark Wrappers).
 
 To help you start with APISpark, we advise you to launch an
-[interactive tutorial](apispark/guide/get-started/interactive-tutorials "interactive tutorial") or to go through one of our
+[interactive tutorial](technical-resources/apispark/guide/get-started/interactive-tutorials "interactive tutorial") or to go through one of our
 [step-by-step tutorials](apispark/tutorials "step-by-step tutorials").
 
 Here is a list of the different step-by-step tutorials we have at your disposal:

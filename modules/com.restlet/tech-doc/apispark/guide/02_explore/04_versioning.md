@@ -1,7 +1,7 @@
 APISpark automates the version management of your cells. As you create a new cell, a V1 is automatically created.
 
 There are 2 cell states possible: in development (not deployed yet) or already deployed. Each cell can have multiple (draft and deployed) versions in parallel but the last version deployed is the accessible version.
-Each version follows its own lifecycle: draft, published, deprecated, archived, deleted, see [cell lifecycle](apispark/guide/explore/cell-lifecycle "cell lifecycle").
+Each version follows its own lifecycle: draft, published, deprecated, archived, deleted, see [cell lifecycle](technical-resources/apispark/guide/explore/cell-lifecycle "cell lifecycle").
 
 A versioned Entity Store can only be edited incrementally (adding new entities and new properties to existing entities), no existing properties can be modified. Versioned web APIs and File Stores can be modified without restriction.
 

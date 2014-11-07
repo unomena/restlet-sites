@@ -11,7 +11,7 @@ Cells can be deployed from the draft, published and deprecated states, and can b
 
 <!-- TODO center -->![cell deployment](images/04.jpg "cell deployment")
 
-The deployment process is composed of several steps:
+The deployment process is composed of several steps. Each step is documented by a message in the **Messages** tab.
 
 1. Your cell model is checked.  
 2. Code is generated  and compiled for your cell.  
@@ -24,3 +24,5 @@ Once you have clicked on the **Deploy** button, you can follow the different ste
 You can also check the deployment process of your cells in the **Messages** page: from your **Dashboard**, open the appropriate cell and click on the **Messages** tab. Events are listed in the **Traces** section.
 
 ![traces](images/06.jpg "traces")
+
+<a href="www.google.com">google</a>

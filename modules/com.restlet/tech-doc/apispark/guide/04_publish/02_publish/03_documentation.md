@@ -3,7 +3,7 @@ An important part of running a web API is documenting it so that consumers of yo
 
 APISpark is very flexible in this regard and provides three different ways to document you APIs that are hosted on APISpark.
 
-APISpark will also provide automatic documentation for existing APIs that are not hosted by APISpark. In this case, please visit the section called [Document existing web APIs through APISpark Descriptors](apispark/guide/document/overview "Document existing web APIs through APISpark Descriptors").
+APISpark will also provide automatic documentation for existing APIs that are not hosted by APISpark. In this case, please visit the section called [Document existing web APIs through APISpark Descriptors](technical-resources/apispark/guide/document/overview "Document existing web APIs through APISpark Descriptors").
 
 # Make your API documentation public
 
