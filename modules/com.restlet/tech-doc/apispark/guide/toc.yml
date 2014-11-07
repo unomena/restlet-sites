@@ -17,15 +17,15 @@ toc:
   - file: 03_discover-console.md
     id: discover-console
     link_url: /01_get-started/03_discover-console.md
-    long-title: Discover the console
+    long-title: Discover APISpark console
     title: Discover the console
     url: /get-started/discover-console
-  - file: 04_interactive-tutorials.md
-    id: interactive-tutorials
-    link_url: /01_get-started/04_interactive-tutorials.md
-    long-title: Use interactive tutorials
-    title: Use interactive tutorials
-    url: /get-started/interactive-tutorials
+  - file: 04_interactive-assistants.md
+    id: interactive-assistants
+    link_url: /01_get-started/04_interactive-assistants.md
+    long-title: Use interactive assistants
+    title: Use interactive assistants
+    url: /get-started/interactive-assistants
   - file: 05_subscribe.md
     id: subscribe
     link_url: /01_get-started/05_subscribe.md
@@ -216,8 +216,8 @@ toc:
     - file: 04_edit-data.md
       id: edit-data
       link_url: /05_store/01_entity-stores/04_edit-data.md
-      long-title: Edit data
-      title: Edit data
+      long-title: Edit and backup data
+      title: Edit & backup data
       url: /store/entity-stores/edit-data
     - file: 05_sql-schema.md
       id: sql-schema
@@ -250,18 +250,18 @@ toc:
     long-title: Overview
     title: Overview
     url: /document/overview
-  - file: 02_generate-api-doc.md
-    id: generate-api-doc
-    link_url: /06_document/02_generate-api-doc.md
-    long-title: Generate API documentation
-    title: Generate API documentation
-    url: /document/generate-api-doc
-  - file: 03_edit-descriptor.md
+  - file: 02_edit-descriptor.md
     id: edit-descriptor
-    link_url: /06_document/03_edit-descriptor.md
+    link_url: /06_document/02_edit-descriptor.md
     long-title: Edit a Descriptor
     title: Edit Descriptor
     url: /document/edit-descriptor
+  - file: 03_generate-api-doc.md
+    id: generate-api-doc
+    link_url: /06_document/03_generate-api-doc.md
+    long-title: Generate API documentation
+    title: Generate API documentation
+    url: /document/generate-api-doc
   long-title: Document existing web APIs through APISpark Descriptors
   title: Document web APIs
 - dir: 07_manage

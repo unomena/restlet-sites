@@ -2,70 +2,59 @@ If you need your API to get data from your existing SQL database, your firewall 
 
 ![Exposing SQL data](images/08.jpg "Exposing SQL data")
 
-#Extract your SQL Schema from your database
+# Extract your SQL Schema from your database
 You only need a database structure with tables and constraints definitions to import your schema in APISpark.  
 Generate a DDL or SQL file following the appropriate database and tool instructions below.
-##using PostgreSQL with pgAdmin
 
-1. Open pgAdmin.
+## using PostgreSQL
 
-  ![pgAdmin](images/09.jpg "pgAdmin")
+### with pgAdmin
 
-2. Open a connection to your database.
-
-  ![pgAdmin](images/10.jpg "open pgAdmin")
-
-3. Select the database schema you want to export in the tree browser.
+1. From pgAdmin, open a connection to your database.
+2. Select the database schema you want to export in the tree browser.
 
   ![pgAdmin](images/11.jpg "pgAdmin")
 
-4. Click on the **Tools** menu and select **Backup**.
-5. In the **Backup database** window:
+3. Click on the **Tools** menu and select **Backup**.
+4. In the **Backup database** window:
 
   ![pgAdmin](images/12.jpg "pgAdmin")
 
   * Filename: Define the output file name.
   * Format: Plain.
-6. Click on the **Backup** button to generate the output “.backup” file.
-
-  ![pgAdmin](images/13.jpg "pgAdmin")
-
-7. Click on the **Done** button to close the **Backup database** window.
+5. Click on the **Backup** button to generate the output “.backup” file.
+6. Click on the **Done** button to close the **Backup database** window.
 
 You can import the “.backup” file generated in APISpark.
 
-##using PostgreSQL with pg_dump
+### with pg_dump
+
 1. Open a terminal.
 2. Run the following command:
   * On Linux
     * [postgresql_home]\pg_dump -Fp -s -U [user] --file="[output.sql]" [schema]
   * On Windows
     * [postgresql_home]\pg_dump.exe -Fp -s -U [user] --file="[output.sql]" [schema]
-
-Replace the square brackets [] content with:  
+3. Replace the square brackets [] content with:  
   * [postgresql_home] : Install directory of PostgreSQL  
   * [user] : User name  
   * [output.sql] : Path and name of the output SQL file  
   * [schema] : Database schema to export
 
-##using MySQL with MySQL Workbench
-1. Open MySQL Workbench.
+## using MySQL
 
-  ![mySQL Workbench](images/14.jpg "mySQL Workbench")
+### with MySQL Workbench
 
-2. Open a connection to the database:
+1. From MySQL Workbench, open a connection to the database:
   * Click on the **Database** menu and select **Connect to Database**.
   * In the **Connect to Database** window:
     * Define connection parameters
-    * Click on the OK button to open the connection to the database
+    * Click on the **OK** button to open the connection to the database
 
   ![mySQL Workbench](images/15.jpg "mySQL Workbench")
 
-3. Click on the **Server** menu and select **Data Export**.
-
-  ![pgAdmin](images/16.jpg "pgAdmin")
-
-4. In the **Data Export** window:
+2. Click on the **Server** menu and select **Data Export**.
+3. In the **Data Export** window:
 
    ![mySQL Workbench](images/17.jpg "mySQL Workbench")
 
@@ -77,11 +66,9 @@ Replace the square brackets [] content with:
     * Select **Skip table data**
   * Click on **Start Export** button to generate the SQL file.
 
-   ![mySQL Workbench](images/18.jpg "mySQL Workbench")
-
 You can use this SQL file on APISpark.
 
-##using MySQL with mysqldump
+### with mysqldump
 
 1. Open a terminal.
 2. Run the following command:
@@ -95,23 +82,18 @@ Replace the square brackets [] content with:
   * [schema]: Database schema to export  
   * [output.sql]: Path and name of the output SQL file
 
-##using Oracle with SQLDeveloper
-1. Run Oracle SQL Developer.
+## using Oracle
 
-   ![SQL Developer](images/19.jpg "SQL Developer")
+### with SQLDeveloper
 
-2. Connect to your database.
+1. Run Oracle SQL Developer and connect to your database.
 
    ![SQL Developer](images/20.jpg "SQL Developer")
 
-   ![SQL Developer](images/21.jpg "SQL Developer")
-
-3. Export your database:
+2. Export your database:
   * Click on the **Tools** menu and select **Database export**.
 
-    ![SQL Developer](images/22.jpg "SQL Developer")
-
-4. In the **Export wizard Step 1 of 5** window, define these values:
+3. In the **Export wizard Step 1 of 5** window, define these values:
 
     ![SQL Developer](images/23.jpg "SQL Developer")
 
@@ -132,31 +114,26 @@ Replace the square brackets [] content with:
 
 6. In the **Export wizard - Step 3 of 5** window:
 
-    ![SQL Developer](images/25.jpg "SQL Developer")
-
   * Select the tables of your database that you want to export.
   * Click on the **Next** button.
+
 7. In the **Export wizard - Step 4 of 5** window:
 
-    ![SQL Developer](images/26.jpg "SQL Developer")
-
   * Click on the **Next** button.
+
 8. In the **Export wizard - Step 5 of 5**  window:
 
-    ![SQL Developer](images/27.jpg "SQL Developer")
-
   * Click on the **Finish** button.
-9. SQL Developer generates the SQL file which will be imported in APISpark.
 
-    ![SQL Developer](images/28.jpg "SQL Developer")
+9. SQL Developer generates the SQL file which will be imported in APISpark.
 
 You can import the generated SQL file in APISpark.
 
-#Import your SQL Schema in APISpark
+# Import your SQL Schema in APISpark
 
 You can import the SQL file generated by the database tool in APISpark to add new entities for each exported table.
 
-##Use an Entity store
+## Use an Entity store
 
 The DDL/SQL file contains information about database schema and allows APISpark to create entities for each database table.
 To import the DDL/SQL file, you must use an existing Entity Store:
@@ -169,7 +146,7 @@ To import the DDL/SQL file, you must use an existing Entity Store:
 3. Select your SQL file.
 4. Click on the **Import** button.
 
-##Entities creation
+## Entities creation
 
 APISpark reads SQL orders in the import file. Entities are automatically created from each table in the SQL schema file specified.
 
@@ -180,22 +157,22 @@ APISpark reads SQL orders in the import file. Entities are automatically created
 
 At the end of the import, APISpark displays a confirmation message indicating the success or failure of the import.
 
-##Import details
+## Import details
 
 Click on the **Messages** tab to get more details about the import.
 
 ![Entity Store](images/30.jpg "Entity Store")
 
-##Leverage the Entity Store
+## Leverage the Entity Store
 You can adapt the generated entities of the entity store to your needs by:
 * adding more fields
 * modifying field type
 * adding default values
 * adding constraints, like not nullable, foreign key or primary key
 
-#Appendix: Supported SQL features and syntax
+# Appendix: Supported SQL features and syntax
 
-##Supported SQL syntax by database export tool
+## Supported SQL syntax by database export tool
 
 The following table contains SQL features which can be read by APISpark in the SQL file exported by the database tool.
 
@@ -207,7 +184,7 @@ The following table contains SQL features which can be read by APISpark in the S
 | **MySQL/MySQL Workbench** | X | X | X | X | X
 | **MySQL/mysqldump** | X | X | X | X | X
 
-##Supported SQL syntax in the SQL file
+## Supported SQL syntax in the SQL file
 The supported SQL statements in the SQL file are:
 
 * CREATE TABLE …
@@ -216,13 +193,13 @@ The supported SQL statements in the SQL file are:
 * ALTER TABLE [table] ADD PRIMARY KEY …
 * ALTER TABLE [table] ADD FOREIGN KEY …
 
-##Primary key
+## Primary key
 
 * Primary keys with only one column are supported.
 * If a primary key has more than one column, this primary key is ignored and is replaced by an “id” column in the Entity Store which will be the primary key.
 * If the table has no primary key, a new property named “id” is created in the - Entity Store and will be its primary key.
 
-##Foreign key
+## Foreign key
 
 * Foreign keys with only one column are supported.
 * If a foreign key has more than one column, this foreign key is ignored.
