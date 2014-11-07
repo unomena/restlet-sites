@@ -39,7 +39,7 @@ To upload a file, select the desired Folder from the **Folders** section, and  c
 
   ![Browser](images/04.jpg "Browser")
 
-Click on the **Upload a file** button, and select a file from your file system.
+Upload a file from your file system.
 
 
 
