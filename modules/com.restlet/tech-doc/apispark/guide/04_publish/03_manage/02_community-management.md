@@ -1,14 +1,14 @@
-In order to inform your community, you can use the **Messages** feature.
 
-1. From your API **Overview** page, click on the **Messages** tab.
-2. In the **Messages** section, click on the **Add** button.
+To keep your users and team members informed about your API, you edit messages from the API's **Messages** tab.
+
+To create a new message, click on the **Add** button.
 
   ![Add a message](images/01.jpg "Add a message")
 
-3. In the **Add message** window, enter a **Title**, **Content** and select a message **Type** (Info or Deployment).
+You'll be prompted to enter a **Title**, **Content** and select a message **Type** (Info or Deployment).
 
   ![Add message](images/02.jpg "Add message")
 
-The messages written display in the Dashboard cell cards.
+A cell's most recent messages are displayed in its Dashboard cell card.
 
 ![Message in Dashboard](images/03.jpg "Message in Dashboard")
