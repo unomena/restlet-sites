@@ -1,43 +1,31 @@
-#Definition
-A Web API Descriptor documents a Web API. You may create a web API descriptor by introspecting existing code (Restlet framework, JAX_RS) or import an existing web API definition (the Swagger format is supported as of October 2014).
 
-An APISpark Descriptor can be automatically translated to Swagger or RAML format. Displaying and updating a descriptor should be possible for developers and documentation writers as the descriptor is created but only visible for users when it is published.
+APISpark can enhance the way you document an existing web API hosted outside the APISpark platform.
 
-<!-- TODO center -->
-![web API Descriptor](images/01.jpg "web API Descriptor")
+# Enhanced API documentation
 
-#Benefits
-APISpark Descriptors feature saves substantial time.   
-Here are some of the benefits of using APISpark Descriptors:  
+APISpark can help you document an existing API in the following ways:
 
-* Your documentation is automatically generated.  
-* You are provided with client SDKs and server skeletons which avoids you repetitive and non qualitative work that often leads to bugs.  
-* You are also provided with analytics, firewall and user management features which are included  
+* Automatically generated **documentation**  
+* Automatically generated **client SDKs** and **server skeletons**
+
+# The web API Descriptor
+
+A web API **Descriptor** is a type of APISpark cell that documents a web API. Many features are then accessible via the Descriptor. 
+
+You may create a web API Descriptor by introspecting existing code (Restlet framework, JAX_RS) or by importing an existing web API definition in the Swagger format.
 
 
-#Operational description
-Here is the process described to document an existing API with the Descriptor feature:
+Similarly, an APISpark Descriptor can be automatically translated to the Swagger or RAML formats.
 
-1. Develop web API (without APISpark)
-2. Create descriptor via introspection
-3. Update descriptor by hand or via introspection
-4. Generate  documentation + SDKs
-5. Download documentation + SDKs
-6. Consume web API (outside APISpark)
+A Descriptor can be edited by members of the team that provide the described API. On the other hand, the Descriptor can be consulted by consumers of the API, who can also benefit from the elements derived from the Descriptor such as client SDKs.
 
-<!-- TODO center -->
-![web API Descriptors](images/02.jpg "web API Descriptors")
+# The process of documenting your external API
 
-#Create a Descriptor
+Here is a summary of the process that allows you to document an existing API using APISpark's **Descriptor**:
 
-1. From APISpark **Dashboard**, click on the **+Web API** button.
+1. Develop web API (outside the APISpark platform)
+2. Create a Descriptor by introspection, or by importing a Swagger definition
+3. Maintain the Descriptor either by hand or automatically via introspection
+4. Generate documentation + SDKs for your API consumers to download
 
-	![+Web API](images/03.jpg "+Web API")
-
-2. In the **Create a web API** window, select the **Descriptor Type** and give a **Name** to your Descriptor.
-
-	![+Web API](images/04.jpg "+Web API")
-
-	Your API Descriptor displays.
-
-	![+Web API](images/05.jpg "+Web API")
+In the following sections, we'll show you how to manually create and edit a web API Descriptor. Then we'll explain how to automatically generate a web API Descriptor from your existing web API implementation.
