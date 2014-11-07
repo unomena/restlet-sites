@@ -13,6 +13,12 @@ To modify the relative path of a resource, click on the appropriate resource in 
 
 > **Note**: you will need to redeploy your API for any changes to take effect.
 
+## Organising resources in sections
+
+**Sections** allow you to group resources together in order to make it easier for you manage them.
+
+A web API's **Sections** can be managed in the left panel of the **Overview**.
+
 # Resource methods
 
 Every web API **Resource** has a list of associated **Methods**. The methods are HTTP methods, the most commonly used of which are GET, PUT, POST, and DELETE.
