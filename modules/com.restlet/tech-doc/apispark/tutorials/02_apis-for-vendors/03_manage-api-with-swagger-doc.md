@@ -8,19 +8,13 @@ APISpark dynamically generates the Swagger description of web APIs and provides 
 
 1. Select the web API you want to get the Swagger definition of.
 
-2. Open the **Settings** tab and click on the **Information** section, then on the **API commons** tab in the center pane.
+2. From the **Overview** tab, click on the **General information** button, then on the **API commons** tab in the central panel.
 
-  ![API Commons](images/06.jpg "API Commons")
+  ![API Commons](images/swagger-apicommons.jpg "API Commons")
 
-  The Swagger definition of your API is hosted on the address specified by the  **Swagger URL** field.
+  To get the address which hosts the Swagger definition of your API (1.2 or 2.0), click on the **Overview** tab. You will find it in the **Export your API** section.
 
   ![API Commons](images/07.jpg "API Commons")
-
-#Check out its Swagger UI
-
-On the same tab as previously, you can either download a local version of Swagger UI with the button **Download Swagger UI** or just open it on APISpark with the   **Open Swagger UI** button.
-
-![API Commons](images/08.jpg "API Commons")
 
 #Import existing Swagger definitions
 
