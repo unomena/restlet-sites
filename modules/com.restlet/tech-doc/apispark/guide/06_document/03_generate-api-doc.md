@@ -1,31 +1,26 @@
-# Import a Swagger definition
 
-For more information jump to our [Manage an existing web API from its Swagger documentation](apispark/tutorials/api-for-vendors/manage-api-with-swagger "Manage an existing web API from its Swagger documentation") tutorial.
+Rather than manually create a **Descriptor** from scratch, APISpark provides ways for you to automatically generate one that describes your existing API.
 
-## Import existing Swagger definitions
+A **Descriptor** can be generated from your current API's Swagger definition, or from your API's Restlet Framework or Jax-RS implementation.
 
-You can import a web API’s contract to APISpark using its Swagger definition by providing the URL on which it is available to APISpark.
+# Generate a Descriptor from a Swagger definition
 
-1. From an existing API page, click on the actions arrow on top right of your screen and select **Import definition**.
+You can generate a web API Descriptor by importing a Swagger definiton for an existing web API, by provider the Swagger definition's URL.
 
-  ![Import definition](images/importswagger08.jpg "Import definition")
+Open an existing Descriptor or create a new one from the Dashboard by clicking on **+ Web API** and selecting **Descriptor** from the pop-down menu.
 
-2. In the **Import a Web API definition** window, fill in the different fields to import the representations and resources of a Swagger definition into your API.
+From the Descriptor's **Overview**, click on the actions button on the top right of your screen and select **Import definition** from the menu.
 
-  ![Import definition](images/importswagger09.jpg "Import definition")
+  ![API Commons](images/swagger-import-definition.jpg "API Commons")
 
-3. Click on the **Import** button. The representations and resources of the Swagger definition you provided the link to are imported in your **Overview** tab.
+You will be prompted to enter the URL that points to
+your API's Swagger definition.
 
-  ![Import definition](images/importswagger10.jpg "Import definition")
+Click on the **Import** button to import the Swagger definition into your Descriptor. As a result, representations and resources will be added to your Descriptor according to the content of the Swagger definition.
 
+To view the changes, navigate to the Descriptor's **Overview** tab.
 
- >**Note:** If you import several definitions you may have conflicts, multiple resources on the same path or multiple representations with the same name. The import wizard will display a message in an orange panel and you will be free to solve the conflicts by yourself.
-
-![Import definition](images/importswagger11.jpg "Import definition")
-
- >**Note:** If you close the panel, you can still find the traces in the Messages tab, in the Traces section of the left pane.
-
-![Import definition](images/importswagger12.jpg "Import definition")
+> **Note:** Importing several Swagger definitions to the same Descriptor could result in naming conflicts for resource paths or representations. The import wizard will indicate which conflicts need to be resolved.
 
 
 # Introspect a Restlet Framework code
