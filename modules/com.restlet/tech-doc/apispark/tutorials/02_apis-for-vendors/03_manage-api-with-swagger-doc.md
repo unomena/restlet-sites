@@ -6,7 +6,7 @@ APISpark dynamically generates the Swagger description of web APIs and provides 
 
 #Get the Swagger definition of your API
 
-1. Select the web API you want to get the Swagger definition of.
+1. Select the Descriptor of the API you want to get the Swagger definition of.
 
 2. From the **Overview** tab, click on the **General information** button, then on the **API commons** tab in the central panel.
 
@@ -20,17 +20,13 @@ APISpark dynamically generates the Swagger description of web APIs and provides 
 
 You can import a web API’s contract to APISpark using its Swagger definition just by providing the URL on which it is available to APISpark.
 
-1. From an existing API page, click on the actions button on the top right to open the drop-down menu, then select the **Import definition** action.
+1. From an existing Descriptor page, click on the actions button on the top right of your screen and select the **Import definition** menu.
 
-  ![API Commons](images/09.jpg "API Commons")
+  ![API Commons](images/swagger-import-definition.jpg "API Commons")
 
-2. You will have access to a form which you can fill in to import the representations and resources of a Swagger definition into your API.
-
-![API Commons](images/10.jpg "API Commons")
+2. Enter the URL that contains your API definition. You cannot import a definition by importing file.
 
 After you click on the **Import** button, the representations and resources of the Swagger definition you provided the link to will be imported in your **Overview** tab.
-
-![API Commons](images/11.jpg "API Commons")
 
 If you import several definitions you may have conflicts, multiple resources on the same path or multiple representations with the same name. The import wizard will display a message in an orange panel and you will be free to solve the conflicts by yourself.
 
