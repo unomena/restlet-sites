@@ -59,21 +59,19 @@ Enter a name for your API (e.g. myAPI).
 
 The domain will be created automatically but may not be available anymore so make sure to adjust it.
 
-![Create a web API](images/create-my-api.jpg "Create a web API")
+![Create a web API](images/domain-name-unavailable.jpg "Create a web API")
 
-Click **Create**. You will be taken to the API’s **Overview**.
+Click **Add**. You will be taken to the API’s **Overview** page.
 
 The screenshot below shows some of the drop down menus opened to give you an idea of how it is organized.
 
-![](/static/images/site/tutorials/tutorial1-apiOverview.png)
+![structure](images/api-overview.jpg "structure")
 
 Deploy the API by clicking the **Deploy** button.
 
-![](/static/images/site/tutorials/tutorial1-07-apiDeploySuccess.png)
-
 The API should now be accessible online. To reach it, use the subdomain of apispark.net that you chose when you created the API.
 
-![](/static/images/site/tutorials/tutorial1-08-endpointOverview.png)
+![credentials](images/credentials.jpg "credentials")
 
 As you can see, the credentials required to invoke the API can be found in the **Overview** tab, by clicking on the relevant **Endpoint**. You will need to copy the **Endpoint URI**, **Login** and **Password** information for the next step.
 
@@ -89,9 +87,8 @@ Click the **Send** button.
 
 The following figure shows the API call in POSTMAN.
 
-![](/static/images/site/tutorials/tutorial1-09-postman.png)
+![Invoke your API with Postman](images/postman.jpg "Invoke your API with Postman")
 
->**Note:** APISpark can also generate custom Client SDKs for different environments such as Java, Android, GWT and JavaScript
-    (AJAX or Node.js). More environments will be supported in the future.
+>**Note:** APISpark can also generate custom Client SDKs for different environments such as Java, Android, GWT and JavaScript (AJAX or Node.js). More environments will be supported in the future.
 
 Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the [Help Desk](http://support.apispark.com/).
