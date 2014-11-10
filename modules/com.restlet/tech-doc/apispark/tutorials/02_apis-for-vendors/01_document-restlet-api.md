@@ -1,22 +1,50 @@
 #Introduction
 
-APISpark provides a tool that allows you to extract the web API definition of your Restlet API and import it in APISpark to provide documentation and tooling.
+APISpark provides a tool thaht allows you to extract the web API definition of your Restlet API or JAX-RS API application and import it in APISpark to provide documentation and tooling.
 
 You can:
 
-* Introspect your Restlet-based web API to retrieve its description
+* Introspect your Restlet-based or JAX-RS Web API or parse a Swagger definition to retrieve its description
 * Display and edit this description within APISpark
-* Synchronize Web API changes initiated from your API's code
+* Synchronize Web API changes initiated from your API's code or Swagger
 
-In these scenarios we will leverage the Introspector tool by loading a web API definition into APISpark. You can find a complete example of documentation generated via this tool here, the description fields were not retrieved from the Restlet Framework code, they were added manually in APISpark.
+In these scenarios we'll leverage the Introspector tool by loading a Web API definition into APISpark with the three types of inputs available. You can find a complete example of documentation generated via this tool here, the description fields weren't retrieved from the Restlet Framework code, they were added manually in APISpark.
 
 #Launch process
 
-In this example, we will document a Restlet-based Web API. Users have to point the Introspector to the class extending org.restlet.Application. Here, the Application class in our code is org.restlet.api.MyContacts.
+In a first example, we will document a Restlet-based Web API. Users have to point the Introspector to the class extending org.restlet.Application. Here, the Application class in our code is org.restlet.api.MyContacts.
+
 
     java -cp "/path/to/your/lib/*" org.restlet.ext.apispark.Introspector -u 55955e02-0e99-47f8 -p 6f3ee88e-8405-44c8 org.restlet.api.MyContacts`
 
-Whether you use this class to run your web API or not, you must create it to run the Introspector.
+Then we will document an API based on its Swagger definition.
+
+    java -cp "/path/to/your/lib/*" org.restlet.ext.apispark.Introspector -u 55955e02-0e99-47f8 -p 6f3ee88e-8405-44c8 -l swagger http://petstore.swagger.wordnik.com/api/api-docs`
+
+And finish with a JAX-RS API.
+
+    java -cp "/path/to/your/lib/*" org.restlet.ext.apispark.Introspector -u 55955e02-0e99-47f8 -p 6f3ee88e-8405-44c8 org.jaxrs.api.MyContacts`
+
+
+> **Note:** For the JAX-RS introspection to work, users have to point the Introspector to a class extending javax.ws.rs.core.Application and listing all the JAX-RS annotated classes as follows:
+
+    package org.coenraets.directory;
+
+      import java.util.HashSet;
+      import java.util.Set;
+      import javax.ws.rs.core.Application;
+
+      public class MyContacts extends Application {
+      @Override
+      public Set<Class<?>> getClasses() {
+      Set<Class<?>> classes = new HashSet<Class<?>>();
+      classes.add(EmployeeResource.class);
+      return classes;
+      }
+      }
+  `
+
+Whether you use this class to run your Web API or not, you must create it to run the Introspector.
 
 #Configuration
 
@@ -88,9 +116,9 @@ The parameters -u and -p are mandatory, they correspond to your APISpark user na
 
 Here is the result, we get from the Introspector:
 
-    Process successfully achieved.
-    Your Web API contract's id is: 246
-    Your Web API documentation is accessible at this URL: https://apispark.com/apis/246/versions/1`
+  `Process successfully achieved.
+  Your Web API contract's id is: 246
+  Your Web API documentation is accessible at this URL: https://apispark.com/apis/246/versions/1`
 
 ![Overview](images/15.jpg "Overview")
 
