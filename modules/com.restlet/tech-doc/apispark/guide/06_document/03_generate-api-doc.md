@@ -23,14 +23,14 @@ To view the changes, navigate to the Descriptor's **Overview** tab.
 > **Note:** Importing several Swagger definitions to the same Descriptor could result in naming conflicts for resource paths or representations. The import wizard will indicate which conflicts need to be resolved.
 
 
-# Introspect a Restlet Framework code
+# Generate a Descriptor with Restlet's code Introspector
 
-For more information jump to our [Document an existing Restlet web API](apispark/tutorials/api-for-vendors/document-restlet-api "Document an existing Restlet web API") tutorial.
+The Restlet code introspector is designed to generate a web API Descriptor by introspecting the code of your existing web API implementation.
 
-After introspecting your Restlet Framework code, you can work on your [Descriptor](technical-resources/apispark/guide/document/edit-descriptor "Descriptor").
+The introspector supports two types of Java implementations: those based on the Restlet Framework, and those based on JAX-RS.
 
-# Introspect a JAX-RS code
+For more information on how to introspect a Restlet Framework application, jump to our [Document an existing Restlet web API](apispark/tutorials/api-for-vendors/document-restlet-api "Document an existing Restlet web API") tutorial.
 
-For more information jump to our [Document an existing JAX-RS web API](apispark/tutorials/api-for-vendors/document-jax-rs-api "Document an existing JAX-RS web API") tutorial.
+For more information on how to instrospect a JAX-RS application, jump to our [Document an existing JAX-RS web API](apispark/tutorials/api-for-vendors/document-jax-rs-api "Document an existing JAX-RS web API") tutorial.
 
 After introspecting your JAX-RS code, you can work on your [Descriptor](technical-resources/apispark/guide/document/edit-descriptor "Descriptor").
