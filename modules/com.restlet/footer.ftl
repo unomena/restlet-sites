@@ -131,9 +131,51 @@
     </div>
 </header><!--/HEADER-->
 
-<div class="container">
-  <div class="content_wrapper">  
+<div class="technical_documentation">
+
+
+
+<#compress>
+<#list sections.section as section>
+   <#if (section.@id == currentSection) && section.sections.section?has_content>
+    <div class="container subsections">
+      <ul class="pages">
+      <#list section.sections.section as subsection>
+         
+        <li<#if subsection.@id == currentSubSection> class="active"</#if>><a href="/${section.@id}/${subsection.@id}">${subsection.label?trim}</a></li>
+         
+      </#list>
+      </ul>
+    </div>
+    <div class="clearBoth"></div>
+   </#if>
+</#list>
+</#compress>
+    <div class='container<#if "-"=currentSection> topics</#if> content'>
+    <#if (("learn"=currentSection!"") && (("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!"")))>${editButton!""}</#if><#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>${branchSwitch!""}</#if>
 		${content}
+    </div>
+    <div class="content footerWrapper">
+        <div class="footer">
+        <br>
+        <#if (("learn"=currentSection!"") && (("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!"") || ("roadmap" == currentSubSection!"")) || ("discover"=currentSection!"") && (("firststeps" == currentSubSection!"") || ("faq" == currentSubSection!"")) || ("participate"=currentSection!"") && (("index" == currentSubSection!"")))>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'restletblog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+        </#if>
+    </div>
   </div>
 </div>
 
