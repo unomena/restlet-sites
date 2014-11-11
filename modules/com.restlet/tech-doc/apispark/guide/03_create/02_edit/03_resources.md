@@ -1,6 +1,4 @@
 
-# Resources
-
 A web API has a set of **Resources**. Each resource has its own **Path** which is relative to the API's **Endpoints**.
 
 To edit a web API's **Resources**, navigate to the Web API's **Overview**. The API's resources are listed in the **Resources** section in the left panel.
@@ -13,7 +11,7 @@ To modify the relative path of a resource, click on the appropriate resource in 
 
 > **Note**: you will need to redeploy your API for any changes to take effect.
 
-## Organising resources in sections
+# Organising resources in sections
 
 **Sections** allow you to group resources together in order to make it easier for you manage them.
 

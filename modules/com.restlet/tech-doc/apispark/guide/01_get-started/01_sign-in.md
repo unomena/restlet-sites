@@ -1,5 +1,5 @@
 
-# Sign Up to APISpark
+# Sign Up
 
 APISpark's sign up process is straightforward. It relies on social login to make signing up as simple as possible for you.
 

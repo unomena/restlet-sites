@@ -1,5 +1,4 @@
-# Base plan
-
+# APISpark Base plans
 
 ## Plans overview
 

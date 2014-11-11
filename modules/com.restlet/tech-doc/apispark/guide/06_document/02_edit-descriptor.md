@@ -1,6 +1,4 @@
 
-# Create and edit a Descriptor
-
 The Descriptor is a type of web API cell.
 
 To create a Descriptor, go to the **Dashboard** and click on the **+Web API** button.

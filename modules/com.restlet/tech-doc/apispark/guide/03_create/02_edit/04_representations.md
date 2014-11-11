@@ -1,6 +1,4 @@
 
-# Representations
-
 A web API has a set of **Representations** that are used as input and output types for the API's resource methods.
 
 A **Representation** has a **Name** and a **Description** (optional), and is composed of **Properties** which hold values.
