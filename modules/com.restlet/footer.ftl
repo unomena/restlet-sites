@@ -60,74 +60,123 @@
 	  	</#if>
 	  </#if>	  
       ${metaheader!""}
-      <link type="image/gif" href="/images/favicon-restlet-org.gif" rel="icon">
-      <link rel="stylesheet" type="text/css"             href='/stylesheets/bootstrap.css' />
-      <link rel="stylesheet" type="text/css"             href='/stylesheets/bootstrap-responsive.css' />
-      <link rel="stylesheet" type="text/css"             href='/stylesheets/styles.css' />
-      <link rel="alternate"  type="application/atom+xml" href="/feeds/summary" title="${labels.summaryRestletBlog?trim}" />
-      <link rel="alternate"  type="application/rss+xml"  href="http://blog.restlet.com/feed/?cat=15314" title="${labels.restletBlog?trim}" />
-<#list stylesheet_files as stylesheet_file>
-      <link rel="stylesheet" type="text/css"            href="${stylesheet_file}" />
-</#list>
-<#if stylesheet??>
-      <style type="text/css">
-      ${stylesheet}
-      </style>
-</#if>
-      <script                type="text/javascript"     src="/javascript/jquery-1.9.0.min.js"></script>
-      <script                type="text/javascript"     src="/javascript/jquery-cookie.js"></script>
-      <script                type="text/javascript"     src="/javascript/common.js"></script>
-<#list javascript_files as javascript_file>
-      <script                type="text/javascript"     src="${javascript_file}"></script>
-</#list>
-<#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>
-      <script                type="text/javascript"     src="/javascript/jsclass-core.js"></script>
-      <script                type="text/javascript"     src="/javascript/json-minified.js"></script>
-      <script                type="text/javascript"     src="/javascript/restlet-client.js"></script>
-      <script                type="text/javascript"     src="/javascript/bootstrap.min.js"></script>
-      <script                type="text/javascript"     src="/javascript/data.js"></script>
-    <#if ("javadocs" == currentSubSection!"")>
-      <script                type="text/javascript"     src="/javascript/javadocs.js"></script>
-    <#elseif ("guide" == currentSubSection!"")>
-      <script                type="text/javascript"     src="/javascript/userguide.js"></script>
-    <#elseif ("tutorial" == currentSubSection!"")>
-      <script                type="text/javascript"     src="/javascript/tutorial.js"></script>
-    </#if>
-</#if>
-      <script type="text/javascript">
-<#if pp.sourceFile?matches("learn\\/[0-9]\\.[0-9]$") >
-        $.cookie('branch', '${pp.sourceFile?substring(6)}', {path: '/' });
-<#elseif pp.sourceFile?matches("learn\\/[0-9]\\.[0-9]/.*$") >
-        $.cookie('branch', '${pp.sourceFile?substring(6, 9)}', {path: '/' });
-</#if>
-<#if javascript??>
-      ${javascript}
-</#if>
-
-<#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>
-    $(document).ready(function() {
-        init($("#cBranch"));
-    });
-</#if>
-      </script>
+      <link rel="stylesheet" type="text/css"             href='/static/app/css/layout.css' />
+      <link rel="stylesheet" type="text/css"             href='/static/app/css/restlet_framework.css' />
+      <script src="/static/app/js/libs/modernizr.js"></script>
    </head>
    <body>
    <!--[if IE 8]><div id="IE8"><div id="IE9"><![endif]-->
    <!--[if IE 9]><div id="IE9"><![endif]-->
-    <div class='topbar'>
-      <div class='header'>
-        <div class='container'>
-          <a class='brand' href="/" title='Restlet Framework'>
-            <img alt='Restlet Framework Logo' height='136' width='129' src='/images/logo-restlet-new.png' />
-          </a>
-          <ul class='nav'>
-    <#list sections.section as section>
-      <#if !(section.@hidden?has_content)><li><a<#if section.@id == currentSection> class='active ${section.@id}link'<#else> class="${section.@id}link"</#if> href="/${section.@id}/">${section.title}</a></li></#if>
-	</#list>
-          </ul>
-        </div>
-      </div>
+    
+
+
+<header class="followMe">
+    <div class="container">
+        <div class="navbar col-12" role="navigation">
+             <div class="navbar-header">
+                <button type="button" class="navbar-toggle"></button>
+                <a class="brand" href="/"><img alt="Restlet" src="/static/app/img/logo.png" /></a>
+            </div> <div class="collapse navbar-collapse"> <ul class="nav">
+                    <li >
+                        <a href="javascript:void(0)">Products<span class="indicator"></span></a>
+                        <div class="sub_menu_wrapper">
+                            <div class="container">
+                                <ul>
+                                    <li>
+                                        <a href="/products/restlet-framework/">
+                                            <img alt="Restlet Framework" src="/static/app/img/f_logo.png" />
+                                            <p>Create and use Java APIs</p>
+                                            <div class="border"></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/products/apispark/">
+                                            <img alt="APISpark" src="/static/app/img/a_logo.png" />
+                                            <p>The first self-service platform for APIs</p>
+                                            <div class="border"></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/products/restlet-studio/">
+                                            <img alt="Restlet Studio" src="/static/app/img/s_logo.png" />
+                                            <p>Web-based API design</p>
+                                            <div class="border"></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>    
+                        </div>    
+                    </li>
+                    <li class="on">
+                        <a href="#">Technical Resources<span class="indicator"></span></a>
+                        <div class="sub_menu_wrapper menu_option_2">
+                            <div class="container">
+                                <ul>
+                                    <li>
+                                        <a href="/technical-resources/restlet-framework">
+                                            <img alt="Restlet Framework" src="/static/app/img/f_logo.png" />
+                                        </a>
+                                        <ul>
+                                            <li><a href="/technical-resources/restlet-framework">Tutorials</a></li>
+                                            <li><a href="/technical-resources/restlet-framework">User Guide</a></li>
+                                            <li><a href="/technical-resources/restlet-framework/faq/">FAQ</a></li>
+                                            <li><a href="">Download</a></li>
+                                        </ul>    
+                                    </li>
+                                    <li>
+                                        <a href="/technical-resources/apispark/guide">
+                                            <img alt="APISpark" src="/static/app/img/a_logo.png" />
+                                        </a>
+                                        <ul>
+                                            <li><a href="/technical-resources/apispark/tutorials">Tutorials</a></li>
+                                            <li><a href="/technical-resources/apispark/guide">User Guide</a></li>
+                                            <li><a href="/technical-resources/apispark/faq/">FAQ</a></li>
+                                            <li><a target="_blank" href="http://apispark.restlet.com/signin">Sign In</a></li>
+                                            <li><a href="">Helpdesk</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/technical-resources/restlet-studio">
+                                            <img alt="Restlet Studio" src="/static/app/img/s_logo.png" />
+                                        </a>
+                                        <ul>
+                                            <li><a href="/technical-resources/restlet-studio">Tutorials</a></li>
+                                            <li><a href="/technical-resources/restlet-studio">User Guide</a></li>
+                                            <li><a href="/technical-resources/restlet-studio/faq/">FAQ</a></li>
+                                            <li><a target="_blank" href="http://studio.restlet.com">Launch</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>        
+                    </li>
+                    <li >
+                        <a href="/company/">Company</a>
+                    </li>
+                    
+                </ul>
+                <ul class="nav pull-right">
+                    <li >
+                        <a href="">Blog</a>
+                    </li>
+                    
+                        <li><a href="http://apispark.restlet.com/signin">Sign In</a></li>
+                        
+                    
+                    <li class="search">
+                        <form action="#" id="frmSearch"> 
+                            <input type="text" name="q" class="text" placeholder="Search"> 
+                            <input type="submit" name="sa" class="submit"> 
+                        </form>
+                    </li>
+                </ul>
+            </div>    
+        </div>    
     </div>
+</header><!--/HEADER-->
+
+
+
     <div class='hero ac <#if headerClass?has_content>${headerClass}<#else>smallHeader</#if>'>
       <div class='container'>
 <#compress>
@@ -238,5 +287,21 @@
 </#if>
 	<!--[if IE 8]></div></div><![endif]-->
 	<!--[if IE 9]></div><![endif]-->
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="/static/app/js/libs/jquery.form.js"></script>
+      <script src="/static/app/js/libs/jquery.formset.js"></script>
+      <script src="/static/app/js/libs/jquery.validate.js"></script>
+      <script src="/static/app/js/libs/jquery-ui-1.10.3.custom.min.js"></script>
+      <script src="/static/app/js/libs/tag-it.min.js"></script>
+      <script src="/static/app/js/libs/backstretch.min.js"></script>
+      <script src="/static/app/js/libs/stellar.js"></script>
+      <script src="/static/app/js/libs/waypoints.min.js"></script>
+      <script src="/static/app/js/libs/inViewport.js"></script>
+      <script src="/static/app/js/libs/jquery.flexslider-min.js"></script>
+      <script src="/static/app/js/libs/mightyslider.js"></script>
+      <script src="/static/app/js/libs/jquery.easing.js"></script>
+      <script src="/static/app/js/libs/jquery.visualNav.min.js"></script>
+      <script src="/static/app/js/libs/os_detection.js"></script>
+      <script src="/static/app/js/scripts.js"></script>
    </body>
 </html>
