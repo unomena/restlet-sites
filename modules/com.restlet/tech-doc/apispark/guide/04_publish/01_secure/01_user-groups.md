@@ -16,14 +16,14 @@ Of course, you can freely edit your API's member groups and delete the default o
 
 # Managing web API groups
 
-1. From your API **Overview** page, click on the **Members** tab.
-2. In the **Groups** section, click on the **Add** button.
+From your API **Overview** page, click on the **Members** tab.
+In the **Groups** section, click on the **Add** button.
 
-	![Groups section](images/01.jpg "Groups section")
+![Groups section](images/01.jpg "Groups section")
 
-3. In the **Add group** window, enter the name and description for your group. The new group displays in the **Groups** section.
+In the **Add group** window, enter the name and description for your group. The new group displays in the **Groups** section.
 
-	![Add group](images/02.jpg "Add group")
+![Add group](images/02.jpg "Add group")
 
 # Managing group members
 
@@ -33,7 +33,7 @@ You can manage a group's members by selecting the group from the left panel of t
 
 Add members to a group by clicking on the **+ Add a member** button of the selected group.
 
-> Note: you can only add a member to a group if he has already been added as a member of your API. The process of adding member to any cell is described in the [Team Work](technical-resources/apispark/guide/explore/team-work "Team Work") page.
+> Note: you can only add a member to a group if s/he has already been added as a member of your API. The process of adding member to any cell is described in the [Team Work](technical-resources/apispark/guide/explore/team-work "Team Work") page.
 
 
 ## Set your consumer members' role to User

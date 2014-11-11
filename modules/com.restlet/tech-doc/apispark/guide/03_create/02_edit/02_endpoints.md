@@ -7,7 +7,7 @@ An **Endpoint** has a **URI** (Uniform Resource Identifier), a **Protocol**, a *
 
 A single API can have multiple endpoints, for example to respect different naming conventions or to support different protocols such as HTTP or HTTPS.
 
-To edit a Web API's endpoints in APISpark, navigate to the Web API's **Overview**. The API's endpoints are listed in the **Endpoints** section in the left panel.
+To edit a web API's endpoints in APISpark, navigate to the Web API's **Overview**. The API's endpoints are listed in the **Endpoints** section in the left panel.
 
 ![Endpoints section](images/04.jpg "Endpoints section")
 

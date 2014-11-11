@@ -1,4 +1,4 @@
-# General information
+# General information section
 
 From the **Overview** of a web API, the **General information** panel can be accessed by cliking the **General information** button in the left panel.
 

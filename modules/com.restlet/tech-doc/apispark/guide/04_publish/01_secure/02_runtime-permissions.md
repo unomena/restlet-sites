@@ -1,5 +1,3 @@
-# Configure runtime access for groups
-
 Runtime access to an API is configured by allowing specific resource methods for specific groups.
 
 ## Configure default permissions

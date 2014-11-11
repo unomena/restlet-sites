@@ -1,4 +1,4 @@
-To deploy an entity store, simply click on the **Deploy** button. Messages will inform you of the progress and completion of the procedure.
+To deploy an Entity Store, simply click on the **Deploy** button. Messages will inform you of the progress and completion of the procedure.
 
 **Warning**: if the entity store is in draft mode and has only one version, all data will be erased if the store is deployed.
 
