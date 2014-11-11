@@ -131,26 +131,11 @@
     </div>
 </header><!--/HEADER-->
 
-<div class="technical_documentation">
-
-
-<#compress>
-<#list sections.section as section>
-   <#if (section.@id == currentSection) && section.sections.section?has_content>
-    <div class="container subsections">
-      <ul class="pages">
-      <#list section.sections.section as subsection>
-         
-        <li<#if subsection.@id == currentSubSection> class="active"</#if>><a href="/${section.@id}/${subsection.@id}">${subsection.label?trim}</a></li>
-         
-      </#list>
-      </ul>
-    </div>
-    <div class="clearBoth"></div>
-   </#if>
-</#list>
-</#compress>
-</div>  
+<div class="container">
+  <div class="content_wrapper">  
+		${content}
+  </div>
+</div>
 
 <footer>
   <div class="container">
@@ -289,7 +274,7 @@
     </div>
   </div>  
 </footer>
-  
+
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="/static/app/js/libs/jquery.form.js"></script>
     <script src="/static/app/js/libs/jquery.formset.js"></script>
