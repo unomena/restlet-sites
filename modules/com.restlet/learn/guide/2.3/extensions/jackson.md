@@ -6,10 +6,10 @@ is a fast library to serialize objects to JSON and back again.
 ## Usage instructions
 
 The extension comes with a JacksonRepresentation that can either:
--   wrap a Java object to serialize it as JSON, JSON Binary (Smile), XML, CSV or YAML representation,
--   wrap a representation to parse it back as a Java object.
+*   wrap a Java object to serialize it as JSON, JSON Binary (Smile), XML, CSV or YAML representation,
+*   wrap a representation to parse it back as a Java object.
 
-It also provides a plugin for the ConverterService which will automatically serialize and deserialize your Java objets returned by annotated methods in ServerResource subclasses.
+It also provides a plugin for the ConverterService which will automatically serialize and deserialize your Java objets returned by annotated methods in ServerResource subclasses. To make it work, you just need to have the org.restlet.ext.jackson.jar in your classpath.
 
 Here is an example server resource:
 
