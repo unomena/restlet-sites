@@ -1,5 +1,5 @@
 # Cell concept
-APISpark relies on the concept of cell. A cell is a basic software package that can interact with other imported cells.
+APISpark relies on the concept of cells. A cell is a basic software package that can interact with other imported cells.
 
 # Cell types
 From APISpark, you can create two types of cells: Data Stores (Entity Stores or Files Stores) and web APIs.
@@ -18,9 +18,9 @@ A *Full Stack web API* is an API (available web business once deployed via HTTP 
 
 # Cell characteristics
 
-Each cell created is given a unique identifier on APISpark prefixed by its category (apis or stores), and followed by its version number. Here is the identifier structure:  
+Each cell created is given a unique identifier on APISpark prefixed by its category (APIs or stores), and followed by its version number. Here is the identifier structure:  
 `/<category>/<cell identifier>/versions/<version number>/`  
 e.g. `https://apispark.com/apis/3373/versions/1/`  
-This identifier will be asked by APISpark HelpDesk team if you need to call them.
+This identifier will be requested by the APISpark HelpDesk team when assisting you.
 
 > **Note:** You cannot directly invoke a DataStore, you need to first expose it through a web API which imports this store (see [Invoke a web API](technical-resources/apispark/guide/publish/publish/invocation "Invoke a web API")). A Web API can invoke several stores.
