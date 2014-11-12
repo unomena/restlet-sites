@@ -31,7 +31,7 @@ Once you have deployed your File Store, you can [Export an API](technical-resour
 
 # Upload files
 
-The data browser is a useful tool that lets you directly modify the contents of folder in a File Store.
+The data browser is a useful tool that lets you directly modify the contents of a folder in a File Store.
 
 In order to use the data browser, the File Store must be deployed.
 
