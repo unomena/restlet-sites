@@ -1,4 +1,4 @@
-# Restlet 2.3 - Tutorial
+# Restlet 2.2 - Tutorial
 
 ## <a name="toc">Table of contents</a>
 
@@ -19,7 +19,7 @@
 ## <a name="part01">1. Restlet overview</a>
 
 The Restlet framework is composed of two main parts. First, there is the
-"[Restlet API](/learn/javadocs/2.3/jse/api/)", a neutral API supporting
+"[Restlet API](/learn/javadocs/2.2/jse/api/)", a neutral API supporting
 the concepts of REST and facilitating the handling of calls for both
 client-side and server-side applications. This API is backed by the
 Restlet Engine and both are now shipped in a single JAR
@@ -34,14 +34,14 @@ between the JDBC API and concrete JDBC drivers.
 ## <a name="part02">2. Retrieving the content of a Web page</a>
 
 As we mentioned in the [introduction
-paper](/learn/guide/2.3/introduction/), the Restlet framework is at the
+paper](/learn/guide/2.2/introduction/), the Restlet framework is at the
 same time a client and a server framework. For example, Restlet can
 easily work with remote resources using its HTTP client connector. A
 connector in REST is a software element that enables the communication
 between components, typically by implementing one side of a network
 protocol. Restlet provides several implementations of client connectors
 based on existing open-source projects. The
-[connectors](/learn/guide/2.3/core/base/connectors/) section lists all
+[connectors](/learn/guide/2.2/core/base/connectors/) section lists all
 available client and server connectors and explain how to use and
 configure them.
 
@@ -230,7 +230,7 @@ Note that no additional configuration is needed. If you want to
 customize the mapping between file extensions and metadata (media type,
 language or encoding) or if you want to specify a different index name,
 you can use the Application's
-["metadataService"](/learn/javadocs/2.3/jse/api/org/restlet/service/MetadataService.html)
+["metadataService"](/learn/javadocs/2.2/jse/api/org/restlet/service/MetadataService.html)
 property.
 
 ## <a name="part07">7. Access logging</a>
@@ -259,8 +259,8 @@ For details on the configuration file format, please check the [JDK's
 LogManager](https://docs.oracle.com/javase/6/docs/api/java/util/logging/LogManager.html)
 class.
 
-You can also have a look at the [Restlet 2.3 logging
-documentation](/learn/guide/2.3/editions/jse/logging).
+You can also have a look at the [Restlet 2.2 logging
+documentation](/learn/guide/2.2/editions/jse/logging).
 
 ## <a name="part08">8. Displaying error pages</a>
 
@@ -286,11 +286,11 @@ available. A common way is to rely on cookies to identify clients (or
 client sessions) and to check a given user ID or session ID against your
 application state to determine if access should be granted. Restlets
 natively support cookies via the
-[Cookie](/learn/javadocs/2.3/jse/api/org/restlet/data/Cookie.html) and
-[CookieSetting](/learn/javadocs/2.3/jse/api/org/restlet/data/CookieSetting.html)
+[Cookie](/learn/javadocs/2.2/jse/api/org/restlet/data/Cookie.html) and
+[CookieSetting](/learn/javadocs/2.2/jse/api/org/restlet/data/CookieSetting.html)
 objects accessible from a
-[Request](/learn/javadocs/2.3/jse/api/org/restlet/Request.html) or a
-[Response](/learn/javadocs/2.3/jse/api/org/restlet/Response.html).
+[Request](/learn/javadocs/2.2/jse/api/org/restlet/Request.html) or a
+[Response](/learn/javadocs/2.2/jse/api/org/restlet/Response.html).
 
 There is another way based on the standard HTTP authentication
 mechanism. The Restlet Engine currently accepts credentials sent and
@@ -414,7 +414,7 @@ router.attach("/search", extractor);
 Note that the Redirector needs three parameters only. The first is the
 parent context, the second one defines how the URI rewriting should be
 done, based on a URI template. This template will be processed by the
-[Template](/learn/javadocs/2.3/jse/api/org/restlet/routing/Template.html)
+[Template](/learn/javadocs/2.2/jse/api/org/restlet/routing/Template.html)
 class. The third parameter defines the type of redirection; here we
 chose the client redirection, for simplicity purpose.
 
@@ -525,7 +525,7 @@ Template.MODE\_STARTS\_WITH constants.
 Please note that the values of the variables are directly extracted from
 the URI and are therefore not percent-decoded. In order to achieve such
 a task, have a look to the
-[Reference\#decode(String)](/learn/javadocs/2.3/jse/api/org/restlet/data/Reference.html#decode(java.lang.String) "Reference#decode(String)")
+[Reference\#decode(String)](/learn/javadocs/2.2/jse/api/org/restlet/data/Reference.html#decode(java.lang.String) "Reference#decode(String)")
 method.
 
 ## <a name="part12">12. Reaching target Resources</a>
@@ -545,7 +545,7 @@ a Web application. There is a related [FAQ entry](/discover/faq#04) that
 will give you some starting pointers. If you have some experience with a
 traditional MVC framework, you can read more about the relationship to
 Restlet in this other [FAQ
-entry](/learn/guide/2.3/appendices/faq#how-do-i-implement-the-traditional-mvc-pattern).
+entry](/learn/guide/2.2/appendices/faq#how-do-i-implement-the-traditional-mvc-pattern).
 
 To summarize, a request contains an URI that identifies the target
 resource that is the subject of the call. This information is stored in
@@ -632,13 +632,13 @@ Now, here is the hierarchy with the core Representation classes:
 ![](images/representations)
 
 Beside this tutorial, your best source of information will be the
-Javadocs available for the [Restlet API](/learn/javadocs/2.3/jse/api/),
-the [Restlet Extensions](/learn/javadocs/2.3/jse/ext/) and the [Restlet
-engine](/learn/javadocs/2.3/jse/engine/). Have also a look at the
-[connectors](/learn/guide/2.3/core/base/connectors/) section that lists
+Javadocs available for the [Restlet API](/learn/javadocs/2.2/jse/api/),
+the [Restlet Extensions](/learn/javadocs/2.2/jse/ext/) and the [Restlet
+engine](/learn/javadocs/2.2/jse/engine/). Have also a look at the
+[connectors](/learn/guide/2.2/core/base/connectors/) section that lists
 all available client and server connectors and explain how to use and
 configure them, and the
-[integrations](/learn/guide/2.3/extensions/editions-matrix) section for
+[integrations](/learn/guide/2.2/extensions/editions-matrix) section for
 a list of all available extensions providing pluggable features such as
 integration with servlet containers, generation of dynamic
 representations, etc. You can also post your questions and help others
