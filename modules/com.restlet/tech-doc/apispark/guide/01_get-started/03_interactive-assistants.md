@@ -1,5 +1,5 @@
 
-The interactive tutorials to are designed to accompany you while you discover the APISpark platform. You can start an interactive tutorial at any time by clicking on the interactive tutorial logo in the upper right of your screen.
+The interactive tutorials are designed to accompany you while you discover the APISpark platform. You can start a tutorial at any time by clicking on the interactive tutorial logo in the upper right corner of your screen.
 
 ![interactive tutorial logo](images/interactiveassistantslogo.jpg "interactive tutorial logo")
 
@@ -7,7 +7,7 @@ Click on the tutorial title you want to start.
 
 ![interactive tutorials list](images/18.jpg "interactive tutorials list")
 
-Check each step as you progress through the tutorial. This way you'll remember which step you are up to.
+Check each step as you complete the tutorial. This way you'll be able to track your progress.
 
 ![checkboxes](images/19.jpg "checkboxes")
 
