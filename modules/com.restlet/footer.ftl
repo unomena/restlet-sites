@@ -2,17 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
+
     <title>Restlet | Technical Resources | APISpark</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    
-    
+
+
       <link rel="shortcut icon" href="/static/app/img/favicon.ico" />
       <link rel="stylesheet" href="/static/app/css/jquery.tagit.css" />
       <link rel="stylesheet" href="/static/app/css/jquery-ui-1.10.3.custom.css" />
-    
+
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/static/app/css/normalize.css" />
     <link rel="stylesheet" href="/static/app/css/base_grid.css" />
@@ -20,11 +20,11 @@
     <link rel="stylesheet" href="/static/app/css/flexslider.css" />
     <link rel="stylesheet" href="/static/app/css/layout.css?v=1" />
     <script src="/static/app/js/libs/modernizr.js"></script>
-    
+
 </head>
 <body>
-    
-    
+
+
 
 <header class="followMe">
     <div class="container">
@@ -60,8 +60,8 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>    
-                        </div>    
+                            </div>
+                        </div>
                     </li>
                     <li class="on">
                         <a href="#">Technical Resources<span class="indicator"></span></a>
@@ -77,7 +77,7 @@
                                             <li><a href="/technical-resources/restlet-framework">User Guide</a></li>
                                             <li><a href="/technical-resources/restlet-framework/faq/">FAQ</a></li>
                                             <li><a href="">Download</a></li>
-                                        </ul>    
+                                        </ul>
                                     </li>
                                     <li>
                                         <a href="/technical-resources/apispark/guide">
@@ -104,34 +104,34 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>        
+                        </div>
                     </li>
                     <li >
                         <a href="/company/">Company</a>
                     </li>
-                    
+
                 </ul>
                 <ul class="nav pull-right">
                     <li >
                         <a href="">Blog</a>
                     </li>
-                    
+
                         <li><a href="http://apispark.restlet.com/signin">Sign In</a></li>
-                        
-                    
+
+
                     <li class="search">
-                        <form action="#" id="frmSearch"> 
-                            <input type="text" name="q" class="text" placeholder="Search"> 
-                            <input type="submit" name="sa" class="submit"> 
+                        <form action="#" id="frmSearch">
+                            <input type="text" name="q" class="text" placeholder="Search">
+                            <input type="submit" name="sa" class="submit">
                         </form>
                     </li>
                 </ul>
-            </div>    
-        </div>    
+            </div>
+        </div>
     </div>
 </header><!--/HEADER-->
 
-<div class="technical_documentation">
+<div class="technical_documentation restlet_framework_tech_doc">
 
 
 
@@ -141,9 +141,9 @@
     <div class="container subsections">
       <ul class="pages">
       <#list section.sections.section as subsection>
-         
+
         <li<#if subsection.@id == currentSubSection> class="active"</#if>><a href="/${section.@id}/${subsection.@id}">${subsection.label?trim}</a></li>
-         
+
       </#list>
       </ul>
     </div>
@@ -204,9 +204,9 @@
         <ul>
           <li>
             <p>Keep up-to-date on Restlet News</p>
-            <form action="#" id="frmSignUp">  
-                <input type="text" name="email" class="text" placeholder="Email Address"> 
-                
+            <form action="#" id="frmSignUp">
+                <input type="text" name="email" class="text" placeholder="Email Address">
+
                 <button class="blue" type="button">sign up</button>
             </form>
           </li>
@@ -272,7 +272,7 @@
                         <img src="/static/app/img/googleP.png">
                       </a>
                   </li>
-                  
+
                   <li>
                       <a class="li" href="http://www.linkedin.com/company/restlet" target="_blank">
                         <img src="/static/app/img/li.png">
@@ -291,7 +291,7 @@
                   <li><a class="email" href="mailto:contact@apispark.com"><img src="/static/app/img/email.png"></a></li>
                 </ul>
               </li>
-            </ul> 
+            </ul>
           </li>
         </ul>
       </li>
@@ -314,7 +314,7 @@
       <span class="privacy"><a href="/privacy/">Privacy Policy</a> &nbsp; | &nbsp; <a href="/terms/">Terms  Of Use</a></span>
       <span class="credit pull-right">Site built by <strong><a href="http://unomena.com/" target="_blank">Unomena</a></strong></span>
     </div>
-  </div>  
+  </div>
 </footer>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -333,13 +333,13 @@
     <script src="/static/app/js/libs/jquery.visualNav.min.js"></script>
     <script src="/static/app/js/libs/os_detection.js"></script>
     <script src="/static/app/js/scripts.js"></script>
-  
+
   <script type="text/javascript">
     (function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
     for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
     mixpanel.init("93f5221471dfd58f4d1823699fe71294");
-  
-    
+
+
   </script>
   <script type="text/javascript">
     var oneall_js_protocol = (("https:" == document.location.protocol) ? "https" : "http");
