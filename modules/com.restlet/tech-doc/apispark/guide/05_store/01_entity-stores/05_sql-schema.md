@@ -176,7 +176,7 @@ You can adapt the generated entities of the entity store to your needs by:
 
 The following table contains SQL features which can be read by APISpark in the SQL file exported by the database tool.
 
-| Database/Export tool | Column name | Column type | Primary key | Foreign key | Not nullable colunmn
+| Database/Export tool | Column name | Column type | Primary key | Foreign key | Not nullable column
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Oracle/ SQL Developer** | X | X | X | X |  |
 | **PostgreSQL/pgAdmin** | X | X | X | X | X
