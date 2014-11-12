@@ -38,4 +38,4 @@ You won't need to use these tokens for now. You can simply sign in to APISpark w
 
 From this tab, you can select the plan that best suits you. You may upgrade or downgrade your plan according to your needs.
 
-The **My plan** tab also provides management of you **Payment Method**.
+The **My plan** tab also provides management of your **Payment Method**.
