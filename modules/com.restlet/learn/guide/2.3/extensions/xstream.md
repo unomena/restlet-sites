@@ -23,7 +23,7 @@ The extension comes with an XstreamRepresentation that can either:
 
 It also provides a plugin for the ConverterService which will
 automatically serialize and deserialize your Java objets returned by
-annotated methods in ServerResource subclasses.
+annotated methods in ServerResource subclasses. To make it work, you just need to have the org.restlet.ext.xstream.jar in your classpath.
 
 Here is an example server resource:
 
