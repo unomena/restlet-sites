@@ -11,52 +11,50 @@ To follow this tutorial, you will need:
 *   20 minutes of your time,
 *   your Parse login details.
 
-# 1. Prepare the Parse Backend
+# 1. Prepare the Parse backend
 
 Sign in to your **Parse** account and go to the **Dashboard**.
 
-Select the **App** you wish to work on. Ours is called APISpark.
+Create a new app and give it a **Name**. We called our "MyParseApp".
 
-Click on the **Data Browser** tab.
+Navigate to the **Data Browser** after creating your app, or click on the **Core** tab.
 
-Click on the **New Class** button and give it a name. For the purpose of this tutorial, we named our class **Contact**.
+Click on the **+ Add class** button to create a new class. We named our class "Contact".
 
 You will see four automatically generated columns: objectId, createAt, updatedAt and ACL.
 
 Add the following extra columns:
 
-*   **lastName** (String) : last name
-*   **firstName** (String) : first name
-*   **age** (Number) : age
+*   **lastName** (String)
+*   **firstName** (String)
+*   **age** (Number)
 
 Create a new row by clicking **+Row**. You can directly edit the row’s data by entering values in the fields. For the sake of this
 	tutorial, we added a person called John Smith, age 34.
 
-![](/static/images/site/tutorials/tutorial-parse-00-dataBrowser.png)
+![Add data in Parse](images/add-parse-data.png "Add data in Parse")
 
-Click on the **Settings** tab then click on the **Application keys** tab.
+Click on the **Settings** tab then click on the **Keys** tab.
 
-Copy both your **Application ID** and **REST API** keys.
+Copy both your **Application ID** and your **REST API key**.
 
-![](/static/images/site/tutorials/tutorial-parse-01-appKeys.png)
+![Copy your keys](images/parse-app-keys.png "Copy your keys")
 
-# 2. Deploy the Entity Store Wrapper
+# 2. Create a Parse Wrapper
 
-Sign in to your **APISpark** account.
+## 2.1 Add a new Parse Wrapper Entity Store
 
-Click on **+ Data Store**.
+If you haven't already done so, [sign in](https://apispark.com/signin) to your APISpark account and open your **Dashboard**.
 
-Click on the **Entity Store** button.
+Create a new Parse Wrapper Entity Store. Click on **+ Entity Store**, select the "Full stack" **Type** and enter the **Name** "myParseApp".
 
-Fill in a name. For this tutorial we chose **Contact Entity Store**.
+![Create an Parse Wrapper](images/create-parse-wrapper.png "Create an Parse Wrapper")
 
-Input a description if you wish.
+Click on the **Add** button to create the new Wrapper.
 
-For **Source**, select **Parse**.
+You will be taken to the new Wrapper's **Overview page**.
 
-![](/static/images/site/tutorials/tutorial-parse-02-createStore.png)
-
-Click **Create**. You will be taken to the **Entity Store** overview tab.
+# 2.2. Configure your Parse account
 
 Click on the **Settings** tab.
 
@@ -66,7 +64,7 @@ Paste your **Application ID** and **REST API** keys.
 
 Click on the **Test connection** button.
 
-![](/static/images/site/tutorials/tutorial-parse-03-parseAccount.png)
+![Configure your Parse account](images/configure-parse-account.png "Configure your Parse account")
 
 Parse doesn't expose metadata about its data store. Therefore the structure or your Parse store must be re-created manually in APISpark, by creating entities and properties with matching names.
 
@@ -76,63 +74,46 @@ Click on **Add an entity**.
 
 Name your **Entity**. In this tutorial example, we will name it **Contact** and add three properties to it: firstName, lastName and age.
 
-![](/static/images/site/tutorials/tutorial-parse-04-entityOverview.png)
+![Add an entity](images/add-parse-entity.png "Add an entity")
 
 Note that your **Entity** elements and the **Schema** elements from Parse.com don’t have to match up perfectly. For this purpose, you can
-	use the **Mapping** tab of the entity. This allows you to specify the name of the target element (entity or property) in Parse.
-
-![](/static/images/site/tutorials/tutorial-parse-05-entityMapping.png)
+	use the **Mapped from** attribute on the entity and its fields. This allows you to specify the name of the target element (entity or property) in Parse.
 
 Click on the **Deploy** button.
 
-![](/static/images/site/tutorials/tutorial-parse-06-storeDeploy.png)
-
 When your **Entity Store** has been deployed, you can export it as a new web API.
 
-# 3. Deploy the Web API
+# 2.3 Export a Web API
 
-Remaining on the **Entity Store**’s page, click on the **Actions** button (down-facing arrow) on the right of the **Deploy** button.
+From the Wrapper's **Overview** page, click on the actions button on the right of the **Deploy** button and select **Export web API**.
 
-Select **Export custom API** and name it **Contact Entity Store API**.
+Give your new API a name. We named ours **myAPI**.
+
+![Create a web API](images/domain-name-unavailable.jpg "Create a web API")
 
 The domain will be created automatically but may not be available anymore so make sure to adjust it.
 
-![](/static/images/site/tutorials/tutorial-parse-07-createApi.png)
-
-Click **Create**. You will be taken to the API’s **Overview**.
-
-The screenshot below shows some of the drop down menus opened to give you an idea of how it’s organized.
-
-![](/static/images/site/tutorials/tutorial-parse-08-apiOverview.png)
+Click on **Add** to create the API. You will be taken to the API's **Overview** page.
 
 Deploy the API by clicking the **Deploy** button.
 
-![](/static/images/site/tutorials/tutorial-parse-09-apiDeploySuccess.png)
-
-The API should now be accessible online. To reach it, use the subdomain of apispark.net that you chose when you created the API.
-
-![](/static/images/site/tutorials/tutorial-parse-10-endpoints.png)
-
-As you can see, the credentials required to invoke the API can be found in the **Overview** tab, by clicking on the relevant **Endpoint**.
-You will need to copy the **Endpoint URI**, **Login** and **Password** information for the next step.
-
-# 4. Invoke the Web API
+# 3. Invoke the Web API
 
 Using a web API does not impose any particular programming language. It can even be done from a web browser. However, to test your API we recommend the use of tools such as the Chrome extensions POSTMAN and DHC that provide a graphical user interface to perform HTTP calls.
 The following figure shows the call to the Contacts API with POSTMAN.
 
-When using POSTMAN, click on the **Basic Auth** tab, fill in the **Username** and **Password** fields with the information copied from your APISpark **Endpoint**. Fill in the **Endpoint URI** and add **/contacts/** at the end of it.
+The credentials required to invoke the API can be found in the **Overview** tab, by clicking on the relevant **Endpoint**. You will need to copy the **Endpoint URI**, **Login** and **Password** information for the next step.
 
-To retrieve the list of contacts in JSON, click the **Headers** button on the far right and input the **Accept** command in the Header field and write **application/json** in the **Value** field opposite.
+When using POSTMAN, click on the **Basic Auth** tab, fill in the **Username** and **Password** fields with the information copied from your APISpark **Endpoint**. Fill in the **Endpoint URI** and add **/contacts/** at the end of it.
 
 Click the **Send** button.
 
 The following figure shows the API call in POSTMAN.
 
-![](/static/images/site/tutorials/tutorial-parse-11-postman.png)
+![Invoke with POSTMAN](images/postman-gsheet.jpg "Invoke with POSTMAN")
 
-Note that any POST requests made to the API will result in new data being created in your Parse App. Likewise, any data manually inserted via the Parse Data Browser is visible via the custom web API.
+Any POST requests made to the API will result in new data being created in your Parse backend. Likewise, any data manually inserted via your Parse backend's Data Browser is visible via the custom web API.
 
->**Note:** APISpark can also generate custom Client SDKs for different environments such as Java, Android, GWT and JavaScript (AJAX or Node.js). More environments will be supported in the future.
+>**Note:** APISpark lets you generate custom Client SDKs for you API. Supported environments include Java, Android, GWT and JavaScript (AJAX or Node.js).
 
 Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the [Help Desk](http://support.apispark.com/).
