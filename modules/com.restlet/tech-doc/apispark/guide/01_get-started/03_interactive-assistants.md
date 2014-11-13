@@ -5,12 +5,12 @@ The interactive tutorials are designed to accompany you while you discover the A
 
 Click on the tutorial title you want to start.
 
-![interactive tutorials list](images/18.jpg "interactive tutorials list")
+![interactive tutorials list](images/iss-list.jpg "interactive tutorials list")
 
-Check each step as you complete the tutorial. This way you'll be able to track your progress.
+Check each step as you complete the tutorial. This way you will be able to track your progress.
 
-![checkboxes](images/19.jpg "checkboxes")
+![checkboxes](images/iss-checkboxes.jpg "checkboxes")
 
 Once you have completed a tutorial, click on the **Done** button. Why not take a look at some of the other tutorials we have to offer?
 
-![Done button](images/20.jpg "Done button")
+![Done button](images/iss-done-button.jpg "Done button")
