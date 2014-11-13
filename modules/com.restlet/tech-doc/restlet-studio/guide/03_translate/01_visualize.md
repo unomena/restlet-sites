@@ -4,4 +4,4 @@ Restlet Studio provides a three-tab view of your API. You can craft your API fro
 
 To visualize your API structure, browse through the different sections in the left panel: the content of each section displays in the **Web API** tab of the central panel.
 
-![Web API tab](images/01.jpg "Web API tab")
+![Web API tab](images/web-api-tab.jpg "Web API tab")
