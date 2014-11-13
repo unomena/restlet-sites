@@ -1,25 +1,27 @@
-Each resource has its own address or URI (Uniform Resource Identifier). Resources should be named by nouns as opposed to verbs or actions. In other words, a URI should refer to a Resource that is a thing instead of referring to an action: nouns have properties as verbs do not.  
+# Introduction
+
+Each resource has its own address or URI (Uniform Resource Identifier). Resources should be named using nouns as opposed to verbs or actions. In other words, a URI should refer to a Resource that is an item instead of referring to an action: nouns have properties as verbs do not.  
 
 On Restlet Studio console, you can find the Resources of your API endpoint in the **Resources** section. Click on the appropriate Endpoint. The Resources linked display in the **Resources** section.
 
 ![Resources section](images/03.jpg "Resources section")
-  
+
 Here is a Resource example: `https://employeedirectory.apispark.net/v2/employees`  
 For each Resource, the possible request methods (POST, GET, PUT, PATCH, DELETE, etc.) are displayed underneath.
 
-#Add a Resource
+# Add a Resource
 
 1. Click on the **Add** button of the **Resources** section.
 
 	![Add a resource](images/11.jpg "Add a resource")
 
 2. Fill in the **Add a resource** window and click on the **Add** button. The new resource displays in the **Resources** section.
-  
+
 >**Note:** To change the Resource path, click on the appropriate Resource in the **Resources** section and enter a new path in the **Relative path** field.
 
-#Add a Method
+# Add a Method
 
-1. Click on the appropriate Resource in the **Resources** section. 
+1. Click on the appropriate Resource in the **Resources** section.
 2. Click on the **+** button on the right of the Resource.
 
 	![Add a method](images/12.jpg "Add a method")
@@ -27,3 +29,27 @@ For each Resource, the possible request methods (POST, GET, PUT, PATCH, DELETE, 
 3. Fill in the **Add a method** window and click on the **Add** button.
 
 	![Add a method](images/13.jpg "Add a method")
+
+
+# Add a Section
+
+In Restlet Studio, sections can be defined to group resources and representations, very much like packages for Java classes. Sections will allow you to organize the different items of your API.
+
+1. In the **Sections** section, click on the appropriate section. The resources and representations linked display underneath.
+
+	![Sections](images/06.jpg "Sections")
+
+2. Click on the **Add** button of the **Sections** section.
+
+	![Add a Section](images/08.jpg "Add a Section")
+
+## Add a Resource or Representation to your Section
+
+1. To add a resource (or representation) to your section, click on the appropriate resource (or representation) in the **Resources** (or **Representations**) section.
+2. In the **Sections** drop-down menu of the central panel, select the appropriate section.
+
+	![Sections](images/09.jpg "Sections")
+
+3. To display all your resources and representations again (with no filter), click on **All** in the **Sections** section.
+
+	![All](images/10.jpg "All")
