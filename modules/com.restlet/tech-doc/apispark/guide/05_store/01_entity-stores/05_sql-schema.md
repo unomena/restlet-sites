@@ -1,6 +1,6 @@
 If you need your API to get data from your existing SQL database, your firewall may prevent APISpark from connecting to this database. To solve this secure access issue, you can extract a SQL Schema from your database and import it in APISpark. The databases (and tools) supported are PostgreSQL (pgAdmin, pg_dump), MySQL (Mysql Workbench, mysqldump) and ORACLE (SQL Developer).
 
-![Exposing SQL data](images/08.jpg "Exposing SQL data")
+![Exposing SQL data](images/exposing-sql-data.jpg "Exposing SQL data")
 
 # Extract your SQL Schema from your database
 You only need a database structure with tables and constraints definitions to import your schema in APISpark.  
