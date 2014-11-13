@@ -54,7 +54,7 @@ Click on the **Add** button to create the new Wrapper.
 
 You will be taken to the new Wrapper's **Overview page**.
 
-# 2.2. Configure your Parse account
+## 2.2. Configure your Parse account
 
 Click on the **Settings** tab.
 
@@ -65,6 +65,8 @@ Paste your **Application ID** and **REST API** keys.
 Click on the **Test connection** button.
 
 ![Configure your Parse account](images/configure-parse-account.png "Configure your Parse account")
+
+## 2.3 Add an entity
 
 Parse doesn't expose metadata about its data store. Therefore the structure or your Parse store must be re-created manually in APISpark, by creating entities and properties with matching names.
 
@@ -83,7 +85,7 @@ Click on the **Deploy** button.
 
 When your **Entity Store** has been deployed, you can export it as a new web API.
 
-# 2.3 Export a Web API
+# 3. Export a Web API
 
 From the Wrapper's **Overview** page, click on the actions button on the right of the **Deploy** button and select **Export web API**.
 
@@ -97,7 +99,7 @@ Click on **Add** to create the API. You will be taken to the API's **Overview** 
 
 Deploy the API by clicking the **Deploy** button.
 
-# 3. Invoke the Web API
+# 4. Invoke the Web API
 
 Using a web API does not impose any particular programming language. It can even be done from a web browser. However, to test your API we recommend the use of tools such as the Chrome extensions POSTMAN and DHC that provide a graphical user interface to perform HTTP calls.
 The following figure shows the call to the Contacts API with POSTMAN.
