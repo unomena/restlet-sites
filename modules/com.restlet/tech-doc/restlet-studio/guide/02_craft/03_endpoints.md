@@ -4,14 +4,14 @@ Here is a URI example: `https://departmentapi.apispark.net/v2`
 
 On Restlet Studio console, you can find the different Endpoints of your API in the **Endpoints** section.
 
-#Add an endpoint
+# Add an Endpoint
 
-1. In the **Endpoints** section, click on the appropriate Endpoint. The Endpoint details display in the central panel.
+In the **Endpoints** section, click on the appropriate Endpoint. The Endpoint details display in the central panel.
 
-	![Endpoints section](images/02.jpg "Endpoints section")
+![Endpoints section](images/select-endpoint.jpg "Endpoints section")
 
-2. Click on the **Add** button of the **Endpoints** section.
+Click on the **Add** button of the **Endpoints** section.
 
-	![Add an Endpoint](images/07.jpg "Add an Endpoint")
+![Add an Endpoint](images/add-endpoint.jpg "Add an Endpoint")
 
-3. Fill in the **Add an endpoint** window and click on the **Add** button. The new Endpoint displays in the **Endpoints** section.
+Fill in the **Add an endpoint** window and click on the **Add** button. The new Endpoint displays in the **Endpoints** section.
