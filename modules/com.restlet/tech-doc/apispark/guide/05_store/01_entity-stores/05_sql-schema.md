@@ -10,32 +10,34 @@ Generate a DDL or SQL file following the appropriate database and tool instructi
 
 ### with pgAdmin
 
-1. From pgAdmin, open a connection to your database.
-2. Select the database schema you want to export in the tree browser.
+From pgAdmin, open a connection to your database.  
+Select the database schema you want to export in the tree browser.
 
-  ![pgAdmin](images/11.jpg "pgAdmin")
+![pgAdmin](images/11.jpg "pgAdmin")
 
-3. Click on the **Tools** menu and select **Backup**.
-4. In the **Backup database** window:
+Click on the **Tools** menu and select **Backup**.
+In the **Backup database** window:
 
-  ![pgAdmin](images/12.jpg "pgAdmin")
+![pgAdmin](images/12.jpg "pgAdmin")
 
   * Filename: Define the output file name.
   * Format: Plain.
-5. Click on the **Backup** button to generate the output “.backup” file.
-6. Click on the **Done** button to close the **Backup database** window.
+
+Click on the **Backup** button to generate the output “.backup” file.
+Click on the **Done** button to close the **Backup database** window.
 
 You can import the “.backup” file generated in APISpark.
 
 ### with pg_dump
 
-1. Open a terminal.
-2. Run the following command:
+Open a terminal.  
+Run the following command:
   * On Linux
     * [postgresql_home]\pg_dump -Fp -s -U [user] --file="[output.sql]" [schema]
   * On Windows
-    * [postgresql_home]\pg_dump.exe -Fp -s -U [user] --file="[output.sql]" [schema]
-3. Replace the square brackets [] content with:  
+    * [postgresql_home]\pg_dump.exe -Fp -s -U [user] --file="[output.sql]" [schema]  
+
+Replace the square brackets [] content with:  
   * [postgresql_home] : Install directory of PostgreSQL  
   * [user] : User name  
   * [output.sql] : Path and name of the output SQL file  
@@ -45,18 +47,18 @@ You can import the “.backup” file generated in APISpark.
 
 ### with MySQL Workbench
 
-1. From MySQL Workbench, open a connection to the database:
+From MySQL Workbench, open a connection to the database:
   * Click on the **Database** menu and select **Connect to Database**.
   * In the **Connect to Database** window:
     * Define connection parameters
     * Click on the **OK** button to open the connection to the database
 
-  ![mySQL Workbench](images/15.jpg "mySQL Workbench")
+![mySQL Workbench](images/15.jpg "mySQL Workbench")
 
-2. Click on the **Server** menu and select **Data Export**.
-3. In the **Data Export** window:
+Click on the **Server** menu and select **Data Export**.  
+In the **Data Export** window:
 
-   ![mySQL Workbench](images/17.jpg "mySQL Workbench")
+![mySQL Workbench](images/17.jpg "mySQL Workbench")
 
   * In the **Object Selection** tab:
     * Select the schema that you want to export
@@ -70,8 +72,8 @@ You can use this SQL file on APISpark.
 
 ### with mysqldump
 
-1. Open a terminal.
-2. Run the following command:
+Open a terminal.  
+Run the following command:
   * on Linux:
     * [mysql_home]/mysqldump [schema] > [output.sql]
   * on Window:
@@ -86,16 +88,16 @@ Replace the square brackets [] content with:
 
 ### with SQLDeveloper
 
-1. Run Oracle SQL Developer and connect to your database.
+Run Oracle SQL Developer and connect to your database.
 
-   ![SQL Developer](images/20.jpg "SQL Developer")
+![SQL Developer](images/20.jpg "SQL Developer")
 
-2. Export your database:
+Export your database:
   * Click on the **Tools** menu and select **Database export**.
 
-3. In the **Export wizard Step 1 of 5** window, define these values:
+In the **Export wizard Step 1 of 5** window, define these values:
 
-    ![SQL Developer](images/23.jpg "SQL Developer")
+![SQL Developer](images/23.jpg "SQL Developer")
 
   * Connection: Specify the database connection that we have just created before.
   * Select the **Export DDL** checkbox.
@@ -104,28 +106,28 @@ Replace the square brackets [] content with:
   * Specify output SQL file name and path.
   * Click on the **Next** button.
 
-5. In the **Export wizard - Step 2 of 5** window, define:
+In the **Export wizard - Step 2 of 5** window, define:
 
-    ![SQL Developer](images/24.jpg "SQL Developer")
+![SQL Developer](images/24.jpg "SQL Developer")
 
   * Select the **Toggle All** checkbox.
   * Only select the **Tables** and **Constraints** checkboxes.
   * Click on the **Next** button.
 
-6. In the **Export wizard - Step 3 of 5** window:
+In the **Export wizard - Step 3 of 5** window:
 
   * Select the tables of your database that you want to export.
   * Click on the **Next** button.
 
-7. In the **Export wizard - Step 4 of 5** window:
+In the **Export wizard - Step 4 of 5** window:
 
   * Click on the **Next** button.
 
-8. In the **Export wizard - Step 5 of 5**  window:
+In the **Export wizard - Step 5 of 5**  window:
 
   * Click on the **Finish** button.
 
-9. SQL Developer generates the SQL file which will be imported in APISpark.
+SQL Developer generates the SQL file which will be imported in APISpark.
 
 You can import the generated SQL file in APISpark.
 
@@ -138,13 +140,12 @@ You can import the SQL file generated by the database tool in APISpark to add ne
 The DDL/SQL file contains information about database schema and allows APISpark to create entities for each database table.
 To import the DDL/SQL file, you must use an existing Entity Store:
 
-1. Open an existing Entity Store or create a new Entity Store.
-2. Click on the actions button and select **Import SQL file**.
+Open an existing Entity Store or create a new Entity Store.  
+Click on the actions button and select **Import SQL file**.
 
-    ![Entity Store](images/29.jpg "Entity Store")
+![Entity Store](images/import-sql-schema.jpg "Entity Store")
 
-3. Select your SQL file.
-4. Click on the **Import** button.
+Select your SQL file and click on the **Import** button.
 
 ## Entities creation
 
@@ -161,7 +162,7 @@ At the end of the import, APISpark displays a confirmation message indicating th
 
 Click on the **Messages** tab to get more details about the import.
 
-![Entity Store](images/30.jpg "Entity Store")
+![Entity Store](images/import-traces.jpg "Entity Store")
 
 ## Leverage the Entity Store
 You can adapt the generated entities of the entity store to your needs by:
