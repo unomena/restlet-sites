@@ -2,7 +2,7 @@ APISpark cells are always in one of the states of the cell lifecycle.
 
 The states of the lifecycle and the possible transitions are shown in the diagram below.
 
-![cell lifecycle](images/03.jpg "cell lifecycle")
+![cell lifecycle](images/cell-lifecycle.jpg "cell lifecycle")
 
 #### Draft
 

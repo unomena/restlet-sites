@@ -4,11 +4,9 @@ APISpark relies on the concept of cells. A cell is a basic software package that
 # Cell types
 From APISpark, you can create two types of cells: Data Stores (Entity Stores or Files Stores) and web APIs.
 
-<!-- TODO center -->![Cell concept](images/02.jpg "Cell concept")
-
 Web APIs import Data Stores and can be invoked by users.
 
-<!-- TODO center -->![Cell concept](images/01.jpg "Cell concept")
+<!-- TODO center -->![Cell concept](images/cell-concept.jpg "Cell concept")
 
 ## Data Stores  
 Two types of *Data Stores* can be created. *Entity Stores* for structured data (equivalent to a database) and *File Stores* for static files (text documents, images, videos or style sheets).

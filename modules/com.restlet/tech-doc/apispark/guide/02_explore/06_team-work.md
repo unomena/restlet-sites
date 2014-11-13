@@ -15,7 +15,7 @@ For team-based collaboration, members should be given either of the roles *Owner
 
 Depending on the role given to a member, he will have different permissions in the APISpark console.
 
-![team work](images/07.jpg "team work")
+![team work](images/provider-team.jpg "team work")
 
 
 ## Team roles
