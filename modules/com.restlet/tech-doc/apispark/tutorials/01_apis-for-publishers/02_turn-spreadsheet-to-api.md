@@ -1,6 +1,6 @@
 # Introduction
 
-This tutorial will show you how to create a custom web API that gives access to existing data stored in a Google Spreasheet. [Google Spreadsheet](http://docs.google.com/) is a popular collaborative data editing tool within the Google Docs suite.
+This tutorial will show you how to create a custom web API that exposes data stored in a Google Spreasheet. [Google Spreadsheet](http://docs.google.com/) is a popular collaborative data editing tool within the Google Docs suite.
 
 # Requirements
 
@@ -10,15 +10,15 @@ To follow this tutorial, you will need:
 *   20 minutes of your time,
 *   a Google Account application-specific password.
 
-# 1. Prepare the Google Spreadsheet
+# 1. Prepare a Google Spreadsheet
 
 Sign in to your **Google Drive** account.
 
 In this tutorial example, we have a spreadsheet with a worksheet named **Contacts** with the following columns, containing a list of contacts:
 
 *   **contact_id** : primary key
-*   **lastName** (string) : last name
 *   **firstName** (string) : first name
+*   **lastName** (string) : last name
 *   **age** (integer) : age
 
 Add a **Contact** so that you can retrieve it later when performing an HTTP call to your API.
@@ -26,93 +26,99 @@ We've chosen to name ours John Smith, 34 years old.
 
 ![Google Spreadsheet](images/google-spreadsheet.jpg "Google Spreadsheet")
 
-# 2. Configure the Entity Store Wrapper
+# 2. Configure the Google Spreadsheet Wrapper
 
 Sign in to your **APISpark** account.
 
 Click on **+ Entity Store**.
 
-Select **Google Spreadsheet wrapper** and enter a name for your store e.g. myContactEntityStore. Input a description if you wish.
+Select **Google Spreadsheet wrapper** and enter a name for your store . We named ours "mySpreadsheet". Input a description if you like.
 
-![Create an Entity Store](images/create-gsheet-store.jpg "Create an Entity Store")
+![Create a spreadsheet wrapper](images/create-spreadsheet-wrapper.png "Create a spreadsheet wrapper")
 
-Click **Add**. You will be taken to the **Entity Store** Overview page.
+Click **Add** to create the Wrapper. You will be taken to the Wrapper's **Overview** page.
 
-Click on the **Settings** tab.
+# 3. Setup a Google application-specific password
+
+From your new Wrapper's **Overview**, click on the **Settings** tab.
 
 In the **Security** section, click on **Google Account**.
 
 >**Note:** Please do not overlook the next step, it is important to ensure your wrapper will work properly throughout the creation and deployment of your API.
 
-Open a new tab on your browser.
+Open a new tab in your browser.
 
 Head to your **Google Account Settings** [**<u>Security</u>**](https://www.google.com/settings/security?hl=en) page and check that **2-step authentication is activated**. If **2-step authentication** is not activated, you need to activate it before proceeding.
 
 Once activated, go back to the [**<u>Security</u>**](https://www.google.com/settings/security?hl=en) page, click on **Settings** near **App Passwords** and generate a new application-specific password for APISpark. You will use it as your **Client Secret**.
 
-![Client secret](images/2-step-authentication.jpg "Client secret")
+![Application specific passwords](images/google-app-password.png "Application specific passwords")
 
-Go back to APISpark and input your **Client ID** (your email) and the **Client Secret** you just created (email address and password).
-
->**Note:** we are working to leverage Google OAuth authentication to remove the need to access your Google Account.
+Back on APISpark, in the **Google Account** combo of your Wrapper's **Security** section, input your **Client ID** (your email address) and the **Client Secret** you just created.
 
 Click on the **Test** button, to ensure the connection between APISpark and your Google Account is well configured.
 
-![Test connection](images/test-connection.jpg "Test connection")
+![Test connection](images/enter-google-account.png "Test connection")
 
-When connected, in the **Imports** section, click on **Add** button and APISpark will automatically detect all spreadsheets on your account.
+# 4. Import a Spreadsheet
 
-Select the sheet to import and click **Import sheet**.
+From the **Imports** section in the left panel, click on the **Add** button.
+
+Select a spreadsheet to import and click on **Import sheet**.
 
 ![Import a sheet](images/import-sheet.jpg "Import a sheet")
 
-In the **Imports** section, you can click on the sheet which opens the **Overview** tab. It displays hints about the sheet.
+The selected spreadsheet's **Overview** tab should open in the central panel.
 
-Click the **Entities** tab.
+# 5. Import entities
 
-Click the **Add entities** button to create the associated folders.
+Select a spreadsheet from the **Imports** section in the left panel.
 
-One entity will be created for each worksheet using the **Add entities** button.
+Click on the **Entities** tab in the central panel.
 
-![Add entities](images/add-entities.jpg "Add entities")
+Click on the **Add entities** button to create entities based on the structure of the spreadsheet.
 
-In this case, a **Contacts** entity was automatically created. The first line of the worksheet is used to determine the properties of the entity to add. The corresponding mappings for the entity and its fields are also automatically created.
+One entity will be created for each worksheet.
 
-![Entities created](images/entities-created.jpg "Entities created")
+![Add spreadsheet entities](images/add-spreadsheet-entities.png "Add spreadsheet entities")
 
-Click on the **Deploy** button.
+In this case, a **Contacts** entity was automatically created. Entity properties are created based on the names of the columns in the first row of a worksheet.
 
-![Deploy](images/deploy-button.jpg "Deploy")
+Go back to the Wrapper's **Overview** tab to view the new entities.
 
-When your Entity Store has been deployed, you can export it as a new web API.
+![Entities created](images/new-spreadsheet-entities.png "Entities created")
 
-# 3. Deploy the Web API
+Deploy the Spreadsheet Wrapper by clicking on the **Deploy** button.
 
-Remaining on the **Entity Store**'s page, click on the actions button on the right of the **Deploy** button and select **Export web API**.
 
-![Export web API](images/export-web-api2.jpg "Export web API")
+# 6. Export a Web API from the Wrapper
 
-Name it **myContactAPI**.
+From the Wrapper's **Overview** page, click on the actions button on the right of the **Deploy** button and select **Export web API**.
 
-![Create web API](images/create-web-api.jpg "Create web API")
+![Export web API](images/export-api-from-spreadsheet.png "Export web API")
+
+Give your new API a name. We named ours **myAPI**.
+
+![Create web API](images/create-spreadsheet-api.png "Create web API")
 
 The domain will be created automatically but may not be available anymore so make sure to adjust it.
 
-Click **Add**. You will be taken to the API's **Overview** page.
+Click on **Add** to create the API. You will be taken to the API's **Overview** page.
 
 Deploy the API by clicking the **Deploy** button.
 
-The API should now be accessible online. To reach it, use the subdomain of apispark.net that you chose when you created the API.
-
-As you can see, the credentials required to invoke the API can be found in the **Overview** tab, by clicking on the relevant **Endpoint**.
-You will need to copy the **Endpoint URI**, **Login** and **Password** information for the next step.
-
-# 4. Invoke the web API
+# 8. Invoke the web API
 
 Using a web API does not impose any particular programming language.
 It can even be done from a web browser. However, to test your API we recommend the use of tools such as the Chrome extensions [<u>POSTMAN</u>](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?utm_source=chrome-ntp-icon) and [<u>DHC</u>](http://sprintapi.com/dhcs.html) that provide a graphical user interface to perform HTTP calls. The following figure shows the call to the Contacts API with POSTMAN.
 
+
+The credentials required to invoke the API can be found in the **Overview** tab, by clicking on the relevant **Endpoint**.
+You will need to copy the **Endpoint URI**, **Login** and **Password**.
+
 When using POSTMAN, click on the **Basic Auth** tab, fill in the **Username** and **Password** fields with the information copied from your APISpark **Endpoint**.
+
+
 Fill in the **Endpoint URI** and add **/contacts/** at the end of it.
 
 To retrieve the list of contacts in JSON, click the **Headers** button on the far right and input the **Accept** command in the **Header** field and write **application/json** in the **Value** field opposite.
@@ -125,5 +131,6 @@ The following figure shows the API call in POSTMAN.
 
 Note that any POST requests made to the API will result in new data being created in your Google Spreadsheet. Likewise, any data manually inserted via the Google Spreadsheet is visible via the custom web API.
 
->**Note:** APISpark can also generate custom Client SDKs for different environments such as Java, Android, GWT and JavaScript (AJAX or Node.js). More environments will be supported in the future.  
+>**Note:** APISpark lets you generate custom Client SDKs for you API. Supported environments include Java, Android, GWT and JavaScript (AJAX or Node.js).
+
 Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the [Help Desk](http://support.apispark.com/).
