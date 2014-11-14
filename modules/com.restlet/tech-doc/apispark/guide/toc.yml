@@ -255,18 +255,12 @@ toc:
     long-title: Overview
     title: Overview
     url: /document/overview
-  - file: 02_edit-descriptor.md
-    id: edit-descriptor
-    link_url: /06_document/02_edit-descriptor.md
-    long-title: Create and edit your API Descriptor
-    title: Edit Descriptor
-    url: /document/edit-descriptor
-  - file: 03_generate-api-doc.md
-    id: generate-api-doc
-    link_url: /06_document/03_generate-api-doc.md
-    long-title: Automatically generate your API Descriptor
-    title: Generate API documentation
-    url: /document/generate-api-doc
+  - file: 03_get-documentation.md
+    id: get-documentation
+    link_url: /06_document/03_get-documentation.md
+    long-title: Get Documentation and Client SDKs
+    title: Get Documentation
+    url: /document/get-documentation
   long-title: Document existing web APIs through APISpark Descriptors
   title: Document web APIs
 - dir: 07_manage
