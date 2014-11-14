@@ -1,5 +1,5 @@
 
-Once you have completed your **Descriptor** cell, you could get your web API documentation and share it with your team or make it public.
+Once you have completed your **Descriptor** cell, you can get your web API documentation and share it with your team or make it public.
 
 # Document your web API
 

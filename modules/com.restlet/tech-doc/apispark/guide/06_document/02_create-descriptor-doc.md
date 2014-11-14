@@ -1,5 +1,5 @@
 
-The Descriptor is a type of web API cell.
+A Descriptor is a web API cell.
 
 # Create a Descriptor cell
 
@@ -25,12 +25,11 @@ You can generate a web API Descriptor by importing a Swagger definiton for an ex
 
 Open an existing Descriptor or create a new one from the Dashboard by clicking on **+ Web API** and selecting **Descriptor** from the pop-down menu.
 
-From the Descriptor's **Overview**, click on the actions button on the top right of your screen and select **Import definition** from the menu.
+From the Descriptor's **Overview**, click on the actions button on the top right of your screen and select the **Import definition** menu.
 
 ![API Commons](images/swagger-import-definition.jpg "API Commons")
 
-You will be prompted to enter the URL that points to
-your API's Swagger definition.
+You will be prompted to enter the URL that points to your API's Swagger definition.
 
 Click on the **Import** button to import the Swagger definition into your Descriptor. As a result, representations and resources will be added to your Descriptor according to the content of the Swagger definition.
 
