@@ -2,9 +2,9 @@
 
 From the **Overview** of a web API, the **General information** panel can be accessed by cliking the **General information** button in the left panel.
 
-The **General information** panel provides an **Overview** tab concerning the general state of the web API, as well as tabs dedicated to the API's **User agreement**, **Privacy policy**, and shared use via **API Commons**.
+The **General information** panel provides an **Overview** tab concerning the general state of the web API, as well as tabs dedicated to the API's **User agreement**, **Privacy policy**, and shared use via **API Commons**. From the **Export your API** section (at the bottom of the panel), you will also find URLs that will take you to definition documents in different formats.
 
-![General information](images/generalinformation.png "General information")
+![General information](images/general-information.jpg "General information")
 
 # Share an API design on API Commons
 
@@ -18,8 +18,8 @@ To register your Web API on API Commons, you need to provide the commons with an
 
 To obtain your automatically generated API manifest, navigate to the **API Commons** tab from the **General information** panel.
 
-From this panel you will find URLs that will take you to definition documents in different formats, including the API Commons manifest.
+From this panel you will find the API Commons manifest.
 
-![API Commons tab](images/apicommons.png "API Commons tab")
+![API Commons tab](images/api-commons-tab.jpg "API Commons tab")
 
 Please then navigate the API Common's [Add an API](http://apicommons.org/add-apis.html) page for instructions on how to upload your API Commons manifest file.
