@@ -56,4 +56,6 @@ In order to browser the contents of the folders, you need to start by deploying 
 
 Once the Wrapper is deployed, you can select a folder from the **Folders** section in the left panel, and then open the **Browser** tab in the central panel.
 
+<!--
 ![GitHub folder browser](images/github-folder-browser.png "GitHub folder browser")
+-->
