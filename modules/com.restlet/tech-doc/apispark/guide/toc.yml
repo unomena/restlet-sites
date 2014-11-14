@@ -186,59 +186,59 @@ toc:
 - dir: 05_store
   id: store
   items:
-  - dir: 01_entity-stores
+  - file: 01_overview.md
+    id: overview
+    link_url: /05_store/01_overview.md
+    long-title: Overview
+    title: Overview
+    url: /store/overview
+  - dir: 02_entity-stores
     id: entity-stores
     items:
-    - file: 01_overview.md
-      id: overview
-      link_url: /05_store/01_entity-stores/01_overview.md
-      long-title: Overview
-      title: Overview
-      url: /store/entity-stores/overview
     - file: 02_model-data.md
       id: model-data
-      link_url: /05_store/01_entity-stores/02_model-data.md
+      link_url: /05_store/02_entity-stores/02_model-data.md
       long-title: Model your Entity Store data
       title: Model data
       url: /store/entity-stores/model-data
     - file: 03_deploy.md
       id: deploy
-      link_url: /05_store/01_entity-stores/03_deploy.md
+      link_url: /05_store/02_entity-stores/03_deploy.md
       long-title: Deploy your Entity Store
       title: Deploy
       url: /store/entity-stores/deploy
     - file: 04_edit-data.md
       id: edit-data
-      link_url: /05_store/01_entity-stores/04_edit-data.md
+      link_url: /05_store/02_entity-stores/04_edit-data.md
       long-title: Edit, back up and restore your Entity Store data
       title: Edit & backup data
       url: /store/entity-stores/edit-data
     - file: 05_sql-schema.md
       id: sql-schema
-      link_url: /05_store/01_entity-stores/05_sql-schema.md
+      link_url: /05_store/02_entity-stores/05_sql-schema.md
       long-title: Extract an SQL Schema from your database and import it in APISpark
       title: Exposing existing SQL data
       url: /store/entity-stores/sql-schema
     long-title: Entity Stores
     title: Entity Stores
-  - file: 02_file-stores.md
+  - file: 03_file-stores.md
     id: file-stores
-    link_url: /05_store/02_file-stores.md
+    link_url: /05_store/03_file-stores.md
     long-title: Store static files in local File Stores
     title: File Stores
     url: /store/file-stores
-  - dir: 03_wrappers
+  - dir: 04_wrappers
     id: wrappers
     items:
     - file: 01_overview.md
       id: overview
-      link_url: /05_store/03_wrappers/01_overview.md
+      link_url: /05_store/04_wrappers/01_overview.md
       long-title: Overview
       title: Overview
       url: /store/wrappers/overview
     - file: 02_aws.md
       id: aws
-      link_url: /05_store/03_wrappers/02_aws.md
+      link_url: /05_store/04_wrappers/02_aws.md
       long-title: Serve files from your AWS S3 account
       title: AWS S3 example
       url: /store/wrappers/aws
