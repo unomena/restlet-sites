@@ -33,9 +33,9 @@ Once the operation completes successfully, the client SDKs you have added to you
 
 To download a client SDK for a web API:
 
-1. Select the appropriate API.
-2. Click on the **Downloads** tab.
-3. Select the language you need (Java or JavaScript) in the **Client kits** section.
-4. Click on the **Download** button.
+Select the appropriate API.  
+Click on the **Downloads** tab.  
+Select the language you need (Java or JavaScript) in the **Client kits** section.  
+Click on the **Download** button.  
 
-	![Download button](images/01.jpg "Download button")
+![Download button](images/01.jpg "Download button")

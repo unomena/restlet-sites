@@ -25,10 +25,10 @@ An Entity Store is composed of entities, which represent types of objects and th
 
 
 ## Create an entity
-1. In the **Entities** section, click on the **Add** button.
-2. Give the new entity a name (required) and a description (optional).
+In the **Entities** section, click on the **Add** button.  
+Give the new entity a name (required) and a description (optional).
 
-	![Add Entity](images/03.jpg "Add Entity")
+![Add Entity](images/03.jpg "Add Entity")
 
 ## Entity configuration
 

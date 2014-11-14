@@ -11,11 +11,11 @@ If you want users to access your API documentation without authentication, you c
 
 To make your API documentation public:
 
-1. Open your API **Overview** page.
-2. In the central panel, click on the **Overview** tab.
-3. Select the **Public documentation** checkbox.
+Open your API **Overview** page.  
+In the central panel, click on the **Overview** tab.  
+Select the **Public documentation** checkbox.
 
-	![Public documentation](images/publicdocumentation.jpg "Public documentation")
+![Public documentation](images/publicdocumentation.jpg "Public documentation")
 
 
 

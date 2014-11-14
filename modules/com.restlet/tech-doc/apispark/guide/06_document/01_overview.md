@@ -23,10 +23,10 @@ A Descriptor can be edited by members of the team that provide the described API
 
 Here is a summary of the process that allows you to document an existing API using APISpark's **Descriptor**:
 
-1. Develop web API (outside the APISpark platform)
-2. Create a Descriptor by introspection, or by importing a Swagger definition
-3. Maintain the Descriptor either by hand or automatically via introspection
-4. Generate documentation + SDKs for your API consumers to download
+* Develop web API (outside the APISpark platform)  
+* Create a Descriptor by introspection, or by importing a Swagger definition  
+* Maintain the Descriptor either by hand or automatically via introspection  
+* Generate documentation + SDKs for your API consumers to download
 
 In the following sections, we'll show you how to manually create and edit a web API Descriptor. Then we'll explain how to automatically generate a web API Descriptor from your existing web API implementation.
 

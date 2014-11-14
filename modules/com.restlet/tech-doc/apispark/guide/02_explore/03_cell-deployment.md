@@ -9,7 +9,7 @@ Thus, your Data Stores and Web APIs are only available to store data or receive 
 
 Cells can be deployed from the draft, published and deprecated states, and can be re-deployed at any time.
 
-<!-- TODO center -->![cell deployment](images/cell-deployment.jpg "cell deployment")
+![cell deployment](images/cell-deployment.jpg "cell deployment")
 
 The deployment process is composed of several steps, which are displayed in the deployment information window.
 

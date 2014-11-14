@@ -33,19 +33,19 @@ If you already have an API in which to import a data store
 
 If you haven't already done so, create a web API from the **Dashboard** by click on the **+ Web API** button.
 
-  ![+web API](images/05.jpg "+web API")
+![+web API](images/05.jpg "+web API")
 
 Select **Full Stack** from the **Type** drop-down menu. Give your API a **Name**, **Domain**, and **Description** (optional).
 The window will notify you of the availability of the the domain name.
 
-  ![Create a web API](images/createapi.png "Create a web API")
+![Create a web API](images/createapi.png "Create a web API")
 
 
 ## Import a Data Store
 
 To import a Data Store into an API, navigate to the API's **Overview**. Click on the **Settings** tab. Click on the **Add** button next to **Imports** in the left panel.
 
-  ![+Import](images/import.png "+Import")
+![+Import](images/import.png "+Import")
 
 Select the **Type** of cell you want to import, select the **Cell** itself and the **Version** you want to import.
 
