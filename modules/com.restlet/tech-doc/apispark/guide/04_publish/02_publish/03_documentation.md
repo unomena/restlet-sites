@@ -1,7 +1,11 @@
 
 An important part of running a web API is documenting it so that consumers of your API can invoke it with ease.
 
-APISpark is very flexible in this regard and provides three different ways to document you APIs that are hosted on APISpark.
+APISpark is very flexible in this regard and provides three different ways to document you APIs that are hosted on APISpark:
+
+* Make your API documentation public
+* Download your API's documentation
+* Get the Swagger definition of your API
 
 APISpark will also provide automatic documentation for existing APIs that are not hosted by APISpark. In this case, please visit the section called [Document existing web APIs through APISpark Descriptors](technical-resources/apispark/guide/document/overview "Document existing web APIs through APISpark Descriptors").
 
@@ -34,13 +38,15 @@ You will be prompted to select a **Name** and **Type** (format) for your new dow
 
 Once the desired types of documentation have been added to the **Documentation** section, you will need to generate the downloads for your API.
 
+## Download your documentation
+
 To generate the downloads for an API, open the API's **Overview**, click on the pop-down action button and select **Generate downloads**.
 
 ![Generate downloads](images/generatedownloads.png "Generate downloads")
 
 Your documentation can now be downloaded from the **Documentation** section by selecting a type of documentation from the list and clicking on the **Download** button.
 
-# Your API's Swagger definition
+# Get the Swagger definition of your API
 
 **Swagger** is an API description language that comes with a number of tools including Swagger UI and Swagger Code Generator. Swagger UI provides a nice HTML presentation of your API’s contract and allows you to test your API by calling it. The Swagger Code Generator generates client kits for your API in eight languages.
 
