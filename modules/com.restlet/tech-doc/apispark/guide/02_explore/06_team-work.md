@@ -13,7 +13,7 @@ For team-based collaboration, members should be given either of the roles *Owner
 
 *User* is a special role designed for web API members who are consumers of your API. For more information about managing your API consumption, please visit the [User Groups](technical-resources/apispark/guide/publish/secure/user-groups "User Groups") page.
 
-Depending on the role given to a member, he will have different permissions in the APISpark console.
+Depending on the role given to a member, s/he will have different permissions in the APISpark console.
 
 ![team work](images/provider-team.jpg "team work")
 
@@ -38,7 +38,7 @@ Depending on the role given to a member, he will have different permissions in t
 
 To manage the members of a cell, navigate to the cell's **Members** tab.
 
-From here, you can add delete members, and attribute roles to members.
+From here, you can add, delete members, and attribute roles to members.
 
 To add a member to a cell:
 

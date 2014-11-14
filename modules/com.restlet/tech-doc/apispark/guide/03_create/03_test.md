@@ -1,13 +1,13 @@
 # Requirements
 
-In order to test and debug a web API, certain number of requirements must be met.
+In order to test and debug a web API, a certain number of requirements must be met.
 
 The API must be deployed. Please visit the [Cell deployment](technical-resources/apispark/guide/explore/cell-deployment "Cell deployment") page if you don't know how to deploy an API.  
-You need access credentials if the API if not open to *anyone*. Please visit the [Invocation](technical-resources/apispark/guide/publish/publish/invocation "Invocation") page if you don't know how to obtain and view your API access credentials.
+You need access credentials if the API if not open to *anyone*. Please visit the [Invocation](technical-resources/apispark/guide/publish/publish/invocation "Invocation") page if you do not know how to obtain and view your API access credentials.
 
 # Invoke a Web API with POSTMAN
 
-Using a Web API does not impose any particular programming language. It can even be done from a web browser. However, to test your API we recommend the use of tools such as the Chrome extension POSTMAN and DHC that provide a graphical user interface to perform HTTP calls.
+Using a web API does not impose any particular programming language. It can even be done from a web browser. However, to test your API we recommend the use of tools such as the Chrome extension POSTMAN and DHC that provide a graphical user interface to perform HTTP calls.
 
 When using POSTMAN, click on the **Basic Auth** tab, fill in the **Username** and **Password** fields with the information copied from your APISpark **Endpoints**.  
 Fill in the **Endpoint URI** and add the name of a resource e.g. `/contacts/ `at the end of it. (E.g. `https://employeedirectory.apispark.net/v1/contacts`).  
@@ -32,7 +32,7 @@ The **Messages** section in the left panel contains general messages pertaining 
 
 The **Traces** section contains detailed log messages pertaining to processes such as deployment.
 
-If one such process were to result in a error, the **Traces** section can provide usefull information as to why the process failed.
+If one such process were to result in an error, the **Traces** section can provide useful information as to why the process failed.
 
 ## Latest API calls
 

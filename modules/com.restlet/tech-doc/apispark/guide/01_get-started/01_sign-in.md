@@ -3,11 +3,11 @@
 
 APISpark's sign up process is straightforward. It relies on social login to make signing up as simple as possible for you.
 
-To sign up, click on the **Sign in** button from the [welcome page](https://apispark.com/ "Welcome page")  and pick a social provider to identify yourself with. Your account will automatically be created for you.
+To sign up, click on the **Sign in** button from the [welcome page](https://apispark.com/ "Welcome page") and pick a social provider to identify yourself with. Your account will automatically be created for you.
 
 ![Sign in](images/01.jpg "Sign in")
 
-Several social login providers are supported, including **GitHub**, **Google**, **Windows Live**, **Yahoo**, and **Facebook**. You can create an account for free with any of these providers if you don't already own one.
+Several social login providers are supported, including **GitHub**, **Google**, **Windows Live**, **Yahoo**, and **Facebook**. You can create an account for free with any of these providers if you do not already own one.
 
 ![Sign in](images/sociallogin.png "Sign in")
 
@@ -27,14 +27,14 @@ The **Account** page has two main tabs: **My account** and **My plan**.
 
 ![My account tab](images/myaccount.jpg "My account tab")
 
- * The **Information** section provides information about your profile and the social network account you use to connect to APISpark  
+ * The **Information** section provides information about your profile and the social network account you use to connect to APISpark.  
  * The **Tokens** section lists the tokens linked to your account.
-You won't need to use these tokens for now. You can simply sign in to APISpark with your social provider account.  
+You will not need to use these tokens for now. You can simply sign in to APISpark with your social provider account.  
  * The **Access Log** section logs your account activity.
 
 ## My plan
 
-![My plan tab](images/myplan.png "My plan tab")
+![My plan tab](images/my-plan.jpg "My plan tab")
 
 From this tab, you can select the plan that best suits you. You may upgrade or downgrade your plan according to your needs.
 

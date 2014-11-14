@@ -18,7 +18,6 @@ Select the **Public documentation** checkbox.
 ![Public documentation](images/publicdocumentation.jpg "Public documentation")
 
 
-
 # Download your API's documentation
 
 APISpark provides a way for you to download documentation for web APIs. This way you can, for example, host the documentation on your own website. Documentation is provided for download in a number of different formats.
@@ -50,11 +49,9 @@ APISpark *automatically* produces a Swagger definition for APIs it hosts. You ca
 
 ## Obtain your API's Swagger definition
 
-To access your API's automatically generated Swagger definition, open the API's **Overview** and open the **General information** tab from the left panel.
+To access your API's automatically generated Swagger definition, open the API's **Overview** and click on **General information** from the left panel.
 
-Open the **API Commons** panel.
-
-![API Commons](images/getswagger.png "API Commons")
+![General information](images/general-information.jpg "General information")
 
 Click on one of the **Swagger** URLs to open the corresponding Swagger definition. Note that multiple versions of Swagger are supported.
 
@@ -77,23 +74,13 @@ The **Swagger 1.2** definition for the Contacts API looks like this:
 }
 ```
 
-## Check out your API's Swagger UI
+## Access Swagger UI demo
 
-The **Swagger UI** is a useful tool for visualizing an API's documentation and performing simple tests.
+From an API's **General information** panel, you can get the Swagger definition link to access Swagger UI.
 
-APISpark lets you directly view your API's Swagger UI from its **General information** tab in the **API Commons** panel.
+Copy the Swagger link from the **Export your API** section and paste it in [Swagger UI demo](http://petstore.swagger.wordnik.com/ "Swagger UI demo").
 
-To view you **API's Swagger UI**, click on **Open Swagger UI**.
-
-![Swagger UI](images/openswaggerui.png "Swagger UI")
-
-Your API's **Swagger UI** will open in a new web page.
-
-## Download your API's Swagger UI
-
-From an API's **API Commons** panel, you can download a version of its Swagger UI.
-
-To download your Swagger UI, click on the **Download Swagger UI**.
+![Swagger URL](images/swagger-url.jpg "Swagger URL")
 
 The screenshot below is an example of what the Swagger UI looks like.  
 

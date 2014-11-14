@@ -7,7 +7,7 @@ An **Endpoint** has a **URI** (Uniform Resource Identifier), a **Protocol**, a *
 
 A single API can have multiple endpoints, for example to respect different naming conventions or to support different protocols such as HTTP or HTTPS.
 
-To edit a web API's endpoints in APISpark, navigate to the Web API's **Overview**. The API's endpoints are listed in the **Endpoints** section in the left panel.
+To edit a web API's endpoints in APISpark, navigate to the web API's **Overview**. The API's endpoints are listed in the **Endpoints** section in the left panel.
 
 ![Endpoints section](images/04.jpg "Endpoints section")
 
@@ -17,19 +17,23 @@ You will be prompted to select a **Domain** and a **Protocol** for you new **End
 
 # Custom domains
 
-By default, your full stack Web API responds to traffic sent to its default "apispark.net" endpoint.
+By default, your web API responds to traffic sent to its default "apispark.net" endpoint.
 
 Custom domains can also be used as a basis for you API endpoints.
 
 ## Add a custom domain
 
-To add a custom domain endpoint, you first have to register your custom domain, in the **Account** / **My domains** page.
+To add a custom domain endpoint, you first have to register your custom domain, in the **My domains** tab of the **Account** page.
+
+![My domains tab](images/my-domains-tab.jpg "My domains tab")
 
 Add a domain and choose a DNS configuration type.
 
-Then, edit the new DNS entry, and bind one of your WebAPIs.
+![Add domain name](images/add-domain-name.jpg "Add domain name")
 
-From there, you can create new endpoints for your WebAPI, with a base URI taken either from the default apispark.net domain or from your custom domain.
+Then, edit the new DNS entry, and bind one of your web APIs.
+
+From there, you can create new endpoints for your web API, with a base URI taken either from the default apispark.net domain or from your custom domain.
 
 ## DNS configuration types
 
