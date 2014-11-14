@@ -1,8 +1,8 @@
 # Introduction
 
-APISpark allows you to to serve and store files based on existing [AWS S3](http://aws.amazon.com/s3/) buckets through a custom web API using APISpark AWS S3 file store wrapper.
+APISpark features a Wrapper File Store for Amazon [AWS S3](http://aws.amazon.com/s3/) buckets. The S3 Wrapper  lets you serve and store files from existing S3 buckets through a web API.
 
-This tutorial describes how to configure AWS S3 but simply lists what you need to collect from AWS administrators to configure APISpark.
+This guide doesn't explain how to configure AWS S3, but simply lists the information you'll need to collect from your AWS administrator in order to configure the APISpark S3 Wrapper.
 
 >**Note:** You will need your AWS access key ID and secret access key to be able to use your AWS S3 account.
 
@@ -17,8 +17,6 @@ Click on the **Settings** tab and from the **Security** section, select **AWS Ac
 ![Test](images\aws-settings-tab.jpg "Test")
 
 Enter your **Access Key ID** and **Secret Access Key** and click on the **Test** button.
-
-When connected, APISpark automatically detects all buckets for which you have access.
 
 In the **Imports** section, click on the **Add** button. From the **Bucket** drop-down menu, select the bucket you want to import and click on the **Import bucket** button.
 
