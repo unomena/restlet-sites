@@ -98,7 +98,8 @@ Postproduction
 ===========
 
 <!-- .note -->
-> my note
+
+> my note. *(respect empty line before and after!)*
 
 Links
 =====
@@ -107,6 +108,12 @@ Http
 - Simple : http://restlet.com
 - With text : [Restlet website](http://restlet.com)
 - With text and tooltip : [Restlet website](http://zenika.com "the tooltip")
+
+Internal link:
+
+Prefix with `technical-resources/apispark/guide/` and use file system structure (without the number prefix or file extension) to generate the URL.
+
+Example: [Export an API](technical-resources/apispark/guide/store/entity-stores/overview "Export an API")
 
 Email
 - Email : <info@reslet.com>
@@ -217,4 +224,3 @@ Needs
 ======
 
 colors ??
-
