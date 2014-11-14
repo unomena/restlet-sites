@@ -17,6 +17,36 @@ You will be prompted to select a **Domain** and a **Protocol** for you new **End
 
 # Custom domains
 
-Custom domains can be used as a basis for you API endpoints.
+By default, your full stack Web API responds to traffic sent to its default "apispark.net" endpoint.
 
-*Coming soon*.
+Custom domains can also be used as a basis for you API endpoints.
+
+## Add a custom domain
+
+To add a custom domain endpoint, you first have to register your custom domain, in the **Account** / **My domains** page.
+
+Add a domain and choose a DNS configuration type.
+
+Then, edit the new DNS entry, and bind one of your WebAPIs.
+
+From there, you can create new endpoints for your WebAPI, with a base URI taken either from the default apispark.net domain or from your custom domain.
+
+## DNS configuration types
+
+APISpark proposes 2 types of DNS configuration for your custom domains.
+
+### DNS aliasing
+
+Use the **DNS aliasing** configuration if you opt for adding a CNAME entry with your DNS registrar, that points to your API's default endpoint on APISpark.
+
+Here is an example configuration to setup with your domain registrar, for mypai.customdomain.com:
+
+```
+myapi 10800 IN CNAME myapi.apispark.net.
+```
+
+### DNS delegation
+
+Use the **DNS delegation** configuration if you opt to let APISpark serve as your DNS.
+
+The Amazon Route53 service will be leveraged in this case. In this case, the IP addresses of the DNS servers are displayed.
