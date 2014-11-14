@@ -2,7 +2,7 @@
 
 APISpark features a Wrapper File Store for Amazon [AWS S3](http://aws.amazon.com/s3/) buckets. The S3 Wrapper  lets you serve and store files from existing S3 buckets through a web API.
 
-This guide doesn't explain how to configure AWS S3, but simply lists the information you'll need to collect from your AWS administrator in order to configure the APISpark S3 Wrapper.
+This guide does not explain how to configure AWS S3, but simply lists the information you will need to collect from your AWS administrator in order to configure the APISpark S3 Wrapper.
 
 >**Note:** You will need your AWS access key ID and secret access key to be able to use your AWS S3 account.
 
