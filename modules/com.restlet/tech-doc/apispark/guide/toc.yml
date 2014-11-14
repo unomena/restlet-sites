@@ -195,27 +195,27 @@ toc:
   - dir: 02_entity-stores
     id: entity-stores
     items:
-    - file: 02_model-data.md
+    - file: 01_model-data.md
       id: model-data
-      link_url: /05_store/02_entity-stores/02_model-data.md
+      link_url: /05_store/02_entity-stores/01_model-data.md
       long-title: Model your Entity Store data
       title: Model data
       url: /store/entity-stores/model-data
-    - file: 03_deploy.md
+    - file: 02_deploy.md
       id: deploy
-      link_url: /05_store/02_entity-stores/03_deploy.md
+      link_url: /05_store/02_entity-stores/02_deploy.md
       long-title: Deploy your Entity Store
       title: Deploy
       url: /store/entity-stores/deploy
-    - file: 04_edit-data.md
+    - file: 03_edit-data.md
       id: edit-data
-      link_url: /05_store/02_entity-stores/04_edit-data.md
+      link_url: /05_store/02_entity-stores/03_edit-data.md
       long-title: Edit, back up and restore your Entity Store data
       title: Edit & backup data
       url: /store/entity-stores/edit-data
-    - file: 05_sql-schema.md
+    - file: 04_sql-schema.md
       id: sql-schema
-      link_url: /05_store/02_entity-stores/05_sql-schema.md
+      link_url: /05_store/02_entity-stores/04_sql-schema.md
       long-title: Extract an SQL Schema from your database and import it in APISpark
       title: Exposing existing SQL data
       url: /store/entity-stores/sql-schema
