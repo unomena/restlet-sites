@@ -5,11 +5,9 @@ APISpark can enhance the way you document an existing web API hosted outside the
 
 APISpark can help you document an existing API in the following ways:
 
-* Automatically generate *documentation*  
-* Automatically generate *client SDKs* and *server skeletons*
-* Automatically generate *standard API definitions* (RAML, Swagger) for third-party integration
-
-<!-- TODO link with swagger and raml -->
+* Automatically generate [*documentation*](technical-resources/apispark/guide/document/get-documentation "Generate documentation")
+* Automatically generate [*client SDKs* and *server skeletons*](technical-resources/apispark/guide/document/get-documentation "Generate client SDKs and server skeletons")
+* Automatically generate *standard API definitions* (RAML, Swagger) for [third-party Integration](technical-resources/apispark/guide/publish/publish/third-party "Third-party Integration") integration
 
 # The web API Descriptor
 
@@ -33,6 +31,6 @@ Here is a summary of the process that allows you to document an existing API usi
 
 In the following sections, we will show you how to manually create and edit a web API Descriptor. Then we will explain how to automatically generate a web API Descriptor from your existing web API implementation.
 
-<!-- TODO could also document the API first and develop the web API after with server skeleton. -->
+<!-- TODO could also document the API first and develop the web API after with the server skeleton. -->
 
 ![Descriptors](images/descriptors.jpg "Descriptors")
