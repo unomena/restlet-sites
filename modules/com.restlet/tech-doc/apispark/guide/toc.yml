@@ -272,6 +272,12 @@ toc:
     long-title: Manage your web API via APISpark Connectors
     title: Connectors
     url: /manage/connectors
+  - file: 02_remote-agent.md
+    id: remote-agent
+    link_url: /07_manage/02_remote-agent.md
+    long-title: Configure the Remote Agent and install it
+    title: Remote Agent
+    url: /manage/remote-agent
   long-title: Manage existing web APIs with APISpark Connectors
   title: Manage web APIs
 
