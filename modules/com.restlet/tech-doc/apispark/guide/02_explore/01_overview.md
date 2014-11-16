@@ -8,11 +8,15 @@ Web APIs import Data Stores and can be invoked by users.
 
 ![Cell concept](images/cell-concept.jpg "Cell concept")
 
+<!-- TODO introduce webapi first? -->
+
 ## Data Stores  
 Two types of *Data Stores* can be created. *Entity Stores* for structured data (equivalent to a database) and *File Stores* for static files (text documents, images, videos or style sheets).
 
 ## Web APIs  
 A *Full Stack web API* is an API (available web business once deployed via HTTP and exposing data).
+
+<!-- TODO introduce descriptor & connector cell here -->
 
 # Cell characteristics
 
