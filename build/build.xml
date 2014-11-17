@@ -143,10 +143,10 @@
 			<!-- parse the files according to this version properties -->
 			<replace dir="${temp}/owr/tech-doc/restlet-framework/guide/@{version}" replacefilterfile="${temp}/model.@{version}.properties" />
 			<!-- deal with the "javadocs" links -->
-			<replaceregexp match="javadocs://(.\..)/(.*)" replace="http://restlet.org/tech-doc/restlet-framework/javadocs/\1/\2" byline="true">
+			<replaceregexp match="javadocs://(.\..)/(.*)" replace="http://restlet.org/technical-resources/restlet-framework/javadocs/\1/\2" byline="true">
 				<fileset dir="${temp}/owr/tech-doc/restlet-framework/guide/@{version}" includes="**/*" />
 			</replaceregexp>
-			<replaceregexp match="javadocs://(.*)" replace="http://restlet.org/tech-doc/restlet-framework/javadocs/@{version}/\1" byline="true">
+			<replaceregexp match="javadocs://(.*)" replace="http://restlet.org/technical-resources/restlet-framework/javadocs/@{version}/\1" byline="true">
 				<fileset dir="${temp}/owr/tech-doc/restlet-framework/guide/@{version}" includes="**/*" />
 			</replaceregexp>
 			<!-- deal with the "source" links -->
@@ -328,10 +328,10 @@
 		<generate-guide version="2.3" />
 		<!-- this is a Web page, but also a template that can be inserted from "/download/current" or "/download/past" -->
 <generate-file source="discover/firststeps.md" target="discover/firststeps.ftl" raw="raw" />
-		<replaceregexp match="javadocs://(.\..)/(.*)" replace="http://restlet.org/tech-doc/restlet-framework/javadocs/\1/\2" byline="true">
+		<replaceregexp match="javadocs://(.\..)/(.*)" replace="http://restlet.org/technical-resources/restlet-framework/javadocs/\1/\2" byline="true">
 			<fileset dir="${temp}/owr" includes="**/*" />
 		</replaceregexp>
-		<replaceregexp match="javadocs://(.*)" replace="http://restlet.org/tech-doc/restlet-framework/javadocs/${stable.restlet-version-minor}/\1" byline="true">
+		<replaceregexp match="javadocs://(.*)" replace="http://restlet.org/technical-resources/restlet-framework/javadocs/${stable.restlet-version-minor}/\1" byline="true">
 			<fileset dir="${temp}/owr" includes="**/*" />
 		</replaceregexp>
 

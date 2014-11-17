@@ -6,9 +6,15 @@
     <#global currentSection = "error" />
 <#elseif (pp.sourceDirectory?index_of("/") > -1)>
     <#global currentSection = pp.sourceDirectory?substring(0, pp.sourceDirectory?index_of("/")) />
+    <#list sections.section as section>
+      <#if (section.@path?has_content) && ( section.@path == currentSection)>
+         <#assign currentSection= section.@id />
+      </#if>
+    </#list>
 <#else>
     <#global currentSection = "-" />
 </#if>
+
 <#if !(currentSubSection?has_content)>
     <#global currentSubSection = pp.sourceFileName />
     <#assign tab = pp.sourceDirectory?split("/") />

@@ -49,7 +49,7 @@
 			</section>
 		</sections>
 	</section>
-	<section id="learn">
+	<section id="learn" path="tech-doc">
 		<label>Learn Restlet Framework</label>
 		<title>Learn</title>
 		<sections>
