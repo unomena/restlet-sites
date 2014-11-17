@@ -1,7 +1,7 @@
 # Introduction
 
 This tutorial will show you how to create a custom web API that gives access to existing data stored in a Parse backend.
-[Parse.com](http://parse.com/) is a popular Backend as a Service (BaaS) provider that powers connected mobile applications.
+<a href="http://Parse.com/" target="_blank">Parse.com</a> is a popular Backend as a Service (BaaS) provider that powers connected mobile applications.
 
 # Requirements
 
@@ -118,4 +118,4 @@ Any POST requests made to the API will result in new data being created in your 
 
 >**Note:** APISpark lets you generate custom Client SDKs for you API. Supported environments include Java, Android, GWT and JavaScript (AJAX or Node.js).
 
-Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the [Help Desk](http://support.apispark.com/).
+Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the <a href="http://support.apispark.com/" target="_blank">Help Desk</a>.

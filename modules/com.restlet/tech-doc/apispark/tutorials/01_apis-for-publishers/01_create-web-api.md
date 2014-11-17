@@ -106,4 +106,4 @@ The following figure shows the API call in POSTMAN.
 
 >**Note:** APISpark lets you generate custom Client SDKs for your API. Different environments are supported including Java, Android, GWT and JavaScript (AJAX or Node.js).
 
-Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the [Help Desk](http://support.apispark.com/).
+Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the <a href="http://support.apispark.com/" target="_blank">Help Desk</a>.
