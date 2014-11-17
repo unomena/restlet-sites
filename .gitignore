@@ -13,5 +13,5 @@ Thumbs.db
 /build/custom.properties
 /build/dist/
 /build/temp/
-
+/modules/com.restlet.frontend/bin
 *.swp
