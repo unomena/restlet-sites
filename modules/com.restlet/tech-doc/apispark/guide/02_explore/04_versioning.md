@@ -1,8 +1,17 @@
-APISpark automates the version management of your cells. As you create a new cell, a V1 is automatically created.
+APISpark provides a version management system for your cells. When you create a new cell, version 1 is automatically created.
 
-There are 2 cell states possible: in development (not deployed yet) or already deployed. Each cell can have multiple (draft and deployed) versions in parallel but the last version deployed is the accessible version.
-Each version follows its own lifecycle: draft, published, deprecated, archived, deleted. For more information, jump to the [cell lifecycle](technical-resources/apispark/guide/explore/cell-lifecycle "cell lifecycle") section.
+To add a new version of a cell, open the version drop-down menu next to the **Deploy** button and select "Add a version".
 
-A versioned Entity Store can only be edited incrementally (adding new entities and new properties to existing entities), no existing properties can be modified. Versioned web APIs and File Stores can be modified without restriction.
+![Add a version](images/add-a-version.png "Add a version")
 
-Versioning allows you to make a static version of your cell available to your consumers while you keep working on a version that is in development with no impact on your cell consumers.
+The new version of your cell will be a copy of the previous version. Multiple versions can be managed and executed in parallel.
+
+To switch to a different version of a cell, select it from the version drop-down menu.
+
+![Switch cell version](images/switch-cell-version.png "Switch cell version")
+
+Note that with all Data Stores, different versions of the same store will point to the same dataset.
+
+A versioned Entity Store (a store that has more than one version) can only be edited incrementally. This means you can add new entities and new properties to existing entities, but you cannot modify or delete existing properties or entities.
+
+Versioning allows you to make a stable version of your cell available to your consumers while you keep working on a version that is in development, with no impact on your cell consumers.

@@ -56,3 +56,17 @@ Select an import from the left panel of the API's **Settings** tab, and click on
 ![Generate Resources](images/generateResources.png "Generate Resources")
 
 If you update your Data Store, you can update the API's corresponding resources and representations by clicking on the **Update** button in the same window.
+
+### Switch imported Entity Store version
+
+If you create a new version of an Entity Store that is imported by a Web API (see [Versioning](technical-resources/apispark/guide/explore/versioning "Versioning")), you can update the Web API's **Import** to switch to the new version of the Entity Store.
+
+To switch the version of an imported Entity Store, open the importing Web API. Open the **Settings** tab, and select the imported Entity Store from the **Imports** section in the left panel.
+
+Open the **Version** drop-down menu from the central panel and select the new version of your Entity Store.
+
+You will be prompted to select whether or not to automatically add any new resources to your API, and to update existing ones. We recommend keeping this box checked.
+
+Go back to the API's **Overview** to view your updated resources and representations.
+
+> **Note:** You can only switch an imported entity store to a version which is superior to the one currently imported. 
