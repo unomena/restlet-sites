@@ -5,7 +5,7 @@ APISpark can bring additional features to your existing web API hosted outside o
 
 With a *Connector*, you can add to your API:
 * Authenticated access
-* Fine-grained Access Control
+* Fine-grained access control
 * Rate-limitation (quotas) to your API users
 * IP filtering
 
@@ -23,10 +23,10 @@ To create a Connector, go to the **Dashboard** and click on the **+Web API** but
 
 In the **Create a web API** window, select **Connector** from the **Type** pop-down menu. You will be prompted to give your Connector a **Name** and a **Description** (optional).
 
-![Create a connector](images/createaconnector.png "Create a connector")
+![Create a connector](images/create-connector.jpg "Create a connector")
 
 A Connector has the same properties as a [web API](technical-resources/apispark/guide/create/overview "Web API") except that a connector is not hosted by the APISpark plateform.
 
 With a Connector you can also document your web API as with a [Descriptor](technical-resources/apispark/guide/document/overview "Descriptor").
 
-Once you have created a Connector, you can [configure it and install the Remote Agent](technical-resources/apispark/guide/manage/remote-agent "Remote Agent") in you Information System, and that's all, *your web API have new features inside without writing a line of code*!
+Once you have created a Connector, you can [configure it and install the Remote Agent](technical-resources/apispark/guide/manage/remote-agent "Remote Agent") in your Information System, and that's all. Your web API has new features inside without writing a line of code!
