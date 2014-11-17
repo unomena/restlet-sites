@@ -21,7 +21,7 @@ For details on how to setup each wrapper, please navigate to the appropriate sub
 
 ## Google Spreadsheet Wrapper
 
-<a href="https://docs.google.com/spreadsheets/">Google Spreadsheet</a> is a collaborative data editing tool that belongs to the Google Docs suite.
+<a href="https://docs.google.com/spreadsheets/" target="_blan">Google Spreadsheet</a> is a collaborative data editing tool that belongs to the Google Docs suite.
 
 The **Google Spreadsheet Wrapper** Entity Store lets you wrap your spreadsheets to APISpark in the form of structured entities. You are then free to expose these entities via web APIs.
 
@@ -37,19 +37,19 @@ For more information jump to our [Expose an Address Book SQL database via a web 
 
 ## Parse Wrapper
 
-<a href="https://parse.com/">Parse</a> is a mobile Backend-as-a-Service (MBaaS) provider that focuses on building and hosting simple backends for mobile applications.
+<a href="https://parse.com/" target="_blank">Parse</a> is a mobile Backend-as-a-Service (MBaaS) provider that focuses on building and hosting simple backends for mobile applications.
 
 The **Parse** Entity Store lets you wrap a Parse backend to APISpark in the form of structured entities. You are then free to expose these entities via web APIs.
 
 ## Firebase Wrapper
 
-<a href="https://firebase.com/">Firebase</a> is a Backend-as-a-Service (BaaS) with a focus on real-time structured data.
+<a href="https://firebase.com/" target="_blank">Firebase</a> is a Backend-as-a-Service (BaaS) with a focus on real-time structured data.
 
 The **Firebase** Entity Store lets you wrap a Firebase backend to APISpark in the form of structured entities. You are then free to expose these entities via web APIs.
 
 ## Amazon Wrapper
 
-<a href="http://aws.amazon.com/fr/s3/">AWS S3</a> is a file storage service provided by Amazon.
+<a href="http://aws.amazon.com/fr/s3/" target="_blank">AWS S3</a> is a file storage service provided by Amazon.
 
 The **S3** File Store lets you wrap AWS S3 buckets to an APISpark File Store. You are then free to expose these files via web APIs.
 

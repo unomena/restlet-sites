@@ -1,8 +1,8 @@
 The features used by the *Remote Agent* are defined on your APISpark Dashboard, on the *Connector* cell.
 
-# Agent settings
+# Configure your Remote Agent
 
-To enabled or disabled each feature:
+To enable or disable each feature:
 
 Open the appropriate cell.  
 Navigate to the **Settings** tab.  
@@ -19,9 +19,9 @@ For more information, jump to our [User Groups](technical-resources/apispark/gui
 
 ## Authorization module
 
-If you enable the **Authorization** module, you activate the **Default Permission** tab and the Security tab.
+If you enable the **Authorization** module, you activate the **Default Permissions** page and the **Security** section.
 
-The **Default Persmission** section is in the **Security** section in the **Settings** tab.
+You will find the **Default Persmissions** page in the **Security** section of the **Settings** tab.
 
 ![Security tab](images/default-permission.jpg "Security tab")
 
@@ -33,21 +33,21 @@ Go to the [Runtime Permissions](technical-resources/apispark/guide/publish/secur
 
 ## Firewall module
 
-With the **Firewall** module, you can add *Rate Limitation* or *IP Filtering* to you web API.
+With the **Firewall** module, you can add *Rate Limitation* or *IP Filtering* to your web API.
 
-Read the [Firewall settings](technical-resources/apispark/guide/publish/secure/firewall-settings "Firewall Settings") page to add such rules.
+Please go through the [Firewall settings](technical-resources/apispark/guide/publish/secure/firewall-settings "Firewall Settings") page to add such rules.
 
 ## Activate your settings
 
-When your settings are complete, you have to deploy your *Connector* configuration for activate them.
+Once you have completed your settings, you need to deploy your *Connector* configuration to activate them.
 
-Clic on the **Deploy** button to deploy your cell. You can read the [Cell deployment](technical-resources/apispark/guide/explore/cell-deployment "Cell deployment") page for further informations.
+Click on the **Deploy** button to deploy your cell. Please go to the [Cell deployment](technical-resources/apispark/guide/explore/cell-deployment "Cell deployment") page for further information.
 
-# Install Remote Agent
+# Install your Remote Agent
 
-In order to plug these Connector services you have to install the agent in you Information System in front of your web API application.
+In order to plug the Connector services, you need to install the Agent in your Information System in front of your web API application.
 
-Follow the steps below to install the agent.
+Please follow the steps below to install the agent.
 
 ## Download the Agent
 
@@ -57,11 +57,11 @@ The agent is a standalone application and exists also as a Restlet Framework Ser
 
 ## Configure the Agent
 
-As explain before, the APISpark Agent use the modules that you have enabled in your APISpark Console.
+As explained before, APISpark Agent uses the modules that you have enabled in your APISpark Console.
 
 The Agent retrieves its settings from APISpark and you need to configure the Agent first to communicate with your *Connector* cell.
 
-The Remote Agent is configured from a properties file wich in included in the downloaded file. This file looks like this:
+The Remote Agent is configured from a properties file which is included in the downloaded file. This file looks like this:
 
 ```properties
 agent.login=67b60a5d-c2b8-43a3-97b8-084d6ce60e10
@@ -80,9 +80,9 @@ On this page you will find the value of the property keys `agent.login`, `agent.
 
 The `agent.redirection.redirectionUrl` key should be set to the URL of your web API.
 
-Let's see an full configuration example:
+Let's have a look at a full configuration example:
 
-* Before you installed the agent:
+* Before you install the agent:
 
   The URL `https://myapi.com` serves your local web API running on `https://192.168.10.130:8080`.
 
@@ -100,11 +100,11 @@ Let's see an full configuration example:
 agent.redirection.redirectionUrl=https://192.168.10.130:8080
   ```
 
-With the standelone Agent, the value of the `agent.redirection.enabled` key should be set to `true`.
+With the standalone Agent, the value of the `agent.redirection.enabled` key should be set to `true`.
 
 ## Start the Agent
 
-Once your configuration file is filled, you could start the agent with the command:
+Once your configuration file is filled, you can start the agent with the command below:
 
 ```
 java -jar -DagentConfiguration=/path/to/agent.properties apispark-agent.jar
@@ -115,7 +115,7 @@ java -jar -DagentConfiguration=/path/to/agent.properties apispark-agent.jar
 
 ### Change the port
 
-By default the *Agent* runs on port number 8000. You could change the port with the `-p` option like below:
+By default the *Agent* runs on port 8000. You could change the port with the `-p` option as shown below:
 
 ```
 java -jar -DagentConfiguration=/path/to/agent.properties apispark-agent.jar -p 3000
@@ -123,6 +123,6 @@ java -jar -DagentConfiguration=/path/to/agent.properties apispark-agent.jar -p 3
 
 ### Use HTTPS
 
-You could also run the Agent with the `HTTPS` protocol instead of the `HTTP` one with the `--https` option .
+You could also run the Agent with the `HTTPS` protocol instead of `HTTP` with the `--https` option .
 
 Use `--help` to have the full list of options.
