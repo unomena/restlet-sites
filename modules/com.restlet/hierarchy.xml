@@ -56,27 +56,12 @@
 			<section id="tutorial">
 				<label>Tutorial</label>
 			</section>
-			<!-- section id="reference-web-api">
-				<label>Reference Web API</label>
-			</section -->
 			<section id="guide">
 				<label>User guide</label>
 			</section>
 			<section id="javadocs">
 				<label>Javadocs</label>
 			</section>
-			<section id="resources">
-				<label>Resources</label>
-			</section>
-			<section id="books">
-				<label>Books</label>
-			</section>
-			<section id="roadmap">
-				<label>Road Map</label>
-			</section>
-			<!-- section id="history">
-				<label>History</label>
-			</section -->
 		</sections>
 	</section>
 	<section id="participate">
