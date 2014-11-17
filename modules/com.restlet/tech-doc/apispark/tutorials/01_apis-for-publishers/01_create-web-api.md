@@ -13,7 +13,8 @@ To follow this tutorial, you will need the following:
 
 ## 1.1 Add a new Entity Store
 
-If you haven't already done so, [sign in](https://apispark.com/signin) to your APISpark account and open your **Dashboard**.
+If you have not already done so, <a href="
+https://apispark.restlet.com/signin" target="_blank">sign in</a> to your APISpark account and open your **Dashboard**.
 
 Create a new Entity Store. Click on **+ Entity Store**, select the "Full stack" **Type** and enter the **Name** "myStore".
 
@@ -103,6 +104,6 @@ The following figure shows the API call in POSTMAN.
 
 ![Invoke your API with Postman](images/postman.jpg "Invoke your API with Postman")
 
->**Note:** APISpark lets you generate custom Client SDKs for your API. Different environments are supported including Java, Android, GWT and JavaScript (AJAX or Node.js). 
+>**Note:** APISpark lets you generate custom Client SDKs for your API. Different environments are supported including Java, Android, GWT and JavaScript (AJAX or Node.js).
 
 Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the [Help Desk](http://support.apispark.com/).

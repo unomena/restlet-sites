@@ -2,7 +2,7 @@
 
 ## Plans overview
 
-As you subscribe to APISpark, you can choose between different base plan levels as defined in our <a href="http://restlet.com/products/apispark/pricing" target="_blan">Pricing page</a>. All levels include an unlimited number of APIs, an entity storage of 100MB, a file storage of 10GB, a bandwidth of 1TB and our best efforts for technical support. You can switch to a higher or lower plan at any time.
+As you subscribe to APISpark, you can choose between different base plan levels as defined in our <a href="http://restlet.com/products/apispark/pricing" target="_blank">Pricing page</a>. All levels include an unlimited number of APIs, an entity storage of 100MB, a file storage of 10GB, a bandwidth of 1TB and our best efforts for technical support. You can switch to a higher or lower plan at any time.
 
 ## Select a plan
 

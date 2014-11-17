@@ -21,7 +21,7 @@ For details on how to setup each wrapper, please navigate to the appropriate sub
 
 ## Google Spreadsheet Wrapper
 
-<a href="https://docs.google.com/spreadsheets/" target="_blan">Google Spreadsheet</a> is a collaborative data editing tool that belongs to the Google Docs suite.
+<a href="https://docs.google.com/spreadsheets/" target="_blank">Google Spreadsheet</a> is a collaborative data editing tool that belongs to the Google Docs suite.
 
 The **Google Spreadsheet Wrapper** Entity Store lets you wrap your spreadsheets to APISpark in the form of structured entities. You are then free to expose these entities via web APIs.
 

@@ -55,7 +55,7 @@ From an API's **General information** panel, you can get the Swagger definition 
 
 Copy the Swagger link from the **Export your API** section and paste it in
 <a href="
-http://petstore.swagger.wordnik.com" target="_blan">Swagger UI demo</a>.
+http://petstore.swagger.wordnik.com" target="_blank">Swagger UI demo</a>.
 
 ![Swagger URL](images/swagger-url.jpg "Swagger URL")
 
