@@ -1,12 +1,12 @@
 In the API ecosystem, there are several formats that allow you to describe an API.
 
-The RAML and Swagger formats are most likely to be used for getting the definition of an API.
+The RAML and Swagger formats are more likely to be used to get the definition of an API.
 
 With APISpark you can export your web API (or your [Descriptor](technical-resources/apispark/guide/document/overview "Descriptor") or [Connector](technical-resources/apispark/guide/manage/connectors "Connector") cells) to those *standard* API definition languages.
 
 # Export to a standard API definition language
 
-To access to the export section, open the API's **Overview** and click on **General information** from the left panel.
+Open your API's **Overview** page and click **General information** button from the left panel.
 
 ![General information](images/general-information.jpg "General information")
 
@@ -16,7 +16,7 @@ From this page, you can export your API to the following format:
 * Swagger 1.2
 * Swagger 2.0
 
-> Note that multiple versions of Swagger are supported.
+> **Note:** Multiple versions of Swagger are supported.
 
 ### Obtain your API's Swagger definition
 
@@ -43,7 +43,7 @@ The **Swagger 1.2** definition for the Contacts API looks like this:
 
 # Integrate with third party applications
 
-The cool things with these formats is that there are more and more tools which understand them.
+What's great with these formats is that there are more and more tools which understand them.
 
 ## Swagger
 
@@ -55,9 +55,9 @@ From an API's **General information** panel, you can get the Swagger definition 
 
 Copy the Swagger link from the **Export your API** section and paste it in [Swagger UI demo](http://petstore.swagger.wordnik.com/ "Swagger UI demo").
 
-> Note that your API documentation shoud be public as seen on the [Documentation](technical-resources/apispark/guide/publish/publish/documentation "Documentation") page.
-
 ![Swagger URL](images/swagger-url.jpg "Swagger URL")
+
+> **Note:** Your API documentation must be public as seen on the [Documentation](technical-resources/apispark/guide/publish/publish/documentation "Documentation") page.
 
 The screenshot below is an example of what the Swagger UI looks like.  
 
@@ -67,10 +67,10 @@ The screenshot below is an example of what the Swagger UI looks like.
 
 The *Postman* application can import RAML or Swagger definition to a Postman collection.
 
-In the main window,
+From the main window,
 
 ![Import in Postman](images/postman-import.png "Import in Postman")
 
-select **Import** on the left of the top menu to open the import popup.
+select the **Import** menu on top of the screen to open the import popup.
 
 ![Import popup](images/postman-import-popup.png "Import popup")
