@@ -1,4 +1,4 @@
-#Introduction
+# Introduction
 
 APISpark provides a tool thaht allows you to extract the web API definition of your Restlet API or JAX-RS API application and import it in APISpark to provide documentation and tooling.
 
@@ -8,7 +8,7 @@ You can:
 * Display and edit this description within APISpark
 * Synchronize Web API changes initiated from your API's code or Swagger
 
-In these scenarios we'll leverage the Introspector tool by loading a Web API definition into APISpark with the three types of inputs available. You can find a complete example of documentation generated via this tool here, the description fields weren't retrieved from the Restlet Framework code, they were added manually in APISpark.
+In these scenarios we will leverage the Introspector tool by loading a Web API definition into APISpark with the three types of inputs available. You can find a complete example of documentation generated via this tool here, the description fields weren't retrieved from the Restlet Framework code, they were added manually in APISpark.
 
 #Launch process
 
@@ -46,9 +46,9 @@ And finish with a JAX-RS API.
 
 Whether you use this class to run your Web API or not, you must create it to run the Introspector.
 
-#Configuration
+# Configuration
 
-##Using maven
+## Using maven
 
 You can use the following pom.xml to get the dependencies required for the Introspector. The full project, containing the extension, the pom and the readme is available [here](http://http://restlet.com/learn/guide/archives/misc/2.3/org.restlet.ext.apispark.zip). Follow the instructions in the readme and use the extension from your favorite IDE.
 
@@ -83,9 +83,9 @@ You can use the following pom.xml to get the dependencies required for the Intro
       </dependencies>
       </project>
 
-##Manually
+## Manually
 
-You must add the following jars (provided in [Restlet Framework](http://restlet.com/download/current#release=stable&edition=jse&distribution=zip)) in the "/path/to/your/lib" folder or manually to the classpath.
+You must add the following jars (provided in <a href="http://restlet.com/technical-resources/restlet-framework" target="_blank">Restlet Framework</a>) in the "/path/to/your/lib" folder or manually to the classpath.
 
 In Restlet Framework lib directory:
 
@@ -106,13 +106,13 @@ In Restlet Framework lib/com.fasterxml.jackson_2.2/ directory:
 Your packaged Web API:
 * org.restlet.api.jar org.jaxrs.api.jar (your packaged Web API)
 
-#APISpark tokens
+# APISpark tokens
 
-The parameters -u and -p are mandatory, they correspond to your APISpark user name and secret key. You can get those here under the tab "tokens". You will need to [sign up](https://apispark.com/signin) first.
+The parameters -u and -p are mandatory, they correspond to your APISpark user name and secret key. You can get those here under the tab "tokens". You will need to <a href="http://apispark.restlet.com/signin" target="_blank">sign up</a> first.
 
 ![Tokens](images/14.jpg "Tokens")
 
-#Load Web API definition into APISpark (first call)
+# Load Web API definition into APISpark (first call)
 
 Here is the result, we get from the Introspector:
 
@@ -122,18 +122,18 @@ Here is the result, we get from the Introspector:
 
 ![Overview](images/15.jpg "Overview")
 
-#Update your Web API definition (Subsequent calls )
+# Update your Web API definition (Subsequent calls )
 
 You need to add a parameter -d giving the id of the definition, hosted on APISpark, that you want to update. You can find the parameter -d in two ways.
 
 * It will be in the response body when you first use the extension on your API.
 * If you did not write it down then you can go to your dashboard, click on the Web API Contract you want to update and get it from the URL. The URL should look like this: https://apispark.com/apis/[definition_id]/version/1/
 
-#Debug the Web API introspection
+# Debug the Web API introspection
 
 If you want the introspector to display information about the web API definition, you can add the -v parameter to the command line. It will switch the application to a verbose mode.
 
-#More about the Introspector Tool
+# More about the Introspector Tool
 
 The Restlet extension for APISpark provides a source code introspector that takes a class (your Restlet class extending the class Application) from your Web API as a parameter and instantiates its components to retrieve the contract of your API.
 
@@ -168,4 +168,4 @@ Here is its command line help:
       -v, --verbose
       The optional parameter switching the process to a verbose mode
 
-After introspecting your Restlet Framework code, you can work on your [Descriptor](technical-resources/apispark/guide/document/edit-descriptor "Descriptor").
+After introspecting your Restlet Framework code, you can work on your [Descriptor](technical-resources/apispark/guide/document/overview "Descriptor").

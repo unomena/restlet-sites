@@ -11,8 +11,8 @@ To follow this tutorial, you will need:
 
 *   a web browser,
 *   15 minutes of your time,
-*   your GitHub login details
-*   access to a GitHub repository
+*   your GitHub login details,
+*   access to a GitHub repository.
 
 ## 1. Create a GitHub Wrapper
 

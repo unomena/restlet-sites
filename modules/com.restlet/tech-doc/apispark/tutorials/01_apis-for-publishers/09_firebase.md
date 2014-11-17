@@ -1,6 +1,6 @@
 # Introduction
 
-This tutorial will show you how to create a custom web API that gives access to existing data stored in a Firebase backend.[Firebase](https://www.firebase.com) is a popular Backend as a Service (BaaS) provider that powers real time HTML 5 applications.
+This tutorial will show you how to create a custom web API that gives access to existing data stored in a Firebase backend. <a href="https://www.firebase.com" target="_blank">Firebase</a> is a popular Backend as a Service (BaaS) provider that powers real time HTML 5 applications.
 
 # Requirements
 
@@ -132,4 +132,4 @@ Any POST requests made to the API will result in new data being created in your 
 
 >**Note:** APISpark lets you generate custom Client SDKs for you API. Supported environments include Java, Android, GWT and JavaScript (AJAX or Node.js).
 
-Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the [Help Desk](http://support.apispark.com/).
+Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the <a href="http://support.apispark.com/" target="_blank">Help Desk</a>.

@@ -1,10 +1,10 @@
-#Introduction
+# Introduction
 
 Swagger is an API description language that comes with number of tools including Swagger UI and Swagger Code Generator. Swagger UI provides a nice HTML presentation of your API’s contract and allows you to test your API by calling it. Swagger Code Generator generates client kits for your API in eight languages.
 
 APISpark dynamically generates the Swagger description of web APIs and provides the Swagger UI and Code Generator capabilities as a service. You can also import an existing Swagger description into APISpark to update a Web API contract.
 
-#Get the Swagger definition of your API
+# Get the Swagger definition of your API
 
 1. Select the Descriptor of the API you want to get the Swagger definition of.
 
@@ -16,7 +16,7 @@ APISpark dynamically generates the Swagger description of web APIs and provides 
 
   ![API Commons](images/07.jpg "API Commons")
 
-#Import existing Swagger definitions
+# Import existing Swagger definitions
 
 You can import a web API’s contract to APISpark using its Swagger definition just by providing the URL on which it is available to APISpark.
 
