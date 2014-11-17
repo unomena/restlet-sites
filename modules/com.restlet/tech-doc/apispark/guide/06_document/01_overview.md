@@ -7,7 +7,7 @@ APISpark can help you document an existing API in the following ways:
 
 * Automatically generate [*documentation*](technical-resources/apispark/guide/document/get-documentation "Generate documentation")
 * Automatically generate [*client SDKs* and *server skeletons*](technical-resources/apispark/guide/document/get-documentation "Generate client SDKs and server skeletons")
-* Automatically generate *standard API definitions* (RAML, Swagger) for [third-party Integration](technical-resources/apispark/guide/publish/publish/third-party "Third-party Integration") integration
+* Automatically generate [*standard API definitions*](technical-resources/apispark/guide/publish/publish/api-definition "Standard API definition") (RAML, Swagger) for third party integration
 
 # The web API Descriptor
 

@@ -48,46 +48,12 @@ Your documentation can now be downloaded from the **Documentation** section by s
 
 # Get the Swagger definition of your API
 
-**Swagger** is an API description language that comes with a number of tools including Swagger UI and Swagger Code Generator. Swagger UI provides a nice HTML presentation of your API’s contract and allows you to test your API by calling it. The Swagger Code Generator generates client kits for your API in eight languages.
+**Swagger** is an API description language that comes with a number of tools including Swagger UI. Swagger UI provides a nice HTML presentation of your API’s contract and allows you to test your API by calling it.
 
-APISpark *automatically* produces a Swagger definition for APIs it hosts. You can share the Swagger definition's URL with your users, download the Swagger definition itselft, and you can even view the definition directly on APISpark via the Swagger User Interface.
-
-
-## Obtain your API's Swagger definition
-
-To access your API's automatically generated Swagger definition, open the API's **Overview** and click on **General information** from the left panel.
-
-![General information](images/general-information.jpg "General information")
-
-Click on one of the **Swagger** URLs to open the corresponding Swagger definition. Note that multiple versions of Swagger are supported.
-
-The **Swagger 1.2** definition for the Contacts API looks like this:
-
-```json
-{  
-   "apis":[  
-      {  
-         "path":"/contacts"
-      }
-   ],
-   "apiVersion":"1.1.0",
-   "info":{  
-      "contact":"jmichaux@restlet.com",
-      "description":"My Contacts API.",
-      "title":"Contacts API"
-   },
-   "swaggerVersion":"1.2"
-}
-```
-
-## Access Swagger UI demo
-
-From an API's **General information** panel, you can get the Swagger definition link to access Swagger UI.
-
-Copy the Swagger link from the **Export your API** section and paste it in [Swagger UI demo](http://petstore.swagger.wordnik.com/ "Swagger UI demo").
-
-![Swagger URL](images/swagger-url.jpg "Swagger URL")
+APISpark *automatically* produces a Swagger definition for APIs it hosts. You can share the Swagger definition's URL with your users, download the Swagger definition itself, and you can even view the definition via the Swagger User Interface.
 
 The screenshot below is an example of what the Swagger UI looks like.  
 
-![Swagger](images/07.jpg "Swagger")
+![Swagger](images/swagger-ui.jpg "Swagger")
+
+For details on how to use swagger UI with your API, go to the [Standard API definition and third party integration](technical-resources/apispark/guide/publish/publish/api-definition "Standard API definition and third party integration") page.

@@ -162,6 +162,12 @@ toc:
       long-title: Document your web API to facilitate its consumption
       title: Documentation
       url: /publish/publish/documentation
+    - file: 04_api-definition.md
+      id: api-definition
+      link_url: /04_publish/02_publish/04_api-definition.md
+      long-title: Standard API defintion and integration with third party applications
+      title: API definition
+      url: /publish/publish/api-definition
     long-title: Publish a web API
     title: Publish a web API
   - dir: 03_manage

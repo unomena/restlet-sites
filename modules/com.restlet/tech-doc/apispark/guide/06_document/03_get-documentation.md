@@ -11,6 +11,6 @@ As for a [web API](technical-resources/apispark/guide/create/overview "web API")
 
 ![+Web API](images/mydescriptordownloads.png "+Web API")
 
-# Third-party integration
+# Standard API definition and third party integration
 
-With **APISpark**, you could download the API definition in standard formats like **RAML** or **Swagger**. Go to the [Third-party Integration](technical-resources/apispark/guide/publish/publish/third-party "Third-party Integration") page for more details.
+With **APISpark**, you could download the [API definition in standard formats](technical-resources/apispark/guide/publish/publish/api-definition "Standard API definition") like **RAML** or **Swagger** and integrate it with third party applications.
