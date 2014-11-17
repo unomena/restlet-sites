@@ -6,14 +6,15 @@ Introduction
 
 This connector is based on the [Eclipse Jetty](http://www.eclipse.org/jetty/)
 open-source web server. Jetty is popular alternative to Tomcat developed
-by Mortbay Consulting and has a nice separation between its HTTP
+by WebTide and has a nice separation between its HTTP
 protocol implementation and its support for the Servlet API which led to
 the first HTTP server connector developed for the Restlet Framework.
 
 Description
 ===========
 
-This connector supports the following protocols: HTTP, HTTPS, AJP.
+This connector supports the following protocols: HTTP, HTTPS and SPDY on the server-side and HTTP, HTTPS
+on the client-side.
 
 The list of supported specific parameters is available in the javadocs:
 
@@ -47,3 +48,9 @@ to set some of the HTTPS parameters listed above, for example:
     server.getContext().getParameters().add("keystorePassword", "<your-password>");
     server.getContext().getParameters().add("keyPassword", "<your-password>");
 
+SPDY
+----
+
+The support for SPDY is disabled by default. In order to use it, you need to add the "spdy.version" parameter to your Jetty HTTPS server configuration with a value of "3" add a special NPN JAR file to the the boot classpath of your JRE 7. See [the instructions here](http://www.eclipse.org/jetty/documentation/current/npn-chapter.html).
+
+Additional information on Jetty support for SPDY can be found in [this chapter](http://www.eclipse.org/jetty/documentation/current/spdy.html) of Jetty's user guide.
