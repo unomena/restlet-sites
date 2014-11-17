@@ -53,7 +53,9 @@ What's great with these formats is that there are more and more tools which unde
 
 From an API's **General information** panel, you can get the Swagger definition link to access Swagger UI.
 
-Copy the Swagger link from the **Export your API** section and paste it in [Swagger UI demo](http://petstore.swagger.wordnik.com/ "Swagger UI demo").
+Copy the Swagger link from the **Export your API** section and paste it in
+<a href="
+http://petstore.swagger.wordnik.com" target="_blan">Swagger UI demo</a>.
 
 ![Swagger URL](images/swagger-url.jpg "Swagger URL")
 

@@ -15,10 +15,7 @@ Select an Endpoint in the left panel. The central panel displays your access tok
 
 ## Access a public API
 
-Public web APIs can be browsed by anyone, without authentication. To see how to configure a public web API, please visit the [Public and private APIs](technical-resources/apispark/guide/publish/secure/public-and-private-apis "Public and private APIs") page.
-
-
-A public API is not necessarily open to anyone at runtime. This is configured from the [User Groups](technical-resources/apispark/guide/publish/secure/user-groups "User groups") page.
+Public web APIs can be browsed by anyone, without authentication. A public API is not necessarily open to anyone at runtime. This is configured from the [User Groups](technical-resources/apispark/guide/publish/secure/user-groups "User groups") page.
 
 ## Basic authentication access tokens
 

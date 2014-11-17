@@ -3,9 +3,9 @@
 
 APISpark's sign up process is straightforward. It relies on social login to make signing up as simple as possible for you.
 
-To sign up, click on the **Sign in** button from the [welcome page](https://apispark.com/ "Welcome page") and pick a social provider to identify yourself with. Your account will automatically be created for you.
+To sign up, click on the **Sign in** button from the <a href="http://apispark.restlet.com/signin" target="_blan">Welcome page</a> of our website and pick a social provider to identify yourself with. Your account will automatically be created for you.
 
-![Sign in](images/01.jpg "Sign in")
+![Sign in](images/sign-in-button.jpg "Sign in")
 
 Several social login providers are supported, including **GitHub**, **Google**, **Windows Live**, **Yahoo**, and **Facebook**. You can create an account for free with any of these providers if you do not already own one.
 

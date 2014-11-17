@@ -21,4 +21,4 @@ Each cell created is given a unique identifier on APISpark prefixed by its categ
 e.g. `https://apispark.com/apis/3373/versions/1/`  
 This identifier will be requested by the APISpark HelpDesk team when assisting you.
 
-> **Note:** You cannot directly invoke a DataStore, you need to first expose it through a web API which imports this store (see [Invoke a web API](technical-resources/apispark/guide/publish/publish/invocation "Invoke a web API")). A Web API can invoke several stores.
+> **Note:** You cannot directly invoke a DataStore, you need to first expose it through a web API which imports this store (see [Invoke a web API](technical-resources/apispark/guide/publish/publish/invocation "Invoke an API")). A web API can invoke several stores.

@@ -8,7 +8,7 @@ The **General information** panel provides an **Overview** tab concerning the ge
 
 # Share an API design on API Commons
 
-Once your web API has been designed, implemented and deployed, APISpark helps you share it in the [API Commons](Sharing an API design - API Commons) and participate in the effort to collaborate on and share great API designs.
+Once your web API has been designed, implemented and deployed, APISpark helps you share it in the <a href="http://apicommons.org/" target="_blan">API Commons</a> and participate in the effort to collaborate on and share great API designs.
 
 By sharing API your design *copyright free* on API Commons, you will enable other API providers to reuse it and thus contribute to the converge of API designs. This makes life easier for API consumers, and lets you take a stance as the provider of the API.
 
@@ -22,4 +22,7 @@ From this panel you will find the API Commons manifest.
 
 ![API Commons tab](images/api-commons-tab.jpg "API Commons tab")
 
-Please then navigate the API Common's [Add an API](http://apicommons.org/add-apis.html) page for instructions on how to upload your API Commons manifest file.
+Please then navigate to the API Common's
+<a href="
+http://apicommons.org/add-apis.html" target="_blan">Add an API</a>
+ page for instructions on how to upload your API Commons manifest file.
