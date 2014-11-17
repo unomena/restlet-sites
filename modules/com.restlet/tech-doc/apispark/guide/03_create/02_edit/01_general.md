@@ -22,7 +22,5 @@ From this panel you will find the API Commons manifest.
 
 ![API Commons tab](images/api-commons-tab.jpg "API Commons tab")
 
-Please then navigate to the API Common's
-<a href="
-http://apicommons.org/add-apis.html" target="_blan">Add an API</a>
- page for instructions on how to upload your API Commons manifest file.
+Please then navigate to the API Common's <a href="
+http://apicommons.org/add-apis.html" target="_blan">Add an API</a> page for instructions on how to upload your API Commons manifest file.
