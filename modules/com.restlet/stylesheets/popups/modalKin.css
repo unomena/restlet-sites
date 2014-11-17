@@ -1,0 +1,245 @@
+/* MODAL */
+.modalDialog.kinlane.kin  {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    /*! important !*/
+    display:none;
+    /* last attribute set darkness on scale: 0...1.0 */
+    background-color:rgba(0,0,0,0.5);
+    text-align:center;
+    z-index:101;
+}
+
+div.span2.section > span {
+	border: none !important;
+	background-image: none !important;
+}
+
+.modalDialog.kinlane.kin > div {
+	width: 800px;
+	height: 377px;
+	/*min-height: 200px;*/
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+	background-image: url(/images/kinlane-background-min.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 1px;
+	position: relative;
+	border-radius: 8px 8px 8px 8px;
+	-moz-border-radius: 8px 8px 8px 8px;
+	-webkit-border-radius: 8px 8px 8px 8px;
+		-webkit-box-shadow:0px 0px 17px 7px rgba(50, 50, 50, 0.75);
+		-moz-box-shadow:0px 0px 17px 7px rgba(50, 50, 50, 0.75);
+		box-shadow:0px 0px 17px 7px rgba(50, 50, 50, 0.75);
+}
+
+.modalDialog.video  {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    /*! important !*/
+    display:none;
+    /* last attribute set darkness on scale: 0...1.0 */
+    background-color:rgba(0,0,0,0.5);
+    text-align:center;
+    z-index:101;
+}
+
+.modalDialog.video > div {
+	width: 658px;
+	height: 375px;
+	/*min-height: 200px;*/
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 200px;
+	background-image: url(/images/kinlane-background-min.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 1px;
+	position: relative;
+	border-radius: 8px 8px 8px 8px;
+	-moz-border-radius: 8px 8px 8px 8px;
+	-webkit-border-radius: 8px 8px 8px 8px;
+		-webkit-box-shadow:0px 0px 17px 7px rgba(50, 50, 50, 0.75);
+		-moz-box-shadow:0px 0px 17px 7px rgba(50, 50, 50, 0.75);
+		box-shadow:0px 0px 17px 7px rgba(50, 50, 50, 0.75);
+}
+
+.modalDialog.video div.video-close-button {
+	background-image: url(/images/kinlane-close-button.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	right: -14px;
+	top: -14px;
+	cursor: pointer;
+}
+
+.modalDialog.video div.video-content {
+	float: left;
+	margin-top: 8px;
+	margin-left: 8px;
+	width: 642px;
+}
+
+.modalDialog.kinlane.kin div.close-button {
+	background-image: url(/images/kinlane-close-button.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	right: -14px;
+	top: -14px;
+	cursor: pointer;
+}
+
+.modalDialog.kinlane.kin div.doc-title h3 {
+	margin-bottom: 15px;
+}
+
+.modalDialog.kinlane.kin div.doc-preview {
+	background-image: url(/images/kinlane-doc-preview.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 267px;
+	height: 328px;
+	float: left;
+	margin-left: 60px;
+	margin-top: 25px;
+}
+
+.modalDialog.kinlane.kin div.doc-desc {
+	float: left;
+	margin-top: 30px;
+ 	margin-left: 20px;
+	margin-right: 30px;
+	width: 415px;
+	text-align: left;
+}
+/* .modalDialog.kinlane.kin div.doc-desc > div.doc-title { */
+/* 	position: relative; */
+/* 	top: -15px; */
+/* 	left: -333px; */
+/* 	width: 600px; */
+/* } */
+.modalDialog.kinlane.kin div.doc-desc > div.doc-title > h3 {
+	color: #fff;
+	font-size: 30px;
+	margin-top: 0;
+}
+
+.modalDialog.kinlane.kin div.doc-desc > div.doc-content {
+	position: relative;
+	color: #fff;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	padding-top: 2px;
+	background-color: rgba(41, 63, 112, 0.7);
+ 	width: 372px;
+ 	height: 161px;
+}
+
+.modalDialog.kinlane.kin div.doc-desc > div.doc-content h4,
+.modalDialog.kinlane.kin div.doc-desc > div.doc-content > div.text {
+	color: #fff;
+	font-weight: normal;
+	padding-top: 0;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.modalDialog.kinlane.kin div.doc-desc > div.doc-content h4 {
+	font-size: 16px;
+}
+
+.modalDialog.kinlane.kin div.doc-desc > div.doc-content > div.text {
+	margin-top: 15px;
+	padding-top: 5px;
+	padding-right: 120px;
+ 	font-size: 13px;
+	height: 110px;
+	line-height: 140%;
+}
+
+.modalDialog.kinlane.kin div.doc-desc > div h4 strong {
+	font-weight: bold;
+	color: #fff;
+	padding-right: 20px;
+}
+
+.modalDialog.kinlane.kin div.doc-desc > div.doc-download input {
+	padding: 10px 10px;
+	line-height: 1.2em;
+	width: 250px;
+	font-weight: bold;
+	color: #3f4348;
+	background-color: #faf3e0;
+	border: solid 1px #555555;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+.modalDialog.kinlane.kin div.doc-desc > div.doc-download input.error{
+	border: solid 1px #FF0000;
+	color: #FF0000;
+}
+
+.modalDialog.kinlane.kin div.doc-desc > div.doc-download button:disabled {
+	cursor: default;
+}
+
+.modalDialog.kinlane.kin div.doc-desc > div.doc-download .input-wrapper {
+	height: 40px;
+	background-color: #fff;
+}
+
+.modalDialog.kinlane.kin div.doc-desc > div.doc-download button, .modalDialog.kinlane.kin div.doc-desc > div.doc-download input[type="submit"]  {
+	height: 40px;
+	border: solid 1px #ef9e00;
+	background-image: -moz-linear-gradient(top, #f8b800, #ef9e00);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ef9e00),
+		color-stop(1, #eda840) );
+	background-image: -ms-linear-gradient(top left, #f8b800 0%, #ef9e00 100%);
+	filter: progid :   DXImageTransform.Microsoft.gradient (   GradientType
+		=   0, startColorstr =   '#f8b800', endColorstr =   '#ef9e00' );
+	-ms-filter:
+		"progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f8b800', endColorstr='#ef9e00')";
+	padding-left: 18px;
+	padding-right: 18px;
+	margin-bottom: 10px;
+	border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	color: #3f4348;
+	font-weight: bold;
+	width: auto;
+}
+
+.modalDialog.kinlane.kin div.avatar {
+	background-image: url(/images/kinlane-avatar.png.png);
+	background-position: center;
+	background-repeat: no-repeat;
+ 	width: 134px;
+ 	height: 134px;
+	position: absolute;
+	right: -20px;
+ 	bottom: 0;
+}
+
+.modalDialog.kinlane.kin div.doc-desc > div.doc-footer p {
+	font-size: 9px;
+	color: #000;
+	text-align: justify;
+	line-height: 130%;
+}
