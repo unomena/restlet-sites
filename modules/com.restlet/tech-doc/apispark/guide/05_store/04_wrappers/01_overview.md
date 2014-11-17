@@ -53,4 +53,4 @@ The **Firebase** Entity Store lets you wrap a Firebase backend to APISpark in th
 
 The **S3** File Store lets you wrap AWS S3 buckets to an APISpark File Store. You are then free to expose these files via web APIs.
 
-For more information jump to our [AWS S3 example](apispark/guide/store/wrappers/aws "AWS S3 example section") page.
+For more information jump to our [AWS S3 example](technical-resources/apispark/guide/store/wrappers/aws "AWS S3 example section") page.

@@ -16,7 +16,7 @@ Click on the **+File Store** button, select "AWS S3" from the **Type** drop-down
 
 Click on the **Settings** tab. From the **Security** section, select **AWS Account**.
 
-![Settings tab](images\aws-settings-tab.jpg "Settings tab")
+![Settings tab](images/aws-settings-tab.jpg "Settings tab")
 
 Enter your **Access Key ID** and **Secret Access Key** and click on the **Test** button.
 
