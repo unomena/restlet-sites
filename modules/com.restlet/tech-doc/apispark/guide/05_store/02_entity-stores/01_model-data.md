@@ -62,7 +62,7 @@ To add a property to an Entity, click on **+ Add a property**.
 
 ![Add property](images/05.jpg "Add property")
 
-Your are then invited to specify the following attributes for the new property:
+You are then invited to specify the following **attributes** for the new property.
 
 ### Name
 
@@ -70,25 +70,9 @@ The property's name.
 
 ### Type
 
-The property's type. There are two main categories of types: primitive and complex. All possible types for a property are listed in the **Datatype** drop-down menu.
-
-#### Primitive types
+The property's type. There are two main categories of types: primitive and relations. We'll cover relations in the next section. All possible types for a property are listed in the **Datatype** drop-down menu.
 
 The primitive types available in the Entity Store are *String*, *Integer*, *Date*, *Boolean*, *Double*, *Long*, and *Float*.
-
-#### Complex types (relations)
-
-The type of a property can be that of an entity in the Entity Store. In this case, the property is considered to be a relation to another entity type.
-
-There are three types of relations available: association, aggregation, and composition.
-
-##### Association and aggregation relations
-
-Currently, association and aggregation relations have the same semantics: they represent a reference to another object. In practice this means that one object will contain a reference to another object through knowledge of the referred object's primary key.
-
-##### Composition relation
-
-The particularity of the “composition” relation is that if entity A is “composed” by entity B, then deleting a data entry of type A will result in the deletion of the data entries of type B that compose it.
 
 ### Min occurs and Max occurs
 
@@ -96,10 +80,38 @@ These fields contain the minimum and maximum cardinalities of the property.
 
 These values are used to determine if a property should be stored as a list.
 
-Furthermore, the cardinality constraints are enforced on real data at runtime.
-
 By default, both min and max occurs are set to 1.
 
 ### Default value (optional)
 
-A property’s default value is assigned if a null value is provided upon entity creation.
+A property’s default value is assigned if a null value is provided upon creation of a data element.
+
+## Entity relations
+
+Practical data models usually require the definition of relations between entities.
+
+APISpark supports one-to-many relations for this purpose.
+
+To create a one-to-many relation, add a new **Property** to the entity on the unary side. From the **Type** drop-down, select the type of the entity at the n-ary side of the relation. Set the **maxOccurs** cardinality to '*'.
+
+### Example
+
+Suppose your application's data model includes Users that can post Comments. A User can post multiple Comments, and a Comment is related to a single author User. Thus, this is a typical one-to-many relation.
+
+In order to build an Entity Store like this, create a User entity and a Comment entity. Add a property to entity User called "comments" that is of type Comment. Set the maxOccurs cardinality to '*'.
+
+When a User posts a new Comment, create a new Comment element. Update the corresponding User element's "comments" property by adding the ID of the newly created Comment to the list (comma seperated values).
+
+<!--
+There are three types of relations available: association, aggregation, and composition.
+-->
+
+<!--
+##### Association and aggregation relations
+
+Currently, association and aggregation relations have the same semantics: they represent a reference to another object. In practice this means that one object will contain a reference to another object through knowledge of the referred object's primary key.
+
+##### Composition relation
+
+The particularity of the “composition” relation is that if entity A is “composed” by entity B, then deleting a data entry of type A will result in the deletion of the data entries of type B that compose it.
+-->
