@@ -112,6 +112,7 @@
       </script>
    </head>
    <body>
+
    <!--[if IE 8]><div id="IE8"><div id="IE9"><![endif]-->
    <!--[if IE 9]><div id="IE9"><![endif]-->
     <div class='hero ac <#if headerClass?has_content>${headerClass}<#else>smallHeader</#if>'>
@@ -155,7 +156,7 @@
 </#list>
 </#compress>
     <div class='container<#if "-"=currentSection> topics</#if> content'>
-    <#if (("learn"=currentSection!"") && (("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!"")))>${editButton!""}</#if><#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>${branchSwitch!""}</#if>
+    <#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>${branchSwitch!""}</#if>
 		${content}
     </div>
     <div class="content footerWrapper">

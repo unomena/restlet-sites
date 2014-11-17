@@ -18,14 +18,30 @@
 <#if !(currentSubSection?has_content)>
     <#global currentSubSection = pp.sourceFileName />
     <#assign tab = pp.sourceDirectory?split("/") />
-    <#if (tab?size>1) && !(tab[1] == "")>
-        <#global currentSubSection = tab[1] />
+    <#if ("learn"=currentSection!"")>
+	    <#if (tab?size>2) && !(tab[2] == "")>
+		<#global currentSubSection = tab[2] />
+	    <#else>
+		    <#if (tab?size>1) && !(tab[1] == "")>
+			<#global currentSubSection = tab[1] />
+		    <#else>
+			<#if (pp.sourceFileName?index_of(".") > -1) >
+			    <#global currentSubSection = pp.sourceFileName?substring(0, pp.sourceFileName?index_of(".")) />
+			<#else>
+			    <#global currentSubSection = pp.sourceFileName />
+			</#if>
+		    </#if>
+	    </#if>
     <#else>
-        <#if (pp.sourceFileName?index_of(".") > -1) >
-            <#global currentSubSection = pp.sourceFileName?substring(0, pp.sourceFileName?index_of(".")) />
-        <#else>
-            <#global currentSubSection = pp.sourceFileName />
-        </#if>
+	    <#if (tab?size>1) && !(tab[1] == "")>
+		<#global currentSubSection = tab[1] />
+	    <#else>
+		<#if (pp.sourceFileName?index_of(".") > -1) >
+		    <#global currentSubSection = pp.sourceFileName?substring(0, pp.sourceFileName?index_of(".")) />
+		<#else>
+		    <#global currentSubSection = pp.sourceFileName />
+		</#if>
+	    </#if>
     </#if>
 </#if>
 
