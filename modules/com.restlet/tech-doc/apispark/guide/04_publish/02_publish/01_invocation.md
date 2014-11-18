@@ -69,11 +69,11 @@ Currently, the only supported comparison operator is equality.
 
 All filter criteria in a GET request are combined with AND logic.
 
-#### Syntax
+**Syntax**
 
 `GET https://<apiendpoint>/<collection_name>/?<property1>=<value1>&<property2>=<value2>&...`
 
-#### Example
+**Example**
 
 `GET https://contactsapi.apispark.net/v1/contacts/?age=27&firstname=roy`
 
@@ -83,11 +83,11 @@ The `$sort` query parameter is used to sort results in either ascending or desce
 
 Ascending order is used by default if none is specified.
 
-#### Syntax
+**Syntax**
 
 `GET https://<endpoint>/<collection-name>/?$sort=<property1> <sort-order>,<property2> <sort-order>,...`
 
-#### Example
+**Example**
 
 `GET https://myapi.apsipark.net/v1/messages/?$sort=creationDate ASC,size DESC`
 
@@ -98,7 +98,7 @@ In this request, we sort a collection of messages by their creation date in asce
 
 In case you have many entries stored in a collection, you may not want to read them all at once when invoking the API. The `$page` and `$size` query parameters let you specify the size of a page, and which page number to load.
 
-#### Example
+**Example**
 
 `GET https://myapi.apsipark.net/v1/messages/?$page=4&$size=100`
 
@@ -110,11 +110,11 @@ The `$strategy` query parameter is used to define whether or not to load data re
 
 If the load strategy is specified, the `$depth` parameter indicates at which depth related data should be loaded.
 
-#### Examples
+**Examples**
 
 **Data model**: An Organization has Employees which each have an Address.
 
-###### Reference strategy
+*Reference strategy*
 
 `GET https://myapi.apsipark.net/v1/organizations/?$strategy=reference`
 
@@ -143,7 +143,7 @@ In this request, the `$strategy` is set to *reference*, therefore the list of Or
 }
 ```
 
-###### Load strategy
+*Load strategy*
 
 `GET https://myapi.apsipark.net/v1/organizations/?$strategy=load`
 
@@ -178,7 +178,7 @@ In this request, in which the `$depth` parameter is set to its default value 1, 
 }
 ```
 
-###### Load strategy, depth set to 2
+*Load strategy, depth set to 2*
 
 `GET https://myapi.apsipark.net/v1/organizations/?$strategy=load&$depth=2`
 
