@@ -17,15 +17,17 @@ Sign in to your **Google Drive** account.
 
 In this tutorial example, we have a spreadsheet with a worksheet named **Contacts** with the following columns, containing a list of contacts:
 
-*   **contact_id** : primary key
-*   **firstName** (string) : first name
-*   **lastName** (string) : last name
+*   **contactid** : primary key
+*   **firstname** (string) : first name
+*   **lastname** (string) : last name
 *   **age** (integer) : age
+
+> **Note:** we recommend using lowercase characters from the roman alphabet only for column names.
 
 Add a **Contact** so that you can retrieve it later when performing an HTTP call to your API.
 We've chosen to name ours John Smith, 34 years old.
 
-![Google Spreadsheet](images/google-spreadsheet.jpg "Google Spreadsheet")
+![Google Spreadsheet](images/google-spreadsheet.png "Google Spreadsheet")
 
 # 2. Configure the Google Spreadsheet Wrapper
 
