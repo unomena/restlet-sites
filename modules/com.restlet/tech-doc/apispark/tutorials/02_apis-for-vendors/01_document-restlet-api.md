@@ -19,7 +19,7 @@ You need to download the version 2.3 of Restlet Framework.
 
 Open the <a href="http://rest-let.com/products/restlet-framework/" target="_blank">Restlet Framework site</a> and select the version 2.3 of the JSE edition of the Restlet Framework.
 
-![Restlet site](images/restlet-site-download.png)
+![Restlet site](images/restlet-site-download.jpg)
 
 Once extracted, you can run the Java Introspector Tool from the command line below, using your APISpark credentials.
 
