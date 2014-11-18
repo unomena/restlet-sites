@@ -60,4 +60,4 @@ Once the Wrapper is deployed, you can select a folder from the **Folders** secti
 ![GitHub folder browser](images/github-folder-browser.png "GitHub folder browser")
 -->
 
-Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the <a href="http://support.apispark.com/" target="_blank">Help Desk</a>.
+Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the <a href="http://support.restlet.com/" target="_blank">Help Desk</a>.
