@@ -44,7 +44,7 @@ Click on the **Deploy** button to deploy your Entity Store.
 
 ![Deploy Entity Store](images/deploy-entity-store.jpg "Deploy Entity Store")
 
-## 1.4 Add data via de Data Browser
+## 1.4 Add data via the Data Browser
 
 Once your Entity Store has been deployed, you can use it to store contacts. For the purpose of this tutorial, let’s add one via the APISpark Data Browser.
 
