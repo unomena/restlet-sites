@@ -725,7 +725,10 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 							Directory dir = new Directory(getContext(),
 									"file://" + target.toString());
 							rootRouter.attach(source.toString(), dir);
-							getLogger().fine("  attach directory: from " + dir.getRootRef() + " to " + source.toString());
+							getLogger().fine(
+									"  attach directory: from "
+											+ dir.getRootRef() + " to "
+											+ source.toString());
 						} else {
 							if (!bStartsWith) {
 								redirect(router, source.toString(),
@@ -818,6 +821,22 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 	private void updateRootRouter() {
 		rootRouter.getRoutes().clear();
 
+		rootRouter.attach("/feeds/summary", FeedSummaryResource.class);
+		rootRouter.attach("/feeds/general", FeedGeneralResource.class);
+		rootRouter.attach("/feeds/releases", FeedReleasesResource.class);
+
+		// Guarding access to sensitive services
+		ChallengeAuthenticator guard = new ChallengeAuthenticator(getContext(),
+				ChallengeScheme.HTTP_BASIC, "Admin section");
+		MapVerifier verifier = new MapVerifier();
+		verifier.getLocalSecrets().put(this.login, this.password);
+		guard.setVerifier(verifier);
+		guard.setNext(RestletComRefreshResource.class);
+		rootRouter.attach("/rf-refresh", guard);
+
+		// Set up routes and redirections.
+		readRouter(rootRouter, routerPropertiesFileReference);
+
 		// "download" routing
 		Router downloadRouter = new Router(getContext());
 		downloadRouter.getRoutes().clear();
@@ -845,23 +864,6 @@ public class RestletCom extends BaseApplication implements RefreshApplication {
 				+ "/archive/restlet"));
 
 		rootRouter.attach("/download", downloadRouter);
-		rootRouter.attach("/feeds/summary", FeedSummaryResource.class);
-		rootRouter.attach("/feeds/general", FeedGeneralResource.class);
-		rootRouter.attach("/feeds/releases", FeedReleasesResource.class);
-
-		// Guarding access to sensitive services
-		ChallengeAuthenticator guard = new ChallengeAuthenticator(getContext(),
-				ChallengeScheme.HTTP_BASIC, "Admin section");
-		MapVerifier verifier = new MapVerifier();
-		verifier.getLocalSecrets().put(this.login, this.password);
-		guard.setVerifier(verifier);
-		Router adminRouter = new Router(getContext());
-		adminRouter.attach("/refresh", RestletComRefreshResource.class);
-		guard.setNext(adminRouter);
-		rootRouter.attach("/admin", guard);
-
-		// Set up routes and redirections.
-		readRouter(rootRouter, routerPropertiesFileReference);
 	}
 
 	/**
