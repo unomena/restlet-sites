@@ -32,7 +32,7 @@ Click on the **Add** button next to **Entities** in the left panel to create a n
 
 To add **Properties** to an entity, select the Entity from the **Entities** menu on the left and click on **+ Add a property** in the central panel.
 
-We're going to create three properties named *lastName*, *firstName* and *age*. Note that the *id* property was created automatically.
+We are going to create three properties named *lastName*, *firstName* and *age*. Note that the *id* property was created automatically.
 
 For each property you create, you can choose a data type, cardinality and default value. You can also decide if the property can take a *null* value.
 
@@ -78,11 +78,11 @@ Click **Add**. You will be taken to the API’s **Overview** page.
 
 Note that your API's **Endpoints**, **Resources**, and **Representations** have been created automatically.
 
-The screenshot below shows some of the drop down menus opened to give you an idea of how the Web API **Overview** is organized.
+The screenshot below shows some of the drop down menus opened to give you an idea of how the web API **Overview** is organized.
 
 ![structure](images/api-overview.jpg "structure")
 
-## 2.2 Deploy the Web API
+## 2.2 Deploy the web API
 
 Deploy the API by clicking the **Deploy** button.
 

@@ -25,7 +25,7 @@ In this tutorial example, we have a spreadsheet with a worksheet named **Contact
 > **Note:** we recommend using lowercase characters from the roman alphabet only for column names.
 
 Add a **Contact** so that you can retrieve it later when performing an HTTP call to your API.
-We've chosen to name ours John Smith, 34 years old.
+We have chosen to name ours Darth Vador, 46 years old.
 
 ![Google Spreadsheet](images/google-spreadsheet.png "Google Spreadsheet")
 
