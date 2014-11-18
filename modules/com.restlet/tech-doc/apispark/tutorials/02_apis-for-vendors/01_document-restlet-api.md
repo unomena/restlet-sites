@@ -1,17 +1,17 @@
-#Introduction
+# Introduction
 
 APISpark provides a tool that allows you to extract the web API definition of your Restlet application and import it in APISpark to provide documentation and tooling.
 
 You can also initialize your web API from a JAX-RS application or from a Swagger definition.
 
-With this tool, you'll be able to create a new APISpark cell from your Restlet Application and edit it within APISpark.
-By running the tool again, you'll be able to synchronize Web API changes initiated from your API's code.
+With this tool, you will be able to create a new APISpark cell from your Restlet Application and edit it within APISpark.
+By running the tool again, you will be able to synchronize web API changes initiated from your API's code.
 
-In these scenarios we'll leverage the Introspector tool by loading a Web API definition into APISpark, updating this definition revision after a code change and create a new major version of your definition to prepare an upgrade.
+In these scenarios we will leverage the Introspector tool by loading a web API definition into APISpark, updating this definition revision after a code change and create a new major version of your definition to prepare an upgrade.
 
-#Launch process
+# Launch process
 
-First you should install the *Introspector* tool either from the <a href="http://rest-let.com/products/restlet-framework/" target="_blank">Restlet Framework site</a> or from a maven project if you are familiar with Maven.
+First you need to install the *Introspector* tool either from the <a href="http://rest-let.com/products/restlet-framework/" target="_blank">Restlet Framework site</a> or from a Maven project if you are familiar with Maven.
 
 You need to download the version 2.3 of Restlet Framework.
 
@@ -21,7 +21,7 @@ Open the <a href="http://rest-let.com/products/restlet-framework/" target="_blan
 
 ![Restlet site](images/restlet-site-download.png)
 
-Once extracted, you can run the Java Introspector Tool from the command line, using your APISpark credentials.
+Once extracted, you can run the Java Introspector Tool from the command line below, using your APISpark credentials.
 
 ```shell
 java -cp "/path/to/your/lib/*:/path/to/restlet/lib/*:/path/to/restlet/lib/*/*" org.restlet.ext.apispark.Introspector --username 55955e02-0e99-47f8 --password 6f3ee88e-8405-44c8
@@ -29,13 +29,13 @@ java -cp "/path/to/your/lib/*:/path/to/restlet/lib/*:/path/to/restlet/lib/*/*" o
 ```
 From the command line, you have to configure the classpath with your application classes and dependencies, and with the Restlet Framework dependencies.
 
-You'll find the description of the used options in the paragraphs below.
+You will find the description of the different options used in the paragraphs below.
 
 An easier way to configure your classpath is to let Maven manage the dependencies.
 
 ## Install with Maven
 
-For using the Introspector tool from Maven, you should add the following elements to your `pom.xml` or in a new one.
+In order to use the Introspector tool from Maven, you need to add the following elements to your `pom.xml` or in a new one.
 
 <!-- TODO or download [this one](images/pom.xml) -->
 
@@ -75,35 +75,35 @@ For using the Introspector tool from Maven, you should add the following element
 
 # Run the Instrospector tool
 
-In order to upload your API definition to APISpark, you have to use your credentials.
+In order to upload your API definition to APISpark, you need to use your credentials.
 
 ## Retrieve your credentials
 
-Your credentials are in your **Account** page. To navigate to this **Account** page, make sure you are signed in, then click on your username on top right of your screen and select **My account**.
+You can find your credentials in your **Account** page. To navigate to the **Account** page, make sure you are signed in, then click on your username on top right of your screen and select **My account**.
 
 ![Account page](images/myaccount.jpg)
 
-Your username and secret key are displayed in the **Tokens** panel.
+Your username and secret key are displayed in the **Tokens** section.
 
 ## Introspector usage
 
-The Introspector take some arguments to configure it. To have the exhaustive list of argument, add the `--help` option to the command line as below.
+Different options are available from the Introspector. To have the exhaustive list of these options, add `--help` to the command line as shown below.
 
 ```shell
 java org.restlet.ext.apispark.Introspector --help
 ```
 
-The Introspector requires your credentials attributes, so add the `-u` (or `--username`) and the `-p` (or `--password`) arguments to each command.
+The Introspector requires your credentials attributes, so add the `-u` (or `--username`) and the `-p` (or `--password`) options to each command.
 
 ```shell
 java org.restlet.ext.apispark.Introspector --username 55955e02-0e99-47f8 --password 6f3ee88e-8405-44c8 [options]
 ```
 
-Next, you have to add additional arguments according to the wanted action.
+Next, you have to add additional options according to the action you want to take.
 
 ## Upload your API definition to APISpark
 
-For the first time, you have to choose if you want to create a [*Descriptor*](technical-resources/apispark/guide/document/overview "Descriptor") with `--create-descriptor` or a [*Connector*](technical-resources/apispark/guide/manage/connectors "Connector") cell with `--create-connector`. If you don't kwow yet, choose the *Descriptor* since you will be able to convert it in a *Connector* later.
+For the first time, you have to choose if you want to create a [*Descriptor*](technical-resources/apispark/guide/document/overview "Descriptor") with `--create-descriptor` or a [*Connector*](technical-resources/apispark/guide/manage/connectors "Connector") cell with `--create-connector`. If you do not kwow yet, choose the *Descriptor* since you will be able to convert it in a *Connector* later.
 
 Last things to do is to indicate the class of your Restlet Application (example `org.restlet.example.contact.api.ContactsApplication`).
 
@@ -113,7 +113,7 @@ Then, you can run the command.
 java org.restlet.ext.apispark.Introspector --username 55955e02-0e99-47f8 --password 6f3ee88e-8405-44c8 --create-descriptor org.restlet.example.contact.api.ContactsApplication
 ```
 
-In the process succeeds, you should see the following logs in the console:
+If the process succeeds, you will see the following logs in the console:
 
 ```
 Instrospection complete
@@ -121,4 +121,4 @@ Your Web API descriptor's id is: 18
 Your Web API documentation is accessible at this URL: https://apispark.com/apis/18/versions/1/overview
 ```
 
-That's it. Your API definition  is available on APISPark.
+That's it. Your API definition is available on APISPark.
