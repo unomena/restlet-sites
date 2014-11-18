@@ -1,6 +1,7 @@
 # Introduction
 
-This tutorial will show you how to create a custom web API that exposes data stored in a Google Spreasheet. [Google Spreadsheet](http://docs.google.com/) is a popular collaborative data editing tool within the Google Docs suite.
+This tutorial will show you how to create a custom web API that exposes data stored in a Google Spreasheet. <a href="
+http://docs.google.com/" target="_blank">Google Spreadsheet</a> is a popular collaborative data editing tool within the Google Docs suite.
 
 # Requirements
 
@@ -16,15 +17,17 @@ Sign in to your **Google Drive** account.
 
 In this tutorial example, we have a spreadsheet with a worksheet named **Contacts** with the following columns, containing a list of contacts:
 
-*   **contact_id** : primary key
-*   **firstName** (string) : first name
-*   **lastName** (string) : last name
+*   **contactid** : primary key
+*   **firstname** (string) : first name
+*   **lastname** (string) : last name
 *   **age** (integer) : age
 
-Add a **Contact** so that you can retrieve it later when performing an HTTP call to your API.
-We've chosen to name ours John Smith, 34 years old.
+> **Note:** we recommend using lowercase characters from the roman alphabet only for column names.
 
-![Google Spreadsheet](images/google-spreadsheet.jpg "Google Spreadsheet")
+Add a **Contact** so that you can retrieve it later when performing an HTTP call to your API.
+We have chosen to name ours Darth Vador, 46 years old.
+
+![Google Spreadsheet](images/google-spreadsheet.png "Google Spreadsheet")
 
 # 2. Configure the Google Spreadsheet Wrapper
 
@@ -48,9 +51,11 @@ In the **Security** section, click on **Google Account**.
 
 Open a new tab in your browser.
 
-Head to your **Google Account Settings** [**<u>Security</u>**](https://www.google.com/settings/security?hl=en) page and check that **2-step authentication is activated**. If **2-step authentication** is not activated, you need to activate it before proceeding.
+Head to your **Google Account Settings** <a href="
+https://www.google.com/settings/security?hl=en" target="_blank">**Security**</a> page and check that **2-step authentication is activated**. If **2-step authentication** is not activated, you need to activate it before proceeding.
 
-Once activated, go back to the [**<u>Security</u>**](https://www.google.com/settings/security?hl=en) page, click on **Settings** near **App Passwords** and generate a new application-specific password for APISpark. You will use it as your **Client Secret**.
+Once activated, go back to the <a href="
+https://www.google.com/settings/security?hl=en" target="_blank">**Security**</a> page, click on **Settings** near **App Passwords** and generate a new application-specific password for APISpark. You will use it as your **Client Secret**.
 
 ![Application specific passwords](images/google-app-password.png "Application specific passwords")
 
@@ -110,7 +115,10 @@ Deploy the API by clicking the **Deploy** button.
 # 8. Invoke the web API
 
 Using a web API does not impose any particular programming language.
-It can even be done from a web browser. However, to test your API we recommend the use of tools such as the Chrome extensions [<u>POSTMAN</u>](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?utm_source=chrome-ntp-icon) and [<u>DHC</u>](http://sprintapi.com/dhcs.html) that provide a graphical user interface to perform HTTP calls. The following figure shows the call to the Contacts API with POSTMAN.
+It can even be done from a web browser. However, to test your API we recommend the use of tools such as the Chrome extensions
+<a href="
+https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?utm_source=chrome-ntp-icon" target="_blank">POSTMAN</a> and <a href="
+http://sprintapi.com/dhcs.html" target="_blank">DHC</a> that provide a graphical user interface to perform HTTP calls. The following figure shows the call to the Contacts API with POSTMAN.
 
 
 The credentials required to invoke the API can be found in the **Overview** tab, by clicking on the relevant **Endpoint**.
@@ -133,4 +141,4 @@ Note that any POST requests made to the API will result in new data being create
 
 >**Note:** APISpark lets you generate custom Client SDKs for you API. Supported environments include Java, Android, GWT and JavaScript (AJAX or Node.js).
 
-Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the [Help Desk](http://support.apispark.com/).
+Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the <a href="http://support.restlet.com/" target="_blank">Help Desk</a>.

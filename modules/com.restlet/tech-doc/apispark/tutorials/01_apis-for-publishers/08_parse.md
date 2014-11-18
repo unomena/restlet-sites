@@ -1,7 +1,7 @@
 # Introduction
 
-This tutorial will show you how to create a custom web API that gives access to existing data stored in a Parse backend.
-[Parse.com](http://parse.com/) is a popular Backend as a Service (BaaS) provider that powers connected mobile applications.
+This tutorial will show you how to create a web API that gives access to existing data stored in a Parse backend.
+<a href="http://Parse.com/" target="_blank">Parse.com</a> is a popular Backend as a Service (BaaS) provider that powers connected mobile applications.
 
 # Requirements
 
@@ -44,7 +44,7 @@ Copy both your **Application ID** and your **REST API key**.
 
 ## 2.1 Add a new Parse Wrapper Entity Store
 
-If you haven't already done so, [sign in](https://apispark.com/signin) to your APISpark account and open your **Dashboard**.
+If you have not already done so, [sign in](https://apispark.com/signin) to your APISpark account and open your **Dashboard**.
 
 Create a new Parse Wrapper Entity Store. Click on **+ Entity Store**, select the "Full stack" **Type** and enter the **Name** "myParseApp".
 
@@ -62,13 +62,13 @@ In the **Security** drop down, click on **Parse Account**.
 
 Paste your **Application ID** and **REST API** keys.
 
-Click on the **Test connection** button.
+Click on the **Test** button.
 
 ![Configure your Parse account](images/configure-parse-account.png "Configure your Parse account")
 
 ## 2.3 Add an entity
 
-Parse doesn't expose metadata about its data store. Therefore the structure or your Parse store must be re-created manually in APISpark, by creating entities and properties with matching names.
+Parse does not expose metadata about its data store. Therefore the structure or your Parse store must be re-created manually in APISpark, by creating entities and properties with matching names.
 
 To do so, click on the **Overview** tab.
 
@@ -78,7 +78,7 @@ Name your **Entity**. In this tutorial example, we will name it **Contact** and 
 
 ![Add an entity](images/add-parse-entity.png "Add an entity")
 
-Note that your **Entity** elements and the **Schema** elements from Parse.com don’t have to match up perfectly. For this purpose, you can
+>**Note:** Your **Entity** elements and the **Schema** elements from Parse.com do not have to match up perfectly. For this purpose, you can
 	use the **Mapped from** attribute on the entity and its fields. This allows you to specify the name of the target element (entity or property) in Parse.
 
 Click on the **Deploy** button.
@@ -118,4 +118,4 @@ Any POST requests made to the API will result in new data being created in your 
 
 >**Note:** APISpark lets you generate custom Client SDKs for you API. Supported environments include Java, Android, GWT and JavaScript (AJAX or Node.js).
 
-Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the [Help Desk](http://support.apispark.com/).
+Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the <a href="http://support.restlet.com/" target="_blank">Help Desk</a>.

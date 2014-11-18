@@ -13,7 +13,8 @@ To follow this tutorial, you will need the following:
 
 ## 1.1 Add a new Entity Store
 
-If you haven't already done so, [sign in](https://apispark.com/signin) to your APISpark account and open your **Dashboard**.
+If you have not already done so, <a href="
+https://apispark.restlet.com/signin" target="_blank">sign in</a> to your APISpark account and open your **Dashboard**.
 
 Create a new Entity Store. Click on **+ Entity Store**, select the "Full stack" **Type** and enter the **Name** "myStore".
 
@@ -31,7 +32,7 @@ Click on the **Add** button next to **Entities** in the left panel to create a n
 
 To add **Properties** to an entity, select the Entity from the **Entities** menu on the left and click on **+ Add a property** in the central panel.
 
-We're going to create three properties named *lastName*, *firstName* and *age*. Note that the *id* property was created automatically.
+We are going to create three properties named *lastName*, *firstName* and *age*. Note that the *id* property was created automatically.
 
 For each property you create, you can choose a data type, cardinality and default value. You can also decide if the property can take a *null* value.
 
@@ -43,7 +44,7 @@ Click on the **Deploy** button to deploy your Entity Store.
 
 ![Deploy Entity Store](images/deploy-entity-store.jpg "Deploy Entity Store")
 
-## 1.4 Add data via de Data Browser
+## 1.4 Add data via the Data Browser
 
 Once your Entity Store has been deployed, you can use it to store contacts. For the purpose of this tutorial, let’s add one via the APISpark Data Browser.
 
@@ -77,11 +78,11 @@ Click **Add**. You will be taken to the API’s **Overview** page.
 
 Note that your API's **Endpoints**, **Resources**, and **Representations** have been created automatically.
 
-The screenshot below shows some of the drop down menus opened to give you an idea of how the Web API **Overview** is organized.
+The screenshot below shows some of the drop down menus opened to give you an idea of how the web API **Overview** is organized.
 
 ![structure](images/api-overview.jpg "structure")
 
-## 2.2 Deploy the Web API
+## 2.2 Deploy the web API
 
 Deploy the API by clicking the **Deploy** button.
 
@@ -103,6 +104,6 @@ The following figure shows the API call in POSTMAN.
 
 ![Invoke your API with Postman](images/postman.jpg "Invoke your API with Postman")
 
->**Note:** APISpark lets you generate custom Client SDKs for your API. Different environments are supported including Java, Android, GWT and JavaScript (AJAX or Node.js). 
+>**Note:** APISpark lets you generate custom Client SDKs for your API. Different environments are supported including Java, Android, GWT and JavaScript (AJAX or Node.js).
 
-Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the [Help Desk](http://support.apispark.com/).
+Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the <a href="http://support.restlet.com/" target="_blank">Help Desk</a>.

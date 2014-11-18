@@ -1,6 +1,6 @@
 # Introduction
 
-This tutorial will show you how to create a custom web API that gives access to existing data stored in a Firebase backend.[Firebase](https://www.firebase.com) is a popular Backend as a Service (BaaS) provider that powers real time HTML 5 applications.
+This tutorial will show you how to create a custom web API that gives access to existing data stored in a Firebase backend. <a href="https://www.firebase.com" target="_blank">Firebase</a> is a popular Backend as a Service (BaaS) provider that powers real time HTML 5 applications.
 
 # Requirements
 
@@ -25,9 +25,9 @@ Now, enter a sample **Contact** by matching the tree structure illustrated in th
 
 ![Create your firebase](images/create-firebase-struct.png "Create your firebase")
 
-We recommend manually adding a data element to your FireBase so that you can retrieve it later, but this isn't mandatory.
+We recommend manually adding a data element to your FireBase so that you can retrieve it later, but this is not mandatory.
 
-As you can see, we've chosen to name our **Contact** John Smith, age 34 years old, and to give him the ID id001.
+As you can see, we have chosen to name our **Contact** John Smith, age 34 years old, and to give him the ID id001.
 
 Be aware that the structure of this data will be reflected in APISpark later, namely:
 
@@ -37,7 +37,7 @@ Be aware that the structure of this data will be reflected in APISpark later, na
 
 ## 1.2 Secure your Firebase
 
-By default, operations to your Firebase aren't secured. Everything is authorized. You can easily change this in the security tab of the Firebase console with security rules as described below. In this case, you need to be authenticated to execute both read and write operations on data.
+By default, operations to your Firebase are not secured. Everything is authorized. You can easily change this in the **Security** tab of the Firebase console with security rules as described below. In this case, you need to be authenticated to execute both read and write operations on data.
 
 To do so, head to the **Security & Rules** tab and replace the default rules by those below:
 
@@ -69,7 +69,7 @@ Select **Firebase wrapper** and enter a name for your Wrapper. We named ours "my
 
 ![Firebase secrets](images/create-firebase-wrapper.png "Firebase secrets")
 
-Click **Create**. You will be taken to the Wrapper's **Overview** tab.
+Click **Add**. You will be taken to the Wrapper's **Overview** tab.
 
 ## 2.2. Setup your Firebase account
 
@@ -79,7 +79,7 @@ In the **Security** drop down, click on **Firebase Account**.
 
 Input your **Application ID** (application URL chosen in Firebase) and **Auth token**. The Auth token is only required if the corresponding Firebase is secured.
 
-Click on the **Test connection** button.
+Click on the **Test** button.
 
 ![Configure your firebase app](images/configure-firebase-app.png "Configure your firebase app")
 
@@ -95,7 +95,7 @@ Name your **Entity**. In this tutorial example, we named our entity **Contact** 
 
 ![Add an entity](images/add-parse-entity.png "Add an entity")
 
-Note that your **Entity** elements and the **Schema** elements in Firebase don't have to match up perfectly. For this purpose, you can use the **Mapping from** attribute on the entity and its properties. This allows you to specify the name of the target element (entity or property) in Firebase.
+>**Note:** Your **Entity** elements and the **Schema** elements in Firebase do not have to match up perfectly. For this purpose, you can use the **Mapping from** attribute on the entity and its properties. This allows you to specify the name of the target element (entity or property) in Firebase.
 
 Click on the **Deploy** button.
 
@@ -132,4 +132,4 @@ Any POST requests made to the API will result in new data being created in your 
 
 >**Note:** APISpark lets you generate custom Client SDKs for you API. Supported environments include Java, Android, GWT and JavaScript (AJAX or Node.js).
 
-Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the [Help Desk](http://support.apispark.com/).
+Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the <a href="http://support.restlet.com/" target="_blank">Help Desk</a>.

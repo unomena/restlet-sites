@@ -165,7 +165,7 @@ toc:
     - file: 04_api-definition.md
       id: api-definition
       link_url: /04_publish/02_publish/04_api-definition.md
-      long-title: Standard API defintion and integration with third party applications
+      long-title: Standard API definition and integration with third party applications
       title: API definition
       url: /publish/publish/api-definition
     long-title: Publish a web API
@@ -261,6 +261,12 @@ toc:
     long-title: Overview
     title: Overview
     url: /document/overview
+  - file: 02_create-descriptor.md
+    id: create-descriptor
+    link_url: /06_document/02_create-descriptor.md
+    long-title: Create and edit your API Descriptor
+    title: Create Descriptor
+    url: /document/create-descriptor
   - file: 03_get-documentation.md
     id: get-documentation
     link_url: /06_document/03_get-documentation.md

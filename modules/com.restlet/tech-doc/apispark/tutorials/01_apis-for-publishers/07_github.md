@@ -11,8 +11,8 @@ To follow this tutorial, you will need:
 
 *   a web browser,
 *   15 minutes of your time,
-*   your GitHub login details
-*   access to a GitHub repository
+*   your GitHub login details,
+*   access to a GitHub repository.
 
 ## 1. Create a GitHub Wrapper
 
@@ -24,7 +24,7 @@ Give your wrapper a **Name** and a **Description** (optional).
 
 ## 2. Configure your GitHub account
 
-Open the wrapper's **Settings** tab, and selet **Github Account** from the **Security** menu in the left panel.
+Open the wrapper's **Settings** tab, and selet **Github Account** from the **Security** section in the left panel.
 
 Enter your GitHub account credentials. Press the **Test** button to check the connection.
 
@@ -59,3 +59,5 @@ Once the Wrapper is deployed, you can select a folder from the **Folders** secti
 <!--
 ![GitHub folder browser](images/github-folder-browser.png "GitHub folder browser")
 -->
+
+Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the <a href="http://support.restlet.com/" target="_blank">Help Desk</a>.

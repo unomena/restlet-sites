@@ -20,24 +20,6 @@ toc:
     long-title: Expose an SQL database via a web API
     title: Expose an SQL DB via a web API
     url: /apis-for-publishers/expose-sql-via-api
-  - file: 04_host-angular-app.md
-    id: host-angular-app
-    link_url: /01_apis-for-publishers/04_host-angular-app.md
-    long-title: Host an Angular web application on APISpark
-    title: Host an Angular web app
-    url: /apis-for-publishers/host-angular-app
-  - file: 05_create-open-data-api.md
-    id: create-open-data-api
-    link_url: /01_apis-for-publishers/05_create-open-data-api.md
-    long-title: Create an OpenData API in 5 minutes
-    title: Create an OpenData API
-    url: /apis-for-publishers/create-open-data-api
-  - file: 06_bookrent-sample.md
-    id: bookrent-sample
-    link_url: /01_apis-for-publishers/06_bookrent-sample.md
-    long-title: Create an Angular web app (BookRent sample)
-    title: Create an Angular web app
-    url: /apis-for-publishers/bookrent-sample
   - file: 07_github.md
     id: github
     link_url: /01_apis-for-publishers/07_github.md
@@ -67,18 +49,6 @@ toc:
     long-title: Document an existing Restlet web API
     title: Document a Restlet API
     url: /apis-for-vendors/document-restlet-api
-  - file: 02_document-jax-rs-api.md
-    id: document-jax-rs-api
-    link_url: /02_apis-for-vendors/02_document-jax-rs-api.md
-    long-title: Document an existing JAX-RS web API
-    title: Document a JAX-RS API
-    url: /apis-for-vendors/document-jax-rs-api
-  - file: 03_manage-api-with-swagger-doc.md
-    id: manage-api-with-swagger-doc
-    link_url: /02_apis-for-vendors/03_manage-api-with-swagger-doc.md
-    long-title: Manage an existing web API from its Swagger documentation
-    title: Manage an API from its Swagger doc
-    url: /apis-for-vendors/manage-api-with-swagger-doc
   long-title: API management for SaaS vendors
   title: APIs for Vendors
 
