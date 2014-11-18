@@ -9,7 +9,9 @@ Web APIs import Data Stores and can be invoked by users.
 ![Cell concept](images/cell-concept.jpg "Cell concept")
 
 ## Web APIs  
-An *API* (Application Programming Interface) is an available web business once deployed via HTTP and exposing data. You can create a web API *Descriptor*, which is an APISpark cell that documents your web API. In order to bring additional features to your existing web API hosted outside of APISpark, you can alos create a *Connector* cell.
+An *API* (Application Programming Interface) is an available web business once deployed via HTTP and exposing data.
+
+You can create a [*web API*](technical-resources/apispark/guide/create/overview "Web API") cell, which will be hosted on the APISpark platform. If you do not need to host your web API, you can create a web API  [*Descriptor*](technical-resources/apispark/guide/document/overview "Descriptor"), which is an APISpark cell that documents your web API. In order to bring additional features to your existing web API hosted outside of APISpark, you can also create a [*Connector*](technical-resources/apispark/guide/manage/connectors "Connector") cell.
 
 ## Data Stores  
 Two types of Data Stores can be created. *Entity Stores* for structured data (equivalent to a database) and *File Stores* for static files (text documents, images, videos or style sheets).
