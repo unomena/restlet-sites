@@ -49,17 +49,17 @@ In order to use the Introspector tool from Maven, you need to add the following 
         <dependency>
             <groupId>org.restlet.jse</groupId>
             <artifactId>org.restlet</artifactId>
-            <version>${restlet-version}</version>
+            <version>&#36;{restlet-version}</version>
         </dependency>
         <dependency>
             <groupId>org.restlet.jse</groupId>
             <artifactId>org.restlet.ext.jackson</artifactId>
-            <version>${restlet-version}</version>
+            <version>&#36;{restlet-version}</version>
         </dependency>
         <dependency>
             <groupId>org.restlet.jse</groupId>
             <artifactId>org.restlet.ext.apispark</artifactId>
-            <version>${restlet-version}</version>
+            <version>&#36;{restlet-version}</version>
         </dependency>
     </dependencies>
 
