@@ -220,6 +220,13 @@ public class WebComponent extends Component {
 		host = addRedirection("noelios.com|noelios.net|noelios.org|"
 				+ "www.noelios.com|www.noelios.net|www.noelios.org", port,
 				"http://restlet.com{rr}", properties);
+		
+		// ----------------------------
+		// Redirect to restlet.com/blog
+		// ----------------------------
+		host = addRedirection("blog.restlet.com", port,
+				"http://restlet.com/blog{rr}", properties);
+		
 		getHosts().add(host);
 	}
 
