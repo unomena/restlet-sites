@@ -17,4 +17,4 @@ The deployment process is composed of several steps, which are displayed in the 
 
 Each step of the deployment process is also documented by a message in the **Messages** tab. The events are listed in the **Traces** section.
 
-![traces](images/06.jpg "traces")
+![traces](images/traces.jpg "traces")

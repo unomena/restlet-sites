@@ -12,7 +12,7 @@ Once your web API has been designed, implemented and deployed, APISpark helps yo
 
 By sharing API your design *copyright free* on API Commons, you will enable other API providers to reuse it and thus contribute to the converge of API designs. This makes life easier for API consumers, and lets you take a stance as the provider of the API.
 
-![API Commons](images/02.jpg "API Commons")
+![API Commons](images/api-commons.jpg "API Commons")
 
 To register your Web API on API Commons, you need to provide the commons with an API Commons manifest. APISpark lets you automatically generate this JSON file.
 

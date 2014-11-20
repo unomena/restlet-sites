@@ -3,7 +3,7 @@ A web API has a set of **Resources**. Each resource has its own **Path** which i
 
 To edit a web API's **Resources**, navigate to the Web API's **Overview**. The API's resources are listed in the **Resources** section in the left panel.
 
-![Resources section](images/05.jpg "Resources section")
+![Resources section](images/resources-section.jpg "Resources section")
 
 The **Search** field can be used to easily filter resources by name.  
 

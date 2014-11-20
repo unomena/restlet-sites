@@ -10,7 +10,7 @@ When you Sign In, you are automatically assigned a **Free** plan. To upgrade you
 
 To switch base plan level, click on your name in the top right of your screen and select **My account**.
 
-![My account](images/12.jpg "My account")
+![My account](images/my-account.jpg "My account")
 
 Open the **My plan** tab. In the **Level** drop-down menu, select your base plan level (10 to 2000 concurrent clients).
 
@@ -26,14 +26,14 @@ In order to updgrade your plan from the **Free** plan, you need to enter your cr
 
 To add a payment method to your account, click on your name on top right of your screen and select **My account**.
 
-![My account](images/12.jpg "My account")
+![My account](images/my-account.jpg "My account")
 
 Click on **My plan** tab. In the **Payment method** section, click on the action button, shown below.
 
-![wheel](images/11.jpg "wheel")
+![wheel](images/wheel.jpg "wheel")
 
 Enter your credit card details and click on the **OK** button.
 
-![Create new payment method](images/13.jpg "Create new payment method")
+![Create new payment method](images/credit-card-details.jpg "Create new payment method")
 
 Your credit card details are displayed in the **Payment method** section. You can now upgrade your base plan as described above.

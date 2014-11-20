@@ -9,7 +9,7 @@ A single API can have multiple endpoints, for example to respect different namin
 
 To edit a web API's endpoints in APISpark, navigate to the web API's **Overview**. The API's endpoints are listed in the **Endpoints** section in the left panel.
 
-![Endpoints section](images/04.jpg "Endpoints section")
+![Endpoints section](images/endpoints-section.jpg "Endpoints section")
 
 To add new endpoints, click on the **Add** button of the **Endpoints** section.
 

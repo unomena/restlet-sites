@@ -9,7 +9,7 @@ To sign up, click on the **Sign in** button from the <a href="https://apispark.r
 
 Several social login providers are supported, including **GitHub**, **Google**, **Windows Live**, **Yahoo**, and **Facebook**. You can create an account for free with any of these providers if you do not already own one.
 
-![Sign in](images/sociallogin.png "Sign in")
+![Sign in](images/social-login.png "Sign in")
 
 If you are not already logged-in to your chosen provider, you will be asked to enter your username and password.
 
@@ -19,13 +19,13 @@ All your APISpark account details are available on the **Account** page.
 
 To navigate to the **Account** page, make sure you are signed in, then click on your username on top right of your screen and select **My account**.
 
-![My account](images/03.jpg "My account")
+![My account](images/my-account.jpg "My account")
 
 The **Account** page has two main tabs: **My account** and **My plan**.
 
 ## My account
 
-![My account tab](images/myaccount.jpg "My account tab")
+![My account tab](images/my-account-tab.jpg "My account tab")
 
  * The **Information** section provides information about your profile and the social network account you use to connect to APISpark.  
  * The **Tokens** section lists the tokens linked to your account.

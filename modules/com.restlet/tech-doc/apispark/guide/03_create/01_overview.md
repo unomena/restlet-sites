@@ -31,7 +31,7 @@ This has the added benefit of allowing you to import multiple Data Stores of pot
 
 If you have not already done so, create a web API from the **Dashboard** by clicking on the **+ Web API** button.
 
-![+web API](images/05.jpg "+web API")
+![+web API](images/+web-api.jpg "+web API")
 
 Select **Full Stack** from the **Type** drop-down menu. Give your API a **Name**, **Domain**, and **Description** (optional).
 The window will notify you of the availability of the domain name.
@@ -69,4 +69,4 @@ You will be prompted to select whether or not to automatically add any new resou
 
 Go back to the API's **Overview** to view your updated resources and representations.
 
-> **Note:** You can only switch an imported entity store to a version which is superior to the one currently imported. 
+> **Note:** You can only switch an imported entity store to a version which is superior to the one currently imported.

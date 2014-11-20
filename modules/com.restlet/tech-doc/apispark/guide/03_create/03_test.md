@@ -14,7 +14,7 @@ Fill in the **Endpoint URI** and add the name of a resource e.g. `/contacts/ `at
 To retrieve the list of contacts in JSON, click on the **Headers** button on the far right and input the **Accept** command in the **Header** field and write **application/json** in the **Value** field opposite.  
 Click on the **Send** button.
 
-![POSTMAN](images/12.jpg "POSTMAN")
+![POSTMAN](images/postman.jpg "POSTMAN")
 
 # Check your messages
 

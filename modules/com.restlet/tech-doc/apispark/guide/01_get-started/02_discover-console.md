@@ -4,4 +4,4 @@ The Dashboard is APISpark's primary control center. From the Dashboard, you can 
 
 The diagram below illustrates the main features accessible from the Dashboard.
 
-![Dashboard](images/09.jpg "Dashboard")
+![Dashboard](images/dashboard.jpg "Dashboard")
