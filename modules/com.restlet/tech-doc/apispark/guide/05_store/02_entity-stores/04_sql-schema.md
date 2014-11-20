@@ -13,12 +13,12 @@ Generate a DDL or SQL file following the appropriate database and tool instructi
 From pgAdmin, open a connection to your database.  
 Select the database schema you want to export in the tree browser.
 
-![pgAdmin](images/11.jpg "pgAdmin")
+![pgAdmin](images/pgadmin-01.jpg "pgAdmin")
 
 Click on the **Tools** menu and select **Backup**.
 In the **Backup database** window:
 
-![pgAdmin](images/12.jpg "pgAdmin")
+![pgAdmin](images/pgadmin-02.jpg "pgAdmin")
 
   * Filename: Define the output file name.
   * Format: Plain.
@@ -53,12 +53,12 @@ From MySQL Workbench, open a connection to the database:
     * Define connection parameters
     * Click on the **OK** button to open the connection to the database
 
-![mySQL Workbench](images/15.jpg "mySQL Workbench")
+![mySQL Workbench](images/my-sql-workbench-01.jpg "mySQL Workbench")
 
 Click on the **Server** menu and select **Data Export**.  
 In the **Data Export** window:
 
-![mySQL Workbench](images/17.jpg "mySQL Workbench")
+![mySQL Workbench](images/my-sql-workbench-02.jpg "mySQL Workbench")
 
   * In the **Object Selection** tab:
     * Select the schema that you want to export
@@ -90,14 +90,14 @@ Replace the square brackets [] content with:
 
 Run Oracle SQL Developer and connect to your database.
 
-![SQL Developer](images/20.jpg "SQL Developer")
+![SQL Developer](images/sql-developer-01.jpg "SQL Developer")
 
 Export your database:
   * Click on the **Tools** menu and select **Database export**.
 
 In the **Export wizard Step 1 of 5** window, define these values:
 
-![SQL Developer](images/23.jpg "SQL Developer")
+![SQL Developer](images/sql-developer-02.jpg "SQL Developer")
 
   * Connection: Specify the database connection that we have just created before.
   * Select the **Export DDL** checkbox.
@@ -108,7 +108,7 @@ In the **Export wizard Step 1 of 5** window, define these values:
 
 In the **Export wizard - Step 2 of 5** window, define:
 
-![SQL Developer](images/24.jpg "SQL Developer")
+![SQL Developer](images/sql-developer-03.jpg "SQL Developer")
 
   * Select the **Toggle All** checkbox.
   * Only select the **Tables** and **Constraints** checkboxes.

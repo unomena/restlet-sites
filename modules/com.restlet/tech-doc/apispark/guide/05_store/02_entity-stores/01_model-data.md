@@ -9,11 +9,11 @@ An Entity Store provides the necessary tools to design a data model from the gro
 
 Like all other cell types, Entity Stores are created and opened via the Dashboard. To create an Entity Store, go to the **Dashboard** and click on the **+ Entity Store** button.
 
-![+Entity Stores](images/01.jpg "+Entity Stores")
+![+Entity Stores](images/+entity-store.jpg "+Entity Stores")
 
 In the **Create an Entity Store** window, select **Full Stack** in order to create an Entity Store hosted by APISpark.
 
-![Full Stack](images/02.jpg "Full Stack")
+![Full Stack](images/full-stack.jpg "Full Stack")
 
 Enter a **Name** (required) and a **Description** (optional) and click on the **Create** button.
 
@@ -28,7 +28,7 @@ An Entity Store is composed of entities, which represent types of objects and th
 In the **Entities** section, click on the **Add** button.  
 Give the new entity a name (required) and a description (optional).
 
-![Add Entity](images/03.jpg "Add Entity")
+![Add Entity](images/add-an-entity.jpg "Add Entity")
 
 ## Entity configuration
 
@@ -36,7 +36,7 @@ Entities are listed in the **Entities** section on the left of the **Overview**.
 
 Selecting an entity from the list opens the Overview. The Overview displays configuration information for the entity, and lists the entity's properties.
 
-![new Entity](images/04.jpg "new Entity")
+![Overview tab](images/overview-tab.jpg "Overview tab")
 
 The entity's name and description can be updated from this screen.
 
@@ -60,7 +60,7 @@ Entities are composed of properties. An entity property has a number of differen
 
 To add a property to an Entity, click on **+ Add a property**.
 
-![Add property](images/05.jpg "Add property")
+![Add property](images/add-property.jpg "Add property")
 
 You are then invited to specify the following **attributes** for the new property.
 
