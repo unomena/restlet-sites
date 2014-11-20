@@ -11,7 +11,7 @@ Navigate to the API's overview. If you are a member of the API, it will appear i
 
 Select an Endpoint in the left panel. The central panel displays your access tokens.
 
-![access tokens](images/14.jpg "access tokens")
+![access tokens](images/access-tokens.jpg "access tokens")
 
 ## Access a public API
 

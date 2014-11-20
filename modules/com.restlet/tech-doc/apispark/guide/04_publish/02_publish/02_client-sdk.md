@@ -38,4 +38,4 @@ Click on the **Downloads** tab.
 Select the language you need (Java or JavaScript) in the **Client kits** section.  
 Click on the **Download** button.  
 
-![Download button](images/01.jpg "Download button")
+![Download button](images/download-button.jpg "Download button")

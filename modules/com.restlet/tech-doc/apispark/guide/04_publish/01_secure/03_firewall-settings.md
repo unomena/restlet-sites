@@ -7,7 +7,7 @@ You can filter the use of your API by filtering the APIs that will access it. Yo
 Open the your web API **Overview** page and click on the **Setting** tab.  
 In the **Firewall** section, select **IP filtering**.
 
-![IP filtering](images/03.jpg "IP filtering")
+![IP filtering](images/ip-filtering.jpg "IP filtering")
 
 In the **IP list** text area, enter the different IP addresses seperated by a coma.  
 Select the appropriate **Type** radio button (Blacklist or Whitelist).
@@ -20,7 +20,7 @@ You can limit your API consumption in time and number of calls for the groups of
 Open the your web API **Overview** page and click on the **Setting** tab.  
 In the **Firewall** section, select **Rate limitation**.
 
-![Rate limitation](images/05.jpg "Rate limitation")
+![Rate limitation](images/rate-limitation.jpg "Rate limitation")
 
 Enter a **Name** for the limitation you want to set e.g. "rate limitation for consumers (10 minutes)", select the appropriate **Group**, a **Period** and a maximum number of calls (**Limit**).
 

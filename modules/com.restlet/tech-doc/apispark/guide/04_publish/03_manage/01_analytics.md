@@ -2,7 +2,7 @@ APISpark provides you with an Analytics page that gives you details on how your 
 
 From your API **Overview** page, click the **Analytics** tab.
 
-![Analytics](images/04.jpg "Analytics")
+![Analytics](images/analytics.jpg "Analytics")
 
 
 <!---#Data storage coming soon or not

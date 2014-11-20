@@ -19,17 +19,17 @@ Of course, you can freely edit your API's member groups and delete the default o
 From your API **Overview** page, click on the **Members** tab.
 In the **Groups** section, click on the **Add** button.
 
-![Groups section](images/01.jpg "Groups section")
+![Groups section](images/groups-section.jpg "Groups section")
 
 In the **Add group** window, enter the name and description for your group. The new group displays in the **Groups** section.
 
-![Add group](images/02.jpg "Add group")
+![Add group](images/add-group.jpg "Add group")
 
 # Managing group members
 
 You can manage a group's members by selecting the group from the left panel of the **Members** tab.
 
-![Groups section](images/04.jpg "Groups section")
+![Groups section](images/add-members.jpg "Groups section")
 
 Add members to a group by clicking on the **+ Add a member** button of the selected group.
 

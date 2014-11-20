@@ -6,7 +6,7 @@ Default permissions allow you to define group/method permissions once and for al
 
 To configure default permissions for an API, go to the **Settings** tab, and select **Default Permissions** from the left panel.
 
-![default permissions](images/06.jpg "default permissions")
+![default permissions](images/default-permissions.jpg "default permissions")
 
 >**Note:** Select the **Anyone** checkbox to give rights to anyone including anonymous users who consume public APIs.
 
@@ -15,7 +15,7 @@ To configure default permissions for an API, go to the **Settings** tab, and sel
 
 Select a method belonging to one of the resources in the left panel of a web API's **Overview**. Open the method's **Security** tab in the central panel.
 
-![default permissions](images/07.jpg "default permissions")
+![Security tab](images/security-tab.jpg "Security tab")
 
 The **Security** panel lets you decide which methods are open to which member groups for this specific resource.
 
