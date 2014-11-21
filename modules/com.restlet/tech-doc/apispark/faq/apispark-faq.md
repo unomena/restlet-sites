@@ -10,8 +10,6 @@ Open your API's Overview and click on the **Deploy** button in the top right cor
 To retrieve the different cells your API uses, open your API's Overview and click on the **Settings** tab.  
 Click on the **Imports** section to see the different stores linked to your API.  
 
-![Imports section](images/imports-section.jpg "Imports section")
-
 To open a Store, click on the store you want to open from the **Imports** section.  
 Click on the name of the store in the central panel.
 
@@ -19,7 +17,7 @@ Click on the name of the store in the central panel.
 
 Click on the **Deploy** button in the top right corner of your screen.
 
-# I wonder if my cell has been deployed
+# I wonder if my cell is deployed
 
 Once your cell has been deployed, a confirmation message displays on top of your screen to inform you that the deployment is successful.
 
