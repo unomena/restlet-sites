@@ -92,7 +92,7 @@ Practical data models usually require the definition of relations between entiti
 
 APISpark supports one-to-many relations for this purpose.
 
-To create a one-to-many relation, add a new **Property** to the entity on the unary side. From the **Type** drop-down, select the type of the entity at the n-ary side of the relation. Set the **maxOccurs** cardinality to '*'.
+To create a one-to-many relation, add a new **Property** to the entity on the unary side. From the **Type** drop-down, select the type of the entity at the n-ary side of the relation. Set minOccurs to '1' and maxOccurs to '*'.
 
 You will then be able to load a data element at the unary side of the relation, and load all the associated elements at the n-ary side of the relation automatically. Please visit the [Invocation](technical-resources/apispark/guide/publish/publish/invocation "Invocation") page to learn how to retrieve your entities via a web API.
 
@@ -100,7 +100,7 @@ You will then be able to load a data element at the unary side of the relation, 
 
 Suppose your application's data model includes Users that can post Comments. A User can post multiple Comments, and a Comment is related to a single author User. Thus, this is a typical one-to-many relation.
 
-In order to build an Entity Store like this, create a User entity and a Comment entity. Add a property to entity User called "comments" that is of type Comment. Set the maxOccurs cardinality to '*'.
+In order to build an Entity Store like this, create a User entity and a Comment entity. Add a property to entity User called "comments" that is of type Comment. Set minOccurs to '1' and maxOccurs to '*'.
 
 When a User posts a new Comment, create a new Comment element. Update the corresponding User element's "comments" property by adding the ID of the newly created Comment to the list (comma seperated values).
 
