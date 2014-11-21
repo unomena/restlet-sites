@@ -12,7 +12,7 @@ page](/participate#/172-restlet/124-restlet.html).
 
 Since Restlet 2.1 RC2, a new edition of Restlet Framework for OSGi
 environements is available as well as an [Eclipse update
-site](http://restlet.com/download/current?distribution=p2&release=stable&edition=osgi).
+site](http://restlet.com/downloads/current?distribution=p2&release=stable&edition=osgi).
 
 Simple example
 ==============

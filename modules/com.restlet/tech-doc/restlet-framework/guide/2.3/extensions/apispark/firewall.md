@@ -21,7 +21,7 @@ Add the following dependency in your pom.xml :
 ### Manually 
 
 You must add the following jars (provided in 
-[Restlet Framework](http://restlet.com/download/current#release=unstable&edition=jse&distribution=zip) in the "/path/to/your/lib" folder or manually to the classpath.
+[Restlet Framework](http://restlet.com/downloads/current#release=unstable&edition=jse&distribution=zip) in the "/path/to/your/lib" folder or manually to the classpath.
 
 * 	org.restlet.ext.apispark.jar (Restlet APISpark extension with firewall)
 *	com.google.guava_16.0

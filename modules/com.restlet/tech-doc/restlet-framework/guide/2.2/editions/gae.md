@@ -31,7 +31,7 @@ Usage example
 
 Create a new GAE project with the Eclipse plugin provided, add the
 "org.restlet.jar" and the "org.restlet.ext.servlet.jar" files from the
-[latest Restlet snapshots](http://restlet.com/download/current?distribution=zip&release=unstable&edition=gae)(make
+[latest Restlet snapshots](http://restlet.com/downloads/current?distribution=zip&release=unstable&edition=gae)(make
 sure you download the edition for GAE) to your "/war/WEB-INF/lib/"
 directory and to your project build path.
 
