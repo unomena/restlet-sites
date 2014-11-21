@@ -18,9 +18,10 @@ on the client-side.
 
 The list of supported specific parameters is available in the javadocs:
 
--   [Jetty common parameters](javadocs://jse/ext/org/restlet/ext/jetty/JettyServerHelper.html)
--   [HTTP specific parameters](javadocs://jse/ext/org/restlet/ext/jetty/HttpServerHelper.html)
--   [HTTPS specific parameters](javadocs://jse/ext/org/restlet/ext/jetty/HttpsServerHelper.html)
+-   [Jetty server common parameters](javadocs://jse/ext/org/restlet/ext/jetty/JettyServerHelper.html)
+-   [HTTP server specific parameters](javadocs://jse/ext/org/restlet/ext/jetty/HttpServerHelper.html)
+-   [HTTPS server specific parameters](javadocs://jse/ext/org/restlet/ext/jetty/HttpsServerHelper.html)
+-   [Jetty client common parameters](javadocs://jse/ext/org/restlet/ext/jetty/HttpClientHelper.html)
 
 Here is the list of dependencies of this connector:
 
