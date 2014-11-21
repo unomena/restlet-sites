@@ -29,6 +29,8 @@ If you have any doubt, go to the **Messages** tab which reports the last actions
 
 ![Messages tab](images/messages-section.jpg "Messages tab")
 
+Jump to the [Test your web API](technical-resources/apispark/guide/create/test "Test your web API")  section of our online documentation for further information.
+
 # I want a resource to be accessible without authentication
 
 The API credentials (login/password) are used to identify the users of your API.
@@ -40,3 +42,17 @@ Select the **Anyone** checkbox.
 Click on the **Save** button.
 
 ![Access to anyone](images/method-anyone.jpg "Access to anyone")
+
+# I cannot find where to download Client SDKs
+
+Deploy your web API.  
+Go to the **Downloads** tab.  
+Click on the action button on top right of your screen and select **Generate downloads**.  
+In the **Clients** section, click the one you want to download.  
+Click the **Download** button.
+
+>**Note:** The **Download** button is only visible once you have generated the downloads.
+
+![Generate client SDKs](images/generate-sdks.jpg "Generate client SDKs")
+
+Jump to the [Generate custom client SDKs](technical-resources/apispark/guide/publish/publish/client-sdk "Generate custom client SDKs") section of our user guide for further information.
