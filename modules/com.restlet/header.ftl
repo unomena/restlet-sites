@@ -6,20 +6,42 @@
     <#global currentSection = "error" />
 <#elseif (pp.sourceDirectory?index_of("/") > -1)>
     <#global currentSection = pp.sourceDirectory?substring(0, pp.sourceDirectory?index_of("/")) />
+    <#list sections.section as section>
+      <#if (section.@path?has_content) && ( section.@path == currentSection)>
+         <#assign currentSection= section.@id />
+      </#if>
+    </#list>
 <#else>
     <#global currentSection = "-" />
 </#if>
+
 <#if !(currentSubSection?has_content)>
     <#global currentSubSection = pp.sourceFileName />
     <#assign tab = pp.sourceDirectory?split("/") />
-    <#if (tab?size>1) && !(tab[1] == "")>
-        <#global currentSubSection = tab[1] />
+    <#if ("learn"=currentSection!"")>
+	    <#if (tab?size>2) && !(tab[2] == "")>
+		<#global currentSubSection = tab[2] />
+	    <#else>
+		    <#if (tab?size>1) && !(tab[1] == "")>
+			<#global currentSubSection = tab[1] />
+		    <#else>
+			<#if (pp.sourceFileName?index_of(".") > -1) >
+			    <#global currentSubSection = pp.sourceFileName?substring(0, pp.sourceFileName?index_of(".")) />
+			<#else>
+			    <#global currentSubSection = pp.sourceFileName />
+			</#if>
+		    </#if>
+	    </#if>
     <#else>
-        <#if (pp.sourceFileName?index_of(".") > -1) >
-            <#global currentSubSection = pp.sourceFileName?substring(0, pp.sourceFileName?index_of(".")) />
-        <#else>
-            <#global currentSubSection = pp.sourceFileName />
-        </#if>
+	    <#if (tab?size>1) && !(tab[1] == "")>
+		<#global currentSubSection = tab[1] />
+	    <#else>
+		<#if (pp.sourceFileName?index_of(".") > -1) >
+		    <#global currentSubSection = pp.sourceFileName?substring(0, pp.sourceFileName?index_of(".")) />
+		<#else>
+		    <#global currentSubSection = pp.sourceFileName />
+		</#if>
+	    </#if>
     </#if>
 </#if>
 
