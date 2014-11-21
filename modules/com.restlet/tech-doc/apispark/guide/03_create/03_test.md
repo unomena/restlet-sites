@@ -18,7 +18,7 @@ Click on the **Send** button.
 
 # Check your messages
 
-The web API's **Messages** tab displays messages pertaining to different aspects of you API's life.
+The web API's **Messages** tab displays messages pertaining to different aspects of your API's life.
 
 This is a great place to go to when testing your API.
 
