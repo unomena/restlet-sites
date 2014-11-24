@@ -66,19 +66,19 @@ The Remote Agent is configured from a properties file which is included in the d
 ```properties
 agent.login=67b60a5d-c2b8-43a3-97b8-084d6ce60e10
 agent.password=5dcf7dc2-a2c4-44f5-b753-c26abea2c8b5
-agent.cell.id=154
-agent.cell.version=1
-agent.redirection.enabled=true
-agent.redirection.redirectionUrl=http://localhost:8080
+agent.cellId=154
+agent.cellVersion=1
+reverseProxy.enabled=true
+reverseProxy.targetUrl=http://localhost:8080
 ```
 
 To fill-in this configuration file, go to the **Settings** tab and select **Remote Agent** in the **Connector** section.
 
-On this page you will find the value of the property keys `agent.login`, `agent.password`, `agent.cell.id` and `agent.cell.version`.
+On this page you will find the value of the property keys `agent.login`, `agent.password`, `agent.cellId` and `agent.cellVersion`.
 
 ![Remote Agent](images/remote-agent-configuration.jpg "Remote Agent")
 
-The `agent.redirection.redirectionUrl` key should be set to the URL of your web API.
+The `reverseProxy.targetUrl` key should be set to the URL of your web API.
 
 Let's have a look at a full configuration example:
 
@@ -97,17 +97,17 @@ Let's have a look at a full configuration example:
   The agent configuration is:
 
   ```properties
-agent.redirection.redirectionUrl=https://192.168.10.130:8080
+  reverseProxy.targetUrl=https://192.168.10.130:8080
   ```
 
-With the standalone Agent, the value of the `agent.redirection.enabled` key should be set to `true`.
+With the standalone Agent, the value of the `reverseProxy.enabled` key should be set to `true`.
 
 ## Start the Agent
 
 Once your configuration file is filled, you can start the agent with the command below:
 
 ```
-java -jar -DagentConfiguration=/path/to/agent.properties apispark-agent.jar
+java -jar -DapiSparkServiceConfig=/path/to/agent.properties apispark-agent.jar
 ```
 
   > Note:
@@ -118,7 +118,7 @@ java -jar -DagentConfiguration=/path/to/agent.properties apispark-agent.jar
 By default the *Agent* runs on port 8000. You could change the port with the `-p` option as shown below:
 
 ```
-java -jar -DagentConfiguration=/path/to/agent.properties apispark-agent.jar -p 3000
+java -jar -DapiSparkServiceConfig=/path/to/agent.properties apispark-agent.jar -p 3000
 ```
 
 ### Use HTTPS
