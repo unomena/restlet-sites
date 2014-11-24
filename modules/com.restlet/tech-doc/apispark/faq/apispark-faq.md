@@ -1,6 +1,6 @@
 
-# 1. I get an Error 500 when I try to invoke my API
-
+# 1. I get a 500 error when I try to invoke my API
+Go to [sparky](#sparky)
 Before invoking your API, make sure you call the last version of your API and Data Store. You need to (re)deploy your API and the Data Stores (or/and File Stores) associated.
 
 ## (Re)deploy your API
@@ -26,7 +26,7 @@ The **Traces** section may display a *runtime error*. Click on it and check its 
 ![Entity Store Traces](images/entity-store-traces.png "Entity Store Traces")
 
 
-# 2. I wonder if my cell is deployed
+# <a name="sparky"></a>2. I wonder if my cell is deployed
 
 Once your cell has been deployed, a confirmation message displays on top of your screen to inform you that the deployment is successful.
 
@@ -77,3 +77,14 @@ Click the **Download** button.
 ![Generate client SDKs](images/generate-sdks.jpg "Generate client SDKs")
 
 Jump to the [Generate custom client SDKs](technical-resources/apispark/guide/publish/publish/client-sdk "Generate custom client SDKs") section of our user guide for further information.
+
+# 6. I get a 415 error (Unsupported Media Type) when I try to invoke my API
+
+# 7. I get a 405 error (Method Not Allowed) when I try to invoke my API
+
+Make sure the method you are using is allowed.
+
+Open your API's Overview, in the **Resources** section, click on the resource you call e.g. contacts. The methods available are listed below the resource name.  
+
+
+![Methods allowed](images/methods-allowed.jpg "Methods allowed")
