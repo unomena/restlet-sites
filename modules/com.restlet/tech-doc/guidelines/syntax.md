@@ -17,7 +17,7 @@ This is an H2
 [Link back to H2](#id-goes-here)
 
 
-Text formatting
+<a name="Text formatting"></a>Text formatting
 ======
 
 ### Style
@@ -211,6 +211,10 @@ Others
 ======
 
 ### Horizontal lines
+
+### Add anchors
+Go to [Text formatting](#Text formatting)
+
 
 
 ### Insert comments that will not display to end-users
