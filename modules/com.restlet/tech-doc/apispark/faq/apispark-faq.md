@@ -97,9 +97,9 @@ Jump to our [POST and PUT requests examples](#7) for further information.
 
 To perform your POST and PUT requests, of course you can directly use your web browser, but we recommend that you use <a href="https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm" target="_blank">POSTMAN Chrome Extension</a> that gives you a graphical view of your requests.
 
-Open your API's Overview page.
-Click on the relevant endpoint.
-Copy your API credentials (**Endpoint URI**, **Login** and **Password**).
+Open your API's Overview page.  
+Click on the relevant endpoint.  
+Copy your API credentials (**Endpoint URI**, **Login** and **Password**).  
 Paste them in POSTMAN to access your API.
 
 ## POST request
