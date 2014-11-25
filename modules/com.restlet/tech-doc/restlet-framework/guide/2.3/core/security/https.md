@@ -247,21 +247,21 @@ from the keystore file (serverX.jks):
     import org.restlet.data.Protocol;
     import org.restlet.util.Series;
 
-    public class SampleServer { 
+    public class SampleServer {
         public static void main(String[] args) throws Exception {
 
             // Create a new Component.
             Component component = new Component();
-    
+
             // Add a new HTTPS server listening on port 8183
             Server server = component.getServers().add(Protocol.HTTPS, 8183);  
             Series\<Parameter\> parameters = server.getContext().getParameters();
             parameters.add("sslContextFactory",
-            "org.restlet.ext.ssl.PkixSslContextFactory");
-            parameters.add("keystorePath", "\<path\>serverX.jks");
-            parameters.add("keystorePassword", "password");
+            "org.restlet.engine.ssl.DefaultSslContextFactory");
+            parameters.add("keyStorePath", "\<path\>serverX.jks");
+            parameters.add("keyStorePassword", "password");
             parameters.add("keyPassword", "password");
-            parameters.add("keystoreType", "JKS");
+            parameters.add("keyStoreType", "JKS");
 
             // Attach the sample application.
             component.getDefaultHost().attach("", new SampleApplication());

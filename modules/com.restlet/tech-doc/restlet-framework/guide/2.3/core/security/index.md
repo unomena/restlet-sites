@@ -280,7 +280,7 @@ in a way that is common to all three types of HTTPS server connectors
     passed to its `init` method, so as to initialize the
     SslContextFactory instance via text parameters.\
      The
-    [org.restlet.engine.security.DefaultSslContextFactory](javadocs://jse/engine/org/restlet/engine/ssl/DefaultSslContextFactory.html#init%28org.restlet.util.Series%29)
+    [org.restlet.engine.ssl.DefaultSslContextFactory](javadocs://jse/engine/org/restlet/engine/ssl/DefaultSslContextFactory.html#init%28org.restlet.util.Series%29)
     is an SslContextFactory that supports a basic set of parameters, and
     will default to the values specified in the `javax.net.ssl.*` system
     properties (see [JSSE Reference
