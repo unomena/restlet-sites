@@ -7,10 +7,11 @@
 
 /modules/com.restlet/images/Thumbs.db
 Thumbs.db
+.DS_Store
 /config
 /data
 /build/custom.properties
 /build/dist/
 /build/temp/
-
+/modules/com.restlet.frontend/bin
 *.swp

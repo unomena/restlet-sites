@@ -112,22 +112,9 @@
       </script>
    </head>
    <body>
+
    <!--[if IE 8]><div id="IE8"><div id="IE9"><![endif]-->
    <!--[if IE 9]><div id="IE9"><![endif]-->
-    <div class='topbar'>
-      <div class='header'>
-        <div class='container'>
-          <a class='brand' href="/" title='Restlet Framework'>
-            <img alt='Restlet Framework Logo' height='136' width='129' src='/images/logo-restlet-new.png' />
-          </a>
-          <ul class='nav'>
-    <#list sections.section as section>
-      <#if !(section.@hidden?has_content)><li><a<#if section.@id == currentSection> class='active ${section.@id}link'<#else> class="${section.@id}link"</#if> href="/${section.@id}/">${section.title}</a></li></#if>
-	</#list>
-          </ul>
-        </div>
-      </div>
-    </div>
     <div class='hero ac <#if headerClass?has_content>${headerClass}<#else>smallHeader</#if>'>
       <div class='container'>
 <#compress>
@@ -169,7 +156,7 @@
 </#list>
 </#compress>
     <div class='container<#if "-"=currentSection> topics</#if> content'>
-    <#if (("learn"=currentSection!"") && (("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!"")))>${editButton!""}</#if><#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>${branchSwitch!""}</#if>
+    <#if ("learn"=currentSection!"") && (("javadocs" == currentSubSection!"") || ("guide" == currentSubSection!"") || ("tutorial" == currentSubSection!""))>${branchSwitch!""}</#if>
 		${content}
     </div>
     <div class="content footerWrapper">
@@ -194,48 +181,6 @@
         </#if>
     </div>
 
-    <div id="footer">
-      <div class="container">
-        <div class="span2 intro below">${labels.footer.intouch['${language}']}</div>
-        <div class="span2a site"><h4><a href="http://blog.restlet.com/"><i class="blog-icon"></i>${labels.footer.blog['${language}']}</a></h4></div>
-        <div class="span2b site"><h4><a href="https://twitter.com/restlet"><i class="follow-icon"></i>${labels.footer.twitter['${language}']}</a></h4></div>
-		${googlelinkVerification!""}
-<!--        <div class="span2b site"><h4><a href="/download/notifications"><i class="notifications-icon"></i>${labels.notifications.submit['${language}']}</a></h4></div> -->
-        <div class="span4 newsletter">
-        <span id="footerNewsLetterWrapper" align="right">
-	        <input type="email" id="footerNewsLetterEmail" name="EMAIL" class="required email" placeholder="${labels.footer.newsletter['${language}']}"/>
-	        <button id="footerNewsLetterOkButton" class="button">OK</button>
-        </span>
-        </div>
-        <div class="clearBoth"></div>
-        <div class="span2 intro below">${labels.footer.sites['${language}']}</div>
-        <div class="span2a site">
-          <h4><a href="http://restlet.com/"><img src="/images/logo-restlet-framework-small.png" />Restlet</a></h4>
-          <ul class="sub-list">
-            <li><a class="discover" href="/discover/">${labels.footer.restletframework.discover['${language}']}</a></li>
-            <li><a class="download" href="/download/">${labels.footer.restletframework.download['${language}']}</a></li>
-            <li><a class="learn" href="/learn/">${labels.footer.restletframework.learn['${language}']}</a></li>
-            <li><a class="participate" href="/participate/">${labels.footer.restletframework.participate['${language}']}</a></li>
-            <li><a href="/about/">${labels.footer.restlet.about['${language}']}</a></li>
-          </ul>
-        </div>
-        <div class="span2b site">
-          <h4><a href="${ant["apispark.root.url"]!""}/" class="apisparklink"><img src="/images/logo-apispark-small.png"/>APISpark</a></h4>
-          <ul class="sub-list">
-            <li><a href="${ant["apispark.root.url"]!""}/features" class="apisparklink">${labels.footer.apispark.features['${language}']}</a></li>
-            <li><a href="${ant["apispark.root.url"]!""}/pricing" class="apisparklink">${labels.footer.apispark.pricing['${language}']}</a></li>
-            <li><a href="${ant["apispark.root.url"]!""}/docs/" class="apisparklink">${labels.footer.apispark.docs['${language}']}</a></li>
-            <li><a href="${ant["apispark.root.url"]!""}/catalog" class="apisparklink">${labels.footer.apispark.catalog['${language}']}</a></li>
-            <li><a href="http://support.apispark.com/" class="apisparklink">${labels.footer.apispark.helpdesk['${language}']}</a></li>
-          </ul>
-        </div>
-      </div>
-      <div id="copyright">Copyright &copy; ${pp.now?string("yyyy")} Restlet - <a href="/legal" title="${labels.footer.copyright.legal['${language}']}">${labels.footer.copyright.legal['${language}']}</a></div>
-    </div>
-    <!-- generated ${pp.now} -->
-<#if footer??>
-    ${footer}
-</#if>
 	<!--[if IE 8]></div></div><![endif]-->
 	<!--[if IE 9]></div><![endif]-->
    </body>

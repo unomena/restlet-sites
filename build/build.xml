@@ -141,27 +141,27 @@
 				<property name="file.model" value="${temp}/model.@{version}.properties" />
 			</ant>
 			<!-- parse the files according to this version properties -->
-			<replace dir="${temp}/owr/learn/guide/@{version}" replacefilterfile="${temp}/model.@{version}.properties" />
+			<replace dir="${temp}/owr/tech-doc/restlet-framework/guide/@{version}" replacefilterfile="${temp}/model.@{version}.properties" />
 			<!-- deal with the "javadocs" links -->
-			<replaceregexp match="javadocs://(.\..)/(.*)" replace="http://restlet.org/learn/javadocs/\1/\2" byline="true">
-				<fileset dir="${temp}/owr/learn/guide/@{version}" includes="**/*" />
+			<replaceregexp match="javadocs://(.\..)/(.*)" replace="http://restlet.org/technical-resources/restlet-framework/javadocs/\1/\2" byline="true">
+				<fileset dir="${temp}/owr/tech-doc/restlet-framework/guide/@{version}" includes="**/*" />
 			</replaceregexp>
-			<replaceregexp match="javadocs://(.*)" replace="http://restlet.org/learn/javadocs/@{version}/\1" byline="true">
-				<fileset dir="${temp}/owr/learn/guide/@{version}" includes="**/*" />
+			<replaceregexp match="javadocs://(.*)" replace="http://restlet.org/technical-resources/restlet-framework/javadocs/@{version}/\1" byline="true">
+				<fileset dir="${temp}/owr/tech-doc/restlet-framework/guide/@{version}" includes="**/*" />
 			</replaceregexp>
 			<!-- deal with the "source" links -->
 			<replaceregexp match="github://(.\..)/(.*)" replace="https://github.com/restlet/restlet-framework-java/tree/\1/modules/\2" byline="true">
-				<fileset dir="${temp}/owr/learn/guide/@{version}" includes="**/*" />
+				<fileset dir="${temp}/owr/tech-doc/restlet-framework/guide/@{version}" includes="**/*" />
 			</replaceregexp>
 			<!-- deal with the "source" links -->
 			<replaceregexp match="github://(.*)" replace="https://github.com/restlet/restlet-framework-java/tree/@{version}/modules/\1" byline="true">
-				<fileset dir="${temp}/owr/learn/guide/@{version}" includes="**/*" />
+				<fileset dir="${temp}/owr/tech-doc/restlet-framework/guide/@{version}" includes="**/*" />
 			</replaceregexp>
 			<!-- generate the Table of content -->
 			<mkdir dir="${temp}/toc" />
 			<exec executable="sh" osfamily="unix">
 				<arg value="${tmpl}/md/unixtotoc.sh" />
-				<arg value="${temp}/owr/learn/guide/@{version}/index.md" />
+				<arg value="${temp}/owr/tech-doc/restlet-framework/guide/@{version}/index.md" />
 				<arg value="${temp}/toc/toc.@{version}.xml" />
 				<arg value="${tmpl}/md/userguidetoc.tmpl" />
 			</exec>
@@ -194,12 +194,12 @@
 				</filterchain>
 			</copy>
 			<!-- enhance table of content's links -->
-			<replaceregexp file="${temp}/owr/learn/guide/@{version}/index.md" match="index.md" replace="" byline="true" />
-			<replaceregexp file="${temp}/owr/learn/guide/@{version}/index.md" match=".md" replace="" byline="true" />
+			<replaceregexp file="${temp}/owr/tech-doc/restlet-framework/guide/@{version}/index.md" match="index.md" replace="" byline="true" />
+			<replaceregexp file="${temp}/owr/tech-doc/restlet-framework/guide/@{version}/index.md" match=".md" replace="" byline="true" />
 			<!-- cope with marked down files and add decoration -->
 			<exec executable="sh" osfamily="unix">
 				<arg value="${tmpl}/md/unixtohtml.sh" />
-				<arg value="${temp}/owr/learn/guide/@{version}" />
+				<arg value="${temp}/owr/tech-doc/restlet-framework/guide/@{version}" />
 				<arg value="${temp}/toc/userguide.@{version}.tmpl" />
 			</exec>
 			<!-- complete properties with this version''s set of properties, before we cope with the wwhole page decoration -->
@@ -221,12 +221,12 @@
 				<property name="file.model" value="${temp}/model.tutorial.@{version}.properties" />
 			</ant>
 			<!-- parse the files according to this version properties -->
-			<replace dir="${temp}/owr/learn/tutorial/@{version}" replacefilterfile="${temp}/model.tutorial.@{version}.properties" />
+			<replace dir="${temp}/owr/tech-doc/restlet-framework/tutorial/@{version}" replacefilterfile="${temp}/model.tutorial.@{version}.properties" />
 
 			<mkdir dir="${temp}/toc" />
 			<exec executable="sh" osfamily="unix">
 				<arg value="${tools}/get-title.sh" />
-				<arg value="${temp}/owr/learn/tutorial/@{version}/index.md" />
+				<arg value="${temp}/owr/tech-doc/restlet-framework/tutorial/@{version}/index.md" />
 				<arg value="${temp}/toc/toc.tutorial.@{version}.properties" />
 			</exec>
 
@@ -239,7 +239,7 @@
 			<!-- cope with marked down files and add decoration -->
 			<exec executable="sh" osfamily="unix">
 				<arg value="${tmpl}/md/unixtohtml.sh" />
-				<arg value="${temp}/owr/learn/tutorial/@{version}" />
+				<arg value="${temp}/owr/tech-doc/restlet-framework/tutorial/@{version}" />
 				<arg value="${temp}/toc/tutorial.@{version}.tmpl" />
 			</exec>
 			<!-- complete properties with this version''s set of properties, before we cope with the wwhole page decoration -->
@@ -326,27 +326,12 @@
 		<!-- manually convert markdown pages : user guide -->
 		<generate-guide version="2.2" />
 		<generate-guide version="2.3" />
-		
-	    <!-- manually convert markdown pages : any other cases -->
-		<!-- NB : titles are generated based on file names... -->
-		<generate-file source="about/board.md" target="about/board.html" raw="decorate" />
-		<generate-file source="about/hiring.md" target="about/hiring.html" raw="decorate" />
-		<generate-file source="about/index.md" target="about/index.html" raw="decorate" />
-		<generate-file source="about/locations.md" target="about/locations.html" raw="decorate" />
-		<generate-file source="about/team.md" target="about/team.html" raw="decorate" />
-		<generate-file source="legal.md" target="legal.html" raw="decorate" />
-		<generate-file source="participate/governance.md" target="participate/governance.html" raw="decorate" />
-		<generate-file source="participate/services.md" target="participate/services.html" raw="decorate" />
-		<generate-file source="download/faq.md" target="download/faq.html" raw="decorate" />
-		<generate-file source="learn/reference-web-api.md" target="learn/reference-web-api.html" raw="decorate" />
-		<!-- very specific case: "first steps"... -->
 		<!-- this is a Web page, but also a template that can be inserted from "/download/current" or "/download/past" -->
-		<generate-file source="discover/firststeps.md" target="discover/firststeps.ftl" raw="raw" />
-
-		<replaceregexp match="javadocs://(.\..)/(.*)" replace="http://restlet.org/learn/javadocs/\1/\2" byline="true">
+<generate-file source="discover/firststeps.md" target="discover/firststeps.ftl" raw="raw" />
+		<replaceregexp match="javadocs://(.\..)/(.*)" replace="http://restlet.org/technical-resources/restlet-framework/javadocs/\1/\2" byline="true">
 			<fileset dir="${temp}/owr" includes="**/*" />
 		</replaceregexp>
-		<replaceregexp match="javadocs://(.*)" replace="http://restlet.org/learn/javadocs/${stable.restlet-version-minor}/\1" byline="true">
+		<replaceregexp match="javadocs://(.*)" replace="http://restlet.org/technical-resources/restlet-framework/javadocs/${stable.restlet-version-minor}/\1" byline="true">
 			<fileset dir="${temp}/owr" includes="**/*" />
 		</replaceregexp>
 
