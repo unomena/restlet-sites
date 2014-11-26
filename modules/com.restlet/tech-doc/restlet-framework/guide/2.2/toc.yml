@@ -1,0 +1,900 @@
+toc:
+- dir: appendices
+  id: appendices
+  items:
+  - file: eccn.md
+    id: eccn
+    link_url: /appendices/eccn.md
+    long-title: ECCN
+    title: ECCN
+    url: /appendices/eccn
+  - file: faq.md
+    id: faq
+    link_url: /appendices/faq.md
+    long-title: FAQ
+    title: FAQ
+    url: /appendices/faq
+  - file: glossary.md
+    id: glossary
+    link_url: /appendices/glossary.md
+    long-title: Glossary
+    title: Glossary
+    url: /appendices/glossary
+  - file: groovy-integration.md
+    id: groovy-integration
+    link_url: /appendices/groovy-integration.md
+    long-title: Groovy Integration
+    title: Groovy Integration
+    url: /appendices/groovy-integration
+  - file: index.md
+    id: index
+    link_url: /appendices/index.md
+    long-title: Index
+    title: Index
+    url: /appendices/index
+  - file: osgi-deployment.md
+    id: osgi-deployment
+    link_url: /appendices/osgi-deployment.md
+    long-title: OSGI Deployment
+    title: OSGI Deployment
+    url: /appendices/osgi-deployment
+  - file: prototype-js-integration.md
+    id: prototype-js-integration
+    link_url: /appendices/prototype-js-integration.md
+    long-title: Prototype JS Integration
+    title: Prototype JS Integration
+    url: /appendices/prototype-js-integration
+  - file: rest-ful-web-services-book.md
+    id: rest-ful-web-services-book
+    link_url: /appendices/rest-ful-web-services-book.md
+    long-title: RESTful Web Services Book
+    title: RESTful Web Services Book
+    url: /appendices/rest-ful-web-services-book
+  - file: restlet-org-example.md
+    id: restlet-org-example
+    link_url: /appendices/restlet-org-example.md
+    long-title: Restlet Org Example
+    title: Restlet Org Example
+    url: /appendices/restlet-org-example
+  long-title: Appendices
+  title: Appendices
+- dir: core
+  id: core
+  items:
+  - dir: base
+    id: base
+    items:
+    - dir: connectors
+      id: connectors
+      items:
+      - file: index.md
+        id: index
+        link_url: /core/base/connectors/index.md
+        long-title: Index
+        title: Index
+        url: /core/base/connectors/index
+      long-title: Connectors
+      title: Connectors
+    - file: index.md
+      id: index
+      link_url: /core/base/index.md
+      long-title: Index
+      title: Index
+      url: /core/base/index
+    long-title: Base
+    title: Base
+  - dir: data
+    id: data
+    items:
+    - file: index.md
+      id: index
+      link_url: /core/data/index.md
+      long-title: Index
+      title: Index
+      url: /core/data/index
+    - file: parameters.md
+      id: parameters
+      link_url: /core/data/parameters.md
+      long-title: Parameters
+      title: Parameters
+      url: /core/data/parameters
+    long-title: Data
+    title: Data
+  - dir: engine
+    id: engine
+    items:
+    - file: index.md
+      id: index
+      link_url: /core/engine/index.md
+      long-title: Index
+      title: Index
+      url: /core/engine/index
+    - dir: internal-connectors
+      id: internal-connectors
+      items:
+      - file: clap.md
+        id: clap
+        link_url: /core/engine/internal-connectors/clap.md
+        long-title: Clap
+        title: Clap
+        url: /core/engine/internal-connectors/clap
+      - file: http.md
+        id: http
+        link_url: /core/engine/internal-connectors/http.md
+        long-title: HTTP
+        title: HTTP
+        url: /core/engine/internal-connectors/http
+      - file: index.md
+        id: index
+        link_url: /core/engine/internal-connectors/index.md
+        long-title: Index
+        title: Index
+        url: /core/engine/internal-connectors/index
+      - file: local.md
+        id: local
+        link_url: /core/engine/internal-connectors/local.md
+        long-title: Local
+        title: Local
+        url: /core/engine/internal-connectors/local
+      - file: riap.md
+        id: riap
+        link_url: /core/engine/internal-connectors/riap.md
+        long-title: RIAP
+        title: RIAP
+        url: /core/engine/internal-connectors/riap
+      long-title: Internal Connectors
+      title: Internal Connectors
+    long-title: Engine
+    title: Engine
+  - file: http-headers-mapping.md
+    id: http-headers-mapping
+    link_url: /core/http-headers-mapping.md
+    long-title: HTTP Headers Mapping
+    title: HTTP Headers Mapping
+    url: /core/http-headers-mapping
+  - file: index.md
+    id: index
+    link_url: /core/index.md
+    long-title: Index
+    title: Index
+    url: /core/index
+  - file: representation.md
+    id: representation
+    link_url: /core/representation.md
+    long-title: Representation
+    title: Representation
+    url: /core/representation
+  - dir: resource
+    id: resource
+    items:
+    - file: client.md
+      id: client
+      link_url: /core/resource/client.md
+      long-title: Client
+      title: Client
+      url: /core/resource/client
+    - file: index.md
+      id: index
+      link_url: /core/resource/index.md
+      long-title: Index
+      title: Index
+      url: /core/resource/index
+    - file: server.md
+      id: server
+      link_url: /core/resource/server.md
+      long-title: Server
+      title: Server
+      url: /core/resource/server
+    long-title: Resource
+    title: Resource
+  - dir: routing
+    id: routing
+    items:
+    - file: attributes.md
+      id: attributes
+      link_url: /core/routing/attributes.md
+      long-title: Attributes
+      title: Attributes
+      url: /core/routing/attributes
+    - file: hierarchical-uris.md
+      id: hierarchical-uris
+      link_url: /core/routing/hierarchical-uris.md
+      long-title: Hierarchical URIs
+      title: Hierarchical URIs
+      url: /core/routing/hierarchical-uris
+    - file: index.md
+      id: index
+      link_url: /core/routing/index.md
+      long-title: Index
+      title: Index
+      url: /core/routing/index
+    - file: redirection.md
+      id: redirection
+      link_url: /core/routing/redirection.md
+      long-title: Redirection
+      title: Redirection
+      url: /core/routing/redirection
+    - file: static-files.md
+      id: static-files
+      link_url: /core/routing/static-files.md
+      long-title: Static Files
+      title: Static Files
+      url: /core/routing/static-files
+    long-title: Routing
+    title: Routing
+  - dir: security
+    id: security
+    items:
+    - file: authentication.md
+      id: authentication
+      link_url: /core/security/authentication.md
+      long-title: Authentication
+      title: Authentication
+      url: /core/security/authentication
+    - file: authorization.md
+      id: authorization
+      link_url: /core/security/authorization.md
+      long-title: Authorization
+      title: Authorization
+      url: /core/security/authorization
+    - file: https.md
+      id: https
+      link_url: /core/security/https.md
+      long-title: HTTPS
+      title: HTTPS
+      url: /core/security/https
+    - file: index.md
+      id: index
+      link_url: /core/security/index.md
+      long-title: Index
+      title: Index
+      url: /core/security/index
+    - file: pluggable-authenticators.md
+      id: pluggable-authenticators
+      link_url: /core/security/pluggable-authenticators.md
+      long-title: Pluggable Authenticators
+      title: Pluggable Authenticators
+      url: /core/security/pluggable-authenticators
+    long-title: Security
+    title: Security
+  - dir: services
+    id: services
+    items:
+    - file: connector.md
+      id: connector
+      link_url: /core/services/connector.md
+      long-title: Connector
+      title: Connector
+      url: /core/services/connector
+    - file: converter.md
+      id: converter
+      link_url: /core/services/converter.md
+      long-title: Converter
+      title: Converter
+      url: /core/services/converter
+    - file: decoder.md
+      id: decoder
+      link_url: /core/services/decoder.md
+      long-title: Decoder
+      title: Decoder
+      url: /core/services/decoder
+    - file: index.md
+      id: index
+      link_url: /core/services/index.md
+      long-title: Index
+      title: Index
+      url: /core/services/index
+    - file: log.md
+      id: log
+      link_url: /core/services/log.md
+      long-title: Log
+      title: Log
+      url: /core/services/log
+    - file: metadata.md
+      id: metadata
+      link_url: /core/services/metadata.md
+      long-title: Metadata
+      title: Metadata
+      url: /core/services/metadata
+    - file: range.md
+      id: range
+      link_url: /core/services/range.md
+      long-title: Range
+      title: Range
+      url: /core/services/range
+    - file: status.md
+      id: status
+      link_url: /core/services/status.md
+      long-title: Status
+      title: Status
+      url: /core/services/status
+    - file: task.md
+      id: task
+      link_url: /core/services/task.md
+      long-title: Task
+      title: Task
+      url: /core/services/task
+    - file: tunnel.md
+      id: tunnel
+      link_url: /core/services/tunnel.md
+      long-title: Tunnel
+      title: Tunnel
+      url: /core/services/tunnel
+    long-title: Services
+    title: Services
+  - file: util.md
+    id: util
+    link_url: /core/util.md
+    long-title: Util
+    title: Util
+    url: /core/util
+  long-title: Core
+  title: Core
+- dir: editions
+  id: editions
+  items:
+  - dir: android
+    id: android
+    items:
+    - file: index.md
+      id: index
+      link_url: /editions/android/index.md
+      long-title: index
+      title: index
+      url: /editions/android/index
+    - file: sample.md
+      id: sample
+      link_url: /editions/android/sample.md
+      long-title: sample
+      title: sample
+      url: /editions/android/sample
+    long-title: Android
+    title: Android
+  - file: gae.md
+    id: gae
+    link_url: /editions/gae.md
+    long-title: gae
+    title: gae
+    url: /editions/gae
+  - dir: gwt
+    id: gwt
+    items:
+    - file: architecture.md
+      id: architecture
+      link_url: /editions/gwt/architecture.md
+      long-title: architecture
+      title: architecture
+      url: /editions/gwt/architecture
+    - file: deployment.md
+      id: deployment
+      link_url: /editions/gwt/deployment.md
+      long-title: deployment
+      title: deployment
+      url: /editions/gwt/deployment
+    - file: examples.md
+      id: examples
+      link_url: /editions/gwt/examples.md
+      long-title: examples
+      title: examples
+      url: /editions/gwt/examples
+    - file: index.md
+      id: index
+      link_url: /editions/gwt/index.md
+      long-title: index
+      title: index
+      url: /editions/gwt/index
+    - file: json.md
+      id: json
+      link_url: /editions/gwt/json.md
+      long-title: json
+      title: json
+      url: /editions/gwt/json
+    - file: server-code-invocation.md
+      id: server-code-invocation
+      link_url: /editions/gwt/server-code-invocation.md
+      long-title: server-code-invocation
+      title: server-code-invocation
+      url: /editions/gwt/server-code-invocation
+    - file: setup.md
+      id: setup
+      link_url: /editions/gwt/setup.md
+      long-title: setup
+      title: setup
+      url: /editions/gwt/setup
+    - file: tips.md
+      id: tips
+      link_url: /editions/gwt/tips.md
+      long-title: tips
+      title: tips
+      url: /editions/gwt/tips
+    - file: xml.md
+      id: xml
+      link_url: /editions/gwt/xml.md
+      long-title: xml
+      title: xml
+      url: /editions/gwt/xml
+    long-title: GWT
+    title: GWT
+  - file: index.md
+    id: index
+    link_url: /editions/index.md
+    long-title: index
+    title: index
+    url: /editions/index
+  - dir: jee
+    id: jee
+    items:
+    - file: client-connectors.md
+      id: client-connectors
+      link_url: /editions/jee/client-connectors.md
+      long-title: client-connectors
+      title: client-connectors
+      url: /editions/jee/client-connectors
+    - file: index.md
+      id: index
+      link_url: /editions/jee/index.md
+      long-title: index
+      title: index
+      url: /editions/jee/index
+    long-title: JEE
+    title: JEE
+  - dir: jse
+    id: jse
+    items:
+    - file: index.md
+      id: index
+      link_url: /editions/jse/index.md
+      long-title: index
+      title: index
+      url: /editions/jse/index
+    - file: logging.md
+      id: logging
+      link_url: /editions/jse/logging.md
+      long-title: logging
+      title: logging
+      url: /editions/jse/logging
+    long-title: JSE
+    title: JSE
+  - file: osgi.md
+    id: osgi
+    link_url: /editions/osgi.md
+    long-title: osgi
+    title: osgi
+    url: /editions/osgi
+  long-title: Editions
+  title: Editions
+- dir: extensions
+  id: extensions
+  items:
+  - file: atom.md
+    id: atom
+    link_url: /extensions/atom.md
+    long-title: atom
+    title: atom
+    url: /extensions/atom
+  - file: crypto.md
+    id: crypto
+    link_url: /extensions/crypto.md
+    long-title: crypto
+    title: crypto
+    url: /extensions/crypto
+  - file: e4.md
+    id: e4
+    link_url: /extensions/e4.md
+    long-title: e4
+    title: e4
+    url: /extensions/e4
+  - file: editions-matrix.md
+    id: editions-matrix
+    link_url: /extensions/editions-matrix.md
+    long-title: editions-matrix
+    title: editions-matrix
+    url: /extensions/editions-matrix
+  - file: emf.md
+    id: emf
+    link_url: /extensions/emf.md
+    long-title: emf
+    title: emf
+    url: /extensions/emf
+  - file: fileupload.md
+    id: fileupload
+    link_url: /extensions/fileupload.md
+    long-title: fileupload
+    title: fileupload
+    url: /extensions/fileupload
+  - file: freemarker.md
+    id: freemarker
+    link_url: /extensions/freemarker.md
+    long-title: freemarker
+    title: freemarker
+    url: /extensions/freemarker
+  - file: gae.md
+    id: gae
+    link_url: /extensions/gae.md
+    long-title: gae
+    title: gae
+    url: /extensions/gae
+  - file: gson.md
+    id: gson
+    link_url: /extensions/gson.md
+    long-title: gson
+    title: gson
+    url: /extensions/gson
+  - file: guice.md
+    id: guice
+    link_url: /extensions/guice.md
+    long-title: guice
+    title: guice
+    url: /extensions/guice
+  - file: gwt.md
+    id: gwt
+    link_url: /extensions/gwt.md
+    long-title: gwt
+    title: gwt
+    url: /extensions/gwt
+  - file: html.md
+    id: html
+    link_url: /extensions/html.md
+    long-title: html
+    title: html
+    url: /extensions/html
+  - file: httpclient.md
+    id: httpclient
+    link_url: /extensions/httpclient.md
+    long-title: httpclient
+    title: httpclient
+    url: /extensions/httpclient
+  - file: index.md
+    id: index
+    link_url: /extensions/index.md
+    long-title: index
+    title: index
+    url: /extensions/index
+  - file: jaas.md
+    id: jaas
+    link_url: /extensions/jaas.md
+    long-title: jaas
+    title: jaas
+    url: /extensions/jaas
+  - file: jackson.md
+    id: jackson
+    link_url: /extensions/jackson.md
+    long-title: jackson
+    title: jackson
+    url: /extensions/jackson
+  - file: javamail.md
+    id: javamail
+    link_url: /extensions/javamail.md
+    long-title: javamail
+    title: javamail
+    url: /extensions/javamail
+  - file: jaxb.md
+    id: jaxb
+    link_url: /extensions/jaxb.md
+    long-title: jaxb
+    title: jaxb
+    url: /extensions/jaxb
+  - file: jaxrs.md
+    id: jaxrs
+    link_url: /extensions/jaxrs.md
+    long-title: jaxrs
+    title: jaxrs
+    url: /extensions/jaxrs
+  - file: jdbc.md
+    id: jdbc
+    link_url: /extensions/jdbc.md
+    long-title: jdbc
+    title: jdbc
+    url: /extensions/jdbc
+  - dir: jetty
+    id: jetty
+    items:
+    - file: ajp.md
+      id: ajp
+      link_url: /extensions/jetty/ajp.md
+      long-title: ajp
+      title: ajp
+      url: /extensions/jetty/ajp
+    - file: index.md
+      id: index
+      link_url: /extensions/jetty/index.md
+      long-title: index
+      title: index
+      url: /extensions/jetty/index
+    long-title: Jetty
+    title: Jetty
+  - file: jibx.md
+    id: jibx
+    link_url: /extensions/jibx.md
+    long-title: jibx
+    title: jibx
+    url: /extensions/jibx
+  - file: json.md
+    id: json
+    link_url: /extensions/json.md
+    long-title: json
+    title: json
+    url: /extensions/json
+  - file: jsslutils.md
+    id: jsslutils
+    link_url: /extensions/jsslutils.md
+    long-title: jsslutils
+    title: jsslutils
+    url: /extensions/jsslutils
+  - file: lucene.md
+    id: lucene
+    link_url: /extensions/lucene.md
+    long-title: lucene
+    title: lucene
+    url: /extensions/lucene
+  - file: nio.md
+    id: nio
+    link_url: /extensions/nio.md
+    long-title: nio
+    title: nio
+    url: /extensions/nio
+  - file: oauth.md
+    id: oauth
+    link_url: /extensions/oauth.md
+    long-title: oauth
+    title: oauth
+    url: /extensions/oauth
+  - dir: odata
+    id: odata
+    items:
+    - file: index.md
+      id: index
+      link_url: /extensions/odata/index.md
+      long-title: index
+      title: index
+      url: /extensions/odata/index
+    - file: tutorial.md
+      id: tutorial
+      link_url: /extensions/odata/tutorial.md
+      long-title: tutorial
+      title: tutorial
+      url: /extensions/odata/tutorial
+    long-title: Odata
+    title: Odata
+  - file: openid.md
+    id: openid
+    link_url: /extensions/openid.md
+    long-title: openid
+    title: openid
+    url: /extensions/openid
+  - file: osgi.md
+    id: osgi
+    link_url: /extensions/osgi.md
+    long-title: osgi
+    title: osgi
+    url: /extensions/osgi
+  - file: rdf.md
+    id: rdf
+    link_url: /extensions/rdf.md
+    long-title: rdf
+    title: rdf
+    url: /extensions/rdf
+  - file: rome.md
+    id: rome
+    link_url: /extensions/rome.md
+    long-title: rome
+    title: rome
+    url: /extensions/rome
+  - file: sdc.md
+    id: sdc
+    link_url: /extensions/sdc.md
+    long-title: sdc
+    title: sdc
+    url: /extensions/sdc
+  - file: servlet.md
+    id: servlet
+    link_url: /extensions/servlet.md
+    long-title: servlet
+    title: servlet
+    url: /extensions/servlet
+  - file: simple.md
+    id: simple
+    link_url: /extensions/simple.md
+    long-title: simple
+    title: simple
+    url: /extensions/simple
+  - file: sip.md
+    id: sip
+    link_url: /extensions/sip.md
+    long-title: sip
+    title: sip
+    url: /extensions/sip
+  - file: slf4j.md
+    id: slf4j
+    link_url: /extensions/slf4j.md
+    long-title: slf4j
+    title: slf4j
+    url: /extensions/slf4j
+  - dir: spring
+    id: spring
+    items:
+    - file: beans-configuration.md
+      id: beans-configuration
+      link_url: /extensions/spring/beans-configuration.md
+      long-title: beans-configuration
+      title: beans-configuration
+      url: /extensions/spring/beans-configuration
+    - file: example.md
+      id: example
+      link_url: /extensions/spring/example.md
+      long-title: example
+      title: example
+      url: /extensions/spring/example
+    - file: index.md
+      id: index
+      link_url: /extensions/spring/index.md
+      long-title: index
+      title: index
+      url: /extensions/spring/index
+    - file: integration.md
+      id: integration
+      link_url: /extensions/spring/integration.md
+      long-title: integration
+      title: integration
+      url: /extensions/spring/integration
+    - file: resources-configuration.md
+      id: resources-configuration
+      link_url: /extensions/spring/resources-configuration.md
+      long-title: resources-configuration
+      title: resources-configuration
+      url: /extensions/spring/resources-configuration
+    long-title: Spring
+    title: Spring
+  - file: swagger.md
+    id: swagger
+    link_url: /extensions/swagger.md
+    long-title: swagger
+    title: swagger
+    url: /extensions/swagger
+  - file: thymeleaf.md
+    id: thymeleaf
+    link_url: /extensions/thymeleaf.md
+    long-title: thymeleaf
+    title: thymeleaf
+    url: /extensions/thymeleaf
+  - file: velocity.md
+    id: velocity
+    link_url: /extensions/velocity.md
+    long-title: velocity
+    title: velocity
+    url: /extensions/velocity
+  - file: wadl.md
+    id: wadl
+    link_url: /extensions/wadl.md
+    long-title: wadl
+    title: wadl
+    url: /extensions/wadl
+  - file: xdb.md
+    id: xdb
+    link_url: /extensions/xdb.md
+    long-title: xdb
+    title: xdb
+    url: /extensions/xdb
+  - file: xml.md
+    id: xml
+    link_url: /extensions/xml.md
+    long-title: xml
+    title: xml
+    url: /extensions/xml
+  - file: xstream.md
+    id: xstream
+    link_url: /extensions/xstream.md
+    long-title: xstream
+    title: xstream
+    url: /extensions/xstream
+  long-title: Extensions
+  title: Extensions
+- dir: introduction
+  id: introduction
+  items:
+  - dir: architecture
+    id: architecture
+    items:
+    - file: index.md
+      id: index
+      link_url: /introduction/architecture/index.md
+      long-title: index
+      title: index
+      url: /introduction/architecture/index
+    - file: persistence-layer.md
+      id: persistence-layer
+      link_url: /introduction/architecture/persistence-layer.md
+      long-title: persistence-layer
+      title: persistence-layer
+      url: /introduction/architecture/persistence-layer
+    - file: presentation-layer.md
+      id: presentation-layer
+      link_url: /introduction/architecture/presentation-layer.md
+      long-title: presentation-layer
+      title: presentation-layer
+      url: /introduction/architecture/presentation-layer
+    long-title: Architecture
+    title: Architecture
+  - file: features.md
+    id: features
+    link_url: /introduction/features.md
+    long-title: features
+    title: features
+    url: /introduction/features
+  - dir: first-steps
+    id: first-steps
+    items:
+    - file: first-application.md
+      id: first-application
+      link_url: /introduction/first-steps/first-application.md
+      long-title: first-application
+      title: first-application
+      url: /introduction/first-steps/first-application
+    - file: first-client.md
+      id: first-client
+      link_url: /introduction/first-steps/first-client.md
+      long-title: first-client
+      title: first-client
+      url: /introduction/first-steps/first-client
+    - file: first-server.md
+      id: first-server
+      link_url: /introduction/first-steps/first-server.md
+      long-title: first-server
+      title: first-server
+      url: /introduction/first-steps/first-server
+    - file: index.md
+      id: index
+      link_url: /introduction/first-steps/index.md
+      long-title: index
+      title: index
+      url: /introduction/first-steps/index
+    long-title: First Steps
+    title: First Steps
+  - dir: getting-started
+    id: getting-started
+    items:
+    - file: debugging-tools.md
+      id: debugging-tools
+      link_url: /introduction/getting-started/debugging-tools.md
+      long-title: debugging-tools
+      title: debugging-tools
+      url: /introduction/getting-started/debugging-tools
+    - file: eclipse.md
+      id: eclipse
+      link_url: /introduction/getting-started/eclipse.md
+      long-title: eclipse
+      title: eclipse
+      url: /introduction/getting-started/eclipse
+    - file: index.md
+      id: index
+      link_url: /introduction/getting-started/index.md
+      long-title: index
+      title: index
+      url: /introduction/getting-started/index
+    - file: maven-spring.md
+      id: maven-spring
+      link_url: /introduction/getting-started/maven-spring.md
+      long-title: maven-spring
+      title: maven-spring
+      url: /introduction/getting-started/maven-spring
+    - file: maven.md
+      id: maven
+      link_url: /introduction/getting-started/maven.md
+      long-title: maven
+      title: maven
+      url: /introduction/getting-started/maven
+    long-title: Getting Started
+    title: Getting Started
+  - file: index.md
+    id: index
+    link_url: /introduction/index.md
+    long-title: index
+    title: index
+    url: /introduction/index
+  - dir: whats-new
+    id: whats-new
+    items: []
+    long-title: What's New
+    title: What's New
+  long-title: Introduction
+  title: Introduction
