@@ -117,7 +117,7 @@ public class WebComponent extends Component {
 			@Override
 			protected Reference getTargetRef(Request request, Response response) {
 				Reference ref = new Reference(request.getResourceRef());
-				ref.setHostDomain(getHostDomain("restlet.com", properties));
+				ref.setHostDomain(getHostDomain("restlet.org", properties));
 				return ref;
 			}
 		}, properties);
@@ -143,7 +143,7 @@ public class WebComponent extends Component {
 			@Override
 			protected Reference getTargetRef(Request request, Response response) {
 				Reference ref = new Reference(request.getResourceRef());
-				ref.setHostDomain(getHostDomain("maven.restlet.com", properties));
+				ref.setHostDomain(getHostDomain("maven.restlet.org", properties));
 				return ref;
 			}
 		}, properties);
@@ -160,7 +160,7 @@ public class WebComponent extends Component {
 			@Override
 			protected Reference getTargetRef(Request request, Response response) {
 				Reference ref = new Reference(request.getResourceRef());
-				ref.setHostDomain(getHostDomain("p2.restlet.com", properties));
+				ref.setHostDomain(getHostDomain("p2.restlet.org", properties));
 				return ref;
 			}
 		}, properties);
