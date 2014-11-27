@@ -63,13 +63,19 @@ You will download a zip file containing the jar and a configuration file. To lea
 Once your agent is configured, just launch it with the following command line:
 
 ```
-java -jar -DagentConfiguration=./agent.properties apispark-agent.jar
+java -jar -DapiSparkServiceConfig=./agent.properties apispark-agent.jar
 ```
 
 # 4. Invoke the Web API
 
 Now that your environment is all set, try to call `http://localhost:8000` with and without providing valid credentials.
 
-![Valid call]("Valid call")
+## 4.1. Calling the API with invalid credentials
 
-![Invalid call]("Invalid call")
+![Invalid call](images/invalid-call.png "Invalid call")
+
+## 4.2. Calling the API with valid credentials
+
+![Valid call](images/valid-call.png "Valid call")
+
+Congratulations, you just protected your API with authentication. 
