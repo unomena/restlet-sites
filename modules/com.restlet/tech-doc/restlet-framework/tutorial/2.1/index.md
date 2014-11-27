@@ -584,7 +584,7 @@ router.attach("/users/{user}/orders/{order}", OrderResource.class);
 
 We will finally review one of the resource classes, the UserResource
 class. This class derives from org.restlet.resource.ServerResource. We
-override the init() method to retrieve the attribute "user" that is
+override the doInit() method to retrieve the attribute "user" that is
 automatically extracted from the "/users/{user}" URI template and store
 its value in a convenient member variable. At this point, in a full
 application, we would lookup our associated "user" domain object.
@@ -598,7 +598,7 @@ public class UserResource extends ServerResource {
     Object user;
 
     @Override
-    public void init() {
+    public void doInit() {
         this.userName = (String) getRequestAttributes().get("user");
         this.user = null; // Could be a lookup to a domain object.
     }
