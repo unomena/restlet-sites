@@ -1,10 +1,10 @@
-1. [I get a 500 error when I try to invoke my API](#1)
-2. [I wonder if my cell is deployed](#2)
-3. [What is the difference between deploying & publishing my API?](#3)
-4. [I want a resource to be accessible without authentication](#4)
-5. [I cannot find where to download Client SDKs](#5)
-6. [I get a 415 error (Unsupported Media Type) when I try to invoke my API](#6)
-7. [I need examples of POST and PUT requests](#7)
+1. [I get a 500 error when I try to invoke my API](technical-resources/apispark/faq/#1 "I get a 500 error when I try to invoke my API")
+2. [I wonder if my cell is deployed](technical-resources/apispark/faq/#2 "I wonder if my cell is deployed")
+3. [What is the difference between deploying & publishing my API?](technical-resources/apispark/faq/#3 "What is the difference between deploying & publishing my API?")
+4. [I want a resource to be accessible without authentication](technical-resources/apispark/faq/#4 "I want a resource to be accessible without authentication")
+5. [I cannot find where to download Client SDKs](technical-resources/apispark/faq/#5 "I cannot find where to download Client SDKs")
+6. [I get a 415 error (Unsupported Media Type) when I try to invoke my API](technical-resources/apispark/faq/#6 "I get a 415 error (Unsupported Media Type) when I try to invoke my API")
+7. [I need examples of POST and PUT requests](technical-resources/apispark/faq/#7 "I need examples of POST and PUT requests")
 
 # <a name="1"></a>1. I get a 500 error when I try to invoke my API
 Before invoking your API, make sure you call the last version of your API and Data Store. You need to (re)deploy your API and the Data Stores (or/and File Stores) associated.
