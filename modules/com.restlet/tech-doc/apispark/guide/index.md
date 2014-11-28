@@ -4,7 +4,7 @@ Welcome to the APISpark User Guide.
 ![Sign in](images/apispark-logo-v1.png "Sign in")
 
 APISpark is *the* platform for those who want to
-- **create** new web API's
+- **create** new web APIs
 - **document** existing APIs
 - **consume** APIs.
 
