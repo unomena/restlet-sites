@@ -47,7 +47,12 @@ public class MavenRestletOrg extends BaseApplication {
 			if (file.exists()) {
 				return new FileEntity(file, getMetadataService());
 			}
-			return null;
+			return new FileEntity(file, getMetadataService()) {
+				@Override
+				public String getBaseName() {
+					return "";
+				}
+			};
 		}
 	}
 
