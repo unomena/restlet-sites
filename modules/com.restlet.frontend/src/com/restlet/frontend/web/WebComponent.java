@@ -117,7 +117,7 @@ public class WebComponent extends Component {
 			@Override
 			protected Reference getTargetRef(Request request, Response response) {
 				Reference ref = new Reference(request.getResourceRef());
-				ref.setHostDomain(getHostDomain("restlet.org", properties));
+				ref.setHostDomain(getHostDomain("restlet.com", properties));
 				return ref;
 			}
 		}, properties);
@@ -143,7 +143,7 @@ public class WebComponent extends Component {
 			@Override
 			protected Reference getTargetRef(Request request, Response response) {
 				Reference ref = new Reference(request.getResourceRef());
-				ref.setHostDomain(getHostDomain("maven.restlet.org", properties));
+				ref.setHostDomain(getHostDomain("maven.restlet.com", properties));
 				return ref;
 			}
 		}, properties);
@@ -160,7 +160,7 @@ public class WebComponent extends Component {
 			@Override
 			protected Reference getTargetRef(Request request, Response response) {
 				Reference ref = new Reference(request.getResourceRef());
-				ref.setHostDomain(getHostDomain("p2.restlet.org", properties));
+				ref.setHostDomain(getHostDomain("p2.restlet.com", properties));
 				return ref;
 			}
 		}, properties);
@@ -220,13 +220,13 @@ public class WebComponent extends Component {
 		host = addRedirection("noelios.com|noelios.net|noelios.org|"
 				+ "www.noelios.com|www.noelios.net|www.noelios.org", port,
 				"http://restlet.com{rr}", properties);
-		
+
 		// ----------------------------
 		// Redirect to restlet.com/blog
 		// ----------------------------
 		host = addRedirection("blog.restlet.com", port,
 				"http://restlet.com/blog{rr}", properties);
-		
+
 		getHosts().add(host);
 	}
 
