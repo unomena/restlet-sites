@@ -33,5 +33,4 @@ Here is a list of the different step-by-step tutorials we have at your disposal:
 -->
 
 
-Last update: November 28th 2014, 12.05pm
-Version: v3.0.0
+Last update: November 28th 2014, 4:00pm
