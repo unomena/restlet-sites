@@ -3,8 +3,11 @@
 3. [What is the difference between deploying & publishing my API?](technical-resources/apispark/faq/#3 "What is the difference between deploying & publishing my API?")
 4. [I want a resource to be accessible without authentication](technical-resources/apispark/faq/#4 "I want a resource to be accessible without authentication")
 5. [I cannot find where to download Client SDKs](technical-resources/apispark/faq/#5 "I cannot find where to download Client SDKs")
-6. [I get a 415 error (Unsupported Media Type) when I try to invoke my API](technical-resources/apispark/faq/#6 "I get a 415 error (Unsupported Media Type) when I try to invoke my API")
-7. [I need examples of POST and PUT requests](technical-resources/apispark/faq/#7 "I need examples of POST and PUT requests")
+6. [I get a 400 error (Bad request) when I try to invoke my API](technical-resources/apispark/faq/#6 "I get a 400 error (Bad request) when I try to invoke my API")
+7. [I get a 405 error (Method Not allowed) when I try to invoke my API](technical-resources/apispark/faq/#7 "I get a 405 error (Method Not allowed) when I try to invoke my API")
+8. [I get a 415 error (Unsupported Media Type) when I try to invoke my API](technical-resources/apispark/faq/#8 "I get a 415 error (Unsupported Media Type) when I try to invoke my API")
+9. [I need examples of POST and PUT requests](technical-resources/apispark/faq/#9 "I need examples of POST and PUT requests")
+
 
 # <a name="1"></a>1. I get a 500 error when I try to invoke my API
 Before invoking your API, make sure you call the last version of your API and Data Store. You need to (re)deploy your API and the Data Stores (or/and File Stores) associated.
@@ -83,7 +86,16 @@ Click the **Download** button.
 
 Jump to the [Generate custom client SDKs](technical-resources/apispark/guide/publish/publish/client-sdk "Generate custom client SDKs") section of our user guide for further information.
 
-# <a name="6"></a>6. I get a 415 error (Unsupported Media Type) when I try to invoke my API
+# <a name="6"></a>6. I get a 400 error (Bad request) when I try to invoke my API
+
+Make sure the syntax you are using is valid.
+
+When using <a href="http://www.getpostman.com/" target="_blank">POSTMAN Chrome Extension</a> to invoke your API, you may have entered your content in the address instead of entering it in the input area underneath the Headers.
+
+![POSTMAN POST request](images/postman-400-error.jpg "POSTMAN POST request")
+
+Jump to our [POST and PUT requests examples](#7) for further information.
+# <a name="7"></a>7. I get a 405 error (Method Not Allowed) when I try to invoke my API
 
 Make sure the method you are using is allowed.
 
@@ -91,11 +103,17 @@ Open your API's Overview, in the **Resources** section, click on the resource yo
 
 ![Methods allowed](images/methods-allowed.jpg "Methods allowed")
 
+# <a name="8"></a>8. I get a 415 error (Unsupported Media Type) when I try to invoke my API
+
+Make sure the format used is valid.
+
+When using <a href="http://www.getpostman.com/" target="_blank">POSTMAN Chrome Extension</a> to invoke your API, you may have forgotten to set the **Content Type** Header to **application/json**.
+
 Jump to our [POST and PUT requests examples](#7) for further information.
 
-# <a name="7"></a>7. I need examples of POST and PUT requests
+# <a name="9"></a>9. I need examples of POST and PUT requests
 
-To perform your POST and PUT requests, of course you can directly use your web browser, but we recommend that you use <a href="https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm" target="_blank">POSTMAN Chrome Extension</a> that gives you a graphical view of your requests.
+To perform your POST and PUT requests, of course you can directly use your web browser, but we recommend that you use <a href="http://www.getpostman.com/" target="_blank">POSTMAN Chrome Extension</a> that gives you a graphical view of your requests.
 
 Open your API's Overview page.  
 Click on the relevant endpoint.  
@@ -105,23 +123,19 @@ Paste them in POSTMAN to access your API.
 ## POST request
 
 Paste your API Endpoint URI followed by your resource name in POSTMAN e.g. https://myapi.apispark.net/v1/contacts.  
-Select the POST request from the drop-down menu.  
+Select the **POST** request from the drop-down menu.
+Make sure **raw** format and **JSON** language are selected.  
+Set **Content Type** Header to **application/json**.  
 Enter your new entry in the input area underneath and click **Send**. The new entry displays in the bottom section of the screen.  
 
 ![POSTMAN POST request](images/postman-post-request.jpg "POSTMAN POST request")
 
-
->**Note:** Make sure your headers are set as shown below.
-![POSTMAN Headers](images/postman-headers.jpg "POSTMAN Headers")
-
 ## PUT request
 
 Paste your API Endpoint URI followed by your resource name and the entry you want to modify in POSTMAN e.g. https://myapi.apispark.net/v1/contacts/{contactid}.  
-Select the PUT request from the drop-down menu.  
+Select the **PUT** request from the drop-down menu.  
+Make sure **raw** format and **JSON** language are selected.  
+Set **Content Type** Header to **application/json**.  
 Enter your modifications in the input area underneath and click **Send**. The updated entry displays in the bottom section of the screen.  
 
 ![POSTMAN PUT request](images/postman-put-request.jpg "POSTMAN PUT request")
-
-
->**Note:** Make sure your headers are set as shown below.
-![POSTMAN Headers](images/postman-headers.jpg "POSTMAN Headers")
