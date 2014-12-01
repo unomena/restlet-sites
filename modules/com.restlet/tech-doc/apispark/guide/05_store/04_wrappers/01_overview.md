@@ -9,7 +9,7 @@ APISpark supports a number of external data sources for both Entity Stores (stru
 
 To create a **Wrapper** Entity Store, go to your **Dashboard** and click on the **+ Entity Store** button.
 
-Select the type of external data source you would like to wrap from the **Type** pop-down menu.
+Select the type of external data source you would like to wrap from the **Type** drop-down menu.
 
 ![Create a wrapper](images/createawrapperstore.png "Create a wrapper")
 

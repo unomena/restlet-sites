@@ -5,7 +5,7 @@ A *Descriptor* is a web API cell.
 
 To create a Descriptor, go to the **Dashboard** and click on the **+Web API** button.
 
-In the **Create a web API** window, select **Descriptor** from the **Type** pop-down menu. You will be prompted to give your Descriptor a **Name** and a **Description** (optional).
+In the **Create a web API** window, select **Descriptor** from the **Type** drop-down menu. You will be prompted to give your Descriptor a **Name** and a **Description** (optional).
 
 ![Create a descriptor](images/create-descriptor.jpg "Create a descriptor")
 
@@ -23,7 +23,7 @@ A *Descriptor* can be generated from your current API's Swagger definition, or f
 
 You can generate a web API Descriptor by importing a Swagger definition for an existing web API, by providing the Swagger definition's URL.
 
-Open an existing Descriptor or create a new one from the Dashboard by clicking on **+ Web API** and selecting **Descriptor** from the pop-down menu.
+Open an existing Descriptor or create a new one from the Dashboard by clicking on **+ Web API** and selecting **Descriptor** from the drop-down menu.
 
 From the Descriptor's **Overview**, click on the actions button on top right of your screen and select the **Import definition** menu.
 
