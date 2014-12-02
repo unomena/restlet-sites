@@ -2,7 +2,7 @@
 
 APISpark provides a tool to manage an existing Web API hosted outside of APISpark. To get a full overview of the management features available, take a look at the [related documentation](https://restlet.com/technical-resources/apispark/guide/manage/connectors).
 
-In this scenario, we will add authenticated access to an existing Web API via the APISpark tool. If you don't have a running Web API, you will find a link to download a dummy one.
+In this scenario, we will add authenticated access to an existing Web API via the APISpark tool. If you do not have a running Web API, you will find a link to download a dummy one.
 
 # 1. Create a Web API Connector
 
