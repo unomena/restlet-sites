@@ -1,10 +1,10 @@
 # Introduction
 
-APISpark provides a tool to manage an existing Web API hosted outside of APISpark. To get a full overview of the management features available, take a look at the [related documentation](https://restlet.com/technical-resources/apispark/guide/manage/connectors).
+APISpark provides a tool to manage an existing web API hosted outside of APISpark. To get a full overview of the management features available, take a look at the [related documentation](https://restlet.com/technical-resources/apispark/guide/manage/connectors).
 
-In this scenario, we will add authenticated access to an existing Web API via the APISpark tool. If you do not have a running Web API, you will find a link to download a dummy one.
+In this scenario, we will add authenticated access to an existing web API via the APISpark tool. If you do not have a running web API, you will find a link to download a sample one.
 
-# 1. Create a Web API Connector
+# 1. Create a web API Connector
 
 If you have not already done so, <a href="
 https://apispark.restlet.com/signin" target="_blank">sign in</a> to your APISpark account and open your **Dashboard**.
@@ -13,60 +13,61 @@ Create a new Connector. Click on **+ Web API**, select the "Connector" **Type** 
 
 ![Create a Web API Connector](images/create-connector.jpg "Create a Web API Connector")
 
-Click on the **Add** button to create the new Web API Connector.
-
-You will be taken to the new Web API Connector's **Overview page**.
+Click on the **Add** button to create the new web API Connector. You will be taken to the new web API Connector's **Overview** page.
 
 # 2. Configure the authentication feature
 
-## 2.1. Enable authentication feature
+## 2.1. Enable the authentication feature
 
-First of all, you will want to enable the authentication feature of the Connector you just created. To do so, check the checkbox **Authentication** from the **Management features** menu entry from the left panel of the **Settings**.
+First of all, you will want to enable the authentication feature of the Connector you just created.  
+To do so, click on the **Settings** tab.  
+In the **Connector** section, select **Management features**.  
+Select the **Authentication** checkbox in the central panel.
 
 ![Enable authentication](images/enable-authentication.png "Enable authentication")
 
-## 2.2. Add members to your Web API
+## 2.2. Add members to your web API
 
-To add new consumers to your API, create new members in **Members**.
+To add new consumers to your API, create new members from the **Members** tab.
 
 ![Add members](images/add-members.png "Add members")
 
-Members of your Web API Connector will be able to consume it once it has been deployed. A set of credentials will be auto-generated for each of them.
+Members of your web API Connector will be able to consume it once it has been deployed. A set of credentials will be auto-generated for each of them.
 
-Each member will receive credentials, to get them log in to APISpark and click on the **Endpoint** you want to attack in the left panel of the **Overview**.
+Each member will receive credentials. To get them, log in to APISpark and click on the **Endpoint** you want to call in the left panel of the **Overview** page.
 
 **INSERT SCREENSHOT HERE WHEN READY**
 
-You can now deploy your Web API Connector.
+You can now deploy your web API Connector.
 
-# 3. Plug the agent to your Web API
+# 3. Plug the agent to your web API
 
-## 3.1. Launch your Web API
+## 3.1. Launch your web API
 
-If you have a Web API running you can use it, otherwise, download [this dummy Web API]() and launch it with the following command line:
+If you have a web API running you can use it, otherwise download [this sample web API]() and launch it with the following command line:
 
 ```
-java -jar myDummyAPI.jar
+java -jar mySampleAPI.jar
 ```
 
-The dummy API runs on `https://localhost:9001`.
+The sample API runs on `https://localhost:9001`.
 
 
 ## 3.2. Launch the agent
 
-The agent is available for download in the **Remote agent** entry in the left panel of **Settings**.
+The agent is available for download from the **Remote agent** page: click on the **Settings** tab, and select **Remote agent** from the **Connector** section. 
 
 ![Download the agent](images/download-agent.png "Download the agent")
 
-You will download a zip file containing the jar and a configuration file. To learn how to fill the configuration, please take a look at this [specific documentation](https://restlet.com/technical-resources/apispark/guide/manage/remote-agent) in the section **Configure the Agent**.
+You will download a zip file containing the jar and a configuration file. To learn how to configure the agent, please take a look at this [specific documentation](https://restlet.com/technical-resources/apispark/guide/manage/remote-agent) in the section **Configure the Agent**.
 
-Once your agent is configured, just launch it with the following command line:
+Once your agent is configured, launch it with the following command line:
 
 ```
 java -jar -DapiSparkServiceConfig=./agent.properties apispark-agent.jar
 ```
 
-# 4. Invoke the Web API
+# 4. Invoke the web API
 
 Now that your environment is all set, try to call `http://localhost:8000` with and without providing valid credentials.
 
@@ -78,4 +79,4 @@ Now that your environment is all set, try to call `http://localhost:8000` with a
 
 ![Valid call](images/valid-call.png "Valid call")
 
-Congratulations, you just protected your API with authentication. 
+Congratulations, you just protected your API with authentication!
