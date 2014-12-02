@@ -21,7 +21,7 @@ This agent acts as a Reverse Proxy and adds the features you have enabled in the
 
 To create a Connector, go to the **Dashboard** and click on the **+Web API** button.
 
-In the **Create a web API** window, select **Connector** from the **Type** pop-down menu. You will be prompted to give your Connector a **Name** and a **Description** (optional).
+In the **Create a web API** window, select **Connector** from the **Type** drop-down menu. You will be prompted to give your Connector a **Name** and a **Description** (optional).
 
 ![Create a connector](images/create-connector.jpg "Create a connector")
 

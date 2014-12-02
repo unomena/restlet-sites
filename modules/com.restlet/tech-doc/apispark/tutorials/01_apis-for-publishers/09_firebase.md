@@ -113,6 +113,8 @@ Click on **Add** to create the API. You will be taken to the API's **Overview** 
 
 Deploy the API by clicking the **Deploy** button.
 
+![Deploy button](images/deploy-button2.jpg "Deploy button")
+
 # 4. Invoke the Web API
 
 Using a web API does not impose any particular programming language. It can even be done from a web browser. However, to test your API we recommend the use of tools such as the Chrome extensions POSTMAN and DHC that provide a graphical user interface to perform HTTP calls.

@@ -12,7 +12,7 @@ To follow this tutorial, you will need:
 
 # 1. Prepare the SQL Data Source
 
-In this tutorial example, we create an SQL table named **T_ADDRESS** with the following fields :
+In this tutorial example, we create an SQL table named **T_ADDRESS** with the following fields:
 
 <li>**ID** (varchar): primary key</li>
 <li>**FIRST_NAME** (varchar): first name</li>
@@ -75,7 +75,7 @@ Click on **Add** to create the Wrapper. You will be taken to the Wrapper's **Ove
 
 Click on the **Settings** tab.
 
-In the **Security** drop down, click on **SQL Source**.
+In the **Security** drop-down menu, click on **SQL Source**.
 
 Select the **Driver** (database type) and input the **Host name**, **Port number**, **Username** and **Password**.
 
@@ -87,7 +87,7 @@ Click on the **Test** button to test the connection.
 
 ## 2.3 Import a Catalog
 
-From the **Settings tab**, click on **Import a catalog**.
+From the **Settings** tab, click on **Import a catalog**.
 
 The catalog list contains all the databases visible by the specified user. Select the **Catalog** you wish to import and click on the **Import catalog** button.
 
@@ -103,11 +103,11 @@ Click on the **Add entities** button.
 
 This automatically creates entities based on the imported tables. APISpark automatically renames the entities and their properties during this operation.
 
-Our entity store now contains an **Entity** called **Contact**.
+Our Entity Store now contains an Entity called *Contact*.
 
 ![New entities](images/new-sql-entities.png "Add a Catalog")
 
-The **Contact** entity’s properties correspond to the columns present in the matching database table.
+The *Contact* entity’s properties correspond to the columns present in the matching database table.
 
 # 2.4 Deploy the SQL Wrapper
 
@@ -115,7 +115,7 @@ Click on the **Deploy** button to deploy the Wrapper.
 
 # 3. Export a Web API
 
-From the Wrapper's **Overview** page, click on the actions button on the right of the **Deploy** button and select **Export web API**.
+From the Wrapper's **Overview** page, click on the action button on the right of the **Deploy** button and select **Export web API**.
 
 ![Export web API](images/export-api-from-sql.png "Export web API")
 
@@ -128,6 +128,8 @@ The domain will be created automatically but may not be available anymore so mak
 Click on **Add** to create the API. You will be taken to the API's **Overview** page.
 
 Deploy the API by clicking the **Deploy** button.
+
+![Deploy button](images/deploy-button2.jpg "Deploy button")
 
 # 4. Invoke the Web API
 
