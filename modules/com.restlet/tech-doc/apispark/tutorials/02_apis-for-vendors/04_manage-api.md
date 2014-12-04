@@ -2,7 +2,7 @@
 
 APISpark provides a tool to manage an existing web API hosted outside of APISpark. To get a full overview of the management features available, take a look at the [related documentation](https://restlet.com/technical-resources/apispark/guide/manage/connectors).
 
-In this scenario, we will add authenticated access to an existing web API via the APISpark tool. If you do not have a running web API, you will find a link to download a sample one.
+In this scenario, we will add authenticated access to an existing web API via the APISpark tool. If you do not have a running web API, you can use our sample API hosted on APISpark.
 
 # 1. Create a web API Connector
 
@@ -34,28 +34,23 @@ To add new consumers to your API, create new members from the **Members** tab.
 
 Members of your web API Connector will be able to consume it once it has been deployed. A set of credentials will be auto-generated for each of them.
 
-Each member will receive credentials. To get them, log in to APISpark and click on the **Endpoint** you want to call in the left panel of the **Overview** page.
+Each member of the Connector can use his APISpark credentials to consume the API. To get your credentials, go to your account panel by selecting **My Account** in the drop-down menu next to your name.
 
-**INSERT SCREENSHOT HERE WHEN READY**
+![User credentials](images/user-credentials.png "User credentials")
 
-You can now deploy your web API Connector.
+You can now **Deploy** your web API Connector.
 
 # 3. Plug the agent to your web API
 
 ## 3.1. Launch your web API
 
-If you have a web API running you can use it, otherwise download [this sample web API]() and launch it with the following command line:
+If you have a web API running, make sure it is running. Otherwise just make GET calls on this URL:
 
-```
-java -jar mySampleAPI.jar
-```
-
-The sample API runs on `https://localhost:9001`.
-
+[https://rsreferenceapi.apispark.net/v1/contacts/](https://rsreferenceapi.apispark.net/v1/contacts/)
 
 ## 3.2. Launch the agent
 
-The agent is available for download from the **Remote agent** page: click on the **Settings** tab, and select **Remote agent** from the **Connector** section. 
+The agent is available for download from the **Remote agent** page: click on the **Settings** tab, and select **Remote agent** from the **Connector** section.
 
 ![Download the agent](images/download-agent.png "Download the agent")
 
@@ -64,7 +59,7 @@ You will download a zip file containing the jar and a configuration file. To lea
 Once your agent is configured, launch it with the following command line:
 
 ```
-java -jar -DapiSparkServiceConfig=./agent.properties apispark-agent.jar
+java -jar -DapiSparkServiceConfig=/path/to/your/agent.properties apispark-agent.jar
 ```
 
 # 4. Invoke the web API
