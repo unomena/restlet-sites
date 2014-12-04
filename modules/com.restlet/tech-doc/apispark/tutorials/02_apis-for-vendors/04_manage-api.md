@@ -34,7 +34,7 @@ To add new consumers to your API, create new members from the **Members** tab.
 
 Members of your web API Connector will be able to consume it once it has been deployed. A set of credentials will be auto-generated for each of them.
 
-Each member of the Connector can use his APISpark credentials to consume the API. To get your credentials, go to your account panel by selecting **My Account** in the drop-down menu next to your name.
+Each member of the Connector can use his APISpark credentials to consume the API. To get your credentials, go to your Account page by clicking on your name on top right of your screen and selecting **My Account**.
 
 ![User credentials](images/user-credentials.png "User credentials")
 
@@ -50,7 +50,7 @@ If you have a web API running, make sure it is running. Otherwise just make GET 
 
 ## 3.2. Launch the agent
 
-The agent is available for download from the **Remote agent** page: click on the **Settings** tab, and select **Remote agent** from the **Connector** section.
+The agent is available for download from the **Remote agent** page: click on the **Settings** tab and select **Remote agent** from the **Connector** section.
 
 ![Download the agent](images/download-agent.png "Download the agent")
 
@@ -74,4 +74,7 @@ Now that your environment is all set, try to call `http://localhost:8000` with a
 
 ![Valid call](images/valid-call.png "Valid call")
 
-Congratulations, you just protected your API with authentication!
+Your API is now protected with authentication.
+
+Congratulations on completing this tutorial! If you have questions or suggestions, feel free to contact the <a href="http://support.restlet.com/" target="_blank">Help Desk</a>.
+
