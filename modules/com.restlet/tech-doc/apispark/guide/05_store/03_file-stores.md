@@ -9,7 +9,7 @@ In this section we will cover the full stack File Store (local), with which stat
 
 To create a File Store from the **Dashboard**, click on the **+ File Store** button.
 
-![+File Store](images/+file-store.jpg "+File Store")
+![+File Store](images/file-store.jpg "+File Store")
 
 In the **Create a File Store** window, select **Full Stack** in order to choose the *local* File Store implementation (as opposed to a *wrapper*).
 

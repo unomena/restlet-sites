@@ -31,7 +31,7 @@ This has the added benefit of allowing you to import multiple Data Stores of pot
 
 If you have not already done so, create a web API from the **Dashboard** by clicking on the **+ Web API** button.
 
-![+web API](images/+web-api.jpg "+web API")
+![+web API](images/web-api.jpg "+web API")
 
 Select **Full Stack** from the **Type** drop-down menu. Give your API a **Name**, **Domain**, and **Description** (optional).
 The window will notify you of the availability of the domain name.
