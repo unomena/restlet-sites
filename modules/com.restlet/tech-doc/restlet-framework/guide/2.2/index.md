@@ -8,54 +8,54 @@ Use the following syntax ("notoc" excludes a document from the table of content)
 [title](path/to/file.md) "notoc"
 ```
 
--   [Part I - Introduction](introduction/index.md)
+-   [Part I - Introduction](introduction/00_overview.md)
     -   [Features](introduction/features.md)
-    -   [What's new](introduction/whats-new/index.md)
-        -   [2.2](introduction/whats-new/2.2/index.md) "notoc"
-        -   [2.1](introduction/whats-new/2.1/index.md) "notoc"
-        -   [2.0](introduction/whats-new/2.0/index.md) "notoc"
+    -   [What's new](introduction/whats-new/00_overview.md)
+        -   [2.2](introduction/whats-new/2.2/00_overview.md) "notoc"
+        -   [2.1](introduction/whats-new/2.1/00_overview.md) "notoc"
+        -   [2.0](introduction/whats-new/2.0/00_overview.md) "notoc"
             -   [API](introduction/whats-new/2.0/api.md) "notoc"
             -   [Engine](introduction/whats-new/2.0/engine.md) "notoc"
             -   [Extensions](introduction/whats-new/2.0/extensions.md) "notoc"
             -   [Editions](introduction/whats-new/2.0/editions.md) "notoc"
             -   [Misc](introduction/whats-new/2.0/misc.md) "notoc"
             -   [Migration](introduction/whats-new/2.0/migration.md) "notoc"
-        -   [1.1](introduction/whats-new/1.1/index.md) "notoc"
+        -   [1.1](introduction/whats-new/1.1/00_overview.md) "notoc"
             -   [Extensions](introduction/whats-new/1.1/extensions.md) "notoc"
             -   [Migration](introduction/whats-new/1.1/migration.md) "notoc"
-    -   [First steps](introduction/first-steps/index.md)
+    -   [First steps](introduction/first-steps/00_overview.md)
         -   [First server](introduction/first-steps/first-server.md) "notoc"
         -   [First client](introduction/first-steps/first-client.md) "notoc"
         -   [First application](introduction/first-steps/first-application.md) "notoc"
-    -   [Architecture](introduction/architecture/index.md)
+    -   [Architecture](introduction/architecture/00_overview.md)
         -   [Persistence layer](introduction/architecture/persistence-layer.md) "notoc"
         -   [Presentation layer](introduction/architecture/presentation-layer.md) "notoc"
-    -   [Getting started](introduction/getting-started/index.md)
+    -   [Getting started](introduction/getting-started/00_overview.md)
         -   [Eclipse](introduction/getting-started/eclipse.md) "notoc"
         -   [Maven](introduction/getting-started/maven.md) "notoc"
         -   [Maven Spring](introduction/getting-started/maven-spring.md) "notoc"
         -   [Debugging tools](introduction/getting-started/debugging-tools.md) "notoc"
--   [Part II - Core Restlet](core/index.md)
+-   [Part II - Core Restlet](core/00_overview.md)
     -   [Mapping HTTP headers](core/http-headers-mapping.md)
-    -   [Base package](core/base/index.md)
-        -   [Connectors](core/base/connectors/index.md) "notoc"
-    -   [Data package](core/data/index.md)
+    -   [Base package](core/base/00_overview.md)
+        -   [Connectors](core/base/connectors/00_overview.md) "notoc"
+    -   [Data package](core/data/00_overview.md)
         -   [Parameters](core/data/parameters.md) "notoc"
     -   [Representation package](core/representation.md)
-    -   [Resource package](core/resource/index.md)
+    -   [Resource package](core/resource/00_overview.md)
         -   [Client resource](core/resource/client.md) "notoc"
         -   [Server resource](core/resource/server.md) "notoc"
-    -   [Routing package](core/routing/index.md)
+    -   [Routing package](core/routing/00_overview.md)
         -   [Hierarchical URIs](core/routing/hierarchical-uris.md) "notoc"
         -   [Redirection](core/routing/redirection.md) "notoc"
         -   [Static files](core/routing/static-files.md) "notoc"
         -   [Attributes](core/routing/attributes.md) "notoc"
-    -   [Security package](core/security/index.md)
+    -   [Security package](core/security/00_overview.md)
         -   [Authentication](core/security/authentication.md) "notoc"
         -   [Authorization](core/security/authorization.md) "notoc"
         -   [HTTPS](core/security/https.md) "notoc"
         -   [Pluggable Authentication](core/security/pluggable-authenticators.md) "notoc"
-    -   [Service package](core/services/index.md)
+    -   [Service package](core/services/00_overview.md)
         -   [Connector service](core/services/connector.md) "notoc"
         -   [Converter service](core/services/converter.md) "notoc"
         -   [Decoder service](core/services/decoder.md) "notoc"
@@ -66,17 +66,17 @@ Use the following syntax ("notoc" excludes a document from the table of content)
         -   [Task service](core/services/task.md) "notoc"
         -   [Tunnel service](core/services/tunnel.md) "notoc"
     -   [Util package](core/util.md)
-    -   [Engine](core/engine/index.md)
-        -   [Internal connectors](core/engine/internal-connectors/index.md) "notoc"
+    -   [Engine](core/engine/00_overview.md)
+        -   [Internal connectors](core/engine/internal-connectors/00_overview.md) "notoc"
             -   [CLAP connector](core/engine/internal-connectors/clap.md) "notoc"
             -   [HTTP connector](core/engine/internal-connectors/http.md) "notoc"
             -   [LOCAL connector](core/engine/internal-connectors/local.md) "notoc"
             -   [RIAP connector](core/engine/internal-connectors/riap.md) "notoc"
--   [Part III - Restlet Editions](editions/index.md)
-    -   [Android](editions/android/index.md)
+-   [Part III - Restlet Editions](editions/00_overview.md)
+    -   [Android](editions/android/00_overview.md)
         -   [Sample](editions/android/sample.md) "notoc"
     -   [Google App Engine](editions/gae.md)
-    -   [Google Web Tookit](editions/gwt/index.md)
+    -   [Google Web Tookit](editions/gwt/00_overview.md)
         -   [Architecture](editions/gwt/architecture.md) "notoc"
         -   [Deployment](editions/gwt/deployment.md) "notoc"
         -   [Examples](editions/gwt/examples.md) "notoc"
@@ -85,12 +85,12 @@ Use the following syntax ("notoc" excludes a document from the table of content)
         -   [Setup](editions/gwt/setup.md) "notoc"
         -   [Tips](editions/gwt/tips.md) "notoc"
         -   [XML](editions/gwt/xml.md) "notoc"
-    -   [Java EE](editions/jee/index.md)
+    -   [Java EE](editions/jee/00_overview.md)
         -   [Client connectors](editions/jee/client-connectors.md) "notoc"
-    -   [Java SE](editions/jse/index.md)
+    -   [Java SE](editions/jse/00_overview.md)
         -   [Logging](editions/jse/logging.md) "notoc"
     -   [OSGi](editions/osgi.md)
--   [Part IV - Restlet Extensions](extensions/index.md)
+-   [Part IV - Restlet Extensions](extensions/00_overview.md)
     -   [Editions matrix](extensions/editions-matrix.md)
     -   [Atom](extensions/atom.md)
     -   [Crypto](extensions/crypto.md)
@@ -110,7 +110,7 @@ Use the following syntax ("notoc" excludes a document from the table of content)
     -   [JAXB](extensions/jaxb.md)
     -   [JAX-RS](extensions/jaxrs.md)
     -   [JDBC](extensions/jdbc.md)
-    -   [Jetty](extensions/jetty/index.md)
+    -   [Jetty](extensions/jetty/00_overview.md)
         -   [AJP](extensions/jetty/ajp.md) "notoc"
     -   [JiBX](extensions/jibx.md)
     -   [JSON](extensions/json.md)
@@ -118,7 +118,7 @@ Use the following syntax ("notoc" excludes a document from the table of content)
     -   [Lucene](extensions/lucene.md)
     -   [Nio](extensions/nio.md)
     -   [OAuth](extensions/oauth.md)
-    -   [OData](extensions/odata/index.md)
+    -   [OData](extensions/odata/00_overview.md)
         -   [Tutorial](extensions/odata/tutorial.md) "notoc"
     -   [OpenID](extensions/openid.md)
     -   [OSGi](extensions/osgi.md)
@@ -129,7 +129,7 @@ Use the following syntax ("notoc" excludes a document from the table of content)
     -   [Simple](extensions/simple.md)
     -   [SIP](extensions/sip.md)
     -   [SLF4J](extensions/slf4j.md)
-    -   [Spring](extensions/spring/index.md)
+    -   [Spring](extensions/spring/00_overview.md)
         -   [Beans configuration](extensions/spring/beans-configuration.md) "notoc"
         -   [Example](extensions/spring/example.md) "notoc"
         -   [Integration](extensions/spring/integration.md) "notoc"
@@ -141,7 +141,7 @@ Use the following syntax ("notoc" excludes a document from the table of content)
     -   [XDB](extensions/xdb.md)
     -   [XML](extensions/xml.md)
     -   [XStream](extensions/xstream.md)
--   [Appendices](appendices/index.md)
+-   [Appendices](appendices/00_overview.md)
     -   [Glossary](appendices/glossary.md)
     -   [FAQ](appendices/faq.md)
     -   [OSGi deployment](appendices/osgi-deployment.md)
