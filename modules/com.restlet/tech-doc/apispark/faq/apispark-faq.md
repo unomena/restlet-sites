@@ -1,19 +1,19 @@
-<a name="0"></a>
+<a name="00"></a>
 
-1. [I wonder if my cell is deployed](technical-resources/apispark/faq/#1 "I wonder if my cell is deployed")
-2. [What is the difference between deploying & publishing my API?](technical-resources/apispark/faq/#2 "What is the difference between deploying & publishing my API?")
-3. [I want a resource to be accessible without authentication](technical-resources/apispark/faq/#3 "I want a resource to be accessible without authentication")
-4. [I cannot find where to download Client SDKs](technical-resources/apispark/faq/#4 "I cannot find where to download Client SDKs")
-5. [I get a 400 error (Bad request) when I try to invoke my API](technical-resources/apispark/faq/#5 "I get a 400 error (Bad request) when I try to invoke my API")
-6. [I get a 405 error (Method Not allowed) when I try to invoke my API](technical-resources/apispark/faq/#6 "I get a 405 error (Method Not allowed) when I try to invoke my API")
-7. [I get a 415 error (Unsupported Media Type) when I try to invoke my API](technical-resources/apispark/faq/#7 "I get a 415 error (Unsupported Media Type) when I try to invoke my API")
-8. [I get a 500 error when I try to invoke my API](technical-resources/apispark/faq/#8 "I get a 500 error when I try to invoke my API")
-9. [I need examples of POST and PUT requests](technical-resources/apispark/faq/#9 "I need examples of POST and PUT requests")
+1. [I wonder if my cell is deployed](technical-resources/apispark/faq/#01 "I wonder if my cell is deployed")
+2. [What is the difference between deploying & publishing my API?](technical-resources/apispark/faq/#02 "What is the difference between deploying & publishing my API?")
+3. [I want a resource to be accessible without authentication](technical-resources/apispark/faq/#03 "I want a resource to be accessible without authentication")
+4. [I cannot find where to download Client SDKs](technical-resources/apispark/faq/#04 "I cannot find where to download Client SDKs")
+5. [I get a 400 error (Bad request) when I try to invoke my API](technical-resources/apispark/faq/#05 "I get a 400 error (Bad request) when I try to invoke my API")
+6. [I get a 405 error (Method Not allowed) when I try to invoke my API](technical-resources/apispark/faq/#06 "I get a 405 error (Method Not allowed) when I try to invoke my API")
+7. [I get a 415 error (Unsupported Media Type) when I try to invoke my API](technical-resources/apispark/faq/#07 "I get a 415 error (Unsupported Media Type) when I try to invoke my API")
+8. [I get a 500 error when I try to invoke my API](technical-resources/apispark/faq/#08 "I get a 500 error when I try to invoke my API")
+9. [I need examples of POST and PUT requests](technical-resources/apispark/faq/#09 "I need examples of POST and PUT requests")
 10. [I get an HTTP Error when I try to invoke my API](technical-resources/apispark/faq/#10 "List of HTTP Errors Codes")
 
 
 
-# <a name="1"></a>1. I wonder if my cell is deployed
+# <a name="01"></a>1. I wonder if my cell is deployed
 
 Once your cell has been deployed, a confirmation message displays on top of your screen to inform you that the deployment is successful.
 
@@ -25,9 +25,9 @@ If you have any doubt, go to the **Messages** tab which reports the last actions
 
 Jump to the [Test your web API](technical-resources/apispark/guide/create/test "Test your web API") section of our online documentation for further information.
 
-[Back to list](technical-resources/apispark/faq/#0 "Back to list of frequently asked questions")
+[Back to list](technical-resources/apispark/faq/#00 "Back to list of frequently asked questions")
 
-# <a name="2"></a>2. What is the difference between deploying & publishing my API?
+# <a name="02"></a>2. What is the difference between deploying & publishing my API?
 
 ## Deploying your API
 When you deploy a cell, APISpark generates source code, compiles and deploys it in the cloud so that it will be executed in the APISpark runtime environment. As long as you have not deployed your data stores and web APIs, they are not available to store data or receive HTTP requests.
@@ -40,9 +40,9 @@ A Published cell (APIs, data stores, etc.) cannot undergo structural modificatio
 
 Jump to the [Cell lifecycle](technical-resources/apispark/guide/explore/lifecycle "Cell lifecycle") section of our online documentation for further information.
 
-[Back to list](technical-resources/apispark/faq/#0 "Back to list of frequently asked questions")
+[Back to list](technical-resources/apispark/faq/#00 "Back to list of frequently asked questions")
 
-# <a name="3"></a>3. I want a resource to be accessible without authentication
+# <a name="03"></a>3. I want a resource to be accessible without authentication
 
 The API credentials (login/password) are used to identify the users of your API.
 If you want a Resource to be accessible without authentication, you can modify the security access directly on a method and set it to **Anyone**, meaning a user authenticated or not.
@@ -54,9 +54,9 @@ Click on the **Save** button.
 
 ![Access to anyone](images/method-anyone.jpg "Access to anyone")
 
-[Back to list](technical-resources/apispark/faq/#0 "Back to list of frequently asked questions")
+[Back to list](technical-resources/apispark/faq/#00 "Back to list of frequently asked questions")
 
-# <a name="4"></a>4. I cannot find where to download Client SDKs
+# <a name="04"></a>4. I cannot find where to download Client SDKs
 
 Deploy your web API.  
 Go to the **Downloads** tab.  
@@ -70,9 +70,9 @@ Click the **Download** button.
 
 Jump to the [Generate custom client SDKs](technical-resources/apispark/guide/publish/publish/client-sdk "Generate custom client SDKs") section of our user guide for further information.
 
-[Back to list](technical-resources/apispark/faq/#0 "Back to list of frequently asked questions")
+[Back to list](technical-resources/apispark/faq/#00 "Back to list of frequently asked questions")
 
-# <a name="5"></a>5. I get a 400 error (Bad request) when I try to invoke my API
+# <a name="05"></a>5. I get a 400 error (Bad request) when I try to invoke my API
 
 Make sure the syntax you are using is valid.
 
@@ -82,9 +82,9 @@ When using <a href="http://www.getpostman.com/" target="_blank">POSTMAN Chrome E
 
 Jump to our [POST and PUT requests examples](#7) for further information.
 
-[Back to list](technical-resources/apispark/faq/#0 "Back to list of frequently asked questions")
+[Back to list](technical-resources/apispark/faq/#00 "Back to list of frequently asked questions")
 
-# <a name="6"></a>6. I get a 405 error (Method Not Allowed) when I try to invoke my API
+# <a name="06"></a>6. I get a 405 error (Method Not Allowed) when I try to invoke my API
 
 Make sure the method you are using is allowed.
 
@@ -92,9 +92,9 @@ Open your API's Overview, in the **Resources** section, click on the resource yo
 
 ![Methods allowed](images/methods-allowed.jpg "Methods allowed")
 
-[Back to list](technical-resources/apispark/faq/#0 "Back to list of frequently asked questions")
+[Back to list](technical-resources/apispark/faq/#00 "Back to list of frequently asked questions")
 
-# <a name="7"></a>7. I get a 415 error (Unsupported Media Type) when I try to invoke my API
+# <a name="07"></a>7. I get a 415 error (Unsupported Media Type) when I try to invoke my API
 
 Make sure the format used is valid.
 
@@ -102,9 +102,9 @@ When using <a href="http://www.getpostman.com/" target="_blank">POSTMAN Chrome E
 
 Jump to our [POST and PUT requests examples](#7) for further information.
 
-[Back to list](technical-resources/apispark/faq/#0 "Back to list of frequently asked questions")
+[Back to list](technical-resources/apispark/faq/#00 "Back to list of frequently asked questions")
 
-# <a name="8"></a>8. I get a 500 error when I try to invoke my API
+# <a name="08"></a>8. I get a 500 error when I try to invoke my API
 Before invoking your API, make sure you call the last version of your API and Data Store. You need to (re)deploy your API and the Data Stores (or/and File Stores) associated.
 
 ## (Re)deploy your API
@@ -129,9 +129,9 @@ The **Traces** section may display a *runtime error*. Click on it and check its 
 
 ![Entity Store Traces](images/entity-store-traces.png "Entity Store Traces")
 
-[Back to list](technical-resources/apispark/faq/#0 "Back to list of frequently asked questions")
+[Back to list](technical-resources/apispark/faq/#00 "Back to list of frequently asked questions")
 
-# <a name="9"></a>9. I need examples of POST and PUT requests
+# <a name="09"></a>9. I need examples of POST and PUT requests
 
 To perform your POST and PUT requests, of course you can directly use your web browser, but we recommend that you use <a href="http://www.getpostman.com/" target="_blank">POSTMAN Chrome Extension</a> that gives you a graphical view of your requests.
 
@@ -160,7 +160,7 @@ Enter your modifications in the input area underneath and click **Send**. The up
 
 ![POSTMAN PUT request](images/postman-put-request.jpg "POSTMAN PUT request")
 
-[Back to list](technical-resources/apispark/faq/#0 "Back to list of frequently asked questions")
+[Back to list](technical-resources/apispark/faq/#00 "Back to list of frequently asked questions")
 
 # <a name="10"></a>10.  List of HTTP Errors Codes
 <!---MARKDOWN TABLE
@@ -212,4 +212,4 @@ Enter your modifications in the input area underneath and click **Send**. The up
   </tr>
 </table>
 
-[Back to list](technical-resources/apispark/faq/#0 "Back to list of frequently asked questions")
+[Back to list](technical-resources/apispark/faq/#00 "Back to list of frequently asked questions")
