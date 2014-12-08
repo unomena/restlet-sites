@@ -1,6 +1,4 @@
-# Part II - Core Restlet
-
-## Introduction
+# Introduction
 
 This chapter presents the Restlet API. It is a small set of packages,
 with classes, interfaces and enumerations that together provide a

@@ -1,6 +1,4 @@
-# Part I - Introduction
-
-## User guide overview
+# User guide overview
 
 This is the official User Guide for version ${restlet-version-minor} of the Restlet Framework
 ([http://restlet.com](http://restlet.com/)).
@@ -25,7 +23,7 @@ contributors on [our team page](http://restlet.com/participate/team).
 
 Let's get started and again: welcome to the Restlet Team !
 
-## Framework overview
+# Framework overview
 
 Restlet is a comprehensive yet lightweight RESTful web API framework for
 Java that lets you embrace the architecture style of the Web (REST) and
@@ -48,7 +46,7 @@ FreeMarker, XStream, Jackson, SLF4J, SDC and many more!
 Special editions for Android, GWT, GAE, Java SE, Java EE and OSGi are also
 available and kept synchronized with an automated porting process.
 
-## Community support
+# Community support
 
 If you can't find an answer to your question in this document, please
 use our [discussion lists](http://restlet.com/participate/)
@@ -59,7 +57,7 @@ book published by Manning.
 
 [![](http://restlet.com/images/books/restlet-in-action-150)](http://www.amazon.com/gp/product/193518234X/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=193518234X&linkCode=as2&tag=restlet-20)
 
-## Professional support
+# Professional support
 
 If you can't wait to get an answer or need to keep your questions confidential,
 you can also obtain private support by buying a [professional support plan](http://restlet.com/participate/contribute)

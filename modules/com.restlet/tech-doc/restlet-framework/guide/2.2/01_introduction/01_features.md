@@ -1,10 +1,8 @@
-# Features
-
-## Introduction
+# Introduction
 
 Restlet Framework is mature and scalable, based on a small core and many optional extensions, making it suitable for any kind of web API development, including cross-channel web sites and applications.
 
-## Web API support
+# Web API support
 
 - Core REST and HTTP concepts have equivalent Java artifacts (Resource, Representation, Connector or Component classes for example).
 - Suitable for both client-side and server-side web applications. The innovation is that that it uses the same Java API, reducing the learning curve and the software footprint.
@@ -12,7 +10,7 @@ Restlet Framework is mature and scalable, based on a small core and many optiona
 - Tunnelling service lets browsers issue any HTTP method (PUT, DELETE, PATCH, etc.) through a simple HTTP POST. This service is transparent for Restlet applications.
 - Easy API documentation thanks to WADL support and Swagger integration.
 
-## Complete Web server
+# Complete Web server
 
 Contrary to the Servlet API, the Restlet API gives you extensive control on the URI mapping and on the virtual hosts configuration. It includes a powerful Directory class to server static files in a way similar to Apache Web Server. For example, our Restlet.com web site is directly powered by Restlet Framework on a regular JVM!
 
@@ -27,11 +25,11 @@ Here is a more complete list of features provided by the internal Web server:
 - Powerful URI based redirection support similar to Apache Rewrite module.
 - Extensive and flexible security support for both authentication and authorization.
 
-## Presentation and persistence agnostic
+# Presentation and persistence agnostic
 
 By staying open to all presentation environments and technologies (AngularJS, Android, iOS, Eclipse RCP, GWT, etc.) and all persistence technologies (JDBC, Hibernate, Spring IO, Cassandra, MongoDB, etc.), your investment in Restlet is secured. With very little work, your Restlet applications can be made portable from one environment to the other.
 
-## Multiple editions
+# Multiple editions
 
 REST principles have no limit, they can be applied everywhere the Web is and even in places where there is no Internet but needs for communication or effective decoupling. Currently, the Restlet Framework is available in several editions:
 
@@ -42,11 +40,11 @@ REST principles have no limit, they can be applied everywhere the Web is and eve
 - Edition for Android, letting you deploy Restlet applications on mobile Android devices.
 - Edition for OSGi, letting you deploy Restlet applications on dynamic and embedded OSGi environments.
 
-## Servlet compatible
+# Servlet compatible
 
 Restlet was an attempt to build a better Servlet API, aligned with the true Web architecture (REST) and standards (HTTP, URI). Therefore the Restlet API has no dependency on the Servlet API, it only depends on the Java SE. However, it is perfectly possible to deploy a Restlet application into Java EE application servers or just Servlet containers. This is possible using an adapter Servlet provided as an extension.
 
-## Available Connectors
+# Available Connectors
 
 - Multiple server HTTP connectors available, based on either [Eclipse Jetty](http://www.eclipse.org/jetty/) or the [Simple framework](http://www.simpleframework.org/).
 - [AJP](http://tomcat.apache.org/connectors-doc/) server connector available to let you plug behind an Apache HTTP server or Microsoft IIS. It is based on Jetty's connector.
@@ -60,7 +58,7 @@ Restlet was an attempt to build a better Servlet API, aligned with the true Web 
 - Client SOLR connector to call embedded [Apache Lucene Solr](http://lucene.apache.org/solr/)
   search and indexing engine.
 
-## Available Representations
+# Available Representations
 
 - Built-in support for XML representations (JAX, JibX, DOM or SAX
   based) with a simple XPath API based on JDK's built-in XPath engine.
@@ -73,7 +71,7 @@ Restlet was an attempt to build a better Servlet API, aligned with the true Web 
 - Support for Atom and JSON standards.
 - Integration with [Apache Lucene Tika](http://lucene.apache.org/tika/) to support metadata extraction from any representation.
 
-## Flexible configuration
+# Flexible configuration
 
 - Complete configuration possible in Java via the Restlet API
 - Configuration possible via Restlet XML and WADL files
@@ -83,7 +81,7 @@ Restlet was an attempt to build a better Servlet API, aligned with the true Web 
 - Extensive integration with popular Spring Framework.
 - Deployment to Oracle 11g embedded JVM supported by special extension.
 
-## Security
+# Security
 
 - Supports HTTP Basic and Digest authentication (client and server side)
 - Supports HTTPS (HTTP over SSL)
@@ -93,14 +91,14 @@ Restlet was an attempt to build a better Servlet API, aligned with the true Web 
 - Supports SMTPS (SMTP over SSL) and SMTP-STARTTLS
 - Supports POPS (POP over SSL)
 
-## Scalability
+# Scalability
 
 - Fully multi-threaded design with per-request Resource instances to reduce thread-safety issues when developing applications.
 - Intentional removal of Servlet-like HTTP sessions. This concept, attractive as a first sight, is one of the major issue for Servlet scalability and is going against the stateless exchanges promoted by REST.
 - Supports non-blocking NIO modes to decouple the number of connections from the number of threads.
 - Supports asynchronous request processing, decoupled from IO operations. Unlike the Servlet API, the Restlet applications don't have a direct control on the outputstream, they only provide output representation to be written by the server connector.
 
-## Upcoming features
+# Upcoming features
 
 Is something important for you missing? Maybe we are already working on
 it or are planning to do so.

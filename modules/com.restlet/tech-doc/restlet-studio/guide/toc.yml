@@ -66,18 +66,24 @@ toc:
     long-title: Visualize your API definition
     title: Visualize
     url: /translate/visualize
-  - file: 02_swagger.md
-    id: swagger
-    link_url: /03_translate/02_swagger.md
+  - file: 02_import-swagger.md
+    id: import-swagger
+    link_url: /03_translate/02_import-swagger.md
+    long-title: Import Swagger 1.2 format
+    title: Swagger 1.2
+    url: /translate/import-swagger
+  - file: 03_export-swagger.md
+    id: export-swagger
+    link_url: /03_translate/03_export-swagger.md
     long-title: Export to Swagger 2.0 format
     title: Swagger 2.0
-    url: /translate/swagger
-  - file: 03_raml.md
-    id: raml
-    link_url: /03_translate/03_raml.md
+    url: /translate/export-swagger
+  - file: 04_export-raml.md
+    id: export-raml
+    link_url: /03_translate/04_export-raml.md
     long-title: Export to RAML 0.8 format
     title: RAML 0.8
-    url: /translate/raml
+    url: /translate/export-raml
   long-title: Translate between API languages
   title: Translate between API languages
 - dir: 04_download-sdk

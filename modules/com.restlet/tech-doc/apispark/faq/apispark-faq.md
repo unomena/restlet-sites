@@ -1,4 +1,4 @@
-
+<a name="0"></a>
 1. [I wonder if my cell is deployed](technical-resources/apispark/faq/#1 "I wonder if my cell is deployed")
 2. [What is the difference between deploying & publishing my API?](technical-resources/apispark/faq/#2 "What is the difference between deploying & publishing my API?")
 3. [I want a resource to be accessible without authentication](technical-resources/apispark/faq/#3 "I want a resource to be accessible without authentication")
@@ -9,7 +9,6 @@
 8. [I get a 500 error when I try to invoke my API](technical-resources/apispark/faq/#8 "I get a 500 error when I try to invoke my API")
 9. [I need examples of POST and PUT requests](technical-resources/apispark/faq/#9 "I need examples of POST and PUT requests")
 10. [I get an HTTP Error when I try to invoke my API](technical-resources/apispark/faq/#10 "List of HTTP Errors Codes")
-
 
 
 
@@ -24,6 +23,8 @@ If you have any doubt, go to the **Messages** tab which reports the last actions
 ![Messages tab](images/messages-section.jpg "Messages tab")
 
 Jump to the [Test your web API](technical-resources/apispark/guide/create/test "Test your web API") section of our online documentation for further information.
+
+[Back to list](technical-resources/apispark/faq/#0 "Back to list of frequently asked questions")
 
 # <a name="2"></a>2. What is the difference between deploying & publishing my API?
 
@@ -146,7 +147,7 @@ Enter your modifications in the input area underneath and click **Send**. The up
 ![POSTMAN PUT request](images/postman-put-request.jpg "POSTMAN PUT request")
 
 # <a name="10"></a>10.  List of HTTP Errors Codes
-
+<!---MARKDOWN TABLE
 | html error code | html error name | actions / remedies |
 | :---: | :---: |---|
 | **400** | Bad Request | Make sure the syntax you are using is valid. When using POSTMAN Chrome Extension to invoke your API, you may have entered your content in the address instead of entering it in the input area underneath the Headers. |
@@ -154,3 +155,43 @@ Enter your modifications in the input area underneath and click **Send**. The up
 | **415** | Unsupported Media Type | When using POSTMAN Chrome Extension to invoke your API, you may have forgotten to set the Content Type Header to application/json.
 | **422** | Unprocessable Entity | Make sure that the data you POST refer to the representation's properties and not to the column names they are mapping.
 | **500** | Internal Server Error | Before invoking your API, make sure you call the last version of your API and Data Store. You need to (re)deploy your API and the Data Stores (or/and File Stores) associated.
+-->
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;margin:0px auto;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-s6z2{text-align:center}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-s6z2">html error code</th>
+    <th class="tg-s6z2">html error name</th>
+    <th class="tg-031e">actions / remedies</th>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">400</td>
+    <td class="tg-s6z2">Bad Request</td>
+    <td class="tg-031e">Make sure the syntax you are using is valid. When using POSTMAN Chrome Extension to invoke your API, you may have entered your content in the address instead of entering it in the input area underneath the Headers.</td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">405</td>
+    <td class="tg-s6z2">Method Not Allowed</td>
+    <td class="tg-031e">Make sure the method you are using is allowed: open your API's Overview, in the Resources section, click on the resource you call e.g. contacts. The methods available are listed below the resource name.</td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">415</td>
+    <td class="tg-s6z2">Unsupported Media Type</td>
+    <td class="tg-031e">When using POSTMAN Chrome Extension to invoke your API, you may have forgotten to set the Content Type Header to application/json.</td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">422</td>
+    <td class="tg-s6z2">Unprocessable Entity</td>
+    <td class="tg-031e">Make sure that the data you POST refer to the representation's properties and not to the column names they are mapping.</td>
+  </tr>
+  <tr>
+    <td class="tg-s6z2">500</td>
+    <td class="tg-s6z2">Internal Server Error</td>
+    <td class="tg-031e">Before invoking your API, make sure you call the last version of your API and Data Store. You need to (re)deploy your API and the Data Stores (or/and File Stores) associated.</td>
+  </tr>
+</table>
