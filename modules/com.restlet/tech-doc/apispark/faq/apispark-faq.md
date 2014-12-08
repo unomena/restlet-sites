@@ -25,7 +25,7 @@ If you have any doubt, go to the **Messages** tab which reports the last actions
 
 Jump to the [Test your web API](technical-resources/apispark/guide/create/test "Test your web API") section of our online documentation for further information.
 
-<p style="text-align:right";>[Back to list](#list "Back to list of frequently asked questions")</p>
+[Back to list](#list "Back to list of frequently asked questions")
 
 # <a name="02"></a>2. What is the difference between deploying & publishing my API?
 
@@ -40,7 +40,7 @@ A Published cell (APIs, data stores, etc.) cannot undergo structural modificatio
 
 Jump to the [Cell lifecycle](technical-resources/apispark/guide/explore/lifecycle "Cell lifecycle") section of our online documentation for further information.
 
-<p style="text-align:right";>[Back to list](#list "Back to list of frequently asked questions")</p>
+[Back to list](#list "Back to list of frequently asked questions")
 
 # <a name="03"></a>3. I want a resource to be accessible without authentication
 
@@ -54,7 +54,7 @@ Click on the **Save** button.
 
 ![Access to anyone](images/method-anyone.jpg "Access to anyone")
 
-<p style="text-align:right";>[Back to list](#list "Back to list of frequently asked questions")</p>
+[Back to list](#list "Back to list of frequently asked questions")
 
 # <a name="04"></a>4. I cannot find where to download Client SDKs
 
@@ -70,7 +70,7 @@ Click the **Download** button.
 
 Jump to the [Generate custom client SDKs](technical-resources/apispark/guide/publish/publish/client-sdk "Generate custom client SDKs") section of our user guide for further information.
 
-<p style="text-align:right";>[Back to list](#list "Back to list of frequently asked questions")</p>
+[Back to list](#list "Back to list of frequently asked questions")
 
 # <a name="05"></a>5. I get a 400 error (Bad request) when I try to invoke my API
 
@@ -82,7 +82,7 @@ When using <a href="http://www.getpostman.com/" target="_blank">POSTMAN Chrome E
 
 Jump to our [POST and PUT requests examples](#7) for further information.
 
-<p style="text-align:right";>[Back to list](#list "Back to list of frequently asked questions")</p>
+[Back to list](#list "Back to list of frequently asked questions")
 
 # <a name="06"></a>6. I get a 405 error (Method Not Allowed) when I try to invoke my API
 
@@ -92,7 +92,7 @@ Open your API's Overview, in the **Resources** section, click on the resource yo
 
 ![Methods allowed](images/methods-allowed.jpg "Methods allowed")
 
-<p style="text-align:right";>[Back to list](#list "Back to list of frequently asked questions")</p>
+[Back to list](#list "Back to list of frequently asked questions")
 
 # <a name="07"></a>7. I get a 415 error (Unsupported Media Type) when I try to invoke my API
 
@@ -102,7 +102,7 @@ When using <a href="http://www.getpostman.com/" target="_blank">POSTMAN Chrome E
 
 Jump to our [POST and PUT requests examples](#7) for further information.
 
-<p style="text-align:right";>[Back to list](#list "Back to list of frequently asked questions")</p>
+[Back to list](#list "Back to list of frequently asked questions")
 
 # <a name="08"></a>8. I get a 500 error when I try to invoke my API
 Before invoking your API, make sure you call the last version of your API and Data Store. You need to (re)deploy your API and the Data Stores (or/and File Stores) associated.
@@ -129,7 +129,7 @@ The **Traces** section may display a *runtime error*. Click on it and check its 
 
 ![Entity Store Traces](images/entity-store-traces.png "Entity Store Traces")
 
-<p style="text-align:right";>[Back to list](#list "Back to list of frequently asked questions")</p>
+[Back to list](#list "Back to list of frequently asked questions")
 
 # <a name="09"></a>9. I need examples of POST and PUT requests
 
@@ -160,7 +160,7 @@ Enter your modifications in the input area underneath and click **Send**. The up
 
 ![POSTMAN PUT request](images/postman-put-request.jpg "POSTMAN PUT request")
 
-<p style="text-align:right";>[Back to list](#list "Back to list of frequently asked questions")</p>
+[Back to list](#list "Back to list of frequently asked questions")
 
 # <a name="10"></a>10.  List of HTTP Errors Codes
 <!---MARKDOWN TABLE
@@ -212,4 +212,4 @@ Enter your modifications in the input area underneath and click **Send**. The up
   </tr>
 </table>
 
-<p style="text-align:right";>[Back to list](#list "Back to list of frequently asked questions")</p>
+[Back to list](#list "Back to list of frequently asked questions")
