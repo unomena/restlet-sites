@@ -1,24 +1,20 @@
-# Resource package
-
-## Introduction
+# Introduction
 
 The **org.restlet.resource** package contains client and server resource classes.
 
-## Architecture
+# Architecture
 
 Below is an overview of the architecture, including all processing layers, from the lowest TCP/IP network  layer to the highest annotated interface proxies.
 
 ![](abstraction-layers.png)
 
-Class diagram
--------------
+## Class diagram
 
 Here is a class diagram:
 
 ![](hierarchy.png)
 
-Annotations
------------
+## Annotations
 
 We also defined a set of method level annotations:
 
@@ -35,8 +31,7 @@ confused with those of the JAX-RS API. For support of the JAX-RS API by
 the Restlet Framework, you should look at [the provided
 extension](../../extensions/jaxrs "JAX-RS extension").
 
-Annotations parameter
----------------------
+## Annotations parameter
 
 All annotation have a single optional parameter. Its name is the default
 "value" name allowing a compact annotation syntax.
@@ -63,7 +58,7 @@ Here are some valid values:
     @Get("xml")
     String toString();
 
-    // Stores representations in the "text/xml" media type 
+    // Stores representations in the "text/xml" media type
     // after conversion to a DOM document
     @Put("xml")
     void store(Document doc)
@@ -73,7 +68,7 @@ Here are some valid values:
     @Put("xml:txt")
     String store(Document doc)
 
-    // Returns a representation in the "text/xml" media type with 
+    // Returns a representation in the "text/xml" media type with
     // an inlining depth level of 2
     @Get("xml?depth=2")
 
@@ -87,8 +82,7 @@ Here are some valid values:
 Note the importance of registering the proper extension names via the
 MetadataService in order to use additional extension names.
 
-Sample code
------------
+## Sample code
 
 Here is how a sample resource would look like with the refactored API.
 Note that both extension names and full MIME type would be supported.

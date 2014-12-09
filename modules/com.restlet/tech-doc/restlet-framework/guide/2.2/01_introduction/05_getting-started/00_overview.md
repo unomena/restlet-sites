@@ -1,5 +1,3 @@
-# Getting started
-
 This section explains how to get started with the Restlet Framework,
 including set up and debugging tools in common development environments
 such as:

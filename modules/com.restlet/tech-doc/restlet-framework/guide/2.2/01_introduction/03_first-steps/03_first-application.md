@@ -1,6 +1,4 @@
-# First application
-
-## Introduction
+# Introduction
 
 This first application illustrates how to develop a Restlet application
 that combines several editions of the Restlet Framework : GAE, GWT,
@@ -9,7 +7,7 @@ interfaces and of the ConverterService that offers transparent
 serialization between Restlet representations and Java objects, usable
 between a server application and several kind of clients.
 
-## Table of contents
+# Table of contents
 
 1.  [Requirements](#requirements)
 2.  [Scenario](#scenario)
@@ -20,7 +18,7 @@ between a server application and several kind of clients.
 7.  [Android client](#android-client)
 8.  [Java SE client](#java-se-client)
 
-## Requirements
+# Requirements
 
 It is based on the following editions of the Restlet Framework : Java SE
 (JSE), Google App Engine (GAE), Google Web Toolkit (GWT) and Android
@@ -35,7 +33,7 @@ It has been tested with the following environments:
 GAE doesn't support HTTP chunked encoding, therefore serialized object can't be sent (via POST or PUT) to a GAE server. Since Restlet Framework version 2.1 M4 we have a workaround available that buffers the HTTP
 entity to prevent chunk encoding. To use it, call the ClientResource.setRequestEntityBuffering(boolean) method with a "true" value. Note that this workaround isn't required for the GWT edition.
 
-## Scenario
+# Scenario
 
 The server application is hosted on the Google App Engine (GAE) platform. For the sake of simplicity it serves only one resource named "contact", with the following characteristics:
 
@@ -57,7 +55,7 @@ The "contact" object has the following attributes:
 -   Android application
 -   Java SE client
 
-## Archive content
+# Archive content
 
 The full source code (without the required archives) is available here:
 [firstapplication.zip](/technical-resources/restlet-framework/archives/examples/firstApplication/${restlet-version-minor}/firstapplication.zip "firstapplication.zip")
@@ -69,7 +67,7 @@ It contains the full source code of three Eclipse projects with:
 2.  Project that contains the source code of the Android client
 3.  Project that contains the source code of the Java SE client
 
-## Common classes
+# Common classes
 
 The following classes are available on the three project. They are used
 by the server and the clients in order to produce the serialized
@@ -101,7 +99,7 @@ When using collections of objects as method parameters, you need to use
 concrete classes if you intend to have GWT clients. For example use
 ArrayList\<Contact\> instead of List\<Contact\>.
 
-## GAE server
+# GAE server
 
 We propose to host the server application on the GAE platform. The
 server project relies on the following JAR files:
@@ -123,8 +121,8 @@ The server-side resource implements the annotated interface.
  */
 public class ContactServerResource extends ServerResource implements ContactResource {
 
-   private static volatile Contact contact = 
-        new Contact("Scott", "Tiger", new Address("10 bd Google", null, "20010", "Mountain View", 
+   private static volatile Contact contact =
+        new Contact("Scott", "Tiger", new Address("10 bd Google", null, "20010", "Mountain View",
                     "USA"), 40);
 
     public void remove() {
@@ -156,8 +154,7 @@ This resource is then exposed by the server application:
     }
 ~~~~
 
-GWT client
-==========
+# GWT client
 
 The GWT client relies only on the core Restlet JAR (org.restlet.jar)
 provided in the GWT edition.
@@ -239,8 +236,7 @@ contactResource.store(contact, new Result<Void>() {
 });
 ~~~~
 
-Android client
-==============
+# Android client
 
 The Android client project relies only on the core Restlet JAR
 (org.restlet.jar) provided by the Android edition of the Restlet
@@ -280,11 +276,9 @@ Here is a screenshot of the Android user interface.
 
 ![serialization android screenshot](/learn/archives/examples/firstApplication/${restlet-version-minor}/serialization-android-screenshot.png "Serialization android screenshot")
 
-Java SE client
-==============
+# Java SE client
 
-Get the full Contact object
----------------------------
+## Get the full Contact object
 
 The same code used on the Android application allows you to get the full
 Contact object:
@@ -308,8 +302,7 @@ if (contact != null) {
      lastname: Tiger
           age: 40
 
-Get a JSON representation
--------------------------
+## Get a JSON representation
 
 In case the Contact class is not available, you can still retrieve a
 JSON representation by setting the client preferences when retrieving
@@ -323,4 +316,3 @@ which produces the following output:
 
     {"age":40,"firstName":"Scott","homeAddress":{"country":"USA","city":"Mountain View","line1":"10 bd Google","line2":null,"zipCode":"20010"},
     "lastName":"Tiger"}
-

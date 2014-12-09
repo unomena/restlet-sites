@@ -1,8 +1,4 @@
-Security package
-================
-
-Introduction
-============
+# Introduction
 
 The **org.restlet.security** package contains classes related to
 security. As there are numerous protocols (like HTTP, SMTP, etc.) that
@@ -14,8 +10,7 @@ In this section, we will start off with an example explaing how to guard
 sensitive resources and then describe with more details the security
 API, the engine support and available extensions.
 
-Tutorial
-========
+# Tutorial
 
 When you need to secure the access to some Restlets, several options are
 available. A common way is to rely on cookies to identify clients (or
@@ -76,14 +71,14 @@ let's use the client-side Restlet API:
 
 ~~~~ {.brush: .java}
     public static void main(String[] args) {
-        // Prepare the request 
-        ClientResource resource = new ClientResource("http://localhost:8182/"); 
-      
-        // Add the client authentication to the call 
-        ChallengeScheme scheme = ChallengeScheme.HTTP_BASIC; 
-        ChallengeResponse authentication = new ChallengeResponse(scheme, "scott", "tiger"); 
-        resource.setChallengeResponse(authentication); 
-      
+        // Prepare the request
+        ClientResource resource = new ClientResource("http://localhost:8182/");
+
+        // Add the client authentication to the call
+        ChallengeScheme scheme = ChallengeScheme.HTTP_BASIC;
+        ChallengeResponse authentication = new ChallengeResponse(scheme, "scott", "tiger");
+        resource.setChallengeResponse(authentication);
+
         try {
             // Send the HTTP GET request
             resource.get();
@@ -112,8 +107,7 @@ when typing the URI in the browser. The server won't need any adjustment
 due to the usage of a VirtualHost which accepts all types of URIs by
 default.
 
-Restlet API
-===========
+# Restlet API
 
 The Restlet API in version ${restlet-version-minor} has fully refactored its security model
 ([see specifications
@@ -166,7 +160,7 @@ following schemes are supported:
     crypto extension
 -   SMTP (client) with the core module
 
-### ChallengeRequest
+## ChallengeRequest
 
 Contains information about the authentication challenge that is sent by
 an origin server to a client.
@@ -187,7 +181,7 @@ client connector and matching AuthenticationHelper are responsible for
 parsing the protocol artifact such as the "WWW-Authenticate" header in
 HTTP.
 
-### ChallengeResponse
+## ChallengeResponse
 
 Contains information about the authentication challenge response sent by
 a client to an origin server.
@@ -199,25 +193,24 @@ AuthenticationHelper for parsing.
 For client-side Restlet applications, this object must be manually
 created before invoking the context's client dispatcher for example.
 
-### ChallengeScheme
+## ChallengeScheme
 
 Indicates the challenge scheme used to authenticate remote clients. This
 only identifies the scheme used or to be used but doesn't contain the
 actual logic needed to handle the scheme. This is the role of the
 AuthenticatorHelper subclasses.
 
-Restlet Engine
-==============
+# Restlet Engine
 
 Most of the logic related to authentication is located in the package
 "org.restlet.security".
 
-### AuthenticatorUtils
+## AuthenticatorUtils
 
 Static utilities methods to parse HTTP headers, find the matching
 authentication helper and misc methods.
 
-### AuthenticatorHelper
+## AuthenticatorHelper
 
 Base class for authentication helpers. There are also subclasses for the
 schemes internally supported by the engine or via extensions : 
@@ -225,8 +218,7 @@ schemes internally supported by the engine or via extensions : 
 -   HTTP Basic
 -   SMTP Plain
 
-Extensions
-==========
+# Extensions
 
 In addition to the internal authentication helpers, additional schemes
 can be supported using pluggable extensions. Currently, there is an
@@ -236,8 +228,7 @@ org.restlet.ext.crypto extension available for:
 -   HTTP Amazon S3 (client)
 -   HTTP Azure SharedKey
 
-Confidentiality
-===============
+# Confidentiality
 
 SSL is typically used to ensure that requests and responses are
 exchanged confidentially between clients and a server. Configuring SSL
@@ -295,8 +286,7 @@ in a way that is common to all three types of HTTPS server connectors
 SSL client authentication is not configured as part of the SSL context,
 although the trust store and which peer certificates to trust are.
 
-Authentication
-==============
+# Authentication
 
 In Restlet, authentication and authorization are handled very
 differently than in the Servlet world. Here you have full control of the
@@ -317,7 +307,7 @@ PASSWORD
 The HTTP server connectors currently only support HTTP BASIC
 authentication (the most widely used).
 
-### SSL client authentication
+## SSL client authentication
 
 To enable client-side SSL authentication on an HTTPS server connector,
 set the `wantClientAuthentication` or `needClientAuthentication`
@@ -326,8 +316,7 @@ will be optional). The chain of client certificate is then accessible as
 List of X509Certificates in the `org.restlet.https.clientCertificates`
 Request attribute.
 
-Coarsed grained authorization
-=============================
+# Coarsed grained authorization
 
 For the authorizations that are common to a set of resources, a Guard
 subclass can also be used by overriding the "authorize(Request)" method.
@@ -335,8 +324,7 @@ Note that this method accepts all authenticated requests by default. You
 can plugin in your own mechanism here, like an access to a LDAP
 repository.
 
-Fine grained authorization
-==========================
+# Fine grained authorization
 
 If the permissions are very fine grained, the authorizations should
 probably handled at the resource level directly instead of the Guard
@@ -345,8 +333,7 @@ resource). With the approach, you can make your permission depend on the
 value of the target resource on the resource and specific method
 invoked, etc.
 
-Potential vulnerabilities
-=========================
+# Potential vulnerabilities
 
 There are many ways of securing REST style applications; most of the
 common and easily usable ones involve a set of credentials that the user
@@ -412,10 +399,8 @@ protect them against
 by setting the accessRestricted property in CookieSetting; this stops
 the cookies from being used by script in all modern browsers.
 
-Sample code
-===========
+# Sample code
 
 [Security
 sample](/learn/guide/2.1#/307-restlet/version/default/part/AttachmentData/data/Security%20sample.zip "Security sample")
 (application/zip, 2.9 kB)
-

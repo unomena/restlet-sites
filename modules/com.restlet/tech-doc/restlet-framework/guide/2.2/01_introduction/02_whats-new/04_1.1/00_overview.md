@@ -1,13 +1,11 @@
-# What's new in version 1.1
-
-## Introduction
+# Introduction
 
 After one year and half of development, the Restlet project has made
 tremendous progress. We will try to summarize here the main benefits
 that you can expect by migrating from Restlet 1.0 to the latest 1.1
 version.
 
-## Uniform Development Environment
+# Uniform Development Environment
 
 Truly boost the productivity of your team by leveraging our uniform
 Restlet API:
@@ -25,7 +23,7 @@ large application into several ones, and still be able to efficiently
 communicate. There is a new internal protocol (RIAP) to do private
 RESTful calls between applications hosted in the same JVM.
 
-## Improved Deployment Flexibility
+# Improved Deployment Flexibility
 
 The Restlet project has always been open to other technologies and tries
 to give its developers the maximum freedom in term of deployment. We
@@ -52,7 +50,7 @@ connectors and virtual hosts, without recompiling the source code. This
 is also possible to leverage Spring XML configuration mechanism to
 similar results.
 
-## Automatic REST API Documentation
+# Automatic REST API Documentation
 
 Don't you think that having a comprehensive, fully customizable and
 always up-to-date documentation for your REST API is essential? We do
@@ -67,7 +65,7 @@ self-described. The WADL documentation can be dynamically generated from
 your source code and exposed either as machine processable XML (WADL) or
 as human readable HTML (WADL) documents.
 
-## Significantly Improved Performance
+# Significantly Improved Performance
 
 Top notch performance has always been a core concern for us. This led to
 the implementation of a pluggable connector mechanism in Restlet 1.0,
@@ -85,7 +83,7 @@ connectors that ensure that you can get started right away with your
 Restlet development needs. This is also a perfectly suitable option for
 compact or embedded deployment scenarios.
 
-## More Licensing Options
+# More Licensing Options
 
 Led by the founder of the Restlet project, the Noelios Technologies
 company is now the main copyright holder of the Restlet source code. It
@@ -100,7 +98,7 @@ of all users of the technology:
 -   CDDL 1.0
 -   [Commercial license](http://restlet.com/services/subscriptions) (optionally transferable)
 
-## More Extensions
+# More Extensions
 
 In order to keep our core library light and focused, we have proposed an
 extension mechanism in Restlet 1.0. This makes sure that we don't force
@@ -119,4 +117,3 @@ extensions:
 -   XDB for deployment in Oracle databases
 -   Atom for feed reading or writing
 -   SSL for more security options
-
