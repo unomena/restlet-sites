@@ -9,7 +9,7 @@ Once you have select a **Representation**, you can view its properties.
 
 Representation properties have a **Name**, **Datatype**, and cardinality (**Min occurs** and **Max occurs**).
 
-![Representations](images/representations.png "Representations")
+![Representations](images/representations.jpg "Representations")
 
 # Variants
 
@@ -19,4 +19,6 @@ By default, APISpark supports 3 different types of representation variants: XML,
 
 To view a representation's **Variants**, select the representation from the **Representations** section in the left panel.
 
-![Variants](images/variants.png "Variants")
+![Variants](images/variants.jpg "Variants")
+
+>**Note:** When you want to POST a new entry via [Postman](technical-resources/apispark/guide/create/test "Postman") tool for example, you can use the **Sample** text area content to make sure you are using the appropriate syntax.
