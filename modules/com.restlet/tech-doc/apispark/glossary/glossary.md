@@ -1,4 +1,4 @@
-# Cell
+# cell
 A cell designates the component (data store, API, etc.) that is modeled and deployed on APISpark platform.
 Jump to the [Cell concept](technical-resources/apispark/guide/explore/overview "Cell concept") section of our online documentation for further information.
 
