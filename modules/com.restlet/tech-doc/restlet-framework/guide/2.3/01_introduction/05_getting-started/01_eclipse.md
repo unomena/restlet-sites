@@ -1,6 +1,4 @@
-# Getting started with Eclipse IDE
-
-## Introduction
+# Introduction
 
 There are two ways to use Restlet within Eclipse IDE. The first one is
 to create a Java project and use the Restlet JARs as external
@@ -11,4 +9,3 @@ Restlet JARs including dependencies are valid OSGi bundles, so this is
 very convenient if you work in an Eclipse plug-in environment, such as
 an Eclipse RCP application. You then just need to create a plug-in
 project.
-

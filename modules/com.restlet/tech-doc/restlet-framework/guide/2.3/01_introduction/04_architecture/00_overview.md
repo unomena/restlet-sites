@@ -1,6 +1,4 @@
-# Architecture
-
-## Introduction
+# Introduction
 
 The Restlet Framework is composed of two main parts. First, there is the
 [Restlet API](../../core "Part II - Core Restlet"),
@@ -15,7 +13,7 @@ This separation between the API and the implementation is similar to the
 one between the Servlet API and Web containers like Jetty or Tomcat, or
 between the JDBC API and concrete JDBC drivers.
 
-## Overview of a REST architecture
+# Overview of a REST architecture
 
 Let's step back a little and consider typical web architectures from a
 REST point of view. In the diagram below, ports represent the connector
@@ -30,7 +28,7 @@ connectors attached to it. Web Server B, for example, has both a server
 connector to respond to requests from the User Agent component, and
 client connectors to send requests to Web Server A and the Mail Server.
 
-## Overview of a Restlet architecture
+# Overview of a Restlet architecture
 
 In addition to supporting the standard REST software architecture
 elements as presented before, the Restlet Framework also provides a set
@@ -63,21 +61,21 @@ example, we will also introduce the usage of the Application class. Note
 that for now you don't see any access log displayed in the console. 
 
     public static void main(String[] args) throws Exception {
-        // Create a new Restlet component and add a HTTP server connector to it 
+        // Create a new Restlet component and add a HTTP server connector to it
         Component component = new Component();  
         component.getServers().add(Protocol.HTTP, 8182);  
-        // Then attach it to the local host 
+        // Then attach it to the local host
         component.getDefaultHost().attach("/trace", Part05.class);  
-        // Now, let's start the component! 
-        // Note that the HTTP server connector is also automatically started. 
+        // Now, let's start the component!
+        // Note that the HTTP server connector is also automatically started.
         component.start();  
     }  
-    @Get 
+    @Get
     public String toString() {  
-        // Print the requested URI path 
-        return "Resource URI  : " + getReference() + '\n' + "Root URI      : " 
-                + getRootRef() + '\n' + "Routed part   : " 
-                + getReference().getBaseRef() + '\n' + "Remaining part: " 
+        // Print the requested URI path
+        return "Resource URI  : " + getReference() + '\n' + "Root URI      : "
+                + getRootRef() + '\n' + "Routed part   : "
+                + getReference().getBaseRef() + '\n' + "Remaining part: "
                 + getReference().getRemainingPart();  
     }
 
@@ -89,4 +87,3 @@ the result that you will get:
     Root URI      : http://localhost:8182/trace
     Routed part   : http://localhost:8182/trace
     Remaining part: /abc/def?param=123
-

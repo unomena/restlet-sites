@@ -1,6 +1,4 @@
-# First server
-
-## Introduction
+# Introduction
 
 Let's first see how the Restlet Framework can listen to client requests
 and reply to them. We will use the internal Restlet HTTP server
@@ -40,7 +38,7 @@ So far, we have mostly showed you the highest level of abstraction in
 the Restlet API, with the ServerResource classes. But as we move
 forward, you will discover that this class is supported by a broad Java
 API,
-[mapping](../../core/http-headers-mapping.md "Mapping HTTP headers") 
+[mapping](../../core/http-headers-mapping.md "Mapping HTTP headers")
 all REST and HTTP concepts to a set of Java classes, interfaces and
 annotations.
 

@@ -1,6 +1,4 @@
-# First client
-
-## Introduction
+# Introduction
 
 As we mentioned in the [introduction](../00_overview.md "Part I - Introduction"),
 the Restlet Framework is at the same time a client and a server
@@ -34,7 +32,7 @@ referrer URI:
 ~~~~ {.brush: .java}
 // Create the client resource  
 ClientResource resource = new ClientResource("http://restlet.com");  
- 
+
 // Customize the referrer property  
 resource.setReferrerRef("http://www.mysite.org");  
 
@@ -45,4 +43,3 @@ resource.get().write(System.out);
 After those first two steps, [let's now develop a more complete Restlet
 application](first-application.md "First application"),
 taking advantage of the various editions of the Restlet Framework.
-

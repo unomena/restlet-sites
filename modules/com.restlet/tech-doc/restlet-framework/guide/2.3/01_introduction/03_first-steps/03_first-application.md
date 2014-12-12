@@ -1,6 +1,4 @@
-# First application
-
-## Introduction
+# Introduction
 
 This first application illustrates how to develop a Restlet application
 that combines several editions of the Restlet Framework : GAE, GWT,
@@ -9,7 +7,7 @@ interfaces and of the ConverterService that offers transparent
 serialization between Restlet representations and Java objects, usable
 between a server application and several kind of clients.
 
-## Table of contents
+# Table of contents
 
 1.  [Requirements](#requirements)
 2.  [Scenario](#scenario)
@@ -20,7 +18,7 @@ between a server application and several kind of clients.
 7.  [Android client](#android-client)
 8.  [Java SE client](#java-se-client)
 
-## Requirements
+# Requirements
 
 It is based on the following editions of the Restlet Framework : Java SE
 (JSE), Google App Engine (GAE), Google Web Toolkit (GWT) and Android
@@ -35,7 +33,7 @@ It has been tested with the following environments:
 GAE doesn't support HTTP chunked encoding, therefore serialized object can't be sent (via POST or PUT) to a GAE server. Since Restlet Framework version 2.1 M4 we have a workaround available that buffers the HTTP
 entity to prevent chunk encoding. To use it, call the ClientResource.setRequestEntityBuffering(boolean) method with a "true" value. Note that this workaround isn't required for the GWT edition.
 
-## Scenario
+# Scenario
 
 The server application is hosted on the Google App Engine (GAE) platform. For the sake of simplicity it serves only one resource named "contact", with the following characteristics:
 
@@ -57,7 +55,7 @@ The "contact" object has the following attributes:
 -   Android application
 -   Java SE client
 
-## Archive content
+# Archive content
 
 The full source code (without the required archives) is available here:
 [firstapplication.zip](/technical-resources/restlet-framework/archives/examples/firstApplication/${restlet-version-minor}/firstapplication.zip "firstapplication.zip")
@@ -69,7 +67,7 @@ It contains the full source code of three Eclipse projects with:
 2.  Project that contains the source code of the Android client
 3.  Project that contains the source code of the Java SE client
 
-## Common classes
+# Common classes
 
 The following classes are available on the three project. They are used
 by the server and the clients in order to produce the serialized
@@ -81,7 +79,7 @@ representations.
 -   ContactResource.
 
 ContactResource is an interface annotated with Restlet annotations:
-
+```
 ~~~~ {.brush: .java}
 public interface ContactResource {
     @Get
@@ -94,14 +92,14 @@ public interface ContactResource {
     public void remove();
 }
 ~~~~
-
+```
 It represents the contract passed between the client and the server.
 
 When using collections of objects as method parameters, you need to use
 concrete classes if you intend to have GWT clients. For example use
 ArrayList\<Contact\> instead of List\<Contact\>.
 
-## GAE server
+# GAE server
 
 We propose to host the server application on the GAE platform. The
 server project relies on the following JAR files:
@@ -116,15 +114,15 @@ server project relies on the following JAR files:
 See also the "readme.txt" file located in the sources file. It list also all necessary binaries taken from the GAE platform.
 
 The server-side resource implements the annotated interface.
-
+```
 ~~~~ {.brush: .java}
 /**
  * The server side implementation of the Restlet resource.
  */
 public class ContactServerResource extends ServerResource implements ContactResource {
 
-   private static volatile Contact contact = 
-        new Contact("Scott", "Tiger", new Address("10 bd Google", null, "20010", "Mountain View", 
+   private static volatile Contact contact =
+        new Contact("Scott", "Tiger", new Address("10 bd Google", null, "20010", "Mountain View",
                     "USA"), 40);
 
     public void remove() {
@@ -140,9 +138,9 @@ public class ContactServerResource extends ServerResource implements ContactReso
     }
 }
 ~~~~
-
+```
 This resource is then exposed by the server application:
-
+```
 ~~~~ {.brush: .java}
     @Override
     public Restlet createInboundRoot() {
@@ -155,17 +153,18 @@ This resource is then exposed by the server application:
         return router;
     }
 ~~~~
+```
 
-GWT client
-==========
+# GWT client
 
 The GWT client relies only on the core Restlet JAR (org.restlet.jar)
-provided in the GWT edition.
+provided in the GWT edition.  
 
 In order to get the Contact object, a proxy class is required. This is
 an interface that inherits on a specific interface (delivered by the GWT
-edition of the Restlet Framework):
+edition of the Restlet Framework):  
 
+```
 ~~~~ {.brush: .java}
 public interface ContactResourceProxy extends ClientProxy {
     @Get
@@ -178,6 +177,7 @@ public interface ContactResourceProxy extends ClientProxy {
     public void remove(Result<Void> callback);
 }
 ~~~~
+```
 
 This interface looks like the ContactResource interface, expect that it
 adds a callback to each declared methods, due to the asynchronous nature
@@ -191,7 +191,7 @@ GWT-RPC code base to GWT-REST with Restlet.
 
 Then, the following code allows you to request and handle the Contact
 resource:
-
+```
 ~~~~ {.brush: .java}
 ContactResourceProxy contactResource = GWT.create(ContactResourceProxy.class);
 
@@ -213,7 +213,7 @@ contactResource.retrieve(new Result<Contact>() {
     }
 });
 ~~~~
-
+```
 Here is a screenshot of the GWT client page once the user has clicked on
 the GET button.
 
@@ -222,7 +222,7 @@ the GET button.
 
 In order to update the contact, simply complete your contact object and
 invoke the "store" method as specified by the proxy interface:
-
+```
 ~~~~ {.brush: .java}
 contactResource.store(contact, new Result<Void>() {
     public void onFailure(Throwable caught) {
@@ -238,9 +238,8 @@ contactResource.store(contact, new Result<Void>() {
     }
 });
 ~~~~
-
-Android client
-==============
+```
+# Android client
 
 The Android client project relies only on the core Restlet JAR
 (org.restlet.jar) provided by the Android edition of the Restlet
@@ -250,7 +249,7 @@ The contact object will be serialized between the GAE server and the
 Android client (in both directions) using the standard Java
 serialization process. No additional interface is required except the
 ContactResource interface furnished by the server.
-
+```
 ~~~~ {.brush: .java}
 // Initialize the resource proxy.
 ClientResource cr = new ClientResource("http://restlet-example-serialization.appspot.com/contacts/123");
@@ -262,14 +261,14 @@ ContactResource resource = cr.wrap(ContactResource.class);
 // Get the remote contact
 Contact contact = resource.retrieve();
 ~~~~
-
+```
 In order to update the contact, simply use this instruction:
-
+```
 ~~~~ {.brush: .java}
 // Update the remote contact
 resource.store(contact);
 ~~~~
-
+```
 The internal HTTP client has been rewritten using the java.nio.package.
 This may lead, on some android devices, to encounter this kind of
 exception: **java.net.SocketException: Bad address family**. In this
@@ -280,15 +279,13 @@ Here is a screenshot of the Android user interface.
 
 ![serialization android screenshot](/learn/archives/examples/firstApplication/${restlet-version-minor}/serialization-android-screenshot.png "Serialization android screenshot")
 
-Java SE client
-==============
+# Java SE client
 
-Get the full Contact object
----------------------------
+## Get the full Contact object
 
 The same code used on the Android application allows you to get the full
 Contact object:
-
+```
 ~~~~ {.brush: .java}
 ClientResource cr = new ClientResource("http://restlet-example-serialization.appspot.com/contacts/123");
 // Get the Contact object
@@ -301,26 +298,24 @@ if (contact != null) {
     System.out.println("     nage: " + contact.getAge());
 }
 ~~~~
-
+```
   This code produces the following ouput on the console:
 
     firstname: Scott
      lastname: Tiger
           age: 40
 
-Get a JSON representation
--------------------------
+## Get a JSON representation
 
 In case the Contact class is not available, you can still retrieve a
 JSON representation by setting the client preferences when retrieving
 the resource's representation:
-
+```
 ~~~~ {.brush: .java}
 cr.get(MediaType.APPLICATION_JSON).write(System.out);
 ~~~~
-
+```
 which produces the following output:
 
     {"age":40,"firstName":"Scott","homeAddress":{"country":"USA","city":"Mountain View","line1":"10 bd Google","line2":null,"zipCode":"20010"},
     "lastName":"Tiger"}
-

@@ -1,8 +1,4 @@
-Log service
-===========
-
-Introduction
-============
+# Introduction
 
 The log service provides access to logging service. The implementation
 is fully based on the standard logging mechanism introduced in JDK 1.4.
@@ -21,15 +17,14 @@ java.util.logging framework by modifying the Component's "logService"
 property. In order to fully configure the logging, you need to declare a
 configuration file by setting a system property like:
 
-    System.setProperty("java.util.logging.config.file", "/your/path/logging.config");  
+    System.setProperty("java.util.logging.config.file", "/your/path/logging.config"); 
 
 For details on the configuration file format, please check the [JDK's
 LogManager](http://java.sun.com/j2se/1.5.0/docs/api/index.html?java/util/logging/LogManager.html)
 class. You can also have a look at the [Restlet ${restlet-version-minor} logging
 documentation](../../editions/jse/logging.md).
 
-Default access log format
-=========================
+# Default access log format
 
 The default format follows the [W3C Extended Log File
 Format](http://www.w3.org/TR/WD-logfile.html)
@@ -62,4 +57,3 @@ command:
 For custom access log format, see the syntax to use and the list of
 available variable names in
 [Template](javadocs://jse/api/org/restlet/util/Resolver.html#createResolver%28org.restlet.data.Request,%20org.restlet.data.Response%29).
-
