@@ -1,8 +1,4 @@
-Eclipse Jetty extension
-=======================
-
-Introduction
-============
+# Introduction
 
 This connector is based on the [Eclipse Jetty](http://www.eclipse.org/jetty/)
 open-source web server. Jetty is popular alternative to Tomcat developed
@@ -10,8 +6,7 @@ by Mortbay Consulting and has a nice separation between its HTTP
 protocol implementation and its support for the Servlet API which led to
 the first HTTP server connector developed for the Restlet Framework.
 
-Description
-===========
+# Description
 
 This connector supports the following protocols: HTTP, HTTPS, AJP.
 
@@ -29,8 +24,7 @@ Here is the list of dependencies of this connector:
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/jetty/package-summary.html).
 
-Usage example
-=============
+# Usage example
 
 Please consult [connector configuration documentation](../../core/base/connectors)
 
@@ -46,4 +40,3 @@ to set some of the HTTPS parameters listed above, for example:
     server.getContext().getParameters().add("keystorePath", "<your-path>");
     server.getContext().getParameters().add("keystorePassword", "<your-password>");
     server.getContext().getParameters().add("keyPassword", "<your-password>");
-

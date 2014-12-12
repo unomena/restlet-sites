@@ -1,8 +1,4 @@
-ROME extension
-==============
-
-Introduction
-============
+# Introduction
 
 Integration with
 [ROME](https://rometools.jira.com),
@@ -11,4 +7,3 @@ RSS and Atom languages.
 
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/rome/package-summary.html).
-

@@ -1,8 +1,4 @@
-Spring extension - Configuring Restlet beans
-============================================
-
-Passing the parent context
-==========================
+# Passing the parent context
 
 One frequent issue that developers encounter when configuring their
 Restlet beans with Spring XML is that it is not easy to find a way to
@@ -68,4 +64,3 @@ http://www.springframework.org/schema/util http://www.springframework.org/schema
 This utilities mechanism is quite powerful and flexible, for more
 information [check this
 page](http://static.springframework.org/spring/docs/2.5.x/reference/xsd-config.html#xsd-config-body-schemas-util-property-path).
-

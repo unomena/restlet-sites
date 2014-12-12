@@ -1,8 +1,4 @@
-Glossary
-========
-
-Table of contents
-=================
+# Table of contents
 
 1.  [Application](#application "Application")
 2.  [Authenticator](#authenticator "Authenticator")
@@ -28,8 +24,7 @@ Table of contents
 22. [Uniform](#uniform "Uniform")
 23. [Virtual Host](#virtual-host "Virtual Host")
 
-Application
-===========
+# Application
 
 Restlet that can be attached to one or more VirtualHosts. Applications
 are guaranteed to receive calls with their base reference set relatively
@@ -37,26 +32,22 @@ to the VirtualHost that served them. This class is both a descriptor
 able to create the root Restlet and the actual Restlet that can be
 attached to one or more VirtualHost instances.
 
-Authenticator
-=============
+# Authenticator
 
 Filter authenticating the client sending the request based on mechanisms
 such as challenge request and response or SSL certificates.
 
-Authorizer
-==========
+# Authorizer
 
 Filter authorizing requests based on flexible criterias such as method
 name, client role.
 
-Client
-======
+# Client
 
 Connector acting as a generic client. It internally uses one of the
 available connectors registered with the current Restlet implementation.
 
-Component
-=========
+# Component
 
 Restlet managing a set of Clients, Servers and other Restlets. \
  "A component is an abstract unit of software instructions and internal
@@ -69,8 +60,7 @@ also exposing a number of services in order to control several
 operational features in a portable way, like access log and status
 setting.
 
-Connector
-=========
+# Connector
 
 Restlet enabling communication between Components. \
  "A connector is an abstract mechanism that mediates communication,
@@ -84,8 +74,7 @@ for component communication, enhancing simplicity by providing a clean
 separation of concerns and hiding the underlying implementation of
 resources and communication mechanisms." Roy T. Fielding
 
-Context
-=======
+# Context
 
 Contextual data and services provided to a Restlet. The context is the
 means by which a Restlet may access the software environment within the
@@ -94,8 +83,7 @@ framework. It is typically provided by the immediate parent Restlet
 provided are access to a logger, access to configuration parameters and
 to a request dispatcher.
 
-Directory
-=========
+# Directory
 
 Handler mapping a directory of local resources. Those resources have
 representations accessed by the file system, the WAR context or the
@@ -104,15 +92,13 @@ the one in Apache HTTP server) is used to select the best representation
 of a resource based on the available variants and on the client
 capabilities and preferences.
 
-Engine
-======
+# Engine
 
 A Restlet Engine is an implementation of the Restlet API. The reference
 implementation, provided by Noelios Technologies, is therefore called
 the Noelios Restlet Engine (NRE).
 
-Filter
-======
+# Filter
 
 Restlet filtering calls before passing them to an attached Restlet. The
 purpose is to do some pre-processing or post-processing on the calls
@@ -120,8 +106,7 @@ going through it before or after they are actually handled by an
 attached Restlet. Also note that you can attach and detach targets while
 handling incoming calls as the filter is ensured to be thread-safe.
 
-Finder
-======
+# Finder
 
 Restlet that can find the target resource that will concretely handle
 the request. Based on a given resource class, it is also able to
@@ -138,14 +123,12 @@ and it will be automatically be used by the Finder instance at runtime.
 If no matching handle\*() method is found, then a
 Status.CLIENT\_ERROR\_METHOD\_NOT\_ALLOWED is returned.
 
-Redirector
-==========
+# Redirector
 
 Rewrites URIs then redirects the call or the client to a new
 destination.
 
-Representation
-==============
+# Representation
 
 Current or intended state of a resource. For performance purpose, it is
 essential that a minimal overhead occurs upon initialization. The main
@@ -161,16 +144,14 @@ bytes. Other commonly used but less precise names for a representation
 include: document, file, and HTTP message entity, instance, or variant."
 Roy T. Fielding
 
-Request
-=======
+# Request
 
 Generic request sent by client connectors. It is then received by server
 connectors and processed by Restlets. This request can also be processed
 by a chain of Restlets, on the client or server sides. Requests are
 uniform across all types of connectors, protocols and components.
 
-Resource
-========
+# Resource
 
 Intended conceptual target of a hypertext reference. "Any information
 that can be named can be a resource: a document or image, a temporal
@@ -192,27 +173,23 @@ to which it currently corresponds) changes over time, provided that the
 conceptual mapping is not changed in the process. In addition, a
 resource is always identified by a URI.
 
-Response
-========
+# Response
 
 Generic response sent by server connectors. It is then received by
 client connectors. Responses are uniform across all types of connectors,
 protocols and components.
 
-Restlet
-=======
+# Restlet
 
 Dispatcher that provides a context and life cycle support.
 
-Route
-=====
+# Route
 
 Filter scoring the affinity of calls with the attached Restlet. The
 score is used by an associated Router in order to determine the most
 appropriate Restlet for a given call.
 
-Router
-======
+# Router
 
 Restlet routing calls to one of the attached routes. Each route can
 compute an affinity score for each call depending on various criteria.
@@ -240,20 +217,17 @@ as expected.
 Finally, you can modify the routes list while handling incoming calls as
 the delegation code is ensured to be thread-safe.
 
-Server
-======
+# Server
 
 Connector acting as a generic server. It internally uses one of the
 available connectors registered with the current Restlet implementation.
 
-Transformer
-===========
+# Transformer
 
 Filter that can transform XML representations by applying an XSLT
 transform sheet.
 
-Uniform
-=======
+# Uniform
 
 Base class exposing a uniform REST interface.
 
@@ -270,9 +244,7 @@ like filtering, routing or finding a target resource. The context
 property is typically provided by a parent component as a way to give
 access to features such as logging and client connectors.
 
-Virtual Host
-============
+# Virtual Host
 
 Router of calls from Server connectors to Restlets. The attached
 Restlets are typically Applications.
-

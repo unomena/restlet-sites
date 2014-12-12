@@ -1,6 +1,4 @@
-# FAQ
-
-## How to use Restlet in an Applet ?
+# How to use Restlet in an Applet ?
 
 In version 2.0, the Restlet engine creates its own classloader, instance
 of the EngineClassLoader class. This is fine most of the time, except
@@ -23,7 +21,7 @@ Now you just need to call this line before using the Restlet API:
 
     Engine.setInstance(new AppletEngine());
 
-## Solve 405 status code responses
+# Solve 405 status code responses
 
 Having set up your server resource with annotated methods, you're ready
 to send it requests and eager to get JSON, XML representations of its
@@ -62,7 +60,7 @@ project. Did you reference the archive of the right Restlet extension
 (such as the Jackson extension) and the archives of its library
 dependencies?
 
-## How to trace the internal client and server connectors?
+# How to trace the internal client and server connectors?
 
 These connectors are configured via the parameter called "tracing" of
 their context (see the
@@ -84,7 +82,7 @@ connector of a resource:
     ClientResource resource = new ClientResource("http://localhost:8182/<resource>");
     resource.setNext(client);
 
-## How do I implement the traditional MVC pattern?
+# How do I implement the traditional MVC pattern?
 
 There is only a rough correspondence between the [MVC pattern](http://en.wikipedia.org/wiki/Model-view-controller) and the Restlet framework; some [debate](http://n2.nabble.com/Restlet-MVC-tp1560691p1561792.html) exists as to whether it should be employed at all. For those who wish to follow the MVC pattern with Restlet, here is the basic proposition:
 

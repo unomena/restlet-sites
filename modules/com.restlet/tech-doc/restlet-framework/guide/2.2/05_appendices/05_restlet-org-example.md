@@ -1,8 +1,4 @@
-Restlet.org example
-===================
-
-Table of contents
-=================
+# Table of contents
 
 1.  [Introduction](#introduction "Introduction")
 2.  [Imported classes](#imported-classes "Imported classes")
@@ -12,8 +8,7 @@ Table of contents
 6.  [Redirection application](#redirection-application "Redirection application")
 7.  [Conclusion](#conclusion "Conclusion")
 
-Introduction
-============
+# Introduction
 
 The Restlet web site that you are currently navigating is powered by the
 Noelios Restlet Engine, the reference implementation of the Restlet API.
@@ -23,8 +18,7 @@ Restlets is very simple.
 
 This page needs to be updated to use the new Restlet ${restlet-version-minor} API
 
-Imported classes
-================
+# Imported classes
 
 First, let's declare the imported classes required to support our web
 component.
@@ -32,10 +26,9 @@ component.
     import org.restlet.Component;
     import org.restlet.VirtualHost;
     import org.restlet.data.Protocol;
-       
 
-Declaring the Main class
-========================
+
+# Declaring the Main class
 
 Now, we declare the main class, called the WebComponent, extending the
 org.restlet.Component. This component contains several virtual hosts and
@@ -48,10 +41,9 @@ associated applications.
      */
     public class WebComponent extends Component {
           ...
-       
 
-Main method
-===========
+
+# Main method
 
 Below, you have the main method that is invoked by our startup scripts.
 Note that we require a few arguments in order to parameterize several
@@ -90,10 +82,9 @@ files.
           e.printStackTrace(System.err);
        }
     }
-       
 
-Build the component
-===================
+
+# Build the component
 
 Now we need to build the component containing our web applications. As
 we are handling several domain names (www.noelios.com, restlet.org,
@@ -204,10 +195,9 @@ virtual hosts.
               "http://www.noelios.com{rr}", true));
        getHosts().add(host);
     }
-       
 
-Redirection Application
-=======================
+
+# Redirection Application
 
 In addition to the main WebComponent class, we also rely on four
 application classes. Let's have a look at the RedirectApplication which
@@ -254,10 +244,9 @@ is generic and reused several times.
             return new Redirector(getContext(), this.targetUri, mode);
         }
     }
-       
 
-Conclusion
-==========
+
+# Conclusion
 
 In term of coding, that's about all that we use. In addition, we
 configure standard JDK logging properties in order to write a web log
@@ -267,4 +256,3 @@ Java Service Wrapper tool to execute our component as a Linux daemon.
 
 Thanks to Michael Mayer for the idea of providing the source code of
 this web site as a sample application.
-

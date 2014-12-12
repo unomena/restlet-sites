@@ -1,8 +1,4 @@
-Lucene extension
-================
-
-Introduction
-============
+# Introduction
 
 The goal of this extension is to provide an integration between Restlet
 and [Apache Lucene project](http://lucene.apache.org/)
@@ -19,16 +15,14 @@ extract metadata from any Representation.
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/lucene/package-summary.html).
 
-Solr integration
-================
+# Solr integration
 
 The connector contributed allows you to interact with Solr with
 "solr://" references the same way you would do it through HTTP : \
 
 [http://wiki.apache.org/solr/SolrRequestHandler](http://wiki.apache.org/solr/SolrRequestHandler)
 
-Initialization
---------------
+## Initialization
 
 The CoreContainer that will be helped by the SolrClientHelper can be
 initialized in two different ways.
@@ -48,8 +42,7 @@ Second one is to create the CoreContainer.
 To configure your core container see solr documentation :
 [http://wiki.apache.org/solr/](http://wiki.apache.org/solr/)
 
-Usage
------
+## Usage
 
 It is possible to interact with the core container using "solr://"
 Restlet requests with the client dispatcher the same way it is described
@@ -65,8 +58,7 @@ you can do :
     StringRepresentation repr = new StringRepresentation(xml, MediaType.TEXT_XML);
     getContext().getClientDispatcher().post("solr://main/update", repr);
 
-Solr Core Container
--------------------
+## Solr Core Container
 
 If you would like to interact with Solr through http without a Servlet
 container you can use this restlet. It can also be very useful for
@@ -82,11 +74,11 @@ debug.
 
         public SolrForward() {
         }
-        
+
         public SolrForward(Context context) {
             super(context);
         }
-        
+
         @Override
         public void handle(Request request, Response response) {
             super.handle(request, response);
@@ -97,6 +89,5 @@ debug.
             response.setStatus(solrResp.getStatus());
             response.setEntity(solrResp.getEntity());
         }
-        
-    }
 
+    }

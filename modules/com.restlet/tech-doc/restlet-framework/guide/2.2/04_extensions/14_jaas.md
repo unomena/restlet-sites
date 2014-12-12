@@ -1,8 +1,4 @@
-JAAS extension
-==============
-
-Introduction
-============
+# Introduction
 
 This extension facilitate the integration between the Restlet security
 API introduced in version 2.0 and the JAAS standard for authentication
@@ -19,8 +15,7 @@ based on JAAS login modules.
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/jaas/package-summary.html).
 
-Authenticating with LDAP
-========================
+# Authenticating with LDAP
 
 This extension can be used for LDAP authentication, for example.
 Considering this JAAS configuration:
@@ -56,4 +51,3 @@ Thus, the resulting principals in ClientInfo are:
 
 A new user is created based on the first UserPrincipal name: 'bruno' in
 this example.
-

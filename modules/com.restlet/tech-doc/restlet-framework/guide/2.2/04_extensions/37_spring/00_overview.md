@@ -1,8 +1,4 @@
-Spring extension
-================
-
-Table of contents
-=================
+# Table of contents
 
 1.  [Introduction](#introduction "Introduction")
 2.  [Integration modes](integration "Spring extension - Integration modes")
@@ -10,8 +6,7 @@ Table of contents
 4.  [A complete example](example "Spring extension - A complete example")
 5.  [Configuration of Restlet Resources in Spring](resources-configuration "Spring extension - Configuration of Restlet resources")
 
-Introduction
-============
+# Introduction
 
 This extension provides various modes of integration between the Restlet
 Framework and the popular Spring Framework. Historically, this extension
@@ -23,4 +18,3 @@ systematize the use of simple POJOs. 
 
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/spring/package-summary.html).
-

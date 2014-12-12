@@ -1,8 +1,4 @@
-Spring extension - Integration modes
-====================================
-
-Introduction
-============
+# Introduction
 
 During the development of the 1.0 version of the Restlet API, several
 users attempted to integrate Restlet with Spring. They were especially
@@ -14,8 +10,7 @@ In order to facilitate this integration, two dedicated Spring extension
 were added to the Restlet. It allows us to provide several integration
 modes.
 
-Restlet as main container
-=========================
+# Restlet as main container
 
 In the first mode, the goal is to leverage the concept of Restlet
 Application and all the associated services, as well as the transparent
@@ -26,8 +21,7 @@ Spring's GenericApplicationContext subclass. You can associate a list of
 XML or property configuration URIs (file:/// or war:/// URIs) in order
 to have Spring auto-instantiate and wire your Restlet beans.
 
-Spring as main container
-========================
+# Spring as main container
 
 In the second mode, the goal is to leverage the concept of Spring Web
 Application as an alternative to the Restlet Application. This is
@@ -51,4 +45,3 @@ In Restlet 1.1, the Spring extensions received several contributions,
 increasing the number of ways to integrate Restlet with Spring. There is
 now a RestletFrameworkServlet, a SpringServerServlet, SpringBeanFinder
 and SpringBeanRouter.
-

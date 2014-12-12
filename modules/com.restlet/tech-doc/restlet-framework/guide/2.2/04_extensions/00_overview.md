@@ -1,16 +1,11 @@
-Part IV - Restlet Extensions
-============================
-
-Introduction
-============
+# Introduction
 
 The Restlet Framework is composed of two parts:
 
 -   The Restlet Core (Restlet API + Restlet Engine implementing the API)
 -   Optional Restlet extensions
 
-Description
-===========
+# Description
 
 The Restlet Framework lets you build complete Web applications by itself
 and is capable of leveraging other open source projects to facilitate
@@ -25,11 +20,9 @@ etc.) or support of important standards (Atom, WADL).
 The second one covers extensions to the Restlet engine such as client
 connectors, server connectors and authentication helpers.
 
-Distribution
-============
+# Distribution
 
 All extensions and their dependencies are shipped with the Restlet
 distribution by the way of JAR files. Adding an extension to your
 application is as simple as adding the archives of the chosen extension
 and its dependencies to the classpath. 
-
