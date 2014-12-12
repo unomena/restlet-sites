@@ -1,6 +1,4 @@
-# Part III - Restlet Editions
-
-## Introduction
+# Introduction
 
 The Restlet Framework is written in the Java language but can target
 very different execution environments. This part of the user guide will

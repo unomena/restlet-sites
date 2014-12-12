@@ -1,8 +1,4 @@
-Restlet edition for Java EE
-===========================
-
-Introduction
-============
+# Introduction
 
 This chapter presents the Restlet Framework edition for Java EE (Java
 Enterprise Edition).
@@ -12,8 +8,7 @@ applications inside Java EE application server, or more precisely inside
 Servlet containers such as [Apache
 Tomcat](http://tomcat.apache.org/).
 
-Getting started
-===============
+# Getting started
 
 The rest of this page should get you started with the Restlet Framework,
 Java EE edition, in less than 10 minutes. It explains how to create a
@@ -25,8 +20,7 @@ resource that says "hello, world" and run it.
 4.  [Run as a standalone application](#run-as-a-standalone-java-application)
 5.  [Conclusion](#conclusion)
 
-What do I need?
----------------
+## What do I need?
 
 We assume that you have a development environment set up and
 operational, and that you already have installed the Java 1.5 (or
@@ -34,8 +28,7 @@ higher). In case you haven't downloaded the Restlet Framework yet,
 select one of the available distributions of the [Restlet Framework
 ${restlet-version-minor}](http://restlet.com/downloads/current).
 
-The "hello, world" application
-------------------------------
+## The "hello, world" application
 
 Let's start with the core of a REST application: the Resource. Here is
 the code of the single resource defined by the sample application.
@@ -86,11 +79,10 @@ public class FirstStepsApplication extends Application {
         return router;
     }
 
-}   
+}
 ~~~~
 
-Run in a Servlet container
---------------------------
+## Run in a Servlet container
 
 Let's now deploy this Restlet application inside your favorite Servlet
 container. Create a new Servlet Web application as usual, add a
@@ -111,7 +103,7 @@ Then, update the "web.xml" configuration file as follow:
             xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee  
                  http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">  
    <display-name>first steps servlet</display-name>  
-  
+
    <!-- Restlet adapter -->  
    <servlet>  
       <servlet-name>RestletServlet</servlet-name>  
@@ -122,7 +114,7 @@ Then, update the "web.xml" configuration file as follow:
             <param-value>firstSteps.FirstStepsApplication</param-value>
       </init-param>
    </servlet>  
-  
+
    <!-- Catch all requests -->  
    <servlet-mapping>  
       <servlet-name>RestletServlet</servlet-name>  
@@ -145,8 +137,7 @@ message. You can find the WAR file (packaged with archives taken from
 Restlet Framework 2.0 Milestone 5) in the "First steps application"
 files.
 
-Run as a standalone Java application
-------------------------------------
+## Run as a standalone Java application
 
 A Restlet application cannot only run inside a Servlet container, but
 can also be run as a standalone Java application using a single
@@ -160,17 +151,17 @@ requests to the "FirstStepsApplication".
 public static void main(String[] args) throws Exception {  
     // Create a new Component.  
     Component component = new Component();  
-  
+
     // Add a new HTTP server listening on port 8182.  
     component.getServers().add(Protocol.HTTP, 8182);  
-  
+
     // Attach the sample application.  
     component.getDefaultHost().attach("/firstSteps",  
             new FirstStepsApplication());  
-  
+
     // Start the component.  
     component.start();  
-}          
+}      
 ~~~~
 
 Once you have launched the main class, if you can open your favorite web
@@ -182,8 +173,7 @@ is correct and that no other program is currently using the port 8182.
 You can find the sources of this sample application in the "First steps
 application" files.
 
-Conclusion
-----------
+## Conclusion
 
 We hope you that enjoyed these first steps and encourage you to check
 [the equivalent page in the Java SE edition](../jse/ "Restlet edition for Java SE")
@@ -191,9 +181,8 @@ for standalone deployments of the same application. This can also be a
 convenient way to develop and test your Restlet application before
 actually deploying it in a Java EE application server.
 
-### Notes
+# Notes
 
 -   Thanks to [Didier
     Girard](http://www.ongwt.com/)
     for suggesting this page.
-

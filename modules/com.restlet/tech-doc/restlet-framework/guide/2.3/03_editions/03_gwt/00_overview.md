@@ -1,8 +1,4 @@
-Restlet edition for Google Web Toolkit
-======================================
-
-Introduction
-============
+# Introduction
 
 This chapter presents the Restlet edition for GWT, which is a
 client-side port of the Restlet Framework to GWT 2.2 and above releases.
@@ -10,8 +6,7 @@ See [this blog
 post](http://blog.restlet.com/2008/07/25/restlet-ported-to-gwt/)
 for the official announce.
 
-Description
-===========
+# Description
 
 Google Web Toolkit is a powerful and widely used platform for rich
 internet application. It is based on a smart compiler taking Java source
@@ -40,8 +35,7 @@ course, we kept only the classes required for the client-side obviously
 and had to remove classes based on Java APIs not available in GWT (such
 as NIO channels or BIO streams).
 
-Automatic bean serialization
-============================
+# Automatic bean serialization
 
 Finally, Restlet 2.0 added support for annotated Restlet interfaces and
 automatic bean serialization into its GWT edition, in a way that is
@@ -55,4 +49,3 @@ Binding mechanism and reusing the bean serialization format of GWT-RPC
 negotiation on the Restlet server-side, your web API stays unchanged,
 able to support JSON, XML and other formats in parallel with no code
 change!
-

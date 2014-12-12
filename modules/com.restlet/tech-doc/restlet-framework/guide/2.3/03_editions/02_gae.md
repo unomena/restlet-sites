@@ -1,8 +1,4 @@
-Restlet edition for Google App Engine
-=====================================
-
-Introduction
-============
+# Introduction
 
 Google provides a Java version of his App Engine solution (GAE). It is a
 PaaS (Platform as a Service) solution that offers massive and flexible
@@ -26,8 +22,7 @@ Modules availables:
 -   Restlet extension - Servlet (HTTP and HTTPS server)
 -   Restlet extension - XML (DOM, SAX and XPath)
 
-Usage example
-=============
+# Usage example
 
 Create a new GAE project with the Eclipse plugin provided, add the
 "org.restlet.jar" and the "org.restlet.ext.servlet.jar" files from the
@@ -45,7 +40,7 @@ import org.restlet.resource.ServerResource;
 
 /**
  * Resource which has only one representation.
- * 
+ *
  */
 public class HelloWorldResource extends ServerResource {
 
@@ -116,8 +111,7 @@ Finally, here is the Servlet configuration file:
 For more information on Restlet, please check our [documentation
 pages](javadocs://jse/).
 
-Javadocs
-========
+# Javadocs
 
 The Javadocs of the Restlet edition for GAE are available online as
 well:
@@ -128,4 +122,3 @@ well:
     Extensions](javadocs://gae/ext/)
 -   [Restlet
     Engine](javadocs://gae/engine/)
-

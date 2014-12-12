@@ -1,15 +1,10 @@
-Restlet edition for Android
-===========================
-
-Introduction
-============
+# Introduction
 
 This document will cover the Restlet edition for Android, which is a
 port of the Restlet Framework to the [Android mobile
 OS](http://code.google.com/android/).
 
-A Web server on a mobile phone
-==============================
+# A Web server on a mobile phone
 
 There are several reasons for having a Web server on a mobile phone:
 
@@ -24,8 +19,7 @@ There are several reasons for having a Web server on a mobile phone:
     browser and behaving like regular hypermedia applications instead of
     using GUIs specific to Android.
 
-A Web client on a mobile phone
-==============================
+# A Web client on a mobile phone
 
 The port of Restlet on Android also includes a full Web client to access
 to either local or remote Web servers. Android already has an HTTP
@@ -34,8 +28,7 @@ leverage higher-level features naturally (such as conditional methods,
 content negotiation, etc.). The support of other protocols than HTTP
 (like file system access via file:/// URIs) is also useful.
 
-Specificities
-=============
+# Specificities
 
 Contrary to other editions, the Android edition can't leverage Restlet's
 autodiscovery mechanism for connectors and converters provided as
@@ -66,6 +59,5 @@ import org.restlet.ext.httpclient.HttpClientHelper;
 // ...
 
 Engine.getInstance().getRegisteredClients().clear();
-Engine.getInstance().getRegisteredClients().add(new HttpClientHelper(null)); 
+Engine.getInstance().getRegisteredClients().add(new HttpClientHelper(null));
 ~~~~
-
