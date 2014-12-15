@@ -1,28 +1,23 @@
-RAML extension
-=================
+# Introduction
 
-Introduction
-============
+This extension provides a preview integration with [RAML](http://raml.org/) including:
 
-This extension provides a preview integration with [RAML](http://raml.org/) including: 
-
-- automated generation of RAML descriptor in YAML 
-- introspection of Restlet API based applications 
+- automated generation of RAML descriptor in YAML
+- introspection of Restlet API based applications
 
 In this scenario, we will add RAML support to a Restlet based API.
 
-Usage
-=====
+# Usage
 
-### Dependencies
+## Dependencies
 
 Add org.restlet.ext.raml.jar (provided in the "lib" directory of
-[restlet framework](http://restlet.com/downloads/current#release=testing&edition=jse&distribution=zip 
+[restlet framework](http://restlet.com/downloads/current#release=testing&edition=jse&distribution=zip
 "download restlet framework")) to your classpath.
 
 Make sure you are using the version 2.3 of Restlet and java 1.7.
 
-### Configuration
+## Configuration
 
 Make your application class extend org.restlet.ext.raml.RamlApplication instead of org.restlet.Application.
 
@@ -42,8 +37,7 @@ public Restlet createInboundRoot() {
 
 Here, you specify that the RAML definition will be provided on the path "/docs".
 
-Customization
-=============
+# Customization
 
 If you want to display a definition edited manually, the RamlApplication can get it directly from files. To do that, you just have to override the method _getRamlSpecificationRestlet()_ of class RamlApplication and make it return a custom Restlet.
 

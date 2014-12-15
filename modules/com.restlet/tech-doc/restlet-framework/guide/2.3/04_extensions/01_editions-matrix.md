@@ -1,8 +1,4 @@
-Editions matrix
-===============
-
-Introduction
-============
+# Introduction
 
 This table presents the list of extensions provided by the [various
 editions of the Restlet Framework](../editions "Part III - Restlet Editions").
@@ -10,8 +6,7 @@ editions of the Restlet Framework](../editions "Part III - Restlet Editions").
 The core module including both the Restlet API and the Restlet Engine is
 shipped by all editions.
 
-Extensions availability
-=======================
+# Extensions availability
 
 Extensions|[Android](../editions/android "Android")|[GAE](../editions/gae "GAE")|[GWT](../editions/gwt "GWT")|[JEE](../editions/jee "JEE")|[JSE](../editions/jse "JSE")|[OSGi](../editions/osgi "OSGi")|Description
 --------- |  ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | -

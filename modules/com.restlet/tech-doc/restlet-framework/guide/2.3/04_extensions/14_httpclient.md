@@ -1,16 +1,11 @@
-Apache HTTP Client extension
-============================
-
-Introduction
-============
+# Introduction
 
 This connector is based on [Apache Commons HTTP
 client](https://hc.apache.org/httpcomponents-client-ga/index.html).
 It provides an HTTP and HTTPS client connector with advanced
 multi-threading and connection reuse support.
 
-Description
-===========
+# Description
 
 As pointed out by the Apache HTTPClient tutorial it is crucial to read
 entirely each response. It allows to release the underlying connection.
@@ -24,4 +19,3 @@ of supported specific parameters is available in the Javadocs:
 
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/httpclient/package-summary.html).
-

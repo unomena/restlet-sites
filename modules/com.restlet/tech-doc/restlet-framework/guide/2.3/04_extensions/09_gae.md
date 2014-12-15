@@ -1,15 +1,10 @@
-GAE extension
-=============
-
-Introduction
-============
+# Introduction
 
 This extension provides an integration with the Google App Engine API.
 For details on Google App Engine (aka GAE), see the [home
 page](http://code.google.com/appengine/).
 
-Description
-===========
+# Description
 
 At the time of writing, this extension provides an Authenticator filter
 that integrates the GAE UserService and detect if the current request is
@@ -17,29 +12,26 @@ auithenticated using a Google account. For additional details, please
 consult the
 [Javadocs](javadocs://gae/ext/org/restlet/ext/gae/package-summary.html).
 
-User example
-============
+# User example
 
 This sample code illustrates how to use the Authenticator and the
 Enroler provided by the GAE extension. These features are used by the
 Application deployed to the Google App Engine platform.
 
-Usage of the GaeAuthenticator filter
-------------------------------------
+## Usage of the GaeAuthenticator filter
 
 The GaeAuthenticator is able to check wether or not the current request
 is sent by a logged user. In case the authenticator is not optional, the
 user is automatically redirected to the standard login page.
 
     GaeAuthenticator guard = new GaeAuthenticator(getContext());
-    // Attach the guarded hierarchy of URIs to the Authenticator filter 
+    // Attach the guarded hierarchy of URIs to the Authenticator filter
     guard.setNext(adminRouter);
 
     // Attach this guarded set of URIs
     router.attach("/admin", guard);
 
-Usage of the GaeEnroler
------------------------
+## Usage of the GaeEnroler
 
 The GaeEnroler checks wether the current logged user can adminstrate the
 deployed application and completes the list of user's roles with a
@@ -78,4 +70,3 @@ sent by an administrator:
         [...]
         }
       }
-

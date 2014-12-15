@@ -1,16 +1,11 @@
-Simple Framework extension
-==========================
-
-Introduction
-============
+# Introduction
 
 This connector is based on [Simple
 framework](http://www.simpleframework.org/)
 which is an open source embeddable Java based HTTP engine capable of
 handling high loads.
 
-Description
-===========
+# Description
 
 This connector supports the following protocols: HTTP, HTTPS.
 
@@ -22,4 +17,3 @@ The list of supported specific parameters is available in the javadocs:
 
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/simple/package-summary.html).
-

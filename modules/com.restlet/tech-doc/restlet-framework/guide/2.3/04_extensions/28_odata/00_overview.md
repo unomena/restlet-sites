@@ -1,14 +1,10 @@
-OData extension
-===============
-
-Topics covered
-==============
+# Topics covered
 
 -   Accessing OData V1.0 web APIs in Java with Restlet
 -   Handling queries
 
-References
-==========
+# References
+
 
 -   [Blog post - Restlet supports OData, the Open Data Protocol](http://blog.restlet.com/2010/03/15/restlet-supports-odata-the-open-data-protocol/)
 -   [Javadocs - Restlet extension for OData](javadocs://jse/ext/org/restlet/ext/odata/package-summary.html)
@@ -17,8 +13,7 @@ References
 -   [MSDN - WCF Data Services](http://msdn.microsoft.com/en-us/data/bb931106.aspx)
 -   [Open Government Data Initiative project](http://ogdi.codeplex.com/)
 
-Table of contents
-=================
+# Table of contents
 
 -   [Introduction](#introduction "Introduction")
 -   [Code generation](#code-generation "Code generation")
@@ -26,8 +21,7 @@ Table of contents
 -   [Filter the set of the building permits](#filter-the-set-of-the-building-permits  "Filter the set of the building permits")
 -   [Conclusion](#conclusion "Conclusion")
 
-Introduction
-============
+# Introduction
 
 REST can play a key role in order to facilitate the interoperability
 between Java and Microsoft environments. To demonstrate this, the
@@ -55,8 +49,7 @@ are samples of such data:
 -   Fire stations (“/FireStations”),
 -   etc.
 
-Code generation
-===============
+# Code generation
 
 From the client perspective, if you want to handle the declared
 entities, you will have to create a class for each entity, defines their
@@ -91,7 +84,7 @@ specific classpath separator) and the name of the main class:
 
 ~~~~ {.brush: .java}
 java -cp org.restlet.jar:org.restlet.ext.xml.jar:org.restlet.ext.atom.jar:org.restlet.ext.freemarker.jar:
- org.restlet.ext.odata.jar:org.freemarker.jar org.restlet.ext.odata.Generator 
+ org.restlet.ext.odata.jar:org.freemarker.jar org.restlet.ext.odata.Generator
  http://ogdi.cloudapp.net/v1/dc/
  ~/workspace/testADO
 ~~~~
@@ -99,7 +92,7 @@ java -cp org.restlet.jar:org.restlet.ext.xml.jar:org.restlet.ext.atom.jar:org.re
 or programmatically:
 
 ~~~~ {.brush: .java}
-String[] arguments = 
+String[] arguments =
       { "http://ogdi.cloudapp.net/v1/dc/",
         "/home/thierry/workspace/restlet-2.0/odata/src" };
 Generator.main(arguments);
@@ -135,8 +128,7 @@ the client and the server is still stateless.
 We have finished for now of the theoretical aspects; let's see how to
 use the generated classes.
 
-Get the two first building permits
-==================================
+# Get the two first building permits
 
 The code below gets the two first entities and displays some of their
 properties. It will display this kind of output on the console:
@@ -162,7 +154,7 @@ entities:
 
 ~~~~ {.brush: .java}
 OgdiDcSession session = new OgdiDcSession();
-Query<BuildingPermit> query = 
+Query<BuildingPermit> query =
       session.createBuildingPermitQuery("/BuildingPermits").top(2);
 
 if (query != null) {
@@ -190,8 +182,7 @@ receive as a result a AtomXML feed document. This document is parsed by
 the query which provides the result as an Iterator. Finally, we can loop
 over the iterator and access to each “BuildingPermit” instance.
 
-Filter the set of the building permits
-======================================
+# Filter the set of the building permits
 
 The code below gets the five first entities located in the city of
 Washington and more precisely on the fifth district and displays some of
@@ -223,7 +214,7 @@ The listing below shows how to retrieve the five first “BuildingPermits”
 entities in the fifht district of Washington:
 
 ~~~~ {.brush: .java}
-Query<BuildingPermit> search = 
+Query<BuildingPermit> search =
    session.createBuildingPermitQuery("/BuildingPermits")
       .filter("((city eq 'WASHINGTON') and (district eq 'FIFTH'))")
       .top(5);
@@ -249,12 +240,10 @@ parameters. As for the previous example, the received AtomXML feed
 document is parsed which produces the result as an Iterator. Finally, we
 can loop over the iterator and access to each “BuildingPermit” instance.
 
-Conclusion
-==========
+# Conclusion
 
 This document illustrates what can be done with the Restlet extension
 for the OData services. We hope that you found it simple and useful to
 follow to read. It is a good demonstration of how adopting of REST and
 related standards such as HTTP and Atom facilitates the interoperability
 across programming languages and executions environments.
-

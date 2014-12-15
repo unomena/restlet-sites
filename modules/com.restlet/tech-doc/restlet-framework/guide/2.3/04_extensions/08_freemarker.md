@@ -1,5 +1,4 @@
-FreeMarker extension
-====================
+# FreeMarker extension
 
 This extension provides an integration with FreeMarker 2.3. FreeMarker
 is a template engine, a generic tool to generate text output (anything

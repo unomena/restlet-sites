@@ -1,16 +1,11 @@
-JAX-RS extension
-================
-
-Introduction
-============
+# Introduction
 
 This Restlet Extension implements the Java Specification [JAX-RS: Java
 API for RESTful Web
 Services](https://jcp.org/en/jsr/detail?id=311).
 Note that this implementation is not final yet.
 
-Description
-===========
+# Description
 
 To run this example, you need the Restlet libraries. Download a ${restlet-version-minor}
 version from
@@ -41,13 +36,11 @@ Restlet JAX-RS extension.
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/jaxrs/package-summary.html).
 
-Create JAX-RS example
-=====================
+# Create JAX-RS example
 
 Create a new package, e.g. test.restlet.jaxrs
 
-Create a root resource class
-----------------------------
+## Create a root resource class
 
 First create an easy root resource class: Create a new java class named
 **EasyRootResource** in the previously created package and insert the
@@ -77,8 +70,7 @@ following source  code:
         }
     }
 
-Create Application
-------------------
+## Create Application
 
 To provide a collection of root resource classes (and others) for a
 JAX-RS runtime you integrate these classes to an Application. Create a
@@ -107,8 +99,7 @@ Now create a runtime environment instance and pass the Application
 instance to it. This is runtime environment specfic. Below you see this
 for the Restlet JAX-RS environment:
 
-Set up a JAX-RS server
-======================
+# Set up a JAX-RS server
 
 A JAX-RS server using the Restlet JAX-RS extension is set up like any
 Restlet server. Create a third class in the same package, named
@@ -166,8 +157,7 @@ JAX-RS runtime environment.
 This runtime environment is still under development, and I'm very busy
 continuing it ...
 
-Run in a Servlet Container
---------------------------
+## Run in a Servlet Container
 
 If you want to run the JAX-RS Application in a Servlet Container, create
 a subclass of the JaxRsApplication. In the constructor you could attach
@@ -191,7 +181,7 @@ You could use this subclass also in the example above:
 
             // create JAX-RS runtime environment
             Application application = new MyJaxRsApplication(comp.getContext());
-      
+
             // if you use this kind, you don't need to attach the Application again.
 
 Comments are welcome to the [Restlet mailing
@@ -200,4 +190,3 @@ or directly to Stephan.Koops\<AT\>web.de !
 
 This extension is the result of a (german) [master
 thesis](http://users.informatik.haw-hamburg.de/%7Eubicomp/arbeiten/master/koops.pdf).
-

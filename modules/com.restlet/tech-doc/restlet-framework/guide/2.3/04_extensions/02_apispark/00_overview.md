@@ -1,6 +1,3 @@
-APISpark extension
-==================
-
 This extension provides several tools that can we used either in standalone mode within Restlet Framework or integrated with the [APISpark](https://apispark.com/) PaaS for web API for extended features.
 
 Here are the main two features provided:

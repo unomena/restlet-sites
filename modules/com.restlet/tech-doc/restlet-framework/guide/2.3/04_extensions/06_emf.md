@@ -1,8 +1,4 @@
-EMF
-===
-
-Introduction
-============
+# Introduction
 
 [Eclipse
 EMF](http://www.eclipse.org/modeling/emf/)
@@ -14,8 +10,7 @@ XML/XMI/ECore representations.
 For additional details, please consult [the
 Javadocs](javadocs://jse/ext/org/restlet/ext/emf/package-summary.html).
 
-Description
-===========
+# Description
 
 This extension provides a main EmfRepresentation class that is able to
 both format and EObject as an XML/XMI/HTML representation and to parse
@@ -27,8 +22,7 @@ using your EObject subclasses in resource annotated interface.
 TODO - Add a simple yet comprehensive example of how to use EMF to save
 time to manage representations
 
-HTML representations
---------------------
+## HTML representations
 
 In addition to XML/XMI support common for EMF model, we offer a generic
 HTML representation. It lists all its properties and can even generate
@@ -45,4 +39,3 @@ value.
 In order to change the title of the HTML document or the name of a
 property, you need to use the same namespace with the "label" name and
 the text you want to display as a value.
-
