@@ -1,8 +1,4 @@
-RESTful Web Services book
-=========================
-
-Introduction
-============
+# Introduction
 
 [This
 book](http://restlet.com/documentation/books#restful-web-services)
@@ -14,4 +10,3 @@ code](javadocs://jse/examples/books/rest/src.zip)
 of all the book examples that were reimplemented using Restlets. Those
 examples are also available and the Restlet distributions under the
 "src/org.restlet.example" directory.
-

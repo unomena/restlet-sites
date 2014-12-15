@@ -1,8 +1,4 @@
-XStream extension
-=================
-
-Introduction
-============
+# Introduction
 
 This extension provides and integration of Restlet with XStream.
 [XStream](http://xstream.codehaus.org/index.html)is
@@ -13,8 +9,7 @@ with this version of XStream is discouraged).
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/xstream/package-summary.html).
 
-Usage instructions
-==================
+# Usage instructions
 
 The extension comes with an XstreamRepresentation that can either:
 
@@ -87,8 +82,7 @@ Here is the matching client resource:
 Note that our Customer and Address classes are just regular serializable
 beans, with no special parent classes and no special annotations.
 
-Customization
-=============
+# Customization
 
 What is nice is that the automatically generated JSON and XML
 representations can be customized via XStream mechanisms such as manual
@@ -96,4 +90,3 @@ settings on the XstreamRepresentation\#xstream object or via XStream
 annotations on the serialized beans. More details on annotations are
 [available in XStream
 documentation](http://xstream.codehaus.org/annotations-tutorial.html).
-

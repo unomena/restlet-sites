@@ -1,8 +1,4 @@
-Prototype.js integration
-========================
-
-Introduction
-============
+# Introduction
 
 I will start this tutorial with a sample "microblog", that's a text
 based blog demonstrating the usage of AJAX in Restlet. Before we step
@@ -16,8 +12,7 @@ in,we should review some knowledge if you never know or forget it:
 
 This example needs to be updated for Restlet Framework 2.1. Help welcome
 
-Demo construction
-=================
+# Demo construction
 
 -   Web client: call background service via JSON protocol in RESTful way
     (GET/PUT/POST/DELETE).
@@ -31,8 +26,7 @@ Demo construction
     [Resource](javadocs://jse/api/org/restlet/resource/Resource.html)
     handles request and returns representation.
 
-DB4OSimpler.Class
------------------
+## DB4OSimpler.Class
 
 It's very clean from its name that it works as db4o function simpler.Its
 generalOperate method handles general operation with db4o:
@@ -183,8 +177,7 @@ method](http://developer.db4o.com/resources/api/db4o-java/com/db4o/Db4o.html#ope
 >             }
 >         }
 
-MicroblogApplication.Class
---------------------------
+## MicroblogApplication.Class
 
 It's a restful Micoblog Server which serves static files and
 resource(MicroblogResource) and exposes some services(static html and
@@ -245,8 +238,7 @@ custom finder to implement same function.***
 >             }
 >         }
 
-microblogAppInterface.js
-------------------------
+## microblogAppInterface.js
 
 This is a JavaScript file used in microblog.html file,it call functions
 which was exposed in server side:
@@ -343,8 +335,7 @@ which was exposed in server side:
 >                 );
 >         }
 
-MicroblogResource.Class
------------------------
+## MicroblogResource.Class
 
 >         package com.bjinfotech.restlet.practice.demo.microblog;
 >
@@ -507,8 +498,7 @@ MicroblogResource.Class
 >             }
 >         }
 
-Microblog.Class
----------------
+## Microblog.Class
 
 > package com.bjinfotech.restlet.practice.demo.microblog;
 >
@@ -524,27 +514,24 @@ Microblog.Class
 >
 > }
 
-Running Application
-===================
+# Running Application
 
 Running MicroblogApplication,and visit
 http://localhost:8182/www/microblog.html.
 
-### 
+##
 
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   [![running\_applicaion](Prototype.js%20integration-52_files/data.html "running_applicaion")](/learn/guide/2.1#/53-restlet/version/default/part/ImageData/data)
   [Click to enlarge](/learn/guide/2.1#/53-restlet/version/default/part/ImageData/data)
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Checkout Full Code
-==================
+# Checkout Full Code
 
 [microblog\_sourcecode](/learn/guide/2.1#/54-restlet/version/default/part/AttachmentData/data "microblog_sourcecode")
 (application/x-zip, 2.3 MB)
 
-How to custom Finder to replace TunnelService
-=============================================
+# How to custom Finder to replace TunnelService
 
 Sure, you can custom a finder to do what tunnelService do.\
  You can visit
@@ -585,7 +572,7 @@ javascript snippet in web page:
 
 >         ...
 >
->         
+>
 >         function callJSON() {
 >                new Ajax.Request('/ajax', {
 >                        parameters: 'name=PUT', method: 'put', putBody: "PUT BODY",
@@ -606,20 +593,17 @@ javascript snippet in web page:
 >                        }
 >                });
 >         }
->         
+>
 >
 >         ...
 
-Thanks
-======
+# Thanks
 
-**Evgeny Shepelyuk**:this guy gave me a lot of good advice!
+**Evgeny Shepelyuk**: this guy gave me a lot of good advice!
 
-Links
------
+# Links
 
 -   [Router](javadocs://jse/api/org/restlet/routing/Router.html)
 -   [Application](javadocs://jse/api/org/restlet/Application.html)
 -   [Resource](javadocs://jse/api/org/restlet/resource/Resource.html)
 -   [db4o](http://www.db4o.com/)
-

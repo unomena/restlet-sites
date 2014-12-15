@@ -1,8 +1,4 @@
-Spring extension - A complete example
-=====================================
-
-Introduction
-============
+# Introduction
 
 This example is a Spring-enabled but otherwise functionally equivalent
 version of the [bookmarks
@@ -23,8 +19,7 @@ support the init method and the injection of the dependency on the
 ObjectContainer, which is also configured in Spring. As expected, the
 domain objects User and Bookmark remained unchanged.
 
-Description
-===========
+# Description
 
 First, we show the configuration of the Restlet Component and top-level
 Router beans. The top-level Router is necessary only if an non-root
@@ -163,11 +158,11 @@ The following code fragment summarizes these changes.
 public class UserResource extends ServerResource {
 
     private ObjectContainer container;
-    
+
     // other instance variables
 
     public UserResource() { }
-    
+
     @Override
     public void init(Context context, Request request, Response response) {
         super.init(context, request, response);
@@ -182,7 +177,7 @@ public class UserResource extends ServerResource {
     public ObjectContainer getContainer() {
         return container;
     }
-    
+
     public void setContainer(ObjectContainer container) {
         this.container = container;
     }
@@ -190,4 +185,3 @@ public class UserResource extends ServerResource {
     // other methods
 }
 ~~~~
-

@@ -1,8 +1,4 @@
-Spring extension - Configuration of Restlet resources
-=====================================================
-
-Configuration of basic properties
-=================================
+# Configuration of basic properties
 
 Restlet resources support only limited configuration beyond injecting
 custom dependencies such as the ObjectContainer in the example above. To
@@ -21,16 +17,15 @@ like so:
 
 ~~~~ {.brush: .java}
     @Override
-    public void init(Context context, Request request, Response response) { 
-        final ResourcePropertyHolder backup = new ResourcePropertyHolder();  
+    public void init(Context context, Request request, Response response) {
+        final ResourcePropertyHolder backup = new ResourcePropertyHolder(); 
         BeanUtils.copyProperties(this, backup);
         super.init(context, request, response);
         BeanUtils.copyProperties(backup, this);
     }
 ~~~~
 
-Configuration of representation templates
-=========================================
+# Configuration of representation templates
 
 In addition, it would be quite useful if one could map media types to
 representation templates in Spring. In the following example, we explore
@@ -72,7 +67,7 @@ configuration is also handled by Spring.)
 <bean id="jsonRepresentationFactory"
     class="edu.luc.etl.restlet.spring.JsonRepresentationFactory" />
 
-<!-- omitted beans for specific MediaType static fields --> 
+<!-- omitted beans for specific MediaType static fields -->
 
 <bean id="freemarkerConfig"
     class="freemarker.template.Configuration">
@@ -102,4 +97,3 @@ Subversion at
 [http://luc-pervasive.googlecode.com/svn/trunk/webservices/ConfigurableRestletResource](http://luc-pervasive.googlecode.com/svn/trunk/webservices/ConfigurableRestletResource).
 Support for the missing configuration of representations tied to
 responses to non-GET requests is in the works.
-
