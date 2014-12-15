@@ -234,25 +234,25 @@ toc:
     - file: 01_log.md
       id: log
       link_url: /02_core/08_services/01_log.md
-      long-title: Log
-      title: Log
+      long-title: Log service
+      title: Log service
       url: /core/services/log
     - file: 02_status.md
       id: status
       link_url: /02_core/08_services/02_status.md
-      long-title: Status
+      long-title: Status service
       title: Status
       url: /core/services/status
     - file: 03_connector.md
       id: connector
       link_url: /02_core/08_services/03_connector.md
-      long-title: Connector
+      long-title: Connector service
       title: Connector
       url: /core/services/connector
     - file: 04_decoder.md
       id: decoder
       link_url: /02_core/08_services/04_decoder.md
-      long-title: Decoder
+      long-title: Decoder service
       title: Decoder
       url: /core/services/decoder
     - file: 05_metadata.md
