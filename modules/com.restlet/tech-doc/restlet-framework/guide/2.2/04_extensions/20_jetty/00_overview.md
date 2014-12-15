@@ -26,10 +26,9 @@ For additional details, please consult the
 
 # Usage example
 
-Please consult [connector configuration documentation](../../core/base/connectors)
+Please consult [connector configuration documentation](technical-resources/restlet-framework/guide/2.2/core/base/connectors/overview)
 
-HTTPS
------
+## HTTPS
 
 For general information on Jetty HTTPS/SSL configuration, please read
 [this document](http://wiki.eclipse.org/Jetty/Howto/Configure_SSL).

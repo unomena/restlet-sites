@@ -7,7 +7,7 @@ handling of calls for both client-side and server-side applications.
 This API is backed by the Restlet Engine and both are now shipped in a
 single JAR ("org.restlet.jar").
 
-![](/learn/tutorial/${restlet-version-minor}/images/tutorial01)
+![](images/tutorial01.png)
 
 This separation between the API and the implementation is similar to the
 one between the Servlet API and Web containers like Jetty or Tomcat, or

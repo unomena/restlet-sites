@@ -7,7 +7,7 @@
 
 -   [Blog post - Restlet supports OData, the Open Data Protocol](http://blog.restlet.com/2010/03/15/restlet-supports-odata-the-open-data-protocol/)
 -   [Javadocs - Restlet extension for OData](javadocs://jse/ext/org/restlet/ext/odata/package-summary.html)
--   [Advanced tutorial on the OData extension](tutorial "Tutorial")
+-   [Advanced tutorial on the OData extension](technical-resources/restlet-framework/guide/2.2/extensions/odata/tutorial "Tutorial")
 -   [OData - Protocol specification](http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)
 -   [MSDN - WCF Data Services](http://msdn.microsoft.com/en-us/data/bb931106.aspx)
 -   [Open Government Data Initiative project](http://ogdi.codeplex.com/)
@@ -20,7 +20,7 @@
 -   [Filter the set of the building permits](#filter-the-set-of-the-building-permits  "Filter the set of the building permits")
 -   [Conclusion](#conclusion "Conclusion")
 
-# Introduction
+# <a name="introduction"></a>Introduction
 
 REST can play a key role in order to facilitate the interoperability
 between Java and Microsoft environments. To demonstrate this, the
@@ -48,7 +48,7 @@ are samples of such data:
 -   Fire stations (“/FireStations”),
 -   etc.
 
-# Code generation
+# <a name="code-generation"></a>Code generation
 
 From the client perspective, if you want to handle the declared
 entities, you will have to create a class for each entity, defines their
@@ -59,11 +59,11 @@ the whole set of Java classes with correct types.
 
 Just note the URI of the target service, and specify the directory where
 you would like to generate the code via the command line:
-
+```
 ~~~~ {.brush: .java}
 java -jar org.restlet.ext.odata Generator http://ogdi.cloudapp.net/v1/dc/ ~/workspace/testADO
 ~~~~
-
+```
 Please note that this feature requires the use of the core Restlet, and
 additional dependencies such as Atom (used by OData services for all
 exchanges of data), XML (required by the Atom extension) and FreeMarker
@@ -80,30 +80,30 @@ names) must be present on the current directory:
 You can also used the full command line that includes the list of
 required archives for the class path argument (nb: take care of the OS
 specific classpath separator) and the name of the main class:
-
+```
 ~~~~ {.brush: .java}
 java -cp org.restlet.jar:org.restlet.ext.xml.jar:org.restlet.ext.atom.jar:org.restlet.ext.freemarker.jar:
  org.restlet.ext.odata.jar:org.freemarker.jar org.restlet.ext.odata.Generator
  http://ogdi.cloudapp.net/v1/dc/
  ~/workspace/testADO
 ~~~~
-
+```
 or programmatically:
-
+```
 ~~~~ {.brush: .java}
 String[] arguments =
       { "http://ogdi.cloudapp.net/v1/dc/",
         "/home/thierry/workspace/restlet-2.0/odata/src" };
 Generator.main(arguments);
 ~~~~
-
+```
 Please note that this feature requires the use of the core Restlet, and
 additional dependencies such as Atom (used by OData services for all
 exchanges of data), XML (required by the Atom extension) and FreeMarker
 (used for the files generation). They must rely on the classpath.
 
 This will generate the following Java classes and directory:
-
+```
 ~~~~ {.brush: .java}
 ogdiDc/
   +-- AmbulatorySurgicalCenter.java
@@ -112,7 +112,7 @@ ogdiDc/
 
 OgdiDcSession.java
 ~~~~
-
+```
 The classes that correspond to entities are generated in their
 corresponding package (in our case: “ogdiDc”), as defined by the meta
 data of the target OData service.
@@ -127,11 +127,11 @@ the client and the server is still stateless.
 We have finished for now of the theoretical aspects; let's see how to
 use the generated classes.
 
-# Get the two first building permits
+# <a name="get-the-two-first-building-permits"></a>Get the two first building permits
 
 The code below gets the two first entities and displays some of their
 properties. It will display this kind of output on the console:
-
+```
 ~~~~ {.brush: .java}
 *** buildingPermit
 Owner   :DARYL ADAIR
@@ -147,10 +147,10 @@ District:FIFTH
 Address :144 U ST NW
 State   :DC
 ~~~~
-
+```
 The listing below shows how to rRetrieve the two first “BuildingPermits”
 entities:
-
+```
 ~~~~ {.brush: .java}
 OgdiDcSession session = new OgdiDcSession();
 Query<BuildingPermit> query =
@@ -168,7 +168,7 @@ if (query != null) {
    }
 }
 ~~~~
-
+```
 The first step is the creation of a new session. This is the only
 required action, and it must be done once, but prior to any other one.
 Then, as we want to get a set of “BuildingPermit”, we just create a new
@@ -181,12 +181,12 @@ receive as a result a AtomXML feed document. This document is parsed by
 the query which provides the result as an Iterator. Finally, we can loop
 over the iterator and access to each “BuildingPermit” instance.
 
-# Filter the set of the building permits
+# <a name="filter-the-set-of-the-building-permits"></a>Filter the set of the building permits
 
 The code below gets the five first entities located in the city of
 Washington and more precisely on the fifth district and displays some of
 their properties. It will display this kind of output on the console:
-
+```
 ~~~~ {.brush: .java}
 *** building permit
 Owner   :RUTH D PROCTOR
@@ -208,10 +208,10 @@ Address :336 ADAMS ST NE
 Owner   :CARL J HAMPTON
 Address :2925 SOUTH DAKOTA AVE NE
 ~~~~
-
+```
 The listing below shows how to retrieve the five first “BuildingPermits”
 entities in the fifht district of Washington:
-
+```
 ~~~~ {.brush: .java}
 Query<BuildingPermit> search =
    session.createBuildingPermitQuery("/BuildingPermits")
@@ -227,7 +227,7 @@ if (search != null) {
    }
 }
 ~~~~
-
+```
 As we want to get a set of “BuildingPermit”, we just create a new query
 and specify the desired data. In addition we add a filter based on the
 expression of two criteria: the name of the city and the district. This
@@ -239,7 +239,7 @@ parameters. As for the previous example, the received AtomXML feed
 document is parsed which produces the result as an Iterator. Finally, we
 can loop over the iterator and access to each “BuildingPermit” instance.
 
-# Conclusion
+# <a name="conclusion"></a>Conclusion
 
 This document illustrates what can be done with the Restlet extension
 for the OData services. We hope that you found it simple and useful to
