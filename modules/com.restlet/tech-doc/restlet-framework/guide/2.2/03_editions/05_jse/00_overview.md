@@ -6,7 +6,7 @@ Standard Edition).
 This edition is aimed for development and deployment of Restlet
 applications inside a regular Java virtual machine using the internal
 HTTP server of the Restlet Engine, or a pluggable one such as Jetty.
-[This page](../../core/base/connectors "Connectors")
+[This page](technical-resources/restlet-framework/guide/2.2/core/base/connectors "Connectors")
 contains a detailed list of available HTTP server connectors.
 
 # Getting started
@@ -21,7 +21,7 @@ resource that says "hello, world" and run it.
 4.  [Run as a standalone application](#run-as-a-standalone-java-application)
 5.  [Conclusion](#conclusion)
 
-## What do I need?
+## <a name="what-do-i-need"></a>What do I need?
 
 We assume that you have a development environment set up and
 operational, and that you already have installed the Java 1.5 (or
@@ -30,12 +30,12 @@ select one of the available distributions of the [Restlet Framework
 ${restlet-version-minor}](http://restlet.com/downloads/current). Make sure you
 add org.restlet.jar in your Build path.
 
-## The "hello, world" application
+## <a name="the-hello-world-application"></a>The "hello, world" application
 
 Let's start with the core of a REST application: the Resource. Here is
 the code of the single resource defined by the sample application.
 Copy/paste the code in your "HelloWorldResource" class.
-
+```
 ~~~~ {.brush: .java}
 package firstSteps;
 
@@ -54,10 +54,10 @@ public class HelloWorldResource extends ServerResource {
 
 }
 ~~~~
-
+```
 Then, create the sample application. Let's call it
 "FirstStepsApplication" and copy/paste the following code:
-
+```
 ~~~~ {.brush: .java}
 package firstSteps;
 
@@ -83,8 +83,8 @@ public class FirstStepsApplication extends Application {
 
 }
 ~~~~
-
-## Run as a standalone Java application
+```
+## <a name="run-as-a-standalone-java-application"></a>Run as a standalone Java application
 
 A Restlet application can run inside a regular Java virtual machine or
 Java Runtime Environment (JRE), using a single "org.restlet.jar" JAR in
@@ -94,7 +94,7 @@ associate a HTTP server connector.
 Create also a main class, copy/paste the following code which aims at
 defining a new HTTP server listening on port 8182 and delegating all
 requests to the "FirstStepsApplication".
-
+```
 ~~~~ {.brush: .java}
 public static void main(String[] args) throws Exception {  
     // Create a new Component.  
@@ -111,7 +111,7 @@ public static void main(String[] args) throws Exception {
     component.start();  
 }      
 ~~~~
-
+```
 Once you have launched the main class, if you can open your favorite web
 browser, and gently type the following URL:
 [http://localhost:8182/firstSteps/hello](http://localhost:8182/firstSteps/hello)
@@ -124,11 +124,11 @@ You can find the sources of this sample application in the
 (application/zip, 1.4 kB)"
 file.
 
-## Conclusion
+## <a name="conclusion"></a>Conclusion
 
 We hope you that enjoyed these first steps and encourage you to check
 [the equivalent page in the Java EE
-edition](../jee/ "Restlet edition for Java EE")
+edition](technical-resources/restlet-framework/guide/2.2/editions/jee/overview "Restlet edition for Java EE")
 for deployments of the same application in Servlet containers. This can
 also be a convenient way to deploy your Restlet application in an
 existing Java EE application server available in your organization.

@@ -14,13 +14,13 @@ The rest of this page should get you started with the Restlet Framework,
 Java EE edition, in less than 10 minutes. It explains how to create a
 resource that says "hello, world" and run it.
 
-1.  [What do I need?](#what_do_i_need)
+1.  [What do I need?](#what-do-i-need)
 2.  [The "hello, world" application](#the-hello-world-application)
 3.  [Run in a Servlet container](#run-in-a-servlet-container)
 4.  [Run as a standalone application](#run-as-a-standalone-java-application)
 5.  [Conclusion](#conclusion)
 
-## What do I need?
+## <a name="what-do-i-need"></a>What do I need?
 
 We assume that you have a development environment set up and
 operational, and that you already have installed the Java 1.5 (or
@@ -28,12 +28,12 @@ higher). In case you haven't downloaded the Restlet Framework yet,
 select one of the available distributions of the [Restlet Framework
 ${restlet-version-minor}](http://restlet.com/downloads/current).
 
-## The "hello, world" application
+## <a name="the-hello-world-application"></a>The "hello, world" application
 
 Let's start with the core of a REST application: the Resource. Here is
 the code of the single resource defined by the sample application.
 Copy/paste the code in your "HelloWorldResource" class.
-
+```
 ~~~~ {.brush: .java}
 package firstSteps;
 
@@ -52,10 +52,10 @@ public class HelloWorldResource extends ServerResource {
 
 }
 ~~~~
-
+```
 Then, create the sample application. Let's call it
 "FirstStepsApplication" and copy/paste the following code:
-
+```
 ~~~~ {.brush: .java}
 package firstSteps;
 
@@ -81,8 +81,8 @@ public class FirstStepsApplication extends Application {
 
 }
 ~~~~
-
-## Run in a Servlet container
+```
+## <a name="run-in-a-servlet-container"></a>Run in a Servlet container
 
 Let's now deploy this Restlet application inside your favorite Servlet
 container. Create a new Servlet Web application as usual, add a
@@ -94,7 +94,7 @@ in. Add the archives listed below into the directory of librairies
 -   org.restlet.ext.servlet.jar
 
 Then, update the "web.xml" configuration file as follow:
-
+```
 ~~~~ {.brush: .java}
 <?xml version="1.0" encoding="UTF-8"?>  
 <web-app id="WebApp_ID" version="2.4"  
@@ -122,22 +122,22 @@ Then, update the "web.xml" configuration file as follow:
    </servlet-mapping>  
 </web-app>  
 ~~~~
-
+```
 Finally, package the whole as a WAR file called for example
 "firstStepsServlet.war" and deploy it inside your Servlet container.
 Once you have launched the Servlet container, open your favorite web
 browser, and enter the following URL:
-
+```
 ~~~~ {.brush: .java}
 http://<your server name>:<its port number>/firstStepsServlet/hello
 ~~~~
-
+```
 The server will happily welcome you with the expected "hello, world"
 message. You can find the WAR file (packaged with archives taken from
 Restlet Framework 2.0 Milestone 5) in the "First steps application"
 files.
 
-## Run as a standalone Java application
+## <a name="run-as-a-standalone-java-application"></a>Run as a standalone Java application
 
 A Restlet application cannot only run inside a Servlet container, but
 can also be run as a standalone Java application using a single
@@ -146,7 +146,7 @@ can also be run as a standalone Java application using a single
 Create also a main class, copy/paste the following code wich aims at
 defining a new HTTP server listening on port 8182 and delegating all
 requests to the "FirstStepsApplication".
-
+```
 ~~~~ {.brush: .java}
 public static void main(String[] args) throws Exception {  
     // Create a new Component.  
@@ -163,7 +163,7 @@ public static void main(String[] args) throws Exception {
     component.start();  
 }      
 ~~~~
-
+```
 Once you have launched the main class, if you can open your favorite web
 browser, and gently type the following URL:
 http://localhost:8182/firstSteps/hello, the server will happily welcome
@@ -173,7 +173,7 @@ is correct and that no other program is currently using the port 8182.
 You can find the sources of this sample application in the "First steps
 application" files.
 
-## Conclusion
+## <a name="conclusion"></a>Conclusion
 
 We hope you that enjoyed these first steps and encourage you to check
 [the equivalent page in the Java SE edition](../jse/ "Restlet edition for Java SE")
