@@ -1,4 +1,4 @@
-- [In version 2.2](2.2/00_overview.md)
-- [In version 2.1](2.1/00_overview.md)
-- [In version 2.0](2.0/00_overview.md)
-- [In version 1.1](1.1/00_overview.md)
+- [In version 2.2](technical-resources/restlet-framework/guide/introduction/whats-new/01_2.2/overview "What's new in version 2.2")
+- [In version 2.1](technical-resources/restlet-framework/guide/introduction/whats-new/01_2.1/overview "What's new in version 2.2")
+- [In version 2.0](technical-resources/restlet-framework/guide/introduction/whats-new/01_2.0/overview "What's new in version 2.2")
+- [In version 1.1](technical-resources/restlet-framework/guide/introduction/whats-new/01_1.1/overview "What's new in version 2.2")

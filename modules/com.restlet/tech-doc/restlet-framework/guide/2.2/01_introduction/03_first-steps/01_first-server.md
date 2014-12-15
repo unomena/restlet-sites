@@ -9,6 +9,7 @@ and return a simple string representation "hello, world" as plain text.
 Note that the FirstServerResource class extends the base
 org.restlet.resource.ServerResource class provided by the Restlet API:
 
+```
 ~~~~ {.brush: .java}
 public class FirstServerResource extends ServerResource {  
 
@@ -24,7 +25,7 @@ public class FirstServerResource extends ServerResource {
 
 }  
 ~~~~
-
+```
 If you run this code and launch your server, you can open a Web browser
 and hit the
 [http://localhost:8182](http://localhost:8182/).
@@ -42,4 +43,4 @@ API,
 all REST and HTTP concepts to a set of Java classes, interfaces and
 annotations.
 
-[Let's now illustrate how to use this API on the client-side](first-client.md "First client").
+[Let's now illustrate how to use this API on the client-side](technical-resources/restlet-framework/guide/introduction/first-steps/first-client "First client").
