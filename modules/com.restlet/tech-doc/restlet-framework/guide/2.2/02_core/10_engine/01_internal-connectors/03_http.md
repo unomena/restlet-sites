@@ -1,5 +1,4 @@
-HTTP connector (internal)
-=========================
+# HTTP connector (internal)
 
 -   HTTP client : supporting chunked encoding, persistent connections
     and asynchronous processing, but not HTTPS

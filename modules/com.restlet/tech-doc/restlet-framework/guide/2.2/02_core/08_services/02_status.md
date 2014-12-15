@@ -1,8 +1,4 @@
-Status service
-==============
-
-Introduction
-============
+# Introduction
 
 This service handles error statuses. If an exception is thrown within
 your application or Restlet code, it will be intercepted by this service
@@ -28,8 +24,7 @@ subclass of StatusService that overrides some or all of the methods
 mentioned above. Then, just create a instance of your class and set it
 on your Component or Application via the setStatusService() methods.
 
-Display error pages
-===================
+# Display error pages
 
 Another common requirement is the ability to customize the status pages
 returned when something didn't go as expected during the call handling.
@@ -45,4 +40,3 @@ create a subclass of StatusService and override the
 getRepresentation(Status, Request, Response) method. Then just set an
 instance of your custom service to the appropriate "statusService"
 property.
-

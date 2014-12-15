@@ -1,5 +1,4 @@
-CLAP connector
-==============
+# CLAP connector
 
 CLAP (ClassLoader Access Protocol) is a custom scheme to access to
 representations via classloaders (e.g.:
@@ -15,4 +14,3 @@ kinds of authority :
 
 [CLAP client commons
 parameters](javadocs://jse/engine/index.html?org/restlet/engine/local/ClapClientHelper.html)
-
