@@ -1,4 +1,12 @@
-# How to use Restlet in an Applet ?
+# Table of contents
+
+1.  [How to use Restlet in an Applet](#how-to-use-restlet-in-an-applet "How to use Restlet in an Applet")
+2.  [Solve 405 status code responses](#solve-405-status-code-responses "Solve 405 status code responses")
+3.  [How to trace the internal client and server connectors?](#how-to-trace-the-internal-client-and-server-connectors "How to trace the internal client and server connectors?")
+4.  [How do I implement the traditional MVC pattern?](#how-do-i-implement-the-traditional-mvc-pattern "How do I implement the traditional MVC pattern?")
+
+
+# <a name="how-to-use-restlet-in-an-applet"></a>How to use Restlet in an Applet
 
 In version 2.0, the Restlet engine creates its own classloader, instance
 of the EngineClassLoader class. This is fine most of the time, except
@@ -21,7 +29,7 @@ Now you just need to call this line before using the Restlet API:
 
     Engine.setInstance(new AppletEngine());
 
-# Solve 405 status code responses
+# <a name="solve-405-status-code-responses"></a>Solve 405 status code responses
 
 Having set up your server resource with annotated methods, you're ready
 to send it requests and eager to get JSON, XML representations of its
@@ -40,7 +48,7 @@ server resource which is (A/) properly annotated, and (B/) having a
 compatible return type. the case (A/) is easy to understand, let's focus
 on case (B/). This may happen when you server resource use annotation
 with media type parameters:
-
+```
 ~~~~ {.brush: .java}
 public class MyResource extends ServerResource {
    @Get("html")
@@ -49,7 +57,7 @@ public class MyResource extends ServerResource {
    }
 }
 ~~~~
-
+```
 In this case, the client requires a JSON representation but the server
 resource is not able to generate it.
 
@@ -60,7 +68,7 @@ project. Did you reference the archive of the right Restlet extension
 (such as the Jackson extension) and the archives of its library
 dependencies?
 
-# How to trace the internal client and server connectors?
+# <a name="how-to-trace-the-internal-client-and-server-connectors"></a>How to trace the internal client and server connectors?
 
 These connectors are configured via the parameter called "tracing" of
 their context (see the
@@ -82,7 +90,7 @@ connector of a resource:
     ClientResource resource = new ClientResource("http://localhost:8182/<resource>");
     resource.setNext(client);
 
-# How do I implement the traditional MVC pattern?
+# <a name="how-do-i-implement-the-traditional-mvc-pattern"></a>How do I implement the traditional MVC pattern?
 
 There is only a rough correspondence between the [MVC pattern](http://en.wikipedia.org/wiki/Model-view-controller) and the Restlet framework; some [debate](http://n2.nabble.com/Restlet-MVC-tp1560691p1561792.html) exists as to whether it should be employed at all. For those who wish to follow the MVC pattern with Restlet, here is the basic proposition:
 

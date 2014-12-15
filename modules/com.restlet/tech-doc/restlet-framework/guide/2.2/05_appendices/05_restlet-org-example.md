@@ -8,7 +8,7 @@
 6.  [Redirection application](#redirection-application "Redirection application")
 7.  [Conclusion](#conclusion "Conclusion")
 
-# Introduction
+# <a name="introduction"></a>Introduction
 
 The Restlet web site that you are currently navigating is powered by the
 Noelios Restlet Engine, the reference implementation of the Restlet API.
@@ -18,7 +18,7 @@ Restlets is very simple.
 
 This page needs to be updated to use the new Restlet ${restlet-version-minor} API
 
-# Imported classes
+# <a name="imported-classes"></a>Imported classes
 
 First, let's declare the imported classes required to support our web
 component.
@@ -28,7 +28,7 @@ component.
     import org.restlet.data.Protocol;
 
 
-# Declaring the Main class
+# <a name="declaring-the-main-class"></a>Declaring the Main class
 
 Now, we declare the main class, called the WebComponent, extending the
 org.restlet.Component. This component contains several virtual hosts and
@@ -43,7 +43,7 @@ associated applications.
           ...
 
 
-# Main method
+# <a name="main-method"></a>Main method
 
 Below, you have the main method that is invoked by our startup scripts.
 Note that we require a few arguments in order to parameterize several
@@ -84,7 +84,7 @@ files.
     }
 
 
-# Build the component
+# <a name="build-the-component"></a>Build the component
 
 Now we need to build the component containing our web applications. As
 we are handling several domain names (www.noelios.com, restlet.org,
@@ -197,7 +197,7 @@ virtual hosts.
     }
 
 
-# Redirection Application
+# <a name="redirection-application"></a>Redirection Application
 
 In addition to the main WebComponent class, we also rely on four
 application classes. Let's have a look at the RedirectApplication which
@@ -246,7 +246,7 @@ is generic and reused several times.
     }
 
 
-# Conclusion
+# <a name="conclusion"></a>Conclusion
 
 In term of coding, that's about all that we use. In addition, we
 configure standard JDK logging properties in order to write a web log
