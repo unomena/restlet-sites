@@ -1,8 +1,4 @@
-Setting up a project
-====================
-
-Client-side configuration
-=========================
+# Client-side configuration
 
 To use Restlet on the client side of your GWT application:
 
@@ -29,8 +25,7 @@ and
 modules. You can also check the [full Javadocs of the API
 online](javadocs://gwt/api/).
 
-Server-side configuration
-=========================
+# Server-side configuration
 
 If you would like to use Restlet on the server-side as well, you must
 also modify GWT's `web.xml` file in the `war/WEB-INF` directory. 
@@ -54,7 +49,7 @@ side.
               <param-value>application</param-value>
             </init-param>
         </servlet>
-        
+
         <servlet-mapping>
             <servlet-name>restlet</servlet-name>
             <url-pattern>/rest/*</url-pattern>
@@ -67,4 +62,3 @@ For *application*, supply the name of your Restlet Application, e.g.
 `com.mycompany.server.TestApplication`.  You can also supply a
 *component* via an `org.restlet.component` parameter, or any other
 permitted ServerServlet configuration parameter.
-

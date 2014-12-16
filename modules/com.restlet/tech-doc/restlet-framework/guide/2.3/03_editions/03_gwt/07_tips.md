@@ -1,8 +1,4 @@
-Tips and tricks
-===============
-
-Responses with no entity
-========================
+# Responses with no entity
 
 This tip applies in the case of applications that run in GWT hosted
 mode. \
@@ -18,4 +14,3 @@ If you face this problem, a simple workaround is just to add a
 reasonably sized entity to the response. For example, you can add a
 simple filter at the top of your hierarchy of nodes which ensure that an
 entity is sent back to the client.
-
