@@ -26,7 +26,7 @@ related features. It is based on regular Java Cryptography APIs
  In addition, we can take advantage of SSL/HTTPS features to encrypt
 communications.
 
-### **1)****org.restlet.security** package
+### **1) org.restlet.security package**
 
 This is the generic security API for Restlet dealing with authentication
 and authorization. It doesn't contain actual implementations for
@@ -37,13 +37,13 @@ Restlet engine, such as these ones in the [crypto
 extension](github://org.restlet.ext.crypto/src/org/restlet/ext/crypto/internal/)
 (note the "internal" packages are hidden from public Javadocs).
 
-### **2) org.restlet.engine.http.security** package
+### **2) org.restlet.engine.http.security package**
 
 This package contains one class for HTTP Basic support, not really
 encryption related. This was removed in version 2.1 and the
 HttpBasicHelper was moved into org.restlet.engine.security.
 
-### **3) org.restlet.engine.security** package
+### **3) org.restlet.engine.security package**
 
 This package contains SSL related classes, but only in version 2.0. In
 version 2.1 those classes were moved to the org.restlet.ext.ssl
