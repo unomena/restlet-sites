@@ -1,19 +1,13 @@
-ConverterService
-================
-
-Introduction
-============
+# Introduction
 
 The converter service of an application handles the conversion between
 representations (received by a resource for example) and beans or POJOs.
 It can be used either programmatically or transparently thanks to
 annotated Restlet resources.
 
-Description
-===========
+# Description
 
-Server-side usage
------------------
+## Server-side usage
 
 Let's describe how this service is typically used with a ServerResource
 that supports GET and PUT methods as below:
@@ -25,7 +19,7 @@ that supports GET and PUT methods as below:
     }
 
     @Put()
-    // Handles a Web form in order to set the full state of the resource. 
+    // Handles a Web form in order to set the full state of the resource.
     public void store(Form form){
        [...]
     }
@@ -36,8 +30,7 @@ In this case, the aim of the converter service is to:
 -   convert a Web form into a Form object and pass it to the store
     method.
 
-Client-side usage
------------------
+## Client-side usage
 
 On the client-side you can leverage the service either by creating a
 proxy of an annotated resource interface, via ClientResource.wrap(...)
@@ -61,8 +54,7 @@ document, you can just do:
 And that's all you need to do, as long as you have the
 org.restlet.ext.xml.jar in your classpath!
 
-Internals of the service
-------------------------
+## Internals of the service
 
 A converter service does not contain the conversion logic itself. It
 leverages a set of declared converters which are subclasses of
@@ -89,11 +81,9 @@ example, the FreeMarker extension contains in the
 "src/META-INF/services" directory such text file with the following line
 of text: "org.restlet.ext.freemarker.FreemarkerConverter".
 
-Available converters
-====================
+# Available converters
 
-Conversion from representations to objects
-------------------------------------------
+## Conversion from representations to objects
 
 Module | From Representations with media type | To Object
 ------ | ------------------------------------ | ---------
@@ -113,8 +103,7 @@ WADL | APPLICATION\_WADL | org.restlet.ext.wadl.ApplicationInfo
 XML | APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML | org.w3c.dom.Document, org.restlet.ext.xml.DomRepresentation, org.restlet.ext.xml.SaxRepresentation
 XStream | APPLICATION\_ALL\_XML, APPLICATION\_XML, TEXT\_XML, APPLICATION\_JSON | (requires Jettison dependency) java.lang.Object, org.restlet.ext.xstream.XStreamRepresentation
 
-Conversion from objects to representations
-------------------------------------------
+## Conversion from objects to representations
 
 Module | From Object | To Representations with media type
 ------ | --------- | ------------------------------------

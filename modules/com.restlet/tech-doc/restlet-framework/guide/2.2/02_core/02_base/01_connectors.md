@@ -1,6 +1,4 @@
-# Connectors
-
-## Introduction
+# Introduction
 
 A connector in the REST architecture style is a software element that
 manages network communication for a component, typically by implementing
@@ -15,14 +13,14 @@ document will describe how to add a connector to your application, how
 to configure it and will give you the list of available server and
 client connectors.
 
-## Add a connector to your application
+# Add a connector to your application
 
 All connectors and their dependencies are shipped with the Restlet
 distribution by the way of jar files. Adding a connector to your
 application is as simple as adding the archives of the chosen connector
 and its dependencies to the classpath.
 
-## Configuration
+# Configuration
 
 Each connector looks for its configuration from its context. The latter
 provides a list of modifiable parameters, which is the right place to
@@ -37,7 +35,7 @@ are the [commons
 parameters](javadocs://jse/engine/org/restlet/engine/connector/BaseHelper.html)
 dedicated to internal connectors.
 
-### Server connectors
+## Server connectors
 
 Here are the [commons
 parameters](javadocs://jse/engine/org/restlet/engine/adapter/HttpServerHelper.html)
@@ -56,7 +54,7 @@ component's server connector.
     server.getContext().getParameters().add("useForwardedForHeader", "true");
     c.start();
 
-### Client connectors
+## Client connectors
 
 Here are the [commons parameters](javadocs://jse/engine/org/restlet/engine/adapter/HttpClientHelper.html)
 dedicated to non-internal HTTP client connectors.
@@ -92,25 +90,25 @@ just set it:
     ClientResource cr = new ClientResource("http://www.example.com/");
     cr.setNext(client);
 
-## List of available connectors
+# List of available connectors
 
-### Server connectors
+## Server connectors
 
 Extension | Version | Protocols | Asynchronous | Comment
 --------- | ------- | --------- | ------------ | ---------
-[Internal](../../../core/engine/internal-connectors "Internal connectors") | 2.2 | HTTP, HTTPS, RIAP | No | Recommended for development and lightweight deployments
-[Jetty](../../../extensions/jetty "Eclipse Jetty extension") | 8.1 | HTTP, HTTPS, AJP | No | Recommended for robust and scalable deployments
-[NIO](../../../extensions/nio "NIO extension") | 2.2 | HTTP, HTTPS | Yes | Fully asynchronous, preview mode
-[Simple](../../../extensions/simple "Simple Framework extension") | 5.1 | HTTP, HTTPS | No | Recommended for lightweight and scalable deployments
-[Servlet](../../../extensions/servlet "Servlet extension") | 3.0 | HTTP, HTTPS, AJP | No | Recommended for deployments inside Java EE servers
+[Internal](technical-resources/restlet-framework/guide/2.2/core/engine/internal-connectors "Internal connectors") | 2.2 | HTTP, HTTPS, RIAP | No | Recommended for development and lightweight deployments
+[Jetty](technical-resources/restlet-framework/guide/2.2/extensions/jetty "Eclipse Jetty extension") | 8.1 | HTTP, HTTPS, AJP | No | Recommended for robust and scalable deployments
+[NIO](technical-resources/restlet-framework/guide/2.2/extensions/nio "NIO extension") | 2.2 | HTTP, HTTPS | Yes | Fully asynchronous, preview mode
+[Simple](technical-resources/restlet-framework/guide/2.2/extensions/simple "Simple Framework extension") | 5.1 | HTTP, HTTPS | No | Recommended for lightweight and scalable deployments
+[Servlet](technical-resources/restlet-framework/guide/2.2/extensions/servlet "Servlet extension") | 3.0 | HTTP, HTTPS, AJP | No | Recommended for deployments inside Java EE servers
 
-### Client connectors
+## Client connectors
 
 Extension | Version | Protocols | Asynchronous | Proxy | Comment
 --------- | ------- | --------- | ------------ | ----- | -------
-[Internal](../../../core/engine/internal-connectors "Internal connectors") | 2.2 | CLAP, FILE, FTP, HTTP, HTTPS, RIAP | No | Yes | Recommended for development and lightweight deployments
-[Apache HTTP Client](../../../extensions/httpclient "Apache HTTP Client extension") | 4.3 | HTTP, HTTPS | No | Yes | Recommended for robust and scalable deployments
-[JavaMail](../../../extensions/javamail "JavaMail extension") | 1.4 | SMTP, SMTPS, POP, POPS | No |  No | Stable
-[JDBC](../../../extensions/jdbc "JDBC extension") | 3.0 | JDBC | No | No | Stable
-[Lucene Solr](../../../extensions/lucene "Lucene extension") | 4.6 | SOLR | No | No | Stable
-[NIO](../../../extensions/nio "NIO extension") | 2.2 | HTTP, HTTPS | Yes | Yes | Fully asynchronous, preview mode
+[Internal](technical-resources/restlet-framework/guide/2.2/core/engine/internal-connectors "Internal connectors") | 2.2 | CLAP, FILE, FTP, HTTP, HTTPS, RIAP | No | Yes | Recommended for development and lightweight deployments
+[Apache HTTP Client](technical-resources/restlet-framework/guide/2.2/extensions/httpclient "Apache HTTP Client extension") | 4.3 | HTTP, HTTPS | No | Yes | Recommended for robust and scalable deployments
+[JavaMail](technical-resources/restlet-framework/guide/2.2/extensions/javamail "JavaMail extension") | 1.4 | SMTP, SMTPS, POP, POPS | No |  No | Stable
+[JDBC](technical-resources/restlet-framework/guide/2.2/extensions/jdbc "JDBC extension") | 3.0 | JDBC | No | No | Stable
+[Lucene Solr](technical-resources/restlet-framework/guide/2.2/extensions/lucene "Lucene extension") | 4.6 | SOLR | No | No | Stable
+[NIO](technical-resources/restlet-framework/guide/2.2/extensions/nio "NIO extension") | 2.2 | HTTP, HTTPS | Yes | Yes | Fully asynchronous, preview mode

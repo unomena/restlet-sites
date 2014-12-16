@@ -1,5 +1,3 @@
-# Local connectors
-
 The "local" Reference instances can be easily created via the
 [LocalReference](javadocs://jse/api/index.html?org/restlet/data/LocalReference.html)
 class. \

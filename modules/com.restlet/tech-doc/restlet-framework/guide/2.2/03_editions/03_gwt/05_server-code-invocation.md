@@ -1,8 +1,4 @@
-Invoking server side code
-=========================
-
-Description
-===========
+# Description
 
 The Restlet API for GWT is a subset of the Restlet API. It is a subset
 because, as mentioned above, parts of the Restlet API have been deleted,
@@ -40,4 +36,3 @@ closeButton.addClickHandler(new ClickHandler() {
     }
 });
 ~~~~
-

@@ -1,8 +1,8 @@
-# Getting parameter values
+# Introduction
 
 This is a common need to retrieve data, especially "key=value" pairs from the query, the entity, or the cookies. Here are some sample lines of code which illustrate this feature.
 
-## Getting values from a web form
+# Getting values from a web form
 
 The web form is in fact the entity of the POST request sent to the
 server, thus you have access to it via request.getEntity().
@@ -14,17 +14,17 @@ server, thus you have access to it via request.getEntity().
         System.out.println("/" + parameter.getValue());
     }
 
-## Getting values from a query
+# Getting values from a query
 
 The query is a part of the identifier (the URI) of the request resource. Thus, you have access to it via request.getResourceRef().getQuery(). There is a shortcut which allows to have a list of all "key=value" pairs:
 
-    Form form = request.getResourceRef().getQueryAsForm(); 
+    Form form = request.getResourceRef().getQueryAsForm();
     for (Parameter parameter : form) {
         System.out.print("parameter " + parameter.getName());
         System.out.println("/" + parameter.getValue());
     }
 
-## Getting values from the cookies
+# Getting values from the cookies
 
 Cookies are directly available from the request via the request.getCookies() method. It returns a collection of "Cookie" objects which extends the Parameter class and contains additional attributes:
 
@@ -35,4 +35,3 @@ Cookies are directly available from the request via the request.getCookies() met
         System.out.println("path = " + cookie.getPath());
         System.out.println("version = " + cookie.getVersion());
     }
-

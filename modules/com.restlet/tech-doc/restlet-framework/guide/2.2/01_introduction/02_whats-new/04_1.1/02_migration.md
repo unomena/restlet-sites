@@ -1,8 +1,4 @@
-Migration guide from Restlet 1.0 to 1.1
-=======================================
-
-Introduction
-============
+# Introduction
 
 This guide intends to explain the main differences between the Restlet
 1.0 and 1.1 releases and to help you migrate your existing applications.
@@ -18,11 +14,9 @@ It presents a set of important modifications related to:
 -   Miscellaneous
 -   List of deprecations (mainly renamed methods)
 
-Important breaking changes
-==========================
+# Important breaking changes
 
-Handling of context
--------------------
+## Handling of context
 
 The handling of Context has been significantly refactored in the 1.1
 release due to security reasons. In release 1.0, a Component shared its
@@ -54,8 +48,7 @@ the component to the application by the default implementation of the
 Context\#createChildContext() method which is typically used to prepare
 the Application's context based on the parent Component's context.
 
-Sample code
------------
+## Sample code
 
 When a component instantiate an Application, or any kind of Restlet, it
 is no more mandatory to specify the context. Taking a simple component
@@ -94,8 +87,7 @@ The application is instantiated with a child context, not the component
 context. Otherwise, your application might not start properly and a log
 trace will warn you.
 
-Handling of resources
-=====================
+# Handling of resources
 
 Some new boolean attributes have been added on the resource class. They
 help to specify the state of a Resource instance.
@@ -111,8 +103,7 @@ help to specify the state of a Resource instance.
     will answer to GET and HEAD HTTP methods with a "method not allowed"
     response status.
 
-Usage of the Servlet Adapter
-============================
+# Usage of the Servlet Adapter
 
 -   The ServletConverter now also copy the Servlet's request attributes
     into the Restlet attributes map.
@@ -126,8 +117,7 @@ Usage of the Servlet Adapter
     javadocs](javadocs://1.1/all/ext/com/noelios/restlet/ext/servlet/ServerServlet.html)
     for more details.
 
-Accessing current objects
-=========================
+# Accessing current objects
 
 Some recurrent need is to access current objects such as the current
 application, the current context, etc. Although, the API of some objects
@@ -152,8 +142,7 @@ context using methods such as
 or
 [Handler.getContext()](javadocs://1.1/all/api/org/restlet/Handler.html#getContext%28%29).
 
-Accessing the original resource's reference
-===========================================
+# Accessing the original resource's reference
 
 New features have been added to the tunnel filter. Some of them allow
 you to automatically update the request according to some parameters
@@ -162,8 +151,7 @@ case, it happens that the resource's reference is updated. If you still
 want to access the original reference, a new attribute has been added to
 the Request object called "originalRef'".
 
-Handling of statuses and exceptions
-===================================
+# Handling of statuses and exceptions
 
 A new "ResourceException" class has been introduced. Basically, it
 encapsulates a status and the optional cause of a checked exception.
@@ -171,8 +159,7 @@ This exception may be thrown by a Resource instance when handling GET,
 POST, PUT, etc requests. This exception can be handled by the status
 service when rendering error statuses.
 
-Miscellaneous
-=============
+# Miscellaneous
 
 This section lists several updates that may have an impact on your
 existing code
@@ -201,11 +188,9 @@ existing code
     getEntityAsForm() are now caching the result representation for
     easier reuse in a Restlet filters chain.
 
-Deprecations
-============
+# Deprecations
 
-Resource class
---------------
+## Resource class
 
 List of renamed methods to prevent confusion with lower-level methods
 handleGet(), handletPost(), handlePut() and handleDelete() now part of
@@ -219,8 +204,7 @@ post(Representation) | acceptRepresentation(Representation)
 put(Representation) | storeRepresentation(Representation)
 delete() | removeRepresentations()
 
-Variant class
--------------
+## Variant class
 
 Some properties and methods have been moved to the Representation
 subclass
@@ -231,8 +215,7 @@ subclass
 -   getSize, setSize
 -   getTag, setTag
 
-TunnelService
--------------
+## TunnelService
 
 List of renamed methods.
 
@@ -247,8 +230,7 @@ setLanguageAttribute | setLanguageParameter
 getMediaTypeAttribute | getMediaTypeParameter
 setMediaTypeAttribute | setMediaTypeParameter
 
-MetadataService
----------------
+## MetadataService
 
 This class allows to link a metadata with several extensions name.
 However, only the first one in the list will be returned by the
@@ -258,21 +240,18 @@ getExtension(Metadata), getMetadata(String) and the addExtension(String,
 Metadata), addExtension(String, Metadata, boolean preferred),
 clearExtension methods
 
-ConverterService
-----------------
+## ConverterService
 
 Since 1.1 with no replacement as it doesn't fit well with content
 negotiation. Most users prefer to handle those conversion in Resource
 subclasses.
 
-Request
--------
+## Request
 
 As a consequence of the previous change, the following methods are not
 replaced: Request\#getEntityAsObject, Request\#setEntity(Object)
 
-Response
---------
+## Response
 
 List of renamed methods.
 
@@ -282,52 +261,44 @@ getChallengeRequest | getChallengeRequests
 getRedirectRef | getLocationRef
 setRedirectRef | setLocationRef
 
-Finder
-------
+## Finder
 
 Method | Replacement
 ------ | -----------
 createResource(Request, Response) | createTarget(Request, Response) and take care of the targetClass property.
 
-Template
---------
+## Template
 
 Removed the Logger parameter to all constructors. which still can be set
 with the setLogger(Logger) method.
 
-Restlet
--------
+## Restlet
 
 The init(Request, Response) method is removed. Instead, make sure that
 you call the {@link \#handle(Request, Response)} method from your
 Restlet superclass.
 
-Form
-----
+## Form
 
 Removed the Logger parameter to all constructors.
 
-Status
-------
+## Status
 
 Method | Replacement
 ------ | -----------
 isInfo(int code) | isInformational(int)
 isInfo() | isInformational()
 
-ChallengeScheme
----------------
+## ChallengeScheme
 
 ChallengeScheme HTTP\_AWS replaced by HTTP\_AWS\_S3
 
-Protocol
---------
+## Protocol
 
 The SMTP\_STARTTLS protocol is removed. Use the "startTls" parameter on
 the JavaMail connector instead.
 
-Response
---------
+## Response
 
 Method | Replacement
 ------ | -----------
@@ -335,8 +306,7 @@ getChallengeRequest | getChallengeRequests
 getRedirectRef | getLocationRef
 setRedirectRef | setLocationRef
 
-Guard
------
+## Guard
 
 List of renamed methods.
 
@@ -345,8 +315,7 @@ Method | Replacement
 challenge(Response) | challenge(Response, boolean) The added boolean indicates if the new challenge is due to a stale response.
 checkSecret(String, char[]) | checkSecret(Request, String, char[]) Added the request parameter
 
-Context
--------
+## Context
 
 List of renamed method.
 
@@ -354,12 +323,10 @@ Method | Replacement
 ------ | -----------
 getDispatcher | getClientDispatcher NB: it exists a server dispatcher.
 
-TransformRepresentation
------------------------
+## TransformRepresentation
 
 List of renamed methods
 
 Method | Replacement
 ------ | -----------
 getURIResolver | getUriResolver
-

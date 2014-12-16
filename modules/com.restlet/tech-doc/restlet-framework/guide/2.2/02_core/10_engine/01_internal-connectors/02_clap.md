@@ -1,5 +1,3 @@
-# CLAP connector
-
 CLAP (ClassLoader Access Protocol) is a custom scheme to access to
 representations via classloaders (e.g.:
 clap://thread/org/restlet/Restlet.class). This protocol accepts three

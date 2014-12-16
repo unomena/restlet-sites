@@ -1,8 +1,4 @@
-Routers and hierarchical URIs
-=============================
-
-Introduction
-============
+# Introduction
 
 In addition to the Redirector, we have another tool to manage cool URIs:
 Routers. They are specialized Restlets that can have other Restlets
@@ -26,10 +22,10 @@ the request URI will received the call and be able to invoke its
 attached Restlet. At the same time, the request's attributes map will be
 automatically updated with the value of the URI template variables!
 
-![](hierarchy.png)
+![](images/hierarchy.png)
 
 See the implementation code below. In a real application, you will probably want to create separate subclasses instead of the anonymous ones we use here:
-
+```
 ~~~~ {.brush: .java}
     // Create a root router
     Router router = new Router(getContext());
@@ -90,8 +86,8 @@ See the implementation code below. In a real application, you will probably want
     router.attach("/users/{user}/orders", orders);
     router.attach("/users/{user}/orders/{order}", order);
 ~~~~
-
-Note that the routing assumes that your request contains an absolute
+```
+>**Note** that the routing assumes that your request contains an absolute
 target URI that identifies a target resource. During the request
 processing the resource's base URI is continuously updated, for each
 level in the hierarchy of routers. This explains why the default
@@ -108,4 +104,3 @@ the URI and are therefore not percent-decoded. In order to achieve such
 a task, have a look to the
 [Reference\#decode(String)](javadocs://jse/api/org/restlet/data/Reference.html#decode%28java.lang.String%29)
 method.
-

@@ -59,7 +59,7 @@ Nearly all standard HTTP headers are now fully supported by the Restlet
 API including “Age”, “Authentication-Info”, “Date”, "Expect",
 “If-Range”, “Retry-After”, "Via", “Warning”, and the frequently asked
 “Cache-Control” header! For a detailled mapping of those headers to the
-Restlet API, please consult [this page of the user guide](../../../core/http-headers-mapping.md).
+Restlet API, please consult [this page of the user guide](technical-resources/restlet-framework/guide/2.2/core/http-headers-mapping).
 
 Character sets support was enhanced, fixing an issue with Macintosh and
 adding new constants in the CharacterSet class for all common ones
@@ -85,7 +85,7 @@ in our developers wiki at the beginning of this year, taking into
 account all the enhancement requests, issues and feed-back made by our
 community. Here is the overall architecture:
 
-![](../../../core/resource/hierarchy.png)
+![](images/hierarchy.png)
 
 The new design uses three foundation classes (UniformResource,
 ClientResource and ServerResource) which support just four annotations

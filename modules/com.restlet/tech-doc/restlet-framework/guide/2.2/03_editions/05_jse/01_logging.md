@@ -1,6 +1,4 @@
-# Logging
-
-## Introduction
+# Introduction
 
 By default, Restlet relies on JDK's logging API (JULI) to log records
 about its activity. For a complete documentation on this standard API,
@@ -28,7 +26,7 @@ Note also that there are two main types of log record in Restlet:
 -   The access related log records, used to log the requests received by
     a component (identical to IIS or Apache logs)
 
-## Programmatic configuration
+# Programmatic configuration
 
 Since version 2.1, it is now possible to programmatically change the log
 level using the Engine\#setLogLevel(…) and setRestletLogLevel(…) static
@@ -46,7 +44,7 @@ by calling the
 LogService\#[setLoggableTemplate](javadocs://jee/api/org/restlet/service/LogService.html#setLoggableTemplate%28java.lang.String%29)(...)
 method.
 
-## Logger names
+# Logger names
 
 As a single JVM can contain several Restlet components at the same time
 and each component can also contain several applications, we need a way
@@ -124,7 +122,7 @@ of your program. It will replace the default console handler by a more
 compact one that will display the logger name for each log record
 received by the root logger (i.e. all the log records).
 
-## Sample configuration
+# Sample configuration
 
 As a starting point for your own logging properties file, here is the
 one we use on our Restlet base Web server. Feel free to copy and paste
@@ -276,7 +274,7 @@ This is similar to the previous section, but specific to our
 AccessLogFileHandler log handler. This let's us use a specific log
 formatter called AccessLogFormatter, also provided by the Engine.
 
-## Bridges to alternative logging mechanisms
+# Bridges to alternative logging mechanisms
 
 Some users that prefer to use Log4J or LogBack instead of JULI,
 especially because they have more features and seem more flexible.
@@ -285,7 +283,7 @@ with existing logging strategies.
 
 In these cases, we we propose two options.
 
-### SLF4J bridge from JULI
+## SLF4J bridge from JULI
 
 This bridge is [provided by the SLF4J
 project](http://www.slf4j.org/legacy.html).
@@ -310,7 +308,7 @@ add those lines:
     rootLogger.removeHan​dler(handlers[0]);
     SLF4JBridgeHandler.install();
 
-### Restlet LoggerFacade for SLF4J
+## Restlet LoggerFacade for SLF4J
 
 The previous method works, but has some performance penalties due to the
 systematic creation of JULI LogRecord instances. In order to workaround
@@ -328,6 +326,6 @@ add this system property
 You can set this property on the command line with the "-D" prefix, or
 programmatically with the System\#setProperty() method.
 
-## Additional resources
+# Additional resources
 
 -   [Java Logging API and How To Use It](http://www.crazysquirrel.com/computing/java/logging.jspx)
