@@ -55,7 +55,7 @@ and read the [recommended books](http://restlet.com/learn/books).
 We especially recommend our [Restlet in Action](http://www.amazon.com/gp/product/193518234X/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=193518234X&linkCode=as2&tag=restlet-20)
 book published by Manning.
 
-[![](http://restlet.com/images/books/restlet-in-action-150)](http://www.amazon.com/gp/product/193518234X/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=193518234X&linkCode=as2&tag=restlet-20)
+![](images/restlet-in-action.png)
 
 # Professional support
 
@@ -63,4 +63,4 @@ If you can't wait to get an answer or need to keep your questions confidential,
 you can also obtain private support by buying a [professional support plan](http://restlet.com/participate/contribute)
 from the creator of the Restlet Framework.
 
-![](images/logo-restlet.png)]
+![](images/logo-restlet.png)
