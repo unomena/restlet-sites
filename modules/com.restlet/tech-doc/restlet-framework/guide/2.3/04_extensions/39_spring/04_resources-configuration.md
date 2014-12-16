@@ -14,7 +14,7 @@ Currently, the init method resets these properties to their default
 values but, in the Spring component life cycle, is invoked after Spring
 sets the properties. An obvious workaround is to refine the init method
 like so:
-
+```
 ~~~~ {.brush: .java}
     @Override
     public void init(Context context, Request request, Response response) {
@@ -24,7 +24,7 @@ like so:
         BeanUtils.copyProperties(backup, this);
     }
 ~~~~
-
+```
 # Configuration of representation templates
 
 In addition, it would be quite useful if one could map media types to
@@ -35,7 +35,7 @@ creates a concrete representation, it passes a uniform data model to the
 representation factory, which then instantiates the template with the
 data model and returns the resulting representation. (The Freemarker
 configuration is also handled by Spring.)
-
+```
 ~~~~ {.brush: .java}
 <bean id="resource" class="helloworldrestlet.HelloWorldResource"
     scope="prototype">
@@ -78,10 +78,10 @@ configuration is also handled by Spring.)
     </property>
 </bean>
 ~~~~
-
+```
 When using this approach, the ServerResources themselves become very
 simple, for example:
-
+```
 ~~~~ {.brush: .java}
 public class HelloWorldResource extends ConfigurableRestletResource {
     @Override
@@ -91,7 +91,7 @@ public class HelloWorldResource extends ConfigurableRestletResource {
     }
 }
 ~~~~
-
+```
 A working proof-of-concept for this approach is available through
 Subversion at
 [http://luc-pervasive.googlecode.com/svn/trunk/webservices/ConfigurableRestletResource](http://luc-pervasive.googlecode.com/svn/trunk/webservices/ConfigurableRestletResource).

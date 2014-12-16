@@ -1,7 +1,7 @@
 # Introduction
 
 This extension provides and integration of Restlet with XStream.
-[XStream](http://xstream.codehaus.org/index.html)is
+[XStream](http://xstream.codehaus.org/index.html) is
 a simple library to serialize objects to XML or JSON and back again. For
 JSON support, it depends on Jettison 1.0 (note that usage Jettison 1.1
 with this version of XStream is discouraged).

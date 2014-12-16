@@ -81,7 +81,7 @@ See sample implementation below:
 
 To display the Swagger-UI of your API, go on the page http://petstore.swagger.wordnik.com, enter the URL of your Swagger definition and click on explore.
 
-![swagger-ui](/learn/archives/images/swaggerExtensionSwaggerUI.png)
+![swagger-ui](images/swaggerExtensionSwaggerUI.png)
 
 You can also clone/fork the [project](https://github.com/wordnik/swagger-ui) and embed it.
 

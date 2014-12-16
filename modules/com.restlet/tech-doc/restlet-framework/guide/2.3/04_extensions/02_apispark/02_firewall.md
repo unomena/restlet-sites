@@ -1,6 +1,6 @@
 # Introduction
 
-This service integrated in the [APISpark extension](../) adds rate limitation to your web API.
+This service integrated in the APISpark extension adds rate limitation to your web API.
 
 # Configuration
 
@@ -125,7 +125,7 @@ A Rate limitation rule is associated to several objects :
     X-RateLimit-Reset : 123456789 # When the period will reset
 ~~~~
 
-## Example 
+## Example
 
 * Create a Rate Limiter which counts
     * IP Addresses
