@@ -79,6 +79,7 @@ representations.
 -   ContactResource.
 
 ContactResource is an interface annotated with Restlet annotations:
+
 ```
 ~~~~ {.brush: .java}
 public interface ContactResource {
@@ -93,6 +94,7 @@ public interface ContactResource {
 }
 ~~~~
 ```
+
 It represents the contract passed between the client and the server.
 
 When using collections of objects as method parameters, you need to use
@@ -114,6 +116,7 @@ server project relies on the following JAR files:
 See also the "readme.txt" file located in the sources file. It list also all necessary binaries taken from the GAE platform.
 
 The server-side resource implements the annotated interface.
+
 ```
 ~~~~ {.brush: .java}
 /**
@@ -139,7 +142,9 @@ public class ContactServerResource extends ServerResource implements ContactReso
 }
 ~~~~
 ```
+
 This resource is then exposed by the server application:
+
 ```
 ~~~~ {.brush: .java}
     @Override
@@ -154,6 +159,7 @@ This resource is then exposed by the server application:
     }
 ~~~~
 ```
+
 # <a name="gwt-client"></a>GWT client
 
 The GWT client relies only on the core Restlet JAR (org.restlet.jar)
@@ -162,6 +168,7 @@ provided in the GWT edition.
 In order to get the Contact object, a proxy class is required. This is
 an interface that inherits on a specific interface (delivered by the GWT
 edition of the Restlet Framework):
+
 ```
 ~~~~ {.brush: .java}
 public interface ContactResourceProxy extends ClientProxy {
@@ -176,6 +183,7 @@ public interface ContactResourceProxy extends ClientProxy {
 }
 ~~~~
 ```
+
 This interface looks like the ContactResource interface, expect that it
 adds a callback to each declared methods, due to the asynchronous nature
 of the GWT platform and the underlying AJAX mechanism offered by web
@@ -188,6 +196,7 @@ GWT-RPC code base to GWT-REST with Restlet.
 
 Then, the following code allows you to request and handle the Contact
 resource:
+
 ```
 ~~~~ {.brush: .java}
 ContactResourceProxy contactResource = GWT.create(ContactResourceProxy.class);
@@ -211,6 +220,7 @@ contactResource.retrieve(new Result<Contact>() {
 });
 ~~~~
 ```
+
 Here is a screenshot of the GWT client page once the user has clicked on
 the GET button.
 
@@ -219,6 +229,7 @@ the GET button.
 
 In order to update the contact, simply complete your contact object and
 invoke the "store" method as specified by the proxy interface:
+
 ```
 ~~~~ {.brush: .java}
 contactResource.store(contact, new Result<Void>() {
@@ -236,6 +247,7 @@ contactResource.store(contact, new Result<Void>() {
 });
 ~~~~
 ```
+
 # <a name="android-client"></a>Android client
 
 The Android client project relies only on the core Restlet JAR
@@ -246,6 +258,7 @@ The contact object will be serialized between the GAE server and the
 Android client (in both directions) using the standard Java
 serialization process. No additional interface is required except the
 ContactResource interface furnished by the server.
+
 ```
 ~~~~ {.brush: .java}
 // Initialize the resource proxy.
@@ -259,13 +272,16 @@ ContactResource resource = cr.wrap(ContactResource.class);
 Contact contact = resource.retrieve();
 ~~~~
 ```
+
 In order to update the contact, simply use this instruction:
+
 ```
 ~~~~ {.brush: .java}
 // Update the remote contact
 resource.store(contact);
 ~~~~
 ```
+
 The internal HTTP client has been rewritten using the java.nio.package.
 This may lead, on some android devices, to encounter this kind of
 exception: **java.net.SocketException: Bad address family**. In this
@@ -282,6 +298,7 @@ Here is a screenshot of the Android user interface.
 
 The same code used on the Android application allows you to get the full
 Contact object:
+
 ```
 ~~~~ {.brush: .java}
 ClientResource cr = new ClientResource("http://restlet-example-serialization.appspot.com/contacts/123");
@@ -296,6 +313,7 @@ if (contact != null) {
 }
 ~~~~
 ```
+
   This code produces the following ouput on the console:
 
     firstname: Scott
@@ -307,11 +325,13 @@ if (contact != null) {
 In case the Contact class is not available, you can still retrieve a
 JSON representation by setting the client preferences when retrieving
 the resource's representation:
+
 ```
 ~~~~ {.brush: .java}
 cr.get(MediaType.APPLICATION_JSON).write(System.out);
 ~~~~
 ```
+
 which produces the following output:
 
     {"age":40,"firstName":"Scott","homeAddress":{"country":"USA","city":"Mountain View","line1":"10 bd Google","line2":null,"zipCode":"20010"},

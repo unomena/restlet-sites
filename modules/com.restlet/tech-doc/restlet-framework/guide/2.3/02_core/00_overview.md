@@ -13,10 +13,10 @@ a close look at its [Javadocs](javadocs://jse/api/)
 available on the Restlet Web site. Below is a hierarchy diagram showing
 the main concepts of the API and their relationships:
 
-![](/learn/tutorial/${restlet-version-minor}/images/restlets)
+![](images/restlets.png)
 
 Here is a diagram illustrating how the API composes components,
 connectors, virtual host and applications. Applications are in turn
 composed of resources.
 
-![](/learn/tutorial/${restlet-version-minor}/images/tutorial05)
+![](images/tutorial05.png)
