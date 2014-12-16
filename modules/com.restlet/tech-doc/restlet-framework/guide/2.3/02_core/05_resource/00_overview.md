@@ -6,13 +6,13 @@ The **org.restlet.resource** package contains client and server resource classes
 
 Below is an overview of the architecture, including all processing layers, from the lowest TCP/IP network  layer to the highest annotated interface proxies.
 
-![](abstraction-layers.png)
+![](images/abstraction-layers.png)
 
 ## Class diagram
 
 Here is a class diagram:
 
-![](hierarchy.png)
+![](images/hierarchy.png)
 
 ## Annotations
 
@@ -29,7 +29,7 @@ Annotation | Description
 Those annotations are specific to the Restlet API and shouldn't be
 confused with those of the JAX-RS API. For support of the JAX-RS API by
 the Restlet Framework, you should look at [the provided
-extension](../../extensions/jaxrs "JAX-RS extension").
+extension](technical-resources/restlet-framework/guide/2.3/extensions/jaxrs "JAX-RS extension").
 
 ## Annotations parameter
 
@@ -52,7 +52,7 @@ Here is the grammar for this parameter:
 ```
 
 Here are some valid values:
-
+```
 ~~~~ {.brush: .java}
     // Returns a representation in the "text/xml" media type
     @Get("xml")
@@ -78,8 +78,8 @@ Here are some valid values:
     // Alternative variants
     @Put("xml+ascii | json+utf8 : json")
 ~~~~
-
-Note the importance of registering the proper extension names via the
+```
+>**Note** the importance of registering the proper extension names via the
 MetadataService in order to use additional extension names.
 
 ## Sample code
@@ -87,7 +87,7 @@ MetadataService in order to use additional extension names.
 Here is how a sample resource would look like with the refactored API.
 Note that both extension names and full MIME type would be supported.
 Extensions can be updated via the MetadataService.
-
+```
 ~~~~ {.brush: .java}
     import java.io.InputStream;
 
@@ -137,3 +137,4 @@ Extensions can be updated via the MetadataService.
 
     }
 ~~~~
+```

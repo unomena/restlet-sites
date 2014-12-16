@@ -1,8 +1,4 @@
-Configuring HTTPS
-=================
-
-Background
-----------
+# Background
 
 HTTPS is HTTP over SSL or TLS, that is, secure HTTP. SSL and TLS
 normally rely on Public Key Cryptography, which requires a pair of
@@ -76,8 +72,7 @@ There are various keystore types supported by the Sun JVM, mainly Java's
 own JKS format (default) or the PKCS\#12 format which tends to be used
 by browsers and tools such as OpenSSL.
 
-Step 1 : Creating Keys and a Self-Signed Certificate
-----------------------------------------------------
+# Step 1 : Creating Keys and a Self-Signed Certificate
 
 Java comes with a command-line utility called ***keytool*** that can be
 used to handle keystores, in particular to create keys, certificate
@@ -135,8 +130,7 @@ options to the keytool command line:
 
 -storetype “PKCS12”
 
-Step 2: Exporting the Self-Signed Certificate
----------------------------------------------
+# Step 2: Exporting the Self-Signed Certificate
 
 The file 'serverX.jks' now contains the keys and a self-signed
 certificate. To be useful, the certificate needs to be exported so that
@@ -169,8 +163,7 @@ Note that the name of the alias and the keystore/certificate files are
 not significant, but they are named 'serverX' for consistency and
 clarity.
 
-Step 3: Importing the Self-Signed Certificate
----------------------------------------------
+# Step 3: Importing the Self-Signed Certificate
 
 You should now have a file called 'serverX.cer' that contains your
 server's self-signed certificate. The server will present this
@@ -224,8 +217,7 @@ These arguments tell the Java VM where to find your certificate.
 environment, not in production, as the password is shown in plain
 text**.****
 
-Step 4: Sample Restlet Server Code
-----------------------------------
+# Step 4: Sample Restlet Server Code
 
 In addition to the standard Restlet jar files, you also need to
 reference jar files for HTTPS. The 'Simple' HTTPS connector uses these
@@ -271,8 +263,7 @@ from the keystore file (serverX.jks):
         }
     }
 
-Step 5: Sample Restlet Client Code
-----------------------------------
+# Step 5: Sample Restlet Client Code
 
     package com.jpc.samples;
 
@@ -311,12 +302,10 @@ Step 5: Sample Restlet Client Code
 
 ...other code not shown (similar to original HTTP Restlet example)...
 
-Conclusion
-----------
+# Conclusion
 
 That's it! Your client and server should now be communicating via HTTPS.
 Note that the information contained in this article is meant only as
 rudimentary starting point for using HTTPS with Restlet and not as a
 comprehensive guide to secure web applications. Comments and feedback
 welcome!
-

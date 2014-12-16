@@ -74,7 +74,7 @@ Just after the \</profiles\> add the following:
 
 The following table lists the available artifacts and their group and
 artifact ids. With the introduction of the
-[editions](../../editions "Part III - Restlet Editions")
+[editions](technical-resources/restlet-framework/guide/2.3/editions/overview "Part III - Restlet Editions")
 for the Restlet framework, it is necessary to make a distinction between
 an extension for a given edition and the same extension for another
 extension simply because the code of the extension may change between
@@ -90,7 +90,7 @@ three-letters code of an edition among:
 -   gwt (Google Web Toolkit edition),
 -   osgi (OSGi Environments edition).
 
-You can find [here](../../extensions/editions-matrix "Editions matrix")
+You can find [here](technical-resources/restlet-framework/guide/2.3/extensions/editions-matrix "Editions matrix")
 a full view of the list of extensions and the editions that ship them. 
 
 artifactId | Description

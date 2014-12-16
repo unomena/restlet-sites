@@ -18,7 +18,7 @@ between a server application and several kind of clients.
 7.  [Android client](#android-client)
 8.  [Java SE client](#java-se-client)
 
-# Requirements
+# <a name="requirements"></a>Requirements
 
 It is based on the following editions of the Restlet Framework : Java SE
 (JSE), Google App Engine (GAE), Google Web Toolkit (GWT) and Android
@@ -33,7 +33,7 @@ It has been tested with the following environments:
 GAE doesn't support HTTP chunked encoding, therefore serialized object can't be sent (via POST or PUT) to a GAE server. Since Restlet Framework version 2.1 M4 we have a workaround available that buffers the HTTP
 entity to prevent chunk encoding. To use it, call the ClientResource.setRequestEntityBuffering(boolean) method with a "true" value. Note that this workaround isn't required for the GWT edition.
 
-# Scenario
+# <a name="scenario"></a>Scenario
 
 The server application is hosted on the Google App Engine (GAE) platform. For the sake of simplicity it serves only one resource named "contact", with the following characteristics:
 
@@ -55,7 +55,7 @@ The "contact" object has the following attributes:
 -   Android application
 -   Java SE client
 
-# Archive content
+# <a name="archive-content"></a>Archive content
 
 The full source code (without the required archives) is available here:
 [firstapplication.zip](/technical-resources/restlet-framework/archives/examples/firstApplication/${restlet-version-minor}/firstapplication.zip "firstapplication.zip")
@@ -67,7 +67,7 @@ It contains the full source code of three Eclipse projects with:
 2.  Project that contains the source code of the Android client
 3.  Project that contains the source code of the Java SE client
 
-# Common classes
+# <a name="common-classes"></a>Common classes
 
 The following classes are available on the three project. They are used
 by the server and the clients in order to produce the serialized
@@ -99,7 +99,7 @@ When using collections of objects as method parameters, you need to use
 concrete classes if you intend to have GWT clients. For example use
 ArrayList\<Contact\> instead of List\<Contact\>.
 
-# GAE server
+# <a name="gae-server"></a>GAE server
 
 We propose to host the server application on the GAE platform. The
 server project relies on the following JAR files:
@@ -155,7 +155,7 @@ This resource is then exposed by the server application:
 ~~~~
 ```
 
-# GWT client
+# <a name="gwt-client"></a>GWT client
 
 The GWT client relies only on the core Restlet JAR (org.restlet.jar)
 provided in the GWT edition.  
@@ -217,7 +217,7 @@ contactResource.retrieve(new Result<Contact>() {
 Here is a screenshot of the GWT client page once the user has clicked on
 the GET button.
 
-![serialization gwt screenshot](/learn/archives/examples/firstApplication/${restlet-version-minor}/serialization-gwt-screenshot.png "Serialization gwt screenshot")
+![serialization gwt screenshot](images/serialization-gwt-screenshot.png "Serialization gwt screenshot")
 
 
 In order to update the contact, simply complete your contact object and
@@ -239,7 +239,7 @@ contactResource.store(contact, new Result<Void>() {
 });
 ~~~~
 ```
-# Android client
+# <a name="android-client"></a>Android client
 
 The Android client project relies only on the core Restlet JAR
 (org.restlet.jar) provided by the Android edition of the Restlet
@@ -277,9 +277,9 @@ System.setProperty("java.net.preferIPv6Addresses", "false");
 
 Here is a screenshot of the Android user interface.
 
-![serialization android screenshot](/learn/archives/examples/firstApplication/${restlet-version-minor}/serialization-android-screenshot.png "Serialization android screenshot")
+![serialization android screenshot](images/serialization-android-screenshot.png "Serialization android screenshot")
 
-# Java SE client
+# <a name="java-se-client"></a>Java SE client
 
 ## Get the full Contact object
 

@@ -8,7 +8,7 @@ one based on
 and return a simple string representation "hello, world" as plain text.
 Note that the FirstServerResource class extends the base
 org.restlet.resource.ServerResource class provided by the Restlet API:
-
+```
 ~~~~ {.brush: .java}
 public class FirstServerResource extends ServerResource {  
 
@@ -24,7 +24,7 @@ public class FirstServerResource extends ServerResource {
 
 }  
 ~~~~
-
+```
 If you run this code and launch your server, you can open a Web browser
 and hit the
 [http://localhost:8182](http://localhost:8182/).
@@ -38,8 +38,8 @@ So far, we have mostly showed you the highest level of abstraction in
 the Restlet API, with the ServerResource classes. But as we move
 forward, you will discover that this class is supported by a broad Java
 API,
-[mapping](../../core/http-headers-mapping.md "Mapping HTTP headers")
+[mapping](technical-resources/restlet-framework/guide/2.2/core/http-headers-mapping "Mapping HTTP headers")
 all REST and HTTP concepts to a set of Java classes, interfaces and
 annotations.
 
-[Let's now illustrate how to use this API on the client-side](first-client.md "First client").
+[Let's now illustrate how to use this API on the client-side](technical-resources/restlet-framework/guide/2.2/introduction/first-stpes/first-client "First client").

@@ -1,14 +1,9 @@
-Client resources
-================
-
-Introduction
-============
+# Introduction
 
 For a short introduction on the usage of client resource, you should
-read the [first client](../../introduction/first-steps/first-client.md "First client") page.
+read the [first client](technical-resources/restlet-framework/guide/2.3/introduction/first-steps/first-client "First client") page.
 
-Automatic conversion
-====================
+# Automatic conversion
 
 You can get automatic conversion for retrieved representations like
 this:
@@ -33,14 +28,12 @@ extension](../../extensions/jackson.md "Jackson extension") or [XStream
 extension](../../extensions/xstream.md "XStream extension") to
 your classpath in order to get clean XML or JSON representations.
 
-Leveraging annotations
-======================
+# Leveraging annotations
 
 It also possible to share an annotated Java interface between client and
 server resources.
 
-Annotated Java interface
-------------------------
+## Annotated Java interface
 
 First, we define the contract between the client and the server as a
 Java interface:
@@ -61,7 +54,7 @@ Java interface:
 
         @Put
         public void store(Customer customer);
-        
+
         @Post
         public void stop() throws Exception;
 
@@ -70,8 +63,7 @@ Java interface:
 
     }
 
-Server side implementation
---------------------------
+## Server side implementation
 
 Then, we implement is in a subclass of ServerResource
 
@@ -120,8 +112,7 @@ Then, we implement is in a subclass of ServerResource
 
     }
 
-Client-side consumption
------------------------
+## Client-side consumption
 
 Finally, we can consume it via the ClientResource class:
 
@@ -147,8 +138,7 @@ Finally, we can consume it via the ClientResource class:
         }
     }
 
-Consuming response entities
-===========================
+# Consuming response entities
 
 Even though the ClientResource class gives you a high level client for
 HTTP transactions, you need to be aware that the underlying network
@@ -175,4 +165,3 @@ Representation\#release() method immediately which will close the
 underlying stream but might also close the underlying socket connection.
 In case you are not interested in the request at all, it is however
 better to explicitly call the ClientResource\#abort() method.
-

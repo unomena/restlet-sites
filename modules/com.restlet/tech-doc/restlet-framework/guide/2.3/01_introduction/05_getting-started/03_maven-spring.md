@@ -298,7 +298,7 @@ available on **localhost:8080** with a root context of '**/basecamp**'
 If you now go to your web browser and enter the following URL the
 service, which you have just created, should respond with 'Hello World!'
 
-  ![Web browser screenshot](./basecamp-hello.png)
+  ![Web browser screenshot](images/basecamp-hello.png)
 
 
 Accessing the resource via a browser

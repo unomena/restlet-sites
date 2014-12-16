@@ -1,14 +1,9 @@
-Migration guide from version 1.1 to 2.0
-=======================================
-
-Introduction
-============
+# Introduction
 
 This section intends to explain the main differences between the Restlet
 1.1 and 2.0 releases and to help you migrate your existing applications.
 
-Adjust your imports
-===================
+# Adjust your imports
 
 The Restlet API and several extensions have been deeply restructured and
 enhanced as explained earlier, but all 1.1 artifacts were either moved
@@ -21,8 +16,7 @@ dedicated feature of your IDE, like the “Organize Imports” feature in
 Eclipse) will fix those issues. Indeed, the classes themselves have
 either not changed their API at all or have been properly deprecated.
 
-Verify your routers
-===================
+# Verify your routers
 
 In version 1.1, the default router configuration was trying to match the
 start of the URI of incoming requests (using Template.MODE\_STARTS\_WITH
@@ -42,8 +36,7 @@ variables must be provided by the user in the exact same order as the
 URI template, even though people tend to consider that this order
 shouldn't matter.
 
-Replace usage of deprecated features
-====================================
+# Replace usage of deprecated features
 
 The next step is to look at each deprecated feature and look in the
 Javadocs at the preferred alternative in Restlet 2.0. The most
@@ -58,4 +51,3 @@ advantage of doing this is that your contract is well isolated and can
 be written first. Most importantly, it can be used on the client-side by
 the ClientResource class to remotely call your server resource. See an
 example in this [first application page](../../introduction/first-steps/first-application "First application").
-

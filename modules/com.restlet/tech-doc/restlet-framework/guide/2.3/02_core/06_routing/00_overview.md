@@ -1,8 +1,4 @@
-Routing package
-===============
-
-Introduction
-============
+# Introduction
 
 The **org.restlet.routing** package contains classes related to call
 routing.
@@ -49,15 +45,13 @@ whereas resources are attached via their class. The reason is that
 Resources have been designed to handle a single request, thus instances
 are generated at run-time via their class.
 
-Default configuration
-=====================
+# Default configuration
 
 This chapter covers either the default behavior of instances of the
 Router, Route, Template and Variable classes or the behavior that
 applies by default during the process of routing a URI.
 
-Matching mode
--------------
+## Matching mode
 
 The default behavior of a Router is to match the whole request URI
 (actually the remaining part, left by previous Routers) with the
@@ -78,8 +72,7 @@ Here is a sample code:
 
     router.setMatchingMode(Template.MODE_STARTS_WITH);
 
-Routing and queries
--------------------
+## Routing and queries
 
 With the default matching mode to Template\#MODE\_EQUALS, your Router
 won't accept URI with query strings going to this Resource. To solve
@@ -93,8 +86,7 @@ Or you can explicitly allow the query part in your URI template:
     TemplateRoute route = router.attach("/users/{user}?{query}", UserResource.class);
     route.setMatchingQuery(false);
 
-Routing mode
-------------
+## Routing mode
 
 In addition to the matching mode, a Router supports several routing
 modes, implementing various algorithms:
@@ -113,8 +105,7 @@ mode property with one of the listed modes declared above.
 
     router.setRoutingMode(Router.FIRST);
 
-Matching of template variables
-------------------------------
+## Matching of template variables
 
 As said in the introduction, the routing feature relies on the
 declaration of templates of URI. In the sample code below, the URI
@@ -142,8 +133,7 @@ A variable holds several other attributes:
 -   decodedOnParse: indicates if the parsed value must be decoded (false
     by default).
 
-Tuning the routing
-==================
+# Tuning the routing
 
 Sometimes the same matching mode can't be used for all routes. For
 example one delegates the routing to a child router while others routes
@@ -152,8 +142,7 @@ possible to specify a different routing mode for each route using the
 Route\#setMatchingMode() method. The Route instance is returned by the
 Router\#attach() methods.
 
-Matching mode
--------------
+## Matching mode
 
 Regarding the matching mode, the default behavior of a Router can be
 customized for a single route by updating its underlying template
@@ -162,8 +151,7 @@ instance as follow:
     TemplateRoute route = router.attach("/users/{user}", UserResource.class);
     route.getTemplate().setMatchingMode(Template.MODE_STARTS_WITH);
 
-Routing and queries
--------------------
+## Routing and queries
 
 If you want to route URIs according to some values located in the query
 part of the URI, and since those values have no determined place within
@@ -174,8 +162,7 @@ routing mode). A sample implementation is available
 [here](/learn/guide/2.1#/211-restlet/version/default/part/AttachmentData/data "queryRouter")
 (application/zip, 1.8 kB).
 
-Matching of template variables
-------------------------------
+## Matching of template variables
 
 By default, as said above, a template variable is meant to match a URI
 segment. Here is the list of all available type of variables. For
@@ -204,5 +191,4 @@ Here is the way to change the type of a variable:
 
     TemplateRoute route = router.attach("/items/{itemName}", ItemResource);
     Map<String, Variable> routeVariables = route.getTemplate().getVariables();
-    routeVariables.put("itemName", new Variable(Variable.TYPE_URI_WORD)); 
-
+    routeVariables.put("itemName", new Variable(Variable.TYPE_URI_WORD));

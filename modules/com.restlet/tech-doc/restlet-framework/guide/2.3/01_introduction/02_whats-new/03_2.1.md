@@ -1,6 +1,4 @@
-# What's new in version 2.1
-
-## Introduction
+# Introduction
 
 In the next sections, you will get a synthesis of the major changes done
 to the Restlet Framework in version 2.1.
@@ -8,17 +6,17 @@ to the Restlet Framework in version 2.1.
 For more details, you can read the [2.1 announce on our blog](http://blog.restlet.com/2012/09/27/restlet-framework-2-1-0-released-5/)
 as well as [the full list of changes](http://restlet.com/learn/2.1/changes).
 
-## Better documentation
+# Better documentation
 
-### Restlet in Action book
+## Restlet in Action book
 
-Finished writing the [Restlet in Action](http://restlet.com/documentation/books) 
+Finished writing the [Restlet in Action](http://restlet.com/documentation/books)
 book, published by Manning. We made sure that the printed version was
 available at the same time as the 2.1.0 release.
 
-## Scalable internal connector
+# Scalable internal connector
 
-### Non blocking NIO
+## Non blocking NIO
 
 In version 2.0, we have added support for asynchronous processing of
 calls as a preview feature, including provisional responses (1xx status code
@@ -30,19 +28,19 @@ per connection which limits its scalability, even if persistent
 connections and pipelining and now supported.
 
 There, we have started work on a new NIO version of this internal
-connector that leverages the non-blocking features of NIO to support a large 
+connector that leverages the non-blocking features of NIO to support a large
 number of concurrent connections and messages with only a single IO thread! The
 first results were very promising and we want to complete this connector
 in version 2.1 to replace the current internal connector with a lighter,
 faster and more scalable one.
 
-### SIP connector
+## SIP connector
 
 SIP is a core protocol for Voice of IP (VoIP) to control multimedia
 session. It has been designed based on the HTTP protocol, using the same
 syntax for request and messages and with a similar processing flow,
 leveraging a lot provisional responses. We explored over the past months
-the possibility to provide a SIP connector based on the same internal 
+the possibility to provide a SIP connector based on the same internal
 connector that we use for HTTP and already we
 have a prototype working in the Restlet Incubator.
 
@@ -52,29 +50,29 @@ mentioned above. This will ship as an org.restlet.ext.sip extension. We
 also plan to explore a higher-level SIP application API that would
 provide a  REST-minded alternative to the SIP Servlets.
 
-## Security enhancements
+# Security enhancements
 
-### Google SDC connector
+## Google SDC connector
 
 This protocol allows tunnelling HTTP calls from a public cloud such as
 GAE, AWS or any other IaaS, to an intranet protected by a firewall,
 without requiring changes to this firewall. See details in [this blog
 post](http://blog.restlet.com/2011/03/31/leveraging-sdc-beyond-google-cloud-with-restlet/).
 
-### Google App Engine extension
+## Google App Engine extension
 
 This extension integrates GAE's authentication service with Restlet's
 security API.
 
-### OAuth 2.0 and OpenID 2.0 extensions
+## OAuth 2.0 and OpenID 2.0 extensions
 
 See user guide for details.
 
-### CookieAuthenticator
+## CookieAuthenticator
 
 Added to the Crypto extension.
 
-## Multipart HTML forms
+# Multipart HTML forms
 
 The support for composite representations such as multi-part forms, on
 both the client and the server side is a recurrent need expressed by
@@ -88,14 +86,14 @@ solution.
 There will also be a focus on facilitating the validation of form
 submissions.
 
-## Conneg service
+# Conneg service
 
 Content negotiation has always been a strong feature of the Restlet
 Framework. In version 2.0, its implementation and negotiation algorithm
 is fixed in the Restlet Engine. In this new version, we want to make it
 customizable via a new ConnegService.
 
-## Eclipse integration
+# Eclipse integration
 
 Eclipse is more than an IDE and now provides a comprehensive runtime
 platform via the [Eclipse RT](http://www.eclipse.org/rt/)
@@ -104,7 +102,7 @@ the Eclipse foundation nicely fit with the Restlet Framework. In version
 2.1, we will help developers to bridge the Restlet and the Eclipse
 worlds.
 
-### Model-driven REST
+## Model-driven REST
 
 Based on our experience with customers, we believe that the combination
 of Restlet and the pragmatic model-driven technologies developed by the
@@ -115,12 +113,12 @@ extensions:
 - EMF extension: to convert EMF representation beans into XML, XMI or HTML
   representations
 
-### Integration with Equinox/OSGi
+## Integration with Equinox/OSGi
 
 We continued to mentor/support the ongoing project for [integrating Restlet with Eclipse Equinox](http://blog.restlet.com/2010/05/06/gsoc-and-restlet-integration-with-equinox/)
 (OSGi runtime) which is now part of Restlet Incubator.
 
-### Eclipse update site
+## Eclipse update site
 
 In addition to our Maven repository, Zip archives and Windows
 installers, we want to add a possibility to install and update Restlet
@@ -128,7 +126,7 @@ modules and dependent libraries via the Eclipse IDE directly. For this
 we will provide an update site. Restlet modules are already OSGi bundles
 so this should be straightforward.
 
-## Migration guide from version 2.0 to 2.1
+# Migration guide from version 2.0 to 2.1
 
 This section intends to explain the main differences between the Restlet
 2.0 and 2.1 releases and to help you migrate your existing applications.
@@ -140,11 +138,11 @@ really consider migrating first from 1.1 to 2.0 and then from 2.0 to
 2.1. For migration instructions between 1.1 and 2.0, you can check [this
 page](../../whats-new/2.0/migration "Migration guide from version 1.1 to 2.0").
 
-### Replace all JAR files
+## Replace all JAR files
 
 Restlet JARs and dependencies
 
-### Deprecated API features
+## Deprecated API features
 
 The next step is to look at each deprecated feature and look in the
 Javadocs at the preferred alternative in version 2.1.

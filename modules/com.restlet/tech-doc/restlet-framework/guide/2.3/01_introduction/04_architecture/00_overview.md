@@ -1,13 +1,13 @@
 # Introduction
 
 The Restlet Framework is composed of two main parts. First, there is the
-[Restlet API](../../core "Part II - Core Restlet"),
+[Restlet API](technical-resources/restlet-framework/guide/2.3/core/overview "Part II - Core Restlet"),
 a neutral API supporting the concepts of REST and HTTP, facilitating the
 handling of calls for both client-side and server-side applications.
 This API is backed by the Restlet Engine and both are now shipped in a
 single JAR ("org.restlet.jar").
 
-![](/learn/tutorial/${restlet-version-minor}/images/tutorial01)
+![](images/tutorial01.png)
 
 This separation between the API and the implementation is similar to the
 one between the Servlet API and Web containers like Jetty or Tomcat, or
@@ -21,7 +21,7 @@ that enables the communication between components which are represented
 by the larger boxes. The links represents the particular protocol (HTTP,
 SMTP, etc.) used for the actual communication.
 
-![](/learn/tutorial/${restlet-version-minor}/images/tutorial04)
+![](images/tutorial04.png)
 
 Note that the same component can have any number of client and server
 connectors attached to it. Web Server B, for example, has both a server
@@ -49,7 +49,7 @@ different virtual hosts. In addition, they provide important services
 like access logging, automatic decoding of request entities,
 configurable status page setting and more!
 
-![](/learn/tutorial/${restlet-version-minor}/images/tutorial05)
+![](images/tutorial05.png)
 
 In order to illustrate these classes, let's examine a simple example.
 Here we create a Component, then add an HTTP server connector to it,
