@@ -1,5 +1,3 @@
-# Extensions in version 1.1
-
 -   Full support for WADL, a popular description language for RESTful
     application. It can be used to configure components, applications
     and resources. In addition, existing Restlet applications can be
@@ -40,4 +38,3 @@
 -   New Restlet-GWT module provided as a port of the Restlet client API
     to the Google Web Toolkit 1.5 AJAX platform. This module also
     supports HTTP authentication.
-

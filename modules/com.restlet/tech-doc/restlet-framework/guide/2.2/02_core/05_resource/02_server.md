@@ -1,7 +1,3 @@
-Server resources
-================
-
-See the [first server](../../introduction/first-steps/first-server "First server")
-and [first application](../../introduction/first-steps/first-application "First application")
+See the [first server](technical-resources/restlet-framework/guide/2.2/introduction/first-steps/first-server "First server")
+and [first application](technical-resources/restlet-framework/guide/2.2/introduction/first-steps/first-application "First application")
 examples.
-

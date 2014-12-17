@@ -9,7 +9,7 @@ An Entity Store provides the necessary tools to design a data model from the gro
 
 Like all other cell types, Entity Stores are created and opened via the Dashboard. To create an Entity Store, go to the **Dashboard** and click on the **+ Entity Store** button.
 
-![+Entity Stores](images/+entity-store.jpg "+Entity Stores")
+![+Entity Stores](images/entity-store.jpg "+Entity Stores")
 
 In the **Create an Entity Store** window, select **Full Stack** in order to create an Entity Store hosted by APISpark.
 
@@ -82,9 +82,17 @@ These values are used to determine if a property should be stored as a list.
 
 By default, both min and max occurs are set to 1.
 
-### Default value (optional)
+### Nullable
 
-A property’s default value is assigned if a null value is provided upon creation of a data element.
+This checkbox allows you to make the property mandatory (not nullable) or not. Deselect the **Nullable** checkbox to make it mandatory.
+
+### Default value
+
+A property’s default value is assigned if a null value is provided upon creation of a data element. To assign a default value, deselect the **Default value** checkbox and enter a value in the field that displays.
+
+### Sample
+
+A sample value can be provided in this field. It will be suggested to the user when s/he adds a record.
 
 ## Entity relations
 

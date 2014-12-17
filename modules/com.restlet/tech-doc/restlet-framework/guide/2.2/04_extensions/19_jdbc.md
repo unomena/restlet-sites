@@ -1,8 +1,4 @@
-JDBC extension
-==============
-
-Introduction
-============
+# Introduction
 
 This connector is a client to a JDBC database. It is based on the [JDBC
 API](http://java.sun.com/products/jdbc/)
@@ -11,8 +7,7 @@ connections are optionally pooled using Apache Commons DBCP. In this
 case, a different connection pool is created for each unique combination
 of JDBC URI and connection properties.
 
-Description
-===========
+# Description
 
 This connector supports the following protocol: JDBC.
 
@@ -40,4 +35,3 @@ Here is the list of dependencies of this connector:
 
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/jdbc/package-summary.html).
-

@@ -1,6 +1,3 @@
-Swagger extension
-=================
-
 This extension provides a preview integration with Swagger including:
 
 * generation of Swagger descriptor in JSON

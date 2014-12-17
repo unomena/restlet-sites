@@ -1,8 +1,4 @@
-Client connectors
-=================
-
-Introduction
-============
+# Introduction
 
 It is possible to declare client connectors when the application is
 hosted on a Servlet container. The Javadocs of the Servlet adapter
@@ -15,12 +11,11 @@ The web.xml file declares the client connectors in a dedicated
 
     <servlet>
         <servlet-name>RestletAdapter</servlet-name>
-        [...] 
+        [...]
         <!-- List of supported client protocols (Optional - Only in mode 3) -->
         <init-param>
             <param-name>org.restlet.clients</param-name>
             <param-value>HTTP HTTPS FILE</param-value>
         </init-param>
-        [...] 
+        [...]
     </servlet>
-

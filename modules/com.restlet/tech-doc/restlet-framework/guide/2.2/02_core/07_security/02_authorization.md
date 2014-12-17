@@ -1,8 +1,4 @@
-Authorization
-=============
-
-Introduction
-============
+# Introduction
 
 Authorization should happen after authentication to define what an
 authenticated user is effectively authorized to do in your application.
@@ -12,8 +8,7 @@ static file or by any sort of database.
 
 You can find the sources of the code shown [here](/learn/archives/examples/authorization/${restlet-version-minor}/sources.zip).
 
-Coarse-grained authorization
-============================
+# Coarse-grained authorization
 
 You configure some Authorizer instances (or subclasses like
 RoleAuthorizer, MethodAuthorizer, etc.) and attach them at key points in
@@ -25,47 +20,47 @@ Otherwise, you might end-up with an Authorizer instance in front of each
 resource class...
 
 Here is a simple example, you will get a String response containing the
-resource's name when accessing resources with authorized profile and 
+resource's name when accessing resources with authorized profile and
 a "403 Forbidden" error otherwise.
 
-This code is self-sufficient so you just need to copy-paste it in a 
-MyApiWithRoleAuthorization class, create the resources as shown below 
-and run it. Don't forget to add the JSE edition org.restlet.jar 
+This code is self-sufficient so you just need to copy-paste it in a
+MyApiWithRoleAuthorization class, create the resources as shown below
+and run it. Don't forget to add the JSE edition org.restlet.jar
 ([download here](http://restlet.com/downloads/current#release=stable&edition=jse))
 in your build path.
 
 Main class for role authorization example:
 
     public class MyApiWithRoleAuthorization extends Application {
-	
+
 	    //Define role names
 	    public static final String ROLE_USER = "user";
 	    public static final String ROLE_OWNER = "owner";
-	
+
 	    @Override
 	    public Restlet createInboundRoot() {
 	        //Create the authenticator, the authorizer and the router that will be protected
 	        ChallengeAuthenticator authenticator = createAuthenticator();
 	        RoleAuthorizer authorizer = createRoleAuthorizer();
 	        Router router = createRouter();
-	
+
 	    	Router baseRouter = new Router(getContext());
-	        
+
 	        //Protect the resource by enforcing authentication then authorization
 	        authorizer.setNext(Resource0.class);
 	        authenticator.setNext(baseRouter);
-	    	
+
 	    	//Protect only the private resources with authorizer
 	    	//You could use several different authorizers to authorize different roles
 	    	baseRouter.attach("/resourceTypePrivate", authorizer);
 	    	baseRouter.attach("/resourceTypePublic", router);
 	        return authenticator;
 	    }
-	    
+
 	    private ChallengeAuthenticator createAuthenticator() {
 	        ChallengeAuthenticator guard = new ChallengeAuthenticator(
 	                getContext(), ChallengeScheme.HTTP_BASIC, "realm");
-	
+
 	        //Create in-memory users with roles
 	        MemoryRealm realm = new MemoryRealm();
 	        User user = new User("user", "user");
@@ -74,13 +69,13 @@ Main class for role authorization example:
 	        User owner = new User("owner", "owner");
 	        realm.getUsers().add(owner);
 	        realm.map(owner, Role.get(this, ROLE_OWNER));
-	        
+
 	        //Attach verifier to check authentication and enroler to determine roles
 	        guard.setVerifier(realm.getVerifier());
 	        guard.setEnroler(realm.getEnroler());
 	        return guard;
 	    }
-	    
+
 	    private RoleAuthorizer createRoleAuthorizer() {
 	    	//Authorize owners and forbid users on roleAuth's children
 	    	RoleAuthorizer roleAuth = new RoleAuthorizer();
@@ -88,7 +83,7 @@ Main class for role authorization example:
 	    	roleAuth.getForbiddenRoles().add(Role.get(this, ROLE_USER));
 	    	return roleAuth;
 	    }
-	
+
 	    private Router createRouter() {
 	        //Attach Server Resources to given URL
 	        Router router = new Router(getContext());
@@ -96,7 +91,7 @@ Main class for role authorization example:
 	        router.attach("/resource2/", Resource2.class);
 	        return router;
 	    }
-	    
+
 	    public static void main(String[] args) throws Exception {
 	        //Attach application to http://localhost:9000/v1
 	        Component c = new Component();
@@ -107,7 +102,7 @@ Main class for role authorization example:
 	}
 
 Resources classes, call them Resource1, Resource2 etc... and copy-paste
-their content from here: 
+their content from here:
 
     public class Resource0 extends ServerResource{
 
@@ -115,29 +110,29 @@ their content from here:
     	public String represent() throws Exception {
     		return this.getClass().getSimpleName() + " found !";
     	}
-    	
+
     	@Post
     	public String add() {
     		return this.getClass().getSimpleName() + " posted !";
     	}
-    	
+
     	@Put
     	public String change() {
     		return this.getClass().getSimpleName() + " changed !";
     	}
-    	
+
     	@Patch
     	public String partiallyChange() {
     		return this.getClass().getSimpleName() + " partially changed !";
     	}
-    	
+
     	@Delete
     	public String destroy() {
     		return this.getClass().getSimpleName() + " deleted!";
     	}
     }
-    
-Main class for method authorization example, use the last class and replace 
+
+Main class for method authorization example, use the last class and replace
 its createInboundRoot and createRoleAuthorizer with the methods below:
 
     @Override
@@ -145,18 +140,18 @@ its createInboundRoot and createRoleAuthorizer with the methods below:
         //ChallengeAuthenticator
         ChallengeAuthenticator ca = createAuthenticator();
         ca.setOptional(true);
-        
+
         //MethodAuthorizer
         MethodAuthorizer ma = createMethodAuthorizer();
         ca.setNext(ma);
-        
+
         //Router
         ma.setNext(createRouter());
         return ca;
     }
 
     private MethodAuthorizer createMethodAuthorizer() {
-        //Authorize GET for anonymous users and GET, POST, PUT, DELETE for 
+        //Authorize GET for anonymous users and GET, POST, PUT, DELETE for
         //authenticated users
     	MethodAuthorizer methodAuth = new MethodAuthorizer();
     	methodAuth.getAnonymousMethods().add(Method.GET);
@@ -167,8 +162,7 @@ its createInboundRoot and createRoleAuthorizer with the methods below:
     	return methodAuth;
     }
 
-Fine-grained authorization
-==========================
+# Fine-grained authorization
 
 If your authorization rules tend to be very specific to each resource
 class, or more complexly specific to resource instances, then it is
@@ -185,7 +179,7 @@ Create a simple server as below:
     		root.attach("/resource1", ResourceFineGrained.class);
     		return root;
     	}
-    	
+
     	public static void main(String[] args) throws Exception {
     		//Attach application to http://localhost:9000/v1
             Component c = new Component();
@@ -194,7 +188,7 @@ Create a simple server as below:
             c.start();
     	}
     }
-    
+
 With a resource like this:
 
     public class ResourceFineGrained extends ServerResource {
@@ -206,7 +200,7 @@ With a resource like this:
     		}
             return this.getClass().getSimpleName() + " found !";
     	}
-    	
+
     	@Post
     	public String postMe() {
     		if (!isInRole(MyApiWithRoleAuthorization.ROLE_OWNER)) {
@@ -214,7 +208,7 @@ With a resource like this:
     		}
     		return this.getClass().getSimpleName() + " posted !";
     	}
-    	
+
     	@Patch
     	public String patchMe() {
     		if (!getClientInfo().isAuthenticated()) {
@@ -226,12 +220,11 @@ With a resource like this:
 
 For a call to [http://localhost:9000/v1/resourceTypePublic/resource1/](http://localhost:9000/v1/resourceTypePublic/resource1/)
 you will need to use the owner profile to use POST and just authenticate to use PATCH.
-You will need to use an 
-[HTTPS endpoint](http://restlet.com/learn/guide/${restlet-version-minor}/core/security/https) 
-to GET this resource. 
+You will need to use an
+[HTTPS endpoint](http://restlet.com/learn/guide/${restlet-version-minor}/core/security/https)
+to GET this resource.
 
-Middle-grained authorization
-============================
+# Middle-grained authorization
 
 The idea would be to define several URI subspaces in your overall
 application URI space. Each subspace would have a unique name, like a

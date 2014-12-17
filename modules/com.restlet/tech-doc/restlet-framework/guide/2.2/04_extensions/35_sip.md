@@ -1,8 +1,4 @@
-SIP extension
-=============
-
-Introduction
-============
+# Introduction
 
 This extension provides support for the Session Initiation Protocol,
 largely used for voice over IP (VoIP). It ships both client and server
@@ -13,8 +9,7 @@ performance.
 For now, you can get more details on the [Restlet/SIP specifications
 page](/participate#/257-restlet/300-restlet.html).
 
-Features
-========
+# Features
 
 -   SIP transport over TCP
 -   All SIP headers, including "Via", map to a Java API
@@ -24,8 +19,7 @@ Features
 -   OPTIONS method supported : useful for integration purposes as most
     gateways require it for redundancy
 
-Mapping SIP headers
-===================
+# Mapping SIP headers
 
 The [complete list of SIP headers](http://www.iana.org/assignments/sip-parameters)
 is available at the IANA site.
@@ -84,4 +78,3 @@ User-Agent | request.clientInfo.agent |  | Identical to HTTP.
 Via | message.recipientsInfo |  | Identical to HTTP.
 Warning | message.warnings |  | Identical to HTTP.
 WWW-Authenticate | response.challengeRequests |  | Identical to HTTP.
-

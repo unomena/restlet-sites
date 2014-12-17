@@ -4,7 +4,7 @@ Welcome to the APISpark User Guide.
 ![Sign in](images/apispark-logo-v1.png "Sign in")
 
 APISpark is *the* platform for those who want to
-- **create** new web API's
+- **create** new web APIs
 - **document** existing APIs
 - **consume** APIs.
 
@@ -33,5 +33,4 @@ Here is a list of the different step-by-step tutorials we have at your disposal:
 -->
 
 
-Last update: November 18th 2014, 2.15pm
-Version: v3.0.0
+Last update: December 11th 2014, 10:50am

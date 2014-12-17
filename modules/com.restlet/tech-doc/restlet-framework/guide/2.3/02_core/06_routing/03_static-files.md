@@ -1,8 +1,4 @@
-Tutorial
-========
-
-Introduction
-============
+# Introduction
 
 Do you have a part of your web application that serves static pages like
 Javadocs? Well, no need to setup an Apache server just for that, use
@@ -42,4 +38,3 @@ metadata (media type, language or encoding) or if you want to specify a
 different index name, you can use the Application's
 ["metadataService"](javadocs://jse/api/org/restlet/service/MetadataService.html)
 property.
-

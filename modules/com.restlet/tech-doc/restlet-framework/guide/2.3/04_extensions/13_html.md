@@ -1,15 +1,10 @@
-HTML
-====
-
-Introduction
-============
+# Introduction
 
 This extension aims at providing a comprehensive support for HTML in the
 Restlet Framework. The most common requirement is the manipulation of
 HTML forms
 
-Description
-===========
+# Description
 
 It is available in the **org.restlet.ext.html** package since version
 2.1 (post-M5). Currently, it contains a replacement for the usual
@@ -25,8 +20,7 @@ For additional information on both encoding, please see the HTML 4.0
 specification, [section
 17.13](http://www.w3.org/TR/html4/interact/forms.html#h-17.13).
 
-Usage example
--------------
+## Usage example
 
     Representation file = new FileRepresentation(***);
 
@@ -39,4 +33,3 @@ Usage example
 
     ClientResource cr = new ClientResource("http://mydomain.com/upload");
     cr.post(form);
-

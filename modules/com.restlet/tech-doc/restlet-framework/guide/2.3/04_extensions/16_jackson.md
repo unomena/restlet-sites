@@ -1,9 +1,9 @@
-# Jackson extension
+# Introduction
 
 This extension provides and integration of Restlet with Jackson. [Jackson](http://jackson.codehaus.org/)
 is a fast library to serialize objects to JSON and back again.
 
-## Usage instructions
+# Usage instructions
 
 The extension comes with a JacksonRepresentation that can either:
 *   wrap a Java object to serialize it as JSON, JSON Binary (Smile), XML, CSV or YAML representation,

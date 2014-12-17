@@ -1,8 +1,4 @@
-Tunnel service
-==============
-
-Introduction
-============
+# Introduction
 
 This service tunnels request method or client preferences. The tunneling
 can use query parameters and file-like extensions. This is particularly
@@ -91,4 +87,3 @@ It allows to specify a complete "accept" header string for a set of
 (key:value) pairs. The header value is given with the "accept" key, and
 the set of (key:value) pairs is the simple list of key:value just above
 the "accept" line.
-

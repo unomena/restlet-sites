@@ -1,31 +1,26 @@
-Guice extension
-=================
+# Introduction
 
-Introduction
-============
-
-This extension provides tools for dependency injection (DI) of Restlet ServerResource types that have 
-javax.inject-annotated members. 
-Although the extension has "guice" in the package name and contains direct support for Google Guice 
+This extension provides tools for dependency injection (DI) of Restlet ServerResource types that have
+javax.inject-annotated members.
+Although the extension has "guice" in the package name and contains direct support for Google Guice
 version 3.0 or later, the tools here can be adapted for use with any DI framework that complies with JSR-330.
 
 This extension provides three independent approaches for dependency-injecting Restlet server resources, the self-injection approach, the Finder factory approach, and the resource-injecting application approach.
 
 Note that the extension is limited to injection of server resources, and not other Restlet types, because server resources are constructed by the Restlet framework, not by the user. The last section below describes how to use a JSR-330 DI framework to inject other Restlet types, without needing the tools in this extension.
 
-Self-injection
-==============
+# Self-injection
+
 When using this approach:
 - DI framework must support static field injection (Guice does).
 - No constructor injection for resources; only field and method injection will work.
 
-In the self-injection approach, extend SelfInjectingServerResource and annotate 
+In the self-injection approach, extend SelfInjectingServerResource and annotate
 fields and methods to be injected with @Inject.
 
 To inject resources with Guice, install a SelfInjectingServerResourceModule when creating the Injector.
 
-Finder factory
-==============
+# Finder factory
 
 When using this approach:
 - DI framework does not need to support static field injection.
@@ -39,13 +34,13 @@ In the Finder factory approach, inject FinderFactory into contexts where routing
    bind(ServerResource.class)
        .annotatedWith(Hello.class)
        .to(HelloServerResource.class);
- 
+
    // In createInboundRoot():
    FinderFactory finderFactory = ... injected somehow ...;
- 
+
    // Attachment with no coupling to concrete resource type:
    router.attach("/hello", finderFactory.finder(ServerResource.class, Hello.class);
- 
+
    // Attachment with direct knowledge of concrete resource type:
    router.attach("/bye", finderFactory.finder(ByeServerResource.class);
 ```
@@ -54,8 +49,7 @@ To use a Guice-enabled FinderFactory, install a RestletGuice.Module when creatin
 
 Alternatively, for standalone Applications, create a single RestletGuice.Module instance, possibly passing other Guice modules to the constructor, and use it as the FinderFactory in createInboundRoot().
 
-Resource-injecting application
-==============================
+# Resource-injecting application
 
 When using this approach:
 - DI framework does not need to support static field injection.
@@ -66,14 +60,13 @@ In the resource-injecting application approach, extend ResourceInjectingApplicat
 
 To work with Guice, install a SelfInjectingServerResourceModule when creating the Injector that injects the application. To work with another JSR-330-compliant framework, bind SelfInjectingServerResource.MembersInjector to a framework-specific implementation.
 
-Injecting other Restlet types
-=============================
+# Injecting other Restlet types
 
 Instead of calling new FooApplication(...) when attaching an application in setting up a component, inject that application beforehand:
 
 ```java
  public class MyComponent extends Component {
- 
+
      public static void main(String... args) {
            // Run as standalone component:
            Injector injector = <em>... create injector ...</em>;
@@ -81,7 +74,7 @@ Instead of calling new FooApplication(...) when attaching an application in sett
            // <em>... shutdown hooks, etc. ...</em>
            comp.start();
        }
- 
+
      @Inject
      MyComponent(FooApplication fooApp, BarApplication barApp) {
          // ...
@@ -100,9 +93,9 @@ To avoid coupling a knowledge of a specific application subtype in this setting,
      getDefaultHost().attach("/foo", fooApp);
      getDefaultHost().attach("/bar", barApp);
  }
- 
+
  // With the qualifiers defined elsewhere:
- 
+
  @java.lang.annotation.Retention(RUNTIME)
  @javax.inject.Qualifier
  public @interface Foo {
@@ -117,4 +110,3 @@ Using the @Named qualifier trades some type-safety for convenience:
 ```
 
 [Javadocs](javadocs://jse/ext/org/restlet/ext/guice/package-summary.html).
-

@@ -1,5 +1,3 @@
-# Persistence layer
-
 The Restlet framework is completely agnostic regarding the persistence
 technology that you want to use. Many alternatives having been used
 successfully and we are confident that you won't hit any special
@@ -20,4 +18,3 @@ construction, based on the actual identity of your resource and other
 parameters or attributes of the request, you will be able to contact
 your persistence backend in order to support your processing logic or
 the representations of your resources returned.
-

@@ -1,16 +1,11 @@
-Apache FileUpload extension
-===========================
-
-Introduction
-============
+# Introduction
 
 This extension leverages the [Apache FileUpload
 library](http://commons.apache.org/fileupload/)
 to provide a robust, high-performance, Web-based file upload in Restlet
 server-side applications.
 
-Description
-===========
+# Description
 
 This extension lets you receive files sent by POST or PUT requests and
 to parse the posted entity (which is actually an instance of the
@@ -26,8 +21,7 @@ Here is the list of dependencies for this extension:
 -   [Java Servlet](http://java.sun.com/products/servlet/)
 -   [Apache Commons FileUpload](http://jakarta.apache.org/commons/fileupload/)
 
-Usage example
-=============
+# Usage example
 
 This sample code illustrates how to upload files with the FileUpload
 extension. It is composed of 3 classes:
@@ -54,7 +48,7 @@ MyResource instance is to parse the request, get the file, save it on
 disk and send back its content as plain text to the client.
 
 Here is the content of the MyResource\#accept method:
-
+```
 ~~~~ {.brush: .java}
     @Post
     public Representation accept(Representation entity) throws Exception {
@@ -120,7 +114,7 @@ Here is the content of the MyResource\#accept method:
         return rep;
     }
 ~~~~
-
+```
 Before running this example, please add the following jars to the
 classpath:
 
@@ -130,10 +124,8 @@ classpath:
 -   org.apache.commons.io (Apache FileUpload project)
 -   javax.servlet.jar (Servlet archive used by the FileUpload library)
 
-Links
------
+# Links
 
 -   [Apache FileUpload library](http://commons.apache.org/fileupload/)
--   [Server connectors](../core/base/connectors/#server-connectors-1)
+-   [Server connectors](technical-resources/restlet-framework/guide/2.3/core/base/connectors)
 -   [Sample code of FileUpload extension (zip file)](/learn/guide/2.1#/42-restlet.html "Usage example of FileUpload extension")
-

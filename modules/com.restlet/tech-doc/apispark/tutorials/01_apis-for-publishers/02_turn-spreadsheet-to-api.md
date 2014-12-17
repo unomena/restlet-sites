@@ -112,6 +112,8 @@ Click on **Add** to create the API. You will be taken to the API's **Overview** 
 
 Deploy the API by clicking the **Deploy** button.
 
+![Deploy button](images/deploy-button2.jpg "Deploy button")
+
 # 8. Invoke the web API
 
 Using a web API does not impose any particular programming language.

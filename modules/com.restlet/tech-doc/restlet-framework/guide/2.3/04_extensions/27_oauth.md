@@ -1,5 +1,3 @@
-# OAuth extension
-
 This extensions is a **preview support** of the OAuth v2.0 standard. It has been developed based on an initial contribution by Ericsson Labs ([see original project here](http://labs.ericsson.com/apis/oauth2-framework)) and later enhanced to support the final 2.0 RFC thanks to another community contribution.
 
 This is intended to be used with primarily following use-cases in mind:
@@ -27,7 +25,7 @@ Example 1. Creating a Protected Resource
         OAuthProxy proxy = new OauthProxy(params, getContext(), true);
         proxy.setNext(DummyResource.class);
         router.attach("/write", write);
-        
+
         //A Slightly more advanced example that also sets some SSL client parameters
         Client client = new Client(Protocol.HTTPS);
         Context c = new Context();
@@ -38,7 +36,7 @@ Example 1. Creating a Protected Resource
             oauthURL, "scope1 scope2");
         OAuthProxy proxy = new OauthProxy(params, getContext(), true, client);
         proxy.setNext(DummyResource.class);
-        router.attach("/write", write);   
+        router.attach("/write", write);
     }
 
 Example 2. Creating a Proxies to access protected resources
@@ -46,4 +44,3 @@ Example 2. Creating a Proxies to access protected resources
 
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/oauth/package-summary.html).
-

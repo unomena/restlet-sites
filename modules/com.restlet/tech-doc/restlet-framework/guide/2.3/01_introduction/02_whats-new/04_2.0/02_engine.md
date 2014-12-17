@@ -1,22 +1,18 @@
-Connectors
-==========
+# Connectors
 
-Content negotiation
-===================
+## Content negotiation
 
 Content negotiation was rewritten to support all possible dimensions
 such as media type, language, character set or encoding.
 
-CLAP client
-===========
+## CLAP client
 
 Enhanced the CLAP connector to support a default authority (“class”) for
 shorter URIs (ex: “clap:///org/restlet/Uniform.class”). Added
 LocalReference\#createClapReference(int, Package) and
 createClapReference(Package) methods to help building shorter CLAP URIs.
 
-Internal HTTP connectors
-========================
+## Internal HTTP connectors
 
 The internal HTTP connectors were replaced with new ones based
 supporting [the new asynchronous processing features in Restlet
@@ -34,14 +30,11 @@ is only planned for the next 2.1 version. For now, you should mainly use
 these connectors for development purpose and [configure connectors](../../../core/base/connectors "Connectors") such
 as Jetty and Apache HTTP Client when deploying to production.
 
-Internal JAR and ZIP clients
-============================
+## Internal JAR and ZIP clients
 
 Client connectors for the ZIP and JAR pseudo-protocols were added.
 
-RIAP connectors
-===============
+## RIAP connectors
 
 Added client and server RIAP connectors that use a protected singleton
 unique in the JVM.
-

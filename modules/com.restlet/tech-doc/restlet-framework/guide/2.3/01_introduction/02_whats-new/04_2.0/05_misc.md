@@ -1,8 +1,4 @@
-Misc
-====
-
-Enhanced Maven support
-======================
+# Enhanced Maven support
 
 A long time ago, we offered a Maven distribution via [our own Maven
 repositories](http://restlet.com/downloads/current?distribution=maven&release=stable&edition=jse)
@@ -25,13 +21,11 @@ on our developers wiki. Note that we have also adjusted our Maven
 GroupId (only “org.restlet” is used now) are redistributed third-party
 libraries are now packaged with a “org.restlet.lib.” ArtifactId prefix.
 
-Licensing changes
-=================
+# Licensing changes
 
 Eclipse Public License 1.0 is an additional licensing option offered
 
-OAuth extension
-===============
+# OAuth extension
 
 The OAuth extension available in Restlet 1.1 has been moved to the
 [Restlet
@@ -39,4 +33,3 @@ Incubator](/learn/guide/2.0#/257-restlet.html?branch=main "Restlet Incubator")
 as it would require too much work to get aligned with the new Restlet
 security and resource APIs in version 2.0. Note that this is temporary
 and we definitely want to reintroduce this feature in Restlet 2.1.
-

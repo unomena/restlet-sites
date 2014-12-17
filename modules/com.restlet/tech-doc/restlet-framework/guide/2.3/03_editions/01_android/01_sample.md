@@ -1,14 +1,9 @@
-Sample application
-==================
-
-Introduction
-============
+# Introduction
 
 This sample application aims at illustrating the port of the Restlet API
 on the Google Android platform.
 
-Architecture
-============
+# Architecture
 
 The developed application uses the software architecture illustrated
 below. On the upper left side, you have an enhanced Android contacts
@@ -35,8 +30,7 @@ server FOAF profiles (in the RDF/N-Triples media type) at those URIs:
 -   http://localhost/users/1
 -   http://localhost/users/2
 
-Screenshots
-===========
+# Screenshots
 
 List of currently registered contacts in the Android's address book
 
@@ -44,11 +38,9 @@ List of friends of the selected contact
 
 A new contact has been added
 
-Implementation
-==============
+# Implementation
 
-"FOAF" Service
---------------
+## "FOAF" Service
 
 ### Declaration of the service (AndroidManifest.xml):
 
@@ -141,8 +133,7 @@ this FOAF profile.
         return foafRep.getFriends();
     }
 
-Contact activity
-----------------
+## Contact activity
 
 This activity is in charge to display the list of friends of a contact
 (assuming it has a correct foaf URI, in the "Note" field of the address
@@ -238,4 +229,3 @@ Used to bind the service, when the activity starts.
                         connection, Context.BIND_AUTO_CREATE);
             }
         }
-

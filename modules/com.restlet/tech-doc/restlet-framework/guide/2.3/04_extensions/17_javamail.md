@@ -1,16 +1,11 @@
-JavaMail extension
-==================
-
-Introduction
-============
+# Introduction
 
 This connector is based on
 [JavaMail](http://www.oracle.com/technetwork/java/javamail/index.html)
 that provides a platform-independent and protocol-independent framework
 to build mail and messaging applications.
 
-Description
-===========
+# Description
 
 This connector supports the following protocols: SMTP, SMTPS.
 
@@ -23,4 +18,3 @@ have to be specified as an XML representation.
 
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/javamail/package-summary.html).
-

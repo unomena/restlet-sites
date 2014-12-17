@@ -1,6 +1,4 @@
-# Getting started with Maven
-
-## Introduction
+# Introduction
 
 Maven is a comprehensive project management system built around the
 concept of POM (Project Object Model). One of the main advantages is the
@@ -26,7 +24,7 @@ It is freely accessible from
 and contains all Restlet JARs and third party dependencies that aren't
 available in the main public Maven repository.
 
-## Public repository configuration
+# Public repository configuration
 
 Here are some instructions about how to configure Maven client to work
 with the online Maven repository.
@@ -70,13 +68,13 @@ Just after the \</profiles\> add the following:
     <activeProfiles> 
       <activeProfile>restlet</activeProfile>
     </activeProfiles> 
-       
 
-## Available artifacts
+
+# Available artifacts
 
 The following table lists the available artifacts and their group and
 artifact ids. With the introduction of the
-[editions](../../editions "Part III - Restlet Editions")
+[editions](technical-resources/restlet-framework/guide/2.3/editions/overview "Part III - Restlet Editions")
 for the Restlet framework, it is necessary to make a distinction between
 an extension for a given edition and the same extension for another
 extension simply because the code of the extension may change between
@@ -92,7 +90,7 @@ three-letters code of an edition among:
 -   gwt (Google Web Toolkit edition),
 -   osgi (OSGi Environments edition).
 
-You can find [here](../../extensions/editions-matrix "Editions matrix")
+You can find [here](technical-resources/restlet-framework/guide/2.3/extensions/editions-matrix "Editions matrix")
 a full view of the list of extensions and the editions that ship them. 
 
 artifactId | Description
@@ -142,7 +140,7 @@ artifactId | Description
 [org.restlet.ext.xstream](../../extensions/xstream "xstream")|Integration with XStream.
 org.restlet.test | Test module
 
-## Sample dependencies declaration
+# Sample dependencies declaration
 
 Each project based on the Restlet Framework needs to declare at least
 one dependency: the Restlet core module. According to your needs, you

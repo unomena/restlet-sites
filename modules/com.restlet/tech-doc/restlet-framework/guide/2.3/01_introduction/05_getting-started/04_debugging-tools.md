@@ -1,6 +1,4 @@
-# Debugging tools
-
-## Introduction
+# Introduction
 
 As a set of pure Java library, the Restlet framework can easily be
 debugged in your favorite IDE. All the source code is available, making
@@ -10,9 +8,9 @@ necessary.
 A good way to start a debugging session is to put a breakpoint inside
 the handle() method or inside the constructor of your Resource subclass.
 Think also about turning one the access and application
-[loggings](../../editions/jse/logging.md "Logging").
+[loggings](technical-resources/restlet-framework/guide/2.3/editions/jse/logging "Logging").
 
-## Tools
+# Tools
 
 Regarding protocol debugging, we recommend the you install tools such
 as:
@@ -24,4 +22,3 @@ as:
 -   [Netcat](http://netcat.sourceforge.net/) : swiss-army knife for TCP/IP.
 -   [tcpmon](http://ws.apache.org/tcpmon/) : Java utility that monitors a TCP connection.
 -   etc.
-

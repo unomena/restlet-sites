@@ -1,8 +1,4 @@
-Examples
-========
-
-Introduction
-============
+# Introduction
 
 An example project download is provided that works both under Eclipse
 and via ant build.  This sets up the basic framework for GWT compilation
@@ -33,8 +29,7 @@ releases of GWT) ; update the Eclipse build path and/or the "gwt.sdk"
 property in the ant build script to point to the GWT binaries for your
 platform.
 
-Zip content
------------
+## Zip content
 
 Name
 
@@ -65,11 +60,9 @@ lib
 Directory that contains the libraries of the client side of the project
 - they are taken from the "gwt" edition, release 2.0rc3
 
-Description
-===========
+# Description
 
-GWT page
---------
+## GWT page
 
 You can find the source code of this page in directory
 "src/org/restlet/example/gwt/client".
@@ -115,8 +108,7 @@ client in order to request the "ping" resource located at URL
         });
         r.get();
 
-Server side
------------
+## Server side
 
 Basically, the server s responsible to serve the generated page, and to
 respond to asynchronous call described just above.
@@ -147,4 +139,3 @@ credentials.
             return sb.toString();
         }
     }
-

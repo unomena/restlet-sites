@@ -1,8 +1,4 @@
-Atom extension
-==============
-
-Introduction
-============
+# Introduction
 
 This extension provides support for the Atom standard. Atom is an
 evolution of the RSS standard that was introduced to remove know
@@ -19,8 +15,7 @@ This is called the [Atom Publishing
 Protocol](http://www.atomenabled.org/developers/protocol/atom-protocol-spec.php)
 (APP).
 
-Description
-===========
+# Description
 
 The Restlet extension for Atom provides a complete Atom API for both Web
 feeds and publication documents. This API is capable of both parsing and
@@ -39,10 +34,8 @@ org.restlet.example.book.restlet.ch8.resources.FeedResource class.
 For additional details, please consult  [the
 Javadocs](javadocs://jse/ext/org/restlet/ext/atom/package-summary.html).
 
-Links
------
+# Links
 
 -   [AtomEnabled.org](http://www.atomenabled.org/)
 -   [Wikipedia
     entry](http://en.wikipedia.org/wiki/Atom_%28standard%29)
-

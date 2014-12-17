@@ -1,8 +1,4 @@
-OSGi deployment
-===============
-
-Introduction
-============
+# Introduction
 
 This page will explain you how to run your Restlet application in an
 OSGi environment such as Eclipse Equinox or Apache Felix. For additional
@@ -14,8 +10,7 @@ Since Restlet 2.1 RC2, a new edition of Restlet Framework for OSGi
 environements is available as well as an [Eclipse update
 site](http://restlet.com/downloads/current?distribution=p2&release=stable&edition=osgi).
 
-Simple example
-==============
+# Simple example
 
 Since Restlet 1.1, the integration of Restlet and OSGi has become much
 easier. Each Restlet module and library is an OSGi bundle, and the
@@ -70,8 +65,7 @@ instructions to get a simple Restlet project working with OSGi:
 6.  Open your browser at the "http://localhost:8554/" URI
 7.  "Hello world!" should be displayed!
 
-Complete example
-================
+# Complete example
 
 Now, let's look at a more complete example, leveraging the Jetty
 connector and attaching Resources to a Router. For this we will reuse
@@ -161,8 +155,7 @@ An archive of this test project is [available
 here](/learn/guide/2.1#/239-restlet/version/default/part/AttachmentData/data "OsgiUsageTest2")
 (application/zip, 6.5 kB).
 
-Standalone Equinox deployment
-=============================
+# Standalone Equinox deployment
 
 Here is a straightforward, light-weight way of setting up an Equinox
 OSGi container proposed by Dave Fogel:
@@ -242,11 +235,9 @@ sure you have a compatible set of bundles satisfying all their mandatory
 dependencies, and then copy that set into the /load directory. Let me
 know if you have any problems with this setup.
 
-Issues when using Restlet within OSGi
-=====================================
+# Issues when using Restlet within OSGi
 
-Using client connectors
------------------------
+## Using client connectors
 
 You need to be very careful when using client connectors within an OSGi
 container. You must be sure that the bundle providing the connector is
@@ -294,11 +285,9 @@ loaded. Here is a sample of code:
 The registerClientConnector method simply does something like that:
 component.getClients().add(Protocol.HTTPS);.
 
-Other references
-================
+# Other references
 
-Standalone Equinox
-------------------
+## Standalone Equinox
 
 -   David Fogel - Detailed instruction [in this
     mail](http://restlet.tigris.org/ds/viewMessage.do?dsForumId=4447&dsMessageId=1344544)
@@ -308,4 +297,3 @@ Standalone Equinox
     \#2](http://blog.wolfgang-werner.net/building-web-services-on-equinox-and-restlet-2/)
 -   Wolfgang Werner - [Building web services on Equinox and Restlet
     \#3](http://blog.wolfgang-werner.net/building-web-services-on-equinox-and-restlet-3/)
-

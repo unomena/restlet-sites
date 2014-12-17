@@ -1,14 +1,10 @@
-Swagger extension
-=================
+# Introduction
 
-Introduction
-============
+This extension provides a preview integration with [Swagger](https://helloreverb.com/developers/swagger) including:
 
-This extension provides a preview integration with [Swagger](https://helloreverb.com/developers/swagger) including: 
-
-- automated generation of Swagger descriptor in JSON 
-- introspection of JAX-RS API based applications 
-- introspection of Restlet API based applications 
+- automated generation of Swagger descriptor in JSON
+- introspection of JAX-RS API based applications
+- introspection of Restlet API based applications
 
 Additional work is required to:
 
@@ -17,22 +13,21 @@ Additional work is required to:
 In this scenario, we will add Swagger support to a Restlet based API then display its Swagger-UI.
 You can download [this code](/learn/archives/examples/swagger/SwaggerApplicationExample.zip) and follow the README.md to get a sample application and try it out.
 
-Usage
-=====
+# Usage
 
-### Dependencies
+## Dependencies
 
 Add org.restlet.ext.swagger.jar (provided in the "lib" directory of
-[restlet framework](http://restlet.com/downloads/current#release=testing&edition=jse&distribution=zip 
+[restlet framework](http://restlet.com/downloads/current#release=testing&edition=jse&distribution=zip
 "download restlet framework")) to your classpath.
- 
+
 Make sure you are using the version 2.3 of Restlet and java 1.7.
 
-### Configuration
+## Configuration
 
 Make your application class extend org.restlet.ext.swagger.SwaggerApplication instead of org.restlet.Application.
 
-By default, the Swagger documentation will be available on the path "/api-docs" of your API. If you want to change this path, you can specify it manually in the method _createInboundRoot_: 
+By default, the Swagger documentation will be available on the path "/api-docs" of your API. If you want to change this path, you can specify it manually in the method _createInboundRoot_:
 
 ```java
 public Restlet createInboundRoot() {
@@ -48,12 +43,11 @@ public Restlet createInboundRoot() {
 
 Here, you specify that the Swagger definition will be provided on the path "/docs".
 
-Customization
-=============
+# Customization
 
-If you want to display a definition edited manually, the SwaggerApplication can get it directly from files. To do that, you just have to override the method _getSwaggerSpecificationRestlet()_ of class SwaggerApplication and make it return a custom Restlet. 
+If you want to display a definition edited manually, the SwaggerApplication can get it directly from files. To do that, you just have to override the method _getSwaggerSpecificationRestlet()_ of class SwaggerApplication and make it return a custom Restlet.
 
-See sample implementation below: 
+See sample implementation below:
 
 ```java
 
@@ -83,12 +77,11 @@ See sample implementation below:
 
 ```
 
-Swagger-UI
-==========
+# Swagger-UI
 
 To display the Swagger-UI of your API, go on the page http://petstore.swagger.wordnik.com, enter the URL of your Swagger definition and click on explore.
 
-![swagger-ui](/learn/archives/images/swaggerExtensionSwaggerUI.png)
+![swagger-ui](images/swaggerExtensionSwaggerUI.png)
 
 You can also clone/fork the [project](https://github.com/wordnik/swagger-ui) and embed it.
 

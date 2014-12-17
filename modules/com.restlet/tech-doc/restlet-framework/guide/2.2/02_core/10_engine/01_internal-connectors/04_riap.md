@@ -1,8 +1,4 @@
-Restlet Internal Access Protocol
-================================
-
-Introduction
-============
+# Introduction
 
 RIAP is used to access to other resources hosted in the same Restlet
 Component or VirtualHost or Application, allowing powerful
@@ -15,8 +11,7 @@ Which in turn started of based from discussion on [issue 157 "Optimize
 Internal
 Calls"](http://restlet.tigris.org/issues/show_bug.cgi?id=157)?
 
-Description
-===========
+# Description
 
 The riap:// scheme identifies a so-called pseudo-protocol (terminology
 derived from Apache Cocoon pointing out the difference between 'real' or
@@ -52,8 +47,7 @@ riap://application/\*\*
      (so applications could use this scheme to call resources within
     themselves!)
 
-Use case
---------
+# Use case
 
 Think about some application X that needs a resource Y that is available
 on a configurable base URI. Whatever that base URI is, the
@@ -105,10 +99,9 @@ decomposing your 'component' in smaller
 reusable/configurable/interchange-able 'applications' while assuring
 optimal efficiency when calling upon each other.
 
-How to use
-----------
+# How to use
 
-### Calling the riap:
+## Calling the riap:
 
 To call a resource via the  riap:// scheme one can just use:
 
@@ -119,7 +112,7 @@ To call a resource via the  riap:// scheme one can just use:
 There is no need to register a RIAP client, this is handled by built-in
 support.
 
-### Making resources available to the riap
+## Making resources available to the riap
 
 Applications need just to be attached to the internalRouter property of
 the Component.
@@ -133,8 +126,7 @@ the internal router as to several virtual hosts.\
  A 'pure internal' application should only be attached to the internal
 router.
 
-Limitations
------------
+# Limitations
 
 Note that internal/dynamic resources that require protocol specific
 attributes of the URI where it is invoked (like hostname) might yield
@@ -149,4 +141,3 @@ can't refer to the parent application via RIAP at this point.
 
 Give these cases some special attention during your design, specially
 when porting stuff from other environments (e.g. Servlet app)
-

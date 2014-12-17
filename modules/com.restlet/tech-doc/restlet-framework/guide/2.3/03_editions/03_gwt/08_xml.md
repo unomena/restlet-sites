@@ -1,8 +1,4 @@
-Working with XML
-================
-
-Description
-===========
+# Description
 
 The GWT edition contains a XML extension that provides a
 org.restlet.client.ext.xml.DomRepresentation class that you can leverage
@@ -37,4 +33,3 @@ DomRepresentation gives access to the underlying DOM document via the
     // Indicates the client preferences and let the server handle
     // the best representation with content negotiation.
     r.get(MediaType.TEXT_XML);
-

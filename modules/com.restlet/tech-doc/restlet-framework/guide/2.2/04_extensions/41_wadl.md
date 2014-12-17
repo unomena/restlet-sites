@@ -1,8 +1,4 @@
-WADL extension
-==============
-
-Introduction
-============
+# Introduction
 
 This extension support
 [WADL](http://en.wikipedia.org/wiki/Web_Application_Description_Language),
@@ -15,8 +11,7 @@ user friendly HTML document.
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/wadl/package-summary.html).
 
-Usage example
-=============
+# Usage example
 
 This sample code is an extension of the ["firstResource" sample
 application](javadocs://firstResource).
@@ -32,8 +27,7 @@ Basically, we must be able to generate a proper documentation for:
 
 Here is the list of modifications.
 
-FirstResourceApplication class
-------------------------------
+## FirstResourceApplication class
 
 -   Make the FirstResourceApplication class a subclass of
     WadlApplication.
@@ -54,14 +48,12 @@ FirstResourceApplication class
             return result;
         }
 
-BaseResource class
-------------------
+## BaseResource class
 
 -   Make the BaseResource class a subclass of WADLServerResource, in
     order to provide the WADL features to all inheriting resources.
 
-ItemsResource
--------------
+## ItemsResource
 
 -   Implement the "describe" method,in order to set a proper title.
 
@@ -116,8 +108,7 @@ ItemsResource
             info.getResponse().getFaults().add(faultInfo);
         }
 
-ItemResource
-------------
+## ItemResource
 
 -   Implement the "describe" method,in order to set a proper title.
 
@@ -189,14 +180,12 @@ ItemResource
             super.describePut(info);
         }
 
-Getting the documentation
-=========================
+# Getting the documentation
 
 The documentation is available via the OPTIONS method. and is available
 under 2 formats: WADL or HTML.
 
-WADL documentation
-------------------
+## WADL documentation
 
 Here is a way to programmatically obtain the WADL documentation of the
 application:
@@ -214,8 +203,7 @@ Here is a way to programmatically obtain the WADL documentation of the
     // Displays the WADL documentation of the application
     items.options().write(System.out);
 
-HTML documentation
-------------------
+## HTML documentation
 
 This format is an XML transformation of the WADL representation with an
 XSL sheet, developped and maintained by  Mark Nottingham:
@@ -233,13 +221,11 @@ In order to work properly, you will certainly have to update your
 classpath with the archive of a convenient transformation engine. Xalan
 2.7.1 has been successfully tested.
 
-Advanced topics
-===============
+# Advanced topics
 
-Indicate schema relative to an XML representation
--------------------------------------------------
+## Indicate schema relative to an XML representation
 
-#### A bit of theory
+### A bit of theory
 
 Quoting the WADL specification:
 
@@ -270,7 +256,7 @@ Assuming that the "yn" namespace is declared in the document:
 
     <application [...] xmlns:yn="urn:yahoo:yn" >
 
-#### Implementation with Restlet
+### Implementation with Restlet
 
 At the level of the subclass of WadlApplication, override the
 getApplicationInfo method:
@@ -292,4 +278,3 @@ RepresentationInfo\#element attribute:
 
     RepresentationInfo formRepresentation = new RepresentationInfo();
     formRepresentation.setXmlElement("yn:ResultSet");
-

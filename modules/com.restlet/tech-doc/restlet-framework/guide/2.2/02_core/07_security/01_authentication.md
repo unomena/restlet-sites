@@ -1,8 +1,4 @@
-Authentication
-==============
-
-Introduction
-============
+# Introduction
 
 There are two commons ways to authenticate your users with your Restlet
 application. The first is to use is to leverage the standard HTTP
@@ -11,11 +7,9 @@ The Basic mechanism is sending the password in clear and should only be
 used over a secure HTTPS channel. The second mechanism is to use a
 custom authentication form and some cookie set by the server.
 
-HTTP Basic authentication
-=========================
+# HTTP Basic authentication
 
-Introduction
-------------
+## Introduction
 
 Here is a very simple code illustrating a component that guards its
 applications with the BASIC authentication scheme.
@@ -24,8 +18,7 @@ The whole code can be downloaded
 [here](/learn/guide/2.1#/177-restlet/version/default/part/AttachmentData/data "testHttpBasic")
 (application/force-download, 1.2 kB).
 
-Description of the server side
-------------------------------
+## Description of the server side
 
 ### Component
 
@@ -95,8 +88,7 @@ verify them:
 
     }
 
-Description of the client side
-------------------------------
+## Description of the client side
 
 The credentials are transmitted to the request via a ChallengeResponse
 object as follow:
@@ -113,14 +105,12 @@ object as follow:
         System.out.println(resource.getStatus());
     }
 
-If you try to access http://localhost:8182/ via a web browser, a window will 
+If you try to access http://localhost:8182/ via a web browser, a window will
 appear to type in your credentials.
 
-HTTP Digest authentication
-==========================
+# HTTP Digest authentication
 
-Introduction
-------------
+## Introduction
 
 Here is a very simple code illustrating a component that guards its
 applications with the DIGEST authentication scheme.
@@ -129,8 +119,7 @@ The whole code can be downloaded
 [here](/learn/guide/2.1#/176-restlet/version/default/part/AttachmentData/data "Sample code illustrating Digest authentication")
 (application/force-download, 1.6 kB).
 
-Description of the server side
-------------------------------
+## Description of the server side
 
 ### Component
 
@@ -199,8 +188,7 @@ verify them:
 
     }
 
-Description of the client side
-------------------------------
+## Description of the client side
 
 The authentication with the DIGEST scheme is bit more difficult than the
 one for the BASIC scheme. The credentials provided by the client is the
@@ -250,4 +238,3 @@ instance:
     resource.get();
     // Should be 200.
     System.out.println(resource.getStatus());
-

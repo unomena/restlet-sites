@@ -1,8 +1,4 @@
-Extracting attributes
-=====================
-
-Introduction
-============
+# Introduction
 
 Extracting values from query, entity, cookies into the request's
 attributesis a common need that is supported by the Extractor class.
@@ -23,9 +19,9 @@ respectively to attributes named "selectAttribute" and "textAttribute",
 just proceed as follow.
 
     @Override
-    public Restlet createInboundRoot() { 
-         Extractor extractor = new Extractor(getContext());      
-         extractor.extractFromEntity("selectAttribute", "selectField", true); 
+    public Restlet createInboundRoot() {
+         Extractor extractor = new Extractor(getContext()); 
+         extractor.extractFromEntity("selectAttribute", "selectField", true);
          extractor.extractFromEntity("textAttribute", "textField", false);
 
          extractor.setNext(...)
@@ -57,4 +53,3 @@ Here is sample code which helps to retrieve some attributes:
             }
         }
     }
-

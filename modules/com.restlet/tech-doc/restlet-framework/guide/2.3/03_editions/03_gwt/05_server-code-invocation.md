@@ -1,8 +1,4 @@
-Invoking server side code
-=========================
-
-Description
-===========
+# Description
 
 The Restlet API for GWT is a subset of the Restlet API. It is a subset
 because, as mentioned above, parts of the Restlet API have been deleted,
@@ -17,7 +13,7 @@ environment.
 Here is a snippet of code (from the downloadable example below) showing
 briefly how to instantiate a ClientResource and make an asynchronous GET
 call:
-
+```
 ~~~~ {.brush: .java}
 // Add behaviour on the close button.
 closeButton.addClickHandler(new ClickHandler() {
@@ -40,4 +36,4 @@ closeButton.addClickHandler(new ClickHandler() {
     }
 });
 ~~~~
-
+```

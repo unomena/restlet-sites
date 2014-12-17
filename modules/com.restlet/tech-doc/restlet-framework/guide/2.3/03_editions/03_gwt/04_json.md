@@ -1,8 +1,4 @@
-Working with JSON
-=================
-
-Description
-===========
+# Description
 
 The GWTedition contains a JSON extension that provides a
 org.restlet.client.ext.json.JsonRepresentation class that you can
@@ -38,4 +34,3 @@ representation has been parsed.
     // Indicates the client preferences and let the server handle
     // the best representation with content negotiation.
     r.get(MediaType.APPLICATION_JSON);
-

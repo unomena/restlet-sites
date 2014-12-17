@@ -40,7 +40,7 @@ Once the desired types of documentation have been added to the **Documentation**
 
 ## Download your documentation
 
-To generate the downloads for an API, open the API's **Overview**, click on the pop-down action button and select **Generate downloads**.
+To generate the downloads for an API, open the API's **Overview**, click on the drop-down action button and select **Generate downloads**.
 
 ![Generate downloads](images/generatedownloads.png "Generate downloads")
 

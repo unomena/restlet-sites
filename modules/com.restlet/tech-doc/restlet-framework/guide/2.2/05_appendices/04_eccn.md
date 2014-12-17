@@ -1,6 +1,4 @@
-# ECCN
-
-## Introduction
+# Introduction
 
 This page gives some information to help you obtain an ECCN ([Export
 Control Classification
@@ -15,9 +13,9 @@ that you are using and redistributing, this classification could change.
 In order to help you find your ECCN, we try to answer the typical
 questions related to the classification process.
 
-## FAQ
+# FAQ
 
-### Does Restlet include any encryption technology?
+## Does Restlet include any encryption technology?
 
 The Restlet Framework has a [cryptographic
 extension](javadocs://jee/ext/org/restlet/ext/crypto/package-summary.html)
@@ -28,7 +26,7 @@ related features. It is based on regular Java Cryptography APIs
  In addition, we can take advantage of SSL/HTTPS features to encrypt
 communications.
 
-#### **1)****org.restlet.security** package
+### **1)****org.restlet.security** package
 
 This is the generic security API for Restlet dealing with authentication
 and authorization. It doesn't contain actual implementations for
@@ -39,19 +37,19 @@ Restlet engine, such as these ones in the [crypto
 extension](github://org.restlet.ext.crypto/src/org/restlet/ext/crypto/internal/)
 (note the "internal" packages are hidden from public Javadocs).
 
-#### **2) org.restlet.engine.http.security** package
+### **2) org.restlet.engine.http.security** package
 
 This package contains one class for HTTP Basic support, not really
 encryption related. This was removed in version 2.1 and the
 HttpBasicHelper was moved into org.restlet.engine.security.
 
-#### **3) org.restlet.engine.security** package
+### **3) org.restlet.engine.security** package
 
 This package contains SSL related classes, but only in version 2.0. In
 version 2.1 those classes were moved to the org.restlet.ext.ssl
 extension:
 
-### What encryption algorithms and key lengths are used?
+## What encryption algorithms and key lengths are used?
 
 When we encrypt authentication data in a cookie, we give the option to
 change the algorithm and the secret key, [see details
@@ -69,32 +67,32 @@ For the HTTPS support in connectors, the DefaultSslContextFactory uses :
 -   Key length : depends on the certificate that you configure for your
     HTTPS server (if any)
 
-### What its encryption function is designed for?
+## What its encryption function is designed for?
 
-#### Authentication
+### Authentication
 
 The purpose is authentication for the CookieAuthenticator class and data
 hiding for the HTTPS/SSL connectors. Note that those software components
 are optional, so you can still use Restlet without relying on any
 encryption technology.
 
-#### Digital signature
+### Digital signature
 
 No, beside the HTTP digest feature (see Content-MD5 header) supported
 via the org.restlet.data.Digest and
 org.restlet.representation.DigesterRepresentation classes.
 
-#### Software copy protection
+### Software copy protection
 
 No.
 
-#### Data hiding
+### Data hiding
 
 The purpose is data hiding for the HTTPS/SSL connectors. Note that those
 software components are optional, so you can still use Restlet without
 relying on any encryption technology.
 
-### Are there any differences between Restlet version 2.0 and 2.1?
+## Are there any differences between Restlet version 2.0 and 2.1?
 
 There are the three classes that were moved from the
 org.restlet.engine.security package related to SSL into the Crypto
@@ -114,7 +112,7 @@ contain or rely on any encryption algorithm:
  So, only DefaultSslContextFactory is interesting here ([see source code
 here](github://org.restlet/src/org/restlet/engine/ssl/DefaultSslContextFactory.java?view=markup)).
 
-### Is there both object and source code for the encryption technology?
+## Is there both object and source code for the encryption technology?
 
 Yes, Restlet is an open source project, and all source code is publicly
 available. Note that the encryption features provided rely on Java or

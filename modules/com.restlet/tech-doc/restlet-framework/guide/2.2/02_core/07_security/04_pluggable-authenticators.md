@@ -1,8 +1,4 @@
-Pluggable authenticators
-========================
-
-Introduction
-============
+# Introduction
 
 The aim of the document is to explain how to support its own challenge
 scheme. Let's say you have defined your own challenge scheme called
@@ -11,16 +7,14 @@ will contain a WWW-Authenticate header as follow:
 
     WWW-Authentication: MySCHEME realm=”<realm>”
 
-Definition of the custom challenge scheme
------------------------------------------
+## Definition of the custom challenge scheme
 
 You will first need to declare your own ChallengeScheme, certainly as a
 static member:
 
     public static ChallengeScheme MySCHEME = new ChallengeScheme("This is my own challenge scheme", "MySCHEME");
 
-Definition of the custom authentication helper
-----------------------------------------------
+## Definition of the custom authentication helper
 
 This helper is responsible to cope with server and/or client sides
 requirements:
@@ -68,7 +62,7 @@ implementation of the following methods:
 
 In order to add the realm, proceed as follow:
 
-        public void formatRawRequest(ChallengeWriter cw, 
+        public void formatRawRequest(ChallengeWriter cw,
                                      ChallengeRequest challenge,
                                      Response response,
                                      Series<Parameter> httpHeaders) throws IOException {
@@ -90,4 +84,3 @@ implementation of the following methods:
 -   parseRequest(ChallengeRequest, Response, Series\<Parameter\>) which
     parses the response sent by the server. It especially parses the
     ChallengeRequest\#getRawValue.
-

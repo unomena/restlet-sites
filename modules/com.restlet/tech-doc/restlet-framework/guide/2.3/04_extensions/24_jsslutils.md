@@ -1,8 +1,4 @@
-jSSLutils extension
-===================
-
-Introduction
-============
+# Introduction
 
 The SSL extension provides concrete implementations of the
 [SslContextFactory](javadocs://jse/engine/org/restlet/engine/ssl/SslContextFactory.html)
@@ -12,11 +8,9 @@ that rely on
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/ssl/package-summary.html).
 
-Description
-===========
+# Description
 
-JsslutilsSslContextFactory
---------------------------
+## JsslutilsSslContextFactory
 
 The JsslutilsSslContextFactory class is a wrapper for
 `jsslutils.sslcontext.SSLContextFactory`. It has to be constructed with
@@ -25,8 +19,7 @@ context `sslContextFactory` *attribute*, not *parameter*. This is more
 likely to be used for more specialised features such as the key or trust
 manager wrappers of jSSLutils.
 
-PkixSslContextFactory
----------------------
+## PkixSslContextFactory
 
 The PkixSslContextFactory class is a class that uses
 `jsslutils.sslcontext.PKIXSSLContextFactory`. It provides a way to
@@ -76,24 +69,23 @@ SslContextFactory, but is often used in conjunction with it.
 
     Component component = new Component();
 
-    Server server1 = component.getServers().add(Protocol.HTTPS, 
+    Server server1 = component.getServers().add(Protocol.HTTPS,
        "host1.example.org", 8083);
     Series<Parameter> param1 = server1.getContext().getParameters();
-     
+
     param1.add("sslContextFactory","org.restlet.ext.ssl.PkixSslContextFactory");
     param1.add("keystorePath","/path/to/keystore1.p12");
     param1.add("keystorePassword","...");
     param1.add("keystoreType","PKCS12");
     //...
 
-    Server server2 = component.getServers().add(Protocol.HTTPS, 
+    Server server2 = component.getServers().add(Protocol.HTTPS,
        "host2.example.com", 8083);
     Series<Parameter> param2 = server2.getContext().getParameters();
-     
+
     param2.add("sslContextFactory","org.restlet.ext.ssl.PkixSslContextFactory");
     param2.add("keystorePath","/path/to/keystore2.p12");
     //...
 
 This example uses two certificates depending on which server connector
 (and thus which listening socket) is used.
-

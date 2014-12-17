@@ -11,6 +11,7 @@ import org.restlet.Component;
 import org.restlet.Request;
 import org.restlet.Response;
 import org.restlet.Restlet;
+import org.restlet.Server;
 import org.restlet.data.Protocol;
 import org.restlet.data.Reference;
 import org.restlet.representation.Representation;
@@ -82,6 +83,7 @@ public class WebComponent extends Component {
 	 */
 	public WebComponent() throws Exception {
 		super();
+		
 		getLogService().setLoggerName("com.noelios.web.WebComponent.www");
 		// getLogService().setIdentityCheck(true);
 
@@ -101,7 +103,9 @@ public class WebComponent extends Component {
 		// ------------------
 		// Add the connectors
 		// ------------------
-		getServers().add(Protocol.HTTP, ipAddress, port);
+		Server server = getServers().add(Protocol.HTTP, ipAddress, port);
+		server.getContext().getParameters().add("useForwardedForHeader", "true");
+		
 		getClients().add(Protocol.CLAP);
 		getClients().add(Protocol.FILE);
 		getClients().add(Protocol.RIAP);
@@ -220,13 +224,13 @@ public class WebComponent extends Component {
 		host = addRedirection("noelios.com|noelios.net|noelios.org|"
 				+ "www.noelios.com|www.noelios.net|www.noelios.org", port,
 				"http://restlet.com{rr}", properties);
-		
+
 		// ----------------------------
 		// Redirect to restlet.com/blog
 		// ----------------------------
 		host = addRedirection("blog.restlet.com", port,
 				"http://restlet.com/blog{rr}", properties);
-		
+
 		getHosts().add(host);
 	}
 

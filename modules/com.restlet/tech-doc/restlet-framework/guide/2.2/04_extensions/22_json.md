@@ -1,5 +1,3 @@
-# JSON extension
-
 JSON (JavaScript Object Notation) is a compact format for representing
 structured data. It became a popular alternative to XML in AJAX
 applications due to its native support by Web browser. JSON is indeed
@@ -15,4 +13,3 @@ Representation.
 
 For additional details, please consult the
 [Javadocs](javadocs://jse/ext/org/restlet/ext/json/package-summary.html).
-

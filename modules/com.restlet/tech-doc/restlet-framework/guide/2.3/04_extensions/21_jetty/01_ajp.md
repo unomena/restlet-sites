@@ -1,8 +1,4 @@
-Supporting AJP with Jetty
-=========================
-
-Introduction
-============
+# Introduction
 
 Here are a few links that will get you started:
 
@@ -13,11 +9,9 @@ Here are a few links that will get you started:
 
 This page needs to be updated for Restlet 2.x
 
-Description
-===========
+# Description
 
-Embedding Jetty
----------------
+## Embedding Jetty
 
 ### JettyAJPApplication.Class
 
@@ -81,20 +75,19 @@ Embedding Jetty
     }
 
 ### Running JettyAJPApplication
-
-> 2008-02-13 15:33:54.890::INFO:  Logging to STDERR via
-> org.mortbay.log.StdErrLog\
->  2008-02-13 15:33:54.953::INFO:  jetty-6.1.x\
->  2008-02-13 15:33:55.140::INFO:  Started SelectChannelConnector @
-> 0.0.0.0:8182 \
->  2008-02-13 15:33:55.140::INFO:  jetty-6.1.x\
->  2008-02-13 15:33:55.140::INFO:  AJP13 is not a secure protocol.
-> Please protect port 8183\
->  2008-02-13 15:33:55.140::INFO:  Started Ajp13SocketConnector @
-> 0.0.0.0:8183
-
-Configuring Apache HTTPd server with mod\_jk
---------------------------------------------
+```
+ 2008-02-13 15:33:54.890::INFO:  Logging to STDERR via
+ org.mortbay.log.StdErrLog\
+  2008-02-13 15:33:54.953::INFO:  jetty-6.1.x\
+  2008-02-13 15:33:55.140::INFO:  Started SelectChannelConnector @
+ 0.0.0.0:8182 \
+  2008-02-13 15:33:55.140::INFO:  jetty-6.1.x\
+  2008-02-13 15:33:55.140::INFO:  AJP13 is not a secure protocol.
+ Please protect port 8183\
+  2008-02-13 15:33:55.140::INFO:  Started Ajp13SocketConnector @
+ 0.0.0.0:8183
+```
+## Configuring Apache HTTPd server with mod\_jk
 
 -   put mod\_jk.so into your \<apache-root\>/modules/ directory
 -   you can download mod\_jk.so here
@@ -112,7 +105,7 @@ Configuring Apache HTTPd server with mod\_jk
                  JkLogLevel info
                  JkLogStampFormat "[%a %b %d %H:%M:%S %Y] "
                  JkOptions +ForwardKeySize +ForwardURICompat
-            </IfModule>   
+            </IfModule>
 
 -   **LoadModule jk\_module modules/mod\_jk.so** tells your apache
     server to load the mod\_jk libray and where it is located.
@@ -144,27 +137,22 @@ mod\_jk configuration entry:
  `worker.jetty.host=<server name or ip where your jetty will be running>`
  `worker.jetty.type=ajp13`
 
-mod\_jk Compatibilities
------------------------
-
+## mod\_jk Compatibilities
 
 Apache | Win32 | Linux(ubuntu)
 ------ | ----- | -------------
 Apache 1.3 | no mod_proxy_ajp bundled |no mod_proxy_ajp bundled
 Apache 2.0 (2.0.59) | no mod_proxy_ajp bundled | no mod_proxy_ajp bundled
-Apache 2.2 | ![](/images/icons/8/puce.png) | ![](/images/icons/8/puce.png)
+Apache 2.2 | ![](images/puce.png) | ![](images/puce.png)
 
-Running Apache Httpd and test your application
-----------------------------------------------
+## Running Apache Httpd and test your application
 
 [To be detailled]
 
-More Resource
--------------
+## More Resource
 
 * [Jetty doc:Configuring+AJP13+Using+mod\_jk](http://docs.codehaus.org/display/JETTY/Configuring+AJP13+Using+mod_jk) moved to [Jetty/Tutorial/Apache](http://wiki.eclipse.org/Jetty/Tutorial/Apache)
 * [Apache Httpd Document](http://httpd.apache.org/docs/)
 * [HttpServerHelper Class API](javadocs://jse/ext/org/restlet/ext/jetty/HttpServerHelper.html)
 * [Server Class API](javadocs://jse/api/org/restlet/Server.html)
 * [AjpServerHelper Class API](javadocs://jse/ext/org/restlet/ext/jetty/AjpServerHelper.html)
-

@@ -1,8 +1,4 @@
-Oracle XDB Restlet Adapter
-==========================
-
-Documentation
-=============
+# Documentation
 
 -   [Architecture - Introduction](/learn/guide/2.1#/13-restlet/28-restlet/84-restlet/131-restlet.html "Oracle XDB Restlet Adapter - Architecture - Introduction")
 -   [Installing](/learn/guide/2.1#/13-restlet/28-restlet/84-restlet/132-restlet.html "Oracle XDB Restlet Adapter - Installing")
@@ -14,11 +10,9 @@ Documentation
 For additional details, please consult the
 [Javadocs](javadocs://jee/ext/org/restlet/ext/xdb/package-summary.html).
 
-Using XDB Restlet Adapter within Maven projects
-===============================================
+# Using XDB Restlet Adapter within Maven projects
 
 -   [Introduction, download, compiling and installing](/learn/guide/2.1#/13-restlet/28-restlet/84-restlet/138-restlet.html "XMLDB Restet Adapter/Lucene/Maven")
 -   [Running and testing](/learn/guide/2.1#/13-restlet/28-restlet/84-restlet/140-restlet.html "XMLDB Restet Adapter/Lucene/Maven - Running/Testing")
 -   [Implemented services](/learn/guide/2.1#/13-restlet/28-restlet/84-restlet/139-restlet.html "XMLDB Restet Adapter/Lucene/Maven - Services implemented")
 -   [Todo List](/learn/guide/2.1#/13-restlet/28-restlet/84-restlet/141-restlet.html "XMLDB Restet Adapter/Lucene/Maven - Todo List")
-

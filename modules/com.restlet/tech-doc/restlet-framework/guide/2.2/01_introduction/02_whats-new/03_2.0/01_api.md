@@ -1,8 +1,4 @@
-API improvements
-================
-
-Packages restructuring
-======================
+# Packages restructuring
 
 In order to simplify even more the learning and deployment of Restlet
 applications, the Restlet API and its implementation (ie. the Restlet
@@ -34,8 +30,7 @@ classes such as Finder and Handler. We have also added a
 “org.restlet.routing” package where we moved Filter, Redirector and
 Router related classes.
 
-Root package
-============
+# Root package
 
 The org.restlet.Uniform abstract class has been refactored into an
 interface with a single handle(Request, Response) method. Its logic has
@@ -58,14 +53,13 @@ recently added ClientResource class.
 The component XML configuration has been extended to support all
 existing properties and features available in the Java API.
 
-Data package
-============
+# Data package
 
 Nearly all standard HTTP headers are now fully supported by the Restlet
 API including “Age”, “Authentication-Info”, “Date”, "Expect",
 “If-Range”, “Retry-After”, "Via", “Warning”, and the frequently asked
 “Cache-Control” header! For a detailled mapping of those headers to the
-Restlet API, please consult [this page of the user guide](../../../core/http-headers-mapping.md).
+Restlet API, please consult [this page of the user guide](technical-resources/restlet-framework/guide/2.2/core/http-headers-mapping).
 
 Character sets support was enhanced, fixing an issue with Macintosh and
 adding new constants in the CharacterSet class for all common ones
@@ -73,14 +67,12 @@ defined by IANA. Also, the default language used for representation is
 now dynamically retrieved based on the JVM setting instead of
 English/US.
 
-Representation package
-======================
+# Representation package
 
 Added AppendableRepresentation for dynamic generation of
 StringRepresentation instances.
 
-Resource package
-================
+# Resource package
 
 After a long experience with our class-driven Resource API introduced in
 Restlet 1.0 and the recent introduction of the annotation-driven JAX-RS
@@ -93,7 +85,7 @@ in our developers wiki at the beginning of this year, taking into
 account all the enhancement requests, issues and feed-back made by our
 community. Here is the overall architecture:
 
-![](../../../core/resource/hierarchy.png)
+![](images/hierarchy.png)
 
 The new design uses three foundation classes (UniformResource,
 ClientResource and ServerResource) which support just four annotations
@@ -125,8 +117,7 @@ and the client-side. The callback mechanism used was inspired from GWT
 and is fully consistent with our Restlet edition for GWT, ensuring a
 greater portability.
 
-Routing package
-===============
+# Routing package
 
 The "org.restlet.routing" package has been enhanced with new Validator
 and Extractor filters containing logic found in the new deprecated Route
@@ -137,8 +128,7 @@ attach Restlets and resources using URI templates.
 We also moved Template and Variable classes from "org.restlet.util"  to
 "org.restlet.routing" package.
 
-Security package
-================
+# Security package
 
 The refactoring of the Restlet security model has been the most
 requested change since the Restlet 1.0 release. Fortunately, after a
@@ -156,8 +146,7 @@ relational database, a file or a LDAP directory.
 The API is also extensible and offers a good foundation for your new
 security efforts.
 
-Service package
-===============
+# Service package
 
 Refactored the services to facilitate the addition of new ones by users
 in their applications or their components.
@@ -171,4 +160,3 @@ automatic XML/JSON marshalling and unmarshalling. Note that the JAX-RS
 extension now also relies on this improved conversion service!
 Converters were added for all relevant Restlet extensions, allowing
 usage of high-level classes in annotated Restlet interfaces for example.
-

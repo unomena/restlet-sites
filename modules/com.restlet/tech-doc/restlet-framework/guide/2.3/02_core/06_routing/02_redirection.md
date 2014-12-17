@@ -1,8 +1,4 @@
-URI rewriting and redirection
-=============================
-
-Introduction
-============
+# Introduction
 
 The first tool available is the Redirector, which allows the rewriting
 of a cool URI to another URI, followed by an automatic redirection.
@@ -44,4 +40,3 @@ Also, we are relying on the Route class to extract the query parameter
 application. If the parameter is found, it is copied into the request
 attribute named "keywords", ready to be used by the Redirector when
 formatting its target URIs.
-

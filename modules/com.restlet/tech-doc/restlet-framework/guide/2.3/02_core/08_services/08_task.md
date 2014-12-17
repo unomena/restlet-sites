@@ -1,8 +1,4 @@
-Task service
-============
-
-Introduction
-============
+# Introduction
 
 This service is capable of running tasks asynchronously. The service
 instance returned will not invoke the runnable task in the current
@@ -21,4 +17,3 @@ corresponds to a parent Application's context. If you want to have your
 own service instance, you can use the
 [wrap(ExecutorService)](javadocs://jse/api/org/restlet/service/TaskService.html#wrap%28java.util.concurrent.ExecutorService%29)
 method to ensure that thread local variables are correctly set.
-
